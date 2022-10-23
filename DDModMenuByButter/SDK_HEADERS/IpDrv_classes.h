@@ -882,11 +882,11 @@ public:
 UClass* UPartyBeaconHost::pClassPointer = NULL;
 
 // Class IpDrv.TcpipConnection
-// 0x002C (0x5004 - 0x4FD8)
+// 0x0024 (0x4FFC - 0x4FD8)
 class UTcpipConnection : public UNetConnection
 {
 public:
-	unsigned char                                      UnknownData00[ 0x2C ];                            		// 0x4FD8 (0x002C) MISSED OFFSET
+	unsigned char                                      UnknownData00[ 0x24 ];                            		// 0x4FD8 (0x0024) MISSED OFFSET
 
 private:
 	static UClass* pClassPointer;
@@ -1040,7 +1040,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 35450 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 35480 ];
 
 		return pClassPointer;
 	};
@@ -1080,7 +1080,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 35453 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 35483 ];
 
 		return pClassPointer;
 	};
@@ -1107,7 +1107,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 35469 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 35499 ];
 
 		return pClassPointer;
 	};
@@ -1131,7 +1131,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 35488 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 35518 ];
 
 		return pClassPointer;
 	};
@@ -1156,7 +1156,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 35498 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 35528 ];
 
 		return pClassPointer;
 	};
@@ -1194,7 +1194,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 36269 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 36299 ];
 
 		return pClassPointer;
 	};

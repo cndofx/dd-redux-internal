@@ -452,6 +452,13 @@ struct UObject_execAdd_IntHighDigitInt_Parms
 	struct FHighDigitInt                               ReturnValue;                                      		// 0x0014 (0x0010) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
+// Function Core.Object.IsTemplate
+// [0x00020401] ( FUNC_Final )
+struct UObject_execIsTemplate_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
 // Function Core.Object.IsDefaultObject
 // [0x00022401] ( FUNC_Final )
 struct UObject_execIsDefaultObject_Parms
@@ -2629,12 +2636,13 @@ struct UObject_execFPctByRange_Parms
 };
 
 // Function Core.Object.RandRange
-// [0x00022103] ( FUNC_Final )
+// [0x00026103] ( FUNC_Final )
 struct UObject_execRandRange_Parms
 {
 	float                                              InMin;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              InMax;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	float                                              rounding_offset;                                  		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function Core.Object.FInterpEaseInOut
@@ -2680,6 +2688,30 @@ struct UObject_execFCubicInterp_Parms
 	float                                              T1;                                               		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              A;                                                		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x0014 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function Core.Object.SeededRand
+// [0x00422401] ( FUNC_Final )
+struct UObject_execSeededRand_Parms
+{
+	int                                                Seed;                                             		// 0x0000 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	int                                                MaxVal;                                           		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function Core.Object.SeededFRand
+// [0x00422401] ( FUNC_Final )
+struct UObject_execSeededFRand_Parms
+{
+	int                                                Seed;                                             		// 0x0000 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function Core.Object.SeedRand
+// [0x00022400] 
+struct UObject_execSeedRand_Parms
+{
+	int                                                A;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function Core.Object.FCeil
@@ -3043,6 +3075,14 @@ struct UObject_execMin_Parms
 	int                                                A;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                B;                                                		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function Core.Object.LargeRand
+// [0x00022401] ( FUNC_Final )
+struct UObject_execLargeRand_Parms
+{
+	int                                                Max;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function Core.Object.Rand

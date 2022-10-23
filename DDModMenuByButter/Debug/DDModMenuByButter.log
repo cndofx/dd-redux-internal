@@ -1,66 +1,58 @@
 ﻿  dllmain.cpp
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1172,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1173,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1174,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1175,51): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1176,51): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1177,51): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1853,28): warning C4804: '>=': unsafe use of type 'bool' in operation
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1884,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1885,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1886,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1888,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1889,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1890,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1892,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1893,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1894,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(2425,57): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(2427,57): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(2428,64): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(2541,90): warning C4244: 'argument': conversion from 'T' to 'unsigned char', possible loss of data
-          with
-          [
-              T=wchar_t
-          ]
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(3050,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(2390,23): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(395,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(396,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(397,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(398,51): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(399,51): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(400,51): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(500,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(531,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(590,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1053,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1310,6): warning C4804: '>=': unsafe use of type 'bool' in operation
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1319,49): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1331,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1332,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1333,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1335,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1336,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1337,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1339,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1340,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1341,50): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1688,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1709,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1847,57): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1849,57): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(1850,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(2500,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xstring(2824,53): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
           with
           [
               _Elem=char
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(2401): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)' being compiled
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xstring(2664): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*>(_Iter,const _Iter)' being compiled
           with
           [
               _Iter=wchar_t *
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(2401): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)' being compiled
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xstring(2664): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*>(_Iter,const _Iter)' being compiled
           with
           [
               _Iter=wchar_t *
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(2381): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)' being compiled
-          with
-          [
-              _Iter=wchar_t *
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(2381): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)' being compiled
-          with
-          [
-              _Iter=wchar_t *
-          ]
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1248): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(494): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-C:\Users\Dakota\source\repos\DDModMenuByButterRedux\DDModMenuByButter\dllmain.cpp(1248): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+C:\Users\Dakota\source\repos\DDModMenuByButter\DDModMenuByButter\dllmain.cpp(494): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-  DDModMenuByButter.vcxproj -> C:\Users\Dakota\source\repos\DDModMenuByButterRedux\Debug\DDModMenuReduxByButter.dll
+LINK : fatal error LNK1201: error writing to program database 'C:\Users\Dakota\source\repos\DDModMenuByButter\Debug\DDModMenuByButter.pdb'; check for insufficient disk space, invalid path, or insufficient privilege

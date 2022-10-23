@@ -1,22 +1,17 @@
 #define no_init_all
-
-#include "SdkHeaders.h"
-
-
 #include <Windows.h>
-#include "FilterLogging.h"
+#include "SdkHeaders.h"
 #include <iostream>
 #include <fstream>
 #include <iomanip>
 #include <string>
 #include <WinUser.h>
+#include <vector>
 
 #include "HelperFunctions.h"
 #include "Hooking.h"
 #include <stdio.h>
-#include <stdlib.h>  
-#include <vector>
-#include<ctime>
+
 
 #include <d3d9.h>
 #include <d3dx9.h>

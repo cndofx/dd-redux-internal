@@ -45,24 +45,24 @@
 */
 
 // Class DunDefSkyCity.DunDefProjectile_Meteor
-// 0x0034 (0x0378 - 0x0344)
+// 0x0034 (0x035C - 0x0328)
 class ADunDefProjectile_Meteor : public ADunDefProjectile
 {
 public:
-	class ADunDefEmitterSpawnable*                     DamagingFireEmitters;                             		// 0x0344 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                MaxNumberofFires;                                 		// 0x0348 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MinDecalSize;                                     		// 0x034C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MaxDecalSize;                                     		// 0x0350 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MinDecalHeight;                                   		// 0x0354 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MaxDecalHeight;                                   		// 0x0358 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MinFireSpreadRadius;                              		// 0x035C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MaxFireSpreadRadius;                              		// 0x0360 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              decalZOffset;                                     		// 0x0364 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class ADecalActorMovableSpawnable*                 DecalActorTemplate;                               		// 0x0368 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUseShadow : 1;                                   		// 0x036C (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	unsigned long                                      bUseHoming : 1;                                   		// 0x036C (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
-	class UStaticMeshComponent*                        MyShadow;                                         		// 0x0370 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class ADecalActorMovableSpawnable*                 myDecal;                                          		// 0x0374 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	class ADunDefEmitterSpawnable*                     DamagingFireEmitters;                             		// 0x0328 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	int                                                MaxNumberofFires;                                 		// 0x032C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MinDecalSize;                                     		// 0x0330 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MaxDecalSize;                                     		// 0x0334 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MinDecalHeight;                                   		// 0x0338 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MaxDecalHeight;                                   		// 0x033C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MinFireSpreadRadius;                              		// 0x0340 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MaxFireSpreadRadius;                              		// 0x0344 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              decalZOffset;                                     		// 0x0348 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class ADecalActorMovableSpawnable*                 DecalActorTemplate;                               		// 0x034C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      bUseShadow : 1;                                   		// 0x0350 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	unsigned long                                      bUseHoming : 1;                                   		// 0x0350 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
+	class UStaticMeshComponent*                        MyShadow;                                         		// 0x0354 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class ADecalActorMovableSpawnable*                 myDecal;                                          		// 0x0358 (0x0004) [0x0000000000002000]              ( CPF_Transient )
 
 private:
 	static UClass* pClassPointer;
@@ -71,7 +71,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 83598 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 78623 ];
 
 		return pClassPointer;
 	};
@@ -102,7 +102,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 87633 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 82014 ];
 
 		return pClassPointer;
 	};
@@ -135,7 +135,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 87641 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 82022 ];
 
 		return pClassPointer;
 	};
@@ -151,7 +151,7 @@ public:
 UClass* ADunDef_DamagingInterpActor::pClassPointer = NULL;
 
 // Class DunDefSkyCity.DunDef_OldOne
-// 0x060C (0x084C - 0x0240)
+// 0x0610 (0x0850 - 0x0240)
 class ADunDef_OldOne : public ASkeletalMeshActor
 {
 public:
@@ -365,44 +365,45 @@ public:
 	float                                              ExtraNightmareHealthMultiplier;                   		// 0x0740 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	int                                                MaxDifficultySets;                                		// 0x0744 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	int                                                MyTargetingTeam;                                  		// 0x0748 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       HeadLookAtName;                                   		// 0x074C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       HealthEventName;                                  		// 0x0754 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     HandMuzzleEffect;                                 		// 0x075C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UAudioComponent*                             LazerCastingSoundComponent;                       		// 0x0760 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	float                                              LastFlashingDamageTime;                           		// 0x0764 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              DamageFlashingDuration;                           		// 0x0768 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DamageFlashingFadeExponent;                       		// 0x076C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DamageFlashingIntensity;                          		// 0x0770 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       DamageFlashingScalarParamName;                    		// 0x0774 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	TArray< int >                                      DamageMatInstanceIndices;                         		// 0x077C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	TArray< class UMaterialInstanceConstant* >         MyDamageMatInstances;                             		// 0x0788 (0x000C) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
-	class UAnimNodePlayCustomAnim*                     CustomAnimNode;                                   		// 0x0794 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	class AActor*                                      currentSmashTarget;                               		// 0x0798 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              currentAttackTime;                                		// 0x079C (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	struct FSmashAnims                                 currentSmashAnim;                                 		// 0x07A0 (0x0020) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
-	struct FName                                       currentPhaseShiftAnim;                            		// 0x07C0 (0x0008) [0x0000000000002000]              ( CPF_Transient )
-	struct FName                                       currentHurtAnim;                                  		// 0x07C8 (0x0008) [0x0000000000002000]              ( CPF_Transient )
-	int                                                crystalsDestroyedThisPhase;                       		// 0x07D0 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	int                                                difficultyIndex;                                  		// 0x07D4 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              DifficultyHealthMultiplier;                       		// 0x07D8 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              DifficultyDamageMultiplier;                       		// 0x07DC (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	TArray< class ADunDefCustomNode* >                 meteorPoints_P1;                                  		// 0x07E0 (0x000C) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
-	TArray< class ADunDefCustomNode* >                 meteorPoints_P2;                                  		// 0x07EC (0x000C) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
-	TArray< class ADunDefCustomNode* >                 meteorPoints_P3;                                  		// 0x07F8 (0x000C) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
-	struct FVector                                     prevLazerLoc;                                     		// 0x0804 (0x000C) [0x0000000000002000]              ( CPF_Transient )
-	class USkelControlLookAt*                          HeadLookAt;                                       		// 0x0810 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              currentTimeLimit;                                 		// 0x0814 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              currentPhaseStart;                                		// 0x0818 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              tauntChance;                                      		// 0x081C (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              projectileChance;                                 		// 0x0820 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              smashChance;                                      		// 0x0824 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              lazerChance;                                      		// 0x0828 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              meteorChance;                                     		// 0x082C (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              swipeChance;                                      		// 0x0830 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              flameChance;                                      		// 0x0834 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              sweepChance;                                      		// 0x0838 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	class ADunDef_OldOneCrystals*                      primaryCrystal;                                   		// 0x083C (0x0004) [0x0000000000002020]              ( CPF_Net | CPF_Transient )
-	TArray< class ADunDefTower_ChainLightning* >       ChainingTowers;                                   		// 0x0840 (0x000C) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
+	float                                              AttackRange;                                      		// 0x074C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       HeadLookAtName;                                   		// 0x0750 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       HealthEventName;                                  		// 0x0758 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     HandMuzzleEffect;                                 		// 0x0760 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UAudioComponent*                             LazerCastingSoundComponent;                       		// 0x0764 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	float                                              LastFlashingDamageTime;                           		// 0x0768 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              DamageFlashingDuration;                           		// 0x076C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DamageFlashingFadeExponent;                       		// 0x0770 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DamageFlashingIntensity;                          		// 0x0774 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       DamageFlashingScalarParamName;                    		// 0x0778 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	TArray< int >                                      DamageMatInstanceIndices;                         		// 0x0780 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	TArray< class UMaterialInstanceConstant* >         MyDamageMatInstances;                             		// 0x078C (0x000C) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
+	class UAnimNodePlayCustomAnim*                     CustomAnimNode;                                   		// 0x0798 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	class AActor*                                      currentSmashTarget;                               		// 0x079C (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              currentAttackTime;                                		// 0x07A0 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	struct FSmashAnims                                 currentSmashAnim;                                 		// 0x07A4 (0x0020) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
+	struct FName                                       currentPhaseShiftAnim;                            		// 0x07C4 (0x0008) [0x0000000000002000]              ( CPF_Transient )
+	struct FName                                       currentHurtAnim;                                  		// 0x07CC (0x0008) [0x0000000000002000]              ( CPF_Transient )
+	int                                                crystalsDestroyedThisPhase;                       		// 0x07D4 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	int                                                difficultyIndex;                                  		// 0x07D8 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              DifficultyHealthMultiplier;                       		// 0x07DC (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              DifficultyDamageMultiplier;                       		// 0x07E0 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	TArray< class ADunDefCustomNode* >                 meteorPoints_P1;                                  		// 0x07E4 (0x000C) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
+	TArray< class ADunDefCustomNode* >                 meteorPoints_P2;                                  		// 0x07F0 (0x000C) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
+	TArray< class ADunDefCustomNode* >                 meteorPoints_P3;                                  		// 0x07FC (0x000C) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
+	struct FVector                                     prevLazerLoc;                                     		// 0x0808 (0x000C) [0x0000000000002000]              ( CPF_Transient )
+	class USkelControlLookAt*                          HeadLookAt;                                       		// 0x0814 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              currentTimeLimit;                                 		// 0x0818 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              currentPhaseStart;                                		// 0x081C (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              tauntChance;                                      		// 0x0820 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              projectileChance;                                 		// 0x0824 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              smashChance;                                      		// 0x0828 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              lazerChance;                                      		// 0x082C (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              meteorChance;                                     		// 0x0830 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              swipeChance;                                      		// 0x0834 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              flameChance;                                      		// 0x0838 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              sweepChance;                                      		// 0x083C (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	class ADunDef_OldOneCrystals*                      primaryCrystal;                                   		// 0x0840 (0x0004) [0x0000000000002020]              ( CPF_Net | CPF_Transient )
+	TArray< class ADunDefTower_ChainLightning* >       ChainingTowers;                                   		// 0x0844 (0x000C) [0x0000000000402000]              ( CPF_Transient | CPF_NeedCtorLink )
 
 private:
 	static UClass* pClassPointer;
@@ -411,7 +412,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 87674 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 82055 ];
 
 		return pClassPointer;
 	};
@@ -538,43 +539,43 @@ public:
 UClass* ADunDef_OldOne::pClassPointer = NULL;
 
 // Class DunDefSkyCity.DunDef_OldOneCrystals
-// 0x0098 (0x0460 - 0x03C8)
+// 0x0098 (0x0458 - 0x03C0)
 class ADunDef_OldOneCrystals : public ADunDefDamageableTarget
 {
 public:
-	struct FName                                       SocketBaseName;                                   		// 0x03C8 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	class UStaticMeshComponent*                        MyMesh;                                           		// 0x03D0 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UStaticMeshComponent*                        CollisionMesh;                                    		// 0x03D4 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UParticleSystemComponent*                    ActiveParticle;                                   		// 0x03D8 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UDynamicLightEnvironmentComponent*           LightEnvironment;                                 		// 0x03DC (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	unsigned char                                      myPhase;                                          		// 0x03E0 (0x0001) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bLimitDamageOnActivation : 1;                     		// 0x03E4 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	unsigned long                                      bFullHealOnDeath : 1;                             		// 0x03E4 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
-	unsigned long                                      bPrimaryCrystal : 1;                              		// 0x03E4 (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
-	unsigned long                                      bDoDamageFlashing : 1;                            		// 0x03E4 (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
-	unsigned long                                      bDamageFlashOldOne : 1;                           		// 0x03E4 (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
-	unsigned long                                      bShutDown : 1;                                    		// 0x03E4 (0x0004) [0x0000000000002020] [0x00000020] ( CPF_Net | CPF_Transient )
-	unsigned long                                      bInPlay : 1;                                      		// 0x03E4 (0x0004) [0x0000000000002020] [0x00000040] ( CPF_Net | CPF_Transient )
-	float                                              MaxAllowedDmgPct;                                 		// 0x03E8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       MeshActiveColorParamName;                         		// 0x03EC (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       DissolveParamName;                                		// 0x03F4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FLinearColor                                ActiveColor;                                      		// 0x03FC (0x0010) [0x0000000000000001]              ( CPF_Edit )
-	struct FLinearColor                                InActiveColor;                                    		// 0x040C (0x0010) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       HurtAnimName;                                     		// 0x041C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	float                                              NotifyAtHealthPct;                                		// 0x0424 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              ActivateTime;                                     		// 0x0428 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DissolveTime;                                     		// 0x042C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LastFlashingDamageTime;                           		// 0x0430 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              DamageFlashingDuration;                           		// 0x0434 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DamageFlashingFadeExponent;                       		// 0x0438 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DamageFlashingIntensity;                          		// 0x043C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       DamageFlashingScalarParamName;                    		// 0x0440 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     CrystalHurtEffectTemplate;                        		// 0x0448 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                currentDamageAmt;                                 		// 0x044C (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	class ADunDef_OldOne*                              myOldOne;                                         		// 0x0450 (0x0004) [0x0000000000002020]              ( CPF_Net | CPF_Transient )
-	class UMaterialInstanceConstant*                   myMIC;                                            		// 0x0454 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              ActivateStartTime;                                		// 0x0458 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	float                                              DissolveStartTime;                                		// 0x045C (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	struct FName                                       SocketBaseName;                                   		// 0x03C0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	class UStaticMeshComponent*                        MyMesh;                                           		// 0x03C8 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UStaticMeshComponent*                        CollisionMesh;                                    		// 0x03CC (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystemComponent*                    ActiveParticle;                                   		// 0x03D0 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UDynamicLightEnvironmentComponent*           LightEnvironment;                                 		// 0x03D4 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	unsigned char                                      myPhase;                                          		// 0x03D8 (0x0001) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      bLimitDamageOnActivation : 1;                     		// 0x03DC (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	unsigned long                                      bFullHealOnDeath : 1;                             		// 0x03DC (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
+	unsigned long                                      bPrimaryCrystal : 1;                              		// 0x03DC (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
+	unsigned long                                      bDoDamageFlashing : 1;                            		// 0x03DC (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
+	unsigned long                                      bDamageFlashOldOne : 1;                           		// 0x03DC (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
+	unsigned long                                      bShutDown : 1;                                    		// 0x03DC (0x0004) [0x0000000000002020] [0x00000020] ( CPF_Net | CPF_Transient )
+	unsigned long                                      bInPlay : 1;                                      		// 0x03DC (0x0004) [0x0000000000002020] [0x00000040] ( CPF_Net | CPF_Transient )
+	float                                              MaxAllowedDmgPct;                                 		// 0x03E0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       MeshActiveColorParamName;                         		// 0x03E4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       DissolveParamName;                                		// 0x03EC (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FLinearColor                                ActiveColor;                                      		// 0x03F4 (0x0010) [0x0000000000000001]              ( CPF_Edit )
+	struct FLinearColor                                InActiveColor;                                    		// 0x0404 (0x0010) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       HurtAnimName;                                     		// 0x0414 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	float                                              NotifyAtHealthPct;                                		// 0x041C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              ActivateTime;                                     		// 0x0420 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DissolveTime;                                     		// 0x0424 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LastFlashingDamageTime;                           		// 0x0428 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              DamageFlashingDuration;                           		// 0x042C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DamageFlashingFadeExponent;                       		// 0x0430 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DamageFlashingIntensity;                          		// 0x0434 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       DamageFlashingScalarParamName;                    		// 0x0438 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     CrystalHurtEffectTemplate;                        		// 0x0440 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	int                                                currentDamageAmt;                                 		// 0x0444 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	class ADunDef_OldOne*                              myOldOne;                                         		// 0x0448 (0x0004) [0x0000000000002020]              ( CPF_Net | CPF_Transient )
+	class UMaterialInstanceConstant*                   myMIC;                                            		// 0x044C (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              ActivateStartTime;                                		// 0x0450 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	float                                              DissolveStartTime;                                		// 0x0454 (0x0004) [0x0000000000002000]              ( CPF_Transient )
 
 private:
 	static UClass* pClassPointer;
@@ -583,7 +584,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 87746 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 82127 ];
 
 		return pClassPointer;
 	};
@@ -617,13 +618,13 @@ public:
 UClass* ADunDef_OldOneCrystals::pClassPointer = NULL;
 
 // Class DunDefSkyCity.DunDefOldOneBreath
-// 0x000C (0x0350 - 0x0344)
+// 0x000C (0x0344 - 0x0338)
 class ADunDefOldOneBreath : public ADunDefGasCloud
 {
 public:
-	float                                              MaxTargetDeltaPitch;                              		// 0x0344 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MaxTargetDeltaYaw;                                		// 0x0348 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bCheckPlayerInvincibility : 1;                    		// 0x034C (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	float                                              MaxTargetDeltaPitch;                              		// 0x0338 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MaxTargetDeltaYaw;                                		// 0x033C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      bCheckPlayerInvincibility : 1;                    		// 0x0340 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
 
 private:
 	static UClass* pClassPointer;
@@ -632,7 +633,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 87840 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 82222 ];
 
 		return pClassPointer;
 	};
@@ -676,7 +677,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 87945 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 82327 ];
 
 		return pClassPointer;
 	};
@@ -692,46 +693,46 @@ public:
 UClass* ADunDefEmitterShockwave::pClassPointer = NULL;
 
 // Class DunDefSkyCity.DunDefGoblinCopter
-// 0x00DC (0x0D08 - 0x0C2C)
+// 0x00DC (0x0CA8 - 0x0BCC)
 class ADunDefGoblinCopter : public ADunDefEnemy
 {
 public:
-	TArray< struct FHoldAI >                           HoldableTemplates;                                		// 0x0C2C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	struct FName                                       DropOffAnimName;                                  		// 0x0C38 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       ShootLeftAnimName;                                		// 0x0C40 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       ShootRightAnimName;                               		// 0x0C48 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       ShootDoubleAnimName;                              		// 0x0C50 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	TArray< struct FName >                             SpawnInAnimName;                                  		// 0x0C58 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	struct FName                                       ShootLeftSocketName;                              		// 0x0C64 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       ShootRightSocketName;                             		// 0x0C6C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DeathVelocityForce;                               		// 0x0C74 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DeathSpinRotRate;                                 		// 0x0C78 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MiniMapHoldOffset;                                		// 0x0C7C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MiniMapHoldIconSize;                              		// 0x0C80 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              HeldMiniMapIconSize;                              		// 0x0C84 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	TArray< class ADunDefEmitterSpawnable* >           DestructionEffects;                               		// 0x0C88 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	class ADunDefEmitterSpawnable*                     FlareTemplate;                                    		// 0x0C94 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       RightFlareSocketName;                             		// 0x0C98 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       LeftFlareSocketName;                              		// 0x0CA0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	float                                              FlareVelocity;                                    		// 0x0CA8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              FlareFallSpeed;                                   		// 0x0CAC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              FlareLifeSpan;                                    		// 0x0CB0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              FlareLifeSpanOffset;                              		// 0x0CB4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FRotator                                    FlareRotOffset;                                   		// 0x0CB8 (0x000C) [0x0000000000000001]              ( CPF_Edit )
-	TArray< struct FHeldPawnDifficultyOffset >         HeldPawnDifficultyOffsets;                        		// 0x0CC4 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	TArray< class UClass* >                            IgnoreDmgTypesWithFlare;                          		// 0x0CD0 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	float                                              PctDmgtoDroppedPawnOnDrop;                        		// 0x0CDC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     myCurrentFlare;                                   		// 0x0CE0 (0x0004) [0x0000000000002000]              ( CPF_Transient )
-	class ADunDefEnemy*                                currentHeldPawn;                                  		// 0x0CE4 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	int                                                currentHeldIndex;                                 		// 0x0CE8 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	struct FVector                                     currentHoldOffset;                                		// 0x0CEC (0x000C) [0x0000000000000000]              
-	unsigned long                                      bPawnUsedLocInterp : 1;                           		// 0x0CF8 (0x0004) [0x0000000000000020] [0x00000001] ( CPF_Net )
-	unsigned long                                      bPawnUsedClientRotInterp : 1;                     		// 0x0CF8 (0x0004) [0x0000000000000020] [0x00000002] ( CPF_Net )
-	unsigned long                                      bStartFalling : 1;                                		// 0x0CF8 (0x0004) [0x0000000000000000] [0x00000004] 
-	unsigned long                                      bDamagePawnOnDrop : 1;                            		// 0x0CF8 (0x0004) [0x0000000000000000] [0x00000008] 
-	int                                                GCopterNumber;                                    		// 0x0CFC (0x0004) [0x0000000000000000]              
-	float                                              CopterPushForce;                                  		// 0x0D00 (0x0004) [0x0000000000000000]              
-	float                                              CopterProxDistance;                               		// 0x0D04 (0x0004) [0x0000000000000000]              
+	TArray< struct FHoldAI >                           HoldableTemplates;                                		// 0x0BCC (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	struct FName                                       DropOffAnimName;                                  		// 0x0BD8 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       ShootLeftAnimName;                                		// 0x0BE0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       ShootRightAnimName;                               		// 0x0BE8 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       ShootDoubleAnimName;                              		// 0x0BF0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	TArray< struct FName >                             SpawnInAnimName;                                  		// 0x0BF8 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	struct FName                                       ShootLeftSocketName;                              		// 0x0C04 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       ShootRightSocketName;                             		// 0x0C0C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DeathVelocityForce;                               		// 0x0C14 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DeathSpinRotRate;                                 		// 0x0C18 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MiniMapHoldOffset;                                		// 0x0C1C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MiniMapHoldIconSize;                              		// 0x0C20 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              HeldMiniMapIconSize;                              		// 0x0C24 (0x0004) [0x0000000000000020]              ( CPF_Net )
+	TArray< class ADunDefEmitterSpawnable* >           DestructionEffects;                               		// 0x0C28 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	class ADunDefEmitterSpawnable*                     FlareTemplate;                                    		// 0x0C34 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       RightFlareSocketName;                             		// 0x0C38 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       LeftFlareSocketName;                              		// 0x0C40 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	float                                              FlareVelocity;                                    		// 0x0C48 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              FlareFallSpeed;                                   		// 0x0C4C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              FlareLifeSpan;                                    		// 0x0C50 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              FlareLifeSpanOffset;                              		// 0x0C54 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FRotator                                    FlareRotOffset;                                   		// 0x0C58 (0x000C) [0x0000000000000001]              ( CPF_Edit )
+	TArray< struct FHeldPawnDifficultyOffset >         HeldPawnDifficultyOffsets;                        		// 0x0C64 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	TArray< class UClass* >                            IgnoreDmgTypesWithFlare;                          		// 0x0C70 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	float                                              PctDmgtoDroppedPawnOnDrop;                        		// 0x0C7C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     myCurrentFlare;                                   		// 0x0C80 (0x0004) [0x0000000000002000]              ( CPF_Transient )
+	class ADunDefEnemy*                                currentHeldPawn;                                  		// 0x0C84 (0x0004) [0x0000000000000020]              ( CPF_Net )
+	int                                                currentHeldIndex;                                 		// 0x0C88 (0x0004) [0x0000000000000020]              ( CPF_Net )
+	struct FVector                                     currentHoldOffset;                                		// 0x0C8C (0x000C) [0x0000000000000000]              
+	unsigned long                                      bPawnUsedLocInterp : 1;                           		// 0x0C98 (0x0004) [0x0000000000000020] [0x00000001] ( CPF_Net )
+	unsigned long                                      bPawnUsedClientRotInterp : 1;                     		// 0x0C98 (0x0004) [0x0000000000000020] [0x00000002] ( CPF_Net )
+	unsigned long                                      bStartFalling : 1;                                		// 0x0C98 (0x0004) [0x0000000000000000] [0x00000004] 
+	unsigned long                                      bDamagePawnOnDrop : 1;                            		// 0x0C98 (0x0004) [0x0000000000000000] [0x00000008] 
+	int                                                GCopterNumber;                                    		// 0x0C9C (0x0004) [0x0000000000000000]              
+	float                                              CopterPushForce;                                  		// 0x0CA0 (0x0004) [0x0000000000000000]              
+	float                                              CopterProxDistance;                               		// 0x0CA4 (0x0004) [0x0000000000000000]              
 
 private:
 	static UClass* pClassPointer;
@@ -740,7 +741,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 88794 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 83176 ];
 
 		return pClassPointer;
 	};
@@ -817,7 +818,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 88907 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 83289 ];
 
 		return pClassPointer;
 	};

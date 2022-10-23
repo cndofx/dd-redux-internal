@@ -988,7 +988,7 @@ struct UOnlineGameInterfaceImpl_execOnUpdateOnlineGameComplete_Parms
 };
 
 // Function IpDrv.OnlineGameInterfaceImpl.UpdateOnlineGame
-// [0x00024400] 
+// [0x00024000] 
 struct UOnlineGameInterfaceImpl_execUpdateOnlineGame_Parms
 {
 	struct FName                                       SessionName;                                      		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )

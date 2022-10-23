@@ -1569,7 +1569,7 @@ struct UOnlineSubsystemSteamworks_execOnRecognitionComplete_Parms
 struct UOnlineSubsystemSteamworks_execGetRecognitionResults_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-	TArray< struct FSpeechRecognizedWord >             Words;                                            		// 0x0004 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	TArray< struct FSpeechRecognizedWord >             words;                                            		// 0x0004 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0010 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
@@ -2250,12 +2250,6 @@ struct UOnlineSubsystemSteamworks_execShowLoginUI_Parms
 {
 	unsigned long                                      bShowOnlineOnly : 1;                              		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.UpdateDiscordRichPresence
-// [0x00020400] 
-struct UOnlineSubsystemSteamworks_execUpdateDiscordRichPresence_Parms
-{
 };
 
 // Function OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.OnFriendsChange

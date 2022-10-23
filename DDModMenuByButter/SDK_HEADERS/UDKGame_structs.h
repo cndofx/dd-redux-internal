@@ -21,80 +21,11 @@
 # ========================================================================================= #
 */
 
-// ScriptStruct UDKGame._DataTypes.sCurrencyInfo
-// 0x0031
-struct FsCurrencyInfo
+// ScriptStruct UDKGame._DataTypes.HQArray
+// 0x000C
+struct FHQArray
 {
-	struct FString                                     CurrencyNameOverride;                             		// 0x0000 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	class UHeroEquipment*                              CurrencyTemplate;                                 		// 0x000C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bGetNameFromTemplate : 1;                         		// 0x0010 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	int                                                CurrentAmount;                                    		// 0x0014 (0x0004) [0x0000000000000000]              
-	struct FString                                     ManaAmount;                                       		// 0x0018 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	class USurface*                                    CurrencyIcon;                                     		// 0x0024 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              CurrencyItemIconPaddingX;                         		// 0x0028 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              CurrencyItemIconPaddingY;                         		// 0x002C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned char                                      CurrencyType;                                     		// 0x0030 (0x0001) [0x0000000000000001]              ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame._DataTypes.sShopItemCostInfo
-// 0x0028
-struct FsShopItemCostInfo
-{
-	unsigned long                                      bIqnoreCost : 1;                                  		// 0x0000 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	TArray< int >                                      Currencies;                                       		// 0x0004 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	TArray< int >                                      ItemCostList;                                     		// 0x0010 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	struct FString                                     HighDigitCost;                                    		// 0x001C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-};
-
-// ScriptStruct UDKGame._DataTypes.sShopItemGeneration
-// 0x0050
-struct FsShopItemGeneration
-{
-	class UHeroEquipment*                              ItemTemplate;                                     		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< class UHeroEquipment* >                    RandomItemTemplates;                              		// 0x0004 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	unsigned long                                      bGetRandomItem : 1;                               		// 0x0010 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	float                                              Quality;                                          		// 0x0014 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              Multiplier;                                       		// 0x0018 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                AltCalMin;                                        		// 0x001C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                AltCalMax;                                        		// 0x0020 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUseAltCal : 1;                                   		// 0x0024 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	unsigned long                                      bUseGoNegativeOffset : 1;                         		// 0x0024 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
-	float                                              GoNegativeOffset;                                 		// 0x0028 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              HardCoreMultiplier;                               		// 0x002C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              RuthlessMultiplier;                               		// 0x0030 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUseRuthlessMultiplier : 1;                       		// 0x0034 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	int                                                Amount;                                           		// 0x0038 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class USoundCue*                                   GivenEquipmentSound;                              		// 0x003C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bGiveMana : 1;                                    		// 0x0040 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	struct FString                                     ManaToGive;                                       		// 0x0044 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-};
-
-// ScriptStruct UDKGame._DataTypes.sShopItemInfo
-// 0x00C0
-struct FsShopItemInfo
-{
-	unsigned long                                      bUseCustomIcon : 1;                               		// 0x0000 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	class USurface*                                    CustomItemIcon;                                   		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FString                                     ItemDescriptionOverride;                          		// 0x0008 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	struct FString                                     ItemNameOverride;                                 		// 0x0014 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	float                                              IconScaleOverride;                                		// 0x0020 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FLinearColor                                IconPrimaryColorOverride;                         		// 0x0024 (0x0010) [0x0000000000000001]              ( CPF_Edit )
-	struct FLinearColor                                IconSecondaryColorOverride;                       		// 0x0034 (0x0010) [0x0000000000000001]              ( CPF_Edit )
-	struct FsShopItemCostInfo                          ItemCostInfo;                                     		// 0x0044 (0x0028) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	struct FsShopItemGeneration                        ItemGenerationInfo;                               		// 0x006C (0x0050) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	unsigned long                                      bItemDisabled : 1;                                		// 0x00BC (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame._DataTypes.sShopInfo
-// 0x0038
-struct FsShopInfo
-{
-	struct FString                                     ShopName;                                         		// 0x0000 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	struct FString                                     ShopDescription;                                  		// 0x000C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	int                                                ShopID;                                           		// 0x0018 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< struct FsShopItemInfo >                    ShopItems;                                        		// 0x001C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	TArray< struct FsCurrencyInfo >                    CurrencyList;                                     		// 0x0028 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	unsigned long                                      bPurchaseRequiresConfirmation : 1;                		// 0x0034 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	TArray< class UHeroEquipment* >                    inner;                                            		// 0x0000 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // ScriptStruct UDKGame.DunDefHero.HotKey
@@ -123,58 +54,62 @@ struct FEquipmentColorSet
 };
 
 // ScriptStruct UDKGame.DunDefHeroManagerNative.EquipmentSaveInfo
-// 0x00F4
+// 0x0134
 struct UDunDefHeroManagerNative_FEquipmentSaveInfo
 {
 	unsigned long                                      IsInitialized : 1;                                		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
 	unsigned char                                      DamageReductionIndex[ 0x4 ];                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	unsigned char                                      DamageReductionPercentage[ 0x4 ];                 		// 0x0008 (0x0004) [0x0000000000000000]              
 	int                                                StatModifiers[ 0xB ];                             		// 0x000C (0x002C) [0x0000000000000000]              
-	int                                                WeaponDamageBonus;                                		// 0x0038 (0x0004) [0x0000000000000000]              
-	unsigned char                                      WeaponNumberOfProjectilesBonus;                   		// 0x003C (0x0001) [0x0000000000000000]              
-	int                                                WeaponSpeedOfProjectilesBonus;                    		// 0x0040 (0x0004) [0x0000000000000000]              
-	unsigned char                                      WeaponAdditionalDamageTypeIndex;                  		// 0x0044 (0x0001) [0x0000000000000000]              
-	int                                                WeaponAdditionalDamageAmount;                     		// 0x0048 (0x0004) [0x0000000000000000]              
-	float                                              WeaponDrawScaleMultiplier;                        		// 0x004C (0x0004) [0x0000000000000000]              
-	float                                              WeaponSwingSpeedMultiplier;                       		// 0x0050 (0x0004) [0x0000000000000000]              
-	int                                                Level;                                            		// 0x0054 (0x0004) [0x0000000000000000]              
-	int                                                StoredMana;                                       		// 0x0058 (0x0004) [0x0000000000000000]              
-	unsigned char                                      WeaponBlockingBonus;                              		// 0x005C (0x0001) [0x0000000000000000]              
-	int                                                WeaponAltDamageBonus;                             		// 0x0060 (0x0004) [0x0000000000000000]              
-	int                                                WeaponClipAmmoBonus;                              		// 0x0064 (0x0004) [0x0000000000000000]              
-	unsigned char                                      WeaponReloadSpeedBonus;                           		// 0x0068 (0x0001) [0x0000000000000000]              
-	unsigned char                                      WeaponKnockbackBonus;                             		// 0x0069 (0x0001) [0x0000000000000000]              
-	unsigned char                                      WeaponChargeSpeedBonus;                           		// 0x006A (0x0001) [0x0000000000000000]              
-	unsigned char                                      WeaponShotsPerSecondBonus;                        		// 0x006B (0x0001) [0x0000000000000000]              
-	unsigned char                                      NameIndex_Base;                                   		// 0x006C (0x0001) [0x0000000000000000]              
-	unsigned char                                      NameIndex_DamageReduction;                        		// 0x006D (0x0001) [0x0000000000000000]              
-	unsigned char                                      NameIndex_QualityDescriptor;                      		// 0x006E (0x0001) [0x0000000000000000]              
-	unsigned char                                      PrimaryColorSet;                                  		// 0x006F (0x0001) [0x0000000000000000]              
-	unsigned char                                      SecondaryColorSet;                                		// 0x0070 (0x0001) [0x0000000000000000]              
-	int                                                EquipmentID1;                                     		// 0x0074 (0x0004) [0x0000000000000000]              
-	int                                                EquipmentID2;                                     		// 0x0078 (0x0004) [0x0000000000000000]              
-	int                                                MinimumSellWorth;                                 		// 0x007C (0x0004) [0x0000000000000000]              
-	int                                                MaximumSellWorth;                                 		// 0x0080 (0x0004) [0x0000000000000000]              
-	int                                                MaxEquipmentLevel;                                		// 0x0084 (0x0004) [0x0000000000000000]              
-	int                                                DroppedLocationX;                                 		// 0x0088 (0x0004) [0x0000000000000000]              
-	int                                                DroppedLocationY;                                 		// 0x008C (0x0004) [0x0000000000000000]              
-	int                                                DroppedLocationZ;                                 		// 0x0090 (0x0004) [0x0000000000000000]              
-	unsigned char                                      bCanBeUpgraded;                                   		// 0x0094 (0x0001) [0x0000000000000000]              
-	unsigned char                                      AllowRenamingAtMaxUpgrade;                        		// 0x0095 (0x0001) [0x0000000000000000]              
-	unsigned char                                      bCantBeDropped;                                   		// 0x0096 (0x0001) [0x0000000000000000]              
-	unsigned char                                      bCantBeSold;                                      		// 0x0097 (0x0001) [0x0000000000000000]              
-	unsigned char                                      bAutoLockInItemBox;                               		// 0x0098 (0x0001) [0x0000000000000000]              
-	unsigned char                                      bDidOnetimeEffect;                                		// 0x0099 (0x0001) [0x0000000000000000]              
-	unsigned char                                      bIsLocked;                                        		// 0x009A (0x0001) [0x0000000000000000]              
-	unsigned char                                      ManualLR;                                         		// 0x009B (0x0001) [0x0000000000000000]              
-	struct FLinearColor                                PrimaryColorOverride;                             		// 0x009C (0x0010) [0x0000000000000000]              
-	struct FLinearColor                                SecondaryColorOverride;                           		// 0x00AC (0x0010) [0x0000000000000000]              
-	struct FString                                     UserEquipmentName;                                		// 0x00BC (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct FString                                     UserForgerName;                                   		// 0x00C8 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct FString                                     Description;                                      		// 0x00D4 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct FString                                     EquipmentTemplate;                                		// 0x00E0 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	int                                                FolderID;                                         		// 0x00EC (0x0004) [0x0000000000000000]              
-	unsigned long                                      bIsSecondary : 1;                                 		// 0x00F0 (0x0004) [0x0000000000000000] [0x00000001] 
+	int                                                SpawnStatModifiers[ 0xB ];                        		// 0x0038 (0x002C) [0x0000000000000000]              
+	int                                                WeaponDamageBonus;                                		// 0x0064 (0x0004) [0x0000000000000000]              
+	unsigned char                                      WeaponNumberOfProjectilesBonus;                   		// 0x0068 (0x0001) [0x0000000000000000]              
+	int                                                WeaponSpeedOfProjectilesBonus;                    		// 0x006C (0x0004) [0x0000000000000000]              
+	unsigned char                                      WeaponAdditionalDamageTypeIndex;                  		// 0x0070 (0x0001) [0x0000000000000000]              
+	int                                                WeaponAdditionalDamageAmount;                     		// 0x0074 (0x0004) [0x0000000000000000]              
+	float                                              WeaponDrawScaleMultiplier;                        		// 0x0078 (0x0004) [0x0000000000000000]              
+	float                                              WeaponSwingSpeedMultiplier;                       		// 0x007C (0x0004) [0x0000000000000000]              
+	int                                                Level;                                            		// 0x0080 (0x0004) [0x0000000000000000]              
+	int                                                StoredMana;                                       		// 0x0084 (0x0004) [0x0000000000000000]              
+	float                                              SpawnQuality;                                     		// 0x0088 (0x0004) [0x0000000000000000]              
+	float                                              SpawnRandomizerMultiplier;                        		// 0x008C (0x0004) [0x0000000000000000]              
+	unsigned char                                      WeaponBlockingBonus;                              		// 0x0090 (0x0001) [0x0000000000000000]              
+	int                                                WeaponAltDamageBonus;                             		// 0x0094 (0x0004) [0x0000000000000000]              
+	int                                                WeaponClipAmmoBonus;                              		// 0x0098 (0x0004) [0x0000000000000000]              
+	unsigned char                                      WeaponReloadSpeedBonus;                           		// 0x009C (0x0001) [0x0000000000000000]              
+	unsigned char                                      WeaponKnockbackBonus;                             		// 0x009D (0x0001) [0x0000000000000000]              
+	unsigned char                                      WeaponChargeSpeedBonus;                           		// 0x009E (0x0001) [0x0000000000000000]              
+	unsigned char                                      WeaponShotsPerSecondBonus;                        		// 0x009F (0x0001) [0x0000000000000000]              
+	unsigned char                                      NameIndex_Base;                                   		// 0x00A0 (0x0001) [0x0000000000000000]              
+	unsigned char                                      NameIndex_DamageReduction;                        		// 0x00A1 (0x0001) [0x0000000000000000]              
+	unsigned char                                      NameIndex_QualityDescriptor;                      		// 0x00A2 (0x0001) [0x0000000000000000]              
+	unsigned char                                      PrimaryColorSet;                                  		// 0x00A3 (0x0001) [0x0000000000000000]              
+	unsigned char                                      SecondaryColorSet;                                		// 0x00A4 (0x0001) [0x0000000000000000]              
+	int                                                EquipmentID1;                                     		// 0x00A8 (0x0004) [0x0000000000000000]              
+	int                                                EquipmentID2;                                     		// 0x00AC (0x0004) [0x0000000000000000]              
+	int                                                MinimumSellWorth;                                 		// 0x00B0 (0x0004) [0x0000000000000000]              
+	int                                                MaximumSellWorth;                                 		// 0x00B4 (0x0004) [0x0000000000000000]              
+	int                                                MaxEquipmentLevel;                                		// 0x00B8 (0x0004) [0x0000000000000000]              
+	int                                                DroppedLocationX;                                 		// 0x00BC (0x0004) [0x0000000000000000]              
+	int                                                DroppedLocationY;                                 		// 0x00C0 (0x0004) [0x0000000000000000]              
+	int                                                DroppedLocationZ;                                 		// 0x00C4 (0x0004) [0x0000000000000000]              
+	unsigned char                                      bCanBeUpgraded;                                   		// 0x00C8 (0x0001) [0x0000000000000000]              
+	unsigned char                                      AllowRenamingAtMaxUpgrade;                        		// 0x00C9 (0x0001) [0x0000000000000000]              
+	unsigned char                                      bCantBeDropped;                                   		// 0x00CA (0x0001) [0x0000000000000000]              
+	unsigned char                                      bCantBeSold;                                      		// 0x00CB (0x0001) [0x0000000000000000]              
+	unsigned char                                      bAutoLockInItemBox;                               		// 0x00CC (0x0001) [0x0000000000000000]              
+	unsigned char                                      bDidOnetimeEffect;                                		// 0x00CD (0x0001) [0x0000000000000000]              
+	unsigned char                                      bIsLocked;                                        		// 0x00CE (0x0001) [0x0000000000000000]              
+	unsigned char                                      ManualLR;                                         		// 0x00CF (0x0001) [0x0000000000000000]              
+	struct FLinearColor                                PrimaryColorOverride;                             		// 0x00D0 (0x0010) [0x0000000000000000]              
+	struct FLinearColor                                SecondaryColorOverride;                           		// 0x00E0 (0x0010) [0x0000000000000000]              
+	struct FString                                     UserEquipmentName;                                		// 0x00F0 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct FString                                     UserForgerName;                                   		// 0x00FC (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct FString                                     Description;                                      		// 0x0108 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct FString                                     EquipmentTemplate;                                		// 0x0114 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct FString                                     EquipmentTimeStamp;                               		// 0x0120 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	int                                                FolderID;                                         		// 0x012C (0x0004) [0x0000000000000000]              
+	unsigned long                                      bIsSecondary : 1;                                 		// 0x0130 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // ScriptStruct UDKGame.DunDefHeroManagerNative.CoreUnlockInfo
@@ -201,36 +136,34 @@ struct FNetDamageReduction
 };
 
 // ScriptStruct UDKGame.DunDefHero.HeroCostumeTemplate
-// 0x00C0
+// 0x00B8
 struct FHeroCostumeTemplate
 {
 	int                                                CostumeUniqueID;                                  		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	struct FString                                     CostumeName;                                      		// 0x0004 (0x000C) [0x0000000000408001]              ( CPF_Edit | CPF_Localized | CPF_NeedCtorLink )
 	class USkeletalMesh*                               CostumeMesh;                                      		// 0x0010 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class USkeletalMesh*                               HatlessCostumeMesh;                               		// 0x0014 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUseHatSystem : 1;                                		// 0x0018 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	class UAnimSet*                                    CostumeAnimSet;                                   		// 0x001C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FLinearColor                                C1;                                               		// 0x0020 (0x0010) [0x0000000000000001]              ( CPF_Edit )
-	struct FLinearColor                                c2;                                               		// 0x0030 (0x0010) [0x0000000000000001]              ( CPF_Edit )
-	struct FLinearColor                                C3;                                               		// 0x0040 (0x0010) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefPlayer*                               PlayerTemplateOverride;                           		// 0x0050 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefPlayer*                               PlayerTemplateOverride_Competitive;               		// 0x0054 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UMaterialInterface*                          ColorableMiniMapIconMat;                          		// 0x0058 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UMaterialInterface*                          HeroIconMaterial;                                 		// 0x005C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class USoundCue*                                   RemovedHeroSelectionSoundOverride;                		// 0x0060 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< class UMaterialInterface* >                PreviewMaterials;                                 		// 0x0064 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	unsigned long                                      bIsPurchasable : 1;                               		// 0x0070 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	unsigned long                                      bShowWhenLocked : 1;                              		// 0x0070 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
-	struct FString                                     UnlockDescription;                                		// 0x0074 (0x000C) [0x0000000000408001]              ( CPF_Edit | CPF_Localized | CPF_NeedCtorLink )
-	unsigned long                                      bRankedOnly : 1;                                  		// 0x0080 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	unsigned long                                      bHideOnMacAppStore : 1;                           		// 0x0080 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
-	struct FString                                     PurchaseURLSteam;                                 		// 0x0084 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	struct FString                                     PurchaseURLGeneral;                               		// 0x0090 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	int                                                SteamAppIDToCheck;                                		// 0x009C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< class ADunDefPlayerAbility* >              AdditionalAbilityTemplatesOverride;               		// 0x00A0 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	TArray< class ADunDefPlayerAbility* >              AdditionalAbilityTemplatesOverride_Competitive;   		// 0x00AC (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	unsigned long                                      bOverridePreviewAnimSet : 1;                      		// 0x00B8 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	class UAnimSet*                                    OverridePreviewAnimSet;                           		// 0x00BC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UAnimSet*                                    CostumeAnimSet;                                   		// 0x0014 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FLinearColor                                C1;                                               		// 0x0018 (0x0010) [0x0000000000000001]              ( CPF_Edit )
+	struct FLinearColor                                c2;                                               		// 0x0028 (0x0010) [0x0000000000000001]              ( CPF_Edit )
+	struct FLinearColor                                C3;                                               		// 0x0038 (0x0010) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefPlayer*                               PlayerTemplateOverride;                           		// 0x0048 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefPlayer*                               PlayerTemplateOverride_Competitive;               		// 0x004C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UMaterialInterface*                          ColorableMiniMapIconMat;                          		// 0x0050 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UMaterialInterface*                          HeroIconMaterial;                                 		// 0x0054 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class USoundCue*                                   RemovedHeroSelectionSoundOverride;                		// 0x0058 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< class UMaterialInterface* >                PreviewMaterials;                                 		// 0x005C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	unsigned long                                      bIsPurchasable : 1;                               		// 0x0068 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	unsigned long                                      bShowWhenLocked : 1;                              		// 0x0068 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
+	struct FString                                     UnlockDescription;                                		// 0x006C (0x000C) [0x0000000000408001]              ( CPF_Edit | CPF_Localized | CPF_NeedCtorLink )
+	unsigned long                                      bRankedOnly : 1;                                  		// 0x0078 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	unsigned long                                      bHideOnMacAppStore : 1;                           		// 0x0078 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
+	struct FString                                     PurchaseURLSteam;                                 		// 0x007C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	struct FString                                     PurchaseURLGeneral;                               		// 0x0088 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	int                                                SteamAppIDToCheck;                                		// 0x0094 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< class ADunDefPlayerAbility* >              AdditionalAbilityTemplatesOverride;               		// 0x0098 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	TArray< class ADunDefPlayerAbility* >              AdditionalAbilityTemplatesOverride_Competitive;   		// 0x00A4 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	unsigned long                                      bOverridePreviewAnimSet : 1;                      		// 0x00B0 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	class UAnimSet*                                    OverridePreviewAnimSet;                           		// 0x00B4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 };
 
 // ScriptStruct UDKGame.DunDefHero.HeroColorTemplate
@@ -345,7 +278,7 @@ struct UDunDefHeroManagerNative_FSearchFilterSettings
 };
 
 // ScriptStruct UDKGame.DunDefHeroManagerNative.OptionsFixedStruct
-// 0x0098
+// 0x009C
 struct UDunDefHeroManagerNative_FOptionsFixedStruct
 {
 	unsigned long                                      AutoShowLevelUp : 1;                              		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
@@ -379,40 +312,43 @@ struct UDunDefHeroManagerNative_FOptionsFixedStruct
 	float                                              MouseCameraRotationSpeed;                         		// 0x0060 (0x0004) [0x0000000000000000]              
 	int                                                ItemQualityFilter;                                		// 0x0064 (0x0004) [0x0000000000000000]              
 	unsigned long                                      bHideAccessory : 1;                               		// 0x0068 (0x0004) [0x0000000000000000] [0x00000001] 
-	int                                                MinimumLevel;                                     		// 0x006C (0x0004) [0x0000000000000000]              
-	unsigned long                                      SavedLoginInfo : 1;                               		// 0x0070 (0x0004) [0x0000000000000000] [0x00000001] 
-	TArray< unsigned char >                            CustomGameMetaFlags;                              		// 0x0074 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< int >                                      CustomeUnlocks;                                   		// 0x0080 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< int >                                      HeroUnlocks;                                      		// 0x008C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	unsigned long                                      EnableOutlineEffect : 1;                          		// 0x0068 (0x0004) [0x0000000000000000] [0x00000002] 
+	unsigned char                                      GraphicsQuality;                                  		// 0x006C (0x0001) [0x0000000000000000]              
+	unsigned char                                      InventorySortingFilter;                           		// 0x006D (0x0001) [0x0000000000000000]              
+	int                                                MinimumLevel;                                     		// 0x0070 (0x0004) [0x0000000000000000]              
+	unsigned long                                      SavedLoginInfo : 1;                               		// 0x0074 (0x0004) [0x0000000000000000] [0x00000001] 
+	TArray< unsigned char >                            CustomGameMetaFlags;                              		// 0x0078 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< int >                                      CustomeUnlocks;                                   		// 0x0084 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< int >                                      HeroUnlocks;                                      		// 0x0090 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // ScriptStruct UDKGame.DunDefHeroManagerNative.OptionsInfo
-// 0x00F8
+// 0x00FC
 struct UDunDefHeroManagerNative_FOptionsInfo
 {
-	struct UDunDefHeroManagerNative_FOptionsFixedStruct fixedSizeOptions;                                 		// 0x0000 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	struct FString                                     Resolution;                                       		// 0x0098 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct FString                                     lastLevelTag;                                     		// 0x00A4 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct FString                                     UserName;                                         		// 0x00B0 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct FString                                     Password;                                         		// 0x00BC (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct UDunDefHeroManagerNative_FSearchFilterSettings searchFilters;                                    		// 0x00C8 (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< int >                                      installedDLCEquipments;                           		// 0x00EC (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FOptionsFixedStruct fixedSizeOptions;                                 		// 0x0000 (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct FString                                     Resolution;                                       		// 0x009C (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct FString                                     lastLevelTag;                                     		// 0x00A8 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct FString                                     UserName;                                         		// 0x00B4 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct FString                                     Password;                                         		// 0x00C0 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FSearchFilterSettings searchFilters;                                    		// 0x00CC (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< int >                                      installedDLCEquipments;                           		// 0x00F0 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // ScriptStruct UDKGame.DunDefHeroManagerNative.AchievementInfo
-// 0x0078
+// 0x01F4
 struct UDunDefHeroManagerNative_FAchievementInfo
 {
-	unsigned char                                      Achievements[ 0x78 ];                             		// 0x0000 (0x0078) [0x0000000000000000]              
+	unsigned char                                      Achievements[ 0x1F4 ];                            		// 0x0000 (0x01F4) [0x0000000000000000]              
 };
 
 // ScriptStruct UDKGame.DunDefHeroManagerNative.AchievementSaveEntry
-// 0x0080
+// 0x01FC
 struct FAchievementSaveEntry
 {
-	struct UDunDefHeroManagerNative_FAchievementInfo   Achievements;                                     		// 0x0000 (0x0078) [0x0000000000000000]              
-	int                                                UserID;                                           		// 0x0078 (0x0004) [0x0000000000000000]              
-	unsigned long                                      remote : 1;                                       		// 0x007C (0x0004) [0x0000000000000000] [0x00000001] 
+	struct UDunDefHeroManagerNative_FAchievementInfo   Achievements;                                     		// 0x0000 (0x01F4) [0x0000000000000000]              
+	int                                                UserID;                                           		// 0x01F4 (0x0004) [0x0000000000000000]              
+	unsigned long                                      remote : 1;                                       		// 0x01F8 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // ScriptStruct UDKGame.DunDefHeroManagerNative.CrystalCoreOptions
@@ -468,30 +404,11 @@ struct FItemBoxEntry
 };
 
 // ScriptStruct UDKGame.DunDefHeroManagerNative.OptionsEntry
-// 0x00FC
+// 0x0100
 struct FOptionsEntry
 {
-	struct UDunDefHeroManagerNative_FOptionsInfo       Options;                                          		// 0x0000 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	int                                                UserID;                                           		// 0x00F8 (0x0004) [0x0000000000000000]              
-};
-
-// ScriptStruct UDKGame.AdvancedConsoleCommandsSettings.ItemTestInfo
-// 0x0048
-struct FItemTestInfo
-{
-	TArray< int >                                      QualityArray;                                     		// 0x0000 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	int                                                ArchtypeIDToTest;                                 		// 0x000C (0x0004) [0x0000000000000000]              
-	struct FString                                     ArchtypeToTest;                                   		// 0x0010 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	float                                              QualityToTest;                                    		// 0x001C (0x0004) [0x0000000000000000]              
-	float                                              MultiplierToTest;                                 		// 0x0020 (0x0004) [0x0000000000000000]              
-	int                                                MaxItemCount;                                     		// 0x0024 (0x0004) [0x0000000000000000]              
-	int                                                CurrentItemCount;                                 		// 0x0028 (0x0004) [0x0000000000000000]              
-	float                                              GoNegativeOffset;                                 		// 0x002C (0x0004) [0x0000000000000000]              
-	unsigned long                                      bUseGoNegativeOffset : 1;                         		// 0x0030 (0x0004) [0x0000000000000000] [0x00000001] 
-	unsigned long                                      bForceAlcCal : 1;                                 		// 0x0030 (0x0004) [0x0000000000000000] [0x00000002] 
-	int                                                AlcCalMin;                                        		// 0x0034 (0x0004) [0x0000000000000000]              
-	int                                                AlcCalMax;                                        		// 0x0038 (0x0004) [0x0000000000000000]              
-	TArray< int >                                      UpgradeArray;                                     		// 0x003C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FOptionsInfo       Options;                                          		// 0x0000 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	int                                                UserID;                                           		// 0x00FC (0x0004) [0x0000000000000000]              
 };
 
 // ScriptStruct UDKGame.DunDefHeroManagerNative.GameDamageEntry
@@ -580,11 +497,11 @@ struct FStatsSaveEntry
 };
 
 // ScriptStruct UDKGame.DunDefHeroManager.PlayerShopEntrySaveInfo
-// 0x00F8
+// 0x0138
 struct UDunDefHeroManager_FPlayerShopEntrySaveInfo
 {
-	struct UDunDefHeroManagerNative_FEquipmentSaveInfo EquipmentEntry;                                   		// 0x0000 (0x00F4) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	int                                                SellAmount;                                       		// 0x00F4 (0x0004) [0x0000000000000000]              
+	struct UDunDefHeroManagerNative_FEquipmentSaveInfo EquipmentEntry;                                   		// 0x0000 (0x0134) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	int                                                SellAmount;                                       		// 0x0134 (0x0004) [0x0000000000000000]              
 };
 
 // ScriptStruct UDKGame.DunDefHeroManager.ShopEquipmentSet
@@ -604,16 +521,8 @@ struct FItemFolder
 	unsigned long                                      Tag : 1;                                          		// 0x0014 (0x0004) [0x0000000000002000] [0x00000001] ( CPF_Transient )
 };
 
-// ScriptStruct UDKGame.DunDefHeroManager.IronManMapModifiers
-// 0x0008
-struct FIronManMapModifiers
-{
-	float                                              EnemyCountMultiplier;                             		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                MaximumNumberOfEnemiesOverride;                   		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-};
-
 // ScriptStruct UDKGame.DunDefHeroManager.CampaignLevelEntry
-// 0x0118
+// 0x0108
 struct FCampaignLevelEntry
 {
 	unsigned long                                      IsDLCCampaign : 1;                                		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
@@ -628,60 +537,54 @@ struct FCampaignLevelEntry
 	unsigned long                                      AlwaysUnlocked : 1;                               		// 0x0034 (0x0004) [0x0000000000000000] [0x00000001] 
 	unsigned long                                      ProceedsToNextLevel : 1;                          		// 0x0034 (0x0004) [0x0000000000000000] [0x00000002] 
 	unsigned long                                      bDisableHardcoreMode : 1;                         		// 0x0034 (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
-	unsigned long                                      bForceDisableIronMan : 1;                         		// 0x0034 (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
-	unsigned long                                      bForceDisableSpawnAccleration : 1;                		// 0x0034 (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
 	float                                              EquipmentWeightingMultiplier;                     		// 0x0038 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	float                                              EquipmentQualityMultiplier;                       		// 0x003C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              InsanityEquipmentQualityMultiplier;               		// 0x0040 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              ExperienceMultiplier;                             		// 0x0044 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              InsanityExperienceMultiplier;                     		// 0x0048 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FString                                     GameInfoClassOverride;                            		// 0x004C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	int                                                KismetSwitch;                                     		// 0x0058 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                RecommendedHeroLevel;                             		// 0x005C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< int >                                      RecommendedHeroLevels;                            		// 0x0060 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	int                                                StartWaveOverride;                                		// 0x006C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                MaxWaveOverride;                                  		// 0x0070 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                AscensionMaxWaveOverride;                         		// 0x0074 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< struct FString >                           AdditionalUnlocks;                                		// 0x0078 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	int                                                ContextId;                                        		// 0x0084 (0x0004) [0x0000000000000000]              
-	unsigned long                                      IsDLC : 1;                                        		// 0x0088 (0x0004) [0x0000000000000000] [0x00000001] 
-	TArray< struct FString >                           HiddenUnlessUnlocked;                             		// 0x008C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	unsigned long                                      IsHidden : 1;                                     		// 0x0098 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	struct FString                                     PreviewImage;                                     		// 0x009C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	unsigned long                                      bIsDemoLevel : 1;                                 		// 0x00A8 (0x0004) [0x0000000000000000] [0x00000001] 
-	unsigned long                                      AllowForegroundRendering : 1;                     		// 0x00A8 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
-	unsigned long                                      AllowFlawlessVictory : 1;                         		// 0x00A8 (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
-	unsigned long                                      SpecialMissionAllowProcession : 1;                		// 0x00A8 (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
-	unsigned long                                      bForceDisplayAtEndOfList : 1;                     		// 0x00A8 (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
-	unsigned long                                      HideOnMacAppStore : 1;                            		// 0x00A8 (0x0004) [0x0000000000000001] [0x00000020] ( CPF_Edit )
-	int                                                TowerUnitsOverride;                               		// 0x00AC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      NoLeaderboard : 1;                                		// 0x00B0 (0x0004) [0x0000000000000000] [0x00000001] 
-	unsigned long                                      bMultiplayerOnly : 1;                             		// 0x00B0 (0x0004) [0x0000000000000000] [0x00000002] 
-	float                                              TreasureManaDropMultiplier;                       		// 0x00B4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bIsCustomEntry : 1;                               		// 0x00B8 (0x0004) [0x0000000000000000] [0x00000001] 
-	unsigned long                                      IsPremiumLevel : 1;                               		// 0x00B8 (0x0004) [0x0000000000000000] [0x00000002] 
-	unsigned long                                      IsRestrictedPremiumLevel : 1;                     		// 0x00B8 (0x0004) [0x0000000000000000] [0x00000004] 
-	int                                                TheDLCId;                                         		// 0x00BC (0x0004) [0x0000000000000000]              
-	unsigned long                                      IsModMap : 1;                                     		// 0x00C0 (0x0004) [0x0000000000000000] [0x00000001] 
-	unsigned long                                      IsSubscribedModMap : 1;                           		// 0x00C0 (0x0004) [0x0000000000000000] [0x00000002] 
-	unsigned long                                      bHiddenIfLocked : 1;                              		// 0x00C0 (0x0004) [0x0000000000000000] [0x00000004] 
-	unsigned long                                      ForceShowInMissionSetup : 1;                      		// 0x00C0 (0x0004) [0x0000000000000000] [0x00000008] 
-	unsigned long                                      ForceShowForStats : 1;                            		// 0x00C0 (0x0004) [0x0000000000000000] [0x00000010] 
-	struct FString                                     PurchaseURLSteam;                                 		// 0x00C4 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	struct FString                                     PurchaseURLGeneral;                               		// 0x00D0 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	float                                              EquipmentRandomizerMultiplier;                    		// 0x00DC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MapAdditiveDroppedEquipmentQuality;               		// 0x00E0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              InsanityMapAdditiveDroppedEquipmentQuality;       		// 0x00E4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              EqupmentRandomizerAdditionPerScalingWave;         		// 0x00E8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MixModeEquipmentAdditionScalingPerWave;           		// 0x00EC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              NightmareRandomizerAdditionPerScalingWave;        		// 0x00F0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              HardcoreNightmareRandomizerAdditionPerScalingWave;		// 0x00F4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              ExtraBuildTimeMultiplier;                         		// 0x00F8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              OverlordMinHeight;                                		// 0x00FC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              OverlordMaxHeight;                                		// 0x0100 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FVector2D                                   OverlordMinXYBounds;                              		// 0x0104 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FVector2D                                   OverlordMaxXYBounds;                              		// 0x010C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	int                                                DunDefMaxPlayers;                                 		// 0x0114 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              ExperienceMultiplier;                             		// 0x0040 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FString                                     GameInfoClassOverride;                            		// 0x0044 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	int                                                KismetSwitch;                                     		// 0x0050 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	int                                                RecommendedHeroLevel;                             		// 0x0054 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< int >                                      RecommendedHeroLevels;                            		// 0x0058 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	int                                                StartWaveOverride;                                		// 0x0064 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	int                                                MaxWaveOverride;                                  		// 0x0068 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< struct FString >                           AdditionalUnlocks;                                		// 0x006C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	int                                                ContextId;                                        		// 0x0078 (0x0004) [0x0000000000000000]              
+	unsigned long                                      IsDLC : 1;                                        		// 0x007C (0x0004) [0x0000000000000000] [0x00000001] 
+	TArray< struct FString >                           HiddenUnlessUnlocked;                             		// 0x0080 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	unsigned long                                      IsHidden : 1;                                     		// 0x008C (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	struct FString                                     PreviewImage;                                     		// 0x0090 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	unsigned long                                      bIsDemoLevel : 1;                                 		// 0x009C (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      AllowForegroundRendering : 1;                     		// 0x009C (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
+	unsigned long                                      AllowFlawlessVictory : 1;                         		// 0x009C (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
+	unsigned long                                      SpecialMissionAllowProcession : 1;                		// 0x009C (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
+	unsigned long                                      bForceDisplayAtEndOfList : 1;                     		// 0x009C (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
+	unsigned long                                      HideOnMacAppStore : 1;                            		// 0x009C (0x0004) [0x0000000000000001] [0x00000020] ( CPF_Edit )
+	int                                                TowerUnitsOverride;                               		// 0x00A0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      NoLeaderboard : 1;                                		// 0x00A4 (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      bMultiplayerOnly : 1;                             		// 0x00A4 (0x0004) [0x0000000000000000] [0x00000002] 
+	float                                              TreasureManaDropMultiplier;                       		// 0x00A8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      bIsCustomEntry : 1;                               		// 0x00AC (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      IsPremiumLevel : 1;                               		// 0x00AC (0x0004) [0x0000000000000000] [0x00000002] 
+	unsigned long                                      IsRestrictedPremiumLevel : 1;                     		// 0x00AC (0x0004) [0x0000000000000000] [0x00000004] 
+	int                                                TheDLCId;                                         		// 0x00B0 (0x0004) [0x0000000000000000]              
+	unsigned long                                      IsModMap : 1;                                     		// 0x00B4 (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      IsSubscribedModMap : 1;                           		// 0x00B4 (0x0004) [0x0000000000000000] [0x00000002] 
+	unsigned long                                      bHiddenIfLocked : 1;                              		// 0x00B4 (0x0004) [0x0000000000000000] [0x00000004] 
+	unsigned long                                      ForceShowInMissionSetup : 1;                      		// 0x00B4 (0x0004) [0x0000000000000000] [0x00000008] 
+	unsigned long                                      ForceShowForStats : 1;                            		// 0x00B4 (0x0004) [0x0000000000000000] [0x00000010] 
+	struct FString                                     PurchaseURLSteam;                                 		// 0x00B8 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct FString                                     PurchaseURLGeneral;                               		// 0x00C4 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	float                                              EquipmentRandomizerMultiplier;                    		// 0x00D0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MapAdditiveDroppedEquipmentQuality;               		// 0x00D4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              EqupmentRandomizerAdditionPerScalingWave;         		// 0x00D8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MixModeEquipmentAdditionScalingPerWave;           		// 0x00DC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              NightmareRandomizerAdditionPerScalingWave;        		// 0x00E0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              HardcoreNightmareRandomizerAdditionPerScalingWave;		// 0x00E4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              ExtraBuildTimeMultiplier;                         		// 0x00E8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              OverlordMinHeight;                                		// 0x00EC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              OverlordMaxHeight;                                		// 0x00F0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FVector2D                                   OverlordMinXYBounds;                              		// 0x00F4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FVector2D                                   OverlordMaxXYBounds;                              		// 0x00FC (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	int                                                DunDefMaxPlayers;                                 		// 0x0104 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 };
 
 // ScriptStruct UDKGame.DunDefGameStorage.EquipmentSaveInfo
@@ -747,24 +650,24 @@ struct UDunDefGameStorage_FShopSetSaveInfo
 };
 
 // ScriptStruct UDKGame.DunDefGameStorage.GameStorage
-// 0x0254
+// 0x03D4
 struct UDunDefGameStorage_FGameStorage
 {
-	struct UDunDefHeroManagerNative_FOptionsInfo       GameOptions;                                      		// 0x0000 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< struct UDunDefHeroManagerNative_FHeroAndEquipment > Heroes;                                           		// 0x00F8 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	struct UDunDefHeroManagerNative_FAchievementInfo   Achievements;                                     		// 0x0104 (0x0078) [0x0000000000000000]              
-	struct UDunDefHeroManagerNative_FCoreUnlockInfo    Core_Info;                                        		// 0x017C (0x0028) [0x0000000000000000]              
-	struct FCrystalCoreOptions                         Core_Options;                                     		// 0x01A4 (0x0034) [0x0000000000000000]              
-	TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > Beaten_Levels;                                    		// 0x01D8 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > Unlocked_Levels;                                  		// 0x01E4 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	struct UDunDefHeroManagerNative_FItemBoxInfo       Item_Box;                                         		// 0x01F0 (0x0010) [0x0000000000000000]              
-	TArray< struct UDunDefHeroManagerNative_FEquipmentSaveInfo > Equipment;                                        		// 0x0200 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< struct UDunDefHeroManagerNative_FEquipmentSaveInfo > Hero_Equipment;                                   		// 0x020C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< struct UDunDefHeroManagerNative_FEquipmentSaveInfo > Lobby_Equipment;                                  		// 0x0218 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< struct UDunDefGameStorage_FShopSetSaveInfo > Shop_Sets;                                        		// 0x0224 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< struct UDunDefHeroManager_FPlayerShopEntrySaveInfo > Player_Shop_Entries;                              		// 0x0230 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< struct FItemFolder >                       ItemFolders;                                      		// 0x023C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< struct FItemFolder >                       LocalShopItemFolders;                             		// 0x0248 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FOptionsInfo       GameOptions;                                      		// 0x0000 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< struct UDunDefHeroManagerNative_FHeroAndEquipment > Heroes;                                           		// 0x00FC (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FAchievementInfo   Achievements;                                     		// 0x0108 (0x01F4) [0x0000000000000000]              
+	struct UDunDefHeroManagerNative_FCoreUnlockInfo    Core_Info;                                        		// 0x02FC (0x0028) [0x0000000000000000]              
+	struct FCrystalCoreOptions                         Core_Options;                                     		// 0x0324 (0x0034) [0x0000000000000000]              
+	TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > Beaten_Levels;                                    		// 0x0358 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > Unlocked_Levels;                                  		// 0x0364 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FItemBoxInfo       Item_Box;                                         		// 0x0370 (0x0010) [0x0000000000000000]              
+	TArray< struct UDunDefHeroManagerNative_FEquipmentSaveInfo > Equipment;                                        		// 0x0380 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< struct UDunDefHeroManagerNative_FEquipmentSaveInfo > Hero_Equipment;                                   		// 0x038C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< struct UDunDefHeroManagerNative_FEquipmentSaveInfo > Lobby_Equipment;                                  		// 0x0398 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< struct UDunDefGameStorage_FShopSetSaveInfo > Shop_Sets;                                        		// 0x03A4 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< struct UDunDefHeroManager_FPlayerShopEntrySaveInfo > Player_Shop_Entries;                              		// 0x03B0 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< struct FItemFolder >                       ItemFolders;                                      		// 0x03BC (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< struct FItemFolder >                       LocalShopItemFolders;                             		// 0x03C8 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // ScriptStruct UDKGame.HeroEquipment.EquipmentNetInfo
@@ -1041,84 +944,6 @@ struct FKeyDescription
 	class UTexture2D*                                  KeyIcon;                                          		// 0x0014 (0x0004) [0x0000000000000000]              
 };
 
-// ScriptStruct UDKGame.HeroEquipment.LevelRequirementOverride
-// 0x0008
-struct FLevelRequirementOverride
-{
-	float                                              QualityThreshold;                                 		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                LevelRequirementIndex;                            		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame.HeroEquipment.EquipmentAttachmentScaleInfo
-// 0x0010
-struct FEquipmentAttachmentScaleInfo
-{
-	int                                                HeroAttachmentScaleType;                          		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FVector                                     AttachmentScale;                                  		// 0x0004 (0x000C) [0x0000000000000001]              ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame.HeroEquipment.EquipmentAttachmentInfo
-// 0x003C
-struct FEquipmentAttachmentInfo
-{
-	TArray< struct FEquipmentAttachmentScaleInfo >     AttachmentScaleInfos;                             		// 0x0000 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	struct FName                                       SocketNameToAttachTo;                             		// 0x000C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	unsigned char                                      MICIndex;                                         		// 0x0014 (0x0001) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      UseQualityRatingMIC : 1;                          		// 0x0018 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	unsigned long                                      UseColorSetMIC : 1;                               		// 0x0018 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
-	unsigned long                                      bAttachToBone : 1;                                		// 0x0018 (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
-	unsigned long                                      bAttachToActor : 1;                               		// 0x0018 (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
-	unsigned long                                      bUseEquipmentDrawScale : 1;                       		// 0x0018 (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
-	unsigned long                                      bUseParentShadow : 1;                             		// 0x0018 (0x0004) [0x0000000000000001] [0x00000020] ( CPF_Edit )
-	struct FVector                                     CagedOffset;                                      		// 0x001C (0x000C) [0x0000000000000001]              ( CPF_Edit )
-	class UPrimitiveComponent*                         ComponentToAttach;                                		// 0x0028 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	unsigned long                                      bAttachToOtherSKAttachment : 1;                   		// 0x002C (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	int                                                AttachToOtherSKAttachmentIndex;                   		// 0x0030 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       AttachedCompName;                                 		// 0x0034 (0x0008) [0x0000000000002000]              ( CPF_Transient )
-};
-
-// ScriptStruct UDKGame.HeroEquipment.EG_StatMatchingString
-// 0x0018
-struct FEG_StatMatchingString
-{
-	float                                              ValueThreshold;                                   		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              PetValueThreshold;                                		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              ArmorValueThreshold;                              		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FString                                     StringValue;                                      		// 0x000C (0x000C) [0x0000000000408001]              ( CPF_Edit | CPF_Localized | CPF_NeedCtorLink )
-};
-
-// ScriptStruct UDKGame.HeroEquipment.LevelRange
-// 0x0008
-struct UHeroEquipment_FLevelRange
-{
-	int                                                MinLevel;                                         		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                MaxLevel;                                         		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame.HeroEquipment.EquipmentComparison
-// 0x0038
-struct FEquipmentComparison
-{
-	struct FString                                     Name;                                             		// 0x0000 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	float                                              Values[ 0xB ];                                    		// 0x000C (0x002C) [0x0000000000000000]              
-};
-
-// ScriptStruct UDKGame.HeroEquipment.EG_StatRandomizer
-// 0x0028
-struct FEG_StatRandomizer
-{
-	float                                              MaxRandomValue;                                   		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MaxRandomValueNegative;                           		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              RandomPower;                                      		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              RandomPowerOverrideIfNegative;                    		// 0x000C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              RandomNegativeThreshold;                          		// 0x0010 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              RandomInclusionThreshold;                         		// 0x0014 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              InclusionThresholdOverrideIfNegative;             		// 0x0018 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              NegativeThresholdQualityPercentMultiplier;        		// 0x001C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MinimumPercentageValue;                           		// 0x0020 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              NegativeMinimumPercentageValue;                   		// 0x0024 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-};
-
 // ScriptStruct UDKGame.DunDefGameReplicationInfo.HeroAward
 // 0x0010
 struct ADunDefGameReplicationInfo_FHeroAward
@@ -1193,14 +1018,6 @@ struct FExpensiveFunctionRegister
 	unsigned long                                      bExpensiveFunctionRan : 1;                        		// 0x000C (0x0004) [0x0000000000002000] [0x00000001] ( CPF_Transient )
 };
 
-// ScriptStruct UDKGame.DunDefMapInfo.DivineShardDropRate
-// 0x0008
-struct FDivineShardDropRate
-{
-	int                                                KismetSwitch;                                     		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DropChance;                                       		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-};
-
 // ScriptStruct UDKGame.DDGRI_Competitive.TeamData
 // 0x0010
 struct FTeamData
@@ -1248,7 +1065,6 @@ struct FEnemyWaveEntry
 	unsigned long                                      bNightmareModeOnly : 1;                           		// 0x0070 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
 	unsigned long                                      bDisableInPureStrategy : 1;                       		// 0x0070 (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
 	unsigned long                                      bForceNoSpawnInterval : 1;                        		// 0x0070 (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
-	unsigned long                                      bInsanityOnly : 1;                                		// 0x0070 (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
 	int                                                CustomMissionIndexRequirement;                    		// 0x0074 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	int                                                CustomEnemyTag;                                   		// 0x0078 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	TArray< class AActor* >                            SpawnPointList;                                   		// 0x007C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
@@ -1270,7 +1086,7 @@ struct FActorTargetingMultiplier
 };
 
 // ScriptStruct UDKGame.DunDef_SeqAct_GiveEquipmentToPlayers.GiveEquipmentEntry
-// 0x0044
+// 0x0034
 struct FGiveEquipmentEntry
 {
 	class UDunDefHero*                                 ForHeroArchetype;                                 		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
@@ -1279,20 +1095,16 @@ struct FGiveEquipmentEntry
 	float                                              BaseForceRandomizationQuality;                    		// 0x0014 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	float                                              MaxRandomizationQuality;                          		// 0x0018 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	float                                              RandomizerMultiplierOverride;                     		// 0x001C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUseGoNegativeOffset : 1;                         		// 0x0020 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	float                                              GoNegativeOffset;                                 		// 0x0024 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUseRewardChance : 1;                             		// 0x0028 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	float                                              RewardChance;                                     		// 0x002C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUseEquipmentArchetypeAsTemplate : 1;             		// 0x0030 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	unsigned long                                      bRandomGlobalDontUseAdditionalItemEntries : 1;    		// 0x0030 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
-	unsigned long                                      ForceHeroArchetypeExactMatch : 1;                 		// 0x0030 (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
-	unsigned long                                      bDontIgnoreEquipmentMinUpgradeLevels : 1;         		// 0x0030 (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
-	unsigned long                                      bGetRandomGlobalEquipmentDrop : 1;                		// 0x0030 (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
-	unsigned long                                      bRandomGlobalDontUseShopDrops : 1;                		// 0x0030 (0x0004) [0x0000000000000001] [0x00000020] ( CPF_Edit )
-	float                                              RandomGlobalEquipmentDropExtraRarityWeighting;    		// 0x0034 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              RandomGlobalEquipmentDropValueMin;                		// 0x0038 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              RandomGlobalEquipmentDropValueMax;                		// 0x003C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUsed : 1;                                        		// 0x0040 (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      bUseEquipmentArchetypeAsTemplate : 1;             		// 0x0020 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	unsigned long                                      bRandomGlobalDontUseAdditionalItemEntries : 1;    		// 0x0020 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
+	unsigned long                                      ForceHeroArchetypeExactMatch : 1;                 		// 0x0020 (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
+	unsigned long                                      bDontIgnoreEquipmentMinUpgradeLevels : 1;         		// 0x0020 (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
+	unsigned long                                      bGetRandomGlobalEquipmentDrop : 1;                		// 0x0020 (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
+	unsigned long                                      bRandomGlobalDontUseShopDrops : 1;                		// 0x0020 (0x0004) [0x0000000000000001] [0x00000020] ( CPF_Edit )
+	float                                              RandomGlobalEquipmentDropExtraRarityWeighting;    		// 0x0024 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              RandomGlobalEquipmentDropValueMin;                		// 0x0028 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              RandomGlobalEquipmentDropValueMax;                		// 0x002C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      bUsed : 1;                                        		// 0x0030 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // ScriptStruct UDKGame.DunDefMapInfo.EnemyAnimTreeOverride
@@ -1311,26 +1123,6 @@ struct FMixEnemyDifficultyThreshold
 	unsigned char                                      DifficultyThreshold;                              		// 0x0004 (0x0001) [0x0000000000000001]              ( CPF_Edit )
 };
 
-// ScriptStruct UDKGame.DunDefMapInfo.CustomIronManModifer
-// 0x0018
-struct FCustomIronManModifer
-{
-	float                                              HealthMultiplier;                                 		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              SpeedMultiplier;                                  		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DamageMultiplier;                                 		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              PawnDamageResistanceModifierOverride;             		// 0x000C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TowerDamageResistanceModifier;                    		// 0x0010 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUseTowerResistance : 1;                          		// 0x0014 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame.DunDefMapInfo.CustomMapWideModifier
-// 0x001C
-struct FCustomMapWideModifier
-{
-	int                                                GameModeSwitchInt;                                		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FCustomIronManModifer                       MapWideModifier;                                  		// 0x0004 (0x0018) [0x0000000000000001]              ( CPF_Edit )
-};
-
 // ScriptStruct UDKGame.DunDefMapInfo.CameraParticleInfo
 // 0x0040
 struct FCameraParticleInfo
@@ -1344,15 +1136,6 @@ struct FCameraParticleInfo
 	unsigned long                                      initiallyEnabled : 1;                             		// 0x0034 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
 	int                                                TranslucencySortPriority;                         		// 0x0038 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	unsigned long                                      fromMap : 1;                                      		// 0x003C (0x0004) [0x0000000000000000] [0x00000001] 
-};
-
-// ScriptStruct UDKGame.DunDefMapInfo.OverrideIronManModifersPerEnemyTemplate
-// 0x0020
-struct FOverrideIronManModifersPerEnemyTemplate
-{
-	struct FCustomIronManModifer                       CustomModifier;                                   		// 0x0000 (0x0018) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEnemy*                                EnemyTemplate;                                    		// 0x0018 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                kismetSwitchInt;                                  		// 0x001C (0x0004) [0x0000000000000001]              ( CPF_Edit )
 };
 
 // ScriptStruct UDKGame.DunDefPlayerController.metPlayers
@@ -1397,61 +1180,6 @@ struct FMobileInput
 	unsigned long                                      bCameraRightPressed : 1;                          		// 0x0000 (0x0004) [0x0000000000000000] [0x00000004] 
 };
 
-// ScriptStruct UDKGame.DunDefPawn.AuraEffect
-// 0x0008
-struct ADunDefPawn_FAuraEffect
-{
-	class ADunDefTower_Aura*                           AuraType;                                         		// 0x0000 (0x0004) [0x0000000000000000]              
-	int                                                UseCounter;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
-// ScriptStruct UDKGame.DunDefEnemy.EnemyElementalEntry
-// 0x0010
-struct FEnemyElementalEntry
-{
-	class UClass*                                      ElementalDamageType;                              		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              UsageChance;                                      		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystem*                             elementalEffect;                                  		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              ElementalEffectScale;                             		// 0x000C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame.DunDefEnemy.EnemyIronManModifiers
-// 0x0018
-struct FEnemyIronManModifiers
-{
-	float                                              HealthMultiplier;                                 		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              SpeedMultiplier;                                  		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DamageMultiplier;                                 		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              PawnDamageResistanceModifierOverride;             		// 0x000C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TowerDamageResistanceModifier;                    		// 0x0010 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUseTowerResistance : 1;                          		// 0x0014 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame.NativeDunDefEnemyController.DebugTargetList
-// 0x0008
-struct FDebugTargetList
-{
-	class AActor*                                      Target;                                           		// 0x0000 (0x0004) [0x0000000000000000]              
-	float                                              Desiribility;                                     		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
-// ScriptStruct UDKGame.NativeDunDefEnemyController.ClassTargetingMultiplier
-// 0x0008
-struct FClassTargetingMultiplier
-{
-	class UClass*                                      ActorClass;                                       		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TargetingMultiplier;                              		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame.NativeDunDefEnemyController.AggroEntry
-// 0x000C
-struct FAggroEntry
-{
-	class AActor*                                      Attacker;                                         		// 0x0000 (0x0004) [0x0000000000000000]              
-	float                                              AggroFactor;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
-	float                                              LastAggroHitTime;                                 		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
 // ScriptStruct UDKGame.Main.MapPrefixDefinition
 // 0x0018
 struct FMapPrefixDefinition
@@ -1485,6 +1213,52 @@ struct FGiveCostumeEntry
 	unsigned long                                      bIsHeroUnlock : 1;                                		// 0x000C (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
 };
 
+// ScriptStruct UDKGame.DunDefPawn.AuraEffect
+// 0x0008
+struct ADunDefPawn_FAuraEffect
+{
+	class ADunDefTower_Aura*                           AuraType;                                         		// 0x0000 (0x0004) [0x0000000000000000]              
+	int                                                UseCounter;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
+};
+
+// ScriptStruct UDKGame.DunDefEnemy.EnemyElementalEntry
+// 0x0010
+struct FEnemyElementalEntry
+{
+	class UClass*                                      ElementalDamageType;                              		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              UsageChance;                                      		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystem*                             elementalEffect;                                  		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              ElementalEffectScale;                             		// 0x000C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+};
+
+// ScriptStruct UDKGame.HeroEquipment.EquipmentAttachmentScaleInfo
+// 0x0010
+struct FEquipmentAttachmentScaleInfo
+{
+	int                                                HeroAttachmentScaleType;                          		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FVector                                     AttachmentScale;                                  		// 0x0004 (0x000C) [0x0000000000000001]              ( CPF_Edit )
+};
+
+// ScriptStruct UDKGame.HeroEquipment.EquipmentAttachmentInfo
+// 0x003C
+struct FEquipmentAttachmentInfo
+{
+	TArray< struct FEquipmentAttachmentScaleInfo >     AttachmentScaleInfos;                             		// 0x0000 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	struct FName                                       SocketNameToAttachTo;                             		// 0x000C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	unsigned char                                      MICIndex;                                         		// 0x0014 (0x0001) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      UseQualityRatingMIC : 1;                          		// 0x0018 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	unsigned long                                      UseColorSetMIC : 1;                               		// 0x0018 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
+	unsigned long                                      bAttachToBone : 1;                                		// 0x0018 (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
+	unsigned long                                      bAttachToActor : 1;                               		// 0x0018 (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
+	unsigned long                                      bUseEquipmentDrawScale : 1;                       		// 0x0018 (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
+	unsigned long                                      bUseParentShadow : 1;                             		// 0x0018 (0x0004) [0x0000000000000001] [0x00000020] ( CPF_Edit )
+	struct FVector                                     CagedOffset;                                      		// 0x001C (0x000C) [0x0000000000000001]              ( CPF_Edit )
+	class UPrimitiveComponent*                         ComponentToAttach;                                		// 0x0028 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	unsigned long                                      bAttachToOtherSKAttachment : 1;                   		// 0x002C (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	int                                                AttachToOtherSKAttachmentIndex;                   		// 0x0030 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       AttachedCompName;                                 		// 0x0034 (0x0008) [0x0000000000002000]              ( CPF_Transient )
+};
+
 // ScriptStruct UDKGame.DunDefDamageableTarget.DamageAdjuster
 // 0x000C
 struct FDamageAdjuster
@@ -1502,8 +1276,33 @@ struct ADunDefDamageableTarget_FAuraEffect
 	int                                                UseCounter;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
+// ScriptStruct UDKGame.NativeDunDefEnemyController.DebugTargetList
+// 0x0008
+struct FDebugTargetList
+{
+	class AActor*                                      Target;                                           		// 0x0000 (0x0004) [0x0000000000000000]              
+	float                                              Desiribility;                                     		// 0x0004 (0x0004) [0x0000000000000000]              
+};
+
+// ScriptStruct UDKGame.NativeDunDefEnemyController.ClassTargetingMultiplier
+// 0x0008
+struct FClassTargetingMultiplier
+{
+	class UClass*                                      ActorClass;                                       		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              TargetingMultiplier;                              		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+};
+
+// ScriptStruct UDKGame.NativeDunDefEnemyController.AggroEntry
+// 0x000C
+struct FAggroEntry
+{
+	class AActor*                                      Attacker;                                         		// 0x0000 (0x0004) [0x0000000000000000]              
+	float                                              AggroFactor;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	float                                              LastAggroHitTime;                                 		// 0x0008 (0x0004) [0x0000000000000000]              
+};
+
 // ScriptStruct UDKGame.DunDefGameStorage.OptionsFixedStruct
-// 0x0090
+// 0x0098
 struct UDunDefGameStorage_FOptionsFixedStruct
 {
 	unsigned long                                      AutoShowLevelUp : 1;                              		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
@@ -1535,41 +1334,26 @@ struct UDunDefGameStorage_FOptionsFixedStruct
 	float                                              DefaultCameraTargetDistance;                      		// 0x0058 (0x0004) [0x0000000000000000]              
 	float                                              DefaultPlacingTowerCameraDistance;                		// 0x005C (0x0004) [0x0000000000000000]              
 	float                                              MouseCameraRotationSpeed;                         		// 0x0060 (0x0004) [0x0000000000000000]              
-	int                                                MinimumLevel;                                     		// 0x0064 (0x0004) [0x0000000000000000]              
-	unsigned long                                      SavedLoginInfo : 1;                               		// 0x0068 (0x0004) [0x0000000000000000] [0x00000001] 
-	TArray< unsigned char >                            CustomGameMetaFlags;                              		// 0x006C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< int >                                      CustomeUnlocks;                                   		// 0x0078 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< int >                                      HeroUnlocks;                                      		// 0x0084 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// ScriptStruct UDKGame.DunDefGameStorage.SearchFilterSettings
-// 0x0025
-struct UDunDefGameStorage_FSearchFilterSettings
-{
-	TArray< int >                                      levelIndicesToFilter;                             		// 0x0000 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	int                                                difficultiesToFilter[ 0x4 ];                      		// 0x000C (0x0010) [0x0000000000000000]              
-	unsigned char                                      filterChallengeMissions;                          		// 0x001C (0x0001) [0x0000000000000000]              
-	unsigned char                                      filterCampaignMissions;                           		// 0x001D (0x0001) [0x0000000000000000]              
-	unsigned char                                      filterPureStrategy;                               		// 0x001E (0x0001) [0x0000000000000000]              
-	unsigned char                                      filterInfiniteBuild;                              		// 0x001F (0x0001) [0x0000000000000000]              
-	unsigned char                                      filterInfiniteWaves;                              		// 0x0020 (0x0001) [0x0000000000000000]              
-	unsigned char                                      filterHostClass;                                  		// 0x0021 (0x0001) [0x0000000000000000]              
-	unsigned char                                      filterHostLevel;                                  		// 0x0022 (0x0001) [0x0000000000000000]              
-	unsigned char                                      filterHostLevelStart;                             		// 0x0023 (0x0001) [0x0000000000000000]              
-	unsigned char                                      filterHostLevelEnd;                               		// 0x0024 (0x0001) [0x0000000000000000]              
+	int                                                ItemQualityFilter;                                		// 0x0064 (0x0004) [0x0000000000000000]              
+	unsigned long                                      bHideAccessory : 1;                               		// 0x0068 (0x0004) [0x0000000000000000] [0x00000001] 
+	int                                                MinimumLevel;                                     		// 0x006C (0x0004) [0x0000000000000000]              
+	unsigned long                                      SavedLoginInfo : 1;                               		// 0x0070 (0x0004) [0x0000000000000000] [0x00000001] 
+	TArray< unsigned char >                            CustomGameMetaFlags;                              		// 0x0074 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< int >                                      CustomeUnlocks;                                   		// 0x0080 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< int >                                      HeroUnlocks;                                      		// 0x008C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // ScriptStruct UDKGame.DunDefGameStorage.OptionsInfo
-// 0x00F0
+// 0x00F8
 struct UDunDefGameStorage_FOptionsInfo
 {
-	struct UDunDefGameStorage_FOptionsFixedStruct      fixedSizeOptions;                                 		// 0x0000 (0x008C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	struct FString                                     Resolution;                                       		// 0x008C (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct FString                                     lastLevelTag;                                     		// 0x0098 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct FString                                     UserName;                                         		// 0x00A4 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct FString                                     Password;                                         		// 0x00B0 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
-	struct UDunDefGameStorage_FSearchFilterSettings    searchFilters;                                    		// 0x00BC (0x0028) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< int >                                      installedDLCEquipments;                           		// 0x00E4 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct UDunDefGameStorage_FOptionsFixedStruct      fixedSizeOptions;                                 		// 0x0000 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct FString                                     Resolution;                                       		// 0x0098 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct FString                                     lastLevelTag;                                     		// 0x00A4 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct FString                                     UserName;                                         		// 0x00B0 (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct FString                                     Password;                                         		// 0x00BC (0x000C) [0x0000000000500000]              ( CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FSearchFilterSettings searchFilters;                                    		// 0x00C8 (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< int >                                      installedDLCEquipments;                           		// 0x00EC (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // ScriptStruct UDKGame.DunDefGameStorage.HeroAndEquipment
@@ -1589,10 +1373,10 @@ struct UDunDefGameStorage_FPlayerShopEntrySaveInfo
 };
 
 // ScriptStruct UDKGame.DunDefGameStorage.AchievementInfo
-// 0x0064
+// 0x0078
 struct UDunDefGameStorage_FAchievementInfo
 {
-	unsigned char                                      Achievements[ 0x64 ];                             		// 0x0000 (0x0064) [0x0000000000000000]              
+	unsigned char                                      Achievements[ 0x78 ];                             		// 0x0000 (0x0078) [0x0000000000000000]              
 };
 
 // ScriptStruct UDKGame.DunDefGameStorage.LevelProgressInfo
@@ -1601,6 +1385,23 @@ struct UDunDefGameStorage_FLevelProgressInfo
 {
 	struct FString                                     campaignTag;                                      		// 0x0000 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	unsigned char                                      difficultyMask;                                   		// 0x000C (0x0001) [0x0000000000000000]              
+};
+
+// ScriptStruct UDKGame.DunDefGameStorage.SearchFilterSettings
+// 0x0025
+struct UDunDefGameStorage_FSearchFilterSettings
+{
+	TArray< int >                                      levelIndicesToFilter;                             		// 0x0000 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	int                                                difficultiesToFilter[ 0x4 ];                      		// 0x000C (0x0010) [0x0000000000000000]              
+	unsigned char                                      filterChallengeMissions;                          		// 0x001C (0x0001) [0x0000000000000000]              
+	unsigned char                                      filterCampaignMissions;                           		// 0x001D (0x0001) [0x0000000000000000]              
+	unsigned char                                      filterPureStrategy;                               		// 0x001E (0x0001) [0x0000000000000000]              
+	unsigned char                                      filterInfiniteBuild;                              		// 0x001F (0x0001) [0x0000000000000000]              
+	unsigned char                                      filterInfiniteWaves;                              		// 0x0020 (0x0001) [0x0000000000000000]              
+	unsigned char                                      filterHostClass;                                  		// 0x0021 (0x0001) [0x0000000000000000]              
+	unsigned char                                      filterHostLevel;                                  		// 0x0022 (0x0001) [0x0000000000000000]              
+	unsigned char                                      filterHostLevelStart;                             		// 0x0023 (0x0001) [0x0000000000000000]              
+	unsigned char                                      filterHostLevelEnd;                               		// 0x0024 (0x0001) [0x0000000000000000]              
 };
 
 // ScriptStruct UDKGame.DunDefGameStorage.CoreUnlockInfo
@@ -1633,6 +1434,14 @@ struct FBindingDescription
 	struct FString                                     Description;                                      		// 0x000C (0x000C) [0x0000000000408000]              ( CPF_Localized | CPF_NeedCtorLink )
 };
 
+// ScriptStruct UDKGame.DunDefNativeViewportClient.ScreenResolution
+// 0x0008
+struct FScreenResolution
+{
+	int                                                Width;                                            		// 0x0000 (0x0004) [0x0000000000000000]              
+	int                                                Height;                                           		// 0x0004 (0x0004) [0x0000000000000000]              
+};
+
 // ScriptStruct UDKGame.DunDefPlayer.OverlayEffectEntry
 // 0x0014
 struct FOverlayEffectEntry
@@ -1646,7 +1455,7 @@ struct FOverlayEffectEntry
 struct FMeleeSwingInfo
 {
 	struct FName                                       AnimName;                                         		// 0x0000 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	float                                              AnimSpeed;                                        		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              Animspeed;                                        		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	float                                              TimeBeforeEndToAllowNextCombo;                    		// 0x000C (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	float                                              TimeAfterEndToAllowNextCombo;                     		// 0x0010 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	unsigned long                                      StepTowardsTarget : 1;                            		// 0x0014 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
@@ -1758,15 +1567,54 @@ struct FWaveDisplayEntry
 	int                                                NumberOfEnemies;                                  		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
-// ScriptStruct UDKGame.HeroEquipment_Consumable.sDropEntries
-// 0x0014
-struct FsDropEntries
+// ScriptStruct UDKGame.HeroEquipment.LevelRequirementOverride
+// 0x0008
+struct FLevelRequirementOverride
 {
-	class UHeroEquipment*                              EquipmentTemplate;                                		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              QualityMin;                                       		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              QualityMax;                                       		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MultMin;                                          		// 0x000C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MultMax;                                          		// 0x0010 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              QualityThreshold;                                 		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	int                                                LevelRequirementIndex;                            		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+};
+
+// ScriptStruct UDKGame.HeroEquipment.EG_StatMatchingString
+// 0x0018
+struct FEG_StatMatchingString
+{
+	float                                              ValueThreshold;                                   		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              PetValueThreshold;                                		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              ArmorValueThreshold;                              		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FString                                     StringValue;                                      		// 0x000C (0x000C) [0x0000000000408001]              ( CPF_Edit | CPF_Localized | CPF_NeedCtorLink )
+};
+
+// ScriptStruct UDKGame.HeroEquipment.LevelRange
+// 0x0008
+struct FLevelRange
+{
+	int                                                MinLevel;                                         		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	int                                                MaxLevel;                                         		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+};
+
+// ScriptStruct UDKGame.HeroEquipment.EquipmentComparison
+// 0x0038
+struct FEquipmentComparison
+{
+	struct FString                                     Name;                                             		// 0x0000 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	float                                              Values[ 0xB ];                                    		// 0x000C (0x002C) [0x0000000000000000]              
+};
+
+// ScriptStruct UDKGame.HeroEquipment.EG_StatRandomizer
+// 0x0028
+struct FEG_StatRandomizer
+{
+	float                                              MaxRandomValue;                                   		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MaxRandomValueNegative;                           		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              RandomPower;                                      		// 0x0008 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              RandomPowerOverrideIfNegative;                    		// 0x000C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              RandomNegativeThreshold;                          		// 0x0010 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              RandomInclusionThreshold;                         		// 0x0014 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              InclusionThresholdOverrideIfNegative;             		// 0x0018 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              NegativeThresholdQualityPercentMultiplier;        		// 0x001C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MinimumPercentageValue;                           		// 0x0020 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              NegativeMinimumPercentageValue;                   		// 0x0024 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 };
 
 // ScriptStruct UDKGame.HeroEquipment_Familiar_WithProjectileAI.DelayedShot
@@ -1778,21 +1626,6 @@ struct UHeroEquipment_Familiar_WithProjectileAI_FDelayedShot
 	struct FVector                                     Location;                                         		// 0x0008 (0x000C) [0x0000000000000001]              ( CPF_Edit )
 	struct FVector                                     Direction;                                        		// 0x0014 (0x000C) [0x0000000000000001]              ( CPF_Edit )
 	float                                              Damage;                                           		// 0x0020 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame.HeroEquipment_RuneContainer.sRuneModifier
-// 0x0004
-struct FsRuneModifier
-{
-	class ASpecialGamePlayEffect*                      GamePlayEffectTemplate;                           		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-};
-
-// ScriptStruct UDKGame.HeroEquipment_UpgradeRange.LevelRange
-// 0x0008
-struct UHeroEquipment_UpgradeRange_FLevelRange
-{
-	int                                                MinLevel;                                         		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                MaxLevel;                                         		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 };
 
 // ScriptStruct UDKGame.ProfanityFilter.WordEntry
@@ -1829,14 +1662,6 @@ struct FPurchasedItem
 	int                                                OrderID;                                          		// 0x0000 (0x0004) [0x0000000000000000]              
 	int                                                ItemId;                                           		// 0x0004 (0x0004) [0x0000000000000000]              
 	int                                                Quantity;                                         		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// ScriptStruct UDKGame.SpecialGamePlayEffect.sEffectInfo
-// 0x0018
-struct FsEffectInfo
-{
-	struct FString                                     EffectName;                                       		// 0x0000 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	struct FString                                     EffectDescription;                                		// 0x000C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
 };
 
 // ScriptStruct UDKGame.UI_CreateHeroBase.HeroClassInfo
@@ -2100,6 +1925,30 @@ struct FMultiImageEntry
 	float                                              SizeX;                                            		// 0x000C (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	float                                              SizeY;                                            		// 0x0010 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	struct FLinearColor                                ImageColor;                                       		// 0x0014 (0x0010) [0x0000000000000001]              ( CPF_Edit )
+};
+
+// ScriptStruct UDKGame.UIScriptWidget_Combobox.BoxOverlay
+// 0x000C
+struct FBoxOverlay
+{
+	float                                              Width;                                            		// 0x0000 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FColor                                      Color;                                            		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      bEnabled : 1;                                     		// 0x0008 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+};
+
+// ScriptStruct UDKGame.UIScriptWidget_Combobox.ComboboxFlags
+// 0x000C
+struct FComboboxFlags
+{
+	unsigned long                                      bPushSelectionToTitle : 1;                        		// 0x0000 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	unsigned long                                      bPreventExpansionOnTitleClick : 1;                		// 0x0000 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
+	unsigned long                                      bRotateToggleBtnWhenExpanded : 1;                 		// 0x0000 (0x0004) [0x0000000000000001] [0x00000004] ( CPF_Edit )
+	unsigned long                                      bRenderLastElementOverBorder : 1;                 		// 0x0000 (0x0004) [0x0000000000000001] [0x00000008] ( CPF_Edit )
+	unsigned long                                      bForceSquareToggleBtn : 1;                        		// 0x0000 (0x0004) [0x0000000000000001] [0x00000010] ( CPF_Edit )
+	unsigned long                                      bDrawFullElementBackground : 1;                   		// 0x0000 (0x0004) [0x0000000000000001] [0x00000020] ( CPF_Edit )
+	unsigned long                                      bDontDrawToggleIcon : 1;                          		// 0x0000 (0x0004) [0x0000000000000001] [0x00000040] ( CPF_Edit )
+	float                                              TitleWidth;                                       		// 0x0004 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	int                                                DefaultSelection;                                 		// 0x0008 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
 };
 
 // ScriptStruct UDKGame.UIScriptWidget_MaterialInstance.MICFloatParam

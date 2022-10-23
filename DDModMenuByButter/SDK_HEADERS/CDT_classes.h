@@ -53,7 +53,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 83493 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 78518 ];
 
 		return pClassPointer;
 	};
@@ -67,18 +67,18 @@ public:
 UClass* ADunDef_TimedEffect_Harbinger::pClassPointer = NULL;
 
 // Class CDT.DunDefHarbinger
-// 0x0034 (0x0C60 - 0x0C2C)
+// 0x0034 (0x0C00 - 0x0BCC)
 class ADunDefHarbinger : public ADunDefEnemy
 {
 public:
-	struct FName                                       ShootFireAnimation;                               		// 0x0C2C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       ChargeAnimationName;                              		// 0x0C34 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       ProjectileSpawnSocketNameLeft;                    		// 0x0C3C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       ProjectileSpawnSocketNameRight;                   		// 0x0C44 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       GloveEffectSocketName;                            		// 0x0C4C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystemComponent*                    FireGloveEffectComponent;                         		// 0x0C54 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UParticleSystemComponent*                    AuraEffectComponent;                              		// 0x0C58 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UParticleSystemComponent*                    FiringAuraEffect;                                 		// 0x0C5C (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	struct FName                                       ShootFireAnimation;                               		// 0x0BCC (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       ChargeAnimationName;                              		// 0x0BD4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       ProjectileSpawnSocketNameLeft;                    		// 0x0BDC (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       ProjectileSpawnSocketNameRight;                   		// 0x0BE4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       GloveEffectSocketName;                            		// 0x0BEC (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystemComponent*                    FireGloveEffectComponent;                         		// 0x0BF4 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystemComponent*                    AuraEffectComponent;                              		// 0x0BF8 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystemComponent*                    FiringAuraEffect;                                 		// 0x0BFC (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
 
 private:
 	static UClass* pClassPointer;
@@ -87,7 +87,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 83502 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 78527 ];
 
 		return pClassPointer;
 	};
@@ -124,7 +124,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 83555 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 78580 ];
 
 		return pClassPointer;
 	};

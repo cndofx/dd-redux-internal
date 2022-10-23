@@ -479,7 +479,7 @@ public:
 	void ClearRecognitionCompleteDelegate ( unsigned char LocalUserNum, struct FScriptDelegate RecognitionDelegate );
 	void AddRecognitionCompleteDelegate ( unsigned char LocalUserNum, struct FScriptDelegate RecognitionDelegate );
 	void OnRecognitionComplete ( );
-	bool GetRecognitionResults ( unsigned char LocalUserNum, TArray< struct FSpeechRecognizedWord >* Words );
+	bool GetRecognitionResults ( unsigned char LocalUserNum, TArray< struct FSpeechRecognizedWord >* words );
 	bool StopSpeechRecognition ( unsigned char LocalUserNum );
 	bool StartSpeechRecognition ( unsigned char LocalUserNum );
 	void StopNetworkedVoice ( unsigned char LocalUserNum );
@@ -563,7 +563,6 @@ public:
 	bool AutoLogin ( );
 	bool Login ( unsigned char LocalUserNum, struct FString LoginName, struct FString Password, unsigned long bWantsLocalOnly );
 	bool ShowLoginUI ( unsigned long bShowOnlineOnly );
-	void UpdateDiscordRichPresence ( );
 	void OnFriendsChange ( );
 	void OnMutingChange ( );
 	void OnLoginCancelled ( );
@@ -574,11 +573,11 @@ public:
 UClass* UOnlineSubsystemSteamworks::pClassPointer = NULL;
 
 // Class OnlineSubsystemSteamworks.SteamworksNetConnection
-// 0x0038 (0x5010 - 0x4FD8)
+// 0x0030 (0x5008 - 0x4FD8)
 class USteamworksNetConnection : public UNetConnection
 {
 public:
-	unsigned char                                      UnknownData00[ 0x38 ];                            		// 0x4FD8 (0x0038) MISSED OFFSET
+	unsigned char                                      UnknownData00[ 0x30 ];                            		// 0x4FD8 (0x0030) MISSED OFFSET
 
 private:
 	static UClass* pClassPointer;
@@ -597,11 +596,11 @@ public:
 UClass* USteamworksNetConnection::pClassPointer = NULL;
 
 // Class OnlineSubsystemSteamworks.SteamWorksNetDriver
-// 0x0024 (0x0194 - 0x0170)
+// 0x0008 (0x0178 - 0x0170)
 class USteamWorksNetDriver : public UNetDriver
 {
 public:
-	unsigned char                                      UnknownData00[ 0x24 ];                            		// 0x0170 (0x0024) MISSED OFFSET
+	unsigned char                                      UnknownData00[ 0x8 ];                             		// 0x0170 (0x0008) MISSED OFFSET
 
 private:
 	static UClass* pClassPointer;

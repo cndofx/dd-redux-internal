@@ -36,7 +36,7 @@ void UHeroEquipment_Familiar_CoreHealer::AddRandomizeValues ( float equipmentQua
 	static UFunction* pFnAddRandomizeValues = NULL;
 
 	if ( ! pFnAddRandomizeValues )
-		pFnAddRandomizeValues = (UFunction*) UObject::GObjObjects()->Data[ 83763 ];
+		pFnAddRandomizeValues = (UFunction*) UObject::GObjObjects()->Data[ 78788 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execAddRandomizeValues_Parms AddRandomizeValues_Parms;
 	AddRandomizeValues_Parms.equipmentQuality = equipmentQuality;
@@ -62,7 +62,7 @@ int UHeroEquipment_Familiar_CoreHealer::GetStatLevelUpAmountIterations ( unsigne
 	static UFunction* pFnGetStatLevelUpAmountIterations = NULL;
 
 	if ( ! pFnGetStatLevelUpAmountIterations )
-		pFnGetStatLevelUpAmountIterations = (UFunction*) UObject::GObjObjects()->Data[ 83758 ];
+		pFnGetStatLevelUpAmountIterations = (UFunction*) UObject::GObjObjects()->Data[ 78783 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetStatLevelUpAmountIterations_Parms GetStatLevelUpAmountIterations_Parms;
 	GetStatLevelUpAmountIterations_Parms.EQS = EQS;
@@ -87,7 +87,7 @@ int UHeroEquipment_Familiar_CoreHealer::GetNextStatLevelUpValue ( unsigned char 
 	static UFunction* pFnGetNextStatLevelUpValue = NULL;
 
 	if ( ! pFnGetNextStatLevelUpValue )
-		pFnGetNextStatLevelUpValue = (UFunction*) UObject::GObjObjects()->Data[ 83752 ];
+		pFnGetNextStatLevelUpValue = (UFunction*) UObject::GObjObjects()->Data[ 78777 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetNextStatLevelUpValue_Parms GetNextStatLevelUpValue_Parms;
 	GetNextStatLevelUpValue_Parms.EQS = EQS;
@@ -110,7 +110,7 @@ void UHeroEquipment_Familiar_CoreHealer::InitFromNetInfo ( struct FEquipmentNetI
 	static UFunction* pFnInitFromNetInfo = NULL;
 
 	if ( ! pFnInitFromNetInfo )
-		pFnInitFromNetInfo = (UFunction*) UObject::GObjObjects()->Data[ 83749 ];
+		pFnInitFromNetInfo = (UFunction*) UObject::GObjObjects()->Data[ 78774 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execInitFromNetInfo_Parms InitFromNetInfo_Parms;
 	memcpy ( &InitFromNetInfo_Parms.Info, &Info, 0xF8 );
@@ -133,7 +133,7 @@ bool UHeroEquipment_Familiar_CoreHealer::CheckStatLevelUpIterations ( unsigned c
 	static UFunction* pFnCheckStatLevelUpIterations = NULL;
 
 	if ( ! pFnCheckStatLevelUpIterations )
-		pFnCheckStatLevelUpIterations = (UFunction*) UObject::GObjObjects()->Data[ 83743 ];
+		pFnCheckStatLevelUpIterations = (UFunction*) UObject::GObjObjects()->Data[ 78768 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execCheckStatLevelUpIterations_Parms CheckStatLevelUpIterations_Parms;
 	CheckStatLevelUpIterations_Parms.EQS = EQS;
@@ -160,7 +160,7 @@ bool UHeroEquipment_Familiar_CoreHealer::AllowStatLevelUp ( unsigned char EQS, i
 	static UFunction* pFnAllowStatLevelUp = NULL;
 
 	if ( ! pFnAllowStatLevelUp )
-		pFnAllowStatLevelUp = (UFunction*) UObject::GObjObjects()->Data[ 83737 ];
+		pFnAllowStatLevelUp = (UFunction*) UObject::GObjObjects()->Data[ 78762 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execAllowStatLevelUp_Parms AllowStatLevelUp_Parms;
 	AllowStatLevelUp_Parms.EQS = EQS;
@@ -183,7 +183,7 @@ int UHeroEquipment_Familiar_CoreHealer::GetWeaponDamage ( )
 	static UFunction* pFnGetWeaponDamage = NULL;
 
 	if ( ! pFnGetWeaponDamage )
-		pFnGetWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 83735 ];
+		pFnGetWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 78760 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetWeaponDamage_Parms GetWeaponDamage_Parms;
 
@@ -202,7 +202,7 @@ void UHeroEquipment_Familiar_CoreHealer::ApplyPrimaryDamageMultiplierDisplay ( i
 	static UFunction* pFnApplyPrimaryDamageMultiplierDisplay = NULL;
 
 	if ( ! pFnApplyPrimaryDamageMultiplierDisplay )
-		pFnApplyPrimaryDamageMultiplierDisplay = (UFunction*) UObject::GObjObjects()->Data[ 83733 ];
+		pFnApplyPrimaryDamageMultiplierDisplay = (UFunction*) UObject::GObjObjects()->Data[ 78758 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execApplyPrimaryDamageMultiplierDisplay_Parms ApplyPrimaryDamageMultiplierDisplay_Parms;
 
@@ -225,7 +225,7 @@ float UHeroEquipment_Familiar_CoreHealer::GetEquipmentStatValue ( unsigned char 
 	static UFunction* pFnGetEquipmentStatValue = NULL;
 
 	if ( ! pFnGetEquipmentStatValue )
-		pFnGetEquipmentStatValue = (UFunction*) UObject::GObjObjects()->Data[ 83727 ];
+		pFnGetEquipmentStatValue = (UFunction*) UObject::GObjObjects()->Data[ 78752 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetEquipmentStatValue_Parms GetEquipmentStatValue_Parms;
 	GetEquipmentStatValue_Parms.equipmentStatType = equipmentStatType;
@@ -247,7 +247,7 @@ void UHeroEquipment_Familiar_CoreHealer::NotifyEquipment_PawnAttacked ( int Fire
 	static UFunction* pFnNotifyEquipment_PawnAttacked = NULL;
 
 	if ( ! pFnNotifyEquipment_PawnAttacked )
-		pFnNotifyEquipment_PawnAttacked = (UFunction*) UObject::GObjObjects()->Data[ 83725 ];
+		pFnNotifyEquipment_PawnAttacked = (UFunction*) UObject::GObjObjects()->Data[ 78750 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execNotifyEquipment_PawnAttacked_Parms NotifyEquipment_PawnAttacked_Parms;
 	NotifyEquipment_PawnAttacked_Parms.FireMode = FireMode;
@@ -268,7 +268,7 @@ struct FRotator UHeroEquipment_Familiar_CoreHealer::GetDesiredSphereRotationalPl
 	static UFunction* pFnGetDesiredSphereRotationalPlacement = NULL;
 
 	if ( ! pFnGetDesiredSphereRotationalPlacement )
-		pFnGetDesiredSphereRotationalPlacement = (UFunction*) UObject::GObjObjects()->Data[ 83720 ];
+		pFnGetDesiredSphereRotationalPlacement = (UFunction*) UObject::GObjObjects()->Data[ 78745 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetDesiredSphereRotationalPlacement_Parms GetDesiredSphereRotationalPlacement_Parms;
 	GetDesiredSphereRotationalPlacement_Parms.myMeshComp = myMeshComp;
@@ -294,7 +294,7 @@ struct FRotator UHeroEquipment_Familiar_CoreHealer::GetDesiredDirection ( class 
 	static UFunction* pFnGetDesiredDirection = NULL;
 
 	if ( ! pFnGetDesiredDirection )
-		pFnGetDesiredDirection = (UFunction*) UObject::GObjObjects()->Data[ 83716 ];
+		pFnGetDesiredDirection = (UFunction*) UObject::GObjObjects()->Data[ 78741 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetDesiredDirection_Parms GetDesiredDirection_Parms;
 	GetDesiredDirection_Parms.myMeshComp = myMeshComp;
@@ -315,7 +315,7 @@ float UHeroEquipment_Familiar_CoreHealer::GetAttackInterval ( )
 	static UFunction* pFnGetAttackInterval = NULL;
 
 	if ( ! pFnGetAttackInterval )
-		pFnGetAttackInterval = (UFunction*) UObject::GObjObjects()->Data[ 83714 ];
+		pFnGetAttackInterval = (UFunction*) UObject::GObjObjects()->Data[ 78739 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetAttackInterval_Parms GetAttackInterval_Parms;
 
@@ -334,7 +334,7 @@ float UHeroEquipment_Familiar_CoreHealer::GetHealAmount ( )
 	static UFunction* pFnGetHealAmount = NULL;
 
 	if ( ! pFnGetHealAmount )
-		pFnGetHealAmount = (UFunction*) UObject::GObjObjects()->Data[ 83712 ];
+		pFnGetHealAmount = (UFunction*) UObject::GObjObjects()->Data[ 78737 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetHealAmount_Parms GetHealAmount_Parms;
 
@@ -353,7 +353,7 @@ float UHeroEquipment_Familiar_CoreHealer::GetManaCost ( )
 	static UFunction* pFnGetManaCost = NULL;
 
 	if ( ! pFnGetManaCost )
-		pFnGetManaCost = (UFunction*) UObject::GObjObjects()->Data[ 83710 ];
+		pFnGetManaCost = (UFunction*) UObject::GObjObjects()->Data[ 78735 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetManaCost_Parms GetManaCost_Parms;
 
@@ -372,7 +372,7 @@ float UHeroEquipment_Familiar_CoreHealer::GetHealRangeSq ( )
 	static UFunction* pFnGetHealRangeSq = NULL;
 
 	if ( ! pFnGetHealRangeSq )
-		pFnGetHealRangeSq = (UFunction*) UObject::GObjObjects()->Data[ 83706 ];
+		pFnGetHealRangeSq = (UFunction*) UObject::GObjObjects()->Data[ 78731 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetHealRangeSq_Parms GetHealRangeSq_Parms;
 
@@ -392,7 +392,7 @@ struct FString UHeroEquipment_Familiar_CoreHealer::GetEquipmentStatName ( unsign
 	static UFunction* pFnGetEquipmentStatName = NULL;
 
 	if ( ! pFnGetEquipmentStatName )
-		pFnGetEquipmentStatName = (UFunction*) UObject::GObjObjects()->Data[ 83703 ];
+		pFnGetEquipmentStatName = (UFunction*) UObject::GObjObjects()->Data[ 78728 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execGetEquipmentStatName_Parms GetEquipmentStatName_Parms;
 	GetEquipmentStatName_Parms.equipmentStatType = equipmentStatType;
@@ -413,7 +413,7 @@ void UHeroEquipment_Familiar_CoreHealer::UpdateAI ( class ADunDefPlayer* PlayerO
 	static UFunction* pFnUpdateAI = NULL;
 
 	if ( ! pFnUpdateAI )
-		pFnUpdateAI = (UFunction*) UObject::GObjObjects()->Data[ 83695 ];
+		pFnUpdateAI = (UFunction*) UObject::GObjObjects()->Data[ 78720 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execUpdateAI_Parms UpdateAI_Parms;
 	UpdateAI_Parms.PlayerOwner = PlayerOwner;
@@ -433,7 +433,7 @@ void UHeroEquipment_Familiar_CoreHealer::TickedByPawn ( class ADunDefPlayer* Pla
 	static UFunction* pFnTickedByPawn = NULL;
 
 	if ( ! pFnTickedByPawn )
-		pFnTickedByPawn = (UFunction*) UObject::GObjObjects()->Data[ 83692 ];
+		pFnTickedByPawn = (UFunction*) UObject::GObjObjects()->Data[ 78717 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execTickedByPawn_Parms TickedByPawn_Parms;
 	TickedByPawn_Parms.PlayerOwner = PlayerOwner;
@@ -452,7 +452,7 @@ void UHeroEquipment_Familiar_CoreHealer::UpdateRotation ( float DeltaTime )
 	static UFunction* pFnUpdateRotation = NULL;
 
 	if ( ! pFnUpdateRotation )
-		pFnUpdateRotation = (UFunction*) UObject::GObjObjects()->Data[ 83690 ];
+		pFnUpdateRotation = (UFunction*) UObject::GObjObjects()->Data[ 78715 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execUpdateRotation_Parms UpdateRotation_Parms;
 	UpdateRotation_Parms.DeltaTime = DeltaTime;
@@ -470,7 +470,7 @@ void UHeroEquipment_Familiar_CoreHealer::ShutDown ( unsigned long isDestruction 
 	static UFunction* pFnShutDown = NULL;
 
 	if ( ! pFnShutDown )
-		pFnShutDown = (UFunction*) UObject::GObjObjects()->Data[ 83688 ];
+		pFnShutDown = (UFunction*) UObject::GObjObjects()->Data[ 78713 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execShutDown_Parms ShutDown_Parms;
 	ShutDown_Parms.isDestruction = isDestruction;
@@ -488,7 +488,7 @@ void UHeroEquipment_Familiar_CoreHealer::AttachedComponent ( class UPrimitiveCom
 	static UFunction* pFnAttachedComponent = NULL;
 
 	if ( ! pFnAttachedComponent )
-		pFnAttachedComponent = (UFunction*) UObject::GObjObjects()->Data[ 83686 ];
+		pFnAttachedComponent = (UFunction*) UObject::GObjObjects()->Data[ 78711 ];
 
 	UHeroEquipment_Familiar_CoreHealer_execAttachedComponent_Parms AttachedComponent_Parms;
 	AttachedComponent_Parms.aComp = aComp;
@@ -506,7 +506,7 @@ class UDunDefTargetableInterface* UHeroEquipment_Familiar_MiniQueen::GetBestTarg
 	static UFunction* pFnGetBestTarget = NULL;
 
 	if ( ! pFnGetBestTarget )
-		pFnGetBestTarget = (UFunction*) UObject::GObjObjects()->Data[ 83785 ];
+		pFnGetBestTarget = (UFunction*) UObject::GObjObjects()->Data[ 78810 ];
 
 	UHeroEquipment_Familiar_MiniQueen_execGetBestTarget_Parms GetBestTarget_Parms;
 
@@ -524,7 +524,7 @@ void UHeroEquipment_Familiar_MiniQueen::BeginRangedAttack ( )
 	static UFunction* pFnBeginRangedAttack = NULL;
 
 	if ( ! pFnBeginRangedAttack )
-		pFnBeginRangedAttack = (UFunction*) UObject::GObjObjects()->Data[ 83784 ];
+		pFnBeginRangedAttack = (UFunction*) UObject::GObjObjects()->Data[ 78809 ];
 
 	UHeroEquipment_Familiar_MiniQueen_execBeginRangedAttack_Parms BeginRangedAttack_Parms;
 
@@ -540,7 +540,7 @@ void UHeroEquipment_Familiar_MiniQueen::BeginMeleeAttack ( )
 	static UFunction* pFnBeginMeleeAttack = NULL;
 
 	if ( ! pFnBeginMeleeAttack )
-		pFnBeginMeleeAttack = (UFunction*) UObject::GObjObjects()->Data[ 83783 ];
+		pFnBeginMeleeAttack = (UFunction*) UObject::GObjObjects()->Data[ 78808 ];
 
 	UHeroEquipment_Familiar_MiniQueen_execBeginMeleeAttack_Parms BeginMeleeAttack_Parms;
 
@@ -558,7 +558,7 @@ bool UHeroEquipment_Familiar_MiniQueen::CanWebTarget ( class UDunDefTargetableIn
 	static UFunction* pFnCanWebTarget = NULL;
 
 	if ( ! pFnCanWebTarget )
-		pFnCanWebTarget = (UFunction*) UObject::GObjObjects()->Data[ 83777 ];
+		pFnCanWebTarget = (UFunction*) UObject::GObjObjects()->Data[ 78802 ];
 
 	UHeroEquipment_Familiar_MiniQueen_execCanWebTarget_Parms CanWebTarget_Parms;
 	CanWebTarget_Parms.Target = Target;
@@ -579,7 +579,7 @@ void UHeroEquipment_Familiar_MiniQueen::UpdateAI ( class ADunDefPlayer* PlayerOw
 	static UFunction* pFnUpdateAI = NULL;
 
 	if ( ! pFnUpdateAI )
-		pFnUpdateAI = (UFunction*) UObject::GObjObjects()->Data[ 83774 ];
+		pFnUpdateAI = (UFunction*) UObject::GObjObjects()->Data[ 78799 ];
 
 	UHeroEquipment_Familiar_MiniQueen_execUpdateAI_Parms UpdateAI_Parms;
 	UpdateAI_Parms.PlayerOwner = PlayerOwner;

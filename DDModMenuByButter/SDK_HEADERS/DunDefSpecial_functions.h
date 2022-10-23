@@ -32,7 +32,7 @@ void ADunDefPlayer_Summoner::DrawMiniMapIcon ( class UCanvas* Canvas, class ADun
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 91985 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 86377 ];
 
 	ADunDefPlayer_Summoner_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -51,7 +51,7 @@ TArray< class UMaterialInstanceConstant* > ADunDefPlayer_Summoner::GetPhaseShift
 	static UFunction* pFnGetPhaseShiftMaterials = NULL;
 
 	if ( ! pFnGetPhaseShiftMaterials )
-		pFnGetPhaseShiftMaterials = (UFunction*) UObject::GObjObjects()->Data[ 91982 ];
+		pFnGetPhaseShiftMaterials = (UFunction*) UObject::GObjObjects()->Data[ 86374 ];
 
 	ADunDefPlayer_Summoner_execGetPhaseShiftMaterials_Parms GetPhaseShiftMaterials_Parms;
 
@@ -69,7 +69,7 @@ void ADunDefPlayer_Summoner::IssuedCommand ( )
 	static UFunction* pFnIssuedCommand = NULL;
 
 	if ( ! pFnIssuedCommand )
-		pFnIssuedCommand = (UFunction*) UObject::GObjObjects()->Data[ 91980 ];
+		pFnIssuedCommand = (UFunction*) UObject::GObjObjects()->Data[ 86372 ];
 
 	ADunDefPlayer_Summoner_execIssuedCommand_Parms IssuedCommand_Parms;
 
@@ -86,7 +86,7 @@ class ADunDefEmitterSpawnable* ADunDefPlayer_Summoner::GetSellTowerEmitter ( )
 	static UFunction* pFnGetSellTowerEmitter = NULL;
 
 	if ( ! pFnGetSellTowerEmitter )
-		pFnGetSellTowerEmitter = (UFunction*) UObject::GObjObjects()->Data[ 91978 ];
+		pFnGetSellTowerEmitter = (UFunction*) UObject::GObjObjects()->Data[ 86370 ];
 
 	ADunDefPlayer_Summoner_execGetSellTowerEmitter_Parms GetSellTowerEmitter_Parms;
 
@@ -105,7 +105,7 @@ class ADunDefEmitterSpawnable* ADunDefPlayer_Summoner::GetTrapDetonationEmitter 
 	static UFunction* pFnGetTrapDetonationEmitter = NULL;
 
 	if ( ! pFnGetTrapDetonationEmitter )
-		pFnGetTrapDetonationEmitter = (UFunction*) UObject::GObjObjects()->Data[ 91976 ];
+		pFnGetTrapDetonationEmitter = (UFunction*) UObject::GObjObjects()->Data[ 86368 ];
 
 	ADunDefPlayer_Summoner_execGetTrapDetonationEmitter_Parms GetTrapDetonationEmitter_Parms;
 
@@ -124,7 +124,7 @@ class ADunDefEmitterSpawnable* ADunDefPlayer_Summoner::GetUpgradingWeaponEmitter
 	static UFunction* pFnGetUpgradingWeaponEmitter = NULL;
 
 	if ( ! pFnGetUpgradingWeaponEmitter )
-		pFnGetUpgradingWeaponEmitter = (UFunction*) UObject::GObjObjects()->Data[ 91974 ];
+		pFnGetUpgradingWeaponEmitter = (UFunction*) UObject::GObjObjects()->Data[ 86366 ];
 
 	ADunDefPlayer_Summoner_execGetUpgradingWeaponEmitter_Parms GetUpgradingWeaponEmitter_Parms;
 
@@ -143,7 +143,7 @@ class ADunDefEmitterSpawnable* ADunDefPlayer_Summoner::GetWeaponRepairEmitter ( 
 	static UFunction* pFnGetWeaponRepairEmitter = NULL;
 
 	if ( ! pFnGetWeaponRepairEmitter )
-		pFnGetWeaponRepairEmitter = (UFunction*) UObject::GObjObjects()->Data[ 91972 ];
+		pFnGetWeaponRepairEmitter = (UFunction*) UObject::GObjObjects()->Data[ 86364 ];
 
 	ADunDefPlayer_Summoner_execGetWeaponRepairEmitter_Parms GetWeaponRepairEmitter_Parms;
 
@@ -162,7 +162,7 @@ class ADunDefEmitterSpawnable* ADunDefPlayer_Summoner::GetHealingWeaponEmitter (
 	static UFunction* pFnGetHealingWeaponEmitter = NULL;
 
 	if ( ! pFnGetHealingWeaponEmitter )
-		pFnGetHealingWeaponEmitter = (UFunction*) UObject::GObjObjects()->Data[ 91970 ];
+		pFnGetHealingWeaponEmitter = (UFunction*) UObject::GObjObjects()->Data[ 86362 ];
 
 	ADunDefPlayer_Summoner_execGetHealingWeaponEmitter_Parms GetHealingWeaponEmitter_Parms;
 
@@ -181,7 +181,7 @@ class ADunDefEmitterSpawnable* ADunDefPlayer_Summoner::GetSummoningTowerEmitter 
 	static UFunction* pFnGetSummoningTowerEmitter = NULL;
 
 	if ( ! pFnGetSummoningTowerEmitter )
-		pFnGetSummoningTowerEmitter = (UFunction*) UObject::GObjObjects()->Data[ 91968 ];
+		pFnGetSummoningTowerEmitter = (UFunction*) UObject::GObjObjects()->Data[ 86360 ];
 
 	ADunDefPlayer_Summoner_execGetSummoningTowerEmitter_Parms GetSummoningTowerEmitter_Parms;
 
@@ -199,7 +199,7 @@ void ADunDefPlayer_Summoner::StopSpellEmitter ( )
 	static UFunction* pFnStopSpellEmitter = NULL;
 
 	if ( ! pFnStopSpellEmitter )
-		pFnStopSpellEmitter = (UFunction*) UObject::GObjObjects()->Data[ 91967 ];
+		pFnStopSpellEmitter = (UFunction*) UObject::GObjObjects()->Data[ 86359 ];
 
 	ADunDefPlayer_Summoner_execStopSpellEmitter_Parms StopSpellEmitter_Parms;
 
@@ -219,7 +219,7 @@ void ADunDefPlayer_Summoner::StartSpellEmitter ( class ADunDefEmitterSpawnable* 
 	static UFunction* pFnStartSpellEmitter = NULL;
 
 	if ( ! pFnStartSpellEmitter )
-		pFnStartSpellEmitter = (UFunction*) UObject::GObjObjects()->Data[ 91959 ];
+		pFnStartSpellEmitter = (UFunction*) UObject::GObjObjects()->Data[ 86351 ];
 
 	ADunDefPlayer_Summoner_execStartSpellEmitter_Parms StartSpellEmitter_Parms;
 	StartSpellEmitter_Parms.Template = Template;
@@ -240,7 +240,7 @@ bool ADunDefPlayer_Summoner::AllowDropPickups ( )
 	static UFunction* pFnAllowDropPickups = NULL;
 
 	if ( ! pFnAllowDropPickups )
-		pFnAllowDropPickups = (UFunction*) UObject::GObjObjects()->Data[ 91957 ];
+		pFnAllowDropPickups = (UFunction*) UObject::GObjObjects()->Data[ 86349 ];
 
 	ADunDefPlayer_Summoner_execAllowDropPickups_Parms AllowDropPickups_Parms;
 
@@ -260,7 +260,7 @@ void ADunDefPlayer_Summoner::SetOwnerNoSee ( unsigned long ownerNoSee, unsigned 
 	static UFunction* pFnSetOwnerNoSee = NULL;
 
 	if ( ! pFnSetOwnerNoSee )
-		pFnSetOwnerNoSee = (UFunction*) UObject::GObjObjects()->Data[ 91954 ];
+		pFnSetOwnerNoSee = (UFunction*) UObject::GObjObjects()->Data[ 86346 ];
 
 	ADunDefPlayer_Summoner_execSetOwnerNoSee_Parms SetOwnerNoSee_Parms;
 	SetOwnerNoSee_Parms.ownerNoSee = ownerNoSee;
@@ -282,7 +282,7 @@ bool ADunDefPlayer_Summoner::Died ( class AController* Killer, class UClass* Dam
 	static UFunction* pFnDied = NULL;
 
 	if ( ! pFnDied )
-		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 91949 ];
+		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 86341 ];
 
 	ADunDefPlayer_Summoner_execDied_Parms Died_Parms;
 	Died_Parms.Killer = Killer;
@@ -305,7 +305,7 @@ float ADunDefPlayer_Summoner::eventGetEnemyTargetingDesirability ( class AEngine
 	static UFunction* pFnGetEnemyTargetingDesirability = NULL;
 
 	if ( ! pFnGetEnemyTargetingDesirability )
-		pFnGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 91946 ];
+		pFnGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 86338 ];
 
 	ADunDefPlayer_Summoner_eventGetEnemyTargetingDesirability_Parms GetEnemyTargetingDesirability_Parms;
 	GetEnemyTargetingDesirability_Parms.forController = forController;
@@ -331,7 +331,7 @@ void ADunDefPlayer_Summoner::eventTakeDamage ( int DamageAmount, class AControll
 	static UFunction* pFnTakeDamage = NULL;
 
 	if ( ! pFnTakeDamage )
-		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 91938 ];
+		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 86330 ];
 
 	ADunDefPlayer_Summoner_eventTakeDamage_Parms TakeDamage_Parms;
 	TakeDamage_Parms.DamageAmount = DamageAmount;
@@ -354,7 +354,7 @@ void ADunDefPlayer_Summoner::eventPhaseScaleDown ( )
 	static UFunction* pFnPhaseScaleDown = NULL;
 
 	if ( ! pFnPhaseScaleDown )
-		pFnPhaseScaleDown = (UFunction*) UObject::GObjObjects()->Data[ 91937 ];
+		pFnPhaseScaleDown = (UFunction*) UObject::GObjObjects()->Data[ 86329 ];
 
 	ADunDefPlayer_Summoner_eventPhaseScaleDown_Parms PhaseScaleDown_Parms;
 
@@ -371,7 +371,7 @@ void ADunDefPlayer_Summoner::UsedAbility ( class ADunDefPlayerAbility* ability )
 	static UFunction* pFnUsedAbility = NULL;
 
 	if ( ! pFnUsedAbility )
-		pFnUsedAbility = (UFunction*) UObject::GObjObjects()->Data[ 91935 ];
+		pFnUsedAbility = (UFunction*) UObject::GObjObjects()->Data[ 86327 ];
 
 	ADunDefPlayer_Summoner_execUsedAbility_Parms UsedAbility_Parms;
 	UsedAbility_Parms.ability = ability;
@@ -388,7 +388,7 @@ void ADunDefPlayer_Summoner::CheckForTokens ( )
 	static UFunction* pFnCheckForTokens = NULL;
 
 	if ( ! pFnCheckForTokens )
-		pFnCheckForTokens = (UFunction*) UObject::GObjObjects()->Data[ 91934 ];
+		pFnCheckForTokens = (UFunction*) UObject::GObjObjects()->Data[ 86326 ];
 
 	ADunDefPlayer_Summoner_execCheckForTokens_Parms CheckForTokens_Parms;
 
@@ -406,7 +406,7 @@ bool ADunDefPlayer_Summoner::AllowFamiliarAbilities ( class UHeroEquipment_Famil
 	static UFunction* pFnAllowFamiliarAbilities = NULL;
 
 	if ( ! pFnAllowFamiliarAbilities )
-		pFnAllowFamiliarAbilities = (UFunction*) UObject::GObjObjects()->Data[ 91931 ];
+		pFnAllowFamiliarAbilities = (UFunction*) UObject::GObjObjects()->Data[ 86323 ];
 
 	ADunDefPlayer_Summoner_execAllowFamiliarAbilities_Parms AllowFamiliarAbilities_Parms;
 	AllowFamiliarAbilities_Parms.askingFamiliar = askingFamiliar;
@@ -425,7 +425,7 @@ void ADunDefPlayer_Summoner::AttachAllEquipment ( )
 	static UFunction* pFnAttachAllEquipment = NULL;
 
 	if ( ! pFnAttachAllEquipment )
-		pFnAttachAllEquipment = (UFunction*) UObject::GObjObjects()->Data[ 91930 ];
+		pFnAttachAllEquipment = (UFunction*) UObject::GObjObjects()->Data[ 86322 ];
 
 	ADunDefPlayer_Summoner_execAttachAllEquipment_Parms AttachAllEquipment_Parms;
 
@@ -441,7 +441,7 @@ void ADunDefPlayer_Summoner::DetachAllEquipment ( )
 	static UFunction* pFnDetachAllEquipment = NULL;
 
 	if ( ! pFnDetachAllEquipment )
-		pFnDetachAllEquipment = (UFunction*) UObject::GObjObjects()->Data[ 91929 ];
+		pFnDetachAllEquipment = (UFunction*) UObject::GObjObjects()->Data[ 86321 ];
 
 	ADunDefPlayer_Summoner_execDetachAllEquipment_Parms DetachAllEquipment_Parms;
 
@@ -458,7 +458,7 @@ void ADunDefPlayer_Summoner::SetPhased ( unsigned long bNewPhaseState )
 	static UFunction* pFnSetPhased = NULL;
 
 	if ( ! pFnSetPhased )
-		pFnSetPhased = (UFunction*) UObject::GObjObjects()->Data[ 91927 ];
+		pFnSetPhased = (UFunction*) UObject::GObjObjects()->Data[ 86319 ];
 
 	ADunDefPlayer_Summoner_execSetPhased_Parms SetPhased_Parms;
 	SetPhased_Parms.bNewPhaseState = bNewPhaseState;
@@ -476,7 +476,7 @@ bool ADunDefPlayer_Summoner::AllowEquipmentAttachment ( )
 	static UFunction* pFnAllowEquipmentAttachment = NULL;
 
 	if ( ! pFnAllowEquipmentAttachment )
-		pFnAllowEquipmentAttachment = (UFunction*) UObject::GObjObjects()->Data[ 91925 ];
+		pFnAllowEquipmentAttachment = (UFunction*) UObject::GObjObjects()->Data[ 86317 ];
 
 	ADunDefPlayer_Summoner_execAllowEquipmentAttachment_Parms AllowEquipmentAttachment_Parms;
 
@@ -494,7 +494,7 @@ void ADunDefPlayer_Summoner::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 91924 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 86316 ];
 
 	ADunDefPlayer_Summoner_eventDestroyed_Parms Destroyed_Parms;
 
@@ -511,7 +511,7 @@ void ADunDefPlayer_Summoner::StopFire ( unsigned char FireModeNum )
 	static UFunction* pFnStopFire = NULL;
 
 	if ( ! pFnStopFire )
-		pFnStopFire = (UFunction*) UObject::GObjObjects()->Data[ 91922 ];
+		pFnStopFire = (UFunction*) UObject::GObjObjects()->Data[ 86314 ];
 
 	ADunDefPlayer_Summoner_execStopFire_Parms StopFire_Parms;
 	StopFire_Parms.FireModeNum = FireModeNum;
@@ -529,7 +529,7 @@ void ADunDefPlayer_Summoner::StartFire ( unsigned char FireModeNum )
 	static UFunction* pFnStartFire = NULL;
 
 	if ( ! pFnStartFire )
-		pFnStartFire = (UFunction*) UObject::GObjObjects()->Data[ 91918 ];
+		pFnStartFire = (UFunction*) UObject::GObjObjects()->Data[ 86310 ];
 
 	ADunDefPlayer_Summoner_execStartFire_Parms StartFire_Parms;
 	StartFire_Parms.FireModeNum = FireModeNum;
@@ -547,7 +547,7 @@ TArray< class ADunDefTower_SummonEnemy* > ADunDefPlayer_Summoner::GetSelectedTow
 	static UFunction* pFnGetSelectedTowers = NULL;
 
 	if ( ! pFnGetSelectedTowers )
-		pFnGetSelectedTowers = (UFunction*) UObject::GObjObjects()->Data[ 91915 ];
+		pFnGetSelectedTowers = (UFunction*) UObject::GObjObjects()->Data[ 86307 ];
 
 	ADunDefPlayer_Summoner_execGetSelectedTowers_Parms GetSelectedTowers_Parms;
 
@@ -566,7 +566,7 @@ void ADunDefPlayer_Summoner::RemoveSelectedTower ( class ADunDefTower_SummonEnem
 	static UFunction* pFnRemoveSelectedTower = NULL;
 
 	if ( ! pFnRemoveSelectedTower )
-		pFnRemoveSelectedTower = (UFunction*) UObject::GObjObjects()->Data[ 91913 ];
+		pFnRemoveSelectedTower = (UFunction*) UObject::GObjObjects()->Data[ 86305 ];
 
 	ADunDefPlayer_Summoner_execRemoveSelectedTower_Parms RemoveSelectedTower_Parms;
 	RemoveSelectedTower_Parms.RemoveTower = RemoveTower;
@@ -584,7 +584,7 @@ void ADunDefPlayer_Summoner::ServerRemoveSelectedTower ( class ADunDefTower_Summ
 	static UFunction* pFnServerRemoveSelectedTower = NULL;
 
 	if ( ! pFnServerRemoveSelectedTower )
-		pFnServerRemoveSelectedTower = (UFunction*) UObject::GObjObjects()->Data[ 91911 ];
+		pFnServerRemoveSelectedTower = (UFunction*) UObject::GObjObjects()->Data[ 86303 ];
 
 	ADunDefPlayer_Summoner_execServerRemoveSelectedTower_Parms ServerRemoveSelectedTower_Parms;
 	ServerRemoveSelectedTower_Parms.RemoveTower = RemoveTower;
@@ -601,7 +601,7 @@ void ADunDefPlayer_Summoner::RemoveAllSelectedTowers ( )
 	static UFunction* pFnRemoveAllSelectedTowers = NULL;
 
 	if ( ! pFnRemoveAllSelectedTowers )
-		pFnRemoveAllSelectedTowers = (UFunction*) UObject::GObjObjects()->Data[ 91909 ];
+		pFnRemoveAllSelectedTowers = (UFunction*) UObject::GObjObjects()->Data[ 86301 ];
 
 	ADunDefPlayer_Summoner_execRemoveAllSelectedTowers_Parms RemoveAllSelectedTowers_Parms;
 
@@ -619,7 +619,7 @@ bool ADunDefPlayer_Summoner::HasSelectedTower ( class ADunDefTower_SummonEnemy* 
 	static UFunction* pFnHasSelectedTower = NULL;
 
 	if ( ! pFnHasSelectedTower )
-		pFnHasSelectedTower = (UFunction*) UObject::GObjObjects()->Data[ 91906 ];
+		pFnHasSelectedTower = (UFunction*) UObject::GObjObjects()->Data[ 86298 ];
 
 	ADunDefPlayer_Summoner_execHasSelectedTower_Parms HasSelectedTower_Parms;
 	HasSelectedTower_Parms.chkTower = chkTower;
@@ -639,7 +639,7 @@ void ADunDefPlayer_Summoner::AddSelectedTowerGroup ( TArray< class ADunDefTower_
 	static UFunction* pFnAddSelectedTowerGroup = NULL;
 
 	if ( ! pFnAddSelectedTowerGroup )
-		pFnAddSelectedTowerGroup = (UFunction*) UObject::GObjObjects()->Data[ 91902 ];
+		pFnAddSelectedTowerGroup = (UFunction*) UObject::GObjObjects()->Data[ 86294 ];
 
 	ADunDefPlayer_Summoner_execAddSelectedTowerGroup_Parms AddSelectedTowerGroup_Parms;
 	memcpy ( &AddSelectedTowerGroup_Parms.newTowers, &newTowers, 0xC );
@@ -657,7 +657,7 @@ void ADunDefPlayer_Summoner::ServerAddSelectedTower ( class ADunDefTower_SummonE
 	static UFunction* pFnServerAddSelectedTower = NULL;
 
 	if ( ! pFnServerAddSelectedTower )
-		pFnServerAddSelectedTower = (UFunction*) UObject::GObjObjects()->Data[ 91900 ];
+		pFnServerAddSelectedTower = (UFunction*) UObject::GObjObjects()->Data[ 86292 ];
 
 	ADunDefPlayer_Summoner_execServerAddSelectedTower_Parms ServerAddSelectedTower_Parms;
 	ServerAddSelectedTower_Parms.newTower = newTower;
@@ -675,7 +675,7 @@ void ADunDefPlayer_Summoner::AddSelectedTower ( class ADunDefTower_SummonEnemy* 
 	static UFunction* pFnAddSelectedTower = NULL;
 
 	if ( ! pFnAddSelectedTower )
-		pFnAddSelectedTower = (UFunction*) UObject::GObjObjects()->Data[ 91898 ];
+		pFnAddSelectedTower = (UFunction*) UObject::GObjObjects()->Data[ 86290 ];
 
 	ADunDefPlayer_Summoner_execAddSelectedTower_Parms AddSelectedTower_Parms;
 	AddSelectedTower_Parms.newTower = newTower;
@@ -692,7 +692,7 @@ void ADunDefPlayer_Summoner::ClientSetupColors ( )
 	static UFunction* pFnClientSetupColors = NULL;
 
 	if ( ! pFnClientSetupColors )
-		pFnClientSetupColors = (UFunction*) UObject::GObjObjects()->Data[ 91896 ];
+		pFnClientSetupColors = (UFunction*) UObject::GObjObjects()->Data[ 86288 ];
 
 	ADunDefPlayer_Summoner_execClientSetupColors_Parms ClientSetupColors_Parms;
 
@@ -710,7 +710,7 @@ void ADunDefPlayer_Summoner::SetMyCustomColors ( class ADunDefPlayerController* 
 	static UFunction* pFnSetMyCustomColors = NULL;
 
 	if ( ! pFnSetMyCustomColors )
-		pFnSetMyCustomColors = (UFunction*) UObject::GObjObjects()->Data[ 91892 ];
+		pFnSetMyCustomColors = (UFunction*) UObject::GObjObjects()->Data[ 86284 ];
 
 	ADunDefPlayer_Summoner_execSetMyCustomColors_Parms SetMyCustomColors_Parms;
 	SetMyCustomColors_Parms.aController = aController;
@@ -728,7 +728,7 @@ void ADunDefPlayer_Summoner::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 91891 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 86283 ];
 
 	ADunDefPlayer_Summoner_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -760,7 +760,7 @@ void ADunDefPlayer_Summoner::ExecReplicatedFunction ( struct FName FunctionName,
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 91874 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 86266 ];
 
 	ADunDefPlayer_Summoner_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -793,7 +793,7 @@ void ADunDefPlayer_Summoner::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 91872 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 86264 ];
 
 	ADunDefPlayer_Summoner_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -810,7 +810,7 @@ void ADunDefPlayer_Hovering::PostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 91521 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 85913 ];
 
 	ADunDefPlayer_Hovering_execPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -826,7 +826,7 @@ void ADunDefPlayer_Hovering::StopHovering ( )
 	static UFunction* pFnStopHovering = NULL;
 
 	if ( ! pFnStopHovering )
-		pFnStopHovering = (UFunction*) UObject::GObjObjects()->Data[ 91520 ];
+		pFnStopHovering = (UFunction*) UObject::GObjObjects()->Data[ 85912 ];
 
 	ADunDefPlayer_Hovering_execStopHovering_Parms StopHovering_Parms;
 
@@ -842,7 +842,7 @@ void ADunDefPlayer_Hovering::StartHovering ( )
 	static UFunction* pFnStartHovering = NULL;
 
 	if ( ! pFnStartHovering )
-		pFnStartHovering = (UFunction*) UObject::GObjObjects()->Data[ 91519 ];
+		pFnStartHovering = (UFunction*) UObject::GObjObjects()->Data[ 85911 ];
 
 	ADunDefPlayer_Hovering_execStartHovering_Parms StartHovering_Parms;
 
@@ -874,7 +874,7 @@ void ADunDefPlayer_Hovering::ExecReplicatedFunction ( struct FName FunctionName,
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 91502 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 85894 ];
 
 	ADunDefPlayer_Hovering_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -907,7 +907,7 @@ void ACTF_PlayerAbility_PickupFlag::RequestPickup ( class ACTF_Flag* newFlag )
 	static UFunction* pFnRequestPickup = NULL;
 
 	if ( ! pFnRequestPickup )
-		pFnRequestPickup = (UFunction*) UObject::GObjObjects()->Data[ 89122 ];
+		pFnRequestPickup = (UFunction*) UObject::GObjObjects()->Data[ 83504 ];
 
 	ACTF_PlayerAbility_PickupFlag_execRequestPickup_Parms RequestPickup_Parms;
 	RequestPickup_Parms.newFlag = newFlag;
@@ -925,7 +925,7 @@ void ACTF_Flag::SetAtBase ( unsigned long bIsAtBase )
 	static UFunction* pFnSetAtBase = NULL;
 
 	if ( ! pFnSetAtBase )
-		pFnSetAtBase = (UFunction*) UObject::GObjObjects()->Data[ 89764 ];
+		pFnSetAtBase = (UFunction*) UObject::GObjObjects()->Data[ 84146 ];
 
 	ACTF_Flag_execSetAtBase_Parms SetAtBase_Parms;
 	SetAtBase_Parms.bIsAtBase = bIsAtBase;
@@ -942,7 +942,7 @@ void ACTF_Flag::SetDroppedParticleColor ( )
 	static UFunction* pFnSetDroppedParticleColor = NULL;
 
 	if ( ! pFnSetDroppedParticleColor )
-		pFnSetDroppedParticleColor = (UFunction*) UObject::GObjObjects()->Data[ 89761 ];
+		pFnSetDroppedParticleColor = (UFunction*) UObject::GObjObjects()->Data[ 84143 ];
 
 	ACTF_Flag_execSetDroppedParticleColor_Parms SetDroppedParticleColor_Parms;
 
@@ -959,7 +959,7 @@ void ACTF_Flag::SetTeam ( int NewTeam )
 	static UFunction* pFnSetTeam = NULL;
 
 	if ( ! pFnSetTeam )
-		pFnSetTeam = (UFunction*) UObject::GObjObjects()->Data[ 89759 ];
+		pFnSetTeam = (UFunction*) UObject::GObjObjects()->Data[ 84141 ];
 
 	ACTF_Flag_execSetTeam_Parms SetTeam_Parms;
 	SetTeam_Parms.NewTeam = NewTeam;
@@ -978,7 +978,7 @@ void ACTF_Flag::InitFlag ( int NewTeam, class ACTF_FlagBase* NewBase )
 	static UFunction* pFnInitFlag = NULL;
 
 	if ( ! pFnInitFlag )
-		pFnInitFlag = (UFunction*) UObject::GObjObjects()->Data[ 89756 ];
+		pFnInitFlag = (UFunction*) UObject::GObjObjects()->Data[ 84138 ];
 
 	ACTF_Flag_execInitFlag_Parms InitFlag_Parms;
 	InitFlag_Parms.NewTeam = NewTeam;
@@ -996,7 +996,7 @@ void ACTF_Flag::AutoTeleport ( )
 	static UFunction* pFnAutoTeleport = NULL;
 
 	if ( ! pFnAutoTeleport )
-		pFnAutoTeleport = (UFunction*) UObject::GObjObjects()->Data[ 89755 ];
+		pFnAutoTeleport = (UFunction*) UObject::GObjObjects()->Data[ 84137 ];
 
 	ACTF_Flag_execAutoTeleport_Parms AutoTeleport_Parms;
 
@@ -1013,7 +1013,7 @@ void ACTF_Flag::AdjustDamage ( int* Damage )
 	static UFunction* pFnAdjustDamage = NULL;
 
 	if ( ! pFnAdjustDamage )
-		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 89753 ];
+		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 84135 ];
 
 	ACTF_Flag_execAdjustDamage_Parms AdjustDamage_Parms;
 
@@ -1037,7 +1037,7 @@ bool ACTF_Flag::PreventTowerAtPoint ( class ADunDefPlayerController* PC, class A
 	static UFunction* pFnPreventTowerAtPoint = NULL;
 
 	if ( ! pFnPreventTowerAtPoint )
-		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 89747 ];
+		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 84129 ];
 
 	ACTF_Flag_execPreventTowerAtPoint_Parms PreventTowerAtPoint_Parms;
 	PreventTowerAtPoint_Parms.PC = PC;
@@ -1063,7 +1063,7 @@ bool ACTF_Flag::AllowTowerAtPoint ( class ADunDefPlayerController* PC, class ADu
 	static UFunction* pFnAllowTowerAtPoint = NULL;
 
 	if ( ! pFnAllowTowerAtPoint )
-		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 89742 ];
+		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 84124 ];
 
 	ACTF_Flag_execAllowTowerAtPoint_Parms AllowTowerAtPoint_Parms;
 	AllowTowerAtPoint_Parms.PC = PC;
@@ -1085,7 +1085,7 @@ bool ACTF_Flag::CheckAllowance ( )
 	static UFunction* pFnCheckAllowance = NULL;
 
 	if ( ! pFnCheckAllowance )
-		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 89740 ];
+		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 84122 ];
 
 	ACTF_Flag_execCheckAllowance_Parms CheckAllowance_Parms;
 
@@ -1104,7 +1104,7 @@ void ACTF_Flag::eventPhysicsVolumeChange ( class APhysicsVolume* NewVolume )
 	static UFunction* pFnPhysicsVolumeChange = NULL;
 
 	if ( ! pFnPhysicsVolumeChange )
-		pFnPhysicsVolumeChange = (UFunction*) UObject::GObjObjects()->Data[ 89738 ];
+		pFnPhysicsVolumeChange = (UFunction*) UObject::GObjObjects()->Data[ 84120 ];
 
 	ACTF_Flag_eventPhysicsVolumeChange_Parms PhysicsVolumeChange_Parms;
 	PhysicsVolumeChange_Parms.NewVolume = NewVolume;
@@ -1122,7 +1122,7 @@ void ACTF_Flag::eventFellOutOfWorld ( class UClass* dmgType )
 	static UFunction* pFnFellOutOfWorld = NULL;
 
 	if ( ! pFnFellOutOfWorld )
-		pFnFellOutOfWorld = (UFunction*) UObject::GObjObjects()->Data[ 89736 ];
+		pFnFellOutOfWorld = (UFunction*) UObject::GObjObjects()->Data[ 84118 ];
 
 	ACTF_Flag_eventFellOutOfWorld_Parms FellOutOfWorld_Parms;
 	FellOutOfWorld_Parms.dmgType = dmgType;
@@ -1139,7 +1139,7 @@ void ACTF_Flag::ResetCollision ( )
 	static UFunction* pFnResetCollision = NULL;
 
 	if ( ! pFnResetCollision )
-		pFnResetCollision = (UFunction*) UObject::GObjObjects()->Data[ 89728 ];
+		pFnResetCollision = (UFunction*) UObject::GObjObjects()->Data[ 84110 ];
 
 	ACTF_Flag_execResetCollision_Parms ResetCollision_Parms;
 
@@ -1155,7 +1155,7 @@ void ACTF_Flag::DisableCollision ( )
 	static UFunction* pFnDisableCollision = NULL;
 
 	if ( ! pFnDisableCollision )
-		pFnDisableCollision = (UFunction*) UObject::GObjObjects()->Data[ 89727 ];
+		pFnDisableCollision = (UFunction*) UObject::GObjObjects()->Data[ 84109 ];
 
 	ACTF_Flag_execDisableCollision_Parms DisableCollision_Parms;
 
@@ -1173,7 +1173,7 @@ bool ACTF_Flag::IsInAuraOrTrap ( struct FVector Loc )
 	static UFunction* pFnIsInAuraOrTrap = NULL;
 
 	if ( ! pFnIsInAuraOrTrap )
-		pFnIsInAuraOrTrap = (UFunction*) UObject::GObjObjects()->Data[ 89722 ];
+		pFnIsInAuraOrTrap = (UFunction*) UObject::GObjObjects()->Data[ 84104 ];
 
 	ACTF_Flag_execIsInAuraOrTrap_Parms IsInAuraOrTrap_Parms;
 	memcpy ( &IsInAuraOrTrap_Parms.Loc, &Loc, 0xC );
@@ -1192,7 +1192,7 @@ void ACTF_Flag::CaptureFlag ( )
 	static UFunction* pFnCaptureFlag = NULL;
 
 	if ( ! pFnCaptureFlag )
-		pFnCaptureFlag = (UFunction*) UObject::GObjObjects()->Data[ 89721 ];
+		pFnCaptureFlag = (UFunction*) UObject::GObjObjects()->Data[ 84103 ];
 
 	ACTF_Flag_execCaptureFlag_Parms CaptureFlag_Parms;
 
@@ -1208,7 +1208,7 @@ void ACTF_Flag::ReturnToBase ( )
 	static UFunction* pFnReturnToBase = NULL;
 
 	if ( ! pFnReturnToBase )
-		pFnReturnToBase = (UFunction*) UObject::GObjObjects()->Data[ 89720 ];
+		pFnReturnToBase = (UFunction*) UObject::GObjObjects()->Data[ 84102 ];
 
 	ACTF_Flag_execReturnToBase_Parms ReturnToBase_Parms;
 
@@ -1226,7 +1226,7 @@ void ACTF_Flag::DropFlag ( unsigned long bForceRandomizedPosition, unsigned long
 	static UFunction* pFnDropFlag = NULL;
 
 	if ( ! pFnDropFlag )
-		pFnDropFlag = (UFunction*) UObject::GObjObjects()->Data[ 89712 ];
+		pFnDropFlag = (UFunction*) UObject::GObjObjects()->Data[ 84094 ];
 
 	ACTF_Flag_execDropFlag_Parms DropFlag_Parms;
 	DropFlag_Parms.bForceRandomizedPosition = bForceRandomizedPosition;
@@ -1245,7 +1245,7 @@ void ACTF_Flag::PickUpFlag ( class ADunDefPlayer* newHolder )
 	static UFunction* pFnPickUpFlag = NULL;
 
 	if ( ! pFnPickUpFlag )
-		pFnPickUpFlag = (UFunction*) UObject::GObjObjects()->Data[ 89708 ];
+		pFnPickUpFlag = (UFunction*) UObject::GObjObjects()->Data[ 84090 ];
 
 	ACTF_Flag_execPickUpFlag_Parms PickUpFlag_Parms;
 	PickUpFlag_Parms.newHolder = newHolder;
@@ -1263,7 +1263,7 @@ void ACTF_Flag::BeginBeingPickedUp ( class ADunDefPlayerController* newHolder )
 	static UFunction* pFnBeginBeingPickedUp = NULL;
 
 	if ( ! pFnBeginBeingPickedUp )
-		pFnBeginBeingPickedUp = (UFunction*) UObject::GObjObjects()->Data[ 89705 ];
+		pFnBeginBeingPickedUp = (UFunction*) UObject::GObjObjects()->Data[ 84087 ];
 
 	ACTF_Flag_execBeginBeingPickedUp_Parms BeginBeingPickedUp_Parms;
 	BeginBeingPickedUp_Parms.newHolder = newHolder;
@@ -1282,7 +1282,7 @@ bool ACTF_Flag::CanBePickedUp ( class ADunDefPlayerController* PC )
 	static UFunction* pFnCanBePickedUp = NULL;
 
 	if ( ! pFnCanBePickedUp )
-		pFnCanBePickedUp = (UFunction*) UObject::GObjObjects()->Data[ 89131 ];
+		pFnCanBePickedUp = (UFunction*) UObject::GObjObjects()->Data[ 83513 ];
 
 	ACTF_Flag_execCanBePickedUp_Parms CanBePickedUp_Parms;
 	CanBePickedUp_Parms.PC = PC;
@@ -1303,7 +1303,7 @@ void ACTF_Flag::DrawMiniMapIcon ( class UCanvas* Canvas, class ADunDefMiniMap* M
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 89698 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 84080 ];
 
 	ACTF_Flag_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -1322,7 +1322,7 @@ float ACTF_Flag::GetActivationOffset ( )
 	static UFunction* pFnGetActivationOffset = NULL;
 
 	if ( ! pFnGetActivationOffset )
-		pFnGetActivationOffset = (UFunction*) UObject::GObjObjects()->Data[ 89696 ];
+		pFnGetActivationOffset = (UFunction*) UObject::GObjObjects()->Data[ 84078 ];
 
 	ACTF_Flag_execGetActivationOffset_Parms GetActivationOffset_Parms;
 
@@ -1341,7 +1341,7 @@ float ACTF_Flag::GetActivationWeighting ( )
 	static UFunction* pFnGetActivationWeighting = NULL;
 
 	if ( ! pFnGetActivationWeighting )
-		pFnGetActivationWeighting = (UFunction*) UObject::GObjObjects()->Data[ 89694 ];
+		pFnGetActivationWeighting = (UFunction*) UObject::GObjObjects()->Data[ 84076 ];
 
 	ACTF_Flag_execGetActivationWeighting_Parms GetActivationWeighting_Parms;
 
@@ -1361,7 +1361,7 @@ void ACTF_Flag::Client_Activate ( class ADunDefPlayerController* PC, int activat
 	static UFunction* pFnClient_Activate = NULL;
 
 	if ( ! pFnClient_Activate )
-		pFnClient_Activate = (UFunction*) UObject::GObjObjects()->Data[ 89691 ];
+		pFnClient_Activate = (UFunction*) UObject::GObjObjects()->Data[ 84073 ];
 
 	ACTF_Flag_execClient_Activate_Parms Client_Activate_Parms;
 	Client_Activate_Parms.PC = PC;
@@ -1382,7 +1382,7 @@ void ACTF_Flag::Server_Activate ( class ADunDefPlayerController* PC, unsigned lo
 	static UFunction* pFnServer_Activate = NULL;
 
 	if ( ! pFnServer_Activate )
-		pFnServer_Activate = (UFunction*) UObject::GObjObjects()->Data[ 89686 ];
+		pFnServer_Activate = (UFunction*) UObject::GObjObjects()->Data[ 84068 ];
 
 	ACTF_Flag_execServer_Activate_Parms Server_Activate_Parms;
 	Server_Activate_Parms.PC = PC;
@@ -1404,7 +1404,7 @@ int ACTF_Flag::AllowActivation ( class ADunDefPlayerController* PC, int activati
 	static UFunction* pFnAllowActivation = NULL;
 
 	if ( ! pFnAllowActivation )
-		pFnAllowActivation = (UFunction*) UObject::GObjObjects()->Data[ 89682 ];
+		pFnAllowActivation = (UFunction*) UObject::GObjObjects()->Data[ 84064 ];
 
 	ACTF_Flag_execAllowActivation_Parms AllowActivation_Parms;
 	AllowActivation_Parms.PC = PC;
@@ -1425,7 +1425,7 @@ int ACTF_Flag::GetToolTipPriority ( )
 	static UFunction* pFnGetToolTipPriority = NULL;
 
 	if ( ! pFnGetToolTipPriority )
-		pFnGetToolTipPriority = (UFunction*) UObject::GObjObjects()->Data[ 89680 ];
+		pFnGetToolTipPriority = (UFunction*) UObject::GObjObjects()->Data[ 84062 ];
 
 	ACTF_Flag_execGetToolTipPriority_Parms GetToolTipPriority_Parms;
 
@@ -1445,7 +1445,7 @@ bool ACTF_Flag::TakesToolTipPriority ( class UDunDefToolTipInterface* otherToolT
 	static UFunction* pFnTakesToolTipPriority = NULL;
 
 	if ( ! pFnTakesToolTipPriority )
-		pFnTakesToolTipPriority = (UFunction*) UObject::GObjObjects()->Data[ 89677 ];
+		pFnTakesToolTipPriority = (UFunction*) UObject::GObjObjects()->Data[ 84059 ];
 
 	ACTF_Flag_execTakesToolTipPriority_Parms TakesToolTipPriority_Parms;
 	TakesToolTipPriority_Parms.otherToolTip = otherToolTip;
@@ -1466,7 +1466,7 @@ bool ACTF_Flag::ContinueDrawingToolTip ( unsigned long ContinueDrawing )
 	static UFunction* pFnContinueDrawingToolTip = NULL;
 
 	if ( ! pFnContinueDrawingToolTip )
-		pFnContinueDrawingToolTip = (UFunction*) UObject::GObjObjects()->Data[ 89674 ];
+		pFnContinueDrawingToolTip = (UFunction*) UObject::GObjObjects()->Data[ 84056 ];
 
 	ACTF_Flag_execContinueDrawingToolTip_Parms ContinueDrawingToolTip_Parms;
 	ContinueDrawingToolTip_Parms.ContinueDrawing = ContinueDrawing;
@@ -1489,7 +1489,7 @@ void ACTF_Flag::DrawToolTip ( class UCanvas* C, int PosX, int PosY, class ULocal
 	static UFunction* pFnDrawToolTip = NULL;
 
 	if ( ! pFnDrawToolTip )
-		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 89666 ];
+		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 84048 ];
 
 	ACTF_Flag_execDrawToolTip_Parms DrawToolTip_Parms;
 	DrawToolTip_Parms.C = C;
@@ -1509,7 +1509,7 @@ void ACTF_Flag::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 89665 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 84047 ];
 
 	ACTF_Flag_eventDestroyed_Parms Destroyed_Parms;
 
@@ -1525,7 +1525,7 @@ void ACTF_Flag::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 89664 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84046 ];
 
 	ACTF_Flag_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -1543,7 +1543,7 @@ bool ACTF_Flag::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 89652 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 84034 ];
 
 	ACTF_Flag_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -1563,7 +1563,7 @@ bool ACTF_Flag::OnlyDrawHUDForOwner ( )
 	static UFunction* pFnOnlyDrawHUDForOwner = NULL;
 
 	if ( ! pFnOnlyDrawHUDForOwner )
-		pFnOnlyDrawHUDForOwner = (UFunction*) UObject::GObjObjects()->Data[ 89650 ];
+		pFnOnlyDrawHUDForOwner = (UFunction*) UObject::GObjObjects()->Data[ 84032 ];
 
 	ACTF_Flag_execOnlyDrawHUDForOwner_Parms OnlyDrawHUDForOwner_Parms;
 
@@ -1597,7 +1597,7 @@ void ACTF_Flag::ExecReplicatedFunction ( struct FName FunctionName, struct FName
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 89633 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 84015 ];
 
 	ACTF_Flag_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -1630,7 +1630,7 @@ void ACTF_Flag::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 89631 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 84013 ];
 
 	ACTF_Flag_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -1651,7 +1651,7 @@ void UCTF_UIGlobalHUD::GetUITeamLists ( int TeamOnlyCheck, struct FString* tList
 	static UFunction* pFnGetUITeamLists = NULL;
 
 	if ( ! pFnGetUITeamLists )
-		pFnGetUITeamLists = (UFunction*) UObject::GObjObjects()->Data[ 89183 ];
+		pFnGetUITeamLists = (UFunction*) UObject::GObjObjects()->Data[ 83565 ];
 
 	UCTF_UIGlobalHUD_execGetUITeamLists_Parms GetUITeamLists_Parms;
 	GetUITeamLists_Parms.TeamOnlyCheck = TeamOnlyCheck;
@@ -1679,7 +1679,7 @@ struct FString UCTF_UIGlobalHUD::GetColorString ( struct FColor aColor )
 	static UFunction* pFnGetColorString = NULL;
 
 	if ( ! pFnGetColorString )
-		pFnGetColorString = (UFunction*) UObject::GObjObjects()->Data[ 89180 ];
+		pFnGetColorString = (UFunction*) UObject::GObjObjects()->Data[ 83562 ];
 
 	UCTF_UIGlobalHUD_execGetColorString_Parms GetColorString_Parms;
 	memcpy ( &GetColorString_Parms.aColor, &aColor, 0x4 );
@@ -1698,7 +1698,7 @@ void UCTF_UIGlobalHUD::UpdateTeamPanels ( )
 	static UFunction* pFnUpdateTeamPanels = NULL;
 
 	if ( ! pFnUpdateTeamPanels )
-		pFnUpdateTeamPanels = (UFunction*) UObject::GObjObjects()->Data[ 89171 ];
+		pFnUpdateTeamPanels = (UFunction*) UObject::GObjObjects()->Data[ 83553 ];
 
 	UCTF_UIGlobalHUD_execUpdateTeamPanels_Parms UpdateTeamPanels_Parms;
 
@@ -1715,7 +1715,7 @@ void UCTF_UIGlobalHUD::eventUpdate ( float DeltaTime )
 	static UFunction* pFnUpdate = NULL;
 
 	if ( ! pFnUpdate )
-		pFnUpdate = (UFunction*) UObject::GObjObjects()->Data[ 89168 ];
+		pFnUpdate = (UFunction*) UObject::GObjObjects()->Data[ 83550 ];
 
 	UCTF_UIGlobalHUD_eventUpdate_Parms Update_Parms;
 	Update_Parms.DeltaTime = DeltaTime;
@@ -1733,7 +1733,7 @@ void UCTF_UIGlobalHUD::UpdateCompetitive ( float DeltaTime )
 	static UFunction* pFnUpdateCompetitive = NULL;
 
 	if ( ! pFnUpdateCompetitive )
-		pFnUpdateCompetitive = (UFunction*) UObject::GObjObjects()->Data[ 89148 ];
+		pFnUpdateCompetitive = (UFunction*) UObject::GObjObjects()->Data[ 83530 ];
 
 	UCTF_UIGlobalHUD_execUpdateCompetitive_Parms UpdateCompetitive_Parms;
 	UpdateCompetitive_Parms.DeltaTime = DeltaTime;
@@ -1751,7 +1751,7 @@ bool ACTF_DDPRI::IsFriendlyToLocal ( )
 	static UFunction* pFnIsFriendlyToLocal = NULL;
 
 	if ( ! pFnIsFriendlyToLocal )
-		pFnIsFriendlyToLocal = (UFunction*) UObject::GObjObjects()->Data[ 89588 ];
+		pFnIsFriendlyToLocal = (UFunction*) UObject::GObjObjects()->Data[ 83970 ];
 
 	ACTF_DDPRI_execIsFriendlyToLocal_Parms IsFriendlyToLocal_Parms;
 
@@ -1769,7 +1769,7 @@ void ACTF_DDPRI::PrintHeroLevelUpMessage ( )
 	static UFunction* pFnPrintHeroLevelUpMessage = NULL;
 
 	if ( ! pFnPrintHeroLevelUpMessage )
-		pFnPrintHeroLevelUpMessage = (UFunction*) UObject::GObjObjects()->Data[ 89587 ];
+		pFnPrintHeroLevelUpMessage = (UFunction*) UObject::GObjObjects()->Data[ 83969 ];
 
 	ACTF_DDPRI_execPrintHeroLevelUpMessage_Parms PrintHeroLevelUpMessage_Parms;
 
@@ -1785,7 +1785,7 @@ void ACTF_DDPRI::PrintNewHeroMessage ( )
 	static UFunction* pFnPrintNewHeroMessage = NULL;
 
 	if ( ! pFnPrintNewHeroMessage )
-		pFnPrintNewHeroMessage = (UFunction*) UObject::GObjObjects()->Data[ 89586 ];
+		pFnPrintNewHeroMessage = (UFunction*) UObject::GObjObjects()->Data[ 83968 ];
 
 	ACTF_DDPRI_execPrintNewHeroMessage_Parms PrintNewHeroMessage_Parms;
 
@@ -1802,7 +1802,7 @@ void ACTF_DDPRI::SetReadyToSpawn ( unsigned long bIsReady )
 	static UFunction* pFnSetReadyToSpawn = NULL;
 
 	if ( ! pFnSetReadyToSpawn )
-		pFnSetReadyToSpawn = (UFunction*) UObject::GObjObjects()->Data[ 89584 ];
+		pFnSetReadyToSpawn = (UFunction*) UObject::GObjObjects()->Data[ 83966 ];
 
 	ACTF_DDPRI_execSetReadyToSpawn_Parms SetReadyToSpawn_Parms;
 	SetReadyToSpawn_Parms.bIsReady = bIsReady;
@@ -1820,7 +1820,7 @@ struct FString ACTF_DDPRI::GetTeamName ( )
 	static UFunction* pFnGetTeamName = NULL;
 
 	if ( ! pFnGetTeamName )
-		pFnGetTeamName = (UFunction*) UObject::GObjObjects()->Data[ 89158 ];
+		pFnGetTeamName = (UFunction*) UObject::GObjObjects()->Data[ 83540 ];
 
 	ACTF_DDPRI_execGetTeamName_Parms GetTeamName_Parms;
 
@@ -1839,7 +1839,7 @@ struct FColor ACTF_DDPRI::GetTeamColor ( )
 	static UFunction* pFnGetTeamColor = NULL;
 
 	if ( ! pFnGetTeamColor )
-		pFnGetTeamColor = (UFunction*) UObject::GObjObjects()->Data[ 89156 ];
+		pFnGetTeamColor = (UFunction*) UObject::GObjObjects()->Data[ 83538 ];
 
 	ACTF_DDPRI_execGetTeamColor_Parms GetTeamColor_Parms;
 
@@ -1857,7 +1857,7 @@ void ACTF_DDPRI::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 89583 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 83965 ];
 
 	ACTF_DDPRI_eventDestroyed_Parms Destroyed_Parms;
 
@@ -1874,7 +1874,7 @@ void ACTF_DDPRI::AddToTeam ( int TeamIndex )
 	static UFunction* pFnAddToTeam = NULL;
 
 	if ( ! pFnAddToTeam )
-		pFnAddToTeam = (UFunction*) UObject::GObjObjects()->Data[ 89581 ];
+		pFnAddToTeam = (UFunction*) UObject::GObjObjects()->Data[ 83963 ];
 
 	ACTF_DDPRI_execAddToTeam_Parms AddToTeam_Parms;
 	AddToTeam_Parms.TeamIndex = TeamIndex;
@@ -1892,7 +1892,7 @@ void ACTF_DDPRI::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 89579 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 83961 ];
 
 	ACTF_DDPRI_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -1911,7 +1911,7 @@ bool ACTF_DDGRI::AllowedToTeleport ( class APawn* Teleportee )
 	static UFunction* pFnAllowedToTeleport = NULL;
 
 	if ( ! pFnAllowedToTeleport )
-		pFnAllowedToTeleport = (UFunction*) UObject::GObjObjects()->Data[ 89442 ];
+		pFnAllowedToTeleport = (UFunction*) UObject::GObjObjects()->Data[ 83824 ];
 
 	ACTF_DDGRI_execAllowedToTeleport_Parms AllowedToTeleport_Parms;
 	AllowedToTeleport_Parms.Teleportee = Teleportee;
@@ -1933,7 +1933,7 @@ void ACTF_DDGRI::DoDeathNotification ( class ADunDefPlayerReplicationInfo* Kille
 	static UFunction* pFnDoDeathNotification = NULL;
 
 	if ( ! pFnDoDeathNotification )
-		pFnDoDeathNotification = (UFunction*) UObject::GObjObjects()->Data[ 89437 ];
+		pFnDoDeathNotification = (UFunction*) UObject::GObjObjects()->Data[ 83819 ];
 
 	ACTF_DDGRI_execDoDeathNotification_Parms DoDeathNotification_Parms;
 	DoDeathNotification_Parms.Killer = Killer;
@@ -1954,7 +1954,7 @@ float ACTF_DDGRI::GetJumpZMultiplier ( class ADunDefPawn* aPawn )
 	static UFunction* pFnGetJumpZMultiplier = NULL;
 
 	if ( ! pFnGetJumpZMultiplier )
-		pFnGetJumpZMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 89433 ];
+		pFnGetJumpZMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 83815 ];
 
 	ACTF_DDGRI_execGetJumpZMultiplier_Parms GetJumpZMultiplier_Parms;
 	GetJumpZMultiplier_Parms.aPawn = aPawn;
@@ -1975,7 +1975,7 @@ void ACTF_DDGRI::ExtraDrawHUDInterface ( class ADunDefHUD* H, class UDunDefHUDIn
 	static UFunction* pFnExtraDrawHUDInterface = NULL;
 
 	if ( ! pFnExtraDrawHUDInterface )
-		pFnExtraDrawHUDInterface = (UFunction*) UObject::GObjObjects()->Data[ 89421 ];
+		pFnExtraDrawHUDInterface = (UFunction*) UObject::GObjObjects()->Data[ 83803 ];
 
 	ACTF_DDGRI_execExtraDrawHUDInterface_Parms ExtraDrawHUDInterface_Parms;
 	ExtraDrawHUDInterface_Parms.H = H;
@@ -1995,7 +1995,7 @@ void ACTF_DDGRI::CustomUpdatePlayerScoreLabel ( class ULocalPlayer* ForPlayer, c
 	static UFunction* pFnCustomUpdatePlayerScoreLabel = NULL;
 
 	if ( ! pFnCustomUpdatePlayerScoreLabel )
-		pFnCustomUpdatePlayerScoreLabel = (UFunction*) UObject::GObjObjects()->Data[ 89418 ];
+		pFnCustomUpdatePlayerScoreLabel = (UFunction*) UObject::GObjObjects()->Data[ 83800 ];
 
 	ACTF_DDGRI_execCustomUpdatePlayerScoreLabel_Parms CustomUpdatePlayerScoreLabel_Parms;
 	CustomUpdatePlayerScoreLabel_Parms.ForPlayer = ForPlayer;
@@ -2015,7 +2015,7 @@ bool ACTF_DDGRI::AllowDeathSpectatorMode ( class ADunDefPlayerController* PC )
 	static UFunction* pFnAllowDeathSpectatorMode = NULL;
 
 	if ( ! pFnAllowDeathSpectatorMode )
-		pFnAllowDeathSpectatorMode = (UFunction*) UObject::GObjObjects()->Data[ 89415 ];
+		pFnAllowDeathSpectatorMode = (UFunction*) UObject::GObjObjects()->Data[ 83797 ];
 
 	ACTF_DDGRI_execAllowDeathSpectatorMode_Parms AllowDeathSpectatorMode_Parms;
 	AllowDeathSpectatorMode_Parms.PC = PC;
@@ -2037,7 +2037,7 @@ float ACTF_DDGRI::ModifyPlayerGroundSpeed ( class ADunDefPlayer* aPlayer, float 
 	static UFunction* pFnModifyPlayerGroundSpeed = NULL;
 
 	if ( ! pFnModifyPlayerGroundSpeed )
-		pFnModifyPlayerGroundSpeed = (UFunction*) UObject::GObjObjects()->Data[ 89411 ];
+		pFnModifyPlayerGroundSpeed = (UFunction*) UObject::GObjObjects()->Data[ 83793 ];
 
 	ACTF_DDGRI_execModifyPlayerGroundSpeed_Parms ModifyPlayerGroundSpeed_Parms;
 	ModifyPlayerGroundSpeed_Parms.aPlayer = aPlayer;
@@ -2058,7 +2058,7 @@ struct FColor ACTF_DDGRI::GetGameOverLabelColor ( )
 	static UFunction* pFnGetGameOverLabelColor = NULL;
 
 	if ( ! pFnGetGameOverLabelColor )
-		pFnGetGameOverLabelColor = (UFunction*) UObject::GObjObjects()->Data[ 89409 ];
+		pFnGetGameOverLabelColor = (UFunction*) UObject::GObjObjects()->Data[ 83791 ];
 
 	ACTF_DDGRI_execGetGameOverLabelColor_Parms GetGameOverLabelColor_Parms;
 
@@ -2077,7 +2077,7 @@ struct FColor ACTF_DDGRI::GetVictoryLabelColor ( )
 	static UFunction* pFnGetVictoryLabelColor = NULL;
 
 	if ( ! pFnGetVictoryLabelColor )
-		pFnGetVictoryLabelColor = (UFunction*) UObject::GObjObjects()->Data[ 89407 ];
+		pFnGetVictoryLabelColor = (UFunction*) UObject::GObjObjects()->Data[ 83789 ];
 
 	ACTF_DDGRI_execGetVictoryLabelColor_Parms GetVictoryLabelColor_Parms;
 
@@ -2097,7 +2097,7 @@ struct FString ACTF_DDGRI::GetGameOverLabelString ( class APlayerReplicationInfo
 	static UFunction* pFnGetGameOverLabelString = NULL;
 
 	if ( ! pFnGetGameOverLabelString )
-		pFnGetGameOverLabelString = (UFunction*) UObject::GObjObjects()->Data[ 89404 ];
+		pFnGetGameOverLabelString = (UFunction*) UObject::GObjObjects()->Data[ 83786 ];
 
 	ACTF_DDGRI_execGetGameOverLabelString_Parms GetGameOverLabelString_Parms;
 	GetGameOverLabelString_Parms.myPlayer = myPlayer;
@@ -2118,7 +2118,7 @@ struct FString ACTF_DDGRI::GetVictoryLabelString ( class APlayerReplicationInfo*
 	static UFunction* pFnGetVictoryLabelString = NULL;
 
 	if ( ! pFnGetVictoryLabelString )
-		pFnGetVictoryLabelString = (UFunction*) UObject::GObjObjects()->Data[ 89401 ];
+		pFnGetVictoryLabelString = (UFunction*) UObject::GObjObjects()->Data[ 83783 ];
 
 	ACTF_DDGRI_execGetVictoryLabelString_Parms GetVictoryLabelString_Parms;
 	GetVictoryLabelString_Parms.myPlayer = myPlayer;
@@ -2138,7 +2138,7 @@ bool ACTF_DDGRI::OverrideEndGameLabel ( )
 	static UFunction* pFnOverrideEndGameLabel = NULL;
 
 	if ( ! pFnOverrideEndGameLabel )
-		pFnOverrideEndGameLabel = (UFunction*) UObject::GObjObjects()->Data[ 89399 ];
+		pFnOverrideEndGameLabel = (UFunction*) UObject::GObjObjects()->Data[ 83781 ];
 
 	ACTF_DDGRI_execOverrideEndGameLabel_Parms OverrideEndGameLabel_Parms;
 
@@ -2157,7 +2157,7 @@ class ADunDefPlayerReplicationInfo* ACTF_DDGRI::GetWinningPRI ( )
 	static UFunction* pFnGetWinningPRI = NULL;
 
 	if ( ! pFnGetWinningPRI )
-		pFnGetWinningPRI = (UFunction*) UObject::GObjObjects()->Data[ 89394 ];
+		pFnGetWinningPRI = (UFunction*) UObject::GObjObjects()->Data[ 83776 ];
 
 	ACTF_DDGRI_execGetWinningPRI_Parms GetWinningPRI_Parms;
 
@@ -2179,7 +2179,7 @@ TArray< class UDataListEntryInterface* > ACTF_DDGRI::GetDataListEntries ( int da
 	static UFunction* pFnGetDataListEntries = NULL;
 
 	if ( ! pFnGetDataListEntries )
-		pFnGetDataListEntries = (UFunction*) UObject::GObjObjects()->Data[ 89385 ];
+		pFnGetDataListEntries = (UFunction*) UObject::GObjObjects()->Data[ 83767 ];
 
 	ACTF_DDGRI_execGetDataListEntries_Parms GetDataListEntries_Parms;
 	GetDataListEntries_Parms.dataSetType = dataSetType;
@@ -2203,7 +2203,7 @@ void ACTF_DDGRI::GetTeamIcon ( int TeamIndex, class USurface** theTeamIcon, stru
 	static UFunction* pFnGetTeamIcon = NULL;
 
 	if ( ! pFnGetTeamIcon )
-		pFnGetTeamIcon = (UFunction*) UObject::GObjObjects()->Data[ 89381 ];
+		pFnGetTeamIcon = (UFunction*) UObject::GObjObjects()->Data[ 83763 ];
 
 	ACTF_DDGRI_execGetTeamIcon_Parms GetTeamIcon_Parms;
 	GetTeamIcon_Parms.TeamIndex = TeamIndex;
@@ -2227,7 +2227,7 @@ bool ACTF_DDGRI::IsTeamCompetitive ( )
 	static UFunction* pFnIsTeamCompetitive = NULL;
 
 	if ( ! pFnIsTeamCompetitive )
-		pFnIsTeamCompetitive = (UFunction*) UObject::GObjObjects()->Data[ 89379 ];
+		pFnIsTeamCompetitive = (UFunction*) UObject::GObjObjects()->Data[ 83761 ];
 
 	ACTF_DDGRI_execIsTeamCompetitive_Parms IsTeamCompetitive_Parms;
 
@@ -2248,7 +2248,7 @@ bool ACTF_DDGRI::AllowChatBetween ( class APlayerReplicationInfo* myPlayer, clas
 	static UFunction* pFnAllowChatBetween = NULL;
 
 	if ( ! pFnAllowChatBetween )
-		pFnAllowChatBetween = (UFunction*) UObject::GObjObjects()->Data[ 89375 ];
+		pFnAllowChatBetween = (UFunction*) UObject::GObjObjects()->Data[ 83757 ];
 
 	ACTF_DDGRI_execAllowChatBetween_Parms AllowChatBetween_Parms;
 	AllowChatBetween_Parms.myPlayer = myPlayer;
@@ -2269,7 +2269,7 @@ int ACTF_DDGRI::GetTeamThatHasFlag ( )
 	static UFunction* pFnGetTeamThatHasFlag = NULL;
 
 	if ( ! pFnGetTeamThatHasFlag )
-		pFnGetTeamThatHasFlag = (UFunction*) UObject::GObjObjects()->Data[ 89372 ];
+		pFnGetTeamThatHasFlag = (UFunction*) UObject::GObjObjects()->Data[ 83754 ];
 
 	ACTF_DDGRI_execGetTeamThatHasFlag_Parms GetTeamThatHasFlag_Parms;
 
@@ -2287,7 +2287,7 @@ void ACTF_DDGRI::DoLevelVictory ( )
 	static UFunction* pFnDoLevelVictory = NULL;
 
 	if ( ! pFnDoLevelVictory )
-		pFnDoLevelVictory = (UFunction*) UObject::GObjObjects()->Data[ 89371 ];
+		pFnDoLevelVictory = (UFunction*) UObject::GObjObjects()->Data[ 83753 ];
 
 	ACTF_DDGRI_execDoLevelVictory_Parms DoLevelVictory_Parms;
 
@@ -2303,7 +2303,7 @@ void ACTF_DDGRI::GiveWinningBonus ( )
 	static UFunction* pFnGiveWinningBonus = NULL;
 
 	if ( ! pFnGiveWinningBonus )
-		pFnGiveWinningBonus = (UFunction*) UObject::GObjObjects()->Data[ 89367 ];
+		pFnGiveWinningBonus = (UFunction*) UObject::GObjObjects()->Data[ 83749 ];
 
 	ACTF_DDGRI_execGiveWinningBonus_Parms GiveWinningBonus_Parms;
 
@@ -2321,7 +2321,7 @@ void ACTF_DDGRI::WonGame ( class ADunDefPlayerReplicationInfo* theWinningPlayer,
 	static UFunction* pFnWonGame = NULL;
 
 	if ( ! pFnWonGame )
-		pFnWonGame = (UFunction*) UObject::GObjObjects()->Data[ 89363 ];
+		pFnWonGame = (UFunction*) UObject::GObjObjects()->Data[ 83745 ];
 
 	ACTF_DDGRI_execWonGame_Parms WonGame_Parms;
 	WonGame_Parms.theWinningPlayer = theWinningPlayer;
@@ -2339,7 +2339,7 @@ void ACTF_DDGRI::CheckAllReady ( )
 	static UFunction* pFnCheckAllReady = NULL;
 
 	if ( ! pFnCheckAllReady )
-		pFnCheckAllReady = (UFunction*) UObject::GObjObjects()->Data[ 89361 ];
+		pFnCheckAllReady = (UFunction*) UObject::GObjObjects()->Data[ 83743 ];
 
 	ACTF_DDGRI_execCheckAllReady_Parms CheckAllReady_Parms;
 
@@ -2356,7 +2356,7 @@ bool ACTF_DDGRI::CheckReadyPlayers ( )
 	static UFunction* pFnCheckReadyPlayers = NULL;
 
 	if ( ! pFnCheckReadyPlayers )
-		pFnCheckReadyPlayers = (UFunction*) UObject::GObjObjects()->Data[ 89356 ];
+		pFnCheckReadyPlayers = (UFunction*) UObject::GObjObjects()->Data[ 83738 ];
 
 	ACTF_DDGRI_execCheckReadyPlayers_Parms CheckReadyPlayers_Parms;
 
@@ -2375,7 +2375,7 @@ void ACTF_DDGRI::SetAllowCountDown ( unsigned long setAllow )
 	static UFunction* pFnSetAllowCountDown = NULL;
 
 	if ( ! pFnSetAllowCountDown )
-		pFnSetAllowCountDown = (UFunction*) UObject::GObjObjects()->Data[ 89354 ];
+		pFnSetAllowCountDown = (UFunction*) UObject::GObjObjects()->Data[ 83736 ];
 
 	ACTF_DDGRI_execSetAllowCountDown_Parms SetAllowCountDown_Parms;
 	SetAllowCountDown_Parms.setAllow = setAllow;
@@ -2393,7 +2393,7 @@ bool ACTF_DDGRI::AllowGameCountDown ( )
 	static UFunction* pFnAllowGameCountDown = NULL;
 
 	if ( ! pFnAllowGameCountDown )
-		pFnAllowGameCountDown = (UFunction*) UObject::GObjObjects()->Data[ 89352 ];
+		pFnAllowGameCountDown = (UFunction*) UObject::GObjObjects()->Data[ 83734 ];
 
 	ACTF_DDGRI_execAllowGameCountDown_Parms AllowGameCountDown_Parms;
 
@@ -2411,7 +2411,7 @@ void ACTF_DDGRI::SetGameReady ( )
 	static UFunction* pFnSetGameReady = NULL;
 
 	if ( ! pFnSetGameReady )
-		pFnSetGameReady = (UFunction*) UObject::GObjObjects()->Data[ 89350 ];
+		pFnSetGameReady = (UFunction*) UObject::GObjObjects()->Data[ 83732 ];
 
 	ACTF_DDGRI_execSetGameReady_Parms SetGameReady_Parms;
 
@@ -2428,7 +2428,7 @@ void ACTF_DDGRI::SetGameTime ( float NewTime )
 	static UFunction* pFnSetGameTime = NULL;
 
 	if ( ! pFnSetGameTime )
-		pFnSetGameTime = (UFunction*) UObject::GObjObjects()->Data[ 89348 ];
+		pFnSetGameTime = (UFunction*) UObject::GObjObjects()->Data[ 83730 ];
 
 	ACTF_DDGRI_execSetGameTime_Parms SetGameTime_Parms;
 	SetGameTime_Parms.NewTime = NewTime;
@@ -2445,7 +2445,7 @@ void ACTF_DDGRI::UpdateGameTime ( )
 	static UFunction* pFnUpdateGameTime = NULL;
 
 	if ( ! pFnUpdateGameTime )
-		pFnUpdateGameTime = (UFunction*) UObject::GObjObjects()->Data[ 89347 ];
+		pFnUpdateGameTime = (UFunction*) UObject::GObjObjects()->Data[ 83729 ];
 
 	ACTF_DDGRI_execUpdateGameTime_Parms UpdateGameTime_Parms;
 
@@ -2462,7 +2462,7 @@ void ACTF_DDGRI::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 89345 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 83727 ];
 
 	ACTF_DDGRI_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -2479,7 +2479,7 @@ void ACTF_DDGRI::FilloutTeams ( )
 	static UFunction* pFnFilloutTeams = NULL;
 
 	if ( ! pFnFilloutTeams )
-		pFnFilloutTeams = (UFunction*) UObject::GObjObjects()->Data[ 89342 ];
+		pFnFilloutTeams = (UFunction*) UObject::GObjObjects()->Data[ 83724 ];
 
 	ACTF_DDGRI_execFilloutTeams_Parms FilloutTeams_Parms;
 
@@ -2495,7 +2495,7 @@ void ACTF_DDGRI::FlushTeams ( )
 	static UFunction* pFnFlushTeams = NULL;
 
 	if ( ! pFnFlushTeams )
-		pFnFlushTeams = (UFunction*) UObject::GObjObjects()->Data[ 89340 ];
+		pFnFlushTeams = (UFunction*) UObject::GObjObjects()->Data[ 83722 ];
 
 	ACTF_DDGRI_execFlushTeams_Parms FlushTeams_Parms;
 
@@ -2511,7 +2511,7 @@ void ACTF_DDGRI::AutoBalanceTeams ( )
 	static UFunction* pFnAutoBalanceTeams = NULL;
 
 	if ( ! pFnAutoBalanceTeams )
-		pFnAutoBalanceTeams = (UFunction*) UObject::GObjObjects()->Data[ 89331 ];
+		pFnAutoBalanceTeams = (UFunction*) UObject::GObjObjects()->Data[ 83713 ];
 
 	ACTF_DDGRI_execAutoBalanceTeams_Parms AutoBalanceTeams_Parms;
 
@@ -2527,7 +2527,7 @@ void ACTF_DDGRI::AutoSortTeams ( )
 	static UFunction* pFnAutoSortTeams = NULL;
 
 	if ( ! pFnAutoSortTeams )
-		pFnAutoSortTeams = (UFunction*) UObject::GObjObjects()->Data[ 89328 ];
+		pFnAutoSortTeams = (UFunction*) UObject::GObjObjects()->Data[ 83710 ];
 
 	ACTF_DDGRI_execAutoSortTeams_Parms AutoSortTeams_Parms;
 
@@ -2544,7 +2544,7 @@ int ACTF_DDGRI::GetLowestBalancedTeam ( )
 	static UFunction* pFnGetLowestBalancedTeam = NULL;
 
 	if ( ! pFnGetLowestBalancedTeam )
-		pFnGetLowestBalancedTeam = (UFunction*) UObject::GObjObjects()->Data[ 89321 ];
+		pFnGetLowestBalancedTeam = (UFunction*) UObject::GObjObjects()->Data[ 83703 ];
 
 	ACTF_DDGRI_execGetLowestBalancedTeam_Parms GetLowestBalancedTeam_Parms;
 
@@ -2564,7 +2564,7 @@ void ACTF_DDGRI::IncrementTeamScore ( int ScoringTeam, int Score )
 	static UFunction* pFnIncrementTeamScore = NULL;
 
 	if ( ! pFnIncrementTeamScore )
-		pFnIncrementTeamScore = (UFunction*) UObject::GObjObjects()->Data[ 89317 ];
+		pFnIncrementTeamScore = (UFunction*) UObject::GObjObjects()->Data[ 83699 ];
 
 	ACTF_DDGRI_execIncrementTeamScore_Parms IncrementTeamScore_Parms;
 	IncrementTeamScore_Parms.ScoringTeam = ScoringTeam;
@@ -2582,7 +2582,7 @@ void ACTF_DDGRI::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 89316 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 83698 ];
 
 	ACTF_DDGRI_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -2600,7 +2600,7 @@ void ACTF_DDGRI::ModifyCustomColors ( class ADunDefPlayerController* aController
 	static UFunction* pFnModifyCustomColors = NULL;
 
 	if ( ! pFnModifyCustomColors )
-		pFnModifyCustomColors = (UFunction*) UObject::GObjObjects()->Data[ 89313 ];
+		pFnModifyCustomColors = (UFunction*) UObject::GObjObjects()->Data[ 83695 ];
 
 	ACTF_DDGRI_execModifyCustomColors_Parms ModifyCustomColors_Parms;
 	ModifyCustomColors_Parms.aController = aController;
@@ -2620,7 +2620,7 @@ void ACTF_DDGRI::DrawExtraPlayerFloatingHUD ( class ADunDefPlayer* aPlayer, clas
 	static UFunction* pFnDrawExtraPlayerFloatingHUD = NULL;
 
 	if ( ! pFnDrawExtraPlayerFloatingHUD )
-		pFnDrawExtraPlayerFloatingHUD = (UFunction*) UObject::GObjObjects()->Data[ 89301 ];
+		pFnDrawExtraPlayerFloatingHUD = (UFunction*) UObject::GObjObjects()->Data[ 83683 ];
 
 	ACTF_DDGRI_execDrawExtraPlayerFloatingHUD_Parms DrawExtraPlayerFloatingHUD_Parms;
 	DrawExtraPlayerFloatingHUD_Parms.aPlayer = aPlayer;
@@ -2639,7 +2639,7 @@ struct FString ACTF_DDGRI::GetTeamScores ( )
 	static UFunction* pFnGetTeamScores = NULL;
 
 	if ( ! pFnGetTeamScores )
-		pFnGetTeamScores = (UFunction*) UObject::GObjObjects()->Data[ 89166 ];
+		pFnGetTeamScores = (UFunction*) UObject::GObjObjects()->Data[ 83548 ];
 
 	ACTF_DDGRI_execGetTeamScores_Parms GetTeamScores_Parms;
 
@@ -2658,7 +2658,7 @@ void ACTF_DDGRI::Server_AddGRIHeroAbilities ( class ADunDefPlayerController* PC 
 	static UFunction* pFnServer_AddGRIHeroAbilities = NULL;
 
 	if ( ! pFnServer_AddGRIHeroAbilities )
-		pFnServer_AddGRIHeroAbilities = (UFunction*) UObject::GObjObjects()->Data[ 89291 ];
+		pFnServer_AddGRIHeroAbilities = (UFunction*) UObject::GObjObjects()->Data[ 83673 ];
 
 	ACTF_DDGRI_execServer_AddGRIHeroAbilities_Parms Server_AddGRIHeroAbilities_Parms;
 	Server_AddGRIHeroAbilities_Parms.PC = PC;
@@ -2677,7 +2677,7 @@ struct FString ACTF_DDGRI::GetColorString ( struct FColor aColor )
 	static UFunction* pFnGetColorString = NULL;
 
 	if ( ! pFnGetColorString )
-		pFnGetColorString = (UFunction*) UObject::GObjObjects()->Data[ 89288 ];
+		pFnGetColorString = (UFunction*) UObject::GObjObjects()->Data[ 83670 ];
 
 	ACTF_DDGRI_execGetColorString_Parms GetColorString_Parms;
 	memcpy ( &GetColorString_Parms.aColor, &aColor, 0x4 );
@@ -2699,7 +2699,7 @@ struct FString ACTF_DDGRI::GetTeamLists ( int TeamOnlyCheck, unsigned long bWant
 	static UFunction* pFnGetTeamLists = NULL;
 
 	if ( ! pFnGetTeamLists )
-		pFnGetTeamLists = (UFunction*) UObject::GObjObjects()->Data[ 89281 ];
+		pFnGetTeamLists = (UFunction*) UObject::GObjObjects()->Data[ 83663 ];
 
 	ACTF_DDGRI_execGetTeamLists_Parms GetTeamLists_Parms;
 	GetTeamLists_Parms.TeamOnlyCheck = TeamOnlyCheck;
@@ -2720,7 +2720,7 @@ struct FString ACTF_DDGRI::GetCompetitivePlayerList ( )
 	static UFunction* pFnGetCompetitivePlayerList = NULL;
 
 	if ( ! pFnGetCompetitivePlayerList )
-		pFnGetCompetitivePlayerList = (UFunction*) UObject::GObjObjects()->Data[ 89276 ];
+		pFnGetCompetitivePlayerList = (UFunction*) UObject::GObjObjects()->Data[ 83658 ];
 
 	ACTF_DDGRI_execGetCompetitivePlayerList_Parms GetCompetitivePlayerList_Parms;
 
@@ -2740,7 +2740,7 @@ bool ACTF_DDGRI::DestroyTowerOnOwnerLeft ( class ADunDefTower* aTower )
 	static UFunction* pFnDestroyTowerOnOwnerLeft = NULL;
 
 	if ( ! pFnDestroyTowerOnOwnerLeft )
-		pFnDestroyTowerOnOwnerLeft = (UFunction*) UObject::GObjObjects()->Data[ 89273 ];
+		pFnDestroyTowerOnOwnerLeft = (UFunction*) UObject::GObjObjects()->Data[ 83655 ];
 
 	ACTF_DDGRI_execDestroyTowerOnOwnerLeft_Parms DestroyTowerOnOwnerLeft_Parms;
 	DestroyTowerOnOwnerLeft_Parms.aTower = aTower;
@@ -2761,7 +2761,7 @@ int ACTF_DDGRI::GetMaxTowerUnits ( class ADunDefPlayerReplicationInfo* ddPRI )
 	static UFunction* pFnGetMaxTowerUnits = NULL;
 
 	if ( ! pFnGetMaxTowerUnits )
-		pFnGetMaxTowerUnits = (UFunction*) UObject::GObjObjects()->Data[ 89164 ];
+		pFnGetMaxTowerUnits = (UFunction*) UObject::GObjObjects()->Data[ 83546 ];
 
 	ACTF_DDGRI_execGetMaxTowerUnits_Parms GetMaxTowerUnits_Parms;
 	GetMaxTowerUnits_Parms.ddPRI = ddPRI;
@@ -2782,7 +2782,7 @@ int ACTF_DDGRI::GetAltCurrentTowerUnits ( class ADunDefPlayerReplicationInfo* dd
 	static UFunction* pFnGetAltCurrentTowerUnits = NULL;
 
 	if ( ! pFnGetAltCurrentTowerUnits )
-		pFnGetAltCurrentTowerUnits = (UFunction*) UObject::GObjObjects()->Data[ 89162 ];
+		pFnGetAltCurrentTowerUnits = (UFunction*) UObject::GObjObjects()->Data[ 83544 ];
 
 	ACTF_DDGRI_execGetAltCurrentTowerUnits_Parms GetAltCurrentTowerUnits_Parms;
 	GetAltCurrentTowerUnits_Parms.ddPRI = ddPRI;
@@ -2803,7 +2803,7 @@ int ACTF_DDGRI::GetCurrentTowerUnits ( class ADunDefPlayerReplicationInfo* ddPRI
 	static UFunction* pFnGetCurrentTowerUnits = NULL;
 
 	if ( ! pFnGetCurrentTowerUnits )
-		pFnGetCurrentTowerUnits = (UFunction*) UObject::GObjObjects()->Data[ 89160 ];
+		pFnGetCurrentTowerUnits = (UFunction*) UObject::GObjObjects()->Data[ 83542 ];
 
 	ACTF_DDGRI_execGetCurrentTowerUnits_Parms GetCurrentTowerUnits_Parms;
 	GetCurrentTowerUnits_Parms.ddPRI = ddPRI;
@@ -2826,7 +2826,7 @@ bool ACTF_DDGRI::CanPlaceTowerUnitCost ( int Cost, class ADunDefPlayerController
 	static UFunction* pFnCanPlaceTowerUnitCost = NULL;
 
 	if ( ! pFnCanPlaceTowerUnitCost )
-		pFnCanPlaceTowerUnitCost = (UFunction*) UObject::GObjObjects()->Data[ 89264 ];
+		pFnCanPlaceTowerUnitCost = (UFunction*) UObject::GObjObjects()->Data[ 83646 ];
 
 	ACTF_DDGRI_execCanPlaceTowerUnitCost_Parms CanPlaceTowerUnitCost_Parms;
 	CanPlaceTowerUnitCost_Parms.Cost = Cost;
@@ -2848,7 +2848,7 @@ void ACTF_DDGRI::RemovedTower ( class ADunDefTower* tower )
 	static UFunction* pFnRemovedTower = NULL;
 
 	if ( ! pFnRemovedTower )
-		pFnRemovedTower = (UFunction*) UObject::GObjObjects()->Data[ 89262 ];
+		pFnRemovedTower = (UFunction*) UObject::GObjObjects()->Data[ 83644 ];
 
 	ACTF_DDGRI_execRemovedTower_Parms RemovedTower_Parms;
 	RemovedTower_Parms.tower = tower;
@@ -2866,7 +2866,7 @@ void ACTF_DDGRI::AddedTower ( class ADunDefTower* tower )
 	static UFunction* pFnAddedTower = NULL;
 
 	if ( ! pFnAddedTower )
-		pFnAddedTower = (UFunction*) UObject::GObjObjects()->Data[ 89259 ];
+		pFnAddedTower = (UFunction*) UObject::GObjObjects()->Data[ 83641 ];
 
 	ACTF_DDGRI_execAddedTower_Parms AddedTower_Parms;
 	AddedTower_Parms.tower = tower;
@@ -2885,7 +2885,7 @@ void ACTF_DDGRI::RemovePlayerFromTeam ( class ACTF_DDPRI* aPRI, int TeamIndex )
 	static UFunction* pFnRemovePlayerFromTeam = NULL;
 
 	if ( ! pFnRemovePlayerFromTeam )
-		pFnRemovePlayerFromTeam = (UFunction*) UObject::GObjObjects()->Data[ 89256 ];
+		pFnRemovePlayerFromTeam = (UFunction*) UObject::GObjObjects()->Data[ 83638 ];
 
 	ACTF_DDGRI_execRemovePlayerFromTeam_Parms RemovePlayerFromTeam_Parms;
 	RemovePlayerFromTeam_Parms.aPRI = aPRI;
@@ -2905,7 +2905,7 @@ void ACTF_DDGRI::AddPlayerToTeam ( class ACTF_DDPRI* aPRI, int TeamIndex )
 	static UFunction* pFnAddPlayerToTeam = NULL;
 
 	if ( ! pFnAddPlayerToTeam )
-		pFnAddPlayerToTeam = (UFunction*) UObject::GObjObjects()->Data[ 89253 ];
+		pFnAddPlayerToTeam = (UFunction*) UObject::GObjObjects()->Data[ 83635 ];
 
 	ACTF_DDGRI_execAddPlayerToTeam_Parms AddPlayerToTeam_Parms;
 	AddPlayerToTeam_Parms.aPRI = aPRI;
@@ -2924,7 +2924,7 @@ void ACTF_DDGRI::RemoveFromAnyTeams ( class ACTF_DDPRI* aPRI )
 	static UFunction* pFnRemoveFromAnyTeams = NULL;
 
 	if ( ! pFnRemoveFromAnyTeams )
-		pFnRemoveFromAnyTeams = (UFunction*) UObject::GObjObjects()->Data[ 89250 ];
+		pFnRemoveFromAnyTeams = (UFunction*) UObject::GObjObjects()->Data[ 83632 ];
 
 	ACTF_DDGRI_execRemoveFromAnyTeams_Parms RemoveFromAnyTeams_Parms;
 	RemoveFromAnyTeams_Parms.aPRI = aPRI;
@@ -2942,7 +2942,7 @@ int ACTF_DDGRI::GetSmallestTeam ( )
 	static UFunction* pFnGetSmallestTeam = NULL;
 
 	if ( ! pFnGetSmallestTeam )
-		pFnGetSmallestTeam = (UFunction*) UObject::GObjObjects()->Data[ 89245 ];
+		pFnGetSmallestTeam = (UFunction*) UObject::GObjObjects()->Data[ 83627 ];
 
 	ACTF_DDGRI_execGetSmallestTeam_Parms GetSmallestTeam_Parms;
 
@@ -2976,7 +2976,7 @@ void ACTF_DDGRI::ExecReplicatedFunction ( struct FName FunctionName, struct FNam
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 89228 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 83610 ];
 
 	ACTF_DDGRI_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -3014,7 +3014,7 @@ void ACTF_DDPC::AdjustDamage ( class AController* InstigatedBy, struct FVector H
 	static UFunction* pFnAdjustDamage = NULL;
 
 	if ( ! pFnAdjustDamage )
-		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 89498 ];
+		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 83884 ];
 
 	ACTF_DDPC_execAdjustDamage_Parms AdjustDamage_Parms;
 	AdjustDamage_Parms.InstigatedBy = InstigatedBy;
@@ -3041,7 +3041,7 @@ void ACTF_DDPC::PawnDied ( class APawn* inPawn )
 	static UFunction* pFnPawnDied = NULL;
 
 	if ( ! pFnPawnDied )
-		pFnPawnDied = (UFunction*) UObject::GObjObjects()->Data[ 89496 ];
+		pFnPawnDied = (UFunction*) UObject::GObjObjects()->Data[ 83882 ];
 
 	ACTF_DDPC_execPawnDied_Parms PawnDied_Parms;
 	PawnDied_Parms.inPawn = inPawn;
@@ -3059,7 +3059,7 @@ void ACTF_DDPC::GiveFlag ( class ACTF_Flag* newFlag )
 	static UFunction* pFnGiveFlag = NULL;
 
 	if ( ! pFnGiveFlag )
-		pFnGiveFlag = (UFunction*) UObject::GObjObjects()->Data[ 89494 ];
+		pFnGiveFlag = (UFunction*) UObject::GObjObjects()->Data[ 83880 ];
 
 	ACTF_DDPC_execGiveFlag_Parms GiveFlag_Parms;
 	GiveFlag_Parms.newFlag = newFlag;
@@ -3077,7 +3077,7 @@ void ACTF_DDPC::SetIsReady ( unsigned long bIsReady )
 	static UFunction* pFnSetIsReady = NULL;
 
 	if ( ! pFnSetIsReady )
-		pFnSetIsReady = (UFunction*) UObject::GObjObjects()->Data[ 89492 ];
+		pFnSetIsReady = (UFunction*) UObject::GObjObjects()->Data[ 83878 ];
 
 	ACTF_DDPC_execSetIsReady_Parms SetIsReady_Parms;
 	SetIsReady_Parms.bIsReady = bIsReady;
@@ -3095,7 +3095,7 @@ void ACTF_DDPC::SetDesiredTeam ( int desiredTeam )
 	static UFunction* pFnSetDesiredTeam = NULL;
 
 	if ( ! pFnSetDesiredTeam )
-		pFnSetDesiredTeam = (UFunction*) UObject::GObjObjects()->Data[ 89490 ];
+		pFnSetDesiredTeam = (UFunction*) UObject::GObjObjects()->Data[ 83876 ];
 
 	ACTF_DDPC_execSetDesiredTeam_Parms SetDesiredTeam_Parms;
 	SetDesiredTeam_Parms.desiredTeam = desiredTeam;
@@ -3112,7 +3112,7 @@ void ACTF_DDPC::CreateHUD ( )
 	static UFunction* pFnCreateHUD = NULL;
 
 	if ( ! pFnCreateHUD )
-		pFnCreateHUD = (UFunction*) UObject::GObjObjects()->Data[ 89487 ];
+		pFnCreateHUD = (UFunction*) UObject::GObjObjects()->Data[ 83873 ];
 
 	ACTF_DDPC_execCreateHUD_Parms CreateHUD_Parms;
 
@@ -3128,7 +3128,7 @@ void ACTF_DDPC::LocalAttemptSpawn ( )
 	static UFunction* pFnLocalAttemptSpawn = NULL;
 
 	if ( ! pFnLocalAttemptSpawn )
-		pFnLocalAttemptSpawn = (UFunction*) UObject::GObjObjects()->Data[ 89484 ];
+		pFnLocalAttemptSpawn = (UFunction*) UObject::GObjObjects()->Data[ 83870 ];
 
 	ACTF_DDPC_execLocalAttemptSpawn_Parms LocalAttemptSpawn_Parms;
 
@@ -3144,7 +3144,7 @@ void ACTF_DDPC::ServerRestartPlayer ( )
 	static UFunction* pFnServerRestartPlayer = NULL;
 
 	if ( ! pFnServerRestartPlayer )
-		pFnServerRestartPlayer = (UFunction*) UObject::GObjObjects()->Data[ 89483 ];
+		pFnServerRestartPlayer = (UFunction*) UObject::GObjObjects()->Data[ 83869 ];
 
 	ACTF_DDPC_execServerRestartPlayer_Parms ServerRestartPlayer_Parms;
 
@@ -3160,7 +3160,7 @@ void ACTF_DDPC::ShowTeamSelectionUI ( )
 	static UFunction* pFnShowTeamSelectionUI = NULL;
 
 	if ( ! pFnShowTeamSelectionUI )
-		pFnShowTeamSelectionUI = (UFunction*) UObject::GObjObjects()->Data[ 89476 ];
+		pFnShowTeamSelectionUI = (UFunction*) UObject::GObjObjects()->Data[ 83862 ];
 
 	ACTF_DDPC_execShowTeamSelectionUI_Parms ShowTeamSelectionUI_Parms;
 
@@ -3178,7 +3178,7 @@ bool ACTD_DDGRI::AllowedToTeleport ( class APawn* Teleportee )
 	static UFunction* pFnAllowedToTeleport = NULL;
 
 	if ( ! pFnAllowedToTeleport )
-		pFnAllowedToTeleport = (UFunction*) UObject::GObjObjects()->Data[ 89469 ];
+		pFnAllowedToTeleport = (UFunction*) UObject::GObjObjects()->Data[ 83855 ];
 
 	ACTD_DDGRI_execAllowedToTeleport_Parms AllowedToTeleport_Parms;
 	AllowedToTeleport_Parms.Teleportee = Teleportee;
@@ -3197,11 +3197,29 @@ void ACTD_DDGRI::DoLevelVictory ( )
 	static UFunction* pFnDoLevelVictory = NULL;
 
 	if ( ! pFnDoLevelVictory )
-		pFnDoLevelVictory = (UFunction*) UObject::GObjObjects()->Data[ 89468 ];
+		pFnDoLevelVictory = (UFunction*) UObject::GObjObjects()->Data[ 83854 ];
 
 	ACTD_DDGRI_execDoLevelVictory_Parms DoLevelVictory_Parms;
 
 	this->ProcessEvent ( pFnDoLevelVictory, &DoLevelVictory_Parms, NULL );
+};
+
+// Function DunDefSpecial.CTD_DDGRI.Tick
+// [0x00020902] ( FUNC_Event )
+// Parameters infos:
+// float                          DeltaTime                      ( CPF_Parm )
+
+void ACTD_DDGRI::eventTick ( float DeltaTime )
+{
+	static UFunction* pFnTick = NULL;
+
+	if ( ! pFnTick )
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 83852 ];
+
+	ACTD_DDGRI_eventTick_Parms Tick_Parms;
+	Tick_Parms.DeltaTime = DeltaTime;
+
+	this->ProcessEvent ( pFnTick, &Tick_Parms, NULL );
 };
 
 // Function DunDefSpecial.CTD_DDGRI.GetSkipBuildPhaseString
@@ -3214,7 +3232,7 @@ struct FString ACTD_DDGRI::GetSkipBuildPhaseString ( )
 	static UFunction* pFnGetSkipBuildPhaseString = NULL;
 
 	if ( ! pFnGetSkipBuildPhaseString )
-		pFnGetSkipBuildPhaseString = (UFunction*) UObject::GObjObjects()->Data[ 89462 ];
+		pFnGetSkipBuildPhaseString = (UFunction*) UObject::GObjObjects()->Data[ 83846 ];
 
 	ACTD_DDGRI_execGetSkipBuildPhaseString_Parms GetSkipBuildPhaseString_Parms;
 
@@ -3234,7 +3252,7 @@ void ACTD_DDGRI::DrawExtraPlayerFloatingHUD ( class ADunDefPlayer* aPlayer, clas
 	static UFunction* pFnDrawExtraPlayerFloatingHUD = NULL;
 
 	if ( ! pFnDrawExtraPlayerFloatingHUD )
-		pFnDrawExtraPlayerFloatingHUD = (UFunction*) UObject::GObjObjects()->Data[ 89459 ];
+		pFnDrawExtraPlayerFloatingHUD = (UFunction*) UObject::GObjObjects()->Data[ 83843 ];
 
 	ACTD_DDGRI_execDrawExtraPlayerFloatingHUD_Parms DrawExtraPlayerFloatingHUD_Parms;
 	DrawExtraPlayerFloatingHUD_Parms.aPlayer = aPlayer;
@@ -3253,7 +3271,7 @@ void ACTD_DDGRI::Server_AddGRIHeroAbilities ( class ADunDefPlayerController* PC 
 	static UFunction* pFnServer_AddGRIHeroAbilities = NULL;
 
 	if ( ! pFnServer_AddGRIHeroAbilities )
-		pFnServer_AddGRIHeroAbilities = (UFunction*) UObject::GObjObjects()->Data[ 89457 ];
+		pFnServer_AddGRIHeroAbilities = (UFunction*) UObject::GObjObjects()->Data[ 83841 ];
 
 	ACTD_DDGRI_execServer_AddGRIHeroAbilities_Parms Server_AddGRIHeroAbilities_Parms;
 	Server_AddGRIHeroAbilities_Parms.PC = PC;
@@ -3272,7 +3290,7 @@ bool ACTD_DDGRI::DestroyTowerOnOwnerLeft ( class ADunDefTower* aTower )
 	static UFunction* pFnDestroyTowerOnOwnerLeft = NULL;
 
 	if ( ! pFnDestroyTowerOnOwnerLeft )
-		pFnDestroyTowerOnOwnerLeft = (UFunction*) UObject::GObjObjects()->Data[ 89454 ];
+		pFnDestroyTowerOnOwnerLeft = (UFunction*) UObject::GObjObjects()->Data[ 83838 ];
 
 	ACTD_DDGRI_execDestroyTowerOnOwnerLeft_Parms DestroyTowerOnOwnerLeft_Parms;
 	DestroyTowerOnOwnerLeft_Parms.aTower = aTower;
@@ -3292,7 +3310,7 @@ bool ACTD_DDGRI::AllowActivatingCrystal ( )
 	static UFunction* pFnAllowActivatingCrystal = NULL;
 
 	if ( ! pFnAllowActivatingCrystal )
-		pFnAllowActivatingCrystal = (UFunction*) UObject::GObjObjects()->Data[ 89452 ];
+		pFnAllowActivatingCrystal = (UFunction*) UObject::GObjObjects()->Data[ 83836 ];
 
 	ACTD_DDGRI_execAllowActivatingCrystal_Parms AllowActivatingCrystal_Parms;
 
@@ -3310,7 +3328,7 @@ void ACTD_DDGRI::SetGameReady ( )
 	static UFunction* pFnSetGameReady = NULL;
 
 	if ( ! pFnSetGameReady )
-		pFnSetGameReady = (UFunction*) UObject::GObjObjects()->Data[ 89451 ];
+		pFnSetGameReady = (UFunction*) UObject::GObjObjects()->Data[ 83835 ];
 
 	ACTD_DDGRI_execSetGameReady_Parms SetGameReady_Parms;
 
@@ -3328,7 +3346,7 @@ bool UUI_TeamSelect::OnInterceptedInputKey ( struct FInputEventParameters* Event
 	static UFunction* pFnOnInterceptedInputKey = NULL;
 
 	if ( ! pFnOnInterceptedInputKey )
-		pFnOnInterceptedInputKey = (UFunction*) UObject::GObjObjects()->Data[ 95715 ];
+		pFnOnInterceptedInputKey = (UFunction*) UObject::GObjObjects()->Data[ 90037 ];
 
 	UUI_TeamSelect_execOnInterceptedInputKey_Parms OnInterceptedInputKey_Parms;
 
@@ -3351,7 +3369,7 @@ bool UUI_TeamSelect::eventNotifyWidgetClicked ( class UUIObject* Widget )
 	static UFunction* pFnNotifyWidgetClicked = NULL;
 
 	if ( ! pFnNotifyWidgetClicked )
-		pFnNotifyWidgetClicked = (UFunction*) UObject::GObjObjects()->Data[ 95709 ];
+		pFnNotifyWidgetClicked = (UFunction*) UObject::GObjObjects()->Data[ 90031 ];
 
 	UUI_TeamSelect_eventNotifyWidgetClicked_Parms NotifyWidgetClicked_Parms;
 	NotifyWidgetClicked_Parms.Widget = Widget;
@@ -3371,7 +3389,7 @@ void UUI_TeamSelect::Update ( float DeltaTime )
 	static UFunction* pFnUpdate = NULL;
 
 	if ( ! pFnUpdate )
-		pFnUpdate = (UFunction*) UObject::GObjObjects()->Data[ 95705 ];
+		pFnUpdate = (UFunction*) UObject::GObjObjects()->Data[ 90027 ];
 
 	UUI_TeamSelect_execUpdate_Parms Update_Parms;
 	Update_Parms.DeltaTime = DeltaTime;
@@ -3389,7 +3407,7 @@ void UUI_TeamSelect::eventSceneActivated ( unsigned long bInitialActivation )
 	static UFunction* pFnSceneActivated = NULL;
 
 	if ( ! pFnSceneActivated )
-		pFnSceneActivated = (UFunction*) UObject::GObjObjects()->Data[ 95703 ];
+		pFnSceneActivated = (UFunction*) UObject::GObjObjects()->Data[ 90025 ];
 
 	UUI_TeamSelect_eventSceneActivated_Parms SceneActivated_Parms;
 	SceneActivated_Parms.bInitialActivation = bInitialActivation;
@@ -3413,7 +3431,7 @@ void ACTF_GameInfo::AdjustDTDamage ( class ADunDefDamageableTarget* forDT, class
 	static UFunction* pFnAdjustDTDamage = NULL;
 
 	if ( ! pFnAdjustDTDamage )
-		pFnAdjustDTDamage = (UFunction*) UObject::GObjObjects()->Data[ 89548 ];
+		pFnAdjustDTDamage = (UFunction*) UObject::GObjObjects()->Data[ 83932 ];
 
 	ACTF_GameInfo_execAdjustDTDamage_Parms AdjustDTDamage_Parms;
 	AdjustDTDamage_Parms.forDT = forDT;
@@ -3447,7 +3465,7 @@ void ACTF_GameInfo::AdjustPawnDamage ( class ADunDefPawn* forPawn, class AContro
 	static UFunction* pFnAdjustPawnDamage = NULL;
 
 	if ( ! pFnAdjustPawnDamage )
-		pFnAdjustPawnDamage = (UFunction*) UObject::GObjObjects()->Data[ 89540 ];
+		pFnAdjustPawnDamage = (UFunction*) UObject::GObjObjects()->Data[ 83924 ];
 
 	ACTF_GameInfo_execAdjustPawnDamage_Parms AdjustPawnDamage_Parms;
 	AdjustPawnDamage_Parms.forPawn = forPawn;
@@ -3477,7 +3495,7 @@ unsigned char ACTF_GameInfo::GetPlayerTeamForStart ( class AController* Player, 
 	static UFunction* pFnGetPlayerTeamForStart = NULL;
 
 	if ( ! pFnGetPlayerTeamForStart )
-		pFnGetPlayerTeamForStart = (UFunction*) UObject::GObjObjects()->Data[ 89536 ];
+		pFnGetPlayerTeamForStart = (UFunction*) UObject::GObjObjects()->Data[ 83920 ];
 
 	ACTF_GameInfo_execGetPlayerTeamForStart_Parms GetPlayerTeamForStart_Parms;
 	GetPlayerTeamForStart_Parms.Player = Player;
@@ -3499,7 +3517,7 @@ bool ACTF_GameInfo::CheckScore ( class APlayerReplicationInfo* Scorer )
 	static UFunction* pFnCheckScore = NULL;
 
 	if ( ! pFnCheckScore )
-		pFnCheckScore = (UFunction*) UObject::GObjObjects()->Data[ 89533 ];
+		pFnCheckScore = (UFunction*) UObject::GObjObjects()->Data[ 83917 ];
 
 	ACTF_GameInfo_execCheckScore_Parms CheckScore_Parms;
 	CheckScore_Parms.Scorer = Scorer;
@@ -3520,7 +3538,7 @@ void ACTF_GameInfo::ScoreKill ( class AController* Killer, class AController* Ot
 	static UFunction* pFnScoreKill = NULL;
 
 	if ( ! pFnScoreKill )
-		pFnScoreKill = (UFunction*) UObject::GObjObjects()->Data[ 89530 ];
+		pFnScoreKill = (UFunction*) UObject::GObjObjects()->Data[ 83914 ];
 
 	ACTF_GameInfo_execScoreKill_Parms ScoreKill_Parms;
 	ScoreKill_Parms.Killer = Killer;
@@ -3540,7 +3558,7 @@ void ACTF_GameInfo::ScoreObjective ( class APlayerReplicationInfo* Scorer, int S
 	static UFunction* pFnScoreObjective = NULL;
 
 	if ( ! pFnScoreObjective )
-		pFnScoreObjective = (UFunction*) UObject::GObjObjects()->Data[ 89525 ];
+		pFnScoreObjective = (UFunction*) UObject::GObjObjects()->Data[ 83909 ];
 
 	ACTF_GameInfo_execScoreObjective_Parms ScoreObjective_Parms;
 	ScoreObjective_Parms.Scorer = Scorer;
@@ -3560,32 +3578,13 @@ void ACTF_GameInfo::AddObjectiveScore ( class APlayerReplicationInfo* Scorer, in
 	static UFunction* pFnAddObjectiveScore = NULL;
 
 	if ( ! pFnAddObjectiveScore )
-		pFnAddObjectiveScore = (UFunction*) UObject::GObjObjects()->Data[ 89522 ];
+		pFnAddObjectiveScore = (UFunction*) UObject::GObjObjects()->Data[ 83906 ];
 
 	ACTF_GameInfo_execAddObjectiveScore_Parms AddObjectiveScore_Parms;
 	AddObjectiveScore_Parms.Scorer = Scorer;
 	AddObjectiveScore_Parms.Score = Score;
 
 	this->ProcessEvent ( pFnAddObjectiveScore, &AddObjectiveScore_Parms, NULL );
-};
-
-// Function DunDefSpecial.CTF_GameInfo.CalculatedNetSpeed
-// [0x00020002] 
-// Parameters infos:
-// int                            ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-int ACTF_GameInfo::CalculatedNetSpeed ( )
-{
-	static UFunction* pFnCalculatedNetSpeed = NULL;
-
-	if ( ! pFnCalculatedNetSpeed )
-		pFnCalculatedNetSpeed = (UFunction*) UObject::GObjObjects()->Data[ 89520 ];
-
-	ACTF_GameInfo_execCalculatedNetSpeed_Parms CalculatedNetSpeed_Parms;
-
-	this->ProcessEvent ( pFnCalculatedNetSpeed, &CalculatedNetSpeed_Parms, NULL );
-
-	return CalculatedNetSpeed_Parms.ReturnValue;
 };
 
 // Function DunDefSpecial.CTF_GameInfo.PlayerReplicationInfoInitialized
@@ -3598,7 +3597,7 @@ void ACTF_GameInfo::PlayerReplicationInfoInitialized ( class ADunDefPlayerContro
 	static UFunction* pFnPlayerReplicationInfoInitialized = NULL;
 
 	if ( ! pFnPlayerReplicationInfoInitialized )
-		pFnPlayerReplicationInfoInitialized = (UFunction*) UObject::GObjObjects()->Data[ 89518 ];
+		pFnPlayerReplicationInfoInitialized = (UFunction*) UObject::GObjObjects()->Data[ 83904 ];
 
 	ACTF_GameInfo_execPlayerReplicationInfoInitialized_Parms PlayerReplicationInfoInitialized_Parms;
 	PlayerReplicationInfoInitialized_Parms.PC = PC;
@@ -3617,7 +3616,7 @@ void ACTF_GameInfo::DoPlayerLeaving ( class ADunDefPlayerController* PC, unsigne
 	static UFunction* pFnDoPlayerLeaving = NULL;
 
 	if ( ! pFnDoPlayerLeaving )
-		pFnDoPlayerLeaving = (UFunction*) UObject::GObjObjects()->Data[ 89515 ];
+		pFnDoPlayerLeaving = (UFunction*) UObject::GObjObjects()->Data[ 83901 ];
 
 	ACTF_GameInfo_execDoPlayerLeaving_Parms DoPlayerLeaving_Parms;
 	DoPlayerLeaving_Parms.PC = PC;
@@ -3638,7 +3637,7 @@ class APlayerController* ACTF_GameInfo::SpawnPlayerController ( struct FVector S
 	static UFunction* pFnSpawnPlayerController = NULL;
 
 	if ( ! pFnSpawnPlayerController )
-		pFnSpawnPlayerController = (UFunction*) UObject::GObjObjects()->Data[ 89511 ];
+		pFnSpawnPlayerController = (UFunction*) UObject::GObjObjects()->Data[ 83897 ];
 
 	ACTF_GameInfo_execSpawnPlayerController_Parms SpawnPlayerController_Parms;
 	memcpy ( &SpawnPlayerController_Parms.SpawnLocation, &SpawnLocation, 0xC );
@@ -3663,7 +3662,7 @@ class ADunDefEnemy* ACTD_GameInfo::WaveSpawnerCreateEnemy ( class UDunDef_SeqAct
 	static UFunction* pFnWaveSpawnerCreateEnemy = NULL;
 
 	if ( ! pFnWaveSpawnerCreateEnemy )
-		pFnWaveSpawnerCreateEnemy = (UFunction*) UObject::GObjObjects()->Data[ 89571 ];
+		pFnWaveSpawnerCreateEnemy = (UFunction*) UObject::GObjObjects()->Data[ 83953 ];
 
 	ACTD_GameInfo_execWaveSpawnerCreateEnemy_Parms WaveSpawnerCreateEnemy_Parms;
 	WaveSpawnerCreateEnemy_Parms.aSpawner = aSpawner;
@@ -3689,7 +3688,7 @@ float ACTD_GameInfo::RatePlayerStart ( class APlayerStart* P, unsigned char Team
 	static UFunction* pFnRatePlayerStart = NULL;
 
 	if ( ! pFnRatePlayerStart )
-		pFnRatePlayerStart = (UFunction*) UObject::GObjObjects()->Data[ 89564 ];
+		pFnRatePlayerStart = (UFunction*) UObject::GObjObjects()->Data[ 83946 ];
 
 	ACTD_GameInfo_execRatePlayerStart_Parms RatePlayerStart_Parms;
 	RatePlayerStart_Parms.P = P;
@@ -3701,25 +3700,6 @@ float ACTD_GameInfo::RatePlayerStart ( class APlayerStart* P, unsigned char Team
 	return RatePlayerStart_Parms.ReturnValue;
 };
 
-// Function DunDefSpecial.CTD_GameInfo.CalculatedNetSpeed
-// [0x00020002] 
-// Parameters infos:
-// int                            ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-int ACTD_GameInfo::CalculatedNetSpeed ( )
-{
-	static UFunction* pFnCalculatedNetSpeed = NULL;
-
-	if ( ! pFnCalculatedNetSpeed )
-		pFnCalculatedNetSpeed = (UFunction*) UObject::GObjObjects()->Data[ 89562 ];
-
-	ACTD_GameInfo_execCalculatedNetSpeed_Parms CalculatedNetSpeed_Parms;
-
-	this->ProcessEvent ( pFnCalculatedNetSpeed, &CalculatedNetSpeed_Parms, NULL );
-
-	return CalculatedNetSpeed_Parms.ReturnValue;
-};
-
 // Function DunDefSpecial.CTD_GameInfo.PostBeginPlay
 // [0x00020902] ( FUNC_Event )
 // Parameters infos:
@@ -3729,7 +3709,7 @@ void ACTD_GameInfo::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 89561 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 83945 ];
 
 	ACTD_GameInfo_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -3750,7 +3730,7 @@ bool ACTF_FlagBase::PreventTowerAtPoint ( class ADunDefPlayerController* PC, cla
 	static UFunction* pFnPreventTowerAtPoint = NULL;
 
 	if ( ! pFnPreventTowerAtPoint )
-		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 89845 ];
+		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 84227 ];
 
 	ACTF_FlagBase_execPreventTowerAtPoint_Parms PreventTowerAtPoint_Parms;
 	PreventTowerAtPoint_Parms.PC = PC;
@@ -3776,7 +3756,7 @@ bool ACTF_FlagBase::AllowTowerAtPoint ( class ADunDefPlayerController* PC, class
 	static UFunction* pFnAllowTowerAtPoint = NULL;
 
 	if ( ! pFnAllowTowerAtPoint )
-		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 89840 ];
+		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 84222 ];
 
 	ACTF_FlagBase_execAllowTowerAtPoint_Parms AllowTowerAtPoint_Parms;
 	AllowTowerAtPoint_Parms.PC = PC;
@@ -3798,7 +3778,7 @@ bool ACTF_FlagBase::CheckAllowance ( )
 	static UFunction* pFnCheckAllowance = NULL;
 
 	if ( ! pFnCheckAllowance )
-		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 89838 ];
+		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 84220 ];
 
 	ACTF_FlagBase_execCheckAllowance_Parms CheckAllowance_Parms;
 
@@ -3818,7 +3798,7 @@ void ACTF_FlagBase::DrawMiniMapIcon ( class UCanvas* Canvas, class ADunDefMiniMa
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 89832 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 84214 ];
 
 	ACTF_FlagBase_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -3836,7 +3816,7 @@ void ACTF_FlagBase::SpawnFlag ( )
 	static UFunction* pFnSpawnFlag = NULL;
 
 	if ( ! pFnSpawnFlag )
-		pFnSpawnFlag = (UFunction*) UObject::GObjObjects()->Data[ 89831 ];
+		pFnSpawnFlag = (UFunction*) UObject::GObjObjects()->Data[ 84213 ];
 
 	ACTF_FlagBase_execSpawnFlag_Parms SpawnFlag_Parms;
 
@@ -3852,7 +3832,7 @@ void ACTF_FlagBase::FlagTaken ( )
 	static UFunction* pFnFlagTaken = NULL;
 
 	if ( ! pFnFlagTaken )
-		pFnFlagTaken = (UFunction*) UObject::GObjObjects()->Data[ 89830 ];
+		pFnFlagTaken = (UFunction*) UObject::GObjObjects()->Data[ 84212 ];
 
 	ACTF_FlagBase_execFlagTaken_Parms FlagTaken_Parms;
 
@@ -3868,7 +3848,7 @@ void ACTF_FlagBase::FlagReturned ( )
 	static UFunction* pFnFlagReturned = NULL;
 
 	if ( ! pFnFlagReturned )
-		pFnFlagReturned = (UFunction*) UObject::GObjObjects()->Data[ 89829 ];
+		pFnFlagReturned = (UFunction*) UObject::GObjObjects()->Data[ 84211 ];
 
 	ACTF_FlagBase_execFlagReturned_Parms FlagReturned_Parms;
 
@@ -3884,7 +3864,7 @@ void ACTF_FlagBase::DoCaptureEffects ( )
 	static UFunction* pFnDoCaptureEffects = NULL;
 
 	if ( ! pFnDoCaptureEffects )
-		pFnDoCaptureEffects = (UFunction*) UObject::GObjObjects()->Data[ 89828 ];
+		pFnDoCaptureEffects = (UFunction*) UObject::GObjObjects()->Data[ 84210 ];
 
 	ACTF_FlagBase_execDoCaptureEffects_Parms DoCaptureEffects_Parms;
 
@@ -3901,7 +3881,7 @@ void ACTF_FlagBase::ScoreFlag ( class ACTF_Flag* scoredFlag )
 	static UFunction* pFnScoreFlag = NULL;
 
 	if ( ! pFnScoreFlag )
-		pFnScoreFlag = (UFunction*) UObject::GObjObjects()->Data[ 89826 ];
+		pFnScoreFlag = (UFunction*) UObject::GObjObjects()->Data[ 84208 ];
 
 	ACTF_FlagBase_execScoreFlag_Parms ScoreFlag_Parms;
 	ScoreFlag_Parms.scoredFlag = scoredFlag;
@@ -3922,7 +3902,7 @@ void ACTF_FlagBase::eventTouch ( class AActor* Other, class UPrimitiveComponent*
 	static UFunction* pFnTouch = NULL;
 
 	if ( ! pFnTouch )
-		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 89819 ];
+		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 84201 ];
 
 	ACTF_FlagBase_eventTouch_Parms Touch_Parms;
 	Touch_Parms.Other = Other;
@@ -3942,7 +3922,7 @@ void ACTF_FlagBase::InitBase ( )
 	static UFunction* pFnInitBase = NULL;
 
 	if ( ! pFnInitBase )
-		pFnInitBase = (UFunction*) UObject::GObjObjects()->Data[ 89813 ];
+		pFnInitBase = (UFunction*) UObject::GObjObjects()->Data[ 84195 ];
 
 	ACTF_FlagBase_execInitBase_Parms InitBase_Parms;
 
@@ -3959,7 +3939,7 @@ void ACTF_FlagBase::SetTeamIndex ( int NewTeam )
 	static UFunction* pFnSetTeamIndex = NULL;
 
 	if ( ! pFnSetTeamIndex )
-		pFnSetTeamIndex = (UFunction*) UObject::GObjObjects()->Data[ 89811 ];
+		pFnSetTeamIndex = (UFunction*) UObject::GObjObjects()->Data[ 84193 ];
 
 	ACTF_FlagBase_execSetTeamIndex_Parms SetTeamIndex_Parms;
 	SetTeamIndex_Parms.NewTeam = NewTeam;
@@ -3976,7 +3956,7 @@ void ACTF_FlagBase::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 89810 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84192 ];
 
 	ACTF_FlagBase_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -4008,7 +3988,7 @@ void ACTF_FlagBase::ExecReplicatedFunction ( struct FName FunctionName, struct F
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 89793 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 84175 ];
 
 	ACTF_FlagBase_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -4041,7 +4021,7 @@ void ACTF_FlagBase::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 89791 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 84173 ];
 
 	ACTF_FlagBase_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -4062,7 +4042,7 @@ float ACTF_MultiFlag_GameInfo::RatePlayerStart ( class APlayerStart* P, unsigned
 	static UFunction* pFnRatePlayerStart = NULL;
 
 	if ( ! pFnRatePlayerStart )
-		pFnRatePlayerStart = (UFunction*) UObject::GObjObjects()->Data[ 89861 ];
+		pFnRatePlayerStart = (UFunction*) UObject::GObjObjects()->Data[ 84243 ];
 
 	ACTF_MultiFlag_GameInfo_execRatePlayerStart_Parms RatePlayerStart_Parms;
 	RatePlayerStart_Parms.P = P;
@@ -4083,7 +4063,7 @@ void ACTF_MultiFlag_GameInfo::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 89855 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84237 ];
 
 	ACTF_MultiFlag_GameInfo_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -4100,7 +4080,7 @@ void ADunDefTeamTowerVolume::SetMyTeam ( int NewTeam )
 	static UFunction* pFnSetMyTeam = NULL;
 
 	if ( ! pFnSetMyTeam )
-		pFnSetMyTeam = (UFunction*) UObject::GObjObjects()->Data[ 94007 ];
+		pFnSetMyTeam = (UFunction*) UObject::GObjObjects()->Data[ 88371 ];
 
 	ADunDefTeamTowerVolume_execSetMyTeam_Parms SetMyTeam_Parms;
 	SetMyTeam_Parms.NewTeam = NewTeam;
@@ -4117,7 +4097,7 @@ void ADunDefTeamTowerVolume::Destroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 94006 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 88370 ];
 
 	ADunDefTeamTowerVolume_execDestroyed_Parms Destroyed_Parms;
 
@@ -4133,7 +4113,7 @@ void ADunDefTeamTowerVolume::PostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 94005 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 88369 ];
 
 	ADunDefTeamTowerVolume_execPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -4153,7 +4133,7 @@ bool ADunDefTeamTowerVolume::AllowTowerAtPoint ( class ADunDefPlayerController* 
 	static UFunction* pFnAllowTowerAtPoint = NULL;
 
 	if ( ! pFnAllowTowerAtPoint )
-		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 94000 ];
+		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 88364 ];
 
 	ADunDefTeamTowerVolume_execAllowTowerAtPoint_Parms AllowTowerAtPoint_Parms;
 	AllowTowerAtPoint_Parms.PC = PC;
@@ -4179,7 +4159,7 @@ bool ADunDefTeamTowerVolume::PreventTowerAtPoint ( class ADunDefPlayerController
 	static UFunction* pFnPreventTowerAtPoint = NULL;
 
 	if ( ! pFnPreventTowerAtPoint )
-		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 93994 ];
+		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 88358 ];
 
 	ADunDefTeamTowerVolume_execPreventTowerAtPoint_Parms PreventTowerAtPoint_Parms;
 	PreventTowerAtPoint_Parms.PC = PC;
@@ -4202,7 +4182,7 @@ bool ADunDefTeamTowerVolume::CheckAllowance ( )
 	static UFunction* pFnCheckAllowance = NULL;
 
 	if ( ! pFnCheckAllowance )
-		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 93992 ];
+		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 88356 ];
 
 	ADunDefTeamTowerVolume_execCheckAllowance_Parms CheckAllowance_Parms;
 
@@ -4236,7 +4216,7 @@ void ADunDefTeamTowerVolume::ExecReplicatedFunction ( struct FName FunctionName,
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 93975 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 88339 ];
 
 	ADunDefTeamTowerVolume_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -4272,7 +4252,7 @@ void UCTF_UIGameStats::GetUITeamLists ( int TeamOnlyCheck, struct FString* tList
 	static UFunction* pFnGetUITeamLists = NULL;
 
 	if ( ! pFnGetUITeamLists )
-		pFnGetUITeamLists = (UFunction*) UObject::GObjObjects()->Data[ 89890 ];
+		pFnGetUITeamLists = (UFunction*) UObject::GObjObjects()->Data[ 84272 ];
 
 	UCTF_UIGameStats_execGetUITeamLists_Parms GetUITeamLists_Parms;
 	GetUITeamLists_Parms.TeamOnlyCheck = TeamOnlyCheck;
@@ -4300,7 +4280,7 @@ struct FString UCTF_UIGameStats::GetColorString ( struct FColor aColor )
 	static UFunction* pFnGetColorString = NULL;
 
 	if ( ! pFnGetColorString )
-		pFnGetColorString = (UFunction*) UObject::GObjObjects()->Data[ 89887 ];
+		pFnGetColorString = (UFunction*) UObject::GObjObjects()->Data[ 84269 ];
 
 	UCTF_UIGameStats_execGetColorString_Parms GetColorString_Parms;
 	memcpy ( &GetColorString_Parms.aColor, &aColor, 0x4 );
@@ -4319,7 +4299,7 @@ void UCTF_UIGameStats::UpdateTeamPanels ( )
 	static UFunction* pFnUpdateTeamPanels = NULL;
 
 	if ( ! pFnUpdateTeamPanels )
-		pFnUpdateTeamPanels = (UFunction*) UObject::GObjObjects()->Data[ 89882 ];
+		pFnUpdateTeamPanels = (UFunction*) UObject::GObjObjects()->Data[ 84264 ];
 
 	UCTF_UIGameStats_execUpdateTeamPanels_Parms UpdateTeamPanels_Parms;
 
@@ -4336,7 +4316,7 @@ void UCTF_UIGameStats::CustomInit ( int CustomInitIndex )
 	static UFunction* pFnCustomInit = NULL;
 
 	if ( ! pFnCustomInit )
-		pFnCustomInit = (UFunction*) UObject::GObjObjects()->Data[ 89880 ];
+		pFnCustomInit = (UFunction*) UObject::GObjObjects()->Data[ 84262 ];
 
 	UCTF_UIGameStats_execCustomInit_Parms CustomInit_Parms;
 	CustomInit_Parms.CustomInitIndex = CustomInitIndex;
@@ -4353,7 +4333,7 @@ void UDunDef_SeqAct_AddPlatformToVerticalTowerMover::eventActivated ( )
 	static UFunction* pFnActivated = NULL;
 
 	if ( ! pFnActivated )
-		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 89911 ];
+		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 84293 ];
 
 	UDunDef_SeqAct_AddPlatformToVerticalTowerMover_eventActivated_Parms Activated_Parms;
 
@@ -4370,7 +4350,7 @@ void ADunDef_VerticalTowerMover::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 89994 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 84376 ];
 
 	ADunDef_VerticalTowerMover_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -4388,7 +4368,7 @@ void ADunDef_VerticalTowerMover::MoveTowers ( struct FPlatformInfo Info )
 	static UFunction* pFnMoveTowers = NULL;
 
 	if ( ! pFnMoveTowers )
-		pFnMoveTowers = (UFunction*) UObject::GObjObjects()->Data[ 89979 ];
+		pFnMoveTowers = (UFunction*) UObject::GObjObjects()->Data[ 84361 ];
 
 	ADunDef_VerticalTowerMover_execMoveTowers_Parms MoveTowers_Parms;
 	memcpy ( &MoveTowers_Parms.Info, &Info, 0x14 );
@@ -4407,7 +4387,7 @@ TArray< struct FTowerInfo > ADunDef_VerticalTowerMover::RebuildTowerCache ( stru
 	static UFunction* pFnRebuildTowerCache = NULL;
 
 	if ( ! pFnRebuildTowerCache )
-		pFnRebuildTowerCache = (UFunction*) UObject::GObjObjects()->Data[ 89969 ];
+		pFnRebuildTowerCache = (UFunction*) UObject::GObjObjects()->Data[ 84351 ];
 
 	ADunDef_VerticalTowerMover_execRebuildTowerCache_Parms RebuildTowerCache_Parms;
 	memcpy ( &RebuildTowerCache_Parms.thePlatformInfo, &thePlatformInfo, 0x14 );
@@ -4427,7 +4407,7 @@ void ADunDef_VerticalTowerMover::AddInterpActor ( class AInterpActor* TheActor )
 	static UFunction* pFnAddInterpActor = NULL;
 
 	if ( ! pFnAddInterpActor )
-		pFnAddInterpActor = (UFunction*) UObject::GObjObjects()->Data[ 89966 ];
+		pFnAddInterpActor = (UFunction*) UObject::GObjObjects()->Data[ 84348 ];
 
 	ADunDef_VerticalTowerMover_execAddInterpActor_Parms AddInterpActor_Parms;
 	AddInterpActor_Parms.TheActor = TheActor;
@@ -4444,7 +4424,7 @@ void UDunDef_SeqAct_CheckToUnlockAchievements::eventActivated ( )
 	static UFunction* pFnActivated = NULL;
 
 	if ( ! pFnActivated )
-		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 89918 ];
+		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 84300 ];
 
 	UDunDef_SeqAct_CheckToUnlockAchievements_eventActivated_Parms Activated_Parms;
 
@@ -4460,7 +4440,7 @@ void UDunDef_SeqAct_CTDWinGameForTeam::eventActivated ( )
 	static UFunction* pFnActivated = NULL;
 
 	if ( ! pFnActivated )
-		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 89922 ];
+		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 84304 ];
 
 	UDunDef_SeqAct_CTDWinGameForTeam_eventActivated_Parms Activated_Parms;
 
@@ -4476,7 +4456,7 @@ void UDunDef_SeqAct_GetMVP::eventActivated ( )
 	static UFunction* pFnActivated = NULL;
 
 	if ( ! pFnActivated )
-		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 89925 ];
+		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 84307 ];
 
 	UDunDef_SeqAct_GetMVP_eventActivated_Parms Activated_Parms;
 
@@ -4492,7 +4472,7 @@ void UDunDef_SeqAct_HideGlobalUIScene::eventActivated ( )
 	static UFunction* pFnActivated = NULL;
 
 	if ( ! pFnActivated )
-		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 89934 ];
+		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 84316 ];
 
 	UDunDef_SeqAct_HideGlobalUIScene_eventActivated_Parms Activated_Parms;
 
@@ -4508,7 +4488,7 @@ void ADunDef_TimedEffect_Harbinger_v2::EndEffects ( )
 	static UFunction* pFnEndEffects = NULL;
 
 	if ( ! pFnEndEffects )
-		pFnEndEffects = (UFunction*) UObject::GObjObjects()->Data[ 89950 ];
+		pFnEndEffects = (UFunction*) UObject::GObjObjects()->Data[ 84332 ];
 
 	ADunDef_TimedEffect_Harbinger_v2_execEndEffects_Parms EndEffects_Parms;
 
@@ -4524,7 +4504,7 @@ void ADunDef_TimedEffect_Harbinger_v2::TimedEffect ( )
 	static UFunction* pFnTimedEffect = NULL;
 
 	if ( ! pFnTimedEffect )
-		pFnTimedEffect = (UFunction*) UObject::GObjObjects()->Data[ 89949 ];
+		pFnTimedEffect = (UFunction*) UObject::GObjObjects()->Data[ 84331 ];
 
 	ADunDef_TimedEffect_Harbinger_v2_execTimedEffect_Parms TimedEffect_Parms;
 
@@ -4541,7 +4521,7 @@ void ADunDef_TimedEffect_Harbinger_v2::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 89947 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 84329 ];
 
 	ADunDef_TimedEffect_Harbinger_v2_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -4559,7 +4539,7 @@ void ADunDef_TimedEffect_Harbinger_v2::Initialize ( class UDunDefTimedEffectInte
 	static UFunction* pFnInitialize = NULL;
 
 	if ( ! pFnInitialize )
-		pFnInitialize = (UFunction*) UObject::GObjObjects()->Data[ 89944 ];
+		pFnInitialize = (UFunction*) UObject::GObjObjects()->Data[ 84326 ];
 
 	ADunDef_TimedEffect_Harbinger_v2_execInitialize_Parms Initialize_Parms;
 	Initialize_Parms.Target = Target;
@@ -4576,7 +4556,7 @@ void ADunDefHarbinger_v2::eventFireAttackShootRight ( )
 	static UFunction* pFnFireAttackShootRight = NULL;
 
 	if ( ! pFnFireAttackShootRight )
-		pFnFireAttackShootRight = (UFunction*) UObject::GObjObjects()->Data[ 90942 ];
+		pFnFireAttackShootRight = (UFunction*) UObject::GObjObjects()->Data[ 85334 ];
 
 	ADunDefHarbinger_v2_eventFireAttackShootRight_Parms FireAttackShootRight_Parms;
 
@@ -4592,7 +4572,7 @@ void ADunDefHarbinger_v2::eventFireAttackShootLeft ( )
 	static UFunction* pFnFireAttackShootLeft = NULL;
 
 	if ( ! pFnFireAttackShootLeft )
-		pFnFireAttackShootLeft = (UFunction*) UObject::GObjObjects()->Data[ 90940 ];
+		pFnFireAttackShootLeft = (UFunction*) UObject::GObjObjects()->Data[ 85332 ];
 
 	ADunDefHarbinger_v2_eventFireAttackShootLeft_Parms FireAttackShootLeft_Parms;
 
@@ -4608,7 +4588,7 @@ void ADunDefHarbinger_v2::eventFireAttackBegin ( )
 	static UFunction* pFnFireAttackBegin = NULL;
 
 	if ( ! pFnFireAttackBegin )
-		pFnFireAttackBegin = (UFunction*) UObject::GObjObjects()->Data[ 90939 ];
+		pFnFireAttackBegin = (UFunction*) UObject::GObjObjects()->Data[ 85331 ];
 
 	ADunDefHarbinger_v2_eventFireAttackBegin_Parms FireAttackBegin_Parms;
 
@@ -4624,7 +4604,7 @@ void ADunDefHarbinger_v2::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90938 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 85330 ];
 
 	ADunDefHarbinger_v2_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -4643,7 +4623,7 @@ void ADunDefHarbinger_v2::GetProjectileSpawnTransformation ( struct FName socket
 	static UFunction* pFnGetProjectileSpawnTransformation = NULL;
 
 	if ( ! pFnGetProjectileSpawnTransformation )
-		pFnGetProjectileSpawnTransformation = (UFunction*) UObject::GObjObjects()->Data[ 90934 ];
+		pFnGetProjectileSpawnTransformation = (UFunction*) UObject::GObjObjects()->Data[ 85326 ];
 
 	ADunDefHarbinger_v2_execGetProjectileSpawnTransformation_Parms GetProjectileSpawnTransformation_Parms;
 	memcpy ( &GetProjectileSpawnTransformation_Parms.socketToUse, &socketToUse, 0x8 );
@@ -4667,7 +4647,7 @@ bool ADunDefHarbinger_v2::IsCurrentlyPlayingAttackAnimation ( )
 	static UFunction* pFnIsCurrentlyPlayingAttackAnimation = NULL;
 
 	if ( ! pFnIsCurrentlyPlayingAttackAnimation )
-		pFnIsCurrentlyPlayingAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 90932 ];
+		pFnIsCurrentlyPlayingAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 85324 ];
 
 	ADunDefHarbinger_v2_execIsCurrentlyPlayingAttackAnimation_Parms IsCurrentlyPlayingAttackAnimation_Parms;
 
@@ -4686,7 +4666,7 @@ float ADunDefHarbinger_v2::PlayShootFireAnimation ( )
 	static UFunction* pFnPlayShootFireAnimation = NULL;
 
 	if ( ! pFnPlayShootFireAnimation )
-		pFnPlayShootFireAnimation = (UFunction*) UObject::GObjObjects()->Data[ 90930 ];
+		pFnPlayShootFireAnimation = (UFunction*) UObject::GObjObjects()->Data[ 85322 ];
 
 	ADunDefHarbinger_v2_execPlayShootFireAnimation_Parms PlayShootFireAnimation_Parms;
 
@@ -4705,7 +4685,7 @@ bool ADunDefHarbinger_v2::IsCurrentlyPlayingChargeAnimation ( )
 	static UFunction* pFnIsCurrentlyPlayingChargeAnimation = NULL;
 
 	if ( ! pFnIsCurrentlyPlayingChargeAnimation )
-		pFnIsCurrentlyPlayingChargeAnimation = (UFunction*) UObject::GObjObjects()->Data[ 90928 ];
+		pFnIsCurrentlyPlayingChargeAnimation = (UFunction*) UObject::GObjObjects()->Data[ 85320 ];
 
 	ADunDefHarbinger_v2_execIsCurrentlyPlayingChargeAnimation_Parms IsCurrentlyPlayingChargeAnimation_Parms;
 
@@ -4724,7 +4704,7 @@ float ADunDefHarbinger_v2::PlayChargeFireAnimation ( )
 	static UFunction* pFnPlayChargeFireAnimation = NULL;
 
 	if ( ! pFnPlayChargeFireAnimation )
-		pFnPlayChargeFireAnimation = (UFunction*) UObject::GObjObjects()->Data[ 90926 ];
+		pFnPlayChargeFireAnimation = (UFunction*) UObject::GObjObjects()->Data[ 85318 ];
 
 	ADunDefHarbinger_v2_execPlayChargeFireAnimation_Parms PlayChargeFireAnimation_Parms;
 
@@ -4744,7 +4724,7 @@ void ADunDefHarbinger_v2::PlayHurtAnimation ( class UClass* DamageType, struct F
 	static UFunction* pFnPlayHurtAnimation = NULL;
 
 	if ( ! pFnPlayHurtAnimation )
-		pFnPlayHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 90923 ];
+		pFnPlayHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 85315 ];
 
 	ADunDefHarbinger_v2_execPlayHurtAnimation_Parms PlayHurtAnimation_Parms;
 	PlayHurtAnimation_Parms.DamageType = DamageType;
@@ -4762,7 +4742,7 @@ void ADunDefHarbinger_v2::PlayJumpAnimation ( )
 	static UFunction* pFnPlayJumpAnimation = NULL;
 
 	if ( ! pFnPlayJumpAnimation )
-		pFnPlayJumpAnimation = (UFunction*) UObject::GObjObjects()->Data[ 90922 ];
+		pFnPlayJumpAnimation = (UFunction*) UObject::GObjObjects()->Data[ 85314 ];
 
 	ADunDefHarbinger_v2_execPlayJumpAnimation_Parms PlayJumpAnimation_Parms;
 
@@ -4794,7 +4774,7 @@ void ADunDefHarbinger_v2::ExecReplicatedFunction ( struct FName FunctionName, st
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 90905 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 85297 ];
 
 	ADunDefHarbinger_v2_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -4827,7 +4807,7 @@ void ADunDefTower_SummonEnemy::ClientDisableMovementReplication ( struct FVector
 	static UFunction* pFnClientDisableMovementReplication = NULL;
 
 	if ( ! pFnClientDisableMovementReplication )
-		pFnClientDisableMovementReplication = (UFunction*) UObject::GObjObjects()->Data[ 95086 ];
+		pFnClientDisableMovementReplication = (UFunction*) UObject::GObjObjects()->Data[ 89419 ];
 
 	ADunDefTower_SummonEnemy_execClientDisableMovementReplication_Parms ClientDisableMovementReplication_Parms;
 	memcpy ( &ClientDisableMovementReplication_Parms.endedLoc, &endedLoc, 0xC );
@@ -4845,7 +4825,7 @@ bool ADunDefTower_SummonEnemy::AllowAbilityMove ( )
 	static UFunction* pFnAllowAbilityMove = NULL;
 
 	if ( ! pFnAllowAbilityMove )
-		pFnAllowAbilityMove = (UFunction*) UObject::GObjObjects()->Data[ 95084 ];
+		pFnAllowAbilityMove = (UFunction*) UObject::GObjObjects()->Data[ 89417 ];
 
 	ADunDefTower_SummonEnemy_execAllowAbilityMove_Parms AllowAbilityMove_Parms;
 
@@ -4864,7 +4844,7 @@ void ADunDefTower_SummonEnemy::TransferTowerOwnership ( class APawn* toPawn )
 	static UFunction* pFnTransferTowerOwnership = NULL;
 
 	if ( ! pFnTransferTowerOwnership )
-		pFnTransferTowerOwnership = (UFunction*) UObject::GObjObjects()->Data[ 95082 ];
+		pFnTransferTowerOwnership = (UFunction*) UObject::GObjObjects()->Data[ 89415 ];
 
 	ADunDefTower_SummonEnemy_execTransferTowerOwnership_Parms TransferTowerOwnership_Parms;
 	TransferTowerOwnership_Parms.toPawn = toPawn;
@@ -4884,7 +4864,7 @@ bool ADunDefTower_SummonEnemy::ForceMoveActor ( class AActor* Mover, struct FVec
 	static UFunction* pFnForceMoveActor = NULL;
 
 	if ( ! pFnForceMoveActor )
-		pFnForceMoveActor = (UFunction*) UObject::GObjObjects()->Data[ 95078 ];
+		pFnForceMoveActor = (UFunction*) UObject::GObjObjects()->Data[ 89411 ];
 
 	ADunDefTower_SummonEnemy_execForceMoveActor_Parms ForceMoveActor_Parms;
 	ForceMoveActor_Parms.Mover = Mover;
@@ -4905,7 +4885,7 @@ void ADunDefTower_SummonEnemy::GetAlternateAggroActor ( class UDunDefTargetableI
 	static UFunction* pFnGetAlternateAggroActor = NULL;
 
 	if ( ! pFnGetAlternateAggroActor )
-		pFnGetAlternateAggroActor = (UFunction*) UObject::GObjObjects()->Data[ 95076 ];
+		pFnGetAlternateAggroActor = (UFunction*) UObject::GObjObjects()->Data[ 89409 ];
 
 	ADunDefTower_SummonEnemy_execGetAlternateAggroActor_Parms GetAlternateAggroActor_Parms;
 
@@ -4927,7 +4907,7 @@ float ADunDefTower_SummonEnemy::GetPlayerTargetingDesirability ( class ADunDefPl
 	static UFunction* pFnGetPlayerTargetingDesirability = NULL;
 
 	if ( ! pFnGetPlayerTargetingDesirability )
-		pFnGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 95072 ];
+		pFnGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 89405 ];
 
 	ADunDefTower_SummonEnemy_execGetPlayerTargetingDesirability_Parms GetPlayerTargetingDesirability_Parms;
 	GetPlayerTargetingDesirability_Parms.forController = forController;
@@ -4949,7 +4929,7 @@ float ADunDefTower_SummonEnemy::GetTowerTargetingDesirability ( class ADunDefTow
 	static UFunction* pFnGetTowerTargetingDesirability = NULL;
 
 	if ( ! pFnGetTowerTargetingDesirability )
-		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 95069 ];
+		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 89402 ];
 
 	ADunDefTower_SummonEnemy_execGetTowerTargetingDesirability_Parms GetTowerTargetingDesirability_Parms;
 	GetTowerTargetingDesirability_Parms.forTower = forTower;
@@ -4970,7 +4950,7 @@ float ADunDefTower_SummonEnemy::eventGetEnemyTargetingDesirability ( class AEngi
 	static UFunction* pFnGetEnemyTargetingDesirability = NULL;
 
 	if ( ! pFnGetEnemyTargetingDesirability )
-		pFnGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 95066 ];
+		pFnGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 89399 ];
 
 	ADunDefTower_SummonEnemy_eventGetEnemyTargetingDesirability_Parms GetEnemyTargetingDesirability_Parms;
 	GetEnemyTargetingDesirability_Parms.forController = forController;
@@ -4993,7 +4973,7 @@ void ADunDefTower_SummonEnemy::DrawToolTip ( class UCanvas* C, int PosX, int Pos
 	static UFunction* pFnDrawToolTip = NULL;
 
 	if ( ! pFnDrawToolTip )
-		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 95061 ];
+		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 89394 ];
 
 	ADunDefTower_SummonEnemy_execDrawToolTip_Parms DrawToolTip_Parms;
 	DrawToolTip_Parms.C = C;
@@ -5019,7 +4999,7 @@ void ADunDefTower_SummonEnemy::DrawTowerToolTipStats ( class UCanvas* C, float O
 	static UFunction* pFnDrawTowerToolTipStats = NULL;
 
 	if ( ! pFnDrawTowerToolTipStats )
-		pFnDrawTowerToolTipStats = (UFunction*) UObject::GObjObjects()->Data[ 95053 ];
+		pFnDrawTowerToolTipStats = (UFunction*) UObject::GObjObjects()->Data[ 89386 ];
 
 	ADunDefTower_SummonEnemy_execDrawTowerToolTipStats_Parms DrawTowerToolTipStats_Parms;
 	DrawTowerToolTipStats_Parms.C = C;
@@ -5047,7 +5027,7 @@ struct FString ADunDefTower_SummonEnemy::GetBoostString ( unsigned char boostTyp
 	static UFunction* pFnGetBoostString = NULL;
 
 	if ( ! pFnGetBoostString )
-		pFnGetBoostString = (UFunction*) UObject::GObjObjects()->Data[ 95050 ];
+		pFnGetBoostString = (UFunction*) UObject::GObjObjects()->Data[ 89383 ];
 
 	ADunDefTower_SummonEnemy_execGetBoostString_Parms GetBoostString_Parms;
 	GetBoostString_Parms.boostType = boostType;
@@ -5067,7 +5047,7 @@ void ADunDefTower_SummonEnemy::GetBoostedTargets ( TArray< class APawn* >* boost
 	static UFunction* pFnGetBoostedTargets = NULL;
 
 	if ( ! pFnGetBoostedTargets )
-		pFnGetBoostedTargets = (UFunction*) UObject::GObjObjects()->Data[ 95047 ];
+		pFnGetBoostedTargets = (UFunction*) UObject::GObjObjects()->Data[ 89380 ];
 
 	ADunDefTower_SummonEnemy_execGetBoostedTargets_Parms GetBoostedTargets_Parms;
 
@@ -5087,7 +5067,7 @@ void ADunDefTower_SummonEnemy::NotifyOfBoostedRemoval ( class APawn* removedBoos
 	static UFunction* pFnNotifyOfBoostedRemoval = NULL;
 
 	if ( ! pFnNotifyOfBoostedRemoval )
-		pFnNotifyOfBoostedRemoval = (UFunction*) UObject::GObjObjects()->Data[ 95045 ];
+		pFnNotifyOfBoostedRemoval = (UFunction*) UObject::GObjObjects()->Data[ 89378 ];
 
 	ADunDefTower_SummonEnemy_execNotifyOfBoostedRemoval_Parms NotifyOfBoostedRemoval_Parms;
 	NotifyOfBoostedRemoval_Parms.removedBoostee = removedBoostee;
@@ -5106,7 +5086,7 @@ float ADunDefTower_SummonEnemy::GetToolTipStatValue ( unsigned char boostType )
 	static UFunction* pFnGetToolTipStatValue = NULL;
 
 	if ( ! pFnGetToolTipStatValue )
-		pFnGetToolTipStatValue = (UFunction*) UObject::GObjObjects()->Data[ 95042 ];
+		pFnGetToolTipStatValue = (UFunction*) UObject::GObjObjects()->Data[ 89375 ];
 
 	ADunDefTower_SummonEnemy_execGetToolTipStatValue_Parms GetToolTipStatValue_Parms;
 	GetToolTipStatValue_Parms.boostType = boostType;
@@ -5127,7 +5107,7 @@ float ADunDefTower_SummonEnemy::GetPawnBoostAmount ( unsigned char boostType )
 	static UFunction* pFnGetPawnBoostAmount = NULL;
 
 	if ( ! pFnGetPawnBoostAmount )
-		pFnGetPawnBoostAmount = (UFunction*) UObject::GObjObjects()->Data[ 95039 ];
+		pFnGetPawnBoostAmount = (UFunction*) UObject::GObjObjects()->Data[ 89372 ];
 
 	ADunDefTower_SummonEnemy_execGetPawnBoostAmount_Parms GetPawnBoostAmount_Parms;
 	GetPawnBoostAmount_Parms.boostType = boostType;
@@ -5148,7 +5128,7 @@ bool ADunDefTower_SummonEnemy::HasPawnBoostingType ( unsigned char boostType )
 	static UFunction* pFnHasPawnBoostingType = NULL;
 
 	if ( ! pFnHasPawnBoostingType )
-		pFnHasPawnBoostingType = (UFunction*) UObject::GObjObjects()->Data[ 95036 ];
+		pFnHasPawnBoostingType = (UFunction*) UObject::GObjObjects()->Data[ 89369 ];
 
 	ADunDefTower_SummonEnemy_execHasPawnBoostingType_Parms HasPawnBoostingType_Parms;
 	HasPawnBoostingType_Parms.boostType = boostType;
@@ -5174,7 +5154,7 @@ void ADunDefTower_SummonEnemy::eventTakeDamage ( int DamageAmount, class AContro
 	static UFunction* pFnTakeDamage = NULL;
 
 	if ( ! pFnTakeDamage )
-		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 95028 ];
+		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 89361 ];
 
 	ADunDefTower_SummonEnemy_eventTakeDamage_Parms TakeDamage_Parms;
 	TakeDamage_Parms.DamageAmount = DamageAmount;
@@ -5198,7 +5178,7 @@ class AActor* ADunDefTower_SummonEnemy::GetAlternateActor ( )
 	static UFunction* pFnGetAlternateActor = NULL;
 
 	if ( ! pFnGetAlternateActor )
-		pFnGetAlternateActor = (UFunction*) UObject::GObjObjects()->Data[ 95026 ];
+		pFnGetAlternateActor = (UFunction*) UObject::GObjObjects()->Data[ 89359 ];
 
 	ADunDefTower_SummonEnemy_execGetAlternateActor_Parms GetAlternateActor_Parms;
 
@@ -5218,7 +5198,7 @@ int ADunDefTower_SummonEnemy::GetHealth ( unsigned long bGetMax )
 	static UFunction* pFnGetHealth = NULL;
 
 	if ( ! pFnGetHealth )
-		pFnGetHealth = (UFunction*) UObject::GObjObjects()->Data[ 95023 ];
+		pFnGetHealth = (UFunction*) UObject::GObjObjects()->Data[ 89356 ];
 
 	ADunDefTower_SummonEnemy_execGetHealth_Parms GetHealth_Parms;
 	GetHealth_Parms.bGetMax = bGetMax;
@@ -5241,7 +5221,7 @@ bool ADunDefTower_SummonEnemy::eventHealDamage ( int Amount, class AController* 
 	static UFunction* pFnHealDamage = NULL;
 
 	if ( ! pFnHealDamage )
-		pFnHealDamage = (UFunction*) UObject::GObjObjects()->Data[ 95018 ];
+		pFnHealDamage = (UFunction*) UObject::GObjObjects()->Data[ 89351 ];
 
 	ADunDefTower_SummonEnemy_eventHealDamage_Parms HealDamage_Parms;
 	HealDamage_Parms.Amount = Amount;
@@ -5264,7 +5244,7 @@ void ADunDefTower_SummonEnemy::AddHealth ( int howMuch, unsigned long bDontDispl
 	static UFunction* pFnAddHealth = NULL;
 
 	if ( ! pFnAddHealth )
-		pFnAddHealth = (UFunction*) UObject::GObjObjects()->Data[ 95014 ];
+		pFnAddHealth = (UFunction*) UObject::GObjObjects()->Data[ 89347 ];
 
 	ADunDefTower_SummonEnemy_execAddHealth_Parms AddHealth_Parms;
 	AddHealth_Parms.howMuch = howMuch;
@@ -5283,7 +5263,7 @@ float ADunDefTower_SummonEnemy::GetHealthPercent ( )
 	static UFunction* pFnGetHealthPercent = NULL;
 
 	if ( ! pFnGetHealthPercent )
-		pFnGetHealthPercent = (UFunction*) UObject::GObjObjects()->Data[ 95012 ];
+		pFnGetHealthPercent = (UFunction*) UObject::GObjObjects()->Data[ 89345 ];
 
 	ADunDefTower_SummonEnemy_execGetHealthPercent_Parms GetHealthPercent_Parms;
 
@@ -5301,7 +5281,7 @@ void ADunDefTower_SummonEnemy::StartRepair ( )
 	static UFunction* pFnStartRepair = NULL;
 
 	if ( ! pFnStartRepair )
-		pFnStartRepair = (UFunction*) UObject::GObjObjects()->Data[ 95011 ];
+		pFnStartRepair = (UFunction*) UObject::GObjObjects()->Data[ 89344 ];
 
 	ADunDefTower_SummonEnemy_execStartRepair_Parms StartRepair_Parms;
 
@@ -5318,7 +5298,7 @@ struct FString ADunDefTower_SummonEnemy::GetToolTipText ( )
 	static UFunction* pFnGetToolTipText = NULL;
 
 	if ( ! pFnGetToolTipText )
-		pFnGetToolTipText = (UFunction*) UObject::GObjObjects()->Data[ 95009 ];
+		pFnGetToolTipText = (UFunction*) UObject::GObjObjects()->Data[ 89342 ];
 
 	ADunDefTower_SummonEnemy_execGetToolTipText_Parms GetToolTipText_Parms;
 
@@ -5337,35 +5317,12 @@ void ADunDefTower_SummonEnemy::ScaleForHeroModifiers ( unsigned long IsFirstTime
 	static UFunction* pFnScaleForHeroModifiers = NULL;
 
 	if ( ! pFnScaleForHeroModifiers )
-		pFnScaleForHeroModifiers = (UFunction*) UObject::GObjObjects()->Data[ 95006 ];
+		pFnScaleForHeroModifiers = (UFunction*) UObject::GObjObjects()->Data[ 89339 ];
 
 	ADunDefTower_SummonEnemy_execScaleForHeroModifiers_Parms ScaleForHeroModifiers_Parms;
 	ScaleForHeroModifiers_Parms.IsFirstTime = IsFirstTime;
 
 	this->ProcessEvent ( pFnScaleForHeroModifiers, &ScaleForHeroModifiers_Parms, NULL );
-};
-
-// Function DunDefSpecial.DunDefTower_SummonEnemy.IncrementRepair
-// [0x00020002] 
-// Parameters infos:
-// float                          ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-// float                          CurrentMana                    ( CPF_Parm )
-// float                          DeltaTime                      ( CPF_Parm )
-
-float ADunDefTower_SummonEnemy::IncrementRepair ( float CurrentMana, float DeltaTime )
-{
-	static UFunction* pFnIncrementRepair = NULL;
-
-	if ( ! pFnIncrementRepair )
-		pFnIncrementRepair = (UFunction*) UObject::GObjObjects()->Data[ 94998 ];
-
-	ADunDefTower_SummonEnemy_execIncrementRepair_Parms IncrementRepair_Parms;
-	IncrementRepair_Parms.CurrentMana = CurrentMana;
-	IncrementRepair_Parms.DeltaTime = DeltaTime;
-
-	this->ProcessEvent ( pFnIncrementRepair, &IncrementRepair_Parms, NULL );
-
-	return IncrementRepair_Parms.ReturnValue;
 };
 
 // Function DunDefSpecial.DunDefTower_SummonEnemy.DrawMyHUD
@@ -5379,7 +5336,7 @@ bool ADunDefTower_SummonEnemy::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 94986 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 89327 ];
 
 	ADunDefTower_SummonEnemy_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -5398,7 +5355,7 @@ void ADunDefTower_SummonEnemy::UpdateCommand ( )
 	static UFunction* pFnUpdateCommand = NULL;
 
 	if ( ! pFnUpdateCommand )
-		pFnUpdateCommand = (UFunction*) UObject::GObjObjects()->Data[ 94984 ];
+		pFnUpdateCommand = (UFunction*) UObject::GObjObjects()->Data[ 89325 ];
 
 	ADunDefTower_SummonEnemy_execUpdateCommand_Parms UpdateCommand_Parms;
 
@@ -5418,7 +5375,7 @@ bool ADunDefTower_SummonEnemy::HandleCommand ( class AActor* Target, unsigned ch
 	static UFunction* pFnHandleCommand = NULL;
 
 	if ( ! pFnHandleCommand )
-		pFnHandleCommand = (UFunction*) UObject::GObjObjects()->Data[ 94978 ];
+		pFnHandleCommand = (UFunction*) UObject::GObjObjects()->Data[ 89319 ];
 
 	ADunDefTower_SummonEnemy_execHandleCommand_Parms HandleCommand_Parms;
 	HandleCommand_Parms.Target = Target;
@@ -5444,7 +5401,7 @@ bool ADunDefTower_SummonEnemy::SetCommand ( struct FVector commandPoint, unsigne
 	static UFunction* pFnSetCommand = NULL;
 
 	if ( ! pFnSetCommand )
-		pFnSetCommand = (UFunction*) UObject::GObjObjects()->Data[ 92981 ];
+		pFnSetCommand = (UFunction*) UObject::GObjObjects()->Data[ 87392 ];
 
 	ADunDefTower_SummonEnemy_execSetCommand_Parms SetCommand_Parms;
 	memcpy ( &SetCommand_Parms.commandPoint, &commandPoint, 0xC );
@@ -5468,7 +5425,7 @@ void ADunDefTower_SummonEnemy::SetSelected ( unsigned long bWantsSelected, class
 	static UFunction* pFnSetSelected = NULL;
 
 	if ( ! pFnSetSelected )
-		pFnSetSelected = (UFunction*) UObject::GObjObjects()->Data[ 94969 ];
+		pFnSetSelected = (UFunction*) UObject::GObjObjects()->Data[ 89310 ];
 
 	ADunDefTower_SummonEnemy_execSetSelected_Parms SetSelected_Parms;
 	SetSelected_Parms.bWantsSelected = bWantsSelected;
@@ -5487,7 +5444,7 @@ void ADunDefTower_SummonEnemy::SetPendingSelection ( unsigned long bIsPending )
 	static UFunction* pFnSetPendingSelection = NULL;
 
 	if ( ! pFnSetPendingSelection )
-		pFnSetPendingSelection = (UFunction*) UObject::GObjObjects()->Data[ 94967 ];
+		pFnSetPendingSelection = (UFunction*) UObject::GObjObjects()->Data[ 89308 ];
 
 	ADunDefTower_SummonEnemy_execSetPendingSelection_Parms SetPendingSelection_Parms;
 	SetPendingSelection_Parms.bIsPending = bIsPending;
@@ -5504,7 +5461,7 @@ void ADunDefTower_SummonEnemy::CleanUpSummon ( )
 	static UFunction* pFnCleanUpSummon = NULL;
 
 	if ( ! pFnCleanUpSummon )
-		pFnCleanUpSummon = (UFunction*) UObject::GObjObjects()->Data[ 94964 ];
+		pFnCleanUpSummon = (UFunction*) UObject::GObjObjects()->Data[ 89305 ];
 
 	ADunDefTower_SummonEnemy_execCleanUpSummon_Parms CleanUpSummon_Parms;
 
@@ -5520,7 +5477,7 @@ void ADunDefTower_SummonEnemy::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 94963 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 89304 ];
 
 	ADunDefTower_SummonEnemy_eventDestroyed_Parms Destroyed_Parms;
 
@@ -5536,7 +5493,7 @@ void ADunDefTower_SummonEnemy::eventBaseChange ( )
 	static UFunction* pFnBaseChange = NULL;
 
 	if ( ! pFnBaseChange )
-		pFnBaseChange = (UFunction*) UObject::GObjObjects()->Data[ 94962 ];
+		pFnBaseChange = (UFunction*) UObject::GObjObjects()->Data[ 89303 ];
 
 	ADunDefTower_SummonEnemy_eventBaseChange_Parms BaseChange_Parms;
 
@@ -5553,7 +5510,7 @@ void ADunDefTower_SummonEnemy::SetUpEnemyValues ( unsigned long bInitialSetup )
 	static UFunction* pFnSetUpEnemyValues = NULL;
 
 	if ( ! pFnSetUpEnemyValues )
-		pFnSetUpEnemyValues = (UFunction*) UObject::GObjObjects()->Data[ 94960 ];
+		pFnSetUpEnemyValues = (UFunction*) UObject::GObjObjects()->Data[ 89301 ];
 
 	ADunDefTower_SummonEnemy_execSetUpEnemyValues_Parms SetUpEnemyValues_Parms;
 	SetUpEnemyValues_Parms.bInitialSetup = bInitialSetup;
@@ -5570,7 +5527,7 @@ void ADunDefTower_SummonEnemy::SpawnMyEnemy ( )
 	static UFunction* pFnSpawnMyEnemy = NULL;
 
 	if ( ! pFnSpawnMyEnemy )
-		pFnSpawnMyEnemy = (UFunction*) UObject::GObjObjects()->Data[ 94959 ];
+		pFnSpawnMyEnemy = (UFunction*) UObject::GObjObjects()->Data[ 89300 ];
 
 	ADunDefTower_SummonEnemy_execSpawnMyEnemy_Parms SpawnMyEnemy_Parms;
 
@@ -5587,7 +5544,7 @@ void ADunDefTower_SummonEnemy::InitializeForInstigator ( class APawn* Pawn )
 	static UFunction* pFnInitializeForInstigator = NULL;
 
 	if ( ! pFnInitializeForInstigator )
-		pFnInitializeForInstigator = (UFunction*) UObject::GObjObjects()->Data[ 94957 ];
+		pFnInitializeForInstigator = (UFunction*) UObject::GObjObjects()->Data[ 89298 ];
 
 	ADunDefTower_SummonEnemy_execInitializeForInstigator_Parms InitializeForInstigator_Parms;
 	InitializeForInstigator_Parms.Pawn = Pawn;
@@ -5605,7 +5562,7 @@ float ADunDefTower_SummonEnemy::GetLastDamageTime ( )
 	static UFunction* pFnGetLastDamageTime = NULL;
 
 	if ( ! pFnGetLastDamageTime )
-		pFnGetLastDamageTime = (UFunction*) UObject::GObjObjects()->Data[ 94955 ];
+		pFnGetLastDamageTime = (UFunction*) UObject::GObjObjects()->Data[ 89296 ];
 
 	ADunDefTower_SummonEnemy_execGetLastDamageTime_Parms GetLastDamageTime_Parms;
 
@@ -5624,7 +5581,7 @@ bool ADunDefTower_SummonEnemy::HasBeenRendered ( )
 	static UFunction* pFnHasBeenRendered = NULL;
 
 	if ( ! pFnHasBeenRendered )
-		pFnHasBeenRendered = (UFunction*) UObject::GObjObjects()->Data[ 94953 ];
+		pFnHasBeenRendered = (UFunction*) UObject::GObjObjects()->Data[ 89294 ];
 
 	ADunDefTower_SummonEnemy_execHasBeenRendered_Parms HasBeenRendered_Parms;
 
@@ -5642,7 +5599,7 @@ void ADunDefTower_SummonEnemy::UpdateEnemyCollisionValues ( )
 	static UFunction* pFnUpdateEnemyCollisionValues = NULL;
 
 	if ( ! pFnUpdateEnemyCollisionValues )
-		pFnUpdateEnemyCollisionValues = (UFunction*) UObject::GObjObjects()->Data[ 94952 ];
+		pFnUpdateEnemyCollisionValues = (UFunction*) UObject::GObjObjects()->Data[ 89293 ];
 
 	ADunDefTower_SummonEnemy_execUpdateEnemyCollisionValues_Parms UpdateEnemyCollisionValues_Parms;
 
@@ -5658,7 +5615,7 @@ void ADunDefTower_SummonEnemy::UpdateReplicatedStatValues ( )
 	static UFunction* pFnUpdateReplicatedStatValues = NULL;
 
 	if ( ! pFnUpdateReplicatedStatValues )
-		pFnUpdateReplicatedStatValues = (UFunction*) UObject::GObjObjects()->Data[ 94951 ];
+		pFnUpdateReplicatedStatValues = (UFunction*) UObject::GObjObjects()->Data[ 89292 ];
 
 	ADunDefTower_SummonEnemy_execUpdateReplicatedStatValues_Parms UpdateReplicatedStatValues_Parms;
 
@@ -5690,7 +5647,7 @@ void ADunDefTower_SummonEnemy::ExecReplicatedFunction ( struct FName FunctionNam
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 94927 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 89268 ];
 
 	ADunDefTower_SummonEnemy_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -5723,7 +5680,7 @@ void ADunDefTower_SummonEnemy::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 94925 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 89266 ];
 
 	ADunDefTower_SummonEnemy_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -5735,19 +5692,19 @@ void ADunDefTower_SummonEnemy::eventReplicatedEvent ( struct FName VarName )
 // [0x00022002] 
 // Parameters infos:
 // float                          ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-// class UDunDefHero*             hero                           ( CPF_Parm )
+// class UDunDefHero*             Hero                           ( CPF_Parm )
 // class ADunDefTower*            tower                          ( CPF_Parm )
 // float                          TowerRangeScaler               ( CPF_Parm )
 
-float ADunDefTower_TripWire::StaticGetTowerScale ( class UDunDefHero* hero, class ADunDefTower* tower, float TowerRangeScaler )
+float ADunDefTower_TripWire::StaticGetTowerScale ( class UDunDefHero* Hero, class ADunDefTower* tower, float TowerRangeScaler )
 {
 	static UFunction* pFnStaticGetTowerScale = NULL;
 
 	if ( ! pFnStaticGetTowerScale )
-		pFnStaticGetTowerScale = (UFunction*) UObject::GObjObjects()->Data[ 94548 ];
+		pFnStaticGetTowerScale = (UFunction*) UObject::GObjObjects()->Data[ 88893 ];
 
 	ADunDefTower_TripWire_execStaticGetTowerScale_Parms StaticGetTowerScale_Parms;
-	StaticGetTowerScale_Parms.hero = hero;
+	StaticGetTowerScale_Parms.Hero = Hero;
 	StaticGetTowerScale_Parms.tower = tower;
 	StaticGetTowerScale_Parms.TowerRangeScaler = TowerRangeScaler;
 
@@ -5766,7 +5723,7 @@ bool ADunDefTower_TripWire::AllowAbilityMove ( )
 	static UFunction* pFnAllowAbilityMove = NULL;
 
 	if ( ! pFnAllowAbilityMove )
-		pFnAllowAbilityMove = (UFunction*) UObject::GObjObjects()->Data[ 94546 ];
+		pFnAllowAbilityMove = (UFunction*) UObject::GObjObjects()->Data[ 88891 ];
 
 	ADunDefTower_TripWire_execAllowAbilityMove_Parms AllowAbilityMove_Parms;
 
@@ -5785,7 +5742,7 @@ void ADunDefTower_TripWire::TransferTowerOwnership ( class APawn* toPawn )
 	static UFunction* pFnTransferTowerOwnership = NULL;
 
 	if ( ! pFnTransferTowerOwnership )
-		pFnTransferTowerOwnership = (UFunction*) UObject::GObjObjects()->Data[ 94544 ];
+		pFnTransferTowerOwnership = (UFunction*) UObject::GObjObjects()->Data[ 88889 ];
 
 	ADunDefTower_TripWire_execTransferTowerOwnership_Parms TransferTowerOwnership_Parms;
 	TransferTowerOwnership_Parms.toPawn = toPawn;
@@ -5796,19 +5753,19 @@ void ADunDefTower_TripWire::TransferTowerOwnership ( class APawn* toPawn )
 // Function DunDefSpecial.DunDefTower_TripWire.CheckAssociateWithHero
 // [0x00020002] 
 // Parameters infos:
-// class UDunDefHero*             hero                           ( CPF_Parm )
+// class UDunDefHero*             Hero                           ( CPF_Parm )
 // class ADunDefPawn*             pawnInstigator                 ( CPF_Parm )
 // class ADunDefPlayerController* PC                             ( CPF_Parm )
 
-void ADunDefTower_TripWire::CheckAssociateWithHero ( class UDunDefHero* hero, class ADunDefPawn* pawnInstigator, class ADunDefPlayerController* PC )
+void ADunDefTower_TripWire::CheckAssociateWithHero ( class UDunDefHero* Hero, class ADunDefPawn* pawnInstigator, class ADunDefPlayerController* PC )
 {
 	static UFunction* pFnCheckAssociateWithHero = NULL;
 
 	if ( ! pFnCheckAssociateWithHero )
-		pFnCheckAssociateWithHero = (UFunction*) UObject::GObjObjects()->Data[ 94540 ];
+		pFnCheckAssociateWithHero = (UFunction*) UObject::GObjObjects()->Data[ 88885 ];
 
 	ADunDefTower_TripWire_execCheckAssociateWithHero_Parms CheckAssociateWithHero_Parms;
-	CheckAssociateWithHero_Parms.hero = hero;
+	CheckAssociateWithHero_Parms.Hero = Hero;
 	CheckAssociateWithHero_Parms.pawnInstigator = pawnInstigator;
 	CheckAssociateWithHero_Parms.PC = PC;
 
@@ -5825,7 +5782,7 @@ bool ADunDefTower_TripWire::CanDetonate ( )
 	static UFunction* pFnCanDetonate = NULL;
 
 	if ( ! pFnCanDetonate )
-		pFnCanDetonate = (UFunction*) UObject::GObjObjects()->Data[ 94538 ];
+		pFnCanDetonate = (UFunction*) UObject::GObjObjects()->Data[ 88883 ];
 
 	ADunDefTower_TripWire_execCanDetonate_Parms CanDetonate_Parms;
 
@@ -5844,7 +5801,7 @@ bool ADunDefTower_TripWire::HasCharges ( )
 	static UFunction* pFnHasCharges = NULL;
 
 	if ( ! pFnHasCharges )
-		pFnHasCharges = (UFunction*) UObject::GObjObjects()->Data[ 94536 ];
+		pFnHasCharges = (UFunction*) UObject::GObjObjects()->Data[ 88881 ];
 
 	ADunDefTower_TripWire_execHasCharges_Parms HasCharges_Parms;
 
@@ -5863,7 +5820,7 @@ float ADunDefTower_TripWire::GetSellWorth ( )
 	static UFunction* pFnGetSellWorth = NULL;
 
 	if ( ! pFnGetSellWorth )
-		pFnGetSellWorth = (UFunction*) UObject::GObjObjects()->Data[ 94534 ];
+		pFnGetSellWorth = (UFunction*) UObject::GObjObjects()->Data[ 88879 ];
 
 	ADunDefTower_TripWire_execGetSellWorth_Parms GetSellWorth_Parms;
 
@@ -5883,7 +5840,7 @@ float ADunDefTower_TripWire::eventGetEnemyTargetingDesirability ( class AEngineN
 	static UFunction* pFnGetEnemyTargetingDesirability = NULL;
 
 	if ( ! pFnGetEnemyTargetingDesirability )
-		pFnGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 94531 ];
+		pFnGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 88876 ];
 
 	ADunDefTower_TripWire_eventGetEnemyTargetingDesirability_Parms GetEnemyTargetingDesirability_Parms;
 	GetEnemyTargetingDesirability_Parms.forController = forController;
@@ -5904,7 +5861,7 @@ void ADunDefTower_TripWire::DrawMiniMapIcon ( class UCanvas* Canvas, class ADunD
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 94524 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 88869 ];
 
 	ADunDefTower_TripWire_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -5926,7 +5883,7 @@ void ADunDefTower_TripWire::HealDetonationStyle ( int HealAmt, class AController
 	static UFunction* pFnHealDetonationStyle = NULL;
 
 	if ( ! pFnHealDetonationStyle )
-		pFnHealDetonationStyle = (UFunction*) UObject::GObjObjects()->Data[ 94519 ];
+		pFnHealDetonationStyle = (UFunction*) UObject::GObjObjects()->Data[ 88864 ];
 
 	ADunDefTower_TripWire_execHealDetonationStyle_Parms HealDetonationStyle_Parms;
 	HealDetonationStyle_Parms.HealAmt = HealAmt;
@@ -5947,7 +5904,7 @@ class AActor* ADunDefTower_TripWire::GetAlternateActor ( )
 	static UFunction* pFnGetAlternateActor = NULL;
 
 	if ( ! pFnGetAlternateActor )
-		pFnGetAlternateActor = (UFunction*) UObject::GObjObjects()->Data[ 94517 ];
+		pFnGetAlternateActor = (UFunction*) UObject::GObjObjects()->Data[ 88862 ];
 
 	ADunDefTower_TripWire_execGetAlternateActor_Parms GetAlternateActor_Parms;
 
@@ -5966,7 +5923,7 @@ bool ADunDefTower_TripWire::IsMultiActorTower ( )
 	static UFunction* pFnIsMultiActorTower = NULL;
 
 	if ( ! pFnIsMultiActorTower )
-		pFnIsMultiActorTower = (UFunction*) UObject::GObjObjects()->Data[ 94515 ];
+		pFnIsMultiActorTower = (UFunction*) UObject::GObjObjects()->Data[ 88860 ];
 
 	ADunDefTower_TripWire_execIsMultiActorTower_Parms IsMultiActorTower_Parms;
 
@@ -5987,7 +5944,7 @@ void ADunDefTower_TripWire::DrawUpgradeOverlay ( class ADunDefHUD* H, float Opac
 	static UFunction* pFnDrawUpgradeOverlay = NULL;
 
 	if ( ! pFnDrawUpgradeOverlay )
-		pFnDrawUpgradeOverlay = (UFunction*) UObject::GObjObjects()->Data[ 94511 ];
+		pFnDrawUpgradeOverlay = (UFunction*) UObject::GObjObjects()->Data[ 88856 ];
 
 	ADunDefTower_TripWire_execDrawUpgradeOverlay_Parms DrawUpgradeOverlay_Parms;
 	DrawUpgradeOverlay_Parms.H = H;
@@ -6007,7 +5964,7 @@ float ADunDefTower_TripWire::GetGlobalTowerHealthMultiplier ( )
 	static UFunction* pFnGetGlobalTowerHealthMultiplier = NULL;
 
 	if ( ! pFnGetGlobalTowerHealthMultiplier )
-		pFnGetGlobalTowerHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 94509 ];
+		pFnGetGlobalTowerHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 88854 ];
 
 	ADunDefTower_TripWire_execGetGlobalTowerHealthMultiplier_Parms GetGlobalTowerHealthMultiplier_Parms;
 
@@ -6025,7 +5982,7 @@ void ADunDefTower_TripWire::PerformFullHeal ( )
 	static UFunction* pFnPerformFullHeal = NULL;
 
 	if ( ! pFnPerformFullHeal )
-		pFnPerformFullHeal = (UFunction*) UObject::GObjObjects()->Data[ 94508 ];
+		pFnPerformFullHeal = (UFunction*) UObject::GObjObjects()->Data[ 88853 ];
 
 	ADunDefTower_TripWire_execPerformFullHeal_Parms PerformFullHeal_Parms;
 
@@ -6042,50 +5999,12 @@ void ADunDefTower_TripWire::SetRadiusScale ( float theRadiusScale )
 	static UFunction* pFnSetRadiusScale = NULL;
 
 	if ( ! pFnSetRadiusScale )
-		pFnSetRadiusScale = (UFunction*) UObject::GObjObjects()->Data[ 94506 ];
+		pFnSetRadiusScale = (UFunction*) UObject::GObjObjects()->Data[ 88851 ];
 
 	ADunDefTower_TripWire_execSetRadiusScale_Parms SetRadiusScale_Parms;
 	SetRadiusScale_Parms.theRadiusScale = theRadiusScale;
 
 	this->ProcessEvent ( pFnSetRadiusScale, &SetRadiusScale_Parms, NULL );
-};
-
-// Function DunDefSpecial.DunDefTower_TripWire.GetSlowTime
-// [0x00020102] 
-// Parameters infos:
-// float                          ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-float ADunDefTower_TripWire::GetSlowTime ( )
-{
-	static UFunction* pFnGetSlowTime = NULL;
-
-	if ( ! pFnGetSlowTime )
-		pFnGetSlowTime = (UFunction*) UObject::GObjObjects()->Data[ 94504 ];
-
-	ADunDefTower_TripWire_execGetSlowTime_Parms GetSlowTime_Parms;
-
-	this->ProcessEvent ( pFnGetSlowTime, &GetSlowTime_Parms, NULL );
-
-	return GetSlowTime_Parms.ReturnValue;
-};
-
-// Function DunDefSpecial.DunDefTower_TripWire.GetBeamSpeedMultiplier
-// [0x00020102] 
-// Parameters infos:
-// float                          ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-float ADunDefTower_TripWire::GetBeamSpeedMultiplier ( )
-{
-	static UFunction* pFnGetBeamSpeedMultiplier = NULL;
-
-	if ( ! pFnGetBeamSpeedMultiplier )
-		pFnGetBeamSpeedMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 94502 ];
-
-	ADunDefTower_TripWire_execGetBeamSpeedMultiplier_Parms GetBeamSpeedMultiplier_Parms;
-
-	this->ProcessEvent ( pFnGetBeamSpeedMultiplier, &GetBeamSpeedMultiplier_Parms, NULL );
-
-	return GetBeamSpeedMultiplier_Parms.ReturnValue;
 };
 
 // Function DunDefSpecial.DunDefTower_TripWire.DrawTowerToolTipStats
@@ -6103,7 +6022,7 @@ void ADunDefTower_TripWire::DrawTowerToolTipStats ( class UCanvas* C, float Opac
 	static UFunction* pFnDrawTowerToolTipStats = NULL;
 
 	if ( ! pFnDrawTowerToolTipStats )
-		pFnDrawTowerToolTipStats = (UFunction*) UObject::GObjObjects()->Data[ 94495 ];
+		pFnDrawTowerToolTipStats = (UFunction*) UObject::GObjObjects()->Data[ 88844 ];
 
 	ADunDefTower_TripWire_execDrawTowerToolTipStats_Parms DrawTowerToolTipStats_Parms;
 	DrawTowerToolTipStats_Parms.C = C;
@@ -6130,7 +6049,7 @@ struct FString ADunDefTower_TripWire::GetToolTipText ( )
 	static UFunction* pFnGetToolTipText = NULL;
 
 	if ( ! pFnGetToolTipText )
-		pFnGetToolTipText = (UFunction*) UObject::GObjObjects()->Data[ 94493 ];
+		pFnGetToolTipText = (UFunction*) UObject::GObjObjects()->Data[ 88842 ];
 
 	ADunDefTower_TripWire_execGetToolTipText_Parms GetToolTipText_Parms;
 
@@ -6149,7 +6068,7 @@ void ADunDefTower_TripWire::ScaleForHeroModifiers ( unsigned long IsFirstTime )
 	static UFunction* pFnScaleForHeroModifiers = NULL;
 
 	if ( ! pFnScaleForHeroModifiers )
-		pFnScaleForHeroModifiers = (UFunction*) UObject::GObjObjects()->Data[ 94489 ];
+		pFnScaleForHeroModifiers = (UFunction*) UObject::GObjObjects()->Data[ 88838 ];
 
 	ADunDefTower_TripWire_execScaleForHeroModifiers_Parms ScaleForHeroModifiers_Parms;
 	ScaleForHeroModifiers_Parms.IsFirstTime = IsFirstTime;
@@ -6166,7 +6085,7 @@ void ADunDefTower_TripWire::ScaleHealthMultiplier ( )
 	static UFunction* pFnScaleHealthMultiplier = NULL;
 
 	if ( ! pFnScaleHealthMultiplier )
-		pFnScaleHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 94487 ];
+		pFnScaleHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 88836 ];
 
 	ADunDefTower_TripWire_execScaleHealthMultiplier_Parms ScaleHealthMultiplier_Parms;
 
@@ -6182,7 +6101,7 @@ void ADunDefTower_TripWire::ReportSummoned ( )
 	static UFunction* pFnReportSummoned = NULL;
 
 	if ( ! pFnReportSummoned )
-		pFnReportSummoned = (UFunction*) UObject::GObjObjects()->Data[ 94486 ];
+		pFnReportSummoned = (UFunction*) UObject::GObjObjects()->Data[ 88835 ];
 
 	ADunDefTower_TripWire_execReportSummoned_Parms ReportSummoned_Parms;
 
@@ -6198,7 +6117,7 @@ void ADunDefTower_TripWire::UpdateTowerRatingMaterial ( )
 	static UFunction* pFnUpdateTowerRatingMaterial = NULL;
 
 	if ( ! pFnUpdateTowerRatingMaterial )
-		pFnUpdateTowerRatingMaterial = (UFunction*) UObject::GObjObjects()->Data[ 94485 ];
+		pFnUpdateTowerRatingMaterial = (UFunction*) UObject::GObjObjects()->Data[ 88834 ];
 
 	ADunDefTower_TripWire_execUpdateTowerRatingMaterial_Parms UpdateTowerRatingMaterial_Parms;
 
@@ -6216,7 +6135,7 @@ bool ADunDefTower_TripWire::NeedsRepair ( unsigned long requireFullHealth )
 	static UFunction* pFnNeedsRepair = NULL;
 
 	if ( ! pFnNeedsRepair )
-		pFnNeedsRepair = (UFunction*) UObject::GObjObjects()->Data[ 94482 ];
+		pFnNeedsRepair = (UFunction*) UObject::GObjObjects()->Data[ 88831 ];
 
 	ADunDefTower_TripWire_execNeedsRepair_Parms NeedsRepair_Parms;
 	NeedsRepair_Parms.requireFullHealth = requireFullHealth;
@@ -6236,7 +6155,7 @@ float ADunDefTower_TripWire::GetHealthPercent ( )
 	static UFunction* pFnGetHealthPercent = NULL;
 
 	if ( ! pFnGetHealthPercent )
-		pFnGetHealthPercent = (UFunction*) UObject::GObjObjects()->Data[ 94480 ];
+		pFnGetHealthPercent = (UFunction*) UObject::GObjObjects()->Data[ 88829 ];
 
 	ADunDefTower_TripWire_execGetHealthPercent_Parms GetHealthPercent_Parms;
 
@@ -6258,7 +6177,7 @@ bool ADunDefTower_TripWire::eventHealDamage ( int Amount, class AController* Hea
 	static UFunction* pFnHealDamage = NULL;
 
 	if ( ! pFnHealDamage )
-		pFnHealDamage = (UFunction*) UObject::GObjObjects()->Data[ 94474 ];
+		pFnHealDamage = (UFunction*) UObject::GObjObjects()->Data[ 88823 ];
 
 	ADunDefTower_TripWire_eventHealDamage_Parms HealDamage_Parms;
 	HealDamage_Parms.Amount = Amount;
@@ -6283,7 +6202,7 @@ void ADunDefTower_TripWire::HealPctOfMaxHealth ( float HealPct, class AControlle
 	static UFunction* pFnHealPctOfMaxHealth = NULL;
 
 	if ( ! pFnHealPctOfMaxHealth )
-		pFnHealPctOfMaxHealth = (UFunction*) UObject::GObjObjects()->Data[ 94466 ];
+		pFnHealPctOfMaxHealth = (UFunction*) UObject::GObjObjects()->Data[ 88815 ];
 
 	ADunDefTower_TripWire_execHealPctOfMaxHealth_Parms HealPctOfMaxHealth_Parms;
 	HealPctOfMaxHealth_Parms.HealPct = HealPct;
@@ -6305,7 +6224,7 @@ int ADunDefTower_TripWire::GetHealth ( unsigned long bGetMax )
 	static UFunction* pFnGetHealth = NULL;
 
 	if ( ! pFnGetHealth )
-		pFnGetHealth = (UFunction*) UObject::GObjObjects()->Data[ 94463 ];
+		pFnGetHealth = (UFunction*) UObject::GObjObjects()->Data[ 88812 ];
 
 	ADunDefTower_TripWire_execGetHealth_Parms GetHealth_Parms;
 	GetHealth_Parms.bGetMax = bGetMax;
@@ -6327,7 +6246,7 @@ float ADunDefTower_TripWire::IncrementRepair ( float CurrentMana, float DeltaTim
 	static UFunction* pFnIncrementRepair = NULL;
 
 	if ( ! pFnIncrementRepair )
-		pFnIncrementRepair = (UFunction*) UObject::GObjObjects()->Data[ 94455 ];
+		pFnIncrementRepair = (UFunction*) UObject::GObjObjects()->Data[ 88804 ];
 
 	ADunDefTower_TripWire_execIncrementRepair_Parms IncrementRepair_Parms;
 	IncrementRepair_Parms.CurrentMana = CurrentMana;
@@ -6350,7 +6269,7 @@ float ADunDefTower_TripWire::IncrementDetonationRepair ( float CurrentMana, floa
 	static UFunction* pFnIncrementDetonationRepair = NULL;
 
 	if ( ! pFnIncrementDetonationRepair )
-		pFnIncrementDetonationRepair = (UFunction*) UObject::GObjObjects()->Data[ 94447 ];
+		pFnIncrementDetonationRepair = (UFunction*) UObject::GObjObjects()->Data[ 88796 ];
 
 	ADunDefTower_TripWire_execIncrementDetonationRepair_Parms IncrementDetonationRepair_Parms;
 	IncrementDetonationRepair_Parms.CurrentMana = CurrentMana;
@@ -6373,7 +6292,7 @@ float ADunDefTower_TripWire::GetCurrentRepairPercentage ( float StartRepairTime,
 	static UFunction* pFnGetCurrentRepairPercentage = NULL;
 
 	if ( ! pFnGetCurrentRepairPercentage )
-		pFnGetCurrentRepairPercentage = (UFunction*) UObject::GObjObjects()->Data[ 94443 ];
+		pFnGetCurrentRepairPercentage = (UFunction*) UObject::GObjObjects()->Data[ 88792 ];
 
 	ADunDefTower_TripWire_execGetCurrentRepairPercentage_Parms GetCurrentRepairPercentage_Parms;
 	GetCurrentRepairPercentage_Parms.StartRepairTime = StartRepairTime;
@@ -6393,7 +6312,7 @@ void ADunDefTower_TripWire::StartRepair ( )
 	static UFunction* pFnStartRepair = NULL;
 
 	if ( ! pFnStartRepair )
-		pFnStartRepair = (UFunction*) UObject::GObjObjects()->Data[ 94442 ];
+		pFnStartRepair = (UFunction*) UObject::GObjObjects()->Data[ 88791 ];
 
 	ADunDefTower_TripWire_execStartRepair_Parms StartRepair_Parms;
 
@@ -6410,7 +6329,7 @@ float ADunDefTower_TripWire::GetTimeToRepair ( )
 	static UFunction* pFnGetTimeToRepair = NULL;
 
 	if ( ! pFnGetTimeToRepair )
-		pFnGetTimeToRepair = (UFunction*) UObject::GObjObjects()->Data[ 94440 ];
+		pFnGetTimeToRepair = (UFunction*) UObject::GObjObjects()->Data[ 88789 ];
 
 	ADunDefTower_TripWire_execGetTimeToRepair_Parms GetTimeToRepair_Parms;
 
@@ -6429,7 +6348,7 @@ float ADunDefTower_TripWire::GetCostToRepair ( )
 	static UFunction* pFnGetCostToRepair = NULL;
 
 	if ( ! pFnGetCostToRepair )
-		pFnGetCostToRepair = (UFunction*) UObject::GObjObjects()->Data[ 94438 ];
+		pFnGetCostToRepair = (UFunction*) UObject::GObjObjects()->Data[ 88787 ];
 
 	ADunDefTower_TripWire_execGetCostToRepair_Parms GetCostToRepair_Parms;
 
@@ -6448,7 +6367,7 @@ float ADunDefTower_TripWire::GetTimeOfTotalRepair ( )
 	static UFunction* pFnGetTimeOfTotalRepair = NULL;
 
 	if ( ! pFnGetTimeOfTotalRepair )
-		pFnGetTimeOfTotalRepair = (UFunction*) UObject::GObjObjects()->Data[ 94436 ];
+		pFnGetTimeOfTotalRepair = (UFunction*) UObject::GObjObjects()->Data[ 88785 ];
 
 	ADunDefTower_TripWire_execGetTimeOfTotalRepair_Parms GetTimeOfTotalRepair_Parms;
 
@@ -6470,7 +6389,7 @@ void ADunDefTower_TripWire::Died ( class AController* EventInstigator, struct FV
 	static UFunction* pFnDied = NULL;
 
 	if ( ! pFnDied )
-		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 94431 ];
+		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 88780 ];
 
 	ADunDefTower_TripWire_execDied_Parms Died_Parms;
 	Died_Parms.EventInstigator = EventInstigator;
@@ -6490,7 +6409,7 @@ void ADunDefTower_TripWire::ReportedDeath ( )
 	static UFunction* pFnReportedDeath = NULL;
 
 	if ( ! pFnReportedDeath )
-		pFnReportedDeath = (UFunction*) UObject::GObjObjects()->Data[ 94430 ];
+		pFnReportedDeath = (UFunction*) UObject::GObjObjects()->Data[ 88779 ];
 
 	ADunDefTower_TripWire_execReportedDeath_Parms ReportedDeath_Parms;
 
@@ -6506,7 +6425,7 @@ void ADunDefTower_TripWire::ReportDeath ( )
 	static UFunction* pFnReportDeath = NULL;
 
 	if ( ! pFnReportDeath )
-		pFnReportDeath = (UFunction*) UObject::GObjObjects()->Data[ 94428 ];
+		pFnReportDeath = (UFunction*) UObject::GObjObjects()->Data[ 88777 ];
 
 	ADunDefTower_TripWire_execReportDeath_Parms ReportDeath_Parms;
 
@@ -6523,7 +6442,7 @@ void ADunDefTower_TripWire::DecreaseLifeEnergy ( float X )
 	static UFunction* pFnDecreaseLifeEnergy = NULL;
 
 	if ( ! pFnDecreaseLifeEnergy )
-		pFnDecreaseLifeEnergy = (UFunction*) UObject::GObjObjects()->Data[ 94425 ];
+		pFnDecreaseLifeEnergy = (UFunction*) UObject::GObjObjects()->Data[ 88774 ];
 
 	ADunDefTower_TripWire_execDecreaseLifeEnergy_Parms DecreaseLifeEnergy_Parms;
 	DecreaseLifeEnergy_Parms.X = X;
@@ -6542,7 +6461,7 @@ bool ADunDefTower_TripWire::ContinueDrawingToolTip ( unsigned long ContinueDrawi
 	static UFunction* pFnContinueDrawingToolTip = NULL;
 
 	if ( ! pFnContinueDrawingToolTip )
-		pFnContinueDrawingToolTip = (UFunction*) UObject::GObjObjects()->Data[ 94422 ];
+		pFnContinueDrawingToolTip = (UFunction*) UObject::GObjObjects()->Data[ 88771 ];
 
 	ADunDefTower_TripWire_execContinueDrawingToolTip_Parms ContinueDrawingToolTip_Parms;
 	ContinueDrawingToolTip_Parms.ContinueDrawing = ContinueDrawing;
@@ -6565,7 +6484,7 @@ void ADunDefTower_TripWire::DrawToolTip ( class UCanvas* C, int PosX, int PosY, 
 	static UFunction* pFnDrawToolTip = NULL;
 
 	if ( ! pFnDrawToolTip )
-		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 94416 ];
+		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 88765 ];
 
 	ADunDefTower_TripWire_execDrawToolTip_Parms DrawToolTip_Parms;
 	DrawToolTip_Parms.C = C;
@@ -6587,7 +6506,7 @@ bool ADunDefTower_TripWire::Sell ( class ADunDefPlayerController* PC )
 	static UFunction* pFnSell = NULL;
 
 	if ( ! pFnSell )
-		pFnSell = (UFunction*) UObject::GObjObjects()->Data[ 94413 ];
+		pFnSell = (UFunction*) UObject::GObjObjects()->Data[ 88762 ];
 
 	ADunDefTower_TripWire_execSell_Parms Sell_Parms;
 	Sell_Parms.PC = PC;
@@ -6606,7 +6525,7 @@ void ADunDefTower_TripWire::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 94412 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 88761 ];
 
 	ADunDefTower_TripWire_eventDestroyed_Parms Destroyed_Parms;
 
@@ -6622,7 +6541,7 @@ void ADunDefTower_TripWire::PlaySellFX ( )
 	static UFunction* pFnPlaySellFX = NULL;
 
 	if ( ! pFnPlaySellFX )
-		pFnPlaySellFX = (UFunction*) UObject::GObjObjects()->Data[ 94411 ];
+		pFnPlaySellFX = (UFunction*) UObject::GObjObjects()->Data[ 88760 ];
 
 	ADunDefTower_TripWire_execPlaySellFX_Parms PlaySellFX_Parms;
 
@@ -6639,7 +6558,7 @@ void ADunDefTower_TripWire::Detonate ( int SetDetonationsNumber )
 	static UFunction* pFnDetonate = NULL;
 
 	if ( ! pFnDetonate )
-		pFnDetonate = (UFunction*) UObject::GObjObjects()->Data[ 94409 ];
+		pFnDetonate = (UFunction*) UObject::GObjObjects()->Data[ 88758 ];
 
 	ADunDefTower_TripWire_execDetonate_Parms Detonate_Parms;
 	Detonate_Parms.SetDetonationsNumber = SetDetonationsNumber;
@@ -6656,7 +6575,7 @@ void ADunDefTower_TripWire::ChildEndDetonate ( )
 	static UFunction* pFnChildEndDetonate = NULL;
 
 	if ( ! pFnChildEndDetonate )
-		pFnChildEndDetonate = (UFunction*) UObject::GObjObjects()->Data[ 94395 ];
+		pFnChildEndDetonate = (UFunction*) UObject::GObjObjects()->Data[ 88744 ];
 
 	ADunDefTower_TripWire_execChildEndDetonate_Parms ChildEndDetonate_Parms;
 
@@ -6672,7 +6591,7 @@ void ADunDefTower_TripWire::ChildDetonate ( )
 	static UFunction* pFnChildDetonate = NULL;
 
 	if ( ! pFnChildDetonate )
-		pFnChildDetonate = (UFunction*) UObject::GObjObjects()->Data[ 94394 ];
+		pFnChildDetonate = (UFunction*) UObject::GObjObjects()->Data[ 88743 ];
 
 	ADunDefTower_TripWire_execChildDetonate_Parms ChildDetonate_Parms;
 
@@ -6691,7 +6610,7 @@ void ADunDefTower_TripWire::RemoveStunnedActor ( class AActor* stunRemoval, int 
 	static UFunction* pFnRemoveStunnedActor = NULL;
 
 	if ( ! pFnRemoveStunnedActor )
-		pFnRemoveStunnedActor = (UFunction*) UObject::GObjObjects()->Data[ 94383 ];
+		pFnRemoveStunnedActor = (UFunction*) UObject::GObjObjects()->Data[ 88732 ];
 
 	ADunDefTower_TripWire_execRemoveStunnedActor_Parms RemoveStunnedActor_Parms;
 	RemoveStunnedActor_Parms.stunRemoval = stunRemoval;
@@ -6712,7 +6631,7 @@ bool ADunDefTower_TripWire::CanStun ( class ADunDefEnemy* stunTest )
 	static UFunction* pFnCanStun = NULL;
 
 	if ( ! pFnCanStun )
-		pFnCanStun = (UFunction*) UObject::GObjObjects()->Data[ 94380 ];
+		pFnCanStun = (UFunction*) UObject::GObjObjects()->Data[ 88729 ];
 
 	ADunDefTower_TripWire_execCanStun_Parms CanStun_Parms;
 	CanStun_Parms.stunTest = stunTest;
@@ -6733,7 +6652,7 @@ struct FBeamTrippers ADunDefTower_TripWire::AddStunnedActor ( class ADunDefEnemy
 	static UFunction* pFnAddStunnedActor = NULL;
 
 	if ( ! pFnAddStunnedActor )
-		pFnAddStunnedActor = (UFunction*) UObject::GObjObjects()->Data[ 94373 ];
+		pFnAddStunnedActor = (UFunction*) UObject::GObjObjects()->Data[ 88722 ];
 
 	ADunDefTower_TripWire_execAddStunnedActor_Parms AddStunnedActor_Parms;
 	AddStunnedActor_Parms.newStun = newStun;
@@ -6753,7 +6672,7 @@ void ADunDefTower_TripWire::ClearBeamTrippers ( unsigned long bFullClear )
 	static UFunction* pFnClearBeamTrippers = NULL;
 
 	if ( ! pFnClearBeamTrippers )
-		pFnClearBeamTrippers = (UFunction*) UObject::GObjObjects()->Data[ 94370 ];
+		pFnClearBeamTrippers = (UFunction*) UObject::GObjObjects()->Data[ 88719 ];
 
 	ADunDefTower_TripWire_execClearBeamTrippers_Parms ClearBeamTrippers_Parms;
 	ClearBeamTrippers_Parms.bFullClear = bFullClear;
@@ -6771,7 +6690,7 @@ float ADunDefTower_TripWire::GetAttackDuration ( )
 	static UFunction* pFnGetAttackDuration = NULL;
 
 	if ( ! pFnGetAttackDuration )
-		pFnGetAttackDuration = (UFunction*) UObject::GObjObjects()->Data[ 94368 ];
+		pFnGetAttackDuration = (UFunction*) UObject::GObjObjects()->Data[ 88717 ];
 
 	ADunDefTower_TripWire_execGetAttackDuration_Parms GetAttackDuration_Parms;
 
@@ -6789,7 +6708,7 @@ void ADunDefTower_TripWire::ResetTrip ( )
 	static UFunction* pFnResetTrip = NULL;
 
 	if ( ! pFnResetTrip )
-		pFnResetTrip = (UFunction*) UObject::GObjObjects()->Data[ 94367 ];
+		pFnResetTrip = (UFunction*) UObject::GObjObjects()->Data[ 88716 ];
 
 	ADunDefTower_TripWire_execResetTrip_Parms ResetTrip_Parms;
 
@@ -6806,7 +6725,7 @@ void ADunDefTower_TripWire::DeactivateTrip ( unsigned long bShutDownEffects )
 	static UFunction* pFnDeactivateTrip = NULL;
 
 	if ( ! pFnDeactivateTrip )
-		pFnDeactivateTrip = (UFunction*) UObject::GObjObjects()->Data[ 94365 ];
+		pFnDeactivateTrip = (UFunction*) UObject::GObjObjects()->Data[ 88714 ];
 
 	ADunDefTower_TripWire_execDeactivateTrip_Parms DeactivateTrip_Parms;
 	DeactivateTrip_Parms.bShutDownEffects = bShutDownEffects;
@@ -6823,7 +6742,7 @@ void ADunDefTower_TripWire::ActivateTrip ( )
 	static UFunction* pFnActivateTrip = NULL;
 
 	if ( ! pFnActivateTrip )
-		pFnActivateTrip = (UFunction*) UObject::GObjObjects()->Data[ 94364 ];
+		pFnActivateTrip = (UFunction*) UObject::GObjObjects()->Data[ 88713 ];
 
 	ADunDefTower_TripWire_execActivateTrip_Parms ActivateTrip_Parms;
 
@@ -6841,7 +6760,7 @@ bool ADunDefTower_TripWire::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 94361 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 88710 ];
 
 	ADunDefTower_TripWire_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -6861,7 +6780,7 @@ float ADunDefTower_TripWire::GetTrapDamageMultiplier ( )
 	static UFunction* pFnGetTrapDamageMultiplier = NULL;
 
 	if ( ! pFnGetTrapDamageMultiplier )
-		pFnGetTrapDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 94359 ];
+		pFnGetTrapDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 88708 ];
 
 	ADunDefTower_TripWire_execGetTrapDamageMultiplier_Parms GetTrapDamageMultiplier_Parms;
 
@@ -6880,7 +6799,7 @@ float ADunDefTower_TripWire::GetDamageMultiplier ( )
 	static UFunction* pFnGetDamageMultiplier = NULL;
 
 	if ( ! pFnGetDamageMultiplier )
-		pFnGetDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 94357 ];
+		pFnGetDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 88706 ];
 
 	ADunDefTower_TripWire_execGetDamageMultiplier_Parms GetDamageMultiplier_Parms;
 
@@ -6899,7 +6818,7 @@ float ADunDefTower_TripWire::GetAttackDamage ( )
 	static UFunction* pFnGetAttackDamage = NULL;
 
 	if ( ! pFnGetAttackDamage )
-		pFnGetAttackDamage = (UFunction*) UObject::GObjObjects()->Data[ 94355 ];
+		pFnGetAttackDamage = (UFunction*) UObject::GObjObjects()->Data[ 88704 ];
 
 	ADunDefTower_TripWire_execGetAttackDamage_Parms GetAttackDamage_Parms;
 
@@ -6918,7 +6837,7 @@ float ADunDefTower_TripWire::GetStunTime ( )
 	static UFunction* pFnGetStunTime = NULL;
 
 	if ( ! pFnGetStunTime )
-		pFnGetStunTime = (UFunction*) UObject::GObjObjects()->Data[ 94353 ];
+		pFnGetStunTime = (UFunction*) UObject::GObjObjects()->Data[ 88702 ];
 
 	ADunDefTower_TripWire_execGetStunTime_Parms GetStunTime_Parms;
 
@@ -6938,7 +6857,7 @@ void ADunDefTower_TripWire::RemoveTowerBooster ( class UTowerBoosterInterface* a
 	static UFunction* pFnRemoveTowerBooster = NULL;
 
 	if ( ! pFnRemoveTowerBooster )
-		pFnRemoveTowerBooster = (UFunction*) UObject::GObjObjects()->Data[ 94350 ];
+		pFnRemoveTowerBooster = (UFunction*) UObject::GObjObjects()->Data[ 88699 ];
 
 	ADunDefTower_TripWire_execRemoveTowerBooster_Parms RemoveTowerBooster_Parms;
 	RemoveTowerBooster_Parms.aBooster = aBooster;
@@ -6957,7 +6876,7 @@ void ADunDefTower_TripWire::AddTowerBooster ( class UTowerBoosterInterface* aBoo
 	static UFunction* pFnAddTowerBooster = NULL;
 
 	if ( ! pFnAddTowerBooster )
-		pFnAddTowerBooster = (UFunction*) UObject::GObjObjects()->Data[ 94348 ];
+		pFnAddTowerBooster = (UFunction*) UObject::GObjObjects()->Data[ 88697 ];
 
 	ADunDefTower_TripWire_execAddTowerBooster_Parms AddTowerBooster_Parms;
 	AddTowerBooster_Parms.aBooster = aBooster;
@@ -6974,47 +6893,11 @@ void ADunDefTower_TripWire::UpdateStuns ( )
 	static UFunction* pFnUpdateStuns = NULL;
 
 	if ( ! pFnUpdateStuns )
-		pFnUpdateStuns = (UFunction*) UObject::GObjObjects()->Data[ 94345 ];
+		pFnUpdateStuns = (UFunction*) UObject::GObjObjects()->Data[ 88694 ];
 
 	ADunDefTower_TripWire_execUpdateStuns_Parms UpdateStuns_Parms;
 
 	this->ProcessEvent ( pFnUpdateStuns, &UpdateStuns_Parms, NULL );
-};
-
-// Function DunDefSpecial.DunDefTower_TripWire.KilledTarget
-// [0x00020002] 
-// Parameters infos:
-// class UDunDefTargetableInterface* aTarget                        ( CPF_Parm )
-
-void ADunDefTower_TripWire::KilledTarget ( class UDunDefTargetableInterface* aTarget )
-{
-	static UFunction* pFnKilledTarget = NULL;
-
-	if ( ! pFnKilledTarget )
-		pFnKilledTarget = (UFunction*) UObject::GObjObjects()->Data[ 94343 ];
-
-	ADunDefTower_TripWire_execKilledTarget_Parms KilledTarget_Parms;
-	KilledTarget_Parms.aTarget = aTarget;
-
-	this->ProcessEvent ( pFnKilledTarget, &KilledTarget_Parms, NULL );
-};
-
-// Function DunDefSpecial.DunDefTower_TripWire.DoExplosion
-// [0x00020002] 
-// Parameters infos:
-// class UDunDefTargetableInterface* aTarget                        ( CPF_Parm )
-
-void ADunDefTower_TripWire::DoExplosion ( class UDunDefTargetableInterface* aTarget )
-{
-	static UFunction* pFnDoExplosion = NULL;
-
-	if ( ! pFnDoExplosion )
-		pFnDoExplosion = (UFunction*) UObject::GObjObjects()->Data[ 94339 ];
-
-	ADunDefTower_TripWire_execDoExplosion_Parms DoExplosion_Parms;
-	DoExplosion_Parms.aTarget = aTarget;
-
-	this->ProcessEvent ( pFnDoExplosion, &DoExplosion_Parms, NULL );
 };
 
 // Function DunDefSpecial.DunDefTower_TripWire.GetAttackRate
@@ -7027,7 +6910,7 @@ float ADunDefTower_TripWire::GetAttackRate ( )
 	static UFunction* pFnGetAttackRate = NULL;
 
 	if ( ! pFnGetAttackRate )
-		pFnGetAttackRate = (UFunction*) UObject::GObjObjects()->Data[ 94337 ];
+		pFnGetAttackRate = (UFunction*) UObject::GObjObjects()->Data[ 88692 ];
 
 	ADunDefTower_TripWire_execGetAttackRate_Parms GetAttackRate_Parms;
 
@@ -7047,7 +6930,7 @@ void ADunDefTower_TripWire::DoTracing ( float dt, unsigned long bForceDamage )
 	static UFunction* pFnDoTracing = NULL;
 
 	if ( ! pFnDoTracing )
-		pFnDoTracing = (UFunction*) UObject::GObjObjects()->Data[ 94324 ];
+		pFnDoTracing = (UFunction*) UObject::GObjObjects()->Data[ 88679 ];
 
 	ADunDefTower_TripWire_execDoTracing_Parms DoTracing_Parms;
 	DoTracing_Parms.dt = dt;
@@ -7066,7 +6949,7 @@ void ADunDefTower_TripWire::eventUnTouch ( class AActor* Other )
 	static UFunction* pFnUnTouch = NULL;
 
 	if ( ! pFnUnTouch )
-		pFnUnTouch = (UFunction*) UObject::GObjObjects()->Data[ 94322 ];
+		pFnUnTouch = (UFunction*) UObject::GObjObjects()->Data[ 88677 ];
 
 	ADunDefTower_TripWire_eventUnTouch_Parms UnTouch_Parms;
 	UnTouch_Parms.Other = Other;
@@ -7087,7 +6970,7 @@ void ADunDefTower_TripWire::eventTouch ( class AActor* Other, class UPrimitiveCo
 	static UFunction* pFnTouch = NULL;
 
 	if ( ! pFnTouch )
-		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 94317 ];
+		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 88672 ];
 
 	ADunDefTower_TripWire_eventTouch_Parms Touch_Parms;
 	Touch_Parms.Other = Other;
@@ -7107,7 +6990,7 @@ void ADunDefTower_TripWire::SetDetonateTimer ( )
 	static UFunction* pFnSetDetonateTimer = NULL;
 
 	if ( ! pFnSetDetonateTimer )
-		pFnSetDetonateTimer = (UFunction*) UObject::GObjObjects()->Data[ 94316 ];
+		pFnSetDetonateTimer = (UFunction*) UObject::GObjObjects()->Data[ 88671 ];
 
 	ADunDefTower_TripWire_execSetDetonateTimer_Parms SetDetonateTimer_Parms;
 
@@ -7124,7 +7007,7 @@ struct FVector ADunDefTower_TripWire::GetEndPoint ( )
 	static UFunction* pFnGetEndPoint = NULL;
 
 	if ( ! pFnGetEndPoint )
-		pFnGetEndPoint = (UFunction*) UObject::GObjObjects()->Data[ 92126 ];
+		pFnGetEndPoint = (UFunction*) UObject::GObjObjects()->Data[ 86518 ];
 
 	ADunDefTower_TripWire_execGetEndPoint_Parms GetEndPoint_Parms;
 
@@ -7143,7 +7026,7 @@ struct FVector ADunDefTower_TripWire::GetBeamStartLoc ( )
 	static UFunction* pFnGetBeamStartLoc = NULL;
 
 	if ( ! pFnGetBeamStartLoc )
-		pFnGetBeamStartLoc = (UFunction*) UObject::GObjObjects()->Data[ 92124 ];
+		pFnGetBeamStartLoc = (UFunction*) UObject::GObjObjects()->Data[ 86516 ];
 
 	ADunDefTower_TripWire_execGetBeamStartLoc_Parms GetBeamStartLoc_Parms;
 
@@ -7161,7 +7044,7 @@ void ADunDefTower_TripWire::UpdateMovementBeams ( )
 	static UFunction* pFnUpdateMovementBeams = NULL;
 
 	if ( ! pFnUpdateMovementBeams )
-		pFnUpdateMovementBeams = (UFunction*) UObject::GObjObjects()->Data[ 94311 ];
+		pFnUpdateMovementBeams = (UFunction*) UObject::GObjObjects()->Data[ 88666 ];
 
 	ADunDefTower_TripWire_execUpdateMovementBeams_Parms UpdateMovementBeams_Parms;
 
@@ -7178,7 +7061,7 @@ void ADunDefTower_TripWire::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 94309 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 88664 ];
 
 	ADunDefTower_TripWire_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -7198,7 +7081,7 @@ void ADunDefTower_TripWire::ClientSingleSetMovement ( struct FVector endLoc, str
 	static UFunction* pFnClientSingleSetMovement = NULL;
 
 	if ( ! pFnClientSingleSetMovement )
-		pFnClientSingleSetMovement = (UFunction*) UObject::GObjObjects()->Data[ 94305 ];
+		pFnClientSingleSetMovement = (UFunction*) UObject::GObjObjects()->Data[ 88660 ];
 
 	ADunDefTower_TripWire_execClientSingleSetMovement_Parms ClientSingleSetMovement_Parms;
 	memcpy ( &ClientSingleSetMovement_Parms.endLoc, &endLoc, 0xC );
@@ -7221,7 +7104,7 @@ bool ADunDefTower_TripWire::ForceSingleMove ( struct FVector NewLoc, struct FRot
 	static UFunction* pFnForceSingleMove = NULL;
 
 	if ( ! pFnForceSingleMove )
-		pFnForceSingleMove = (UFunction*) UObject::GObjObjects()->Data[ 89992 ];
+		pFnForceSingleMove = (UFunction*) UObject::GObjObjects()->Data[ 84374 ];
 
 	ADunDefTower_TripWire_execForceSingleMove_Parms ForceSingleMove_Parms;
 	memcpy ( &ForceSingleMove_Parms.NewLoc, &NewLoc, 0xC );
@@ -7242,7 +7125,7 @@ void ADunDefTower_TripWire::DisableSingleMovementReplication ( )
 	static UFunction* pFnDisableSingleMovementReplication = NULL;
 
 	if ( ! pFnDisableSingleMovementReplication )
-		pFnDisableSingleMovementReplication = (UFunction*) UObject::GObjObjects()->Data[ 94300 ];
+		pFnDisableSingleMovementReplication = (UFunction*) UObject::GObjObjects()->Data[ 88655 ];
 
 	ADunDefTower_TripWire_execDisableSingleMovementReplication_Parms DisableSingleMovementReplication_Parms;
 
@@ -7259,7 +7142,7 @@ void ADunDefTower_TripWire::EnableSingleMovementReplicationTimer ( float Time )
 	static UFunction* pFnEnableSingleMovementReplicationTimer = NULL;
 
 	if ( ! pFnEnableSingleMovementReplicationTimer )
-		pFnEnableSingleMovementReplicationTimer = (UFunction*) UObject::GObjObjects()->Data[ 94298 ];
+		pFnEnableSingleMovementReplicationTimer = (UFunction*) UObject::GObjObjects()->Data[ 88653 ];
 
 	ADunDefTower_TripWire_execEnableSingleMovementReplicationTimer_Parms EnableSingleMovementReplicationTimer_Parms;
 	EnableSingleMovementReplicationTimer_Parms.Time = Time;
@@ -7276,7 +7159,7 @@ void ADunDefTower_TripWire::DisableMovementReplication ( )
 	static UFunction* pFnDisableMovementReplication = NULL;
 
 	if ( ! pFnDisableMovementReplication )
-		pFnDisableMovementReplication = (UFunction*) UObject::GObjObjects()->Data[ 94297 ];
+		pFnDisableMovementReplication = (UFunction*) UObject::GObjObjects()->Data[ 88652 ];
 
 	ADunDefTower_TripWire_execDisableMovementReplication_Parms DisableMovementReplication_Parms;
 
@@ -7293,7 +7176,7 @@ void ADunDefTower_TripWire::EnableMovementReplicationTimer ( float Time )
 	static UFunction* pFnEnableMovementReplicationTimer = NULL;
 
 	if ( ! pFnEnableMovementReplicationTimer )
-		pFnEnableMovementReplicationTimer = (UFunction*) UObject::GObjObjects()->Data[ 94295 ];
+		pFnEnableMovementReplicationTimer = (UFunction*) UObject::GObjObjects()->Data[ 88650 ];
 
 	ADunDefTower_TripWire_execEnableMovementReplicationTimer_Parms EnableMovementReplicationTimer_Parms;
 	EnableMovementReplicationTimer_Parms.Time = Time;
@@ -7311,7 +7194,7 @@ void ADunDefTower_TripWire::SetDUCost ( int newDUCost )
 	static UFunction* pFnSetDUCost = NULL;
 
 	if ( ! pFnSetDUCost )
-		pFnSetDUCost = (UFunction*) UObject::GObjObjects()->Data[ 94293 ];
+		pFnSetDUCost = (UFunction*) UObject::GObjObjects()->Data[ 88648 ];
 
 	ADunDefTower_TripWire_execSetDUCost_Parms SetDUCost_Parms;
 	SetDUCost_Parms.newDUCost = newDUCost;
@@ -7330,7 +7213,7 @@ int ADunDefTower_TripWire::GetNextUpgradeLevel ( unsigned long bForceBeyondMaxUp
 	static UFunction* pFnGetNextUpgradeLevel = NULL;
 
 	if ( ! pFnGetNextUpgradeLevel )
-		pFnGetNextUpgradeLevel = (UFunction*) UObject::GObjObjects()->Data[ 94290 ];
+		pFnGetNextUpgradeLevel = (UFunction*) UObject::GObjObjects()->Data[ 88645 ];
 
 	ADunDefTower_TripWire_execGetNextUpgradeLevel_Parms GetNextUpgradeLevel_Parms;
 	GetNextUpgradeLevel_Parms.bForceBeyondMaxUpgrade = bForceBeyondMaxUpgrade;
@@ -7350,7 +7233,7 @@ int ADunDefTower_TripWire::GetTimeToUpgradeTower ( )
 	static UFunction* pFnGetTimeToUpgradeTower = NULL;
 
 	if ( ! pFnGetTimeToUpgradeTower )
-		pFnGetTimeToUpgradeTower = (UFunction*) UObject::GObjObjects()->Data[ 94288 ];
+		pFnGetTimeToUpgradeTower = (UFunction*) UObject::GObjObjects()->Data[ 88643 ];
 
 	ADunDefTower_TripWire_execGetTimeToUpgradeTower_Parms GetTimeToUpgradeTower_Parms;
 
@@ -7369,7 +7252,7 @@ int ADunDefTower_TripWire::GetCostToUpgradeTower ( )
 	static UFunction* pFnGetCostToUpgradeTower = NULL;
 
 	if ( ! pFnGetCostToUpgradeTower )
-		pFnGetCostToUpgradeTower = (UFunction*) UObject::GObjObjects()->Data[ 94286 ];
+		pFnGetCostToUpgradeTower = (UFunction*) UObject::GObjObjects()->Data[ 88641 ];
 
 	ADunDefTower_TripWire_execGetCostToUpgradeTower_Parms GetCostToUpgradeTower_Parms;
 
@@ -7389,7 +7272,7 @@ int ADunDefTower_TripWire::GetTowerUpgradeLevelStatModifier ( unsigned char valu
 	static UFunction* pFnGetTowerUpgradeLevelStatModifier = NULL;
 
 	if ( ! pFnGetTowerUpgradeLevelStatModifier )
-		pFnGetTowerUpgradeLevelStatModifier = (UFunction*) UObject::GObjObjects()->Data[ 94283 ];
+		pFnGetTowerUpgradeLevelStatModifier = (UFunction*) UObject::GObjObjects()->Data[ 88638 ];
 
 	ADunDefTower_TripWire_execGetTowerUpgradeLevelStatModifier_Parms GetTowerUpgradeLevelStatModifier_Parms;
 	GetTowerUpgradeLevelStatModifier_Parms.valueType = valueType;
@@ -7408,7 +7291,7 @@ void ADunDefTower_TripWire::ChildDoUpgrade ( )
 	static UFunction* pFnChildDoUpgrade = NULL;
 
 	if ( ! pFnChildDoUpgrade )
-		pFnChildDoUpgrade = (UFunction*) UObject::GObjObjects()->Data[ 94282 ];
+		pFnChildDoUpgrade = (UFunction*) UObject::GObjObjects()->Data[ 88637 ];
 
 	ADunDefTower_TripWire_execChildDoUpgrade_Parms ChildDoUpgrade_Parms;
 
@@ -7424,7 +7307,7 @@ void ADunDefTower_TripWire::ChildDoDowngrade ( )
 	static UFunction* pFnChildDoDowngrade = NULL;
 
 	if ( ! pFnChildDoDowngrade )
-		pFnChildDoDowngrade = (UFunction*) UObject::GObjObjects()->Data[ 94281 ];
+		pFnChildDoDowngrade = (UFunction*) UObject::GObjObjects()->Data[ 88636 ];
 
 	ADunDefTower_TripWire_execChildDoDowngrade_Parms ChildDoDowngrade_Parms;
 
@@ -7440,7 +7323,7 @@ void ADunDefTower_TripWire::DoDowngrade ( )
 	static UFunction* pFnDoDowngrade = NULL;
 
 	if ( ! pFnDoDowngrade )
-		pFnDoDowngrade = (UFunction*) UObject::GObjObjects()->Data[ 94280 ];
+		pFnDoDowngrade = (UFunction*) UObject::GObjObjects()->Data[ 88635 ];
 
 	ADunDefTower_TripWire_execDoDowngrade_Parms DoDowngrade_Parms;
 
@@ -7456,7 +7339,7 @@ void ADunDefTower_TripWire::DoUpgrade ( )
 	static UFunction* pFnDoUpgrade = NULL;
 
 	if ( ! pFnDoUpgrade )
-		pFnDoUpgrade = (UFunction*) UObject::GObjObjects()->Data[ 94279 ];
+		pFnDoUpgrade = (UFunction*) UObject::GObjObjects()->Data[ 88634 ];
 
 	ADunDefTower_TripWire_execDoUpgrade_Parms DoUpgrade_Parms;
 
@@ -7473,7 +7356,7 @@ bool ADunDefTower_TripWire::CanBeUpgraded ( )
 	static UFunction* pFnCanBeUpgraded = NULL;
 
 	if ( ! pFnCanBeUpgraded )
-		pFnCanBeUpgraded = (UFunction*) UObject::GObjObjects()->Data[ 94277 ];
+		pFnCanBeUpgraded = (UFunction*) UObject::GObjObjects()->Data[ 88632 ];
 
 	ADunDefTower_TripWire_execCanBeUpgraded_Parms CanBeUpgraded_Parms;
 
@@ -7491,7 +7374,7 @@ void ADunDefTower_TripWire::ShutDownBeamEffects ( )
 	static UFunction* pFnShutDownBeamEffects = NULL;
 
 	if ( ! pFnShutDownBeamEffects )
-		pFnShutDownBeamEffects = (UFunction*) UObject::GObjObjects()->Data[ 94276 ];
+		pFnShutDownBeamEffects = (UFunction*) UObject::GObjObjects()->Data[ 88631 ];
 
 	ADunDefTower_TripWire_execShutDownBeamEffects_Parms ShutDownBeamEffects_Parms;
 
@@ -7508,7 +7391,7 @@ void ADunDefTower_TripWire::ActivateBeamEffects ( unsigned long bActive )
 	static UFunction* pFnActivateBeamEffects = NULL;
 
 	if ( ! pFnActivateBeamEffects )
-		pFnActivateBeamEffects = (UFunction*) UObject::GObjObjects()->Data[ 94274 ];
+		pFnActivateBeamEffects = (UFunction*) UObject::GObjObjects()->Data[ 88629 ];
 
 	ADunDefTower_TripWire_execActivateBeamEffects_Parms ActivateBeamEffects_Parms;
 	ActivateBeamEffects_Parms.bActive = bActive;
@@ -7525,7 +7408,7 @@ void ADunDefTower_TripWire::ActivateBeam ( )
 	static UFunction* pFnActivateBeam = NULL;
 
 	if ( ! pFnActivateBeam )
-		pFnActivateBeam = (UFunction*) UObject::GObjObjects()->Data[ 94273 ];
+		pFnActivateBeam = (UFunction*) UObject::GObjObjects()->Data[ 88628 ];
 
 	ADunDefTower_TripWire_execActivateBeam_Parms ActivateBeam_Parms;
 
@@ -7542,7 +7425,7 @@ struct FVector ADunDefTower_TripWire::GetBeamPoint ( )
 	static UFunction* pFnGetBeamPoint = NULL;
 
 	if ( ! pFnGetBeamPoint )
-		pFnGetBeamPoint = (UFunction*) UObject::GObjObjects()->Data[ 94269 ];
+		pFnGetBeamPoint = (UFunction*) UObject::GObjObjects()->Data[ 88624 ];
 
 	ADunDefTower_TripWire_execGetBeamPoint_Parms GetBeamPoint_Parms;
 
@@ -7561,7 +7444,7 @@ struct FVector ADunDefTower_TripWire::GetCollisionPoint ( )
 	static UFunction* pFnGetCollisionPoint = NULL;
 
 	if ( ! pFnGetCollisionPoint )
-		pFnGetCollisionPoint = (UFunction*) UObject::GObjObjects()->Data[ 94267 ];
+		pFnGetCollisionPoint = (UFunction*) UObject::GObjObjects()->Data[ 88622 ];
 
 	ADunDefTower_TripWire_execGetCollisionPoint_Parms GetCollisionPoint_Parms;
 
@@ -7581,7 +7464,7 @@ void ADunDefTower_TripWire::SetPlacementPoints ( TArray< struct FVector > SpawnP
 	static UFunction* pFnSetPlacementPoints = NULL;
 
 	if ( ! pFnSetPlacementPoints )
-		pFnSetPlacementPoints = (UFunction*) UObject::GObjObjects()->Data[ 94260 ];
+		pFnSetPlacementPoints = (UFunction*) UObject::GObjObjects()->Data[ 88615 ];
 
 	ADunDefTower_TripWire_execSetPlacementPoints_Parms SetPlacementPoints_Parms;
 	memcpy ( &SetPlacementPoints_Parms.SpawnPoints, &SpawnPoints, 0xC );
@@ -7600,7 +7483,7 @@ void ADunDefTower_TripWire::InitializeForInstigator ( class APawn* Pawn )
 	static UFunction* pFnInitializeForInstigator = NULL;
 
 	if ( ! pFnInitializeForInstigator )
-		pFnInitializeForInstigator = (UFunction*) UObject::GObjObjects()->Data[ 94258 ];
+		pFnInitializeForInstigator = (UFunction*) UObject::GObjObjects()->Data[ 88613 ];
 
 	ADunDefTower_TripWire_execInitializeForInstigator_Parms InitializeForInstigator_Parms;
 	InitializeForInstigator_Parms.Pawn = Pawn;
@@ -7617,7 +7500,7 @@ void ADunDefTower_TripWire::SetUpCollisionMesh ( )
 	static UFunction* pFnSetUpCollisionMesh = NULL;
 
 	if ( ! pFnSetUpCollisionMesh )
-		pFnSetUpCollisionMesh = (UFunction*) UObject::GObjObjects()->Data[ 94257 ];
+		pFnSetUpCollisionMesh = (UFunction*) UObject::GObjObjects()->Data[ 88612 ];
 
 	ADunDefTower_TripWire_execSetUpCollisionMesh_Parms SetUpCollisionMesh_Parms;
 
@@ -7633,7 +7516,7 @@ void ADunDefTower_TripWire::OnDestroy_RemoveFromTargetableList ( )
 	static UFunction* pFnOnDestroy_RemoveFromTargetableList = NULL;
 
 	if ( ! pFnOnDestroy_RemoveFromTargetableList )
-		pFnOnDestroy_RemoveFromTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 94251 ];
+		pFnOnDestroy_RemoveFromTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 88606 ];
 
 	ADunDefTower_TripWire_execOnDestroy_RemoveFromTargetableList_Parms OnDestroy_RemoveFromTargetableList_Parms;
 
@@ -7649,7 +7532,7 @@ void ADunDefTower_TripWire::OnPostBeginPlay_AddToTargetableList ( )
 	static UFunction* pFnOnPostBeginPlay_AddToTargetableList = NULL;
 
 	if ( ! pFnOnPostBeginPlay_AddToTargetableList )
-		pFnOnPostBeginPlay_AddToTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 94250 ];
+		pFnOnPostBeginPlay_AddToTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 88605 ];
 
 	ADunDefTower_TripWire_execOnPostBeginPlay_AddToTargetableList_Parms OnPostBeginPlay_AddToTargetableList_Parms;
 
@@ -7665,7 +7548,7 @@ void ADunDefTower_TripWire::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 94249 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 88604 ];
 
 	ADunDefTower_TripWire_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -7681,7 +7564,7 @@ void ADunDefTower_TripWire::SetUseHealthBarMat ( )
 	static UFunction* pFnSetUseHealthBarMat = NULL;
 
 	if ( ! pFnSetUseHealthBarMat )
-		pFnSetUseHealthBarMat = (UFunction*) UObject::GObjObjects()->Data[ 94248 ];
+		pFnSetUseHealthBarMat = (UFunction*) UObject::GObjObjects()->Data[ 88603 ];
 
 	ADunDefTower_TripWire_execSetUseHealthBarMat_Parms SetUseHealthBarMat_Parms;
 
@@ -7713,7 +7596,7 @@ void ADunDefTower_TripWire::ExecReplicatedFunction ( struct FName FunctionName, 
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 94231 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 88586 ];
 
 	ADunDefTower_TripWire_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -7746,30 +7629,12 @@ void ADunDefTower_TripWire::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 94229 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 88584 ];
 
 	ADunDefTower_TripWire_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
 
 	this->ProcessEvent ( pFnReplicatedEvent, &ReplicatedEvent_Parms, NULL );
-};
-
-// Function DunDefSpecial.DunDefTower_TripPhysical.ScaleForHeroModifiers
-// [0x00020002] 
-// Parameters infos:
-// unsigned long                  IsFirstTime                    ( CPF_Parm )
-
-void ADunDefTower_TripPhysical::ScaleForHeroModifiers ( unsigned long IsFirstTime )
-{
-	static UFunction* pFnScaleForHeroModifiers = NULL;
-
-	if ( ! pFnScaleForHeroModifiers )
-		pFnScaleForHeroModifiers = (UFunction*) UObject::GObjObjects()->Data[ 94787 ];
-
-	ADunDefTower_TripPhysical_execScaleForHeroModifiers_Parms ScaleForHeroModifiers_Parms;
-	ScaleForHeroModifiers_Parms.IsFirstTime = IsFirstTime;
-
-	this->ProcessEvent ( pFnScaleForHeroModifiers, &ScaleForHeroModifiers_Parms, NULL );
 };
 
 // Function DunDefSpecial.DunDefTower_TripPhysical.DisableAbilityMove
@@ -7781,7 +7646,7 @@ void ADunDefTower_TripPhysical::DisableAbilityMove ( )
 	static UFunction* pFnDisableAbilityMove = NULL;
 
 	if ( ! pFnDisableAbilityMove )
-		pFnDisableAbilityMove = (UFunction*) UObject::GObjObjects()->Data[ 94786 ];
+		pFnDisableAbilityMove = (UFunction*) UObject::GObjObjects()->Data[ 89131 ];
 
 	ADunDefTower_TripPhysical_execDisableAbilityMove_Parms DisableAbilityMove_Parms;
 
@@ -7798,7 +7663,7 @@ bool ADunDefTower_TripPhysical::AllowAbilityMove ( )
 	static UFunction* pFnAllowAbilityMove = NULL;
 
 	if ( ! pFnAllowAbilityMove )
-		pFnAllowAbilityMove = (UFunction*) UObject::GObjObjects()->Data[ 94784 ];
+		pFnAllowAbilityMove = (UFunction*) UObject::GObjObjects()->Data[ 89129 ];
 
 	ADunDefTower_TripPhysical_execAllowAbilityMove_Parms AllowAbilityMove_Parms;
 
@@ -7817,7 +7682,7 @@ void ADunDefTower_TripPhysical::ClientDisableMovementReplication ( struct FVecto
 	static UFunction* pFnClientDisableMovementReplication = NULL;
 
 	if ( ! pFnClientDisableMovementReplication )
-		pFnClientDisableMovementReplication = (UFunction*) UObject::GObjObjects()->Data[ 94782 ];
+		pFnClientDisableMovementReplication = (UFunction*) UObject::GObjObjects()->Data[ 89127 ];
 
 	ADunDefTower_TripPhysical_execClientDisableMovementReplication_Parms ClientDisableMovementReplication_Parms;
 	memcpy ( &ClientDisableMovementReplication_Parms.endedLoc, &endedLoc, 0xC );
@@ -7834,7 +7699,7 @@ void ADunDefTower_TripPhysical::eventBaseChange ( )
 	static UFunction* pFnBaseChange = NULL;
 
 	if ( ! pFnBaseChange )
-		pFnBaseChange = (UFunction*) UObject::GObjObjects()->Data[ 94781 ];
+		pFnBaseChange = (UFunction*) UObject::GObjObjects()->Data[ 89126 ];
 
 	ADunDefTower_TripPhysical_eventBaseChange_Parms BaseChange_Parms;
 
@@ -7853,7 +7718,7 @@ bool ADunDefTower_TripPhysical::ForceMoveActor ( class AActor* Mover, struct FVe
 	static UFunction* pFnForceMoveActor = NULL;
 
 	if ( ! pFnForceMoveActor )
-		pFnForceMoveActor = (UFunction*) UObject::GObjObjects()->Data[ 94770 ];
+		pFnForceMoveActor = (UFunction*) UObject::GObjObjects()->Data[ 89115 ];
 
 	ADunDefTower_TripPhysical_execForceMoveActor_Parms ForceMoveActor_Parms;
 	ForceMoveActor_Parms.Mover = Mover;
@@ -7875,7 +7740,7 @@ void ADunDefTower_TripPhysical::GetSelectionLocation ( class AActor* wantsLocati
 	static UFunction* pFnGetSelectionLocation = NULL;
 
 	if ( ! pFnGetSelectionLocation )
-		pFnGetSelectionLocation = (UFunction*) UObject::GObjObjects()->Data[ 94763 ];
+		pFnGetSelectionLocation = (UFunction*) UObject::GObjObjects()->Data[ 89108 ];
 
 	ADunDefTower_TripPhysical_execGetSelectionLocation_Parms GetSelectionLocation_Parms;
 	GetSelectionLocation_Parms.wantsLocation = wantsLocation;
@@ -7896,7 +7761,7 @@ bool ADunDefTower_TripPhysical::IsPhysicalTower ( )
 	static UFunction* pFnIsPhysicalTower = NULL;
 
 	if ( ! pFnIsPhysicalTower )
-		pFnIsPhysicalTower = (UFunction*) UObject::GObjObjects()->Data[ 94761 ];
+		pFnIsPhysicalTower = (UFunction*) UObject::GObjObjects()->Data[ 89106 ];
 
 	ADunDefTower_TripPhysical_execIsPhysicalTower_Parms IsPhysicalTower_Parms;
 
@@ -7916,7 +7781,7 @@ void ADunDefTower_TripPhysical::DrawMiniMapIcon ( class UCanvas* Canvas, class A
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 94751 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 89096 ];
 
 	ADunDefTower_TripPhysical_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -7934,7 +7799,7 @@ void ADunDefTower_TripPhysical::UpdateMovementBeams ( )
 	static UFunction* pFnUpdateMovementBeams = NULL;
 
 	if ( ! pFnUpdateMovementBeams )
-		pFnUpdateMovementBeams = (UFunction*) UObject::GObjObjects()->Data[ 94744 ];
+		pFnUpdateMovementBeams = (UFunction*) UObject::GObjObjects()->Data[ 89089 ];
 
 	ADunDefTower_TripPhysical_execUpdateMovementBeams_Parms UpdateMovementBeams_Parms;
 
@@ -7952,7 +7817,7 @@ bool ADunDefTower_TripPhysical::IsPreviousToolTipActor ( class ADunDefPlayerCont
 	static UFunction* pFnIsPreviousToolTipActor = NULL;
 
 	if ( ! pFnIsPreviousToolTipActor )
-		pFnIsPreviousToolTipActor = (UFunction*) UObject::GObjObjects()->Data[ 94741 ];
+		pFnIsPreviousToolTipActor = (UFunction*) UObject::GObjObjects()->Data[ 89086 ];
 
 	ADunDefTower_TripPhysical_execIsPreviousToolTipActor_Parms IsPreviousToolTipActor_Parms;
 	IsPreviousToolTipActor_Parms.ownerCheck = ownerCheck;
@@ -7971,7 +7836,7 @@ void ADunDefTower_TripPhysical::UpdateDamageFlashing ( )
 	static UFunction* pFnUpdateDamageFlashing = NULL;
 
 	if ( ! pFnUpdateDamageFlashing )
-		pFnUpdateDamageFlashing = (UFunction*) UObject::GObjObjects()->Data[ 94739 ];
+		pFnUpdateDamageFlashing = (UFunction*) UObject::GObjObjects()->Data[ 89084 ];
 
 	ADunDefTower_TripPhysical_execUpdateDamageFlashing_Parms UpdateDamageFlashing_Parms;
 
@@ -7987,7 +7852,7 @@ void ADunDefTower_TripPhysical::PerformFullHeal ( )
 	static UFunction* pFnPerformFullHeal = NULL;
 
 	if ( ! pFnPerformFullHeal )
-		pFnPerformFullHeal = (UFunction*) UObject::GObjObjects()->Data[ 94738 ];
+		pFnPerformFullHeal = (UFunction*) UObject::GObjObjects()->Data[ 89083 ];
 
 	ADunDefTower_TripPhysical_execPerformFullHeal_Parms PerformFullHeal_Parms;
 
@@ -8007,7 +7872,7 @@ bool ADunDefTower_TripPhysical::eventHealDamage ( int Amount, class AController*
 	static UFunction* pFnHealDamage = NULL;
 
 	if ( ! pFnHealDamage )
-		pFnHealDamage = (UFunction*) UObject::GObjObjects()->Data[ 94733 ];
+		pFnHealDamage = (UFunction*) UObject::GObjObjects()->Data[ 89078 ];
 
 	ADunDefTower_TripPhysical_eventHealDamage_Parms HealDamage_Parms;
 	HealDamage_Parms.Amount = Amount;
@@ -8031,7 +7896,7 @@ float ADunDefTower_TripPhysical::IncrementRepair ( float CurrentMana, float Delt
 	static UFunction* pFnIncrementRepair = NULL;
 
 	if ( ! pFnIncrementRepair )
-		pFnIncrementRepair = (UFunction*) UObject::GObjObjects()->Data[ 94729 ];
+		pFnIncrementRepair = (UFunction*) UObject::GObjObjects()->Data[ 89074 ];
 
 	ADunDefTower_TripPhysical_execIncrementRepair_Parms IncrementRepair_Parms;
 	IncrementRepair_Parms.CurrentMana = CurrentMana;
@@ -8054,7 +7919,7 @@ float ADunDefTower_TripPhysical::GetCurrentRepairPercentage ( float StartRepairT
 	static UFunction* pFnGetCurrentRepairPercentage = NULL;
 
 	if ( ! pFnGetCurrentRepairPercentage )
-		pFnGetCurrentRepairPercentage = (UFunction*) UObject::GObjObjects()->Data[ 94725 ];
+		pFnGetCurrentRepairPercentage = (UFunction*) UObject::GObjObjects()->Data[ 89070 ];
 
 	ADunDefTower_TripPhysical_execGetCurrentRepairPercentage_Parms GetCurrentRepairPercentage_Parms;
 	GetCurrentRepairPercentage_Parms.StartRepairTime = StartRepairTime;
@@ -8074,7 +7939,7 @@ void ADunDefTower_TripPhysical::StartRepair ( )
 	static UFunction* pFnStartRepair = NULL;
 
 	if ( ! pFnStartRepair )
-		pFnStartRepair = (UFunction*) UObject::GObjObjects()->Data[ 94724 ];
+		pFnStartRepair = (UFunction*) UObject::GObjObjects()->Data[ 89069 ];
 
 	ADunDefTower_TripPhysical_execStartRepair_Parms StartRepair_Parms;
 
@@ -8091,7 +7956,7 @@ float ADunDefTower_TripPhysical::GetTimeToRepair ( )
 	static UFunction* pFnGetTimeToRepair = NULL;
 
 	if ( ! pFnGetTimeToRepair )
-		pFnGetTimeToRepair = (UFunction*) UObject::GObjObjects()->Data[ 94722 ];
+		pFnGetTimeToRepair = (UFunction*) UObject::GObjObjects()->Data[ 89067 ];
 
 	ADunDefTower_TripPhysical_execGetTimeToRepair_Parms GetTimeToRepair_Parms;
 
@@ -8110,7 +7975,7 @@ float ADunDefTower_TripPhysical::GetCostToRepair ( )
 	static UFunction* pFnGetCostToRepair = NULL;
 
 	if ( ! pFnGetCostToRepair )
-		pFnGetCostToRepair = (UFunction*) UObject::GObjObjects()->Data[ 94720 ];
+		pFnGetCostToRepair = (UFunction*) UObject::GObjObjects()->Data[ 89065 ];
 
 	ADunDefTower_TripPhysical_execGetCostToRepair_Parms GetCostToRepair_Parms;
 
@@ -8129,7 +7994,7 @@ float ADunDefTower_TripPhysical::GetTimeOfTotalRepair ( )
 	static UFunction* pFnGetTimeOfTotalRepair = NULL;
 
 	if ( ! pFnGetTimeOfTotalRepair )
-		pFnGetTimeOfTotalRepair = (UFunction*) UObject::GObjObjects()->Data[ 94718 ];
+		pFnGetTimeOfTotalRepair = (UFunction*) UObject::GObjObjects()->Data[ 89063 ];
 
 	ADunDefTower_TripPhysical_execGetTimeOfTotalRepair_Parms GetTimeOfTotalRepair_Parms;
 
@@ -8148,7 +8013,7 @@ struct FString ADunDefTower_TripPhysical::GetToolTipText ( )
 	static UFunction* pFnGetToolTipText = NULL;
 
 	if ( ! pFnGetToolTipText )
-		pFnGetToolTipText = (UFunction*) UObject::GObjObjects()->Data[ 94716 ];
+		pFnGetToolTipText = (UFunction*) UObject::GObjObjects()->Data[ 89061 ];
 
 	ADunDefTower_TripPhysical_execGetToolTipText_Parms GetToolTipText_Parms;
 
@@ -8167,7 +8032,7 @@ float ADunDefTower_TripPhysical::GetGlobalTowerHealthMultiplier ( )
 	static UFunction* pFnGetGlobalTowerHealthMultiplier = NULL;
 
 	if ( ! pFnGetGlobalTowerHealthMultiplier )
-		pFnGetGlobalTowerHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 94714 ];
+		pFnGetGlobalTowerHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 89059 ];
 
 	ADunDefTower_TripPhysical_execGetGlobalTowerHealthMultiplier_Parms GetGlobalTowerHealthMultiplier_Parms;
 
@@ -8188,7 +8053,7 @@ void ADunDefTower_TripPhysical::eventBump ( class AActor* Other, class UPrimitiv
 	static UFunction* pFnBump = NULL;
 
 	if ( ! pFnBump )
-		pFnBump = (UFunction*) UObject::GObjObjects()->Data[ 94710 ];
+		pFnBump = (UFunction*) UObject::GObjObjects()->Data[ 89055 ];
 
 	ADunDefTower_TripPhysical_eventBump_Parms Bump_Parms;
 	Bump_Parms.Other = Other;
@@ -8208,7 +8073,7 @@ class UPrimitiveComponent* ADunDefTower_TripPhysical::GetOverrideTargetComponent
 	static UFunction* pFnGetOverrideTargetComponent = NULL;
 
 	if ( ! pFnGetOverrideTargetComponent )
-		pFnGetOverrideTargetComponent = (UFunction*) UObject::GObjObjects()->Data[ 94708 ];
+		pFnGetOverrideTargetComponent = (UFunction*) UObject::GObjObjects()->Data[ 89053 ];
 
 	ADunDefTower_TripPhysical_execGetOverrideTargetComponent_Parms GetOverrideTargetComponent_Parms;
 
@@ -8230,7 +8095,7 @@ void ADunDefTower_TripPhysical::DrawToolTip ( class UCanvas* C, int PosX, int Po
 	static UFunction* pFnDrawToolTip = NULL;
 
 	if ( ! pFnDrawToolTip )
-		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 94703 ];
+		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 89048 ];
 
 	ADunDefTower_TripPhysical_execDrawToolTip_Parms DrawToolTip_Parms;
 	DrawToolTip_Parms.C = C;
@@ -8251,7 +8116,7 @@ float ADunDefTower_TripPhysical::GetHealthPercent ( )
 	static UFunction* pFnGetHealthPercent = NULL;
 
 	if ( ! pFnGetHealthPercent )
-		pFnGetHealthPercent = (UFunction*) UObject::GObjObjects()->Data[ 94701 ];
+		pFnGetHealthPercent = (UFunction*) UObject::GObjObjects()->Data[ 89046 ];
 
 	ADunDefTower_TripPhysical_execGetHealthPercent_Parms GetHealthPercent_Parms;
 
@@ -8271,7 +8136,7 @@ int ADunDefTower_TripPhysical::GetHealth ( unsigned long bGetMax )
 	static UFunction* pFnGetHealth = NULL;
 
 	if ( ! pFnGetHealth )
-		pFnGetHealth = (UFunction*) UObject::GObjObjects()->Data[ 94698 ];
+		pFnGetHealth = (UFunction*) UObject::GObjObjects()->Data[ 89043 ];
 
 	ADunDefTower_TripPhysical_execGetHealth_Parms GetHealth_Parms;
 	GetHealth_Parms.bGetMax = bGetMax;
@@ -8292,7 +8157,7 @@ void ADunDefTower_TripPhysical::AddHealth ( int howMuch, unsigned long bDontDisp
 	static UFunction* pFnAddHealth = NULL;
 
 	if ( ! pFnAddHealth )
-		pFnAddHealth = (UFunction*) UObject::GObjObjects()->Data[ 94694 ];
+		pFnAddHealth = (UFunction*) UObject::GObjObjects()->Data[ 89039 ];
 
 	ADunDefTower_TripPhysical_execAddHealth_Parms AddHealth_Parms;
 	AddHealth_Parms.howMuch = howMuch;
@@ -8311,7 +8176,7 @@ void ADunDefTower_TripPhysical::ActivateBeamEffects ( unsigned long bActive )
 	static UFunction* pFnActivateBeamEffects = NULL;
 
 	if ( ! pFnActivateBeamEffects )
-		pFnActivateBeamEffects = (UFunction*) UObject::GObjObjects()->Data[ 94692 ];
+		pFnActivateBeamEffects = (UFunction*) UObject::GObjObjects()->Data[ 89037 ];
 
 	ADunDefTower_TripPhysical_execActivateBeamEffects_Parms ActivateBeamEffects_Parms;
 	ActivateBeamEffects_Parms.bActive = bActive;
@@ -8328,7 +8193,7 @@ void ADunDefTower_TripPhysical::ShutDownBeamEffects ( )
 	static UFunction* pFnShutDownBeamEffects = NULL;
 
 	if ( ! pFnShutDownBeamEffects )
-		pFnShutDownBeamEffects = (UFunction*) UObject::GObjObjects()->Data[ 94691 ];
+		pFnShutDownBeamEffects = (UFunction*) UObject::GObjObjects()->Data[ 89036 ];
 
 	ADunDefTower_TripPhysical_execShutDownBeamEffects_Parms ShutDownBeamEffects_Parms;
 
@@ -8344,7 +8209,7 @@ void ADunDefTower_TripPhysical::ActivateTrip ( )
 	static UFunction* pFnActivateTrip = NULL;
 
 	if ( ! pFnActivateTrip )
-		pFnActivateTrip = (UFunction*) UObject::GObjObjects()->Data[ 94690 ];
+		pFnActivateTrip = (UFunction*) UObject::GObjObjects()->Data[ 89035 ];
 
 	ADunDefTower_TripPhysical_execActivateTrip_Parms ActivateTrip_Parms;
 
@@ -8362,7 +8227,7 @@ bool ADunDefTower_TripPhysical::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 94687 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 89032 ];
 
 	ADunDefTower_TripPhysical_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -8383,7 +8248,7 @@ bool ADunDefTower_TripPhysical::NeedsRepair ( unsigned long requireFullHealth )
 	static UFunction* pFnNeedsRepair = NULL;
 
 	if ( ! pFnNeedsRepair )
-		pFnNeedsRepair = (UFunction*) UObject::GObjObjects()->Data[ 94684 ];
+		pFnNeedsRepair = (UFunction*) UObject::GObjObjects()->Data[ 89029 ];
 
 	ADunDefTower_TripPhysical_execNeedsRepair_Parms NeedsRepair_Parms;
 	NeedsRepair_Parms.requireFullHealth = requireFullHealth;
@@ -8403,7 +8268,7 @@ void ADunDefTower_TripPhysical::SubtractHealth ( int DamageAmount )
 	static UFunction* pFnSubtractHealth = NULL;
 
 	if ( ! pFnSubtractHealth )
-		pFnSubtractHealth = (UFunction*) UObject::GObjObjects()->Data[ 94682 ];
+		pFnSubtractHealth = (UFunction*) UObject::GObjObjects()->Data[ 89027 ];
 
 	ADunDefTower_TripPhysical_execSubtractHealth_Parms SubtractHealth_Parms;
 	SubtractHealth_Parms.DamageAmount = DamageAmount;
@@ -8427,7 +8292,7 @@ void ADunDefTower_TripPhysical::eventTakeDamage ( int DamageAmount, class AContr
 	static UFunction* pFnTakeDamage = NULL;
 
 	if ( ! pFnTakeDamage )
-		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 94674 ];
+		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 89019 ];
 
 	ADunDefTower_TripPhysical_eventTakeDamage_Parms TakeDamage_Parms;
 	TakeDamage_Parms.DamageAmount = DamageAmount;
@@ -8451,7 +8316,7 @@ float ADunDefTower_TripPhysical::GetAttackRangeOffset ( )
 	static UFunction* pFnGetAttackRangeOffset = NULL;
 
 	if ( ! pFnGetAttackRangeOffset )
-		pFnGetAttackRangeOffset = (UFunction*) UObject::GObjObjects()->Data[ 94669 ];
+		pFnGetAttackRangeOffset = (UFunction*) UObject::GObjObjects()->Data[ 89014 ];
 
 	ADunDefTower_TripPhysical_execGetAttackRangeOffset_Parms GetAttackRangeOffset_Parms;
 
@@ -8471,7 +8336,7 @@ struct FVector ADunDefTower_TripPhysical::GetTargetingLocation ( class AActor* R
 	static UFunction* pFnGetTargetingLocation = NULL;
 
 	if ( ! pFnGetTargetingLocation )
-		pFnGetTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 94666 ];
+		pFnGetTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 89011 ];
 
 	ADunDefTower_TripPhysical_execGetTargetingLocation_Parms GetTargetingLocation_Parms;
 	GetTargetingLocation_Parms.RequestedBy = RequestedBy;
@@ -8491,7 +8356,7 @@ float ADunDefTower_TripPhysical::GetPhysicalTowerDamageMultiplier ( )
 	static UFunction* pFnGetPhysicalTowerDamageMultiplier = NULL;
 
 	if ( ! pFnGetPhysicalTowerDamageMultiplier )
-		pFnGetPhysicalTowerDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 94664 ];
+		pFnGetPhysicalTowerDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 89009 ];
 
 	ADunDefTower_TripPhysical_execGetPhysicalTowerDamageMultiplier_Parms GetPhysicalTowerDamageMultiplier_Parms;
 
@@ -8510,7 +8375,7 @@ float ADunDefTower_TripPhysical::GetPhysicalTowerHealthMultiplier ( )
 	static UFunction* pFnGetPhysicalTowerHealthMultiplier = NULL;
 
 	if ( ! pFnGetPhysicalTowerHealthMultiplier )
-		pFnGetPhysicalTowerHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 94662 ];
+		pFnGetPhysicalTowerHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 89007 ];
 
 	ADunDefTower_TripPhysical_execGetPhysicalTowerHealthMultiplier_Parms GetPhysicalTowerHealthMultiplier_Parms;
 
@@ -8529,7 +8394,7 @@ float ADunDefTower_TripPhysical::GetAuraDamageMultiplier ( )
 	static UFunction* pFnGetAuraDamageMultiplier = NULL;
 
 	if ( ! pFnGetAuraDamageMultiplier )
-		pFnGetAuraDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 94660 ];
+		pFnGetAuraDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 89005 ];
 
 	ADunDefTower_TripPhysical_execGetAuraDamageMultiplier_Parms GetAuraDamageMultiplier_Parms;
 
@@ -8548,7 +8413,7 @@ bool ADunDefTower_TripPhysical::UseForTowerSelectionPassThrough ( )
 	static UFunction* pFnUseForTowerSelectionPassThrough = NULL;
 
 	if ( ! pFnUseForTowerSelectionPassThrough )
-		pFnUseForTowerSelectionPassThrough = (UFunction*) UObject::GObjObjects()->Data[ 94658 ];
+		pFnUseForTowerSelectionPassThrough = (UFunction*) UObject::GObjObjects()->Data[ 89003 ];
 
 	ADunDefTower_TripPhysical_execUseForTowerSelectionPassThrough_Parms UseForTowerSelectionPassThrough_Parms;
 
@@ -8568,7 +8433,7 @@ float ADunDefTower_TripPhysical::GetTowerTargetingDesirability ( class ADunDefTo
 	static UFunction* pFnGetTowerTargetingDesirability = NULL;
 
 	if ( ! pFnGetTowerTargetingDesirability )
-		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 94655 ];
+		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 89000 ];
 
 	ADunDefTower_TripPhysical_execGetTowerTargetingDesirability_Parms GetTowerTargetingDesirability_Parms;
 	GetTowerTargetingDesirability_Parms.forTower = forTower;
@@ -8590,7 +8455,7 @@ float ADunDefTower_TripPhysical::GetPlayerTargetingDesirability ( class ADunDefP
 	static UFunction* pFnGetPlayerTargetingDesirability = NULL;
 
 	if ( ! pFnGetPlayerTargetingDesirability )
-		pFnGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 94650 ];
+		pFnGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 88995 ];
 
 	ADunDefTower_TripPhysical_execGetPlayerTargetingDesirability_Parms GetPlayerTargetingDesirability_Parms;
 	GetPlayerTargetingDesirability_Parms.forController = forController;
@@ -8610,7 +8475,7 @@ void ADunDefTower_TripPhysical::ActivatePlaneBeam ( )
 	static UFunction* pFnActivatePlaneBeam = NULL;
 
 	if ( ! pFnActivatePlaneBeam )
-		pFnActivatePlaneBeam = (UFunction*) UObject::GObjObjects()->Data[ 94648 ];
+		pFnActivatePlaneBeam = (UFunction*) UObject::GObjObjects()->Data[ 88993 ];
 
 	ADunDefTower_TripPhysical_execActivatePlaneBeam_Parms ActivatePlaneBeam_Parms;
 
@@ -8626,7 +8491,7 @@ void ADunDefTower_TripPhysical::ActivateBeam ( )
 	static UFunction* pFnActivateBeam = NULL;
 
 	if ( ! pFnActivateBeam )
-		pFnActivateBeam = (UFunction*) UObject::GObjObjects()->Data[ 94647 ];
+		pFnActivateBeam = (UFunction*) UObject::GObjObjects()->Data[ 88992 ];
 
 	ADunDefTower_TripPhysical_execActivateBeam_Parms ActivateBeam_Parms;
 
@@ -8642,7 +8507,7 @@ void ADunDefTower_TripPhysical::ModifyTranslation ( )
 	static UFunction* pFnModifyTranslation = NULL;
 
 	if ( ! pFnModifyTranslation )
-		pFnModifyTranslation = (UFunction*) UObject::GObjObjects()->Data[ 94643 ];
+		pFnModifyTranslation = (UFunction*) UObject::GObjObjects()->Data[ 88988 ];
 
 	ADunDefTower_TripPhysical_execModifyTranslation_Parms ModifyTranslation_Parms;
 
@@ -8658,7 +8523,7 @@ void ADunDefTower_TripPhysical::SetUpCollisionMesh ( )
 	static UFunction* pFnSetUpCollisionMesh = NULL;
 
 	if ( ! pFnSetUpCollisionMesh )
-		pFnSetUpCollisionMesh = (UFunction*) UObject::GObjObjects()->Data[ 94642 ];
+		pFnSetUpCollisionMesh = (UFunction*) UObject::GObjObjects()->Data[ 88987 ];
 
 	ADunDefTower_TripPhysical_execSetUpCollisionMesh_Parms SetUpCollisionMesh_Parms;
 
@@ -8675,7 +8540,7 @@ struct FVector ADunDefTower_TripPhysical::GetCollisionPoint ( )
 	static UFunction* pFnGetCollisionPoint = NULL;
 
 	if ( ! pFnGetCollisionPoint )
-		pFnGetCollisionPoint = (UFunction*) UObject::GObjObjects()->Data[ 94614 ];
+		pFnGetCollisionPoint = (UFunction*) UObject::GObjObjects()->Data[ 88959 ];
 
 	ADunDefTower_TripPhysical_execGetCollisionPoint_Parms GetCollisionPoint_Parms;
 
@@ -8694,7 +8559,7 @@ struct FVector ADunDefTower_TripPhysical::GetSecondBeamPoint ( )
 	static UFunction* pFnGetSecondBeamPoint = NULL;
 
 	if ( ! pFnGetSecondBeamPoint )
-		pFnGetSecondBeamPoint = (UFunction*) UObject::GObjObjects()->Data[ 94610 ];
+		pFnGetSecondBeamPoint = (UFunction*) UObject::GObjObjects()->Data[ 88955 ];
 
 	ADunDefTower_TripPhysical_execGetSecondBeamPoint_Parms GetSecondBeamPoint_Parms;
 
@@ -8713,7 +8578,7 @@ void ADunDefTower_TripPhysical::ScaleInBeams ( float DeltaTime )
 	static UFunction* pFnScaleInBeams = NULL;
 
 	if ( ! pFnScaleInBeams )
-		pFnScaleInBeams = (UFunction*) UObject::GObjObjects()->Data[ 94608 ];
+		pFnScaleInBeams = (UFunction*) UObject::GObjObjects()->Data[ 88953 ];
 
 	ADunDefTower_TripPhysical_execScaleInBeams_Parms ScaleInBeams_Parms;
 	ScaleInBeams_Parms.DeltaTime = DeltaTime;
@@ -8730,7 +8595,7 @@ void ADunDefTower_TripPhysical::StartBeams ( )
 	static UFunction* pFnStartBeams = NULL;
 
 	if ( ! pFnStartBeams )
-		pFnStartBeams = (UFunction*) UObject::GObjObjects()->Data[ 94607 ];
+		pFnStartBeams = (UFunction*) UObject::GObjObjects()->Data[ 88952 ];
 
 	ADunDefTower_TripPhysical_execStartBeams_Parms StartBeams_Parms;
 
@@ -8746,7 +8611,7 @@ void ADunDefTower_TripPhysical::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 94606 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 88951 ];
 
 	ADunDefTower_TripPhysical_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -8764,7 +8629,7 @@ void ADunDefTower_TripPhysical::SetPlacementPoints ( TArray< struct FVector > Sp
 	static UFunction* pFnSetPlacementPoints = NULL;
 
 	if ( ! pFnSetPlacementPoints )
-		pFnSetPlacementPoints = (UFunction*) UObject::GObjObjects()->Data[ 94602 ];
+		pFnSetPlacementPoints = (UFunction*) UObject::GObjObjects()->Data[ 88947 ];
 
 	ADunDefTower_TripPhysical_execSetPlacementPoints_Parms SetPlacementPoints_Parms;
 	memcpy ( &SetPlacementPoints_Parms.SpawnPoints, &SpawnPoints, 0xC );
@@ -8783,7 +8648,7 @@ void ADunDefTower_TripPhysical::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 94600 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 88945 ];
 
 	ADunDefTower_TripPhysical_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -8802,7 +8667,7 @@ float ADunDefDecoyTarget::DTGetEnemyTargetingDesirability ( class ADunDefEnemyCo
 	static UFunction* pFnDTGetEnemyTargetingDesirability = NULL;
 
 	if ( ! pFnDTGetEnemyTargetingDesirability )
-		pFnDTGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 90068 ];
+		pFnDTGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 84450 ];
 
 	ADunDefDecoyTarget_execDTGetEnemyTargetingDesirability_Parms DTGetEnemyTargetingDesirability_Parms;
 	DTGetEnemyTargetingDesirability_Parms.forController = forController;
@@ -8823,7 +8688,7 @@ bool ADunDefDecoyTarget::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 90065 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 84447 ];
 
 	ADunDefDecoyTarget_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -8842,7 +8707,7 @@ void ADunDefDecoyTarget::PlayDeath ( )
 	static UFunction* pFnPlayDeath = NULL;
 
 	if ( ! pFnPlayDeath )
-		pFnPlayDeath = (UFunction*) UObject::GObjObjects()->Data[ 90064 ];
+		pFnPlayDeath = (UFunction*) UObject::GObjObjects()->Data[ 84446 ];
 
 	ADunDefDecoyTarget_execPlayDeath_Parms PlayDeath_Parms;
 
@@ -8863,7 +8728,7 @@ bool ADunDefDecoyTarget::AllowHeroGUID ( int GUID1, int GUID2, int GUID3, int GU
 	static UFunction* pFnAllowHeroGUID = NULL;
 
 	if ( ! pFnAllowHeroGUID )
-		pFnAllowHeroGUID = (UFunction*) UObject::GObjObjects()->Data[ 90058 ];
+		pFnAllowHeroGUID = (UFunction*) UObject::GObjObjects()->Data[ 84440 ];
 
 	ADunDefDecoyTarget_execAllowHeroGUID_Parms AllowHeroGUID_Parms;
 	AllowHeroGUID_Parms.GUID1 = GUID1;
@@ -8886,7 +8751,7 @@ bool ADunDefDecoyTarget::CanDetonate ( )
 	static UFunction* pFnCanDetonate = NULL;
 
 	if ( ! pFnCanDetonate )
-		pFnCanDetonate = (UFunction*) UObject::GObjObjects()->Data[ 90056 ];
+		pFnCanDetonate = (UFunction*) UObject::GObjObjects()->Data[ 84438 ];
 
 	ADunDefDecoyTarget_execCanDetonate_Parms CanDetonate_Parms;
 
@@ -8905,7 +8770,7 @@ void ADunDefDecoyTarget::Detonate ( int SetDetonationsNumber )
 	static UFunction* pFnDetonate = NULL;
 
 	if ( ! pFnDetonate )
-		pFnDetonate = (UFunction*) UObject::GObjObjects()->Data[ 90054 ];
+		pFnDetonate = (UFunction*) UObject::GObjObjects()->Data[ 84436 ];
 
 	ADunDefDecoyTarget_execDetonate_Parms Detonate_Parms;
 	Detonate_Parms.SetDetonationsNumber = SetDetonationsNumber;
@@ -8922,7 +8787,7 @@ void ADunDefDecoyTarget::SelfDestruct ( )
 	static UFunction* pFnSelfDestruct = NULL;
 
 	if ( ! pFnSelfDestruct )
-		pFnSelfDestruct = (UFunction*) UObject::GObjObjects()->Data[ 90053 ];
+		pFnSelfDestruct = (UFunction*) UObject::GObjObjects()->Data[ 84435 ];
 
 	ADunDefDecoyTarget_execSelfDestruct_Parms SelfDestruct_Parms;
 
@@ -8939,7 +8804,7 @@ void ADunDefDecoyTarget::ScaleForHeroModifiers ( unsigned long IsFirstTime )
 	static UFunction* pFnScaleForHeroModifiers = NULL;
 
 	if ( ! pFnScaleForHeroModifiers )
-		pFnScaleForHeroModifiers = (UFunction*) UObject::GObjObjects()->Data[ 90051 ];
+		pFnScaleForHeroModifiers = (UFunction*) UObject::GObjObjects()->Data[ 84433 ];
 
 	ADunDefDecoyTarget_execScaleForHeroModifiers_Parms ScaleForHeroModifiers_Parms;
 	ScaleForHeroModifiers_Parms.IsFirstTime = IsFirstTime;
@@ -8958,7 +8823,7 @@ bool ADunDefDecoyTarget::IsClassOnIgnoreList ( class UClass* ActorClass )
 	static UFunction* pFnIsClassOnIgnoreList = NULL;
 
 	if ( ! pFnIsClassOnIgnoreList )
-		pFnIsClassOnIgnoreList = (UFunction*) UObject::GObjObjects()->Data[ 90047 ];
+		pFnIsClassOnIgnoreList = (UFunction*) UObject::GObjObjects()->Data[ 84429 ];
 
 	ADunDefDecoyTarget_execIsClassOnIgnoreList_Parms IsClassOnIgnoreList_Parms;
 	IsClassOnIgnoreList_Parms.ActorClass = ActorClass;
@@ -8978,7 +8843,7 @@ bool ADunDefDecoyTarget::SetMaxNumberOfAttackers ( )
 	static UFunction* pFnSetMaxNumberOfAttackers = NULL;
 
 	if ( ! pFnSetMaxNumberOfAttackers )
-		pFnSetMaxNumberOfAttackers = (UFunction*) UObject::GObjObjects()->Data[ 90045 ];
+		pFnSetMaxNumberOfAttackers = (UFunction*) UObject::GObjObjects()->Data[ 84427 ];
 
 	ADunDefDecoyTarget_execSetMaxNumberOfAttackers_Parms SetMaxNumberOfAttackers_Parms;
 
@@ -8996,7 +8861,7 @@ void ADunDefDecoyTarget::SetActiveTime ( )
 	static UFunction* pFnSetActiveTime = NULL;
 
 	if ( ! pFnSetActiveTime )
-		pFnSetActiveTime = (UFunction*) UObject::GObjObjects()->Data[ 90043 ];
+		pFnSetActiveTime = (UFunction*) UObject::GObjObjects()->Data[ 84425 ];
 
 	ADunDefDecoyTarget_execSetActiveTime_Parms SetActiveTime_Parms;
 
@@ -9012,7 +8877,7 @@ void ADunDefDecoyTarget::DoPoke ( )
 	static UFunction* pFnDoPoke = NULL;
 
 	if ( ! pFnDoPoke )
-		pFnDoPoke = (UFunction*) UObject::GObjObjects()->Data[ 90040 ];
+		pFnDoPoke = (UFunction*) UObject::GObjObjects()->Data[ 84422 ];
 
 	ADunDefDecoyTarget_execDoPoke_Parms DoPoke_Parms;
 
@@ -9028,7 +8893,7 @@ void ADunDefDecoyTarget::SetDesirability ( )
 	static UFunction* pFnSetDesirability = NULL;
 
 	if ( ! pFnSetDesirability )
-		pFnSetDesirability = (UFunction*) UObject::GObjObjects()->Data[ 90038 ];
+		pFnSetDesirability = (UFunction*) UObject::GObjObjects()->Data[ 84420 ];
 
 	ADunDefDecoyTarget_execSetDesirability_Parms SetDesirability_Parms;
 
@@ -9044,7 +8909,7 @@ void ADunDefDecoyTarget::SetHealth ( )
 	static UFunction* pFnSetHealth = NULL;
 
 	if ( ! pFnSetHealth )
-		pFnSetHealth = (UFunction*) UObject::GObjObjects()->Data[ 90036 ];
+		pFnSetHealth = (UFunction*) UObject::GObjObjects()->Data[ 84418 ];
 
 	ADunDefDecoyTarget_execSetHealth_Parms SetHealth_Parms;
 
@@ -9061,7 +8926,7 @@ void ADunDefDecoyTarget::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 90033 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 84415 ];
 
 	ADunDefDecoyTarget_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -9080,7 +8945,7 @@ void ADunDefDecoyTarget::DrawMiniMapIcon ( class UCanvas* Canvas, class ADunDefM
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 90028 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 84410 ];
 
 	ADunDefDecoyTarget_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -9098,7 +8963,7 @@ void ADunDefDecoyTarget::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 90027 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 84409 ];
 
 	ADunDefDecoyTarget_eventDestroyed_Parms Destroyed_Parms;
 
@@ -9114,7 +8979,7 @@ void ADunDefDecoyTarget::PostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90026 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84408 ];
 
 	ADunDefDecoyTarget_execPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -9135,7 +9000,7 @@ bool ADunDefDropOffPoint::PreventTowerAtPoint ( class ADunDefPlayerController* P
 	static UFunction* pFnPreventTowerAtPoint = NULL;
 
 	if ( ! pFnPreventTowerAtPoint )
-		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 90302 ];
+		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 84684 ];
 
 	ADunDefDropOffPoint_execPreventTowerAtPoint_Parms PreventTowerAtPoint_Parms;
 	PreventTowerAtPoint_Parms.PC = PC;
@@ -9161,7 +9026,7 @@ bool ADunDefDropOffPoint::AllowTowerAtPoint ( class ADunDefPlayerController* PC,
 	static UFunction* pFnAllowTowerAtPoint = NULL;
 
 	if ( ! pFnAllowTowerAtPoint )
-		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 90297 ];
+		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 84679 ];
 
 	ADunDefDropOffPoint_execAllowTowerAtPoint_Parms AllowTowerAtPoint_Parms;
 	AllowTowerAtPoint_Parms.PC = PC;
@@ -9183,7 +9048,7 @@ bool ADunDefDropOffPoint::CheckAllowance ( )
 	static UFunction* pFnCheckAllowance = NULL;
 
 	if ( ! pFnCheckAllowance )
-		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 90295 ];
+		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 84677 ];
 
 	ADunDefDropOffPoint_execCheckAllowance_Parms CheckAllowance_Parms;
 
@@ -9203,7 +9068,7 @@ float ADunDefDropOffPoint::DTGetEnemyTargetingDesirability ( class ADunDefEnemyC
 	static UFunction* pFnDTGetEnemyTargetingDesirability = NULL;
 
 	if ( ! pFnDTGetEnemyTargetingDesirability )
-		pFnDTGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 90292 ];
+		pFnDTGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 84674 ];
 
 	ADunDefDropOffPoint_execDTGetEnemyTargetingDesirability_Parms DTGetEnemyTargetingDesirability_Parms;
 	DTGetEnemyTargetingDesirability_Parms.forController = forController;
@@ -9222,7 +9087,7 @@ void ADunDefDropOffPoint::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90290 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84672 ];
 
 	ADunDefDropOffPoint_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -9238,7 +9103,7 @@ void ADunDefDropOffPoint::NotifyPackageDestroyed ( )
 	static UFunction* pFnNotifyPackageDestroyed = NULL;
 
 	if ( ! pFnNotifyPackageDestroyed )
-		pFnNotifyPackageDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 90289 ];
+		pFnNotifyPackageDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 84671 ];
 
 	ADunDefDropOffPoint_execNotifyPackageDestroyed_Parms NotifyPackageDestroyed_Parms;
 
@@ -9258,7 +9123,7 @@ void ADunDefDropOffPoint::Died ( class AController* EventInstigator, struct FVec
 	static UFunction* pFnDied = NULL;
 
 	if ( ! pFnDied )
-		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 90283 ];
+		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 84665 ];
 
 	ADunDefDropOffPoint_execDied_Parms Died_Parms;
 	Died_Parms.EventInstigator = EventInstigator;
@@ -9278,7 +9143,7 @@ void ADunDefDropOffPoint::NotifyHealthChange ( )
 	static UFunction* pFnNotifyHealthChange = NULL;
 
 	if ( ! pFnNotifyHealthChange )
-		pFnNotifyHealthChange = (UFunction*) UObject::GObjObjects()->Data[ 90282 ];
+		pFnNotifyHealthChange = (UFunction*) UObject::GObjObjects()->Data[ 84664 ];
 
 	ADunDefDropOffPoint_execNotifyHealthChange_Parms NotifyHealthChange_Parms;
 
@@ -9296,7 +9161,7 @@ void ADunDefDropOffPoint::PlayHitEffect ( class UClass* DamageType, struct FVect
 	static UFunction* pFnPlayHitEffect = NULL;
 
 	if ( ! pFnPlayHitEffect )
-		pFnPlayHitEffect = (UFunction*) UObject::GObjObjects()->Data[ 90279 ];
+		pFnPlayHitEffect = (UFunction*) UObject::GObjObjects()->Data[ 84661 ];
 
 	ADunDefDropOffPoint_execPlayHitEffect_Parms PlayHitEffect_Parms;
 	PlayHitEffect_Parms.DamageType = DamageType;
@@ -9320,7 +9185,7 @@ void ADunDefDropOffPoint::AdjustDamage ( class UClass* DamageType, class AContro
 	static UFunction* pFnAdjustDamage = NULL;
 
 	if ( ! pFnAdjustDamage )
-		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 90272 ];
+		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 84654 ];
 
 	ADunDefDropOffPoint_execAdjustDamage_Parms AdjustDamage_Parms;
 	AdjustDamage_Parms.DamageType = DamageType;
@@ -9347,7 +9212,7 @@ bool ADunDefDropOffPoint::OnlyDrawHUDForOwner ( )
 	static UFunction* pFnOnlyDrawHUDForOwner = NULL;
 
 	if ( ! pFnOnlyDrawHUDForOwner )
-		pFnOnlyDrawHUDForOwner = (UFunction*) UObject::GObjObjects()->Data[ 90270 ];
+		pFnOnlyDrawHUDForOwner = (UFunction*) UObject::GObjObjects()->Data[ 84652 ];
 
 	ADunDefDropOffPoint_execOnlyDrawHUDForOwner_Parms OnlyDrawHUDForOwner_Parms;
 
@@ -9367,7 +9232,7 @@ void ADunDefDropOffPoint::DrawMiniMapIcon ( class UCanvas* Canvas, class ADunDef
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 90267 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 84649 ];
 
 	ADunDefDropOffPoint_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -9390,7 +9255,7 @@ void ADunDefDropOffPoint::DrawActiveDisplay ( class UCanvas* C, struct FVector S
 	static UFunction* pFnDrawActiveDisplay = NULL;
 
 	if ( ! pFnDrawActiveDisplay )
-		pFnDrawActiveDisplay = (UFunction*) UObject::GObjObjects()->Data[ 90256 ];
+		pFnDrawActiveDisplay = (UFunction*) UObject::GObjObjects()->Data[ 84638 ];
 
 	ADunDefDropOffPoint_execDrawActiveDisplay_Parms DrawActiveDisplay_Parms;
 	DrawActiveDisplay_Parms.C = C;
@@ -9413,7 +9278,7 @@ bool ADunDefDropOffPoint::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 90235 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 84617 ];
 
 	ADunDefDropOffPoint_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -9432,7 +9297,7 @@ void ADunDefDropOffPoint::DeactivatePoint ( )
 	static UFunction* pFnDeactivatePoint = NULL;
 
 	if ( ! pFnDeactivatePoint )
-		pFnDeactivatePoint = (UFunction*) UObject::GObjObjects()->Data[ 90232 ];
+		pFnDeactivatePoint = (UFunction*) UObject::GObjObjects()->Data[ 84614 ];
 
 	ADunDefDropOffPoint_execDeactivatePoint_Parms DeactivatePoint_Parms;
 
@@ -9448,7 +9313,7 @@ void ADunDefDropOffPoint::TurnOffActiveEffects ( )
 	static UFunction* pFnTurnOffActiveEffects = NULL;
 
 	if ( ! pFnTurnOffActiveEffects )
-		pFnTurnOffActiveEffects = (UFunction*) UObject::GObjObjects()->Data[ 90231 ];
+		pFnTurnOffActiveEffects = (UFunction*) UObject::GObjObjects()->Data[ 84613 ];
 
 	ADunDefDropOffPoint_execTurnOffActiveEffects_Parms TurnOffActiveEffects_Parms;
 
@@ -9464,7 +9329,7 @@ void ADunDefDropOffPoint::TurnOnActiveEffects ( )
 	static UFunction* pFnTurnOnActiveEffects = NULL;
 
 	if ( ! pFnTurnOnActiveEffects )
-		pFnTurnOnActiveEffects = (UFunction*) UObject::GObjObjects()->Data[ 90230 ];
+		pFnTurnOnActiveEffects = (UFunction*) UObject::GObjObjects()->Data[ 84612 ];
 
 	ADunDefDropOffPoint_execTurnOnActiveEffects_Parms TurnOnActiveEffects_Parms;
 
@@ -9481,7 +9346,7 @@ void ADunDefDropOffPoint::ActivatePoint ( int maxDropOffs )
 	static UFunction* pFnActivatePoint = NULL;
 
 	if ( ! pFnActivatePoint )
-		pFnActivatePoint = (UFunction*) UObject::GObjObjects()->Data[ 90228 ];
+		pFnActivatePoint = (UFunction*) UObject::GObjObjects()->Data[ 84610 ];
 
 	ADunDefDropOffPoint_execActivatePoint_Parms ActivatePoint_Parms;
 	ActivatePoint_Parms.maxDropOffs = maxDropOffs;
@@ -9498,7 +9363,7 @@ void ADunDefDropOffPoint::ClearDropOffActor ( )
 	static UFunction* pFnClearDropOffActor = NULL;
 
 	if ( ! pFnClearDropOffActor )
-		pFnClearDropOffActor = (UFunction*) UObject::GObjObjects()->Data[ 90226 ];
+		pFnClearDropOffActor = (UFunction*) UObject::GObjObjects()->Data[ 84608 ];
 
 	ADunDefDropOffPoint_execClearDropOffActor_Parms ClearDropOffActor_Parms;
 
@@ -9515,7 +9380,7 @@ void ADunDefDropOffPoint::SetDropOffActor ( class ADunDefPlayer* DoA )
 	static UFunction* pFnSetDropOffActor = NULL;
 
 	if ( ! pFnSetDropOffActor )
-		pFnSetDropOffActor = (UFunction*) UObject::GObjObjects()->Data[ 90223 ];
+		pFnSetDropOffActor = (UFunction*) UObject::GObjObjects()->Data[ 84605 ];
 
 	ADunDefDropOffPoint_execSetDropOffActor_Parms SetDropOffActor_Parms;
 	SetDropOffActor_Parms.DoA = DoA;
@@ -9533,7 +9398,7 @@ void ADunDefDropOffPoint::NotifyPackageDropOff ( class ADunDefPlayer* theDropper
 	static UFunction* pFnNotifyPackageDropOff = NULL;
 
 	if ( ! pFnNotifyPackageDropOff )
-		pFnNotifyPackageDropOff = (UFunction*) UObject::GObjObjects()->Data[ 90221 ];
+		pFnNotifyPackageDropOff = (UFunction*) UObject::GObjObjects()->Data[ 84603 ];
 
 	ADunDefDropOffPoint_execNotifyPackageDropOff_Parms NotifyPackageDropOff_Parms;
 	NotifyPackageDropOff_Parms.theDropper = theDropper;
@@ -9551,7 +9416,7 @@ void ADunDefDropOffPoint::PlaceNewItem ( class ADunDefPickupableItem* NewItem )
 	static UFunction* pFnPlaceNewItem = NULL;
 
 	if ( ! pFnPlaceNewItem )
-		pFnPlaceNewItem = (UFunction*) UObject::GObjObjects()->Data[ 90217 ];
+		pFnPlaceNewItem = (UFunction*) UObject::GObjObjects()->Data[ 84599 ];
 
 	ADunDefDropOffPoint_execPlaceNewItem_Parms PlaceNewItem_Parms;
 	PlaceNewItem_Parms.NewItem = NewItem;
@@ -9569,7 +9434,7 @@ bool ADunDefDropOffPoint::IsFull ( )
 	static UFunction* pFnIsFull = NULL;
 
 	if ( ! pFnIsFull )
-		pFnIsFull = (UFunction*) UObject::GObjObjects()->Data[ 90215 ];
+		pFnIsFull = (UFunction*) UObject::GObjObjects()->Data[ 84597 ];
 
 	ADunDefDropOffPoint_execIsFull_Parms IsFull_Parms;
 
@@ -9588,7 +9453,7 @@ void ADunDefDropOffPoint::RemoveDropOffItem ( class ADunDefPickupableItem* Remov
 	static UFunction* pFnRemoveDropOffItem = NULL;
 
 	if ( ! pFnRemoveDropOffItem )
-		pFnRemoveDropOffItem = (UFunction*) UObject::GObjObjects()->Data[ 90212 ];
+		pFnRemoveDropOffItem = (UFunction*) UObject::GObjObjects()->Data[ 84594 ];
 
 	ADunDefDropOffPoint_execRemoveDropOffItem_Parms RemoveDropOffItem_Parms;
 	RemoveDropOffItem_Parms.RemoveItem = RemoveItem;
@@ -9605,7 +9470,7 @@ void ADunDefDropOffPoint::DropOffUnFilled ( )
 	static UFunction* pFnDropOffUnFilled = NULL;
 
 	if ( ! pFnDropOffUnFilled )
-		pFnDropOffUnFilled = (UFunction*) UObject::GObjObjects()->Data[ 90211 ];
+		pFnDropOffUnFilled = (UFunction*) UObject::GObjObjects()->Data[ 84593 ];
 
 	ADunDefDropOffPoint_execDropOffUnFilled_Parms DropOffUnFilled_Parms;
 
@@ -9621,7 +9486,7 @@ void ADunDefDropOffPoint::DropOffFilled ( )
 	static UFunction* pFnDropOffFilled = NULL;
 
 	if ( ! pFnDropOffFilled )
-		pFnDropOffFilled = (UFunction*) UObject::GObjObjects()->Data[ 90210 ];
+		pFnDropOffFilled = (UFunction*) UObject::GObjObjects()->Data[ 84592 ];
 
 	ADunDefDropOffPoint_execDropOffFilled_Parms DropOffFilled_Parms;
 
@@ -9638,7 +9503,7 @@ void ADunDefDropOffPoint::AddDropOffItem ( class ADunDefPlayer* droppedOffActor 
 	static UFunction* pFnAddDropOffItem = NULL;
 
 	if ( ! pFnAddDropOffItem )
-		pFnAddDropOffItem = (UFunction*) UObject::GObjObjects()->Data[ 90204 ];
+		pFnAddDropOffItem = (UFunction*) UObject::GObjObjects()->Data[ 84586 ];
 
 	ADunDefDropOffPoint_execAddDropOffItem_Parms AddDropOffItem_Parms;
 	AddDropOffItem_Parms.droppedOffActor = droppedOffActor;
@@ -9656,7 +9521,7 @@ void ADunDefDropOffPoint::UpdateDropOff ( float DeltaTime )
 	static UFunction* pFnUpdateDropOff = NULL;
 
 	if ( ! pFnUpdateDropOff )
-		pFnUpdateDropOff = (UFunction*) UObject::GObjObjects()->Data[ 90201 ];
+		pFnUpdateDropOff = (UFunction*) UObject::GObjObjects()->Data[ 84583 ];
 
 	ADunDefDropOffPoint_execUpdateDropOff_Parms UpdateDropOff_Parms;
 	UpdateDropOff_Parms.DeltaTime = DeltaTime;
@@ -9674,7 +9539,7 @@ void ADunDefDropOffPoint::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 90199 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 84581 ];
 
 	ADunDefDropOffPoint_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -9692,7 +9557,7 @@ void ADunDefDropOffPoint::eventUnTouch ( class AActor* Other )
 	static UFunction* pFnUnTouch = NULL;
 
 	if ( ! pFnUnTouch )
-		pFnUnTouch = (UFunction*) UObject::GObjObjects()->Data[ 90196 ];
+		pFnUnTouch = (UFunction*) UObject::GObjObjects()->Data[ 84578 ];
 
 	ADunDefDropOffPoint_eventUnTouch_Parms UnTouch_Parms;
 	UnTouch_Parms.Other = Other;
@@ -9713,7 +9578,7 @@ void ADunDefDropOffPoint::eventTouch ( class AActor* Other, class UPrimitiveComp
 	static UFunction* pFnTouch = NULL;
 
 	if ( ! pFnTouch )
-		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 90187 ];
+		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 84569 ];
 
 	ADunDefDropOffPoint_eventTouch_Parms Touch_Parms;
 	Touch_Parms.Other = Other;
@@ -9749,7 +9614,7 @@ void ADunDefDropOffPoint::ExecReplicatedFunction ( struct FName FunctionName, st
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 90170 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 84552 ];
 
 	ADunDefDropOffPoint_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -9782,7 +9647,7 @@ void ADunDefDropOffPoint::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 90168 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 84550 ];
 
 	ADunDefDropOffPoint_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -9801,7 +9666,7 @@ void ADunDefPickupableItem::SetDroppingOff ( unsigned long IsDroppingOff, class 
 	static UFunction* pFnSetDroppingOff = NULL;
 
 	if ( ! pFnSetDroppingOff )
-		pFnSetDroppingOff = (UFunction*) UObject::GObjObjects()->Data[ 91189 ];
+		pFnSetDroppingOff = (UFunction*) UObject::GObjObjects()->Data[ 85581 ];
 
 	ADunDefPickupableItem_execSetDroppingOff_Parms SetDroppingOff_Parms;
 	SetDroppingOff_Parms.IsDroppingOff = IsDroppingOff;
@@ -9819,7 +9684,7 @@ void ADunDefPickupableItem::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 91188 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 85580 ];
 
 	ADunDefPickupableItem_eventDestroyed_Parms Destroyed_Parms;
 
@@ -9836,7 +9701,7 @@ void ADunDefPickupableItem::NotifyHolderLost ( class ADunDefPlayer* lostHolder )
 	static UFunction* pFnNotifyHolderLost = NULL;
 
 	if ( ! pFnNotifyHolderLost )
-		pFnNotifyHolderLost = (UFunction*) UObject::GObjObjects()->Data[ 91186 ];
+		pFnNotifyHolderLost = (UFunction*) UObject::GObjObjects()->Data[ 85578 ];
 
 	ADunDefPickupableItem_execNotifyHolderLost_Parms NotifyHolderLost_Parms;
 	NotifyHolderLost_Parms.lostHolder = lostHolder;
@@ -9853,7 +9718,7 @@ void ADunDefPickupableItem::DoDestroyEffects ( )
 	static UFunction* pFnDoDestroyEffects = NULL;
 
 	if ( ! pFnDoDestroyEffects )
-		pFnDoDestroyEffects = (UFunction*) UObject::GObjObjects()->Data[ 91185 ];
+		pFnDoDestroyEffects = (UFunction*) UObject::GObjObjects()->Data[ 85577 ];
 
 	ADunDefPickupableItem_execDoDestroyEffects_Parms DoDestroyEffects_Parms;
 
@@ -9870,7 +9735,7 @@ void ADunDefPickupableItem::DestroyPickUp ( unsigned long bFromDamage )
 	static UFunction* pFnDestroyPickUp = NULL;
 
 	if ( ! pFnDestroyPickUp )
-		pFnDestroyPickUp = (UFunction*) UObject::GObjObjects()->Data[ 91183 ];
+		pFnDestroyPickUp = (UFunction*) UObject::GObjObjects()->Data[ 85575 ];
 
 	ADunDefPickupableItem_execDestroyPickUp_Parms DestroyPickUp_Parms;
 	DestroyPickUp_Parms.bFromDamage = bFromDamage;
@@ -9888,7 +9753,7 @@ void ADunDefPickupableItem::PlaceAtPoint ( struct FVector NewLoc )
 	static UFunction* pFnPlaceAtPoint = NULL;
 
 	if ( ! pFnPlaceAtPoint )
-		pFnPlaceAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 91181 ];
+		pFnPlaceAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 85573 ];
 
 	ADunDefPickupableItem_execPlaceAtPoint_Parms PlaceAtPoint_Parms;
 	memcpy ( &PlaceAtPoint_Parms.NewLoc, &NewLoc, 0xC );
@@ -9906,7 +9771,7 @@ void ADunDefPickupableItem::DropOffItem ( class ADunDefDropOffPoint* DropOffPoin
 	static UFunction* pFnDropOffItem = NULL;
 
 	if ( ! pFnDropOffItem )
-		pFnDropOffItem = (UFunction*) UObject::GObjObjects()->Data[ 91179 ];
+		pFnDropOffItem = (UFunction*) UObject::GObjObjects()->Data[ 85571 ];
 
 	ADunDefPickupableItem_execDropOffItem_Parms DropOffItem_Parms;
 	DropOffItem_Parms.DropOffPoint = DropOffPoint;
@@ -9924,7 +9789,7 @@ void ADunDefPickupableItem::DrawWaypointToMe ( class ADunDefHUD* H )
 	static UFunction* pFnDrawWaypointToMe = NULL;
 
 	if ( ! pFnDrawWaypointToMe )
-		pFnDrawWaypointToMe = (UFunction*) UObject::GObjObjects()->Data[ 91144 ];
+		pFnDrawWaypointToMe = (UFunction*) UObject::GObjObjects()->Data[ 85536 ];
 
 	ADunDefPickupableItem_execDrawWaypointToMe_Parms DrawWaypointToMe_Parms;
 	DrawWaypointToMe_Parms.H = H;
@@ -9941,7 +9806,7 @@ void ADunDefPickupableItem::GetDropOffWayPt ( )
 	static UFunction* pFnGetDropOffWayPt = NULL;
 
 	if ( ! pFnGetDropOffWayPt )
-		pFnGetDropOffWayPt = (UFunction*) UObject::GObjObjects()->Data[ 91143 ];
+		pFnGetDropOffWayPt = (UFunction*) UObject::GObjObjects()->Data[ 85535 ];
 
 	ADunDefPickupableItem_execGetDropOffWayPt_Parms GetDropOffWayPt_Parms;
 
@@ -9958,7 +9823,7 @@ bool ADunDefPickupableItem::OnlyDrawHUDForOwner ( )
 	static UFunction* pFnOnlyDrawHUDForOwner = NULL;
 
 	if ( ! pFnOnlyDrawHUDForOwner )
-		pFnOnlyDrawHUDForOwner = (UFunction*) UObject::GObjObjects()->Data[ 91141 ];
+		pFnOnlyDrawHUDForOwner = (UFunction*) UObject::GObjObjects()->Data[ 85533 ];
 
 	ADunDefPickupableItem_execOnlyDrawHUDForOwner_Parms OnlyDrawHUDForOwner_Parms;
 
@@ -9978,7 +9843,7 @@ bool ADunDefPickupableItem::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 91138 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 85530 ];
 
 	ADunDefPickupableItem_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -9999,7 +9864,7 @@ bool ADunDefPickupableItem::CanBePickedUp ( class ADunDefPlayerController* PC )
 	static UFunction* pFnCanBePickedUp = NULL;
 
 	if ( ! pFnCanBePickedUp )
-		pFnCanBePickedUp = (UFunction*) UObject::GObjObjects()->Data[ 90591 ];
+		pFnCanBePickedUp = (UFunction*) UObject::GObjObjects()->Data[ 84969 ];
 
 	ADunDefPickupableItem_execCanBePickedUp_Parms CanBePickedUp_Parms;
 	CanBePickedUp_Parms.PC = PC;
@@ -10019,7 +9884,7 @@ void ADunDefPickupableItem::PickupItem ( class ADunDefPlayer* newHolder )
 	static UFunction* pFnPickupItem = NULL;
 
 	if ( ! pFnPickupItem )
-		pFnPickupItem = (UFunction*) UObject::GObjObjects()->Data[ 91133 ];
+		pFnPickupItem = (UFunction*) UObject::GObjObjects()->Data[ 85525 ];
 
 	ADunDefPickupableItem_execPickupItem_Parms PickupItem_Parms;
 	PickupItem_Parms.newHolder = newHolder;
@@ -10037,7 +9902,7 @@ void ADunDefPickupableItem::BeginBeingPickedUp ( class ADunDefPlayerController* 
 	static UFunction* pFnBeginBeingPickedUp = NULL;
 
 	if ( ! pFnBeginBeingPickedUp )
-		pFnBeginBeingPickedUp = (UFunction*) UObject::GObjObjects()->Data[ 91130 ];
+		pFnBeginBeingPickedUp = (UFunction*) UObject::GObjObjects()->Data[ 85522 ];
 
 	ADunDefPickupableItem_execBeginBeingPickedUp_Parms BeginBeingPickedUp_Parms;
 	BeginBeingPickedUp_Parms.newHolder = newHolder;
@@ -10054,7 +9919,7 @@ void ADunDefPickupableItem::AttachToSpawner ( )
 	static UFunction* pFnAttachToSpawner = NULL;
 
 	if ( ! pFnAttachToSpawner )
-		pFnAttachToSpawner = (UFunction*) UObject::GObjObjects()->Data[ 91124 ];
+		pFnAttachToSpawner = (UFunction*) UObject::GObjObjects()->Data[ 85516 ];
 
 	ADunDefPickupableItem_execAttachToSpawner_Parms AttachToSpawner_Parms;
 
@@ -10071,7 +9936,7 @@ void ADunDefPickupableItem::InitMesh ( class ADunDefPickupableSpawner* MySpawner
 	static UFunction* pFnInitMesh = NULL;
 
 	if ( ! pFnInitMesh )
-		pFnInitMesh = (UFunction*) UObject::GObjObjects()->Data[ 91122 ];
+		pFnInitMesh = (UFunction*) UObject::GObjObjects()->Data[ 85514 ];
 
 	ADunDefPickupableItem_execInitMesh_Parms InitMesh_Parms;
 	InitMesh_Parms.MySpawner = MySpawner;
@@ -10089,7 +9954,7 @@ int ADunDefPickupableItem::GetToolTipPriority ( )
 	static UFunction* pFnGetToolTipPriority = NULL;
 
 	if ( ! pFnGetToolTipPriority )
-		pFnGetToolTipPriority = (UFunction*) UObject::GObjObjects()->Data[ 91120 ];
+		pFnGetToolTipPriority = (UFunction*) UObject::GObjObjects()->Data[ 85512 ];
 
 	ADunDefPickupableItem_execGetToolTipPriority_Parms GetToolTipPriority_Parms;
 
@@ -10109,7 +9974,7 @@ bool ADunDefPickupableItem::TakesToolTipPriority ( class UDunDefToolTipInterface
 	static UFunction* pFnTakesToolTipPriority = NULL;
 
 	if ( ! pFnTakesToolTipPriority )
-		pFnTakesToolTipPriority = (UFunction*) UObject::GObjObjects()->Data[ 91117 ];
+		pFnTakesToolTipPriority = (UFunction*) UObject::GObjObjects()->Data[ 85509 ];
 
 	ADunDefPickupableItem_execTakesToolTipPriority_Parms TakesToolTipPriority_Parms;
 	TakesToolTipPriority_Parms.otherToolTip = otherToolTip;
@@ -10130,7 +9995,7 @@ bool ADunDefPickupableItem::ContinueDrawingToolTip ( unsigned long ContinueDrawi
 	static UFunction* pFnContinueDrawingToolTip = NULL;
 
 	if ( ! pFnContinueDrawingToolTip )
-		pFnContinueDrawingToolTip = (UFunction*) UObject::GObjObjects()->Data[ 91114 ];
+		pFnContinueDrawingToolTip = (UFunction*) UObject::GObjObjects()->Data[ 85506 ];
 
 	ADunDefPickupableItem_execContinueDrawingToolTip_Parms ContinueDrawingToolTip_Parms;
 	ContinueDrawingToolTip_Parms.ContinueDrawing = ContinueDrawing;
@@ -10153,7 +10018,7 @@ void ADunDefPickupableItem::DrawToolTip ( class UCanvas* C, int PosX, int PosY, 
 	static UFunction* pFnDrawToolTip = NULL;
 
 	if ( ! pFnDrawToolTip )
-		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 91106 ];
+		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 85498 ];
 
 	ADunDefPickupableItem_execDrawToolTip_Parms DrawToolTip_Parms;
 	DrawToolTip_Parms.C = C;
@@ -10177,7 +10042,7 @@ bool ADunDefPickupableItem::AllowTowerAtPoint ( class ADunDefPlayerController* P
 	static UFunction* pFnAllowTowerAtPoint = NULL;
 
 	if ( ! pFnAllowTowerAtPoint )
-		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 91101 ];
+		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 85493 ];
 
 	ADunDefPickupableItem_execAllowTowerAtPoint_Parms AllowTowerAtPoint_Parms;
 	AllowTowerAtPoint_Parms.PC = PC;
@@ -10199,7 +10064,7 @@ bool ADunDefPickupableItem::CheckAllowance ( )
 	static UFunction* pFnCheckAllowance = NULL;
 
 	if ( ! pFnCheckAllowance )
-		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 91099 ];
+		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 85491 ];
 
 	ADunDefPickupableItem_execCheckAllowance_Parms CheckAllowance_Parms;
 
@@ -10222,7 +10087,7 @@ bool ADunDefPickupableItem::PreventTowerAtPoint ( class ADunDefPlayerController*
 	static UFunction* pFnPreventTowerAtPoint = NULL;
 
 	if ( ! pFnPreventTowerAtPoint )
-		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 91093 ];
+		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 85485 ];
 
 	ADunDefPickupableItem_execPreventTowerAtPoint_Parms PreventTowerAtPoint_Parms;
 	PreventTowerAtPoint_Parms.PC = PC;
@@ -10246,7 +10111,7 @@ void ADunDefPickupableItem::DrawMiniMapIcon ( class UCanvas* Canvas, class ADunD
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 91090 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 85482 ];
 
 	ADunDefPickupableItem_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -10265,7 +10130,7 @@ float ADunDefPickupableItem::GetActivationOffset ( )
 	static UFunction* pFnGetActivationOffset = NULL;
 
 	if ( ! pFnGetActivationOffset )
-		pFnGetActivationOffset = (UFunction*) UObject::GObjObjects()->Data[ 91088 ];
+		pFnGetActivationOffset = (UFunction*) UObject::GObjObjects()->Data[ 85480 ];
 
 	ADunDefPickupableItem_execGetActivationOffset_Parms GetActivationOffset_Parms;
 
@@ -10284,7 +10149,7 @@ float ADunDefPickupableItem::GetActivationWeighting ( )
 	static UFunction* pFnGetActivationWeighting = NULL;
 
 	if ( ! pFnGetActivationWeighting )
-		pFnGetActivationWeighting = (UFunction*) UObject::GObjObjects()->Data[ 91086 ];
+		pFnGetActivationWeighting = (UFunction*) UObject::GObjObjects()->Data[ 85478 ];
 
 	ADunDefPickupableItem_execGetActivationWeighting_Parms GetActivationWeighting_Parms;
 
@@ -10304,7 +10169,7 @@ void ADunDefPickupableItem::Client_Activate ( class ADunDefPlayerController* PC,
 	static UFunction* pFnClient_Activate = NULL;
 
 	if ( ! pFnClient_Activate )
-		pFnClient_Activate = (UFunction*) UObject::GObjObjects()->Data[ 91083 ];
+		pFnClient_Activate = (UFunction*) UObject::GObjObjects()->Data[ 85475 ];
 
 	ADunDefPickupableItem_execClient_Activate_Parms Client_Activate_Parms;
 	Client_Activate_Parms.PC = PC;
@@ -10325,7 +10190,7 @@ void ADunDefPickupableItem::Server_Activate ( class ADunDefPlayerController* PC,
 	static UFunction* pFnServer_Activate = NULL;
 
 	if ( ! pFnServer_Activate )
-		pFnServer_Activate = (UFunction*) UObject::GObjObjects()->Data[ 91079 ];
+		pFnServer_Activate = (UFunction*) UObject::GObjObjects()->Data[ 85471 ];
 
 	ADunDefPickupableItem_execServer_Activate_Parms Server_Activate_Parms;
 	Server_Activate_Parms.PC = PC;
@@ -10347,7 +10212,7 @@ int ADunDefPickupableItem::AllowActivation ( class ADunDefPlayerController* PC, 
 	static UFunction* pFnAllowActivation = NULL;
 
 	if ( ! pFnAllowActivation )
-		pFnAllowActivation = (UFunction*) UObject::GObjObjects()->Data[ 91075 ];
+		pFnAllowActivation = (UFunction*) UObject::GObjObjects()->Data[ 85467 ];
 
 	ADunDefPickupableItem_execAllowActivation_Parms AllowActivation_Parms;
 	AllowActivation_Parms.PC = PC;
@@ -10368,7 +10233,7 @@ void ADunDefPickupableItem::SetMyActiveMesh ( int MeshIndex )
 	static UFunction* pFnSetMyActiveMesh = NULL;
 
 	if ( ! pFnSetMyActiveMesh )
-		pFnSetMyActiveMesh = (UFunction*) UObject::GObjObjects()->Data[ 91073 ];
+		pFnSetMyActiveMesh = (UFunction*) UObject::GObjObjects()->Data[ 85465 ];
 
 	ADunDefPickupableItem_execSetMyActiveMesh_Parms SetMyActiveMesh_Parms;
 	SetMyActiveMesh_Parms.MeshIndex = MeshIndex;
@@ -10385,7 +10250,7 @@ void ADunDefPickupableItem::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 91072 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 85464 ];
 
 	ADunDefPickupableItem_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -10417,7 +10282,7 @@ void ADunDefPickupableItem::ExecReplicatedFunction ( struct FName FunctionName, 
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 91055 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 85447 ];
 
 	ADunDefPickupableItem_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -10450,7 +10315,7 @@ void ADunDefPickupableItem::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 91053 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 85445 ];
 
 	ADunDefPickupableItem_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -10468,7 +10333,7 @@ void ADunDefTouchForwardingActor::eventUnTouch ( class AActor* Other )
 	static UFunction* pFnUnTouch = NULL;
 
 	if ( ! pFnUnTouch )
-		pFnUnTouch = (UFunction*) UObject::GObjObjects()->Data[ 94020 ];
+		pFnUnTouch = (UFunction*) UObject::GObjObjects()->Data[ 88384 ];
 
 	ADunDefTouchForwardingActor_eventUnTouch_Parms UnTouch_Parms;
 	UnTouch_Parms.Other = Other;
@@ -10489,7 +10354,7 @@ void ADunDefTouchForwardingActor::eventTouch ( class AActor* Other, class UPrimi
 	static UFunction* pFnTouch = NULL;
 
 	if ( ! pFnTouch )
-		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 94015 ];
+		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 88379 ];
 
 	ADunDefTouchForwardingActor_eventTouch_Parms Touch_Parms;
 	Touch_Parms.Other = Other;
@@ -10510,7 +10375,7 @@ void ADunDefTouchForwardingActor::SetTouchParent ( class AActor* NewParent )
 	static UFunction* pFnSetTouchParent = NULL;
 
 	if ( ! pFnSetTouchParent )
-		pFnSetTouchParent = (UFunction*) UObject::GObjObjects()->Data[ 94013 ];
+		pFnSetTouchParent = (UFunction*) UObject::GObjObjects()->Data[ 88377 ];
 
 	ADunDefTouchForwardingActor_execSetTouchParent_Parms SetTouchParent_Parms;
 	SetTouchParent_Parms.NewParent = NewParent;
@@ -10528,7 +10393,7 @@ void ADunDefPlayerController_Delivery::PawnDied ( class APawn* inPawn )
 	static UFunction* pFnPawnDied = NULL;
 
 	if ( ! pFnPawnDied )
-		pFnPawnDied = (UFunction*) UObject::GObjObjects()->Data[ 93944 ];
+		pFnPawnDied = (UFunction*) UObject::GObjObjects()->Data[ 88308 ];
 
 	ADunDefPlayerController_Delivery_execPawnDied_Parms PawnDied_Parms;
 	PawnDied_Parms.inPawn = inPawn;
@@ -10550,7 +10415,7 @@ void ADunDefPlayerController_Delivery::NotifyTakeHit ( class AController* Instig
 	static UFunction* pFnNotifyTakeHit = NULL;
 
 	if ( ! pFnNotifyTakeHit )
-		pFnNotifyTakeHit = (UFunction*) UObject::GObjObjects()->Data[ 93938 ];
+		pFnNotifyTakeHit = (UFunction*) UObject::GObjObjects()->Data[ 88302 ];
 
 	ADunDefPlayerController_Delivery_execNotifyTakeHit_Parms NotifyTakeHit_Parms;
 	NotifyTakeHit_Parms.InstigatedBy = InstigatedBy;
@@ -10571,7 +10436,7 @@ void ADunDefPlayerController_Delivery::DropCurrentItem ( )
 	static UFunction* pFnDropCurrentItem = NULL;
 
 	if ( ! pFnDropCurrentItem )
-		pFnDropCurrentItem = (UFunction*) UObject::GObjObjects()->Data[ 93937 ];
+		pFnDropCurrentItem = (UFunction*) UObject::GObjObjects()->Data[ 88301 ];
 
 	ADunDefPlayerController_Delivery_execDropCurrentItem_Parms DropCurrentItem_Parms;
 
@@ -10588,7 +10453,7 @@ void ADunDefPlayerController_Delivery::PickupItem ( class ADunDefPickupableItem*
 	static UFunction* pFnPickupItem = NULL;
 
 	if ( ! pFnPickupItem )
-		pFnPickupItem = (UFunction*) UObject::GObjObjects()->Data[ 93935 ];
+		pFnPickupItem = (UFunction*) UObject::GObjObjects()->Data[ 88299 ];
 
 	ADunDefPlayerController_Delivery_execPickupItem_Parms PickupItem_Parms;
 	PickupItem_Parms.newPickup = newPickup;
@@ -10607,7 +10472,7 @@ bool ADunDefGRI_Delivery::AllowedToTeleport ( class APawn* Teleportee )
 	static UFunction* pFnAllowedToTeleport = NULL;
 
 	if ( ! pFnAllowedToTeleport )
-		pFnAllowedToTeleport = (UFunction*) UObject::GObjObjects()->Data[ 90669 ];
+		pFnAllowedToTeleport = (UFunction*) UObject::GObjObjects()->Data[ 85047 ];
 
 	ADunDefGRI_Delivery_execAllowedToTeleport_Parms AllowedToTeleport_Parms;
 	AllowedToTeleport_Parms.Teleportee = Teleportee;
@@ -10627,7 +10492,7 @@ void ADunDefGRI_Delivery::SetCurrentDeliveryItem ( class ADunDefPickupableItem* 
 	static UFunction* pFnSetCurrentDeliveryItem = NULL;
 
 	if ( ! pFnSetCurrentDeliveryItem )
-		pFnSetCurrentDeliveryItem = (UFunction*) UObject::GObjObjects()->Data[ 90667 ];
+		pFnSetCurrentDeliveryItem = (UFunction*) UObject::GObjObjects()->Data[ 85045 ];
 
 	ADunDefGRI_Delivery_execSetCurrentDeliveryItem_Parms SetCurrentDeliveryItem_Parms;
 	SetCurrentDeliveryItem_Parms.NewItem = NewItem;
@@ -10645,7 +10510,7 @@ void ADunDefGRI_Delivery::RemovePackageHolder ( class ADunDefPlayer* aPlayer )
 	static UFunction* pFnRemovePackageHolder = NULL;
 
 	if ( ! pFnRemovePackageHolder )
-		pFnRemovePackageHolder = (UFunction*) UObject::GObjObjects()->Data[ 90665 ];
+		pFnRemovePackageHolder = (UFunction*) UObject::GObjObjects()->Data[ 85043 ];
 
 	ADunDefGRI_Delivery_execRemovePackageHolder_Parms RemovePackageHolder_Parms;
 	RemovePackageHolder_Parms.aPlayer = aPlayer;
@@ -10663,7 +10528,7 @@ void ADunDefGRI_Delivery::AddPackageHolder ( class ADunDefPlayer* aPlayer )
 	static UFunction* pFnAddPackageHolder = NULL;
 
 	if ( ! pFnAddPackageHolder )
-		pFnAddPackageHolder = (UFunction*) UObject::GObjObjects()->Data[ 90663 ];
+		pFnAddPackageHolder = (UFunction*) UObject::GObjObjects()->Data[ 85041 ];
 
 	ADunDefGRI_Delivery_execAddPackageHolder_Parms AddPackageHolder_Parms;
 	AddPackageHolder_Parms.aPlayer = aPlayer;
@@ -10683,7 +10548,7 @@ float ADunDefGRI_Delivery::ModifyPlayerGroundSpeed ( class ADunDefPlayer* aPlaye
 	static UFunction* pFnModifyPlayerGroundSpeed = NULL;
 
 	if ( ! pFnModifyPlayerGroundSpeed )
-		pFnModifyPlayerGroundSpeed = (UFunction*) UObject::GObjObjects()->Data[ 90659 ];
+		pFnModifyPlayerGroundSpeed = (UFunction*) UObject::GObjObjects()->Data[ 85037 ];
 
 	ADunDefGRI_Delivery_execModifyPlayerGroundSpeed_Parms ModifyPlayerGroundSpeed_Parms;
 	ModifyPlayerGroundSpeed_Parms.aPlayer = aPlayer;
@@ -10704,7 +10569,7 @@ bool ADunDefGRI_Delivery::AllowPackageSpawn ( )
 	static UFunction* pFnAllowPackageSpawn = NULL;
 
 	if ( ! pFnAllowPackageSpawn )
-		pFnAllowPackageSpawn = (UFunction*) UObject::GObjObjects()->Data[ 90657 ];
+		pFnAllowPackageSpawn = (UFunction*) UObject::GObjObjects()->Data[ 85035 ];
 
 	ADunDefGRI_Delivery_execAllowPackageSpawn_Parms AllowPackageSpawn_Parms;
 
@@ -10723,7 +10588,7 @@ void ADunDefGRI_Delivery::SetInCombatPhase ( unsigned long inCombatPhase )
 	static UFunction* pFnSetInCombatPhase = NULL;
 
 	if ( ! pFnSetInCombatPhase )
-		pFnSetInCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 90651 ];
+		pFnSetInCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 85029 ];
 
 	ADunDefGRI_Delivery_execSetInCombatPhase_Parms SetInCombatPhase_Parms;
 	SetInCombatPhase_Parms.inCombatPhase = inCombatPhase;
@@ -10741,7 +10606,7 @@ void ADunDefGRI_Delivery::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 90643 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 85021 ];
 
 	ADunDefGRI_Delivery_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -10758,7 +10623,7 @@ void ADunDefGRI_Delivery::ClearDropPoints ( )
 	static UFunction* pFnClearDropPoints = NULL;
 
 	if ( ! pFnClearDropPoints )
-		pFnClearDropPoints = (UFunction*) UObject::GObjObjects()->Data[ 90641 ];
+		pFnClearDropPoints = (UFunction*) UObject::GObjObjects()->Data[ 85019 ];
 
 	ADunDefGRI_Delivery_execClearDropPoints_Parms ClearDropPoints_Parms;
 
@@ -10775,7 +10640,7 @@ void ADunDefGRI_Delivery::NotifyLostDropOffPoint ( class ADunDefDropOffPoint* lo
 	static UFunction* pFnNotifyLostDropOffPoint = NULL;
 
 	if ( ! pFnNotifyLostDropOffPoint )
-		pFnNotifyLostDropOffPoint = (UFunction*) UObject::GObjObjects()->Data[ 90639 ];
+		pFnNotifyLostDropOffPoint = (UFunction*) UObject::GObjObjects()->Data[ 85017 ];
 
 	ADunDefGRI_Delivery_execNotifyLostDropOffPoint_Parms NotifyLostDropOffPoint_Parms;
 	NotifyLostDropOffPoint_Parms.lostPoint = lostPoint;
@@ -10793,7 +10658,7 @@ void ADunDefGRI_Delivery::NotifyFilledDropOffPoint ( class ADunDefDropOffPoint* 
 	static UFunction* pFnNotifyFilledDropOffPoint = NULL;
 
 	if ( ! pFnNotifyFilledDropOffPoint )
-		pFnNotifyFilledDropOffPoint = (UFunction*) UObject::GObjObjects()->Data[ 90632 ];
+		pFnNotifyFilledDropOffPoint = (UFunction*) UObject::GObjObjects()->Data[ 85010 ];
 
 	ADunDefGRI_Delivery_execNotifyFilledDropOffPoint_Parms NotifyFilledDropOffPoint_Parms;
 	NotifyFilledDropOffPoint_Parms.filledPoint = filledPoint;
@@ -10810,7 +10675,7 @@ void ADunDefGRI_Delivery::SelectNewDropOffPoint ( )
 	static UFunction* pFnSelectNewDropOffPoint = NULL;
 
 	if ( ! pFnSelectNewDropOffPoint )
-		pFnSelectNewDropOffPoint = (UFunction*) UObject::GObjObjects()->Data[ 90626 ];
+		pFnSelectNewDropOffPoint = (UFunction*) UObject::GObjObjects()->Data[ 85004 ];
 
 	ADunDefGRI_Delivery_execSelectNewDropOffPoint_Parms SelectNewDropOffPoint_Parms;
 
@@ -10827,7 +10692,7 @@ void ADunDefGRI_Delivery::Server_AddGRIHeroAbilities ( class ADunDefPlayerContro
 	static UFunction* pFnServer_AddGRIHeroAbilities = NULL;
 
 	if ( ! pFnServer_AddGRIHeroAbilities )
-		pFnServer_AddGRIHeroAbilities = (UFunction*) UObject::GObjObjects()->Data[ 90623 ];
+		pFnServer_AddGRIHeroAbilities = (UFunction*) UObject::GObjObjects()->Data[ 85001 ];
 
 	ADunDefGRI_Delivery_execServer_AddGRIHeroAbilities_Parms Server_AddGRIHeroAbilities_Parms;
 	Server_AddGRIHeroAbilities_Parms.PC = PC;
@@ -10844,7 +10709,7 @@ void ADunDefGRI_Delivery::EndBuildPhase ( )
 	static UFunction* pFnEndBuildPhase = NULL;
 
 	if ( ! pFnEndBuildPhase )
-		pFnEndBuildPhase = (UFunction*) UObject::GObjObjects()->Data[ 90621 ];
+		pFnEndBuildPhase = (UFunction*) UObject::GObjObjects()->Data[ 84999 ];
 
 	ADunDefGRI_Delivery_execEndBuildPhase_Parms EndBuildPhase_Parms;
 
@@ -10861,7 +10726,7 @@ void ADunDefGRI_Delivery::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 90619 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 84997 ];
 
 	ADunDefGRI_Delivery_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -10878,7 +10743,7 @@ void ADunDefGRI_Delivery::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90617 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84995 ];
 
 	ADunDefGRI_Delivery_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -10898,7 +10763,7 @@ bool ADunDefEmitterDamage::eventAllowSpawn ( class AActor* theArchetype, struct 
 	static UFunction* pFnAllowSpawn = NULL;
 
 	if ( ! pFnAllowSpawn )
-		pFnAllowSpawn = (UFunction*) UObject::GObjObjects()->Data[ 90348 ];
+		pFnAllowSpawn = (UFunction*) UObject::GObjObjects()->Data[ 84730 ];
 
 	ADunDefEmitterDamage_eventAllowSpawn_Parms AllowSpawn_Parms;
 	AllowSpawn_Parms.theArchetype = theArchetype;
@@ -10928,7 +10793,7 @@ bool ADunDefEmitterDamage::HurtRadius ( float BaseDamage, float DamageRadius, cl
 	static UFunction* pFnHurtRadius = NULL;
 
 	if ( ! pFnHurtRadius )
-		pFnHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 90335 ];
+		pFnHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 84717 ];
 
 	ADunDefEmitterDamage_execHurtRadius_Parms HurtRadius_Parms;
 	HurtRadius_Parms.BaseDamage = BaseDamage;
@@ -10954,7 +10819,7 @@ void ADunDefEmitterDamage::DoDamage ( )
 	static UFunction* pFnDoDamage = NULL;
 
 	if ( ! pFnDoDamage )
-		pFnDoDamage = (UFunction*) UObject::GObjObjects()->Data[ 90334 ];
+		pFnDoDamage = (UFunction*) UObject::GObjObjects()->Data[ 84716 ];
 
 	ADunDefEmitterDamage_execDoDamage_Parms DoDamage_Parms;
 
@@ -10970,7 +10835,7 @@ void ADunDefEmitterDamage::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90333 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84715 ];
 
 	ADunDefEmitterDamage_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -10988,7 +10853,7 @@ void ADunDefEnemyCrystalCore::DrawMiniMapIcon ( class UCanvas* Canvas, class ADu
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 90370 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 84751 ];
 
 	ADunDefEnemyCrystalCore_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -11006,7 +10871,7 @@ void ADunDefEnemyCrystalCore::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 90369 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 84750 ];
 
 	ADunDefEnemyCrystalCore_eventDestroyed_Parms Destroyed_Parms;
 
@@ -11022,7 +10887,7 @@ void ADunDefEnemyCrystalCore::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90368 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84749 ];
 
 	ADunDefEnemyCrystalCore_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -11039,7 +10904,7 @@ void ADunDefFlashHeal::SpawnHealEmitter ( class AActor* HealedActor )
 	static UFunction* pFnSpawnHealEmitter = NULL;
 
 	if ( ! pFnSpawnHealEmitter )
-		pFnSpawnHealEmitter = (UFunction*) UObject::GObjObjects()->Data[ 90415 ];
+		pFnSpawnHealEmitter = (UFunction*) UObject::GObjObjects()->Data[ 84796 ];
 
 	ADunDefFlashHeal_execSpawnHealEmitter_Parms SpawnHealEmitter_Parms;
 	SpawnHealEmitter_Parms.HealedActor = HealedActor;
@@ -11060,7 +10925,7 @@ bool ADunDefFlashHeal::eventAllowSpawn ( class AActor* theArchetype, struct FVec
 	static UFunction* pFnAllowSpawn = NULL;
 
 	if ( ! pFnAllowSpawn )
-		pFnAllowSpawn = (UFunction*) UObject::GObjObjects()->Data[ 90410 ];
+		pFnAllowSpawn = (UFunction*) UObject::GObjObjects()->Data[ 84791 ];
 
 	ADunDefFlashHeal_eventAllowSpawn_Parms AllowSpawn_Parms;
 	AllowSpawn_Parms.theArchetype = theArchetype;
@@ -11081,7 +10946,7 @@ void ADunDefFlashHeal::FlashHeal ( )
 	static UFunction* pFnFlashHeal = NULL;
 
 	if ( ! pFnFlashHeal )
-		pFnFlashHeal = (UFunction*) UObject::GObjObjects()->Data[ 90400 ];
+		pFnFlashHeal = (UFunction*) UObject::GObjObjects()->Data[ 84781 ];
 
 	ADunDefFlashHeal_execFlashHeal_Parms FlashHeal_Parms;
 
@@ -11097,7 +10962,7 @@ void ADunDefFlashHeal::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90398 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84779 ];
 
 	ADunDefFlashHeal_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -11115,7 +10980,7 @@ bool ADunDefGRI_Assault::AllowedToTeleport ( class APawn* Teleportee )
 	static UFunction* pFnAllowedToTeleport = NULL;
 
 	if ( ! pFnAllowedToTeleport )
-		pFnAllowedToTeleport = (UFunction*) UObject::GObjObjects()->Data[ 90490 ];
+		pFnAllowedToTeleport = (UFunction*) UObject::GObjObjects()->Data[ 84868 ];
 
 	ADunDefGRI_Assault_execAllowedToTeleport_Parms AllowedToTeleport_Parms;
 	AllowedToTeleport_Parms.Teleportee = Teleportee;
@@ -11136,7 +11001,7 @@ float ADunDefGRI_Assault::GetEnemyLifeSpanMultiplier ( class ADunDefEnemy* anEne
 	static UFunction* pFnGetEnemyLifeSpanMultiplier = NULL;
 
 	if ( ! pFnGetEnemyLifeSpanMultiplier )
-		pFnGetEnemyLifeSpanMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 90487 ];
+		pFnGetEnemyLifeSpanMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 84865 ];
 
 	ADunDefGRI_Assault_execGetEnemyLifeSpanMultiplier_Parms GetEnemyLifeSpanMultiplier_Parms;
 	GetEnemyLifeSpanMultiplier_Parms.anEnemy = anEnemy;
@@ -11158,7 +11023,7 @@ float ADunDefGRI_Assault::ModifyPlayerGroundSpeed ( class ADunDefPlayer* aPlayer
 	static UFunction* pFnModifyPlayerGroundSpeed = NULL;
 
 	if ( ! pFnModifyPlayerGroundSpeed )
-		pFnModifyPlayerGroundSpeed = (UFunction*) UObject::GObjObjects()->Data[ 90483 ];
+		pFnModifyPlayerGroundSpeed = (UFunction*) UObject::GObjObjects()->Data[ 84861 ];
 
 	ADunDefGRI_Assault_execModifyPlayerGroundSpeed_Parms ModifyPlayerGroundSpeed_Parms;
 	ModifyPlayerGroundSpeed_Parms.aPlayer = aPlayer;
@@ -11180,7 +11045,7 @@ float ADunDefGRI_Assault::GetTrapRangeMultiplier ( class ADunDefTower_Detonation
 	static UFunction* pFnGetTrapRangeMultiplier = NULL;
 
 	if ( ! pFnGetTrapRangeMultiplier )
-		pFnGetTrapRangeMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 90480 ];
+		pFnGetTrapRangeMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 84858 ];
 
 	ADunDefGRI_Assault_execGetTrapRangeMultiplier_Parms GetTrapRangeMultiplier_Parms;
 	GetTrapRangeMultiplier_Parms.aTrap = aTrap;
@@ -11201,7 +11066,7 @@ float ADunDefGRI_Assault::GetAuraRangeMultiplier ( class ADunDefTower_Aura* anAu
 	static UFunction* pFnGetAuraRangeMultiplier = NULL;
 
 	if ( ! pFnGetAuraRangeMultiplier )
-		pFnGetAuraRangeMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 90477 ];
+		pFnGetAuraRangeMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 84855 ];
 
 	ADunDefGRI_Assault_execGetAuraRangeMultiplier_Parms GetAuraRangeMultiplier_Parms;
 	GetAuraRangeMultiplier_Parms.anAura = anAura;
@@ -11222,7 +11087,7 @@ float ADunDefGRI_Assault::GetTrapDamageMultiplier ( class ADunDefTower_Detonatio
 	static UFunction* pFnGetTrapDamageMultiplier = NULL;
 
 	if ( ! pFnGetTrapDamageMultiplier )
-		pFnGetTrapDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 90474 ];
+		pFnGetTrapDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 84852 ];
 
 	ADunDefGRI_Assault_execGetTrapDamageMultiplier_Parms GetTrapDamageMultiplier_Parms;
 	GetTrapDamageMultiplier_Parms.aTrap = aTrap;
@@ -11243,7 +11108,7 @@ float ADunDefGRI_Assault::GetTrapHealthMultiplier ( class ADunDefTower_Detonatio
 	static UFunction* pFnGetTrapHealthMultiplier = NULL;
 
 	if ( ! pFnGetTrapHealthMultiplier )
-		pFnGetTrapHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 90471 ];
+		pFnGetTrapHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 84849 ];
 
 	ADunDefGRI_Assault_execGetTrapHealthMultiplier_Parms GetTrapHealthMultiplier_Parms;
 	GetTrapHealthMultiplier_Parms.aTrap = aTrap;
@@ -11264,7 +11129,7 @@ float ADunDefGRI_Assault::GetStrengthDrainAuraMultiplier ( class ADunDefTower_Au
 	static UFunction* pFnGetStrengthDrainAuraMultiplier = NULL;
 
 	if ( ! pFnGetStrengthDrainAuraMultiplier )
-		pFnGetStrengthDrainAuraMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 90468 ];
+		pFnGetStrengthDrainAuraMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 84846 ];
 
 	ADunDefGRI_Assault_execGetStrengthDrainAuraMultiplier_Parms GetStrengthDrainAuraMultiplier_Parms;
 	GetStrengthDrainAuraMultiplier_Parms.anAura = anAura;
@@ -11285,7 +11150,7 @@ float ADunDefGRI_Assault::GetAuraDamageMultiplier ( class ADunDefTower_Aura* anA
 	static UFunction* pFnGetAuraDamageMultiplier = NULL;
 
 	if ( ! pFnGetAuraDamageMultiplier )
-		pFnGetAuraDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 90465 ];
+		pFnGetAuraDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 84843 ];
 
 	ADunDefGRI_Assault_execGetAuraDamageMultiplier_Parms GetAuraDamageMultiplier_Parms;
 	GetAuraDamageMultiplier_Parms.anAura = anAura;
@@ -11306,7 +11171,7 @@ float ADunDefGRI_Assault::GetAuraHealthMultiplier ( class ADunDefTower_Aura* anA
 	static UFunction* pFnGetAuraHealthMultiplier = NULL;
 
 	if ( ! pFnGetAuraHealthMultiplier )
-		pFnGetAuraHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 90462 ];
+		pFnGetAuraHealthMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 84840 ];
 
 	ADunDefGRI_Assault_execGetAuraHealthMultiplier_Parms GetAuraHealthMultiplier_Parms;
 	GetAuraHealthMultiplier_Parms.anAura = anAura;
@@ -11328,7 +11193,7 @@ float ADunDefGRI_Assault::GetProjectileLimitDistance ( class AActor* anInstigato
 	static UFunction* pFnGetProjectileLimitDistance = NULL;
 
 	if ( ! pFnGetProjectileLimitDistance )
-		pFnGetProjectileLimitDistance = (UFunction*) UObject::GObjObjects()->Data[ 90458 ];
+		pFnGetProjectileLimitDistance = (UFunction*) UObject::GObjObjects()->Data[ 84836 ];
 
 	ADunDefGRI_Assault_execGetProjectileLimitDistance_Parms GetProjectileLimitDistance_Parms;
 	GetProjectileLimitDistance_Parms.anInstigator = anInstigator;
@@ -11348,7 +11213,7 @@ void ADunDefGRI_Assault::PostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90455 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84835 ];
 
 	ADunDefGRI_Assault_execPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -11365,7 +11230,7 @@ void ADunDefGRI_Assault::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 90453 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 84833 ];
 
 	ADunDefGRI_Assault_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -11383,7 +11248,7 @@ int ADunDefGRI_Assault::GetNumberOfEnemyCoresRemaining ( )
 	static UFunction* pFnGetNumberOfEnemyCoresRemaining = NULL;
 
 	if ( ! pFnGetNumberOfEnemyCoresRemaining )
-		pFnGetNumberOfEnemyCoresRemaining = (UFunction*) UObject::GObjObjects()->Data[ 90449 ];
+		pFnGetNumberOfEnemyCoresRemaining = (UFunction*) UObject::GObjObjects()->Data[ 84829 ];
 
 	ADunDefGRI_Assault_execGetNumberOfEnemyCoresRemaining_Parms GetNumberOfEnemyCoresRemaining_Parms;
 
@@ -11402,7 +11267,7 @@ void ADunDefGRI_Assault::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 90445 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 84825 ];
 
 	ADunDefGRI_Assault_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -11420,7 +11285,7 @@ void ADunDefGRI_Assault::RestartedPlayer ( class ADunDefPlayerController* NewPla
 	static UFunction* pFnRestartedPlayer = NULL;
 
 	if ( ! pFnRestartedPlayer )
-		pFnRestartedPlayer = (UFunction*) UObject::GObjObjects()->Data[ 90443 ];
+		pFnRestartedPlayer = (UFunction*) UObject::GObjObjects()->Data[ 84823 ];
 
 	ADunDefGRI_Assault_execRestartedPlayer_Parms RestartedPlayer_Parms;
 	RestartedPlayer_Parms.NewPlayer = NewPlayer;
@@ -11439,7 +11304,7 @@ bool ADunDefGRI_Assault::CanEnterSpectatorMode ( class ADunDefPlayerController* 
 	static UFunction* pFnCanEnterSpectatorMode = NULL;
 
 	if ( ! pFnCanEnterSpectatorMode )
-		pFnCanEnterSpectatorMode = (UFunction*) UObject::GObjObjects()->Data[ 90440 ];
+		pFnCanEnterSpectatorMode = (UFunction*) UObject::GObjObjects()->Data[ 84820 ];
 
 	ADunDefGRI_Assault_execCanEnterSpectatorMode_Parms CanEnterSpectatorMode_Parms;
 	CanEnterSpectatorMode_Parms.thePlayerController = thePlayerController;
@@ -11460,7 +11325,7 @@ bool ADunDefGRI_Assault::CanRespawnPlayer ( class ADunDefPlayerController* thePl
 	static UFunction* pFnCanRespawnPlayer = NULL;
 
 	if ( ! pFnCanRespawnPlayer )
-		pFnCanRespawnPlayer = (UFunction*) UObject::GObjObjects()->Data[ 90437 ];
+		pFnCanRespawnPlayer = (UFunction*) UObject::GObjObjects()->Data[ 84817 ];
 
 	ADunDefGRI_Assault_execCanRespawnPlayer_Parms CanRespawnPlayer_Parms;
 	CanRespawnPlayer_Parms.thePlayerController = thePlayerController;
@@ -11479,7 +11344,7 @@ void ADunDefGRI_Chicken::PostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90575 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 84953 ];
 
 	ADunDefGRI_Chicken_execPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -11496,7 +11361,7 @@ struct FString ADunDefGRI_Chicken::GetSpectatorWaitString ( )
 	static UFunction* pFnGetSpectatorWaitString = NULL;
 
 	if ( ! pFnGetSpectatorWaitString )
-		pFnGetSpectatorWaitString = (UFunction*) UObject::GObjObjects()->Data[ 90573 ];
+		pFnGetSpectatorWaitString = (UFunction*) UObject::GObjObjects()->Data[ 84951 ];
 
 	ADunDefGRI_Chicken_execGetSpectatorWaitString_Parms GetSpectatorWaitString_Parms;
 
@@ -11515,7 +11380,7 @@ void ADunDefGRI_Chicken::RestartedPlayer ( class ADunDefPlayerController* NewPla
 	static UFunction* pFnRestartedPlayer = NULL;
 
 	if ( ! pFnRestartedPlayer )
-		pFnRestartedPlayer = (UFunction*) UObject::GObjObjects()->Data[ 90571 ];
+		pFnRestartedPlayer = (UFunction*) UObject::GObjObjects()->Data[ 84949 ];
 
 	ADunDefGRI_Chicken_execRestartedPlayer_Parms RestartedPlayer_Parms;
 	RestartedPlayer_Parms.NewPlayer = NewPlayer;
@@ -11534,7 +11399,7 @@ bool ADunDefGRI_Chicken::CanEnterSpectatorMode ( class ADunDefPlayerController* 
 	static UFunction* pFnCanEnterSpectatorMode = NULL;
 
 	if ( ! pFnCanEnterSpectatorMode )
-		pFnCanEnterSpectatorMode = (UFunction*) UObject::GObjObjects()->Data[ 90568 ];
+		pFnCanEnterSpectatorMode = (UFunction*) UObject::GObjObjects()->Data[ 84946 ];
 
 	ADunDefGRI_Chicken_execCanEnterSpectatorMode_Parms CanEnterSpectatorMode_Parms;
 	CanEnterSpectatorMode_Parms.thePlayerController = thePlayerController;
@@ -11555,7 +11420,7 @@ bool ADunDefGRI_Chicken::CanRespawnPlayer ( class ADunDefPlayerController* thePl
 	static UFunction* pFnCanRespawnPlayer = NULL;
 
 	if ( ! pFnCanRespawnPlayer )
-		pFnCanRespawnPlayer = (UFunction*) UObject::GObjObjects()->Data[ 90565 ];
+		pFnCanRespawnPlayer = (UFunction*) UObject::GObjObjects()->Data[ 84943 ];
 
 	ADunDefGRI_Chicken_execCanRespawnPlayer_Parms CanRespawnPlayer_Parms;
 	CanRespawnPlayer_Parms.thePlayerController = thePlayerController;
@@ -11575,7 +11440,7 @@ void ADunDefGRI_Chicken::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 90555 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 84933 ];
 
 	ADunDefGRI_Chicken_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -11592,7 +11457,7 @@ void ADunDefGRI_Chicken::BeganCombatPhase ( )
 	static UFunction* pFnBeganCombatPhase = NULL;
 
 	if ( ! pFnBeganCombatPhase )
-		pFnBeganCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 90554 ];
+		pFnBeganCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 84932 ];
 
 	ADunDefGRI_Chicken_execBeganCombatPhase_Parms BeganCombatPhase_Parms;
 
@@ -11609,7 +11474,7 @@ void ADunDefGRI_Chicken::SetChickenPlayer ( class ADunDefPlayer* theNewChickenPl
 	static UFunction* pFnSetChickenPlayer = NULL;
 
 	if ( ! pFnSetChickenPlayer )
-		pFnSetChickenPlayer = (UFunction*) UObject::GObjObjects()->Data[ 90551 ];
+		pFnSetChickenPlayer = (UFunction*) UObject::GObjObjects()->Data[ 84929 ];
 
 	ADunDefGRI_Chicken_execSetChickenPlayer_Parms SetChickenPlayer_Parms;
 	SetChickenPlayer_Parms.theNewChickenPlayer = theNewChickenPlayer;
@@ -11627,7 +11492,7 @@ class ADunDefPlayer* ADunDefGRI_Chicken::GetRandomPlayer ( )
 	static UFunction* pFnGetRandomPlayer = NULL;
 
 	if ( ! pFnGetRandomPlayer )
-		pFnGetRandomPlayer = (UFunction*) UObject::GObjObjects()->Data[ 90546 ];
+		pFnGetRandomPlayer = (UFunction*) UObject::GObjObjects()->Data[ 84924 ];
 
 	ADunDefGRI_Chicken_execGetRandomPlayer_Parms GetRandomPlayer_Parms;
 
@@ -11646,7 +11511,7 @@ void ADunDefGRI_Chicken::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 90544 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 84922 ];
 
 	ADunDefGRI_Chicken_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -11664,7 +11529,7 @@ void ADunDefGRI_Chicken::SetInCombatPhase ( unsigned long inCombatPhase )
 	static UFunction* pFnSetInCombatPhase = NULL;
 
 	if ( ! pFnSetInCombatPhase )
-		pFnSetInCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 90542 ];
+		pFnSetInCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 84920 ];
 
 	ADunDefGRI_Chicken_execSetInCombatPhase_Parms SetInCombatPhase_Parms;
 	SetInCombatPhase_Parms.inCombatPhase = inCombatPhase;
@@ -11682,7 +11547,7 @@ void ADunDefGRI_Chicken::NotifyOfChicken ( class ADunDefPlayerController* PC )
 	static UFunction* pFnNotifyOfChicken = NULL;
 
 	if ( ! pFnNotifyOfChicken )
-		pFnNotifyOfChicken = (UFunction*) UObject::GObjObjects()->Data[ 90540 ];
+		pFnNotifyOfChicken = (UFunction*) UObject::GObjObjects()->Data[ 84918 ];
 
 	ADunDefGRI_Chicken_execNotifyOfChicken_Parms NotifyOfChicken_Parms;
 	NotifyOfChicken_Parms.PC = PC;
@@ -11715,7 +11580,7 @@ void ADunDefGRI_Chicken::ExecReplicatedFunction ( struct FName FunctionName, str
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 90523 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 84901 ];
 
 	ADunDefGRI_Chicken_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -11748,7 +11613,7 @@ void ADunDefGRI_Chicken::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 90521 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 84899 ];
 
 	ADunDefGRI_Chicken_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -11766,7 +11631,7 @@ void ADunDefPlayerAbility_PickUpItem::RequestPickup ( class ADunDefPickupableIte
 	static UFunction* pFnRequestPickup = NULL;
 
 	if ( ! pFnRequestPickup )
-		pFnRequestPickup = (UFunction*) UObject::GObjObjects()->Data[ 90582 ];
+		pFnRequestPickup = (UFunction*) UObject::GObjObjects()->Data[ 84960 ];
 
 	ADunDefPlayerAbility_PickUpItem_execRequestPickup_Parms RequestPickup_Parms;
 	RequestPickup_Parms.NewItem = NewItem;
@@ -11784,7 +11649,7 @@ int UDunDefMapInfo_Delivery::GetPointDropOffCount ( )
 	static UFunction* pFnGetPointDropOffCount = NULL;
 
 	if ( ! pFnGetPointDropOffCount )
-		pFnGetPointDropOffCount = (UFunction*) UObject::GObjObjects()->Data[ 90630 ];
+		pFnGetPointDropOffCount = (UFunction*) UObject::GObjObjects()->Data[ 85008 ];
 
 	UDunDefMapInfo_Delivery_execGetPointDropOffCount_Parms GetPointDropOffCount_Parms;
 
@@ -11804,7 +11669,7 @@ int UDunDefMapInfo_Delivery::GetDUForWave ( int waveNumber )
 	static UFunction* pFnGetDUForWave = NULL;
 
 	if ( ! pFnGetDUForWave )
-		pFnGetDUForWave = (UFunction*) UObject::GObjObjects()->Data[ 90653 ];
+		pFnGetDUForWave = (UFunction*) UObject::GObjObjects()->Data[ 85031 ];
 
 	UDunDefMapInfo_Delivery_execGetDUForWave_Parms GetDUForWave_Parms;
 	GetDUForWave_Parms.waveNumber = waveNumber;
@@ -11827,7 +11692,7 @@ float UDunDefMapInfo_Delivery::GetTimeLimit ( int waveNumber, int difficulty, in
 	static UFunction* pFnGetTimeLimit = NULL;
 
 	if ( ! pFnGetTimeLimit )
-		pFnGetTimeLimit = (UFunction*) UObject::GObjObjects()->Data[ 90655 ];
+		pFnGetTimeLimit = (UFunction*) UObject::GObjObjects()->Data[ 85033 ];
 
 	UDunDefMapInfo_Delivery_execGetTimeLimit_Parms GetTimeLimit_Parms;
 	GetTimeLimit_Parms.waveNumber = waveNumber;
@@ -11850,7 +11715,7 @@ int UDunDefMapInfo_Delivery::GetWaveDropOffCount ( int waveNumber )
 	static UFunction* pFnGetWaveDropOffCount = NULL;
 
 	if ( ! pFnGetWaveDropOffCount )
-		pFnGetWaveDropOffCount = (UFunction*) UObject::GObjObjects()->Data[ 90637 ];
+		pFnGetWaveDropOffCount = (UFunction*) UObject::GObjObjects()->Data[ 85015 ];
 
 	UDunDefMapInfo_Delivery_execGetWaveDropOffCount_Parms GetWaveDropOffCount_Parms;
 	GetWaveDropOffCount_Parms.waveNumber = waveNumber;
@@ -11870,7 +11735,7 @@ void ADunDefManaToken_Golden::Collected ( class ADunDefPlayer* byPlayer )
 	static UFunction* pFnCollected = NULL;
 
 	if ( ! pFnCollected )
-		pFnCollected = (UFunction*) UObject::GObjObjects()->Data[ 90676 ];
+		pFnCollected = (UFunction*) UObject::GObjObjects()->Data[ 85054 ];
 
 	ADunDefManaToken_Golden_execCollected_Parms Collected_Parms;
 	Collected_Parms.byPlayer = byPlayer;
@@ -11888,7 +11753,7 @@ void ADunDefGRI_GoldenTokens::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 90721 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 85099 ];
 
 	ADunDefGRI_GoldenTokens_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -11906,7 +11771,7 @@ void ADunDefGRI_GoldenTokens::SetInCombatPhase ( unsigned long inCombatPhase )
 	static UFunction* pFnSetInCombatPhase = NULL;
 
 	if ( ! pFnSetInCombatPhase )
-		pFnSetInCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 90718 ];
+		pFnSetInCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 85096 ];
 
 	ADunDefGRI_GoldenTokens_execSetInCombatPhase_Parms SetInCombatPhase_Parms;
 	SetInCombatPhase_Parms.inCombatPhase = inCombatPhase;
@@ -11923,7 +11788,7 @@ void ADunDefGRI_GoldenTokens::CollectedGoldenToken ( )
 	static UFunction* pFnCollectedGoldenToken = NULL;
 
 	if ( ! pFnCollectedGoldenToken )
-		pFnCollectedGoldenToken = (UFunction*) UObject::GObjObjects()->Data[ 90717 ];
+		pFnCollectedGoldenToken = (UFunction*) UObject::GObjObjects()->Data[ 85095 ];
 
 	ADunDefGRI_GoldenTokens_execCollectedGoldenToken_Parms CollectedGoldenToken_Parms;
 
@@ -11940,7 +11805,7 @@ void ADunDefGRI_GoldenTokens::PawnDied ( class APawn* KilledPawn )
 	static UFunction* pFnPawnDied = NULL;
 
 	if ( ! pFnPawnDied )
-		pFnPawnDied = (UFunction*) UObject::GObjObjects()->Data[ 90715 ];
+		pFnPawnDied = (UFunction*) UObject::GObjObjects()->Data[ 85093 ];
 
 	ADunDefGRI_GoldenTokens_execPawnDied_Parms PawnDied_Parms;
 	PawnDied_Parms.KilledPawn = KilledPawn;
@@ -11958,7 +11823,7 @@ void ADunDefGRI_GoldenTokens::SetGoldenEnemy ( class ADunDefEnemy* Enemy )
 	static UFunction* pFnSetGoldenEnemy = NULL;
 
 	if ( ! pFnSetGoldenEnemy )
-		pFnSetGoldenEnemy = (UFunction*) UObject::GObjObjects()->Data[ 90712 ];
+		pFnSetGoldenEnemy = (UFunction*) UObject::GObjObjects()->Data[ 85090 ];
 
 	ADunDefGRI_GoldenTokens_execSetGoldenEnemy_Parms SetGoldenEnemy_Parms;
 	SetGoldenEnemy_Parms.Enemy = Enemy;
@@ -11975,7 +11840,7 @@ void ADunDefGRI_GoldenTokens::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90711 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 85089 ];
 
 	ADunDefGRI_GoldenTokens_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -11992,7 +11857,7 @@ void ADunDefGRI_GoldenTokens::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 90705 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 85083 ];
 
 	ADunDefGRI_GoldenTokens_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -12010,7 +11875,7 @@ void ADunDefGRI_GoldenTokens::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 90703 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 85081 ];
 
 	ADunDefGRI_GoldenTokens_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -12028,7 +11893,7 @@ struct FString ADunDefGRI_KillEnemiesTimeLimit::GetSpectatorWaitString ( )
 	static UFunction* pFnGetSpectatorWaitString = NULL;
 
 	if ( ! pFnGetSpectatorWaitString )
-		pFnGetSpectatorWaitString = (UFunction*) UObject::GObjObjects()->Data[ 90767 ];
+		pFnGetSpectatorWaitString = (UFunction*) UObject::GObjObjects()->Data[ 85145 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_execGetSpectatorWaitString_Parms GetSpectatorWaitString_Parms;
 
@@ -12047,7 +11912,7 @@ void ADunDefGRI_KillEnemiesTimeLimit::RestartedPlayer ( class ADunDefPlayerContr
 	static UFunction* pFnRestartedPlayer = NULL;
 
 	if ( ! pFnRestartedPlayer )
-		pFnRestartedPlayer = (UFunction*) UObject::GObjObjects()->Data[ 90765 ];
+		pFnRestartedPlayer = (UFunction*) UObject::GObjObjects()->Data[ 85143 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_execRestartedPlayer_Parms RestartedPlayer_Parms;
 	RestartedPlayer_Parms.NewPlayer = NewPlayer;
@@ -12066,7 +11931,7 @@ bool ADunDefGRI_KillEnemiesTimeLimit::CanEnterSpectatorMode ( class ADunDefPlaye
 	static UFunction* pFnCanEnterSpectatorMode = NULL;
 
 	if ( ! pFnCanEnterSpectatorMode )
-		pFnCanEnterSpectatorMode = (UFunction*) UObject::GObjObjects()->Data[ 90762 ];
+		pFnCanEnterSpectatorMode = (UFunction*) UObject::GObjObjects()->Data[ 85140 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_execCanEnterSpectatorMode_Parms CanEnterSpectatorMode_Parms;
 	CanEnterSpectatorMode_Parms.thePlayerController = thePlayerController;
@@ -12087,7 +11952,7 @@ bool ADunDefGRI_KillEnemiesTimeLimit::CanRespawnPlayer ( class ADunDefPlayerCont
 	static UFunction* pFnCanRespawnPlayer = NULL;
 
 	if ( ! pFnCanRespawnPlayer )
-		pFnCanRespawnPlayer = (UFunction*) UObject::GObjObjects()->Data[ 90759 ];
+		pFnCanRespawnPlayer = (UFunction*) UObject::GObjObjects()->Data[ 85137 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_execCanRespawnPlayer_Parms CanRespawnPlayer_Parms;
 	CanRespawnPlayer_Parms.thePlayerController = thePlayerController;
@@ -12107,7 +11972,7 @@ void ADunDefGRI_KillEnemiesTimeLimit::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 90755 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 85133 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -12124,7 +11989,7 @@ void ADunDefGRI_KillEnemiesTimeLimit::ReceivedGameClass ( )
 	static UFunction* pFnReceivedGameClass = NULL;
 
 	if ( ! pFnReceivedGameClass )
-		pFnReceivedGameClass = (UFunction*) UObject::GObjObjects()->Data[ 90754 ];
+		pFnReceivedGameClass = (UFunction*) UObject::GObjObjects()->Data[ 85132 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_execReceivedGameClass_Parms ReceivedGameClass_Parms;
 
@@ -12141,7 +12006,7 @@ void ADunDefGRI_KillEnemiesTimeLimit::SetInCombatPhase ( unsigned long inCombatP
 	static UFunction* pFnSetInCombatPhase = NULL;
 
 	if ( ! pFnSetInCombatPhase )
-		pFnSetInCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 90744 ];
+		pFnSetInCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 85122 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_execSetInCombatPhase_Parms SetInCombatPhase_Parms;
 	SetInCombatPhase_Parms.inCombatPhase = inCombatPhase;
@@ -12158,7 +12023,7 @@ void ADunDefGRI_KillEnemiesTimeLimit::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90741 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 85119 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -12175,7 +12040,7 @@ void ADunDefGRI_KillEnemiesTimeLimit::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 90739 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 85117 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -12194,7 +12059,7 @@ float UDunDefMapInfo_KillEnemiesTimeLimit::GetTimeLimit ( int waveNumber )
 	static UFunction* pFnGetTimeLimit = NULL;
 
 	if ( ! pFnGetTimeLimit )
-		pFnGetTimeLimit = (UFunction*) UObject::GObjObjects()->Data[ 90752 ];
+		pFnGetTimeLimit = (UFunction*) UObject::GObjObjects()->Data[ 85130 ];
 
 	UDunDefMapInfo_KillEnemiesTimeLimit_execGetTimeLimit_Parms GetTimeLimit_Parms;
 	GetTimeLimit_Parms.waveNumber = waveNumber;
@@ -12215,7 +12080,7 @@ void UUI_GlobalHUDUberMF::GetPlayerList ( struct FString* pList, struct FString*
 	static UFunction* pFnGetPlayerList = NULL;
 
 	if ( ! pFnGetPlayerList )
-		pFnGetPlayerList = (UFunction*) UObject::GObjObjects()->Data[ 90787 ];
+		pFnGetPlayerList = (UFunction*) UObject::GObjObjects()->Data[ 85165 ];
 
 	UUI_GlobalHUDUberMF_execGetPlayerList_Parms GetPlayerList_Parms;
 
@@ -12239,7 +12104,7 @@ struct FString UUI_GlobalHUDUberMF::GetColorString ( struct FColor aColor )
 	static UFunction* pFnGetColorString = NULL;
 
 	if ( ! pFnGetColorString )
-		pFnGetColorString = (UFunction*) UObject::GObjObjects()->Data[ 90784 ];
+		pFnGetColorString = (UFunction*) UObject::GObjObjects()->Data[ 85162 ];
 
 	UUI_GlobalHUDUberMF_execGetColorString_Parms GetColorString_Parms;
 	memcpy ( &GetColorString_Parms.aColor, &aColor, 0x4 );
@@ -12258,7 +12123,7 @@ void UUI_GlobalHUDUberMF::UpdateScorePanel ( )
 	static UFunction* pFnUpdateScorePanel = NULL;
 
 	if ( ! pFnUpdateScorePanel )
-		pFnUpdateScorePanel = (UFunction*) UObject::GObjObjects()->Data[ 90781 ];
+		pFnUpdateScorePanel = (UFunction*) UObject::GObjObjects()->Data[ 85159 ];
 
 	UUI_GlobalHUDUberMF_execUpdateScorePanel_Parms UpdateScorePanel_Parms;
 
@@ -12275,12 +12140,30 @@ void UUI_GlobalHUDUberMF::eventUpdate ( float DeltaTime )
 	static UFunction* pFnUpdate = NULL;
 
 	if ( ! pFnUpdate )
-		pFnUpdate = (UFunction*) UObject::GObjObjects()->Data[ 90777 ];
+		pFnUpdate = (UFunction*) UObject::GObjObjects()->Data[ 85155 ];
 
 	UUI_GlobalHUDUberMF_eventUpdate_Parms Update_Parms;
 	Update_Parms.DeltaTime = DeltaTime;
 
 	this->ProcessEvent ( pFnUpdate, &Update_Parms, NULL );
+};
+
+// Function DunDefSpecial.DunDefGRI_KillEnemiesTimeLimit_Uber.Tick
+// [0x00020902] ( FUNC_Event )
+// Parameters infos:
+// float                          DeltaTime                      ( CPF_Parm )
+
+void ADunDefGRI_KillEnemiesTimeLimit_Uber::eventTick ( float DeltaTime )
+{
+	static UFunction* pFnTick = NULL;
+
+	if ( ! pFnTick )
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 85206 ];
+
+	ADunDefGRI_KillEnemiesTimeLimit_Uber_eventTick_Parms Tick_Parms;
+	Tick_Parms.DeltaTime = DeltaTime;
+
+	this->ProcessEvent ( pFnTick, &Tick_Parms, NULL );
 };
 
 // Function DunDefSpecial.DunDefGRI_KillEnemiesTimeLimit_Uber.ReadToShowStats
@@ -12293,7 +12176,7 @@ bool ADunDefGRI_KillEnemiesTimeLimit_Uber::ReadToShowStats ( )
 	static UFunction* pFnReadToShowStats = NULL;
 
 	if ( ! pFnReadToShowStats )
-		pFnReadToShowStats = (UFunction*) UObject::GObjObjects()->Data[ 90824 ];
+		pFnReadToShowStats = (UFunction*) UObject::GObjObjects()->Data[ 85204 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_Uber_execReadToShowStats_Parms ReadToShowStats_Parms;
 
@@ -12312,7 +12195,7 @@ struct FColor ADunDefGRI_KillEnemiesTimeLimit_Uber::GetGameOverLabelColor ( )
 	static UFunction* pFnGetGameOverLabelColor = NULL;
 
 	if ( ! pFnGetGameOverLabelColor )
-		pFnGetGameOverLabelColor = (UFunction*) UObject::GObjObjects()->Data[ 90822 ];
+		pFnGetGameOverLabelColor = (UFunction*) UObject::GObjObjects()->Data[ 85202 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_Uber_execGetGameOverLabelColor_Parms GetGameOverLabelColor_Parms;
 
@@ -12331,7 +12214,7 @@ struct FColor ADunDefGRI_KillEnemiesTimeLimit_Uber::GetVictoryLabelColor ( )
 	static UFunction* pFnGetVictoryLabelColor = NULL;
 
 	if ( ! pFnGetVictoryLabelColor )
-		pFnGetVictoryLabelColor = (UFunction*) UObject::GObjObjects()->Data[ 90820 ];
+		pFnGetVictoryLabelColor = (UFunction*) UObject::GObjObjects()->Data[ 85200 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_Uber_execGetVictoryLabelColor_Parms GetVictoryLabelColor_Parms;
 
@@ -12351,7 +12234,7 @@ struct FString ADunDefGRI_KillEnemiesTimeLimit_Uber::GetGameOverLabelString ( cl
 	static UFunction* pFnGetGameOverLabelString = NULL;
 
 	if ( ! pFnGetGameOverLabelString )
-		pFnGetGameOverLabelString = (UFunction*) UObject::GObjObjects()->Data[ 90817 ];
+		pFnGetGameOverLabelString = (UFunction*) UObject::GObjObjects()->Data[ 85197 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_Uber_execGetGameOverLabelString_Parms GetGameOverLabelString_Parms;
 	GetGameOverLabelString_Parms.myPlayer = myPlayer;
@@ -12372,7 +12255,7 @@ struct FString ADunDefGRI_KillEnemiesTimeLimit_Uber::GetVictoryLabelString ( cla
 	static UFunction* pFnGetVictoryLabelString = NULL;
 
 	if ( ! pFnGetVictoryLabelString )
-		pFnGetVictoryLabelString = (UFunction*) UObject::GObjObjects()->Data[ 90814 ];
+		pFnGetVictoryLabelString = (UFunction*) UObject::GObjObjects()->Data[ 85194 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_Uber_execGetVictoryLabelString_Parms GetVictoryLabelString_Parms;
 	GetVictoryLabelString_Parms.myPlayer = myPlayer;
@@ -12392,7 +12275,7 @@ bool ADunDefGRI_KillEnemiesTimeLimit_Uber::OverrideEndGameLabel ( )
 	static UFunction* pFnOverrideEndGameLabel = NULL;
 
 	if ( ! pFnOverrideEndGameLabel )
-		pFnOverrideEndGameLabel = (UFunction*) UObject::GObjObjects()->Data[ 90812 ];
+		pFnOverrideEndGameLabel = (UFunction*) UObject::GObjObjects()->Data[ 85192 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_Uber_execOverrideEndGameLabel_Parms OverrideEndGameLabel_Parms;
 
@@ -12411,7 +12294,7 @@ class ADunDefPlayerReplicationInfo* ADunDefGRI_KillEnemiesTimeLimit_Uber::GetMVP
 	static UFunction* pFnGetMVP = NULL;
 
 	if ( ! pFnGetMVP )
-		pFnGetMVP = (UFunction*) UObject::GObjObjects()->Data[ 90807 ];
+		pFnGetMVP = (UFunction*) UObject::GObjObjects()->Data[ 85187 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_Uber_execGetMVP_Parms GetMVP_Parms;
 
@@ -12429,7 +12312,7 @@ void ADunDefGRI_KillEnemiesTimeLimit_Uber::DoLevelVictory ( )
 	static UFunction* pFnDoLevelVictory = NULL;
 
 	if ( ! pFnDoLevelVictory )
-		pFnDoLevelVictory = (UFunction*) UObject::GObjObjects()->Data[ 90805 ];
+		pFnDoLevelVictory = (UFunction*) UObject::GObjObjects()->Data[ 85185 ];
 
 	ADunDefGRI_KillEnemiesTimeLimit_Uber_execDoLevelVictory_Parms DoLevelVictory_Parms;
 
@@ -12445,7 +12328,7 @@ void ADunDefGRI_OgreAlly::ReceivedGameClass ( )
 	static UFunction* pFnReceivedGameClass = NULL;
 
 	if ( ! pFnReceivedGameClass )
-		pFnReceivedGameClass = (UFunction*) UObject::GObjObjects()->Data[ 90832 ];
+		pFnReceivedGameClass = (UFunction*) UObject::GObjObjects()->Data[ 85214 ];
 
 	ADunDefGRI_OgreAlly_execReceivedGameClass_Parms ReceivedGameClass_Parms;
 
@@ -12462,7 +12345,7 @@ void ADunDefGRI_OgreAlly::SetInCombatPhase ( unsigned long inCombatPhase )
 	static UFunction* pFnSetInCombatPhase = NULL;
 
 	if ( ! pFnSetInCombatPhase )
-		pFnSetInCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 90830 ];
+		pFnSetInCombatPhase = (UFunction*) UObject::GObjObjects()->Data[ 85212 ];
 
 	ADunDefGRI_OgreAlly_execSetInCombatPhase_Parms SetInCombatPhase_Parms;
 	SetInCombatPhase_Parms.inCombatPhase = inCombatPhase;
@@ -12479,11 +12362,47 @@ void ADunDefGRI_OgreAlly::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90829 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 85211 ];
 
 	ADunDefGRI_OgreAlly_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
 	this->ProcessEvent ( pFnPostBeginPlay, &PostBeginPlay_Parms, NULL );
+};
+
+// Function DunDefSpecial.DunDefGRI_UberAssault.Tick
+// [0x00020902] ( FUNC_Event )
+// Parameters infos:
+// float                          DeltaTime                      ( CPF_Parm )
+
+void ADunDefGRI_UberAssault::eventTick ( float DeltaTime )
+{
+	static UFunction* pFnTick = NULL;
+
+	if ( ! pFnTick )
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 85219 ];
+
+	ADunDefGRI_UberAssault_eventTick_Parms Tick_Parms;
+	Tick_Parms.DeltaTime = DeltaTime;
+
+	this->ProcessEvent ( pFnTick, &Tick_Parms, NULL );
+};
+
+// Function DunDefSpecial.DunDefGRI_UberDefense.Tick
+// [0x00020902] ( FUNC_Event )
+// Parameters infos:
+// float                          DeltaTime                      ( CPF_Parm )
+
+void ADunDefGRI_UberDefense::eventTick ( float DeltaTime )
+{
+	static UFunction* pFnTick = NULL;
+
+	if ( ! pFnTick )
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 85225 ];
+
+	ADunDefGRI_UberDefense_eventTick_Parms Tick_Parms;
+	Tick_Parms.DeltaTime = DeltaTime;
+
+	this->ProcessEvent ( pFnTick, &Tick_Parms, NULL );
 };
 
 // Function DunDefSpecial.DunDefGRI_VDay2.PostBeginPlay
@@ -12495,7 +12414,7 @@ void ADunDefGRI_VDay2::PostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90893 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 85285 ];
 
 	ADunDefGRI_VDay2_execPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -12512,7 +12431,7 @@ void ADunDefGRI_VDay2::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 90891 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 85283 ];
 
 	ADunDefGRI_VDay2_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -12530,7 +12449,7 @@ void ADunDefGRI_VDay2::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 90887 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 85279 ];
 
 	ADunDefGRI_VDay2_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -12550,7 +12469,7 @@ struct FString ADunDefGRI_VDay2::GetGameOverString ( int GameOverType, int gameO
 	static UFunction* pFnGetGameOverString = NULL;
 
 	if ( ! pFnGetGameOverString )
-		pFnGetGameOverString = (UFunction*) UObject::GObjObjects()->Data[ 90883 ];
+		pFnGetGameOverString = (UFunction*) UObject::GObjObjects()->Data[ 85275 ];
 
 	ADunDefGRI_VDay2_execGetGameOverString_Parms GetGameOverString_Parms;
 	GetGameOverString_Parms.GameOverType = GameOverType;
@@ -12573,7 +12492,7 @@ void ADunDefGRI_VDay2::DrawExtraEnemyMinimapIcon ( class UCanvas* Canvas, class 
 	static UFunction* pFnDrawExtraEnemyMinimapIcon = NULL;
 
 	if ( ! pFnDrawExtraEnemyMinimapIcon )
-		pFnDrawExtraEnemyMinimapIcon = (UFunction*) UObject::GObjObjects()->Data[ 90867 ];
+		pFnDrawExtraEnemyMinimapIcon = (UFunction*) UObject::GObjObjects()->Data[ 85259 ];
 
 	ADunDefGRI_VDay2_execDrawExtraEnemyMinimapIcon_Parms DrawExtraEnemyMinimapIcon_Parms;
 	DrawExtraEnemyMinimapIcon_Parms.Canvas = Canvas;
@@ -12594,7 +12513,7 @@ void ADunDefGRI_VDay2::PrintPairMatch ( class ADunDefEnemy* aPairMatch1, class A
 	static UFunction* pFnPrintPairMatch = NULL;
 
 	if ( ! pFnPrintPairMatch )
-		pFnPrintPairMatch = (UFunction*) UObject::GObjObjects()->Data[ 90860 ];
+		pFnPrintPairMatch = (UFunction*) UObject::GObjObjects()->Data[ 85252 ];
 
 	ADunDefGRI_VDay2_execPrintPairMatch_Parms PrintPairMatch_Parms;
 	PrintPairMatch_Parms.aPairMatch1 = aPairMatch1;
@@ -12628,7 +12547,7 @@ void ADunDefGRI_VDay2::ExecReplicatedFunction ( struct FName FunctionName, struc
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 90843 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 85235 ];
 
 	ADunDefGRI_VDay2_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -12661,7 +12580,7 @@ void ADunDefHarbingerController_v2::PawnDied ( class APawn* inPawn )
 	static UFunction* pFnPawnDied = NULL;
 
 	if ( ! pFnPawnDied )
-		pFnPawnDied = (UFunction*) UObject::GObjObjects()->Data[ 90980 ];
+		pFnPawnDied = (UFunction*) UObject::GObjObjects()->Data[ 85372 ];
 
 	ADunDefHarbingerController_v2_execPawnDied_Parms PawnDied_Parms;
 	PawnDied_Parms.inPawn = inPawn;
@@ -12679,7 +12598,7 @@ void ADunDefHarbingerController_v2::CheckPlayer ( class ADunDefPlayer* aPlayer )
 	static UFunction* pFnCheckPlayer = NULL;
 
 	if ( ! pFnCheckPlayer )
-		pFnCheckPlayer = (UFunction*) UObject::GObjObjects()->Data[ 90976 ];
+		pFnCheckPlayer = (UFunction*) UObject::GObjObjects()->Data[ 85368 ];
 
 	ADunDefHarbingerController_v2_execCheckPlayer_Parms CheckPlayer_Parms;
 	CheckPlayer_Parms.aPlayer = aPlayer;
@@ -12696,7 +12615,7 @@ void ADunDefHarbingerController_v2::CheckForNearbyPlayers ( )
 	static UFunction* pFnCheckForNearbyPlayers = NULL;
 
 	if ( ! pFnCheckForNearbyPlayers )
-		pFnCheckForNearbyPlayers = (UFunction*) UObject::GObjObjects()->Data[ 90974 ];
+		pFnCheckForNearbyPlayers = (UFunction*) UObject::GObjObjects()->Data[ 85366 ];
 
 	ADunDefHarbingerController_v2_execCheckForNearbyPlayers_Parms CheckForNearbyPlayers_Parms;
 
@@ -12714,7 +12633,7 @@ void ADunDefHarbingerController_v2::ObstructionJump ( struct FVector jumpForward
 	static UFunction* pFnObstructionJump = NULL;
 
 	if ( ! pFnObstructionJump )
-		pFnObstructionJump = (UFunction*) UObject::GObjObjects()->Data[ 90971 ];
+		pFnObstructionJump = (UFunction*) UObject::GObjObjects()->Data[ 85363 ];
 
 	ADunDefHarbingerController_v2_execObstructionJump_Parms ObstructionJump_Parms;
 	memcpy ( &ObstructionJump_Parms.jumpForwardDir, &jumpForwardDir, 0xC );
@@ -12738,7 +12657,7 @@ void ADunDefHarbingerController_v2::NotifyTakeHitEX ( class AController* Instiga
 	static UFunction* pFnNotifyTakeHitEX = NULL;
 
 	if ( ! pFnNotifyTakeHitEX )
-		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 90957 ];
+		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 85349 ];
 
 	ADunDefHarbingerController_v2_execNotifyTakeHitEX_Parms NotifyTakeHitEX_Parms;
 	NotifyTakeHitEX_Parms.InstigatedBy = InstigatedBy;
@@ -12760,7 +12679,7 @@ void ADunDefHarbingerController_v2::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 90956 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 85348 ];
 
 	ADunDefHarbingerController_v2_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -12777,7 +12696,7 @@ void ADunDefHarbingerController_v2::FireProjectiles ( struct FName socketToUse )
 	static UFunction* pFnFireProjectiles = NULL;
 
 	if ( ! pFnFireProjectiles )
-		pFnFireProjectiles = (UFunction*) UObject::GObjObjects()->Data[ 90954 ];
+		pFnFireProjectiles = (UFunction*) UObject::GObjObjects()->Data[ 85346 ];
 
 	ADunDefHarbingerController_v2_execFireProjectiles_Parms FireProjectiles_Parms;
 	memcpy ( &FireProjectiles_Parms.socketToUse, &socketToUse, 0x8 );
@@ -12800,7 +12719,7 @@ void ADunDefPickupableSpawner::AdjustDamage ( class UClass* DamageType, class AC
 	static UFunction* pFnAdjustDamage = NULL;
 
 	if ( ! pFnAdjustDamage )
-		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 91313 ];
+		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 85705 ];
 
 	ADunDefPickupableSpawner_execAdjustDamage_Parms AdjustDamage_Parms;
 	AdjustDamage_Parms.DamageType = DamageType;
@@ -12827,7 +12746,7 @@ bool ADunDefPickupableSpawner::OnlyDrawHUDForOwner ( )
 	static UFunction* pFnOnlyDrawHUDForOwner = NULL;
 
 	if ( ! pFnOnlyDrawHUDForOwner )
-		pFnOnlyDrawHUDForOwner = (UFunction*) UObject::GObjObjects()->Data[ 91311 ];
+		pFnOnlyDrawHUDForOwner = (UFunction*) UObject::GObjObjects()->Data[ 85703 ];
 
 	ADunDefPickupableSpawner_execOnlyDrawHUDForOwner_Parms OnlyDrawHUDForOwner_Parms;
 
@@ -12847,7 +12766,7 @@ bool ADunDefPickupableSpawner::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 91299 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 85691 ];
 
 	ADunDefPickupableSpawner_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -12870,7 +12789,7 @@ void ADunDefPickupableSpawner::DrawToolTip ( class UCanvas* C, int PosX, int Pos
 	static UFunction* pFnDrawToolTip = NULL;
 
 	if ( ! pFnDrawToolTip )
-		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 91291 ];
+		pFnDrawToolTip = (UFunction*) UObject::GObjObjects()->Data[ 85683 ];
 
 	ADunDefPickupableSpawner_execDrawToolTip_Parms DrawToolTip_Parms;
 	DrawToolTip_Parms.C = C;
@@ -12891,7 +12810,7 @@ void ADunDefPickupableSpawner::ChangedGamePhases ( unsigned long IsCombatPhase )
 	static UFunction* pFnChangedGamePhases = NULL;
 
 	if ( ! pFnChangedGamePhases )
-		pFnChangedGamePhases = (UFunction*) UObject::GObjObjects()->Data[ 91289 ];
+		pFnChangedGamePhases = (UFunction*) UObject::GObjObjects()->Data[ 85681 ];
 
 	ADunDefPickupableSpawner_execChangedGamePhases_Parms ChangedGamePhases_Parms;
 	ChangedGamePhases_Parms.IsCombatPhase = IsCombatPhase;
@@ -12910,7 +12829,7 @@ void ADunDefPickupableSpawner::NotifyPickUp ( class ADunDefPickupableItem* picke
 	static UFunction* pFnNotifyPickUp = NULL;
 
 	if ( ! pFnNotifyPickUp )
-		pFnNotifyPickUp = (UFunction*) UObject::GObjObjects()->Data[ 91285 ];
+		pFnNotifyPickUp = (UFunction*) UObject::GObjObjects()->Data[ 85677 ];
 
 	ADunDefPickupableSpawner_execNotifyPickUp_Parms NotifyPickUp_Parms;
 	NotifyPickUp_Parms.pickedupItem = pickedupItem;
@@ -12929,7 +12848,7 @@ void ADunDefPickupableSpawner::NotifyDestroyed ( class ADunDefPickupableItem* dr
 	static UFunction* pFnNotifyDestroyed = NULL;
 
 	if ( ! pFnNotifyDestroyed )
-		pFnNotifyDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 91282 ];
+		pFnNotifyDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 85674 ];
 
 	ADunDefPickupableSpawner_execNotifyDestroyed_Parms NotifyDestroyed_Parms;
 	NotifyDestroyed_Parms.droppedItem = droppedItem;
@@ -12947,7 +12866,7 @@ void ADunDefPickupableSpawner::NotifyDrop ( class ADunDefPickupableItem* dropped
 	static UFunction* pFnNotifyDrop = NULL;
 
 	if ( ! pFnNotifyDrop )
-		pFnNotifyDrop = (UFunction*) UObject::GObjObjects()->Data[ 91279 ];
+		pFnNotifyDrop = (UFunction*) UObject::GObjObjects()->Data[ 85671 ];
 
 	ADunDefPickupableSpawner_execNotifyDrop_Parms NotifyDrop_Parms;
 	NotifyDrop_Parms.droppedItem = droppedItem;
@@ -12966,7 +12885,7 @@ void ADunDefPickupableSpawner::GetSpawnLocandRot ( struct FVector* sLoc, struct 
 	static UFunction* pFnGetSpawnLocandRot = NULL;
 
 	if ( ! pFnGetSpawnLocandRot )
-		pFnGetSpawnLocandRot = (UFunction*) UObject::GObjObjects()->Data[ 91276 ];
+		pFnGetSpawnLocandRot = (UFunction*) UObject::GObjObjects()->Data[ 85668 ];
 
 	ADunDefPickupableSpawner_execGetSpawnLocandRot_Parms GetSpawnLocandRot_Parms;
 
@@ -12989,7 +12908,7 @@ void ADunDefPickupableSpawner::ActivateEffects ( unsigned long bTurnOn )
 	static UFunction* pFnActivateEffects = NULL;
 
 	if ( ! pFnActivateEffects )
-		pFnActivateEffects = (UFunction*) UObject::GObjObjects()->Data[ 91272 ];
+		pFnActivateEffects = (UFunction*) UObject::GObjObjects()->Data[ 85664 ];
 
 	ADunDefPickupableSpawner_execActivateEffects_Parms ActivateEffects_Parms;
 	ActivateEffects_Parms.bTurnOn = bTurnOn;
@@ -13007,7 +12926,7 @@ void ADunDefPickupableSpawner::SpawnPickUpItem ( unsigned long bForceSpawn )
 	static UFunction* pFnSpawnPickUpItem = NULL;
 
 	if ( ! pFnSpawnPickUpItem )
-		pFnSpawnPickUpItem = (UFunction*) UObject::GObjObjects()->Data[ 91266 ];
+		pFnSpawnPickUpItem = (UFunction*) UObject::GObjObjects()->Data[ 85658 ];
 
 	ADunDefPickupableSpawner_execSpawnPickUpItem_Parms SpawnPickUpItem_Parms;
 	SpawnPickUpItem_Parms.bForceSpawn = bForceSpawn;
@@ -13024,7 +12943,7 @@ void ADunDefPickupableSpawner::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 91265 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 85657 ];
 
 	ADunDefPickupableSpawner_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -13044,7 +12963,7 @@ bool ADunDefPickupableSpawner::AllowTowerAtPoint ( class ADunDefPlayerController
 	static UFunction* pFnAllowTowerAtPoint = NULL;
 
 	if ( ! pFnAllowTowerAtPoint )
-		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 91260 ];
+		pFnAllowTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 85652 ];
 
 	ADunDefPickupableSpawner_execAllowTowerAtPoint_Parms AllowTowerAtPoint_Parms;
 	AllowTowerAtPoint_Parms.PC = PC;
@@ -13066,7 +12985,7 @@ bool ADunDefPickupableSpawner::CheckAllowance ( )
 	static UFunction* pFnCheckAllowance = NULL;
 
 	if ( ! pFnCheckAllowance )
-		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 91258 ];
+		pFnCheckAllowance = (UFunction*) UObject::GObjObjects()->Data[ 85650 ];
 
 	ADunDefPickupableSpawner_execCheckAllowance_Parms CheckAllowance_Parms;
 
@@ -13089,7 +13008,7 @@ bool ADunDefPickupableSpawner::PreventTowerAtPoint ( class ADunDefPlayerControll
 	static UFunction* pFnPreventTowerAtPoint = NULL;
 
 	if ( ! pFnPreventTowerAtPoint )
-		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 91252 ];
+		pFnPreventTowerAtPoint = (UFunction*) UObject::GObjObjects()->Data[ 85644 ];
 
 	ADunDefPickupableSpawner_execPreventTowerAtPoint_Parms PreventTowerAtPoint_Parms;
 	PreventTowerAtPoint_Parms.PC = PC;
@@ -13113,7 +13032,7 @@ void ADunDefPickupableSpawner::DrawMiniMapIcon ( class UCanvas* Canvas, class AD
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 91247 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 85639 ];
 
 	ADunDefPickupableSpawner_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -13133,7 +13052,7 @@ void ADunDefPickupableSpawner::Client_Activate ( class ADunDefPlayerController* 
 	static UFunction* pFnClient_Activate = NULL;
 
 	if ( ! pFnClient_Activate )
-		pFnClient_Activate = (UFunction*) UObject::GObjObjects()->Data[ 91244 ];
+		pFnClient_Activate = (UFunction*) UObject::GObjObjects()->Data[ 85636 ];
 
 	ADunDefPickupableSpawner_execClient_Activate_Parms Client_Activate_Parms;
 	Client_Activate_Parms.PC = PC;
@@ -13152,7 +13071,7 @@ float ADunDefPickupableSpawner::GetActivationOffset ( )
 	static UFunction* pFnGetActivationOffset = NULL;
 
 	if ( ! pFnGetActivationOffset )
-		pFnGetActivationOffset = (UFunction*) UObject::GObjObjects()->Data[ 91242 ];
+		pFnGetActivationOffset = (UFunction*) UObject::GObjObjects()->Data[ 85634 ];
 
 	ADunDefPickupableSpawner_execGetActivationOffset_Parms GetActivationOffset_Parms;
 
@@ -13171,7 +13090,7 @@ float ADunDefPickupableSpawner::GetActivationWeighting ( )
 	static UFunction* pFnGetActivationWeighting = NULL;
 
 	if ( ! pFnGetActivationWeighting )
-		pFnGetActivationWeighting = (UFunction*) UObject::GObjObjects()->Data[ 91240 ];
+		pFnGetActivationWeighting = (UFunction*) UObject::GObjObjects()->Data[ 85632 ];
 
 	ADunDefPickupableSpawner_execGetActivationWeighting_Parms GetActivationWeighting_Parms;
 
@@ -13192,7 +13111,7 @@ void ADunDefPickupableSpawner::Server_Activate ( class ADunDefPlayerController* 
 	static UFunction* pFnServer_Activate = NULL;
 
 	if ( ! pFnServer_Activate )
-		pFnServer_Activate = (UFunction*) UObject::GObjObjects()->Data[ 91235 ];
+		pFnServer_Activate = (UFunction*) UObject::GObjObjects()->Data[ 85627 ];
 
 	ADunDefPickupableSpawner_execServer_Activate_Parms Server_Activate_Parms;
 	Server_Activate_Parms.PC = PC;
@@ -13214,7 +13133,7 @@ int ADunDefPickupableSpawner::AllowActivation ( class ADunDefPlayerController* P
 	static UFunction* pFnAllowActivation = NULL;
 
 	if ( ! pFnAllowActivation )
-		pFnAllowActivation = (UFunction*) UObject::GObjObjects()->Data[ 91231 ];
+		pFnAllowActivation = (UFunction*) UObject::GObjObjects()->Data[ 85623 ];
 
 	ADunDefPickupableSpawner_execAllowActivation_Parms AllowActivation_Parms;
 	AllowActivation_Parms.PC = PC;
@@ -13235,7 +13154,7 @@ void ADunDefPickupableSpawner::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 91229 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 85621 ];
 
 	ADunDefPickupableSpawner_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -13254,7 +13173,7 @@ void ADunDefPlayer_DualMelee::SetOwnerNoSee ( unsigned long ownerNoSee, unsigned
 	static UFunction* pFnSetOwnerNoSee = NULL;
 
 	if ( ! pFnSetOwnerNoSee )
-		pFnSetOwnerNoSee = (UFunction*) UObject::GObjObjects()->Data[ 91483 ];
+		pFnSetOwnerNoSee = (UFunction*) UObject::GObjObjects()->Data[ 85875 ];
 
 	ADunDefPlayer_DualMelee_execSetOwnerNoSee_Parms SetOwnerNoSee_Parms;
 	SetOwnerNoSee_Parms.ownerNoSee = ownerNoSee;
@@ -13273,7 +13192,7 @@ bool ADunDefPlayer_DualMelee::AutoActivateSecondaryWeapon ( )
 	static UFunction* pFnAutoActivateSecondaryWeapon = NULL;
 
 	if ( ! pFnAutoActivateSecondaryWeapon )
-		pFnAutoActivateSecondaryWeapon = (UFunction*) UObject::GObjObjects()->Data[ 91481 ];
+		pFnAutoActivateSecondaryWeapon = (UFunction*) UObject::GObjObjects()->Data[ 85873 ];
 
 	ADunDefPlayer_DualMelee_execAutoActivateSecondaryWeapon_Parms AutoActivateSecondaryWeapon_Parms;
 
@@ -13292,7 +13211,7 @@ bool ADunDefPlayer_DualMelee::AllowNegativeStatusAffecting ( )
 	static UFunction* pFnAllowNegativeStatusAffecting = NULL;
 
 	if ( ! pFnAllowNegativeStatusAffecting )
-		pFnAllowNegativeStatusAffecting = (UFunction*) UObject::GObjObjects()->Data[ 91477 ];
+		pFnAllowNegativeStatusAffecting = (UFunction*) UObject::GObjObjects()->Data[ 85869 ];
 
 	ADunDefPlayer_DualMelee_execAllowNegativeStatusAffecting_Parms AllowNegativeStatusAffecting_Parms;
 
@@ -13312,7 +13231,7 @@ class ADunDefPlayerAbility_StanceBase* ADunDefPlayer_DualMelee::GetAlternateStan
 	static UFunction* pFnGetAlternateStance = NULL;
 
 	if ( ! pFnGetAlternateStance )
-		pFnGetAlternateStance = (UFunction*) UObject::GObjObjects()->Data[ 91474 ];
+		pFnGetAlternateStance = (UFunction*) UObject::GObjObjects()->Data[ 85866 ];
 
 	ADunDefPlayer_DualMelee_execGetAlternateStance_Parms GetAlternateStance_Parms;
 	GetAlternateStance_Parms.askingStance = askingStance;
@@ -13332,7 +13251,7 @@ void ADunDefPlayer_DualMelee::SetWeaponSpeedMultiplier ( float newMult )
 	static UFunction* pFnSetWeaponSpeedMultiplier = NULL;
 
 	if ( ! pFnSetWeaponSpeedMultiplier )
-		pFnSetWeaponSpeedMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 91472 ];
+		pFnSetWeaponSpeedMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 85864 ];
 
 	ADunDefPlayer_DualMelee_execSetWeaponSpeedMultiplier_Parms SetWeaponSpeedMultiplier_Parms;
 	SetWeaponSpeedMultiplier_Parms.newMult = newMult;
@@ -13351,7 +13270,7 @@ struct FName ADunDefPlayer_DualMelee::GetOverrideSocketName ( class ADunDefWeapo
 	static UFunction* pFnGetOverrideSocketName = NULL;
 
 	if ( ! pFnGetOverrideSocketName )
-		pFnGetOverrideSocketName = (UFunction*) UObject::GObjObjects()->Data[ 91469 ];
+		pFnGetOverrideSocketName = (UFunction*) UObject::GObjObjects()->Data[ 85861 ];
 
 	ADunDefPlayer_DualMelee_execGetOverrideSocketName_Parms GetOverrideSocketName_Parms;
 	GetOverrideSocketName_Parms.theWeapon = theWeapon;
@@ -13370,7 +13289,7 @@ void ADunDefPlayer_DualMelee::JumpOffPawn ( )
 	static UFunction* pFnJumpOffPawn = NULL;
 
 	if ( ! pFnJumpOffPawn )
-		pFnJumpOffPawn = (UFunction*) UObject::GObjObjects()->Data[ 91466 ];
+		pFnJumpOffPawn = (UFunction*) UObject::GObjObjects()->Data[ 85858 ];
 
 	ADunDefPlayer_DualMelee_execJumpOffPawn_Parms JumpOffPawn_Parms;
 
@@ -13392,7 +13311,7 @@ bool ADunDefPlayer_DualMelee::ShouldPlayHurtAnimation ( class AController* Insti
 	static UFunction* pFnShouldPlayHurtAnimation = NULL;
 
 	if ( ! pFnShouldPlayHurtAnimation )
-		pFnShouldPlayHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 91459 ];
+		pFnShouldPlayHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 85851 ];
 
 	ADunDefPlayer_DualMelee_execShouldPlayHurtAnimation_Parms ShouldPlayHurtAnimation_Parms;
 	ShouldPlayHurtAnimation_Parms.InstigatedBy = InstigatedBy;
@@ -13417,7 +13336,7 @@ void ADunDefPlayer_DualMelee::eventAnimNotify_ResetOffhandWeaponSwingDamage ( )
 	static UFunction* pFnAnimNotify_ResetOffhandWeaponSwingDamage = NULL;
 
 	if ( ! pFnAnimNotify_ResetOffhandWeaponSwingDamage )
-		pFnAnimNotify_ResetOffhandWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 91458 ];
+		pFnAnimNotify_ResetOffhandWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 85850 ];
 
 	ADunDefPlayer_DualMelee_eventAnimNotify_ResetOffhandWeaponSwingDamage_Parms AnimNotify_ResetOffhandWeaponSwingDamage_Parms;
 
@@ -13433,7 +13352,7 @@ void ADunDefPlayer_DualMelee::eventAnimNotify_StopOffhandWeaponSwingDamage ( )
 	static UFunction* pFnAnimNotify_StopOffhandWeaponSwingDamage = NULL;
 
 	if ( ! pFnAnimNotify_StopOffhandWeaponSwingDamage )
-		pFnAnimNotify_StopOffhandWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 91454 ];
+		pFnAnimNotify_StopOffhandWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 85846 ];
 
 	ADunDefPlayer_DualMelee_eventAnimNotify_StopOffhandWeaponSwingDamage_Parms AnimNotify_StopOffhandWeaponSwingDamage_Parms;
 
@@ -13449,7 +13368,7 @@ void ADunDefPlayer_DualMelee::eventAnimNotify_StartOffhandWeaponSwingDamage ( )
 	static UFunction* pFnAnimNotify_StartOffhandWeaponSwingDamage = NULL;
 
 	if ( ! pFnAnimNotify_StartOffhandWeaponSwingDamage )
-		pFnAnimNotify_StartOffhandWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 91450 ];
+		pFnAnimNotify_StartOffhandWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 85842 ];
 
 	ADunDefPlayer_DualMelee_eventAnimNotify_StartOffhandWeaponSwingDamage_Parms AnimNotify_StartOffhandWeaponSwingDamage_Parms;
 
@@ -13465,7 +13384,7 @@ void ADunDefPlayer_DualMelee::eventAnimNotify_ResetWeaponSwingDamage ( )
 	static UFunction* pFnAnimNotify_ResetWeaponSwingDamage = NULL;
 
 	if ( ! pFnAnimNotify_ResetWeaponSwingDamage )
-		pFnAnimNotify_ResetWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 91449 ];
+		pFnAnimNotify_ResetWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 85841 ];
 
 	ADunDefPlayer_DualMelee_eventAnimNotify_ResetWeaponSwingDamage_Parms AnimNotify_ResetWeaponSwingDamage_Parms;
 
@@ -13481,7 +13400,7 @@ void ADunDefPlayer_DualMelee::eventAnimNotify_StopWeaponSwingDamage ( )
 	static UFunction* pFnAnimNotify_StopWeaponSwingDamage = NULL;
 
 	if ( ! pFnAnimNotify_StopWeaponSwingDamage )
-		pFnAnimNotify_StopWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 91445 ];
+		pFnAnimNotify_StopWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 85837 ];
 
 	ADunDefPlayer_DualMelee_eventAnimNotify_StopWeaponSwingDamage_Parms AnimNotify_StopWeaponSwingDamage_Parms;
 
@@ -13497,7 +13416,7 @@ void ADunDefPlayer_DualMelee::eventAnimNotify_StartWeaponSwingDamage ( )
 	static UFunction* pFnAnimNotify_StartWeaponSwingDamage = NULL;
 
 	if ( ! pFnAnimNotify_StartWeaponSwingDamage )
-		pFnAnimNotify_StartWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 91441 ];
+		pFnAnimNotify_StartWeaponSwingDamage = (UFunction*) UObject::GObjObjects()->Data[ 85833 ];
 
 	ADunDefPlayer_DualMelee_eventAnimNotify_StartWeaponSwingDamage_Parms AnimNotify_StartWeaponSwingDamage_Parms;
 
@@ -13513,7 +13432,7 @@ void ADunDefPlayer_DualMelee::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 91440 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 85832 ];
 
 	ADunDefPlayer_DualMelee_eventDestroyed_Parms Destroyed_Parms;
 
@@ -13535,7 +13454,7 @@ void ADunDefPlayer_DualMelee::AdjustDamage ( class AController* InstigatedBy, st
 	static UFunction* pFnAdjustDamage = NULL;
 
 	if ( ! pFnAdjustDamage )
-		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 91431 ];
+		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 85823 ];
 
 	ADunDefPlayer_DualMelee_execAdjustDamage_Parms AdjustDamage_Parms;
 	AdjustDamage_Parms.InstigatedBy = InstigatedBy;
@@ -13565,7 +13484,7 @@ void ADunDefPlayer_DualMelee::GivePlayerHitInfo ( class AActor* HitActor, int de
 	static UFunction* pFnGivePlayerHitInfo = NULL;
 
 	if ( ! pFnGivePlayerHitInfo )
-		pFnGivePlayerHitInfo = (UFunction*) UObject::GObjObjects()->Data[ 91426 ];
+		pFnGivePlayerHitInfo = (UFunction*) UObject::GObjObjects()->Data[ 85818 ];
 
 	ADunDefPlayer_DualMelee_execGivePlayerHitInfo_Parms GivePlayerHitInfo_Parms;
 	GivePlayerHitInfo_Parms.HitActor = HitActor;
@@ -13588,7 +13507,7 @@ void ADunDefPlayer_DualMelee::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 91424 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 85816 ];
 
 	ADunDefPlayer_DualMelee_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -13605,7 +13524,7 @@ void ADunDefPlayer_DualMelee::AnimNotify_CurrentAbility_Off ( )
 	static UFunction* pFnAnimNotify_CurrentAbility_Off = NULL;
 
 	if ( ! pFnAnimNotify_CurrentAbility_Off )
-		pFnAnimNotify_CurrentAbility_Off = (UFunction*) UObject::GObjObjects()->Data[ 91423 ];
+		pFnAnimNotify_CurrentAbility_Off = (UFunction*) UObject::GObjObjects()->Data[ 85815 ];
 
 	ADunDefPlayer_DualMelee_execAnimNotify_CurrentAbility_Off_Parms AnimNotify_CurrentAbility_Off_Parms;
 
@@ -13621,7 +13540,7 @@ void ADunDefPlayer_DualMelee::AnimNotify_CurrentAbility_On ( )
 	static UFunction* pFnAnimNotify_CurrentAbility_On = NULL;
 
 	if ( ! pFnAnimNotify_CurrentAbility_On )
-		pFnAnimNotify_CurrentAbility_On = (UFunction*) UObject::GObjObjects()->Data[ 91422 ];
+		pFnAnimNotify_CurrentAbility_On = (UFunction*) UObject::GObjObjects()->Data[ 85814 ];
 
 	ADunDefPlayer_DualMelee_execAnimNotify_CurrentAbility_On_Parms AnimNotify_CurrentAbility_On_Parms;
 
@@ -13637,7 +13556,7 @@ void ADunDefPlayer_DualMelee::DoStanceBlend ( )
 	static UFunction* pFnDoStanceBlend = NULL;
 
 	if ( ! pFnDoStanceBlend )
-		pFnDoStanceBlend = (UFunction*) UObject::GObjObjects()->Data[ 91420 ];
+		pFnDoStanceBlend = (UFunction*) UObject::GObjObjects()->Data[ 85812 ];
 
 	ADunDefPlayer_DualMelee_execDoStanceBlend_Parms DoStanceBlend_Parms;
 
@@ -13654,7 +13573,7 @@ void ADunDefPlayer_DualMelee::DeActivateStance ( class ADunDefPlayerAbility_Stan
 	static UFunction* pFnDeActivateStance = NULL;
 
 	if ( ! pFnDeActivateStance )
-		pFnDeActivateStance = (UFunction*) UObject::GObjObjects()->Data[ 91418 ];
+		pFnDeActivateStance = (UFunction*) UObject::GObjObjects()->Data[ 85810 ];
 
 	ADunDefPlayer_DualMelee_execDeActivateStance_Parms DeActivateStance_Parms;
 	DeActivateStance_Parms.oldStance = oldStance;
@@ -13672,7 +13591,7 @@ void ADunDefPlayer_DualMelee::ActivateStance ( class ADunDefPlayerAbility_Stance
 	static UFunction* pFnActivateStance = NULL;
 
 	if ( ! pFnActivateStance )
-		pFnActivateStance = (UFunction*) UObject::GObjObjects()->Data[ 91416 ];
+		pFnActivateStance = (UFunction*) UObject::GObjObjects()->Data[ 85808 ];
 
 	ADunDefPlayer_DualMelee_execActivateStance_Parms ActivateStance_Parms;
 	ActivateStance_Parms.newStance = newStance;
@@ -13693,7 +13612,7 @@ bool ADunDefPlayer_DualMelee::GetMeleeSwingInfoOverride ( class ADunDefWeapon_Me
 	static UFunction* pFnGetMeleeSwingInfoOverride = NULL;
 
 	if ( ! pFnGetMeleeSwingInfoOverride )
-		pFnGetMeleeSwingInfoOverride = (UFunction*) UObject::GObjObjects()->Data[ 91406 ];
+		pFnGetMeleeSwingInfoOverride = (UFunction*) UObject::GObjObjects()->Data[ 85798 ];
 
 	ADunDefPlayer_DualMelee_execGetMeleeSwingInfoOverride_Parms GetMeleeSwingInfoOverride_Parms;
 	GetMeleeSwingInfoOverride_Parms.overrideForWeap = overrideForWeap;
@@ -13720,7 +13639,7 @@ bool ADunDefPlayer_DualMelee::OverrideMeleeSwingInfo ( class ADunDefWeapon_Melee
 	static UFunction* pFnOverrideMeleeSwingInfo = NULL;
 
 	if ( ! pFnOverrideMeleeSwingInfo )
-		pFnOverrideMeleeSwingInfo = (UFunction*) UObject::GObjObjects()->Data[ 91403 ];
+		pFnOverrideMeleeSwingInfo = (UFunction*) UObject::GObjObjects()->Data[ 85795 ];
 
 	ADunDefPlayer_DualMelee_execOverrideMeleeSwingInfo_Parms OverrideMeleeSwingInfo_Parms;
 	OverrideMeleeSwingInfo_Parms.askingWeapon = askingWeapon;
@@ -13742,7 +13661,7 @@ bool ADunDefPlayer_DualMelee::CheckAllowMelee ( class ADunDefWeapon_MeleeSword* 
 	static UFunction* pFnCheckAllowMelee = NULL;
 
 	if ( ! pFnCheckAllowMelee )
-		pFnCheckAllowMelee = (UFunction*) UObject::GObjObjects()->Data[ 91398 ];
+		pFnCheckAllowMelee = (UFunction*) UObject::GObjObjects()->Data[ 85790 ];
 
 	ADunDefPlayer_DualMelee_execCheckAllowMelee_Parms CheckAllowMelee_Parms;
 	CheckAllowMelee_Parms.weaponCheck = weaponCheck;
@@ -13765,7 +13684,7 @@ bool ADunDefPlayer_DualMelee::CheckPlayingCustomAnim ( struct FName inAnim, floa
 	static UFunction* pFnCheckPlayingCustomAnim = NULL;
 
 	if ( ! pFnCheckPlayingCustomAnim )
-		pFnCheckPlayingCustomAnim = (UFunction*) UObject::GObjObjects()->Data[ 91392 ];
+		pFnCheckPlayingCustomAnim = (UFunction*) UObject::GObjObjects()->Data[ 85784 ];
 
 	ADunDefPlayer_DualMelee_execCheckPlayingCustomAnim_Parms CheckPlayingCustomAnim_Parms;
 	memcpy ( &CheckPlayingCustomAnim_Parms.inAnim, &inAnim, 0x8 );
@@ -13786,7 +13705,7 @@ void ADunDefPlayer_DualMelee::StopFire ( unsigned char FireModeNum )
 	static UFunction* pFnStopFire = NULL;
 
 	if ( ! pFnStopFire )
-		pFnStopFire = (UFunction*) UObject::GObjObjects()->Data[ 91389 ];
+		pFnStopFire = (UFunction*) UObject::GObjObjects()->Data[ 85781 ];
 
 	ADunDefPlayer_DualMelee_execStopFire_Parms StopFire_Parms;
 	StopFire_Parms.FireModeNum = FireModeNum;
@@ -13804,7 +13723,7 @@ void ADunDefPlayer_DualMelee::ServerStopFire ( unsigned char FireModeNum )
 	static UFunction* pFnServerStopFire = NULL;
 
 	if ( ! pFnServerStopFire )
-		pFnServerStopFire = (UFunction*) UObject::GObjObjects()->Data[ 91387 ];
+		pFnServerStopFire = (UFunction*) UObject::GObjObjects()->Data[ 85779 ];
 
 	ADunDefPlayer_DualMelee_execServerStopFire_Parms ServerStopFire_Parms;
 	ServerStopFire_Parms.FireModeNum = FireModeNum;
@@ -13823,7 +13742,7 @@ void ADunDefPlayer_DualMelee::SetComboInfo ( class ADunDefWeapon_MeleeSword* com
 	static UFunction* pFnSetComboInfo = NULL;
 
 	if ( ! pFnSetComboInfo )
-		pFnSetComboInfo = (UFunction*) UObject::GObjObjects()->Data[ 91383 ];
+		pFnSetComboInfo = (UFunction*) UObject::GObjObjects()->Data[ 85775 ];
 
 	ADunDefPlayer_DualMelee_execSetComboInfo_Parms SetComboInfo_Parms;
 	SetComboInfo_Parms.comboWeapon = comboWeapon;
@@ -13842,7 +13761,7 @@ bool ADunDefPlayer_DualMelee::DoStanceCheck ( )
 	static UFunction* pFnDoStanceCheck = NULL;
 
 	if ( ! pFnDoStanceCheck )
-		pFnDoStanceCheck = (UFunction*) UObject::GObjObjects()->Data[ 91379 ];
+		pFnDoStanceCheck = (UFunction*) UObject::GObjObjects()->Data[ 85771 ];
 
 	ADunDefPlayer_DualMelee_execDoStanceCheck_Parms DoStanceCheck_Parms;
 
@@ -13861,7 +13780,7 @@ void ADunDefPlayer_DualMelee::StartFire ( unsigned char FireModeNum )
 	static UFunction* pFnStartFire = NULL;
 
 	if ( ! pFnStartFire )
-		pFnStartFire = (UFunction*) UObject::GObjObjects()->Data[ 91376 ];
+		pFnStartFire = (UFunction*) UObject::GObjObjects()->Data[ 85768 ];
 
 	ADunDefPlayer_DualMelee_execStartFire_Parms StartFire_Parms;
 	StartFire_Parms.FireModeNum = FireModeNum;
@@ -13879,7 +13798,7 @@ void ADunDefPlayer_DualMelee::ServerStartFire ( unsigned char FireModeNum )
 	static UFunction* pFnServerStartFire = NULL;
 
 	if ( ! pFnServerStartFire )
-		pFnServerStartFire = (UFunction*) UObject::GObjObjects()->Data[ 91374 ];
+		pFnServerStartFire = (UFunction*) UObject::GObjObjects()->Data[ 85766 ];
 
 	ADunDefPlayer_DualMelee_execServerStartFire_Parms ServerStartFire_Parms;
 	ServerStartFire_Parms.FireModeNum = FireModeNum;
@@ -13897,7 +13816,7 @@ struct FName ADunDefPlayer_DualMelee::GetOffHandSocketName ( )
 	static UFunction* pFnGetOffHandSocketName = NULL;
 
 	if ( ! pFnGetOffHandSocketName )
-		pFnGetOffHandSocketName = (UFunction*) UObject::GObjObjects()->Data[ 91372 ];
+		pFnGetOffHandSocketName = (UFunction*) UObject::GObjObjects()->Data[ 85764 ];
 
 	ADunDefPlayer_DualMelee_execGetOffHandSocketName_Parms GetOffHandSocketName_Parms;
 
@@ -13916,7 +13835,7 @@ bool ADunDefPlayer_DualMelee::AllowDualWeapon ( )
 	static UFunction* pFnAllowDualWeapon = NULL;
 
 	if ( ! pFnAllowDualWeapon )
-		pFnAllowDualWeapon = (UFunction*) UObject::GObjObjects()->Data[ 91370 ];
+		pFnAllowDualWeapon = (UFunction*) UObject::GObjObjects()->Data[ 85762 ];
 
 	ADunDefPlayer_DualMelee_execAllowDualWeapon_Parms AllowDualWeapon_Parms;
 
@@ -13937,7 +13856,7 @@ class AInventory* ADunDefPlayer_DualMelee::CreateContainedInventoryFromTemplate 
 	static UFunction* pFnCreateContainedInventoryFromTemplate = NULL;
 
 	if ( ! pFnCreateContainedInventoryFromTemplate )
-		pFnCreateContainedInventoryFromTemplate = (UFunction*) UObject::GObjObjects()->Data[ 91365 ];
+		pFnCreateContainedInventoryFromTemplate = (UFunction*) UObject::GObjObjects()->Data[ 85757 ];
 
 	ADunDefPlayer_DualMelee_execCreateContainedInventoryFromTemplate_Parms CreateContainedInventoryFromTemplate_Parms;
 	CreateContainedInventoryFromTemplate_Parms.InventoryActorTemplate = InventoryActorTemplate;
@@ -13958,7 +13877,7 @@ void ADunDefPlayer_DualMelee::SetOffHandWeapon ( class ADunDefWeapon_MeleeSword*
 	static UFunction* pFnSetOffHandWeapon = NULL;
 
 	if ( ! pFnSetOffHandWeapon )
-		pFnSetOffHandWeapon = (UFunction*) UObject::GObjObjects()->Data[ 91363 ];
+		pFnSetOffHandWeapon = (UFunction*) UObject::GObjObjects()->Data[ 85755 ];
 
 	ADunDefPlayer_DualMelee_execSetOffHandWeapon_Parms SetOffHandWeapon_Parms;
 	SetOffHandWeapon_Parms.newOffHandWeap = newOffHandWeap;
@@ -13978,7 +13897,7 @@ class ADunDefWeapon* ADunDefPlayer_DualMelee::SwapOffHandWeaponFor ( class ADunD
 	static UFunction* pFnSwapOffHandWeaponFor = NULL;
 
 	if ( ! pFnSwapOffHandWeaponFor )
-		pFnSwapOffHandWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 91358 ];
+		pFnSwapOffHandWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 85750 ];
 
 	ADunDefPlayer_DualMelee_execSwapOffHandWeaponFor_Parms SwapOffHandWeaponFor_Parms;
 	SwapOffHandWeaponFor_Parms.weaponTemplate = weaponTemplate;
@@ -14001,7 +13920,7 @@ class ADunDefWeapon* ADunDefPlayer_DualMelee::SwapWeaponFor ( class ADunDefWeapo
 	static UFunction* pFnSwapWeaponFor = NULL;
 
 	if ( ! pFnSwapWeaponFor )
-		pFnSwapWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 91353 ];
+		pFnSwapWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 85745 ];
 
 	ADunDefPlayer_DualMelee_execSwapWeaponFor_Parms SwapWeaponFor_Parms;
 	SwapWeaponFor_Parms.weaponTemplate = weaponTemplate;
@@ -14021,7 +13940,7 @@ void ADunDefPlayer_DualMelee::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 91352 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 85744 ];
 
 	ADunDefPlayer_DualMelee_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -14038,7 +13957,7 @@ bool ADunDefPlayerAbility_StanceBase::AllowNegativeStatusAffecting ( )
 	static UFunction* pFnAllowNegativeStatusAffecting = NULL;
 
 	if ( ! pFnAllowNegativeStatusAffecting )
-		pFnAllowNegativeStatusAffecting = (UFunction*) UObject::GObjObjects()->Data[ 91479 ];
+		pFnAllowNegativeStatusAffecting = (UFunction*) UObject::GObjObjects()->Data[ 85871 ];
 
 	ADunDefPlayerAbility_StanceBase_execAllowNegativeStatusAffecting_Parms AllowNegativeStatusAffecting_Parms;
 
@@ -14056,7 +13975,7 @@ void ADunDefPlayerAbility_StanceBase::ResetWeaponDamage ( )
 	static UFunction* pFnResetWeaponDamage = NULL;
 
 	if ( ! pFnResetWeaponDamage )
-		pFnResetWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93401 ];
+		pFnResetWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 87804 ];
 
 	ADunDefPlayerAbility_StanceBase_execResetWeaponDamage_Parms ResetWeaponDamage_Parms;
 
@@ -14073,7 +13992,7 @@ bool ADunDefPlayerAbility_StanceBase::StopOffHandWeaponDamage ( )
 	static UFunction* pFnStopOffHandWeaponDamage = NULL;
 
 	if ( ! pFnStopOffHandWeaponDamage )
-		pFnStopOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 91456 ];
+		pFnStopOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 85848 ];
 
 	ADunDefPlayerAbility_StanceBase_execStopOffHandWeaponDamage_Parms StopOffHandWeaponDamage_Parms;
 
@@ -14092,7 +14011,7 @@ bool ADunDefPlayerAbility_StanceBase::StopWeaponDamage ( )
 	static UFunction* pFnStopWeaponDamage = NULL;
 
 	if ( ! pFnStopWeaponDamage )
-		pFnStopWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 91447 ];
+		pFnStopWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 85839 ];
 
 	ADunDefPlayerAbility_StanceBase_execStopWeaponDamage_Parms StopWeaponDamage_Parms;
 
@@ -14111,7 +14030,7 @@ bool ADunDefPlayerAbility_StanceBase::StartOffHandWeaponDamage ( )
 	static UFunction* pFnStartOffHandWeaponDamage = NULL;
 
 	if ( ! pFnStartOffHandWeaponDamage )
-		pFnStartOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 91452 ];
+		pFnStartOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 85844 ];
 
 	ADunDefPlayerAbility_StanceBase_execStartOffHandWeaponDamage_Parms StartOffHandWeaponDamage_Parms;
 
@@ -14130,7 +14049,7 @@ bool ADunDefPlayerAbility_StanceBase::StartWeaponDamage ( )
 	static UFunction* pFnStartWeaponDamage = NULL;
 
 	if ( ! pFnStartWeaponDamage )
-		pFnStartWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 91443 ];
+		pFnStartWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 85835 ];
 
 	ADunDefPlayerAbility_StanceBase_execStartWeaponDamage_Parms StartWeaponDamage_Parms;
 
@@ -14152,7 +14071,7 @@ void ADunDefPlayerAbility_StanceBase::GivePlayerHitInfo ( class AActor* HitActor
 	static UFunction* pFnGivePlayerHitInfo = NULL;
 
 	if ( ! pFnGivePlayerHitInfo )
-		pFnGivePlayerHitInfo = (UFunction*) UObject::GObjObjects()->Data[ 93396 ];
+		pFnGivePlayerHitInfo = (UFunction*) UObject::GObjObjects()->Data[ 87799 ];
 
 	ADunDefPlayerAbility_StanceBase_execGivePlayerHitInfo_Parms GivePlayerHitInfo_Parms;
 	GivePlayerHitInfo_Parms.HitActor = HitActor;
@@ -14174,7 +14093,7 @@ void ADunDefPlayerAbility_StanceBase::AnimNotify_CurrentAbility_Off ( )
 	static UFunction* pFnAnimNotify_CurrentAbility_Off = NULL;
 
 	if ( ! pFnAnimNotify_CurrentAbility_Off )
-		pFnAnimNotify_CurrentAbility_Off = (UFunction*) UObject::GObjObjects()->Data[ 93395 ];
+		pFnAnimNotify_CurrentAbility_Off = (UFunction*) UObject::GObjObjects()->Data[ 87798 ];
 
 	ADunDefPlayerAbility_StanceBase_execAnimNotify_CurrentAbility_Off_Parms AnimNotify_CurrentAbility_Off_Parms;
 
@@ -14190,7 +14109,7 @@ void ADunDefPlayerAbility_StanceBase::AnimNotify_CurrentAbility_On ( )
 	static UFunction* pFnAnimNotify_CurrentAbility_On = NULL;
 
 	if ( ! pFnAnimNotify_CurrentAbility_On )
-		pFnAnimNotify_CurrentAbility_On = (UFunction*) UObject::GObjObjects()->Data[ 93394 ];
+		pFnAnimNotify_CurrentAbility_On = (UFunction*) UObject::GObjObjects()->Data[ 87797 ];
 
 	ADunDefPlayerAbility_StanceBase_execAnimNotify_CurrentAbility_On_Parms AnimNotify_CurrentAbility_On_Parms;
 
@@ -14207,7 +14126,7 @@ bool ADunDefPlayerAbility_StanceBase::AllowStanceCancel ( )
 	static UFunction* pFnAllowStanceCancel = NULL;
 
 	if ( ! pFnAllowStanceCancel )
-		pFnAllowStanceCancel = (UFunction*) UObject::GObjObjects()->Data[ 93384 ];
+		pFnAllowStanceCancel = (UFunction*) UObject::GObjObjects()->Data[ 87787 ];
 
 	ADunDefPlayerAbility_StanceBase_execAllowStanceCancel_Parms AllowStanceCancel_Parms;
 
@@ -14226,7 +14145,7 @@ bool ADunDefPlayerAbility_StanceBase::CheckDoStanceAttack ( )
 	static UFunction* pFnCheckDoStanceAttack = NULL;
 
 	if ( ! pFnCheckDoStanceAttack )
-		pFnCheckDoStanceAttack = (UFunction*) UObject::GObjObjects()->Data[ 91381 ];
+		pFnCheckDoStanceAttack = (UFunction*) UObject::GObjObjects()->Data[ 85773 ];
 
 	ADunDefPlayerAbility_StanceBase_execCheckDoStanceAttack_Parms CheckDoStanceAttack_Parms;
 
@@ -14247,7 +14166,7 @@ float ADunDefPlayerAbility_StanceBase::GetMultiplierValue ( struct FStatMultipli
 	static UFunction* pFnGetMultiplierValue = NULL;
 
 	if ( ! pFnGetMultiplierValue )
-		pFnGetMultiplierValue = (UFunction*) UObject::GObjObjects()->Data[ 93388 ];
+		pFnGetMultiplierValue = (UFunction*) UObject::GObjObjects()->Data[ 87791 ];
 
 	ADunDefPlayerAbility_StanceBase_execGetMultiplierValue_Parms GetMultiplierValue_Parms;
 	memcpy ( &GetMultiplierValue_Parms.multiplierCheck, &multiplierCheck, 0x10 );
@@ -14268,7 +14187,7 @@ bool ADunDefPlayerAbility_StanceBase::CheckStatus ( )
 	static UFunction* pFnCheckStatus = NULL;
 
 	if ( ! pFnCheckStatus )
-		pFnCheckStatus = (UFunction*) UObject::GObjObjects()->Data[ 93386 ];
+		pFnCheckStatus = (UFunction*) UObject::GObjObjects()->Data[ 87789 ];
 
 	ADunDefPlayerAbility_StanceBase_execCheckStatus_Parms CheckStatus_Parms;
 
@@ -14288,7 +14207,7 @@ unsigned char ADunDefPlayerAbility_StanceBase::GetAbilityStatus ( int* ExtraStat
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 93380 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 87783 ];
 
 	ADunDefPlayerAbility_StanceBase_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -14309,7 +14228,7 @@ void ADunDefPlayerAbility_StanceBase::OnActivate ( )
 	static UFunction* pFnOnActivate = NULL;
 
 	if ( ! pFnOnActivate )
-		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 93375 ];
+		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 87778 ];
 
 	ADunDefPlayerAbility_StanceBase_execOnActivate_Parms OnActivate_Parms;
 
@@ -14326,7 +14245,7 @@ bool ADunDefPlayerAbility_StanceBase::AllowStepTowards ( )
 	static UFunction* pFnAllowStepTowards = NULL;
 
 	if ( ! pFnAllowStepTowards )
-		pFnAllowStepTowards = (UFunction*) UObject::GObjObjects()->Data[ 91414 ];
+		pFnAllowStepTowards = (UFunction*) UObject::GObjObjects()->Data[ 85806 ];
 
 	ADunDefPlayerAbility_StanceBase_execAllowStepTowards_Parms AllowStepTowards_Parms;
 
@@ -14345,7 +14264,7 @@ float ADunDefPlayerAbility_StanceBase::GetPlayerMomentumMultiplier ( )
 	static UFunction* pFnGetPlayerMomentumMultiplier = NULL;
 
 	if ( ! pFnGetPlayerMomentumMultiplier )
-		pFnGetPlayerMomentumMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 91438 ];
+		pFnGetPlayerMomentumMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 85830 ];
 
 	ADunDefPlayerAbility_StanceBase_execGetPlayerMomentumMultiplier_Parms GetPlayerMomentumMultiplier_Parms;
 
@@ -14364,7 +14283,7 @@ float ADunDefPlayerAbility_StanceBase::GetPlayerAttackKnockbackMultiplier ( )
 	static UFunction* pFnGetPlayerAttackKnockbackMultiplier = NULL;
 
 	if ( ! pFnGetPlayerAttackKnockbackMultiplier )
-		pFnGetPlayerAttackKnockbackMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 93373 ];
+		pFnGetPlayerAttackKnockbackMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 87776 ];
 
 	ADunDefPlayerAbility_StanceBase_execGetPlayerAttackKnockbackMultiplier_Parms GetPlayerAttackKnockbackMultiplier_Parms;
 
@@ -14383,7 +14302,7 @@ float ADunDefPlayerAbility_StanceBase::GetPlayerAttackSpeedMultiplier ( )
 	static UFunction* pFnGetPlayerAttackSpeedMultiplier = NULL;
 
 	if ( ! pFnGetPlayerAttackSpeedMultiplier )
-		pFnGetPlayerAttackSpeedMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 91412 ];
+		pFnGetPlayerAttackSpeedMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 85804 ];
 
 	ADunDefPlayerAbility_StanceBase_execGetPlayerAttackSpeedMultiplier_Parms GetPlayerAttackSpeedMultiplier_Parms;
 
@@ -14401,7 +14320,7 @@ void ADunDefPlayerAbility_StanceBase::PlayActivationAnimation ( )
 	static UFunction* pFnPlayActivationAnimation = NULL;
 
 	if ( ! pFnPlayActivationAnimation )
-		pFnPlayActivationAnimation = (UFunction*) UObject::GObjObjects()->Data[ 93328 ];
+		pFnPlayActivationAnimation = (UFunction*) UObject::GObjObjects()->Data[ 87731 ];
 
 	ADunDefPlayerAbility_StanceBase_execPlayActivationAnimation_Parms PlayActivationAnimation_Parms;
 
@@ -14417,7 +14336,7 @@ void ADunDefPlayerAbility_LeapSlam::OnActivate ( )
 	static UFunction* pFnOnActivate = NULL;
 
 	if ( ! pFnOnActivate )
-		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 92427 ];
+		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 86838 ];
 
 	ADunDefPlayerAbility_LeapSlam_execOnActivate_Parms OnActivate_Parms;
 
@@ -14435,7 +14354,7 @@ int ADunDefPlayerAbility_LeapSlam::GetCostToActivate ( unsigned long returnTrueV
 	static UFunction* pFnGetCostToActivate = NULL;
 
 	if ( ! pFnGetCostToActivate )
-		pFnGetCostToActivate = (UFunction*) UObject::GObjObjects()->Data[ 92424 ];
+		pFnGetCostToActivate = (UFunction*) UObject::GObjObjects()->Data[ 86835 ];
 
 	ADunDefPlayerAbility_LeapSlam_execGetCostToActivate_Parms GetCostToActivate_Parms;
 	GetCostToActivate_Parms.returnTrueValue = returnTrueValue;
@@ -14455,7 +14374,7 @@ bool ADunDefPlayerAbility_LeapSlam::RequestActivation ( )
 	static UFunction* pFnRequestActivation = NULL;
 
 	if ( ! pFnRequestActivation )
-		pFnRequestActivation = (UFunction*) UObject::GObjObjects()->Data[ 92421 ];
+		pFnRequestActivation = (UFunction*) UObject::GObjObjects()->Data[ 86832 ];
 
 	ADunDefPlayerAbility_LeapSlam_execRequestActivation_Parms RequestActivation_Parms;
 
@@ -14474,7 +14393,7 @@ bool ADunDefPlayerAbility_LeapSlam::HasNoAutoAim ( )
 	static UFunction* pFnHasNoAutoAim = NULL;
 
 	if ( ! pFnHasNoAutoAim )
-		pFnHasNoAutoAim = (UFunction*) UObject::GObjObjects()->Data[ 92419 ];
+		pFnHasNoAutoAim = (UFunction*) UObject::GObjObjects()->Data[ 86830 ];
 
 	ADunDefPlayerAbility_LeapSlam_execHasNoAutoAim_Parms HasNoAutoAim_Parms;
 
@@ -14494,7 +14413,7 @@ unsigned char ADunDefPlayerAbility_LeapSlam::GetAbilityStatus ( int* ExtraStatus
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 92415 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 86826 ];
 
 	ADunDefPlayerAbility_LeapSlam_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -14516,7 +14435,7 @@ float ADunDefPlayerAbility_LeapSlam::GetMomentum ( )
 	static UFunction* pFnGetMomentum = NULL;
 
 	if ( ! pFnGetMomentum )
-		pFnGetMomentum = (UFunction*) UObject::GObjObjects()->Data[ 92413 ];
+		pFnGetMomentum = (UFunction*) UObject::GObjObjects()->Data[ 86824 ];
 
 	ADunDefPlayerAbility_LeapSlam_execGetMomentum_Parms GetMomentum_Parms;
 
@@ -14535,7 +14454,7 @@ float ADunDefPlayerAbility_LeapSlam::GetElementalDamage ( )
 	static UFunction* pFnGetElementalDamage = NULL;
 
 	if ( ! pFnGetElementalDamage )
-		pFnGetElementalDamage = (UFunction*) UObject::GObjObjects()->Data[ 92411 ];
+		pFnGetElementalDamage = (UFunction*) UObject::GObjObjects()->Data[ 86822 ];
 
 	ADunDefPlayerAbility_LeapSlam_execGetElementalDamage_Parms GetElementalDamage_Parms;
 
@@ -14555,7 +14474,7 @@ float ADunDefPlayerAbility_LeapSlam::GetDamage ( class ADunDefWeapon_MeleeSword*
 	static UFunction* pFnGetDamage = NULL;
 
 	if ( ! pFnGetDamage )
-		pFnGetDamage = (UFunction*) UObject::GObjObjects()->Data[ 92408 ];
+		pFnGetDamage = (UFunction*) UObject::GObjObjects()->Data[ 86819 ];
 
 	ADunDefPlayerAbility_LeapSlam_execGetDamage_Parms GetDamage_Parms;
 	GetDamage_Parms.weaponCheck = weaponCheck;
@@ -14574,7 +14493,7 @@ void ADunDefPlayerAbility_LeapSlam::AnimNotify_CurrentAbility_Off ( )
 	static UFunction* pFnAnimNotify_CurrentAbility_Off = NULL;
 
 	if ( ! pFnAnimNotify_CurrentAbility_Off )
-		pFnAnimNotify_CurrentAbility_Off = (UFunction*) UObject::GObjObjects()->Data[ 92401 ];
+		pFnAnimNotify_CurrentAbility_Off = (UFunction*) UObject::GObjObjects()->Data[ 86812 ];
 
 	ADunDefPlayerAbility_LeapSlam_execAnimNotify_CurrentAbility_Off_Parms AnimNotify_CurrentAbility_Off_Parms;
 
@@ -14590,7 +14509,7 @@ void ADunDefPlayerAbility_LeapSlam::AnimNotify_CurrentAbility_On ( )
 	static UFunction* pFnAnimNotify_CurrentAbility_On = NULL;
 
 	if ( ! pFnAnimNotify_CurrentAbility_On )
-		pFnAnimNotify_CurrentAbility_On = (UFunction*) UObject::GObjObjects()->Data[ 92397 ];
+		pFnAnimNotify_CurrentAbility_On = (UFunction*) UObject::GObjObjects()->Data[ 86808 ];
 
 	ADunDefPlayerAbility_LeapSlam_execAnimNotify_CurrentAbility_On_Parms AnimNotify_CurrentAbility_On_Parms;
 
@@ -14607,7 +14526,7 @@ bool ADunDefPlayerAbility_LeapSlam::ConsumesInputWhenActive ( )
 	static UFunction* pFnConsumesInputWhenActive = NULL;
 
 	if ( ! pFnConsumesInputWhenActive )
-		pFnConsumesInputWhenActive = (UFunction*) UObject::GObjObjects()->Data[ 92395 ];
+		pFnConsumesInputWhenActive = (UFunction*) UObject::GObjObjects()->Data[ 86806 ];
 
 	ADunDefPlayerAbility_LeapSlam_execConsumesInputWhenActive_Parms ConsumesInputWhenActive_Parms;
 
@@ -14625,7 +14544,7 @@ void ADunDefPlayerAbility_LeapSlam::DoTimeOut ( )
 	static UFunction* pFnDoTimeOut = NULL;
 
 	if ( ! pFnDoTimeOut )
-		pFnDoTimeOut = (UFunction*) UObject::GObjObjects()->Data[ 92394 ];
+		pFnDoTimeOut = (UFunction*) UObject::GObjObjects()->Data[ 86805 ];
 
 	ADunDefPlayerAbility_LeapSlam_execDoTimeOut_Parms DoTimeOut_Parms;
 
@@ -14645,7 +14564,7 @@ bool ADunDefPlayerAbility_LeapSlam::GetLeapVelocity ( struct FVector End, struct
 	static UFunction* pFnGetLeapVelocity = NULL;
 
 	if ( ! pFnGetLeapVelocity )
-		pFnGetLeapVelocity = (UFunction*) UObject::GObjObjects()->Data[ 92378 ];
+		pFnGetLeapVelocity = (UFunction*) UObject::GObjObjects()->Data[ 86789 ];
 
 	ADunDefPlayerAbility_LeapSlam_execGetLeapVelocity_Parms GetLeapVelocity_Parms;
 	memcpy ( &GetLeapVelocity_Parms.End, &End, 0xC );
@@ -14668,7 +14587,7 @@ void ADunDefPlayerAbility_LeapSlam::CancelAbility ( )
 	static UFunction* pFnCancelAbility = NULL;
 
 	if ( ! pFnCancelAbility )
-		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 92362 ];
+		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 86773 ];
 
 	ADunDefPlayerAbility_LeapSlam_execCancelAbility_Parms CancelAbility_Parms;
 
@@ -14684,7 +14603,7 @@ void ADunDefPlayerAbility_LeapSlam::PlayStopAnim ( )
 	static UFunction* pFnPlayStopAnim = NULL;
 
 	if ( ! pFnPlayStopAnim )
-		pFnPlayStopAnim = (UFunction*) UObject::GObjObjects()->Data[ 92361 ];
+		pFnPlayStopAnim = (UFunction*) UObject::GObjObjects()->Data[ 86772 ];
 
 	ADunDefPlayerAbility_LeapSlam_execPlayStopAnim_Parms PlayStopAnim_Parms;
 
@@ -14700,7 +14619,7 @@ void ADunDefPlayerAbility_LeapSlam::ShutOffVFX ( )
 	static UFunction* pFnShutOffVFX = NULL;
 
 	if ( ! pFnShutOffVFX )
-		pFnShutOffVFX = (UFunction*) UObject::GObjObjects()->Data[ 92360 ];
+		pFnShutOffVFX = (UFunction*) UObject::GObjObjects()->Data[ 86771 ];
 
 	ADunDefPlayerAbility_LeapSlam_execShutOffVFX_Parms ShutOffVFX_Parms;
 
@@ -14716,7 +14635,7 @@ void ADunDefPlayerAbility_LeapSlam::ActivateHandVFX ( )
 	static UFunction* pFnActivateHandVFX = NULL;
 
 	if ( ! pFnActivateHandVFX )
-		pFnActivateHandVFX = (UFunction*) UObject::GObjObjects()->Data[ 92359 ];
+		pFnActivateHandVFX = (UFunction*) UObject::GObjObjects()->Data[ 86770 ];
 
 	ADunDefPlayerAbility_LeapSlam_execActivateHandVFX_Parms ActivateHandVFX_Parms;
 
@@ -14732,7 +14651,7 @@ void ADunDefPlayerAbility_LeapSlam::PushCheck ( )
 	static UFunction* pFnPushCheck = NULL;
 
 	if ( ! pFnPushCheck )
-		pFnPushCheck = (UFunction*) UObject::GObjObjects()->Data[ 92358 ];
+		pFnPushCheck = (UFunction*) UObject::GObjObjects()->Data[ 86769 ];
 
 	ADunDefPlayerAbility_LeapSlam_execPushCheck_Parms PushCheck_Parms;
 
@@ -14764,7 +14683,7 @@ void ADunDefPlayerAbility_LeapSlam::ExecReplicatedFunction ( struct FName Functi
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 92341 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 86752 ];
 
 	ADunDefPlayerAbility_LeapSlam_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -14797,7 +14716,7 @@ void ADunDefPlayerAbility_LeapSlam::eventReplicatedEvent ( struct FName VarName 
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 92339 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 86750 ];
 
 	ADunDefPlayerAbility_LeapSlam_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -14816,7 +14735,7 @@ struct FName ADunDefPlayer_Jester::StaticGetOverrideSocketName ( class UDunDefHe
 	static UFunction* pFnStaticGetOverrideSocketName = NULL;
 
 	if ( ! pFnStaticGetOverrideSocketName )
-		pFnStaticGetOverrideSocketName = (UFunction*) UObject::GObjObjects()->Data[ 91653 ];
+		pFnStaticGetOverrideSocketName = (UFunction*) UObject::GObjObjects()->Data[ 86045 ];
 
 	ADunDefPlayer_Jester_execStaticGetOverrideSocketName_Parms StaticGetOverrideSocketName_Parms;
 	StaticGetOverrideSocketName_Parms.aHero = aHero;
@@ -14837,7 +14756,7 @@ struct FName ADunDefPlayer_Jester::GetOverrideSocketName ( class ADunDefWeapon* 
 	static UFunction* pFnGetOverrideSocketName = NULL;
 
 	if ( ! pFnGetOverrideSocketName )
-		pFnGetOverrideSocketName = (UFunction*) UObject::GObjObjects()->Data[ 91650 ];
+		pFnGetOverrideSocketName = (UFunction*) UObject::GObjObjects()->Data[ 86042 ];
 
 	ADunDefPlayer_Jester_execGetOverrideSocketName_Parms GetOverrideSocketName_Parms;
 	GetOverrideSocketName_Parms.theWeapon = theWeapon;
@@ -14857,7 +14776,7 @@ void ADunDefPlayer_Jester::SwapAnimSets ( class ADunDefWeapon* NewWeapon )
 	static UFunction* pFnSwapAnimSets = NULL;
 
 	if ( ! pFnSwapAnimSets )
-		pFnSwapAnimSets = (UFunction*) UObject::GObjObjects()->Data[ 91647 ];
+		pFnSwapAnimSets = (UFunction*) UObject::GObjObjects()->Data[ 86039 ];
 
 	ADunDefPlayer_Jester_execSwapAnimSets_Parms SwapAnimSets_Parms;
 	SwapAnimSets_Parms.NewWeapon = NewWeapon;
@@ -14875,7 +14794,7 @@ void ADunDefPlayer_Jester::WeaponSet ( class AWeapon* NewWeapon )
 	static UFunction* pFnWeaponSet = NULL;
 
 	if ( ! pFnWeaponSet )
-		pFnWeaponSet = (UFunction*) UObject::GObjObjects()->Data[ 91645 ];
+		pFnWeaponSet = (UFunction*) UObject::GObjObjects()->Data[ 86037 ];
 
 	ADunDefPlayer_Jester_execWeaponSet_Parms WeaponSet_Parms;
 	WeaponSet_Parms.NewWeapon = NewWeapon;
@@ -14894,7 +14813,7 @@ bool ADunDefPlayer_Jester::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 91640 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 86032 ];
 
 	ADunDefPlayer_Jester_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -14914,7 +14833,7 @@ void ADunDefPlayer_Jester::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 91638 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 86030 ];
 
 	ADunDefPlayer_Jester_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -14933,7 +14852,7 @@ class UMaterialInstanceConstant* ADunDefPlayer_Jester::GetWeaponIcon ( unsigned 
 	static UFunction* pFnGetWeaponIcon = NULL;
 
 	if ( ! pFnGetWeaponIcon )
-		pFnGetWeaponIcon = (UFunction*) UObject::GObjObjects()->Data[ 91633 ];
+		pFnGetWeaponIcon = (UFunction*) UObject::GObjObjects()->Data[ 86025 ];
 
 	ADunDefPlayer_Jester_execGetWeaponIcon_Parms GetWeaponIcon_Parms;
 	GetWeaponIcon_Parms.bOffHand = bOffHand;
@@ -14959,7 +14878,7 @@ void ADunDefPlayer_Jester::DrawWeaponIcons ( class UCanvas* C, class ADunDefWeap
 	static UFunction* pFnDrawWeaponIcons = NULL;
 
 	if ( ! pFnDrawWeaponIcons )
-		pFnDrawWeaponIcons = (UFunction*) UObject::GObjObjects()->Data[ 91620 ];
+		pFnDrawWeaponIcons = (UFunction*) UObject::GObjObjects()->Data[ 86012 ];
 
 	ADunDefPlayer_Jester_execDrawWeaponIcons_Parms DrawWeaponIcons_Parms;
 	DrawWeaponIcons_Parms.C = C;
@@ -14982,7 +14901,7 @@ void ADunDefPlayer_Jester::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 91619 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 86011 ];
 
 	ADunDefPlayer_Jester_eventDestroyed_Parms Destroyed_Parms;
 
@@ -15001,7 +14920,7 @@ class AInventory* ADunDefPlayer_Jester::CreateContainedInventoryFromTemplate ( c
 	static UFunction* pFnCreateContainedInventoryFromTemplate = NULL;
 
 	if ( ! pFnCreateContainedInventoryFromTemplate )
-		pFnCreateContainedInventoryFromTemplate = (UFunction*) UObject::GObjObjects()->Data[ 91614 ];
+		pFnCreateContainedInventoryFromTemplate = (UFunction*) UObject::GObjObjects()->Data[ 86006 ];
 
 	ADunDefPlayer_Jester_execCreateContainedInventoryFromTemplate_Parms CreateContainedInventoryFromTemplate_Parms;
 	CreateContainedInventoryFromTemplate_Parms.InventoryActorTemplate = InventoryActorTemplate;
@@ -15024,7 +14943,7 @@ class ADunDefWeapon* ADunDefPlayer_Jester::SwapOffHandWeaponFor ( class ADunDefW
 	static UFunction* pFnSwapOffHandWeaponFor = NULL;
 
 	if ( ! pFnSwapOffHandWeaponFor )
-		pFnSwapOffHandWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 91608 ];
+		pFnSwapOffHandWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 86000 ];
 
 	ADunDefPlayer_Jester_execSwapOffHandWeaponFor_Parms SwapOffHandWeaponFor_Parms;
 	SwapOffHandWeaponFor_Parms.weaponTemplate = weaponTemplate;
@@ -15045,7 +14964,7 @@ void ADunDefPlayer_Jester::DoWeaponSwap ( unsigned long bForceSwap )
 	static UFunction* pFnDoWeaponSwap = NULL;
 
 	if ( ! pFnDoWeaponSwap )
-		pFnDoWeaponSwap = (UFunction*) UObject::GObjObjects()->Data[ 91602 ];
+		pFnDoWeaponSwap = (UFunction*) UObject::GObjObjects()->Data[ 85994 ];
 
 	ADunDefPlayer_Jester_execDoWeaponSwap_Parms DoWeaponSwap_Parms;
 	DoWeaponSwap_Parms.bForceSwap = bForceSwap;
@@ -15063,7 +14982,7 @@ void ADunDefPlayer_Jester::ServerDoSwap ( unsigned long bForceSwap )
 	static UFunction* pFnServerDoSwap = NULL;
 
 	if ( ! pFnServerDoSwap )
-		pFnServerDoSwap = (UFunction*) UObject::GObjObjects()->Data[ 91600 ];
+		pFnServerDoSwap = (UFunction*) UObject::GObjObjects()->Data[ 85992 ];
 
 	ADunDefPlayer_Jester_execServerDoSwap_Parms ServerDoSwap_Parms;
 	ServerDoSwap_Parms.bForceSwap = bForceSwap;
@@ -15083,7 +15002,7 @@ void ADunDefPlayer_Jester::SetNewMainWeapon ( class AWeapon* theNewWeapon, unsig
 	static UFunction* pFnSetNewMainWeapon = NULL;
 
 	if ( ! pFnSetNewMainWeapon )
-		pFnSetNewMainWeapon = (UFunction*) UObject::GObjObjects()->Data[ 91594 ];
+		pFnSetNewMainWeapon = (UFunction*) UObject::GObjObjects()->Data[ 85986 ];
 
 	ADunDefPlayer_Jester_execSetNewMainWeapon_Parms SetNewMainWeapon_Parms;
 	SetNewMainWeapon_Parms.theNewWeapon = theNewWeapon;
@@ -15104,7 +15023,7 @@ void ADunDefPlayer_Jester::SetStoredWeapon ( class AWeapon* newStoredWeapon, cla
 	static UFunction* pFnSetStoredWeapon = NULL;
 
 	if ( ! pFnSetStoredWeapon )
-		pFnSetStoredWeapon = (UFunction*) UObject::GObjObjects()->Data[ 91590 ];
+		pFnSetStoredWeapon = (UFunction*) UObject::GObjObjects()->Data[ 85982 ];
 
 	ADunDefPlayer_Jester_execSetStoredWeapon_Parms SetStoredWeapon_Parms;
 	SetStoredWeapon_Parms.newStoredWeapon = newStoredWeapon;
@@ -15123,7 +15042,7 @@ struct FName ADunDefPlayer_Jester::GetShootAnim ( )
 	static UFunction* pFnGetShootAnim = NULL;
 
 	if ( ! pFnGetShootAnim )
-		pFnGetShootAnim = (UFunction*) UObject::GObjObjects()->Data[ 91588 ];
+		pFnGetShootAnim = (UFunction*) UObject::GObjObjects()->Data[ 85980 ];
 
 	ADunDefPlayer_Jester_execGetShootAnim_Parms GetShootAnim_Parms;
 
@@ -15142,7 +15061,7 @@ bool ADunDefPlayer_Jester::ForceWeaponActivationOverride ( )
 	static UFunction* pFnForceWeaponActivationOverride = NULL;
 
 	if ( ! pFnForceWeaponActivationOverride )
-		pFnForceWeaponActivationOverride = (UFunction*) UObject::GObjObjects()->Data[ 91586 ];
+		pFnForceWeaponActivationOverride = (UFunction*) UObject::GObjObjects()->Data[ 85978 ];
 
 	ADunDefPlayer_Jester_execForceWeaponActivationOverride_Parms ForceWeaponActivationOverride_Parms;
 
@@ -15163,7 +15082,7 @@ class ADunDefWeapon* ADunDefPlayer_Jester::SwapWeaponFor ( class ADunDefWeapon* 
 	static UFunction* pFnSwapWeaponFor = NULL;
 
 	if ( ! pFnSwapWeaponFor )
-		pFnSwapWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 91579 ];
+		pFnSwapWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 85971 ];
 
 	ADunDefPlayer_Jester_execSwapWeaponFor_Parms SwapWeaponFor_Parms;
 	SwapWeaponFor_Parms.weaponTemplate = weaponTemplate;
@@ -15184,7 +15103,7 @@ bool ADunDefPlayer_Jester::AllowDualWeapon ( )
 	static UFunction* pFnAllowDualWeapon = NULL;
 
 	if ( ! pFnAllowDualWeapon )
-		pFnAllowDualWeapon = (UFunction*) UObject::GObjObjects()->Data[ 91577 ];
+		pFnAllowDualWeapon = (UFunction*) UObject::GObjObjects()->Data[ 85969 ];
 
 	ADunDefPlayer_Jester_execAllowDualWeapon_Parms AllowDualWeapon_Parms;
 
@@ -15218,7 +15137,7 @@ void ADunDefPlayer_Jester::ExecReplicatedFunction ( struct FName FunctionName, s
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 91560 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 85952 ];
 
 	ADunDefPlayer_Jester_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -15250,7 +15169,7 @@ void ADunDefPlayer_SeriesEv::PostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 91834 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 86226 ];
 
 	ADunDefPlayer_SeriesEv_execPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -15266,7 +15185,7 @@ void ADunDefPlayer_SeriesEv::StopHovering ( )
 	static UFunction* pFnStopHovering = NULL;
 
 	if ( ! pFnStopHovering )
-		pFnStopHovering = (UFunction*) UObject::GObjObjects()->Data[ 91833 ];
+		pFnStopHovering = (UFunction*) UObject::GObjObjects()->Data[ 86225 ];
 
 	ADunDefPlayer_SeriesEv_execStopHovering_Parms StopHovering_Parms;
 
@@ -15282,7 +15201,7 @@ void ADunDefPlayer_SeriesEv::StartHovering ( )
 	static UFunction* pFnStartHovering = NULL;
 
 	if ( ! pFnStartHovering )
-		pFnStartHovering = (UFunction*) UObject::GObjObjects()->Data[ 91832 ];
+		pFnStartHovering = (UFunction*) UObject::GObjObjects()->Data[ 86224 ];
 
 	ADunDefPlayer_SeriesEv_execStartHovering_Parms StartHovering_Parms;
 
@@ -15299,7 +15218,7 @@ void ADunDefPlayer_SeriesEv::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 91830 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 86222 ];
 
 	ADunDefPlayer_SeriesEv_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -15317,7 +15236,7 @@ void ADunDefPlayer_SeriesEv::UsedAbility ( class ADunDefPlayerAbility* ability )
 	static UFunction* pFnUsedAbility = NULL;
 
 	if ( ! pFnUsedAbility )
-		pFnUsedAbility = (UFunction*) UObject::GObjObjects()->Data[ 91828 ];
+		pFnUsedAbility = (UFunction*) UObject::GObjObjects()->Data[ 86220 ];
 
 	ADunDefPlayer_SeriesEv_execUsedAbility_Parms UsedAbility_Parms;
 	UsedAbility_Parms.ability = ability;
@@ -15335,7 +15254,7 @@ void ADunDefPlayer_SeriesEv::SetActiveChargeAbility ( class ADunDefPlayerAbility
 	static UFunction* pFnSetActiveChargeAbility = NULL;
 
 	if ( ! pFnSetActiveChargeAbility )
-		pFnSetActiveChargeAbility = (UFunction*) UObject::GObjObjects()->Data[ 91826 ];
+		pFnSetActiveChargeAbility = (UFunction*) UObject::GObjObjects()->Data[ 86218 ];
 
 	ADunDefPlayer_SeriesEv_execSetActiveChargeAbility_Parms SetActiveChargeAbility_Parms;
 	SetActiveChargeAbility_Parms.newCharge = newCharge;
@@ -15353,7 +15272,7 @@ float ADunDefPlayer_SeriesEv::GetManaTokenAttractionRadius ( )
 	static UFunction* pFnGetManaTokenAttractionRadius = NULL;
 
 	if ( ! pFnGetManaTokenAttractionRadius )
-		pFnGetManaTokenAttractionRadius = (UFunction*) UObject::GObjObjects()->Data[ 91824 ];
+		pFnGetManaTokenAttractionRadius = (UFunction*) UObject::GObjObjects()->Data[ 86216 ];
 
 	ADunDefPlayer_SeriesEv_execGetManaTokenAttractionRadius_Parms GetManaTokenAttractionRadius_Parms;
 
@@ -15372,7 +15291,7 @@ bool ADunDefPlayer_SeriesEv::HasMaxManaPower ( )
 	static UFunction* pFnHasMaxManaPower = NULL;
 
 	if ( ! pFnHasMaxManaPower )
-		pFnHasMaxManaPower = (UFunction*) UObject::GObjObjects()->Data[ 91822 ];
+		pFnHasMaxManaPower = (UFunction*) UObject::GObjObjects()->Data[ 86214 ];
 
 	ADunDefPlayer_SeriesEv_execHasMaxManaPower_Parms HasMaxManaPower_Parms;
 
@@ -15391,7 +15310,7 @@ void ADunDefPlayer_SeriesEv::TryTokenCollection ( class ADunDefManaToken* Token 
 	static UFunction* pFnTryTokenCollection = NULL;
 
 	if ( ! pFnTryTokenCollection )
-		pFnTryTokenCollection = (UFunction*) UObject::GObjObjects()->Data[ 91818 ];
+		pFnTryTokenCollection = (UFunction*) UObject::GObjObjects()->Data[ 86210 ];
 
 	ADunDefPlayer_SeriesEv_execTryTokenCollection_Parms TryTokenCollection_Parms;
 	TryTokenCollection_Parms.Token = Token;
@@ -15409,7 +15328,7 @@ bool ADunDefPlayer_SeriesEv::IsCurrentlyPlayingHurtAnimation ( )
 	static UFunction* pFnIsCurrentlyPlayingHurtAnimation = NULL;
 
 	if ( ! pFnIsCurrentlyPlayingHurtAnimation )
-		pFnIsCurrentlyPlayingHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 91815 ];
+		pFnIsCurrentlyPlayingHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86207 ];
 
 	ADunDefPlayer_SeriesEv_execIsCurrentlyPlayingHurtAnimation_Parms IsCurrentlyPlayingHurtAnimation_Parms;
 
@@ -15429,7 +15348,7 @@ void ADunDefPlayer_SeriesEv::PlayHurtAnimation ( class UClass* DamageType, struc
 	static UFunction* pFnPlayHurtAnimation = NULL;
 
 	if ( ! pFnPlayHurtAnimation )
-		pFnPlayHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 91812 ];
+		pFnPlayHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86204 ];
 
 	ADunDefPlayer_SeriesEv_execPlayHurtAnimation_Parms PlayHurtAnimation_Parms;
 	PlayHurtAnimation_Parms.DamageType = DamageType;
@@ -15449,7 +15368,7 @@ bool ADunDefPlayer_SeriesEv::ShouldOverrideWeaponElementalEffects ( class ADunDe
 	static UFunction* pFnShouldOverrideWeaponElementalEffects = NULL;
 
 	if ( ! pFnShouldOverrideWeaponElementalEffects )
-		pFnShouldOverrideWeaponElementalEffects = (UFunction*) UObject::GObjObjects()->Data[ 91808 ];
+		pFnShouldOverrideWeaponElementalEffects = (UFunction*) UObject::GObjObjects()->Data[ 86200 ];
 
 	ADunDefPlayer_SeriesEv_execShouldOverrideWeaponElementalEffects_Parms ShouldOverrideWeaponElementalEffects_Parms;
 	ShouldOverrideWeaponElementalEffects_Parms.weaponCheck = weaponCheck;
@@ -15469,7 +15388,7 @@ void ADunDefPlayer_SeriesEv::StopFire ( unsigned char FireModeNum )
 	static UFunction* pFnStopFire = NULL;
 
 	if ( ! pFnStopFire )
-		pFnStopFire = (UFunction*) UObject::GObjObjects()->Data[ 91806 ];
+		pFnStopFire = (UFunction*) UObject::GObjObjects()->Data[ 86198 ];
 
 	ADunDefPlayer_SeriesEv_execStopFire_Parms StopFire_Parms;
 	StopFire_Parms.FireModeNum = FireModeNum;
@@ -15486,7 +15405,7 @@ void ADunDefPlayer_SeriesEv::PlayJumpAnimation ( )
 	static UFunction* pFnPlayJumpAnimation = NULL;
 
 	if ( ! pFnPlayJumpAnimation )
-		pFnPlayJumpAnimation = (UFunction*) UObject::GObjObjects()->Data[ 91805 ];
+		pFnPlayJumpAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86197 ];
 
 	ADunDefPlayer_SeriesEv_execPlayJumpAnimation_Parms PlayJumpAnimation_Parms;
 
@@ -15503,7 +15422,7 @@ void ADunDefPlayer_SeriesEv::StartFire ( unsigned char FireModeNum )
 	static UFunction* pFnStartFire = NULL;
 
 	if ( ! pFnStartFire )
-		pFnStartFire = (UFunction*) UObject::GObjObjects()->Data[ 91803 ];
+		pFnStartFire = (UFunction*) UObject::GObjObjects()->Data[ 86195 ];
 
 	ADunDefPlayer_SeriesEv_execStartFire_Parms StartFire_Parms;
 	StartFire_Parms.FireModeNum = FireModeNum;
@@ -15520,7 +15439,7 @@ void ADunDefPlayer_SeriesEv::PutArmDown ( )
 	static UFunction* pFnPutArmDown = NULL;
 
 	if ( ! pFnPutArmDown )
-		pFnPutArmDown = (UFunction*) UObject::GObjObjects()->Data[ 91802 ];
+		pFnPutArmDown = (UFunction*) UObject::GObjObjects()->Data[ 86194 ];
 
 	ADunDefPlayer_SeriesEv_execPutArmDown_Parms PutArmDown_Parms;
 
@@ -15539,7 +15458,7 @@ void ADunDefPlayer_SeriesEv::PlayShootAnimation ( unsigned long isBigShoot, unsi
 	static UFunction* pFnPlayShootAnimation = NULL;
 
 	if ( ! pFnPlayShootAnimation )
-		pFnPlayShootAnimation = (UFunction*) UObject::GObjObjects()->Data[ 91798 ];
+		pFnPlayShootAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86190 ];
 
 	ADunDefPlayer_SeriesEv_execPlayShootAnimation_Parms PlayShootAnimation_Parms;
 	PlayShootAnimation_Parms.isBigShoot = isBigShoot;
@@ -15559,7 +15478,7 @@ bool ADunDefPlayer_SeriesEv::ForceUseInstigatorForMuzzle ( )
 	static UFunction* pFnForceUseInstigatorForMuzzle = NULL;
 
 	if ( ! pFnForceUseInstigatorForMuzzle )
-		pFnForceUseInstigatorForMuzzle = (UFunction*) UObject::GObjObjects()->Data[ 91796 ];
+		pFnForceUseInstigatorForMuzzle = (UFunction*) UObject::GObjObjects()->Data[ 86188 ];
 
 	ADunDefPlayer_SeriesEv_execForceUseInstigatorForMuzzle_Parms ForceUseInstigatorForMuzzle_Parms;
 
@@ -15578,7 +15497,7 @@ bool ADunDefPlayer_SeriesEv::CanReload ( )
 	static UFunction* pFnCanReload = NULL;
 
 	if ( ! pFnCanReload )
-		pFnCanReload = (UFunction*) UObject::GObjObjects()->Data[ 91794 ];
+		pFnCanReload = (UFunction*) UObject::GObjObjects()->Data[ 86186 ];
 
 	ADunDefPlayer_SeriesEv_execCanReload_Parms CanReload_Parms;
 
@@ -15598,7 +15517,7 @@ class UMaterialInstanceConstant* ADunDefPlayer_SeriesEv::GetWeaponIcon ( unsigne
 	static UFunction* pFnGetWeaponIcon = NULL;
 
 	if ( ! pFnGetWeaponIcon )
-		pFnGetWeaponIcon = (UFunction*) UObject::GObjObjects()->Data[ 91789 ];
+		pFnGetWeaponIcon = (UFunction*) UObject::GObjObjects()->Data[ 86181 ];
 
 	ADunDefPlayer_SeriesEv_execGetWeaponIcon_Parms GetWeaponIcon_Parms;
 	GetWeaponIcon_Parms.bOffHand = bOffHand;
@@ -15624,7 +15543,7 @@ void ADunDefPlayer_SeriesEv::DrawWeaponIcons ( class UCanvas* C, class ADunDefWe
 	static UFunction* pFnDrawWeaponIcons = NULL;
 
 	if ( ! pFnDrawWeaponIcons )
-		pFnDrawWeaponIcons = (UFunction*) UObject::GObjObjects()->Data[ 91776 ];
+		pFnDrawWeaponIcons = (UFunction*) UObject::GObjObjects()->Data[ 86168 ];
 
 	ADunDefPlayer_SeriesEv_execDrawWeaponIcons_Parms DrawWeaponIcons_Parms;
 	DrawWeaponIcons_Parms.C = C;
@@ -15649,7 +15568,7 @@ bool ADunDefPlayer_SeriesEv::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 91771 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 86163 ];
 
 	ADunDefPlayer_SeriesEv_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -15668,7 +15587,7 @@ void ADunDefPlayer_SeriesEv::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 91770 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 86162 ];
 
 	ADunDefPlayer_SeriesEv_eventDestroyed_Parms Destroyed_Parms;
 
@@ -15687,7 +15606,7 @@ class AInventory* ADunDefPlayer_SeriesEv::CreateContainedInventoryFromTemplate (
 	static UFunction* pFnCreateContainedInventoryFromTemplate = NULL;
 
 	if ( ! pFnCreateContainedInventoryFromTemplate )
-		pFnCreateContainedInventoryFromTemplate = (UFunction*) UObject::GObjObjects()->Data[ 91765 ];
+		pFnCreateContainedInventoryFromTemplate = (UFunction*) UObject::GObjObjects()->Data[ 86157 ];
 
 	ADunDefPlayer_SeriesEv_execCreateContainedInventoryFromTemplate_Parms CreateContainedInventoryFromTemplate_Parms;
 	CreateContainedInventoryFromTemplate_Parms.InventoryActorTemplate = InventoryActorTemplate;
@@ -15710,7 +15629,7 @@ class ADunDefWeapon* ADunDefPlayer_SeriesEv::SwapOffHandWeaponFor ( class ADunDe
 	static UFunction* pFnSwapOffHandWeaponFor = NULL;
 
 	if ( ! pFnSwapOffHandWeaponFor )
-		pFnSwapOffHandWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 91759 ];
+		pFnSwapOffHandWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 86151 ];
 
 	ADunDefPlayer_SeriesEv_execSwapOffHandWeaponFor_Parms SwapOffHandWeaponFor_Parms;
 	SwapOffHandWeaponFor_Parms.weaponTemplate = weaponTemplate;
@@ -15731,7 +15650,7 @@ void ADunDefPlayer_SeriesEv::DoWeaponSwap ( unsigned long bForceSwap )
 	static UFunction* pFnDoWeaponSwap = NULL;
 
 	if ( ! pFnDoWeaponSwap )
-		pFnDoWeaponSwap = (UFunction*) UObject::GObjObjects()->Data[ 91754 ];
+		pFnDoWeaponSwap = (UFunction*) UObject::GObjObjects()->Data[ 86146 ];
 
 	ADunDefPlayer_SeriesEv_execDoWeaponSwap_Parms DoWeaponSwap_Parms;
 	DoWeaponSwap_Parms.bForceSwap = bForceSwap;
@@ -15749,7 +15668,7 @@ void ADunDefPlayer_SeriesEv::ServerDoSwap ( unsigned long bForceSwap )
 	static UFunction* pFnServerDoSwap = NULL;
 
 	if ( ! pFnServerDoSwap )
-		pFnServerDoSwap = (UFunction*) UObject::GObjObjects()->Data[ 91752 ];
+		pFnServerDoSwap = (UFunction*) UObject::GObjObjects()->Data[ 86144 ];
 
 	ADunDefPlayer_SeriesEv_execServerDoSwap_Parms ServerDoSwap_Parms;
 	ServerDoSwap_Parms.bForceSwap = bForceSwap;
@@ -15769,7 +15688,7 @@ void ADunDefPlayer_SeriesEv::SetNewMainWeapon ( class AWeapon* theNewWeapon, uns
 	static UFunction* pFnSetNewMainWeapon = NULL;
 
 	if ( ! pFnSetNewMainWeapon )
-		pFnSetNewMainWeapon = (UFunction*) UObject::GObjObjects()->Data[ 91746 ];
+		pFnSetNewMainWeapon = (UFunction*) UObject::GObjObjects()->Data[ 86138 ];
 
 	ADunDefPlayer_SeriesEv_execSetNewMainWeapon_Parms SetNewMainWeapon_Parms;
 	SetNewMainWeapon_Parms.theNewWeapon = theNewWeapon;
@@ -15790,7 +15709,7 @@ void ADunDefPlayer_SeriesEv::SetStoredWeapon ( class AWeapon* newStoredWeapon, c
 	static UFunction* pFnSetStoredWeapon = NULL;
 
 	if ( ! pFnSetStoredWeapon )
-		pFnSetStoredWeapon = (UFunction*) UObject::GObjObjects()->Data[ 91742 ];
+		pFnSetStoredWeapon = (UFunction*) UObject::GObjObjects()->Data[ 86134 ];
 
 	ADunDefPlayer_SeriesEv_execSetStoredWeapon_Parms SetStoredWeapon_Parms;
 	SetStoredWeapon_Parms.newStoredWeapon = newStoredWeapon;
@@ -15811,7 +15730,7 @@ class ADunDefWeapon* ADunDefPlayer_SeriesEv::SwapWeaponFor ( class ADunDefWeapon
 	static UFunction* pFnSwapWeaponFor = NULL;
 
 	if ( ! pFnSwapWeaponFor )
-		pFnSwapWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 91735 ];
+		pFnSwapWeaponFor = (UFunction*) UObject::GObjObjects()->Data[ 86127 ];
 
 	ADunDefPlayer_SeriesEv_execSwapWeaponFor_Parms SwapWeaponFor_Parms;
 	SwapWeaponFor_Parms.weaponTemplate = weaponTemplate;
@@ -15832,7 +15751,7 @@ struct FName ADunDefPlayer_SeriesEv::GetOffHandSocketName ( )
 	static UFunction* pFnGetOffHandSocketName = NULL;
 
 	if ( ! pFnGetOffHandSocketName )
-		pFnGetOffHandSocketName = (UFunction*) UObject::GObjObjects()->Data[ 91733 ];
+		pFnGetOffHandSocketName = (UFunction*) UObject::GObjObjects()->Data[ 86125 ];
 
 	ADunDefPlayer_SeriesEv_execGetOffHandSocketName_Parms GetOffHandSocketName_Parms;
 
@@ -15852,7 +15771,7 @@ bool ADunDefPlayer_SeriesEv::OverrideWeaponAttach ( class ADunDefWeapon* weaponC
 	static UFunction* pFnOverrideWeaponAttach = NULL;
 
 	if ( ! pFnOverrideWeaponAttach )
-		pFnOverrideWeaponAttach = (UFunction*) UObject::GObjObjects()->Data[ 91730 ];
+		pFnOverrideWeaponAttach = (UFunction*) UObject::GObjObjects()->Data[ 86122 ];
 
 	ADunDefPlayer_SeriesEv_execOverrideWeaponAttach_Parms OverrideWeaponAttach_Parms;
 	OverrideWeaponAttach_Parms.weaponCheck = weaponCheck;
@@ -15872,7 +15791,7 @@ bool ADunDefPlayer_SeriesEv::AllowDualWeapon ( )
 	static UFunction* pFnAllowDualWeapon = NULL;
 
 	if ( ! pFnAllowDualWeapon )
-		pFnAllowDualWeapon = (UFunction*) UObject::GObjObjects()->Data[ 91728 ];
+		pFnAllowDualWeapon = (UFunction*) UObject::GObjObjects()->Data[ 86120 ];
 
 	ADunDefPlayer_SeriesEv_execAllowDualWeapon_Parms AllowDualWeapon_Parms;
 
@@ -15906,7 +15825,7 @@ void ADunDefPlayer_SeriesEv::ExecReplicatedFunction ( struct FName FunctionName,
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 91711 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 86103 ];
 
 	ADunDefPlayer_SeriesEv_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -15940,7 +15859,7 @@ unsigned char ADunDefPlayerAbility_ManaCharge::GetAbilityStatus ( int* ExtraStat
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 92568 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 86979 ];
 
 	ADunDefPlayerAbility_ManaCharge_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -15962,7 +15881,7 @@ bool ADunDefPlayerAbility_ManaCharge::AllowUsageDuringCastingStates ( )
 	static UFunction* pFnAllowUsageDuringCastingStates = NULL;
 
 	if ( ! pFnAllowUsageDuringCastingStates )
-		pFnAllowUsageDuringCastingStates = (UFunction*) UObject::GObjObjects()->Data[ 92566 ];
+		pFnAllowUsageDuringCastingStates = (UFunction*) UObject::GObjObjects()->Data[ 86977 ];
 
 	ADunDefPlayerAbility_ManaCharge_execAllowUsageDuringCastingStates_Parms AllowUsageDuringCastingStates_Parms;
 
@@ -15981,7 +15900,7 @@ void ADunDefPlayerAbility_ManaCharge::DrawChargeBar ( class ADunDefHUD* H )
 	static UFunction* pFnDrawChargeBar = NULL;
 
 	if ( ! pFnDrawChargeBar )
-		pFnDrawChargeBar = (UFunction*) UObject::GObjObjects()->Data[ 92557 ];
+		pFnDrawChargeBar = (UFunction*) UObject::GObjObjects()->Data[ 86968 ];
 
 	ADunDefPlayerAbility_ManaCharge_execDrawChargeBar_Parms DrawChargeBar_Parms;
 	DrawChargeBar_Parms.H = H;
@@ -15999,7 +15918,7 @@ float ADunDefPlayerAbility_ManaCharge::GetCooldownStartTime ( )
 	static UFunction* pFnGetCooldownStartTime = NULL;
 
 	if ( ! pFnGetCooldownStartTime )
-		pFnGetCooldownStartTime = (UFunction*) UObject::GObjObjects()->Data[ 92555 ];
+		pFnGetCooldownStartTime = (UFunction*) UObject::GObjObjects()->Data[ 86966 ];
 
 	ADunDefPlayerAbility_ManaCharge_execGetCooldownStartTime_Parms GetCooldownStartTime_Parms;
 
@@ -16018,7 +15937,7 @@ bool ADunDefPlayerAbility_ManaCharge::ShouldDrawManaBar ( )
 	static UFunction* pFnShouldDrawManaBar = NULL;
 
 	if ( ! pFnShouldDrawManaBar )
-		pFnShouldDrawManaBar = (UFunction*) UObject::GObjObjects()->Data[ 92553 ];
+		pFnShouldDrawManaBar = (UFunction*) UObject::GObjObjects()->Data[ 86964 ];
 
 	ADunDefPlayerAbility_ManaCharge_execShouldDrawManaBar_Parms ShouldDrawManaBar_Parms;
 
@@ -16036,7 +15955,7 @@ void ADunDefPlayerAbility_ManaCharge::StopEffects ( )
 	static UFunction* pFnStopEffects = NULL;
 
 	if ( ! pFnStopEffects )
-		pFnStopEffects = (UFunction*) UObject::GObjObjects()->Data[ 92552 ];
+		pFnStopEffects = (UFunction*) UObject::GObjObjects()->Data[ 86963 ];
 
 	ADunDefPlayerAbility_ManaCharge_execStopEffects_Parms StopEffects_Parms;
 
@@ -16052,7 +15971,7 @@ void ADunDefPlayerAbility_ManaCharge::NotifyStopFire ( )
 	static UFunction* pFnNotifyStopFire = NULL;
 
 	if ( ! pFnNotifyStopFire )
-		pFnNotifyStopFire = (UFunction*) UObject::GObjObjects()->Data[ 92551 ];
+		pFnNotifyStopFire = (UFunction*) UObject::GObjObjects()->Data[ 86962 ];
 
 	ADunDefPlayerAbility_ManaCharge_execNotifyStopFire_Parms NotifyStopFire_Parms;
 
@@ -16068,7 +15987,7 @@ void ADunDefPlayerAbility_ManaCharge::ServerStartDamage ( )
 	static UFunction* pFnServerStartDamage = NULL;
 
 	if ( ! pFnServerStartDamage )
-		pFnServerStartDamage = (UFunction*) UObject::GObjObjects()->Data[ 92550 ];
+		pFnServerStartDamage = (UFunction*) UObject::GObjObjects()->Data[ 86961 ];
 
 	ADunDefPlayerAbility_ManaCharge_execServerStartDamage_Parms ServerStartDamage_Parms;
 
@@ -16084,7 +16003,7 @@ void ADunDefPlayerAbility_ManaCharge::NotifyStartFire ( )
 	static UFunction* pFnNotifyStartFire = NULL;
 
 	if ( ! pFnNotifyStartFire )
-		pFnNotifyStartFire = (UFunction*) UObject::GObjObjects()->Data[ 92549 ];
+		pFnNotifyStartFire = (UFunction*) UObject::GObjObjects()->Data[ 86960 ];
 
 	ADunDefPlayerAbility_ManaCharge_execNotifyStartFire_Parms NotifyStartFire_Parms;
 
@@ -16100,7 +16019,7 @@ void ADunDefPlayerAbility_ManaCharge::ActivateEffects ( )
 	static UFunction* pFnActivateEffects = NULL;
 
 	if ( ! pFnActivateEffects )
-		pFnActivateEffects = (UFunction*) UObject::GObjObjects()->Data[ 92548 ];
+		pFnActivateEffects = (UFunction*) UObject::GObjObjects()->Data[ 86959 ];
 
 	ADunDefPlayerAbility_ManaCharge_execActivateEffects_Parms ActivateEffects_Parms;
 
@@ -16117,7 +16036,7 @@ struct FName ADunDefPlayerAbility_ManaCharge::GetSocketName ( )
 	static UFunction* pFnGetSocketName = NULL;
 
 	if ( ! pFnGetSocketName )
-		pFnGetSocketName = (UFunction*) UObject::GObjObjects()->Data[ 92546 ];
+		pFnGetSocketName = (UFunction*) UObject::GObjObjects()->Data[ 86957 ];
 
 	ADunDefPlayerAbility_ManaCharge_execGetSocketName_Parms GetSocketName_Parms;
 
@@ -16135,7 +16054,7 @@ void ADunDefPlayerAbility_ManaCharge::AttachParticles ( )
 	static UFunction* pFnAttachParticles = NULL;
 
 	if ( ! pFnAttachParticles )
-		pFnAttachParticles = (UFunction*) UObject::GObjObjects()->Data[ 92544 ];
+		pFnAttachParticles = (UFunction*) UObject::GObjObjects()->Data[ 86955 ];
 
 	ADunDefPlayerAbility_ManaCharge_execAttachParticles_Parms AttachParticles_Parms;
 
@@ -16152,7 +16071,7 @@ int ADunDefPlayerAbility_ManaCharge::GetDamage ( )
 	static UFunction* pFnGetDamage = NULL;
 
 	if ( ! pFnGetDamage )
-		pFnGetDamage = (UFunction*) UObject::GObjObjects()->Data[ 92542 ];
+		pFnGetDamage = (UFunction*) UObject::GObjObjects()->Data[ 86953 ];
 
 	ADunDefPlayerAbility_ManaCharge_execGetDamage_Parms GetDamage_Parms;
 
@@ -16170,7 +16089,7 @@ void ADunDefPlayerAbility_ManaCharge::ResetManaCharge ( )
 	static UFunction* pFnResetManaCharge = NULL;
 
 	if ( ! pFnResetManaCharge )
-		pFnResetManaCharge = (UFunction*) UObject::GObjObjects()->Data[ 92541 ];
+		pFnResetManaCharge = (UFunction*) UObject::GObjObjects()->Data[ 86952 ];
 
 	ADunDefPlayerAbility_ManaCharge_execResetManaCharge_Parms ResetManaCharge_Parms;
 
@@ -16187,7 +16106,7 @@ void ADunDefPlayerAbility_ManaCharge::AddManaCharge ( int addedMana )
 	static UFunction* pFnAddManaCharge = NULL;
 
 	if ( ! pFnAddManaCharge )
-		pFnAddManaCharge = (UFunction*) UObject::GObjObjects()->Data[ 92539 ];
+		pFnAddManaCharge = (UFunction*) UObject::GObjObjects()->Data[ 86950 ];
 
 	ADunDefPlayerAbility_ManaCharge_execAddManaCharge_Parms AddManaCharge_Parms;
 	AddManaCharge_Parms.addedMana = addedMana;
@@ -16204,7 +16123,7 @@ void ADunDefPlayerAbility_ManaCharge::SpawnManaEffect ( )
 	static UFunction* pFnSpawnManaEffect = NULL;
 
 	if ( ! pFnSpawnManaEffect )
-		pFnSpawnManaEffect = (UFunction*) UObject::GObjObjects()->Data[ 92536 ];
+		pFnSpawnManaEffect = (UFunction*) UObject::GObjObjects()->Data[ 86947 ];
 
 	ADunDefPlayerAbility_ManaCharge_execSpawnManaEffect_Parms SpawnManaEffect_Parms;
 
@@ -16221,7 +16140,7 @@ void ADunDefPlayerAbility_ManaCharge::ServerCollectManaToken ( class ADunDefMana
 	static UFunction* pFnServerCollectManaToken = NULL;
 
 	if ( ! pFnServerCollectManaToken )
-		pFnServerCollectManaToken = (UFunction*) UObject::GObjObjects()->Data[ 92534 ];
+		pFnServerCollectManaToken = (UFunction*) UObject::GObjObjects()->Data[ 86945 ];
 
 	ADunDefPlayerAbility_ManaCharge_execServerCollectManaToken_Parms ServerCollectManaToken_Parms;
 	ServerCollectManaToken_Parms.Token = Token;
@@ -16243,7 +16162,7 @@ bool ADunDefPlayerAbility_ManaCharge::InCylinderFwd ( struct FVector Origin, str
 	static UFunction* pFnInCylinderFwd = NULL;
 
 	if ( ! pFnInCylinderFwd )
-		pFnInCylinderFwd = (UFunction*) UObject::GObjObjects()->Data[ 92527 ];
+		pFnInCylinderFwd = (UFunction*) UObject::GObjObjects()->Data[ 86938 ];
 
 	ADunDefPlayerAbility_ManaCharge_execInCylinderFwd_Parms InCylinderFwd_Parms;
 	memcpy ( &InCylinderFwd_Parms.Origin, &Origin, 0xC );
@@ -16265,7 +16184,7 @@ void ADunDefPlayerAbility_ManaCharge::DoDamage ( )
 	static UFunction* pFnDoDamage = NULL;
 
 	if ( ! pFnDoDamage )
-		pFnDoDamage = (UFunction*) UObject::GObjObjects()->Data[ 92522 ];
+		pFnDoDamage = (UFunction*) UObject::GObjObjects()->Data[ 86933 ];
 
 	ADunDefPlayerAbility_ManaCharge_execDoDamage_Parms DoDamage_Parms;
 
@@ -16281,7 +16200,7 @@ void ADunDefPlayerAbility_ManaCharge::CheckForFire ( )
 	static UFunction* pFnCheckForFire = NULL;
 
 	if ( ! pFnCheckForFire )
-		pFnCheckForFire = (UFunction*) UObject::GObjObjects()->Data[ 92521 ];
+		pFnCheckForFire = (UFunction*) UObject::GObjObjects()->Data[ 86932 ];
 
 	ADunDefPlayerAbility_ManaCharge_execCheckForFire_Parms CheckForFire_Parms;
 
@@ -16298,7 +16217,7 @@ float ADunDefPlayerAbility_ManaCharge::GetTimeBasedOnCharge ( )
 	static UFunction* pFnGetTimeBasedOnCharge = NULL;
 
 	if ( ! pFnGetTimeBasedOnCharge )
-		pFnGetTimeBasedOnCharge = (UFunction*) UObject::GObjObjects()->Data[ 92518 ];
+		pFnGetTimeBasedOnCharge = (UFunction*) UObject::GObjObjects()->Data[ 86929 ];
 
 	ADunDefPlayerAbility_ManaCharge_execGetTimeBasedOnCharge_Parms GetTimeBasedOnCharge_Parms;
 
@@ -16316,7 +16235,7 @@ void ADunDefPlayerAbility_ManaCharge::StartDamage ( )
 	static UFunction* pFnStartDamage = NULL;
 
 	if ( ! pFnStartDamage )
-		pFnStartDamage = (UFunction*) UObject::GObjObjects()->Data[ 92517 ];
+		pFnStartDamage = (UFunction*) UObject::GObjObjects()->Data[ 86928 ];
 
 	ADunDefPlayerAbility_ManaCharge_execStartDamage_Parms StartDamage_Parms;
 
@@ -16332,7 +16251,7 @@ void ADunDefPlayerAbility_ManaCharge::StartDamageEffects ( )
 	static UFunction* pFnStartDamageEffects = NULL;
 
 	if ( ! pFnStartDamageEffects )
-		pFnStartDamageEffects = (UFunction*) UObject::GObjObjects()->Data[ 92516 ];
+		pFnStartDamageEffects = (UFunction*) UObject::GObjObjects()->Data[ 86927 ];
 
 	ADunDefPlayerAbility_ManaCharge_execStartDamageEffects_Parms StartDamageEffects_Parms;
 
@@ -16349,7 +16268,7 @@ bool ADunDefPlayerAbility_ManaCharge::CanHoldMoreCharge ( )
 	static UFunction* pFnCanHoldMoreCharge = NULL;
 
 	if ( ! pFnCanHoldMoreCharge )
-		pFnCanHoldMoreCharge = (UFunction*) UObject::GObjObjects()->Data[ 91820 ];
+		pFnCanHoldMoreCharge = (UFunction*) UObject::GObjObjects()->Data[ 86212 ];
 
 	ADunDefPlayerAbility_ManaCharge_execCanHoldMoreCharge_Parms CanHoldMoreCharge_Parms;
 
@@ -16367,7 +16286,7 @@ void ADunDefPlayerAbility_ManaCharge::CancelAbility ( )
 	static UFunction* pFnCancelAbility = NULL;
 
 	if ( ! pFnCancelAbility )
-		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 92505 ];
+		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 86916 ];
 
 	ADunDefPlayerAbility_ManaCharge_execCancelAbility_Parms CancelAbility_Parms;
 
@@ -16383,7 +16302,7 @@ void ADunDefPlayerAbility_ManaCharge::OnActivate ( )
 	static UFunction* pFnOnActivate = NULL;
 
 	if ( ! pFnOnActivate )
-		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 92503 ];
+		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 86914 ];
 
 	ADunDefPlayerAbility_ManaCharge_execOnActivate_Parms OnActivate_Parms;
 
@@ -16399,7 +16318,7 @@ void ADunDefPlayerAbility_ManaCharge::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 92502 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 86913 ];
 
 	ADunDefPlayerAbility_ManaCharge_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -16431,7 +16350,7 @@ void ADunDefPlayerAbility_ManaCharge::ExecReplicatedFunction ( struct FName Func
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 92485 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 86896 ];
 
 	ADunDefPlayerAbility_ManaCharge_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -16464,7 +16383,7 @@ bool ADunDefPlayerAbility_PhaseShift::AllowUsageDuringCastingStates ( )
 	static UFunction* pFnAllowUsageDuringCastingStates = NULL;
 
 	if ( ! pFnAllowUsageDuringCastingStates )
-		pFnAllowUsageDuringCastingStates = (UFunction*) UObject::GObjObjects()->Data[ 92890 ];
+		pFnAllowUsageDuringCastingStates = (UFunction*) UObject::GObjObjects()->Data[ 87301 ];
 
 	ADunDefPlayerAbility_PhaseShift_execAllowUsageDuringCastingStates_Parms AllowUsageDuringCastingStates_Parms;
 
@@ -16483,7 +16402,7 @@ struct FName ADunDefPlayerAbility_PhaseShift::GetCastingStateNamePC ( )
 	static UFunction* pFnGetCastingStateNamePC = NULL;
 
 	if ( ! pFnGetCastingStateNamePC )
-		pFnGetCastingStateNamePC = (UFunction*) UObject::GObjObjects()->Data[ 92888 ];
+		pFnGetCastingStateNamePC = (UFunction*) UObject::GObjObjects()->Data[ 87299 ];
 
 	ADunDefPlayerAbility_PhaseShift_execGetCastingStateNamePC_Parms GetCastingStateNamePC_Parms;
 
@@ -16501,7 +16420,7 @@ void ADunDefPlayerAbility_PhaseShift::CancelAbility ( )
 	static UFunction* pFnCancelAbility = NULL;
 
 	if ( ! pFnCancelAbility )
-		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 92887 ];
+		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 87298 ];
 
 	ADunDefPlayerAbility_PhaseShift_execCancelAbility_Parms CancelAbility_Parms;
 
@@ -16517,7 +16436,7 @@ void ADunDefPlayerAbility_PhaseShift::ClientForceCancel ( )
 	static UFunction* pFnClientForceCancel = NULL;
 
 	if ( ! pFnClientForceCancel )
-		pFnClientForceCancel = (UFunction*) UObject::GObjObjects()->Data[ 92886 ];
+		pFnClientForceCancel = (UFunction*) UObject::GObjObjects()->Data[ 87297 ];
 
 	ADunDefPlayerAbility_PhaseShift_execClientForceCancel_Parms ClientForceCancel_Parms;
 
@@ -16533,7 +16452,7 @@ void ADunDefPlayerAbility_PhaseShift::ForceCancel ( )
 	static UFunction* pFnForceCancel = NULL;
 
 	if ( ! pFnForceCancel )
-		pFnForceCancel = (UFunction*) UObject::GObjObjects()->Data[ 92885 ];
+		pFnForceCancel = (UFunction*) UObject::GObjObjects()->Data[ 87296 ];
 
 	ADunDefPlayerAbility_PhaseShift_execForceCancel_Parms ForceCancel_Parms;
 
@@ -16550,7 +16469,7 @@ void ADunDefPlayerAbility_PhaseShift::SetPhaseMaterials ( unsigned long bPhasedM
 	static UFunction* pFnSetPhaseMaterials = NULL;
 
 	if ( ! pFnSetPhaseMaterials )
-		pFnSetPhaseMaterials = (UFunction*) UObject::GObjObjects()->Data[ 92882 ];
+		pFnSetPhaseMaterials = (UFunction*) UObject::GObjObjects()->Data[ 87293 ];
 
 	ADunDefPlayerAbility_PhaseShift_execSetPhaseMaterials_Parms SetPhaseMaterials_Parms;
 	SetPhaseMaterials_Parms.bPhasedMaterials = bPhasedMaterials;
@@ -16567,7 +16486,7 @@ void ADunDefPlayerAbility_PhaseShift::StartScaleUp ( )
 	static UFunction* pFnStartScaleUp = NULL;
 
 	if ( ! pFnStartScaleUp )
-		pFnStartScaleUp = (UFunction*) UObject::GObjObjects()->Data[ 92880 ];
+		pFnStartScaleUp = (UFunction*) UObject::GObjObjects()->Data[ 87291 ];
 
 	ADunDefPlayerAbility_PhaseShift_execStartScaleUp_Parms StartScaleUp_Parms;
 
@@ -16586,7 +16505,7 @@ void ADunDefPlayerAbility_PhaseShift::SetMaterialColors ( struct FLinearColor C1
 	static UFunction* pFnSetMaterialColors = NULL;
 
 	if ( ! pFnSetMaterialColors )
-		pFnSetMaterialColors = (UFunction*) UObject::GObjObjects()->Data[ 92875 ];
+		pFnSetMaterialColors = (UFunction*) UObject::GObjObjects()->Data[ 87286 ];
 
 	ADunDefPlayerAbility_PhaseShift_execSetMaterialColors_Parms SetMaterialColors_Parms;
 	memcpy ( &SetMaterialColors_Parms.C1, &C1, 0x10 );
@@ -16605,7 +16524,7 @@ void ADunDefPlayerAbility_PhaseShift::OnActivate ( )
 	static UFunction* pFnOnActivate = NULL;
 
 	if ( ! pFnOnActivate )
-		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 92871 ];
+		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 87282 ];
 
 	ADunDefPlayerAbility_PhaseShift_execOnActivate_Parms OnActivate_Parms;
 
@@ -16621,7 +16540,7 @@ void ADunDefPlayerAbility_PhaseShift::SetDefaultValues ( )
 	static UFunction* pFnSetDefaultValues = NULL;
 
 	if ( ! pFnSetDefaultValues )
-		pFnSetDefaultValues = (UFunction*) UObject::GObjObjects()->Data[ 92868 ];
+		pFnSetDefaultValues = (UFunction*) UObject::GObjObjects()->Data[ 87279 ];
 
 	ADunDefPlayerAbility_PhaseShift_execSetDefaultValues_Parms SetDefaultValues_Parms;
 
@@ -16637,7 +16556,7 @@ void ADunDefPlayerAbility_PhaseShift::SetPhaseShiftValue ( )
 	static UFunction* pFnSetPhaseShiftValue = NULL;
 
 	if ( ! pFnSetPhaseShiftValue )
-		pFnSetPhaseShiftValue = (UFunction*) UObject::GObjObjects()->Data[ 92866 ];
+		pFnSetPhaseShiftValue = (UFunction*) UObject::GObjObjects()->Data[ 87277 ];
 
 	ADunDefPlayerAbility_PhaseShift_execSetPhaseShiftValue_Parms SetPhaseShiftValue_Parms;
 
@@ -16653,7 +16572,7 @@ void ADunDefPlayerAbility_PhaseShift::PhaseScaleDown ( )
 	static UFunction* pFnPhaseScaleDown = NULL;
 
 	if ( ! pFnPhaseScaleDown )
-		pFnPhaseScaleDown = (UFunction*) UObject::GObjObjects()->Data[ 92865 ];
+		pFnPhaseScaleDown = (UFunction*) UObject::GObjObjects()->Data[ 87276 ];
 
 	ADunDefPlayerAbility_PhaseShift_execPhaseScaleDown_Parms PhaseScaleDown_Parms;
 
@@ -16671,7 +16590,7 @@ unsigned char ADunDefPlayerAbility_PhaseShift::GetAbilityStatus ( int* ExtraStat
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 92861 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 87272 ];
 
 	ADunDefPlayerAbility_PhaseShift_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -16692,7 +16611,7 @@ void ADunDefPlayerAbility_PhaseShift::FinishScaleUp ( )
 	static UFunction* pFnFinishScaleUp = NULL;
 
 	if ( ! pFnFinishScaleUp )
-		pFnFinishScaleUp = (UFunction*) UObject::GObjObjects()->Data[ 92860 ];
+		pFnFinishScaleUp = (UFunction*) UObject::GObjObjects()->Data[ 87271 ];
 
 	ADunDefPlayerAbility_PhaseShift_execFinishScaleUp_Parms FinishScaleUp_Parms;
 
@@ -16709,7 +16628,7 @@ void ADunDefPlayerAbility_PhaseShift::InitializeForPlayer ( class ADunDefPlayer*
 	static UFunction* pFnInitializeForPlayer = NULL;
 
 	if ( ! pFnInitializeForPlayer )
-		pFnInitializeForPlayer = (UFunction*) UObject::GObjObjects()->Data[ 92842 ];
+		pFnInitializeForPlayer = (UFunction*) UObject::GObjObjects()->Data[ 87253 ];
 
 	ADunDefPlayerAbility_PhaseShift_execInitializeForPlayer_Parms InitializeForPlayer_Parms;
 	InitializeForPlayer_Parms.myPlayer = myPlayer;
@@ -16726,7 +16645,7 @@ void ADunDefPlayerAbility_PhaseShift::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 92841 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 87252 ];
 
 	ADunDefPlayerAbility_PhaseShift_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -16758,7 +16677,7 @@ void ADunDefPlayerAbility_PhaseShift::ExecReplicatedFunction ( struct FName Func
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 92824 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 87235 ];
 
 	ADunDefPlayerAbility_PhaseShift_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -16791,7 +16710,7 @@ void ADunDefPlayerAbility_PhaseShift::eventReplicatedEvent ( struct FName VarNam
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 92822 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 87233 ];
 
 	ADunDefPlayerAbility_PhaseShift_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -16808,7 +16727,7 @@ void ADunDefPlayerAbility_BuilTripWire::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 92129 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 86521 ];
 
 	ADunDefPlayerAbility_BuilTripWire_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -16824,7 +16743,7 @@ void ADunDefPlayerAbility_BuilTripWire::CancelAbility ( )
 	static UFunction* pFnCancelAbility = NULL;
 
 	if ( ! pFnCancelAbility )
-		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 92128 ];
+		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 86520 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execCancelAbility_Parms CancelAbility_Parms;
 
@@ -16844,7 +16763,7 @@ bool ADunDefPlayerAbility_BuilTripWire::AllowTowerPlacementPosition ( struct FVe
 	static UFunction* pFnAllowTowerPlacementPosition = NULL;
 
 	if ( ! pFnAllowTowerPlacementPosition )
-		pFnAllowTowerPlacementPosition = (UFunction*) UObject::GObjObjects()->Data[ 92113 ];
+		pFnAllowTowerPlacementPosition = (UFunction*) UObject::GObjObjects()->Data[ 86505 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execAllowTowerPlacementPosition_Parms AllowTowerPlacementPosition_Parms;
 	memcpy ( &AllowTowerPlacementPosition_Parms.placementPos, &placementPos, 0xC );
@@ -16868,7 +16787,7 @@ struct FVector ADunDefPlayerAbility_BuilTripWire::GetCenterLocation ( )
 	static UFunction* pFnGetCenterLocation = NULL;
 
 	if ( ! pFnGetCenterLocation )
-		pFnGetCenterLocation = (UFunction*) UObject::GObjObjects()->Data[ 92111 ];
+		pFnGetCenterLocation = (UFunction*) UObject::GObjObjects()->Data[ 86503 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execGetCenterLocation_Parms GetCenterLocation_Parms;
 
@@ -16887,7 +16806,7 @@ bool ADunDefPlayerAbility_BuilTripWire::CanPlaceTowerUnitCost ( )
 	static UFunction* pFnCanPlaceTowerUnitCost = NULL;
 
 	if ( ! pFnCanPlaceTowerUnitCost )
-		pFnCanPlaceTowerUnitCost = (UFunction*) UObject::GObjObjects()->Data[ 92109 ];
+		pFnCanPlaceTowerUnitCost = (UFunction*) UObject::GObjObjects()->Data[ 86501 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execCanPlaceTowerUnitCost_Parms CanPlaceTowerUnitCost_Parms;
 
@@ -16906,7 +16825,7 @@ int ADunDefPlayerAbility_BuilTripWire::GetDUCost ( )
 	static UFunction* pFnGetDUCost = NULL;
 
 	if ( ! pFnGetDUCost )
-		pFnGetDUCost = (UFunction*) UObject::GObjObjects()->Data[ 92098 ];
+		pFnGetDUCost = (UFunction*) UObject::GObjObjects()->Data[ 86490 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execGetDUCost_Parms GetDUCost_Parms;
 
@@ -16926,7 +16845,7 @@ bool ADunDefPlayerAbility_BuilTripWire::DrawCastingHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawCastingHUD = NULL;
 
 	if ( ! pFnDrawCastingHUD )
-		pFnDrawCastingHUD = (UFunction*) UObject::GObjObjects()->Data[ 92094 ];
+		pFnDrawCastingHUD = (UFunction*) UObject::GObjObjects()->Data[ 86486 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execDrawCastingHUD_Parms DrawCastingHUD_Parms;
 	DrawCastingHUD_Parms.H = H;
@@ -16946,7 +16865,7 @@ void ADunDefPlayerAbility_BuilTripWire::CreateNewPreviewPoint ( struct FVector p
 	static UFunction* pFnCreateNewPreviewPoint = NULL;
 
 	if ( ! pFnCreateNewPreviewPoint )
-		pFnCreateNewPreviewPoint = (UFunction*) UObject::GObjObjects()->Data[ 92090 ];
+		pFnCreateNewPreviewPoint = (UFunction*) UObject::GObjObjects()->Data[ 86482 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execCreateNewPreviewPoint_Parms CreateNewPreviewPoint_Parms;
 	memcpy ( &CreateNewPreviewPoint_Parms.previewLoc, &previewLoc, 0xC );
@@ -16963,7 +16882,7 @@ void ADunDefPlayerAbility_BuilTripWire::ClearPreviewPoints ( )
 	static UFunction* pFnClearPreviewPoints = NULL;
 
 	if ( ! pFnClearPreviewPoints )
-		pFnClearPreviewPoints = (UFunction*) UObject::GObjObjects()->Data[ 92088 ];
+		pFnClearPreviewPoints = (UFunction*) UObject::GObjObjects()->Data[ 86480 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execClearPreviewPoints_Parms ClearPreviewPoints_Parms;
 
@@ -16980,7 +16899,7 @@ void ADunDefPlayerAbility_BuilTripWire::ServerAddPlacementPoint ( struct FVector
 	static UFunction* pFnServerAddPlacementPoint = NULL;
 
 	if ( ! pFnServerAddPlacementPoint )
-		pFnServerAddPlacementPoint = (UFunction*) UObject::GObjObjects()->Data[ 92086 ];
+		pFnServerAddPlacementPoint = (UFunction*) UObject::GObjObjects()->Data[ 86478 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execServerAddPlacementPoint_Parms ServerAddPlacementPoint_Parms;
 	memcpy ( &ServerAddPlacementPoint_Parms.tPlacementLocation, &tPlacementLocation, 0xC );
@@ -16998,7 +16917,7 @@ void ADunDefPlayerAbility_BuilTripWire::PostPlacementUpdate ( float DeltaTime )
 	static UFunction* pFnPostPlacementUpdate = NULL;
 
 	if ( ! pFnPostPlacementUpdate )
-		pFnPostPlacementUpdate = (UFunction*) UObject::GObjObjects()->Data[ 92082 ];
+		pFnPostPlacementUpdate = (UFunction*) UObject::GObjObjects()->Data[ 86474 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execPostPlacementUpdate_Parms PostPlacementUpdate_Parms;
 	PostPlacementUpdate_Parms.DeltaTime = DeltaTime;
@@ -17017,7 +16936,7 @@ void ADunDefPlayerAbility_BuilTripWire::ServerRequestBuildTower ( struct FVector
 	static UFunction* pFnServerRequestBuildTower = NULL;
 
 	if ( ! pFnServerRequestBuildTower )
-		pFnServerRequestBuildTower = (UFunction*) UObject::GObjObjects()->Data[ 92078 ];
+		pFnServerRequestBuildTower = (UFunction*) UObject::GObjObjects()->Data[ 86470 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execServerRequestBuildTower_Parms ServerRequestBuildTower_Parms;
 	memcpy ( &ServerRequestBuildTower_Parms.towerPlacementLocation, &towerPlacementLocation, 0xC );
@@ -17036,7 +16955,7 @@ void ADunDefPlayerAbility_BuilTripWire::eventAbilityTick ( float DeltaTime )
 	static UFunction* pFnAbilityTick = NULL;
 
 	if ( ! pFnAbilityTick )
-		pFnAbilityTick = (UFunction*) UObject::GObjObjects()->Data[ 92059 ];
+		pFnAbilityTick = (UFunction*) UObject::GObjObjects()->Data[ 86451 ];
 
 	ADunDefPlayerAbility_BuilTripWire_eventAbilityTick_Parms AbilityTick_Parms;
 	AbilityTick_Parms.DeltaTime = DeltaTime;
@@ -17053,7 +16972,7 @@ void ADunDefPlayerAbility_BuilTripWire::HidePreviewPoints ( )
 	static UFunction* pFnHidePreviewPoints = NULL;
 
 	if ( ! pFnHidePreviewPoints )
-		pFnHidePreviewPoints = (UFunction*) UObject::GObjObjects()->Data[ 92058 ];
+		pFnHidePreviewPoints = (UFunction*) UObject::GObjObjects()->Data[ 86450 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execHidePreviewPoints_Parms HidePreviewPoints_Parms;
 
@@ -17069,7 +16988,7 @@ void ADunDefPlayerAbility_BuilTripWire::StopAltSummonTowerFXCompleted ( )
 	static UFunction* pFnStopAltSummonTowerFXCompleted = NULL;
 
 	if ( ! pFnStopAltSummonTowerFXCompleted )
-		pFnStopAltSummonTowerFXCompleted = (UFunction*) UObject::GObjObjects()->Data[ 92057 ];
+		pFnStopAltSummonTowerFXCompleted = (UFunction*) UObject::GObjObjects()->Data[ 86449 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execStopAltSummonTowerFXCompleted_Parms StopAltSummonTowerFXCompleted_Parms;
 
@@ -17085,7 +17004,7 @@ void ADunDefPlayerAbility_BuilTripWire::StopAltSummonTowerFX ( )
 	static UFunction* pFnStopAltSummonTowerFX = NULL;
 
 	if ( ! pFnStopAltSummonTowerFX )
-		pFnStopAltSummonTowerFX = (UFunction*) UObject::GObjObjects()->Data[ 92056 ];
+		pFnStopAltSummonTowerFX = (UFunction*) UObject::GObjObjects()->Data[ 86448 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execStopAltSummonTowerFX_Parms StopAltSummonTowerFX_Parms;
 
@@ -17102,7 +17021,7 @@ void ADunDefPlayerAbility_BuilTripWire::UpdateAltSummonTowerFX ( float Percent )
 	static UFunction* pFnUpdateAltSummonTowerFX = NULL;
 
 	if ( ! pFnUpdateAltSummonTowerFX )
-		pFnUpdateAltSummonTowerFX = (UFunction*) UObject::GObjObjects()->Data[ 92054 ];
+		pFnUpdateAltSummonTowerFX = (UFunction*) UObject::GObjObjects()->Data[ 86446 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execUpdateAltSummonTowerFX_Parms UpdateAltSummonTowerFX_Parms;
 	UpdateAltSummonTowerFX_Parms.Percent = Percent;
@@ -17124,7 +17043,7 @@ void ADunDefPlayerAbility_BuilTripWire::BeginAltSummonTowerFX ( class ADunDefEmi
 	static UFunction* pFnBeginAltSummonTowerFX = NULL;
 
 	if ( ! pFnBeginAltSummonTowerFX )
-		pFnBeginAltSummonTowerFX = (UFunction*) UObject::GObjObjects()->Data[ 92048 ];
+		pFnBeginAltSummonTowerFX = (UFunction*) UObject::GObjObjects()->Data[ 86440 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execBeginAltSummonTowerFX_Parms BeginAltSummonTowerFX_Parms;
 	BeginAltSummonTowerFX_Parms.spellEffect = spellEffect;
@@ -17161,7 +17080,7 @@ void ADunDefPlayerAbility_BuilTripWire::ExecReplicatedFunction ( struct FName Fu
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 92023 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 86415 ];
 
 	ADunDefPlayerAbility_BuilTripWire_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -17195,7 +17114,7 @@ unsigned char ADunDefPlayerAbility_DefenseBoost::GetAbilityStatus ( int* ExtraSt
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 92166 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 86577 ];
 
 	ADunDefPlayerAbility_DefenseBoost_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -17205,6 +17124,126 @@ unsigned char ADunDefPlayerAbility_DefenseBoost::GetAbilityStatus ( int* ExtraSt
 		*ExtraStatusFlag = GetAbilityStatus_Parms.ExtraStatusFlag;
 
 	return GetAbilityStatus_Parms.ReturnValue;
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.RemoveTower
+// [0x00020102] 
+// Parameters infos:
+// int                            Index                          ( CPF_Parm )
+
+void ADunDefPlayerAbility_DefenseBoost::RemoveTower ( int Index )
+{
+	static UFunction* pFnRemoveTower = NULL;
+
+	if ( ! pFnRemoveTower )
+		pFnRemoveTower = (UFunction*) UObject::GObjObjects()->Data[ 86575 ];
+
+	ADunDefPlayerAbility_DefenseBoost_execRemoveTower_Parms RemoveTower_Parms;
+	RemoveTower_Parms.Index = Index;
+
+	this->ProcessEvent ( pFnRemoveTower, &RemoveTower_Parms, NULL );
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.AddTower
+// [0x00820102] 
+// Parameters infos:
+// class AActor*                  theAct                         ( CPF_Parm )
+
+void ADunDefPlayerAbility_DefenseBoost::AddTower ( class AActor* theAct )
+{
+	static UFunction* pFnAddTower = NULL;
+
+	if ( ! pFnAddTower )
+		pFnAddTower = (UFunction*) UObject::GObjObjects()->Data[ 86572 ];
+
+	ADunDefPlayerAbility_DefenseBoost_execAddTower_Parms AddTower_Parms;
+	AddTower_Parms.theAct = theAct;
+
+	this->ProcessEvent ( pFnAddTower, &AddTower_Parms, NULL );
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.Destroyed
+// [0x00020902] ( FUNC_Event )
+// Parameters infos:
+
+void ADunDefPlayerAbility_DefenseBoost::eventDestroyed ( )
+{
+	static UFunction* pFnDestroyed = NULL;
+
+	if ( ! pFnDestroyed )
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 86566 ];
+
+	ADunDefPlayerAbility_DefenseBoost_eventDestroyed_Parms Destroyed_Parms;
+
+	this->ProcessEvent ( pFnDestroyed, &Destroyed_Parms, NULL );
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.RemoveAllTowers
+// [0x00020102] 
+// Parameters infos:
+
+void ADunDefPlayerAbility_DefenseBoost::RemoveAllTowers ( )
+{
+	static UFunction* pFnRemoveAllTowers = NULL;
+
+	if ( ! pFnRemoveAllTowers )
+		pFnRemoveAllTowers = (UFunction*) UObject::GObjObjects()->Data[ 86564 ];
+
+	ADunDefPlayerAbility_DefenseBoost_execRemoveAllTowers_Parms RemoveAllTowers_Parms;
+
+	this->ProcessEvent ( pFnRemoveAllTowers, &RemoveAllTowers_Parms, NULL );
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.CheckAllTowers
+// [0x00020102] 
+// Parameters infos:
+
+void ADunDefPlayerAbility_DefenseBoost::CheckAllTowers ( )
+{
+	static UFunction* pFnCheckAllTowers = NULL;
+
+	if ( ! pFnCheckAllTowers )
+		pFnCheckAllTowers = (UFunction*) UObject::GObjObjects()->Data[ 86562 ];
+
+	ADunDefPlayerAbility_DefenseBoost_execCheckAllTowers_Parms CheckAllTowers_Parms;
+
+	this->ProcessEvent ( pFnCheckAllTowers, &CheckAllTowers_Parms, NULL );
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.RemoveAllTowersFor
+// [0x00020102] 
+// Parameters infos:
+// class ADunDefPlayer*           aPlayer                        ( CPF_Parm )
+
+void ADunDefPlayerAbility_DefenseBoost::RemoveAllTowersFor ( class ADunDefPlayer* aPlayer )
+{
+	static UFunction* pFnRemoveAllTowersFor = NULL;
+
+	if ( ! pFnRemoveAllTowersFor )
+		pFnRemoveAllTowersFor = (UFunction*) UObject::GObjObjects()->Data[ 86559 ];
+
+	ADunDefPlayerAbility_DefenseBoost_execRemoveAllTowersFor_Parms RemoveAllTowersFor_Parms;
+	RemoveAllTowersFor_Parms.aPlayer = aPlayer;
+
+	this->ProcessEvent ( pFnRemoveAllTowersFor, &RemoveAllTowersFor_Parms, NULL );
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.AddAllTowersFor
+// [0x00020102] 
+// Parameters infos:
+// class ADunDefPlayer*           aPlayer                        ( CPF_Parm )
+
+void ADunDefPlayerAbility_DefenseBoost::AddAllTowersFor ( class ADunDefPlayer* aPlayer )
+{
+	static UFunction* pFnAddAllTowersFor = NULL;
+
+	if ( ! pFnAddAllTowersFor )
+		pFnAddAllTowersFor = (UFunction*) UObject::GObjObjects()->Data[ 86556 ];
+
+	ADunDefPlayerAbility_DefenseBoost_execAddAllTowersFor_Parms AddAllTowersFor_Parms;
+	AddAllTowersFor_Parms.aPlayer = aPlayer;
+
+	this->ProcessEvent ( pFnAddAllTowersFor, &AddAllTowersFor_Parms, NULL );
 };
 
 // Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.AddEffect
@@ -17217,7 +17256,7 @@ void ADunDefPlayerAbility_DefenseBoost::AddEffect ( class AActor* theAct )
 	static UFunction* pFnAddEffect = NULL;
 
 	if ( ! pFnAddEffect )
-		pFnAddEffect = (UFunction*) UObject::GObjObjects()->Data[ 92164 ];
+		pFnAddEffect = (UFunction*) UObject::GObjObjects()->Data[ 86554 ];
 
 	ADunDefPlayerAbility_DefenseBoost_execAddEffect_Parms AddEffect_Parms;
 	AddEffect_Parms.theAct = theAct;
@@ -17235,7 +17274,7 @@ void ADunDefPlayerAbility_DefenseBoost::RemoveEffect ( int Index )
 	static UFunction* pFnRemoveEffect = NULL;
 
 	if ( ! pFnRemoveEffect )
-		pFnRemoveEffect = (UFunction*) UObject::GObjObjects()->Data[ 92162 ];
+		pFnRemoveEffect = (UFunction*) UObject::GObjObjects()->Data[ 86552 ];
 
 	ADunDefPlayerAbility_DefenseBoost_execRemoveEffect_Parms RemoveEffect_Parms;
 	RemoveEffect_Parms.Index = Index;
@@ -17254,7 +17293,7 @@ float ADunDefPlayerAbility_DefenseBoost::GetTowerBoostAmount ( unsigned char boo
 	static UFunction* pFnGetTowerBoostAmount = NULL;
 
 	if ( ! pFnGetTowerBoostAmount )
-		pFnGetTowerBoostAmount = (UFunction*) UObject::GObjObjects()->Data[ 92158 ];
+		pFnGetTowerBoostAmount = (UFunction*) UObject::GObjObjects()->Data[ 86548 ];
 
 	ADunDefPlayerAbility_DefenseBoost_execGetTowerBoostAmount_Parms GetTowerBoostAmount_Parms;
 	GetTowerBoostAmount_Parms.boostType = boostType;
@@ -17275,7 +17314,7 @@ bool ADunDefPlayerAbility_DefenseBoost::HasTowerBoostingType ( unsigned char boo
 	static UFunction* pFnHasTowerBoostingType = NULL;
 
 	if ( ! pFnHasTowerBoostingType )
-		pFnHasTowerBoostingType = (UFunction*) UObject::GObjObjects()->Data[ 92155 ];
+		pFnHasTowerBoostingType = (UFunction*) UObject::GObjObjects()->Data[ 86545 ];
 
 	ADunDefPlayerAbility_DefenseBoost_execHasTowerBoostingType_Parms HasTowerBoostingType_Parms;
 	HasTowerBoostingType_Parms.boostType = boostType;
@@ -17295,7 +17334,7 @@ class UDunDefTargetableInterface* ADunDefPlayerAbility_DefenseBoost::GetTowerBoo
 	static UFunction* pFnGetTowerBoostingTarget = NULL;
 
 	if ( ! pFnGetTowerBoostingTarget )
-		pFnGetTowerBoostingTarget = (UFunction*) UObject::GObjObjects()->Data[ 92153 ];
+		pFnGetTowerBoostingTarget = (UFunction*) UObject::GObjObjects()->Data[ 86543 ];
 
 	ADunDefPlayerAbility_DefenseBoost_execGetTowerBoostingTarget_Parms GetTowerBoostingTarget_Parms;
 
@@ -17315,7 +17354,7 @@ unsigned char ADunDefPlayerAbility_EnemyDrain::GetAbilityStatus ( int* ExtraStat
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 92194 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 86605 ];
 
 	ADunDefPlayerAbility_EnemyDrain_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -17337,7 +17376,7 @@ float ADunDefPlayerAbility_EnemyDrain::GetPawnResistanceMultiplier ( )
 	static UFunction* pFnGetPawnResistanceMultiplier = NULL;
 
 	if ( ! pFnGetPawnResistanceMultiplier )
-		pFnGetPawnResistanceMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 92192 ];
+		pFnGetPawnResistanceMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 86603 ];
 
 	ADunDefPlayerAbility_EnemyDrain_execGetPawnResistanceMultiplier_Parms GetPawnResistanceMultiplier_Parms;
 
@@ -17356,7 +17395,7 @@ float ADunDefPlayerAbility_EnemyDrain::GetSpeedMultiplier ( )
 	static UFunction* pFnGetSpeedMultiplier = NULL;
 
 	if ( ! pFnGetSpeedMultiplier )
-		pFnGetSpeedMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 92189 ];
+		pFnGetSpeedMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 86600 ];
 
 	ADunDefPlayerAbility_EnemyDrain_execGetSpeedMultiplier_Parms GetSpeedMultiplier_Parms;
 
@@ -17375,7 +17414,7 @@ float ADunDefPlayerAbility_EnemyDrain::GetDamageMultiplier ( )
 	static UFunction* pFnGetDamageMultiplier = NULL;
 
 	if ( ! pFnGetDamageMultiplier )
-		pFnGetDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 92186 ];
+		pFnGetDamageMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 86597 ];
 
 	ADunDefPlayerAbility_EnemyDrain_execGetDamageMultiplier_Parms GetDamageMultiplier_Parms;
 
@@ -17395,7 +17434,7 @@ bool ADunDefPlayerAbility_EnemyDrain::CanAffect ( class AActor* theAct )
 	static UFunction* pFnCanAffect = NULL;
 
 	if ( ! pFnCanAffect )
-		pFnCanAffect = (UFunction*) UObject::GObjObjects()->Data[ 92183 ];
+		pFnCanAffect = (UFunction*) UObject::GObjObjects()->Data[ 86594 ];
 
 	ADunDefPlayerAbility_EnemyDrain_execCanAffect_Parms CanAffect_Parms;
 	CanAffect_Parms.theAct = theAct;
@@ -17415,7 +17454,7 @@ void ADunDefPlayerAbility_EnemyDrain::AddEffect ( class AActor* theAct )
 	static UFunction* pFnAddEffect = NULL;
 
 	if ( ! pFnAddEffect )
-		pFnAddEffect = (UFunction*) UObject::GObjObjects()->Data[ 92181 ];
+		pFnAddEffect = (UFunction*) UObject::GObjObjects()->Data[ 86592 ];
 
 	ADunDefPlayerAbility_EnemyDrain_execAddEffect_Parms AddEffect_Parms;
 	AddEffect_Parms.theAct = theAct;
@@ -17433,7 +17472,7 @@ void ADunDefPlayerAbility_EnemyDrain::RemoveEffect ( int Index )
 	static UFunction* pFnRemoveEffect = NULL;
 
 	if ( ! pFnRemoveEffect )
-		pFnRemoveEffect = (UFunction*) UObject::GObjObjects()->Data[ 92179 ];
+		pFnRemoveEffect = (UFunction*) UObject::GObjObjects()->Data[ 86590 ];
 
 	ADunDefPlayerAbility_EnemyDrain_execRemoveEffect_Parms RemoveEffect_Parms;
 	RemoveEffect_Parms.Index = Index;
@@ -17450,7 +17489,7 @@ void ADunDefPlayerAbility_GenericMultiActorSpawner::DoMultiActorSpawn ( )
 	static UFunction* pFnDoMultiActorSpawn = NULL;
 
 	if ( ! pFnDoMultiActorSpawn )
-		pFnDoMultiActorSpawn = (UFunction*) UObject::GObjObjects()->Data[ 92208 ];
+		pFnDoMultiActorSpawn = (UFunction*) UObject::GObjObjects()->Data[ 86619 ];
 
 	ADunDefPlayerAbility_GenericMultiActorSpawner_execDoMultiActorSpawn_Parms DoMultiActorSpawn_Parms;
 
@@ -17466,7 +17505,7 @@ void ADunDefPlayerAbility_GenericMultiActorSpawner::SetUpActorSpawn ( )
 	static UFunction* pFnSetUpActorSpawn = NULL;
 
 	if ( ! pFnSetUpActorSpawn )
-		pFnSetUpActorSpawn = (UFunction*) UObject::GObjObjects()->Data[ 92207 ];
+		pFnSetUpActorSpawn = (UFunction*) UObject::GObjObjects()->Data[ 86618 ];
 
 	ADunDefPlayerAbility_GenericMultiActorSpawner_execSetUpActorSpawn_Parms SetUpActorSpawn_Parms;
 
@@ -17484,7 +17523,7 @@ unsigned char ADunDefPlayerAbility_InstantUpgradeTower::GetAbilityStatus ( int* 
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 92270 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 86681 ];
 
 	ADunDefPlayerAbility_InstantUpgradeTower_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -17506,7 +17545,7 @@ void ADunDefPlayerAbility_InstantUpgradeTower::SortTracedActors ( TArray< struct
 	static UFunction* pFnSortTracedActors = NULL;
 
 	if ( ! pFnSortTracedActors )
-		pFnSortTracedActors = (UFunction*) UObject::GObjObjects()->Data[ 92253 ];
+		pFnSortTracedActors = (UFunction*) UObject::GObjObjects()->Data[ 86664 ];
 
 	ADunDefPlayerAbility_InstantUpgradeTower_execSortTracedActors_Parms SortTracedActors_Parms;
 
@@ -17528,7 +17567,7 @@ void ADunDefPlayerAbility_InstantUpgradeTower::DrawUpgradeOverlay ( class ADunDe
 	static UFunction* pFnDrawUpgradeOverlay = NULL;
 
 	if ( ! pFnDrawUpgradeOverlay )
-		pFnDrawUpgradeOverlay = (UFunction*) UObject::GObjObjects()->Data[ 92247 ];
+		pFnDrawUpgradeOverlay = (UFunction*) UObject::GObjObjects()->Data[ 86658 ];
 
 	ADunDefPlayerAbility_InstantUpgradeTower_execDrawUpgradeOverlay_Parms DrawUpgradeOverlay_Parms;
 	DrawUpgradeOverlay_Parms.H = H;
@@ -17549,7 +17588,7 @@ void ADunDefPlayerAbility_InstantUpgradeTower::PreCursorDrawHUD ( class ADunDefH
 	static UFunction* pFnPreCursorDrawHUD = NULL;
 
 	if ( ! pFnPreCursorDrawHUD )
-		pFnPreCursorDrawHUD = (UFunction*) UObject::GObjObjects()->Data[ 92244 ];
+		pFnPreCursorDrawHUD = (UFunction*) UObject::GObjObjects()->Data[ 86655 ];
 
 	ADunDefPlayerAbility_InstantUpgradeTower_execPreCursorDrawHUD_Parms PreCursorDrawHUD_Parms;
 	PreCursorDrawHUD_Parms.H = H;
@@ -17568,7 +17607,7 @@ int ADunDefPlayerAbility_InstantUpgradeTower::GetTowerCost ( )
 	static UFunction* pFnGetTowerCost = NULL;
 
 	if ( ! pFnGetTowerCost )
-		pFnGetTowerCost = (UFunction*) UObject::GObjObjects()->Data[ 92239 ];
+		pFnGetTowerCost = (UFunction*) UObject::GObjObjects()->Data[ 86650 ];
 
 	ADunDefPlayerAbility_InstantUpgradeTower_execGetTowerCost_Parms GetTowerCost_Parms;
 
@@ -17590,7 +17629,7 @@ bool ADunDefPlayerAbility_InstantUpgradeTower::IsValidUpgradeTower ( class ADunD
 	static UFunction* pFnIsValidUpgradeTower = NULL;
 
 	if ( ! pFnIsValidUpgradeTower )
-		pFnIsValidUpgradeTower = (UFunction*) UObject::GObjObjects()->Data[ 92227 ];
+		pFnIsValidUpgradeTower = (UFunction*) UObject::GObjObjects()->Data[ 86638 ];
 
 	ADunDefPlayerAbility_InstantUpgradeTower_execIsValidUpgradeTower_Parms IsValidUpgradeTower_Parms;
 	IsValidUpgradeTower_Parms.tower = tower;
@@ -17614,7 +17653,7 @@ int ADunDefPlayerAbility_InstantUpgradeTower::GetDisplayCost ( )
 	static UFunction* pFnGetDisplayCost = NULL;
 
 	if ( ! pFnGetDisplayCost )
-		pFnGetDisplayCost = (UFunction*) UObject::GObjObjects()->Data[ 92225 ];
+		pFnGetDisplayCost = (UFunction*) UObject::GObjObjects()->Data[ 86636 ];
 
 	ADunDefPlayerAbility_InstantUpgradeTower_execGetDisplayCost_Parms GetDisplayCost_Parms;
 
@@ -17634,7 +17673,7 @@ int ADunDefPlayerAbility_InstantUpgradeTower::GetCostToActivate ( unsigned long 
 	static UFunction* pFnGetCostToActivate = NULL;
 
 	if ( ! pFnGetCostToActivate )
-		pFnGetCostToActivate = (UFunction*) UObject::GObjObjects()->Data[ 92222 ];
+		pFnGetCostToActivate = (UFunction*) UObject::GObjObjects()->Data[ 86633 ];
 
 	ADunDefPlayerAbility_InstantUpgradeTower_execGetCostToActivate_Parms GetCostToActivate_Parms;
 	GetCostToActivate_Parms.returnTrueValue = returnTrueValue;
@@ -17654,7 +17693,7 @@ void ADunDefPlayerAbility_InvisibilityAOE::RemovedTower ( class ADunDefTower* af
 	static UFunction* pFnRemovedTower = NULL;
 
 	if ( ! pFnRemovedTower )
-		pFnRemovedTower = (UFunction*) UObject::GObjObjects()->Data[ 92295 ];
+		pFnRemovedTower = (UFunction*) UObject::GObjObjects()->Data[ 86706 ];
 
 	ADunDefPlayerAbility_InvisibilityAOE_execRemovedTower_Parms RemovedTower_Parms;
 	RemovedTower_Parms.affectedTower = affectedTower;
@@ -17672,7 +17711,7 @@ void ADunDefPlayerAbility_InvisibilityAOE::AddedTower ( class ADunDefTower* affe
 	static UFunction* pFnAddedTower = NULL;
 
 	if ( ! pFnAddedTower )
-		pFnAddedTower = (UFunction*) UObject::GObjObjects()->Data[ 92293 ];
+		pFnAddedTower = (UFunction*) UObject::GObjObjects()->Data[ 86704 ];
 
 	ADunDefPlayerAbility_InvisibilityAOE_execAddedTower_Parms AddedTower_Parms;
 	AddedTower_Parms.affectedTower = affectedTower;
@@ -17690,7 +17729,7 @@ void ADunDefPlayerAbility_InvisibilityAOE::RemovedPawn ( class ADunDefPawn* affe
 	static UFunction* pFnRemovedPawn = NULL;
 
 	if ( ! pFnRemovedPawn )
-		pFnRemovedPawn = (UFunction*) UObject::GObjObjects()->Data[ 92291 ];
+		pFnRemovedPawn = (UFunction*) UObject::GObjObjects()->Data[ 86702 ];
 
 	ADunDefPlayerAbility_InvisibilityAOE_execRemovedPawn_Parms RemovedPawn_Parms;
 	RemovedPawn_Parms.affectedPawn = affectedPawn;
@@ -17708,7 +17747,7 @@ void ADunDefPlayerAbility_InvisibilityAOE::AddedPawn ( class ADunDefPawn* affect
 	static UFunction* pFnAddedPawn = NULL;
 
 	if ( ! pFnAddedPawn )
-		pFnAddedPawn = (UFunction*) UObject::GObjObjects()->Data[ 92289 ];
+		pFnAddedPawn = (UFunction*) UObject::GObjObjects()->Data[ 86700 ];
 
 	ADunDefPlayerAbility_InvisibilityAOE_execAddedPawn_Parms AddedPawn_Parms;
 	AddedPawn_Parms.affectedPawn = affectedPawn;
@@ -17727,7 +17766,7 @@ unsigned char ADunDefPlayerAbility_InvisibilityAOE::GetAbilityStatus ( int* Extr
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 92286 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 86697 ];
 
 	ADunDefPlayerAbility_InvisibilityAOE_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -17749,7 +17788,7 @@ void ADunDefPlayerAbility_InvisibilityAOE::AddEffect ( class AActor* theAct )
 	static UFunction* pFnAddEffect = NULL;
 
 	if ( ! pFnAddEffect )
-		pFnAddEffect = (UFunction*) UObject::GObjObjects()->Data[ 92283 ];
+		pFnAddEffect = (UFunction*) UObject::GObjObjects()->Data[ 86694 ];
 
 	ADunDefPlayerAbility_InvisibilityAOE_execAddEffect_Parms AddEffect_Parms;
 	AddEffect_Parms.theAct = theAct;
@@ -17767,7 +17806,7 @@ void ADunDefPlayerAbility_InvisibilityAOE::RemoveEffect ( int Index )
 	static UFunction* pFnRemoveEffect = NULL;
 
 	if ( ! pFnRemoveEffect )
-		pFnRemoveEffect = (UFunction*) UObject::GObjObjects()->Data[ 92280 ];
+		pFnRemoveEffect = (UFunction*) UObject::GObjObjects()->Data[ 86691 ];
 
 	ADunDefPlayerAbility_InvisibilityAOE_execRemoveEffect_Parms RemoveEffect_Parms;
 	RemoveEffect_Parms.Index = Index;
@@ -17786,7 +17825,7 @@ int ADunDefPlayerAbility_MoveTower::GetCostToActivate ( unsigned long returnTrue
 	static UFunction* pFnGetCostToActivate = NULL;
 
 	if ( ! pFnGetCostToActivate )
-		pFnGetCostToActivate = (UFunction*) UObject::GObjObjects()->Data[ 92785 ];
+		pFnGetCostToActivate = (UFunction*) UObject::GObjObjects()->Data[ 87196 ];
 
 	ADunDefPlayerAbility_MoveTower_execGetCostToActivate_Parms GetCostToActivate_Parms;
 	GetCostToActivate_Parms.returnTrueValue = returnTrueValue;
@@ -17807,7 +17846,7 @@ unsigned char ADunDefPlayerAbility_MoveTower::GetAbilityStatus ( int* ExtraStatu
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 92782 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 87193 ];
 
 	ADunDefPlayerAbility_MoveTower_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -17828,7 +17867,7 @@ void ADunDefPlayerAbility_MoveTower::ClientReset ( )
 	static UFunction* pFnClientReset = NULL;
 
 	if ( ! pFnClientReset )
-		pFnClientReset = (UFunction*) UObject::GObjObjects()->Data[ 92762 ];
+		pFnClientReset = (UFunction*) UObject::GObjObjects()->Data[ 87173 ];
 
 	ADunDefPlayerAbility_MoveTower_execClientReset_Parms ClientReset_Parms;
 
@@ -17846,7 +17885,7 @@ void ADunDefPlayerAbility_MoveTower::ServerMoveTower ( struct FVector towerPlace
 	static UFunction* pFnServerMoveTower = NULL;
 
 	if ( ! pFnServerMoveTower )
-		pFnServerMoveTower = (UFunction*) UObject::GObjObjects()->Data[ 92757 ];
+		pFnServerMoveTower = (UFunction*) UObject::GObjObjects()->Data[ 87168 ];
 
 	ADunDefPlayerAbility_MoveTower_execServerMoveTower_Parms ServerMoveTower_Parms;
 	memcpy ( &ServerMoveTower_Parms.towerPlacementLocation, &towerPlacementLocation, 0xC );
@@ -17865,7 +17904,7 @@ void ADunDefPlayerAbility_MoveTower::SetUpTowerMesh ( class ADunDefTower* theTow
 	static UFunction* pFnSetUpTowerMesh = NULL;
 
 	if ( ! pFnSetUpTowerMesh )
-		pFnSetUpTowerMesh = (UFunction*) UObject::GObjObjects()->Data[ 92727 ];
+		pFnSetUpTowerMesh = (UFunction*) UObject::GObjObjects()->Data[ 87138 ];
 
 	ADunDefPlayerAbility_MoveTower_execSetUpTowerMesh_Parms SetUpTowerMesh_Parms;
 	SetUpTowerMesh_Parms.theTower = theTower;
@@ -17883,7 +17922,7 @@ void ADunDefPlayerAbility_MoveTower::ServerRequestGrabTower ( class ADunDefTower
 	static UFunction* pFnServerRequestGrabTower = NULL;
 
 	if ( ! pFnServerRequestGrabTower )
-		pFnServerRequestGrabTower = (UFunction*) UObject::GObjObjects()->Data[ 92725 ];
+		pFnServerRequestGrabTower = (UFunction*) UObject::GObjObjects()->Data[ 87136 ];
 
 	ADunDefPlayerAbility_MoveTower_execServerRequestGrabTower_Parms ServerRequestGrabTower_Parms;
 	ServerRequestGrabTower_Parms.tower = tower;
@@ -17901,7 +17940,7 @@ void ADunDefPlayerAbility_MoveTower::StartMovingState ( class ADunDefTower* towe
 	static UFunction* pFnStartMovingState = NULL;
 
 	if ( ! pFnStartMovingState )
-		pFnStartMovingState = (UFunction*) UObject::GObjObjects()->Data[ 92723 ];
+		pFnStartMovingState = (UFunction*) UObject::GObjObjects()->Data[ 87134 ];
 
 	ADunDefPlayerAbility_MoveTower_execStartMovingState_Parms StartMovingState_Parms;
 	StartMovingState_Parms.tower = tower;
@@ -17919,7 +17958,7 @@ void ADunDefPlayerAbility_MoveTower::ClientStartMovingState ( class ADunDefTower
 	static UFunction* pFnClientStartMovingState = NULL;
 
 	if ( ! pFnClientStartMovingState )
-		pFnClientStartMovingState = (UFunction*) UObject::GObjObjects()->Data[ 92721 ];
+		pFnClientStartMovingState = (UFunction*) UObject::GObjObjects()->Data[ 87132 ];
 
 	ADunDefPlayerAbility_MoveTower_execClientStartMovingState_Parms ClientStartMovingState_Parms;
 	ClientStartMovingState_Parms.tower = tower;
@@ -17939,7 +17978,7 @@ void ADunDefPlayerAbility_MoveTower::ServerReceivePlacementState ( unsigned long
 	static UFunction* pFnServerReceivePlacementState = NULL;
 
 	if ( ! pFnServerReceivePlacementState )
-		pFnServerReceivePlacementState = (UFunction*) UObject::GObjObjects()->Data[ 92717 ];
+		pFnServerReceivePlacementState = (UFunction*) UObject::GObjObjects()->Data[ 87128 ];
 
 	ADunDefPlayerAbility_MoveTower_execServerReceivePlacementState_Parms ServerReceivePlacementState_Parms;
 	ServerReceivePlacementState_Parms.bIsValidPlacement = bIsValidPlacement;
@@ -17959,7 +17998,7 @@ void ADunDefPlayerAbility_MoveTower::PostPlacementUpdate ( float DeltaTime )
 	static UFunction* pFnPostPlacementUpdate = NULL;
 
 	if ( ! pFnPostPlacementUpdate )
-		pFnPostPlacementUpdate = (UFunction*) UObject::GObjObjects()->Data[ 92715 ];
+		pFnPostPlacementUpdate = (UFunction*) UObject::GObjObjects()->Data[ 87126 ];
 
 	ADunDefPlayerAbility_MoveTower_execPostPlacementUpdate_Parms PostPlacementUpdate_Parms;
 	PostPlacementUpdate_Parms.DeltaTime = DeltaTime;
@@ -17977,7 +18016,7 @@ void ADunDefPlayerAbility_MoveTower::UpdateDecalPlacement ( float DeltaTime )
 	static UFunction* pFnUpdateDecalPlacement = NULL;
 
 	if ( ! pFnUpdateDecalPlacement )
-		pFnUpdateDecalPlacement = (UFunction*) UObject::GObjObjects()->Data[ 92712 ];
+		pFnUpdateDecalPlacement = (UFunction*) UObject::GObjObjects()->Data[ 87123 ];
 
 	ADunDefPlayerAbility_MoveTower_execUpdateDecalPlacement_Parms UpdateDecalPlacement_Parms;
 	UpdateDecalPlacement_Parms.DeltaTime = DeltaTime;
@@ -17998,7 +18037,7 @@ bool ADunDefPlayerAbility_MoveTower::AllowTowerPlacementPosition ( struct FVecto
 	static UFunction* pFnAllowTowerPlacementPosition = NULL;
 
 	if ( ! pFnAllowTowerPlacementPosition )
-		pFnAllowTowerPlacementPosition = (UFunction*) UObject::GObjObjects()->Data[ 92698 ];
+		pFnAllowTowerPlacementPosition = (UFunction*) UObject::GObjObjects()->Data[ 87109 ];
 
 	ADunDefPlayerAbility_MoveTower_execAllowTowerPlacementPosition_Parms AllowTowerPlacementPosition_Parms;
 	memcpy ( &AllowTowerPlacementPosition_Parms.placementPos, &placementPos, 0xC );
@@ -18022,7 +18061,7 @@ float ADunDefPlayerAbility_MoveTower::GetOtherMoveAbilityTowerRadius ( )
 	static UFunction* pFnGetOtherMoveAbilityTowerRadius = NULL;
 
 	if ( ! pFnGetOtherMoveAbilityTowerRadius )
-		pFnGetOtherMoveAbilityTowerRadius = (UFunction*) UObject::GObjObjects()->Data[ 92695 ];
+		pFnGetOtherMoveAbilityTowerRadius = (UFunction*) UObject::GObjObjects()->Data[ 87106 ];
 
 	ADunDefPlayerAbility_MoveTower_execGetOtherMoveAbilityTowerRadius_Parms GetOtherMoveAbilityTowerRadius_Parms;
 
@@ -18041,7 +18080,7 @@ bool ADunDefPlayerAbility_MoveTower::IsInPlacingTowerState ( )
 	static UFunction* pFnIsInPlacingTowerState = NULL;
 
 	if ( ! pFnIsInPlacingTowerState )
-		pFnIsInPlacingTowerState = (UFunction*) UObject::GObjObjects()->Data[ 92693 ];
+		pFnIsInPlacingTowerState = (UFunction*) UObject::GObjObjects()->Data[ 87104 ];
 
 	ADunDefPlayerAbility_MoveTower_execIsInPlacingTowerState_Parms IsInPlacingTowerState_Parms;
 
@@ -18060,7 +18099,7 @@ bool ADunDefPlayerAbility_MoveTower::IsTowerPhysical ( )
 	static UFunction* pFnIsTowerPhysical = NULL;
 
 	if ( ! pFnIsTowerPhysical )
-		pFnIsTowerPhysical = (UFunction*) UObject::GObjObjects()->Data[ 92691 ];
+		pFnIsTowerPhysical = (UFunction*) UObject::GObjObjects()->Data[ 87102 ];
 
 	ADunDefPlayerAbility_MoveTower_execIsTowerPhysical_Parms IsTowerPhysical_Parms;
 
@@ -18078,7 +18117,7 @@ void ADunDefPlayerAbility_MoveTower::OnActivate ( )
 	static UFunction* pFnOnActivate = NULL;
 
 	if ( ! pFnOnActivate )
-		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 92671 ];
+		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 87082 ];
 
 	ADunDefPlayerAbility_MoveTower_execOnActivate_Parms OnActivate_Parms;
 
@@ -18095,7 +18134,7 @@ void ADunDefPlayerAbility_MoveTower::UpdateClientInterpolations ( float DeltaTim
 	static UFunction* pFnUpdateClientInterpolations = NULL;
 
 	if ( ! pFnUpdateClientInterpolations )
-		pFnUpdateClientInterpolations = (UFunction*) UObject::GObjObjects()->Data[ 92669 ];
+		pFnUpdateClientInterpolations = (UFunction*) UObject::GObjObjects()->Data[ 87080 ];
 
 	ADunDefPlayerAbility_MoveTower_execUpdateClientInterpolations_Parms UpdateClientInterpolations_Parms;
 	UpdateClientInterpolations_Parms.DeltaTime = DeltaTime;
@@ -18112,7 +18151,7 @@ void ADunDefPlayerAbility_MoveTower::ServerGotoRotationState ( )
 	static UFunction* pFnServerGotoRotationState = NULL;
 
 	if ( ! pFnServerGotoRotationState )
-		pFnServerGotoRotationState = (UFunction*) UObject::GObjObjects()->Data[ 92668 ];
+		pFnServerGotoRotationState = (UFunction*) UObject::GObjObjects()->Data[ 87079 ];
 
 	ADunDefPlayerAbility_MoveTower_execServerGotoRotationState_Parms ServerGotoRotationState_Parms;
 
@@ -18129,7 +18168,7 @@ class ADunDefEmitterSpawnable* ADunDefPlayerAbility_MoveTower::GetPlacementWeapo
 	static UFunction* pFnGetPlacementWeaponEffect = NULL;
 
 	if ( ! pFnGetPlacementWeaponEffect )
-		pFnGetPlacementWeaponEffect = (UFunction*) UObject::GObjObjects()->Data[ 92666 ];
+		pFnGetPlacementWeaponEffect = (UFunction*) UObject::GObjObjects()->Data[ 87077 ];
 
 	ADunDefPlayerAbility_MoveTower_execGetPlacementWeaponEffect_Parms GetPlacementWeaponEffect_Parms;
 
@@ -18147,7 +18186,7 @@ void ADunDefPlayerAbility_MoveTower::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 92665 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 87076 ];
 
 	ADunDefPlayerAbility_MoveTower_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -18179,7 +18218,7 @@ void ADunDefPlayerAbility_MoveTower::ExecReplicatedFunction ( struct FName Funct
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 92648 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 87059 ];
 
 	ADunDefPlayerAbility_MoveTower_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -18212,7 +18251,7 @@ void ADunDefPlayerAbility_MoveTower::eventReplicatedEvent ( struct FName VarName
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 92646 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 87057 ];
 
 	ADunDefPlayerAbility_MoveTower_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -18231,7 +18270,7 @@ unsigned char ADunDefPlayerAbility_SummonCommand::GetAbilityStatus ( int* ExtraS
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 92994 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 87405 ];
 
 	ADunDefPlayerAbility_SummonCommand_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -18253,7 +18292,7 @@ bool ADunDefPlayerAbility_SummonCommand::RequestActivation ( )
 	static UFunction* pFnRequestActivation = NULL;
 
 	if ( ! pFnRequestActivation )
-		pFnRequestActivation = (UFunction*) UObject::GObjObjects()->Data[ 92991 ];
+		pFnRequestActivation = (UFunction*) UObject::GObjObjects()->Data[ 87402 ];
 
 	ADunDefPlayerAbility_SummonCommand_execRequestActivation_Parms RequestActivation_Parms;
 
@@ -18271,7 +18310,7 @@ void ADunDefPlayerAbility_SummonCommand::StopTowerPlacingAnimation ( )
 	static UFunction* pFnStopTowerPlacingAnimation = NULL;
 
 	if ( ! pFnStopTowerPlacingAnimation )
-		pFnStopTowerPlacingAnimation = (UFunction*) UObject::GObjObjects()->Data[ 92990 ];
+		pFnStopTowerPlacingAnimation = (UFunction*) UObject::GObjObjects()->Data[ 87401 ];
 
 	ADunDefPlayerAbility_SummonCommand_execStopTowerPlacingAnimation_Parms StopTowerPlacingAnimation_Parms;
 
@@ -18287,7 +18326,7 @@ void ADunDefPlayerAbility_SummonCommand::StartTowerPlacingAnimation ( )
 	static UFunction* pFnStartTowerPlacingAnimation = NULL;
 
 	if ( ! pFnStartTowerPlacingAnimation )
-		pFnStartTowerPlacingAnimation = (UFunction*) UObject::GObjObjects()->Data[ 92989 ];
+		pFnStartTowerPlacingAnimation = (UFunction*) UObject::GObjObjects()->Data[ 87400 ];
 
 	ADunDefPlayerAbility_SummonCommand_execStartTowerPlacingAnimation_Parms StartTowerPlacingAnimation_Parms;
 
@@ -18304,7 +18343,7 @@ bool ADunDefPlayerAbility_SummonCommand::AllowCastingCancelOnDamage ( )
 	static UFunction* pFnAllowCastingCancelOnDamage = NULL;
 
 	if ( ! pFnAllowCastingCancelOnDamage )
-		pFnAllowCastingCancelOnDamage = (UFunction*) UObject::GObjObjects()->Data[ 92987 ];
+		pFnAllowCastingCancelOnDamage = (UFunction*) UObject::GObjObjects()->Data[ 87398 ];
 
 	ADunDefPlayerAbility_SummonCommand_execAllowCastingCancelOnDamage_Parms AllowCastingCancelOnDamage_Parms;
 
@@ -18323,7 +18362,7 @@ void ADunDefPlayerAbility_SummonCommand::PostPlacementUpdate ( float DeltaTime )
 	static UFunction* pFnPostPlacementUpdate = NULL;
 
 	if ( ! pFnPostPlacementUpdate )
-		pFnPostPlacementUpdate = (UFunction*) UObject::GObjObjects()->Data[ 92985 ];
+		pFnPostPlacementUpdate = (UFunction*) UObject::GObjObjects()->Data[ 87396 ];
 
 	ADunDefPlayerAbility_SummonCommand_execPostPlacementUpdate_Parms PostPlacementUpdate_Parms;
 	PostPlacementUpdate_Parms.DeltaTime = DeltaTime;
@@ -18341,7 +18380,7 @@ void ADunDefPlayerAbility_SummonCommand::UpdateDecalPlacement ( float DeltaTime 
 	static UFunction* pFnUpdateDecalPlacement = NULL;
 
 	if ( ! pFnUpdateDecalPlacement )
-		pFnUpdateDecalPlacement = (UFunction*) UObject::GObjObjects()->Data[ 92983 ];
+		pFnUpdateDecalPlacement = (UFunction*) UObject::GObjObjects()->Data[ 87394 ];
 
 	ADunDefPlayerAbility_SummonCommand_execUpdateDecalPlacement_Parms UpdateDecalPlacement_Parms;
 	UpdateDecalPlacement_Parms.DeltaTime = DeltaTime;
@@ -18360,7 +18399,7 @@ void ADunDefPlayerAbility_SummonCommand::ServerRequestSetCommand ( struct FVecto
 	static UFunction* pFnServerRequestSetCommand = NULL;
 
 	if ( ! pFnServerRequestSetCommand )
-		pFnServerRequestSetCommand = (UFunction*) UObject::GObjObjects()->Data[ 92968 ];
+		pFnServerRequestSetCommand = (UFunction*) UObject::GObjObjects()->Data[ 87379 ];
 
 	ADunDefPlayerAbility_SummonCommand_execServerRequestSetCommand_Parms ServerRequestSetCommand_Parms;
 	memcpy ( &ServerRequestSetCommand_Parms.pLoc, &pLoc, 0xC );
@@ -18378,7 +18417,7 @@ void ADunDefPlayerAbility_SummonCommand::HandleInstantCommand ( )
 	static UFunction* pFnHandleInstantCommand = NULL;
 
 	if ( ! pFnHandleInstantCommand )
-		pFnHandleInstantCommand = (UFunction*) UObject::GObjObjects()->Data[ 92937 ];
+		pFnHandleInstantCommand = (UFunction*) UObject::GObjObjects()->Data[ 87348 ];
 
 	ADunDefPlayerAbility_SummonCommand_execHandleInstantCommand_Parms HandleInstantCommand_Parms;
 
@@ -18394,7 +18433,7 @@ void ADunDefPlayerAbility_SummonCommand::OnActivate ( )
 	static UFunction* pFnOnActivate = NULL;
 
 	if ( ! pFnOnActivate )
-		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 92936 ];
+		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 87347 ];
 
 	ADunDefPlayerAbility_SummonCommand_execOnActivate_Parms OnActivate_Parms;
 
@@ -18411,7 +18450,7 @@ struct FName ADunDefPlayerAbility_SummonCommand::GetCastingStateNamePC ( )
 	static UFunction* pFnGetCastingStateNamePC = NULL;
 
 	if ( ! pFnGetCastingStateNamePC )
-		pFnGetCastingStateNamePC = (UFunction*) UObject::GObjObjects()->Data[ 92934 ];
+		pFnGetCastingStateNamePC = (UFunction*) UObject::GObjObjects()->Data[ 87345 ];
 
 	ADunDefPlayerAbility_SummonCommand_execGetCastingStateNamePC_Parms GetCastingStateNamePC_Parms;
 
@@ -18429,7 +18468,7 @@ void ADunDefPlayerAbility_SummonCommand::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 92933 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 87344 ];
 
 	ADunDefPlayerAbility_SummonCommand_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -18445,7 +18484,7 @@ void ADunDefPlayerAbility_SummonCommand::IncreasePlacementTowerRadius ( )
 	static UFunction* pFnIncreasePlacementTowerRadius = NULL;
 
 	if ( ! pFnIncreasePlacementTowerRadius )
-		pFnIncreasePlacementTowerRadius = (UFunction*) UObject::GObjObjects()->Data[ 92932 ];
+		pFnIncreasePlacementTowerRadius = (UFunction*) UObject::GObjObjects()->Data[ 87343 ];
 
 	ADunDefPlayerAbility_SummonCommand_execIncreasePlacementTowerRadius_Parms IncreasePlacementTowerRadius_Parms;
 
@@ -18461,7 +18500,7 @@ void ADunDefPlayerAbility_SummonCommand::DecreasePlacementTowerRadius ( )
 	static UFunction* pFnDecreasePlacementTowerRadius = NULL;
 
 	if ( ! pFnDecreasePlacementTowerRadius )
-		pFnDecreasePlacementTowerRadius = (UFunction*) UObject::GObjObjects()->Data[ 92931 ];
+		pFnDecreasePlacementTowerRadius = (UFunction*) UObject::GObjObjects()->Data[ 87342 ];
 
 	ADunDefPlayerAbility_SummonCommand_execDecreasePlacementTowerRadius_Parms DecreasePlacementTowerRadius_Parms;
 
@@ -18478,7 +18517,7 @@ struct FName ADunDefPlayerAbility_PhaseShiftOverlord::GetCastingStateNamePC ( )
 	static UFunction* pFnGetCastingStateNamePC = NULL;
 
 	if ( ! pFnGetCastingStateNamePC )
-		pFnGetCastingStateNamePC = (UFunction*) UObject::GObjObjects()->Data[ 93118 ];
+		pFnGetCastingStateNamePC = (UFunction*) UObject::GObjObjects()->Data[ 87529 ];
 
 	ADunDefPlayerAbility_PhaseShiftOverlord_execGetCastingStateNamePC_Parms GetCastingStateNamePC_Parms;
 
@@ -18499,7 +18538,7 @@ void ADunDefPlayerAbility_PhaseShiftOverlord::ServerRequestSetCommand ( struct F
 	static UFunction* pFnServerRequestSetCommand = NULL;
 
 	if ( ! pFnServerRequestSetCommand )
-		pFnServerRequestSetCommand = (UFunction*) UObject::GObjObjects()->Data[ 93110 ];
+		pFnServerRequestSetCommand = (UFunction*) UObject::GObjObjects()->Data[ 87521 ];
 
 	ADunDefPlayerAbility_PhaseShiftOverlord_execServerRequestSetCommand_Parms ServerRequestSetCommand_Parms;
 	memcpy ( &ServerRequestSetCommand_Parms.pLoc, &pLoc, 0xC );
@@ -18521,7 +18560,7 @@ void ADunDefPlayerAbility_PhaseShiftOverlord::DoMovementCommand ( TArray< class 
 	static UFunction* pFnDoMovementCommand = NULL;
 
 	if ( ! pFnDoMovementCommand )
-		pFnDoMovementCommand = (UFunction*) UObject::GObjObjects()->Data[ 93097 ];
+		pFnDoMovementCommand = (UFunction*) UObject::GObjObjects()->Data[ 87508 ];
 
 	ADunDefPlayerAbility_PhaseShiftOverlord_execDoMovementCommand_Parms DoMovementCommand_Parms;
 	memcpy ( &DoMovementCommand_Parms.selectedTowers, &selectedTowers, 0xC );
@@ -18542,7 +18581,7 @@ bool ADunDefPlayerAbility_PhaseShiftOverlord::DrawCastingHUD ( class ADunDefHUD*
 	static UFunction* pFnDrawCastingHUD = NULL;
 
 	if ( ! pFnDrawCastingHUD )
-		pFnDrawCastingHUD = (UFunction*) UObject::GObjObjects()->Data[ 93079 ];
+		pFnDrawCastingHUD = (UFunction*) UObject::GObjObjects()->Data[ 87490 ];
 
 	ADunDefPlayerAbility_PhaseShiftOverlord_execDrawCastingHUD_Parms DrawCastingHUD_Parms;
 	DrawCastingHUD_Parms.H = H;
@@ -18562,7 +18601,7 @@ bool ADunDefPlayerAbility_PhaseShiftOverlord::RequestActivation ( )
 	static UFunction* pFnRequestActivation = NULL;
 
 	if ( ! pFnRequestActivation )
-		pFnRequestActivation = (UFunction*) UObject::GObjObjects()->Data[ 93076 ];
+		pFnRequestActivation = (UFunction*) UObject::GObjObjects()->Data[ 87487 ];
 
 	ADunDefPlayerAbility_PhaseShiftOverlord_execRequestActivation_Parms RequestActivation_Parms;
 
@@ -18582,7 +18621,7 @@ unsigned char ADunDefPlayerAbility_PhaseShiftOverlord::GetAbilityStatus ( int* E
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 93073 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 87484 ];
 
 	ADunDefPlayerAbility_PhaseShiftOverlord_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -18605,7 +18644,7 @@ bool ADunDefPlayerAbility_PhaseShiftOverlord::RequestCancellation ( unsigned lon
 	static UFunction* pFnRequestCancellation = NULL;
 
 	if ( ! pFnRequestCancellation )
-		pFnRequestCancellation = (UFunction*) UObject::GObjObjects()->Data[ 93069 ];
+		pFnRequestCancellation = (UFunction*) UObject::GObjObjects()->Data[ 87480 ];
 
 	ADunDefPlayerAbility_PhaseShiftOverlord_execRequestCancellation_Parms RequestCancellation_Parms;
 	RequestCancellation_Parms.bForce = bForce;
@@ -18624,7 +18663,7 @@ void ADunDefPlayerAbility_PhaseShiftOverlord::HandleConfirmation ( )
 	static UFunction* pFnHandleConfirmation = NULL;
 
 	if ( ! pFnHandleConfirmation )
-		pFnHandleConfirmation = (UFunction*) UObject::GObjObjects()->Data[ 93066 ];
+		pFnHandleConfirmation = (UFunction*) UObject::GObjObjects()->Data[ 87477 ];
 
 	ADunDefPlayerAbility_PhaseShiftOverlord_execHandleConfirmation_Parms HandleConfirmation_Parms;
 
@@ -18640,7 +18679,7 @@ void ADunDefPlayerAbility_PhaseShiftOverlord::HandleAltCancellation ( )
 	static UFunction* pFnHandleAltCancellation = NULL;
 
 	if ( ! pFnHandleAltCancellation )
-		pFnHandleAltCancellation = (UFunction*) UObject::GObjObjects()->Data[ 93064 ];
+		pFnHandleAltCancellation = (UFunction*) UObject::GObjObjects()->Data[ 87475 ];
 
 	ADunDefPlayerAbility_PhaseShiftOverlord_execHandleAltCancellation_Parms HandleAltCancellation_Parms;
 
@@ -18656,7 +18695,7 @@ void ADunDefPlayerAbility_PhaseShiftOverlord::HandleAltConfirmation ( )
 	static UFunction* pFnHandleAltConfirmation = NULL;
 
 	if ( ! pFnHandleAltConfirmation )
-		pFnHandleAltConfirmation = (UFunction*) UObject::GObjObjects()->Data[ 93053 ];
+		pFnHandleAltConfirmation = (UFunction*) UObject::GObjObjects()->Data[ 87464 ];
 
 	ADunDefPlayerAbility_PhaseShiftOverlord_execHandleAltConfirmation_Parms HandleAltConfirmation_Parms;
 
@@ -18672,7 +18711,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::StopTowerPlacingAnimation ( )
 	static UFunction* pFnStopTowerPlacingAnimation = NULL;
 
 	if ( ! pFnStopTowerPlacingAnimation )
-		pFnStopTowerPlacingAnimation = (UFunction*) UObject::GObjObjects()->Data[ 93188 ];
+		pFnStopTowerPlacingAnimation = (UFunction*) UObject::GObjObjects()->Data[ 87599 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execStopTowerPlacingAnimation_Parms StopTowerPlacingAnimation_Parms;
 
@@ -18688,7 +18727,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::StartTowerPlacingAnimation ( )
 	static UFunction* pFnStartTowerPlacingAnimation = NULL;
 
 	if ( ! pFnStartTowerPlacingAnimation )
-		pFnStartTowerPlacingAnimation = (UFunction*) UObject::GObjObjects()->Data[ 93187 ];
+		pFnStartTowerPlacingAnimation = (UFunction*) UObject::GObjObjects()->Data[ 87598 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execStartTowerPlacingAnimation_Parms StartTowerPlacingAnimation_Parms;
 
@@ -18705,7 +18744,7 @@ bool ADunDefPlayerAbility_SelectSummonUnits::AllowCastingCancelOnDamage ( )
 	static UFunction* pFnAllowCastingCancelOnDamage = NULL;
 
 	if ( ! pFnAllowCastingCancelOnDamage )
-		pFnAllowCastingCancelOnDamage = (UFunction*) UObject::GObjObjects()->Data[ 93185 ];
+		pFnAllowCastingCancelOnDamage = (UFunction*) UObject::GObjObjects()->Data[ 87596 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execAllowCastingCancelOnDamage_Parms AllowCastingCancelOnDamage_Parms;
 
@@ -18723,7 +18762,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::DeSelectUnits ( )
 	static UFunction* pFnDeSelectUnits = NULL;
 
 	if ( ! pFnDeSelectUnits )
-		pFnDeSelectUnits = (UFunction*) UObject::GObjObjects()->Data[ 93183 ];
+		pFnDeSelectUnits = (UFunction*) UObject::GObjObjects()->Data[ 87594 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execDeSelectUnits_Parms DeSelectUnits_Parms;
 
@@ -18739,7 +18778,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::SelectAllTowers ( )
 	static UFunction* pFnSelectAllTowers = NULL;
 
 	if ( ! pFnSelectAllTowers )
-		pFnSelectAllTowers = (UFunction*) UObject::GObjObjects()->Data[ 93178 ];
+		pFnSelectAllTowers = (UFunction*) UObject::GObjObjects()->Data[ 87589 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execSelectAllTowers_Parms SelectAllTowers_Parms;
 
@@ -18755,7 +18794,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::OnActivate ( )
 	static UFunction* pFnOnActivate = NULL;
 
 	if ( ! pFnOnActivate )
-		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 93177 ];
+		pFnOnActivate = (UFunction*) UObject::GObjObjects()->Data[ 87588 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execOnActivate_Parms OnActivate_Parms;
 
@@ -18772,7 +18811,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::PostPlacementUpdate ( float DeltaTi
 	static UFunction* pFnPostPlacementUpdate = NULL;
 
 	if ( ! pFnPostPlacementUpdate )
-		pFnPostPlacementUpdate = (UFunction*) UObject::GObjObjects()->Data[ 93175 ];
+		pFnPostPlacementUpdate = (UFunction*) UObject::GObjObjects()->Data[ 87586 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execPostPlacementUpdate_Parms PostPlacementUpdate_Parms;
 	PostPlacementUpdate_Parms.DeltaTime = DeltaTime;
@@ -18790,7 +18829,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::UpdateDecalPlacement ( float DeltaT
 	static UFunction* pFnUpdateDecalPlacement = NULL;
 
 	if ( ! pFnUpdateDecalPlacement )
-		pFnUpdateDecalPlacement = (UFunction*) UObject::GObjObjects()->Data[ 93173 ];
+		pFnUpdateDecalPlacement = (UFunction*) UObject::GObjObjects()->Data[ 87584 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execUpdateDecalPlacement_Parms UpdateDecalPlacement_Parms;
 	UpdateDecalPlacement_Parms.DeltaTime = DeltaTime;
@@ -18807,7 +18846,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::CancelAbility ( )
 	static UFunction* pFnCancelAbility = NULL;
 
 	if ( ! pFnCancelAbility )
-		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 93171 ];
+		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 87582 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execCancelAbility_Parms CancelAbility_Parms;
 
@@ -18824,7 +18863,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::eventAbilityTick ( float DeltaTime 
 	static UFunction* pFnAbilityTick = NULL;
 
 	if ( ! pFnAbilityTick )
-		pFnAbilityTick = (UFunction*) UObject::GObjObjects()->Data[ 93147 ];
+		pFnAbilityTick = (UFunction*) UObject::GObjObjects()->Data[ 87558 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_eventAbilityTick_Parms AbilityTick_Parms;
 	AbilityTick_Parms.DeltaTime = DeltaTime;
@@ -18841,7 +18880,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 93146 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 87557 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -18857,7 +18896,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::IncreasePlacementTowerRadius ( )
 	static UFunction* pFnIncreasePlacementTowerRadius = NULL;
 
 	if ( ! pFnIncreasePlacementTowerRadius )
-		pFnIncreasePlacementTowerRadius = (UFunction*) UObject::GObjObjects()->Data[ 93145 ];
+		pFnIncreasePlacementTowerRadius = (UFunction*) UObject::GObjObjects()->Data[ 87556 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execIncreasePlacementTowerRadius_Parms IncreasePlacementTowerRadius_Parms;
 
@@ -18873,7 +18912,7 @@ void ADunDefPlayerAbility_SelectSummonUnits::DecreasePlacementTowerRadius ( )
 	static UFunction* pFnDecreasePlacementTowerRadius = NULL;
 
 	if ( ! pFnDecreasePlacementTowerRadius )
-		pFnDecreasePlacementTowerRadius = (UFunction*) UObject::GObjObjects()->Data[ 93144 ];
+		pFnDecreasePlacementTowerRadius = (UFunction*) UObject::GObjObjects()->Data[ 87555 ];
 
 	ADunDefPlayerAbility_SelectSummonUnits_execDecreasePlacementTowerRadius_Parms DecreasePlacementTowerRadius_Parms;
 
@@ -18891,7 +18930,7 @@ unsigned char ADunDefPlayerAbility_SlamDash::GetAbilityStatus ( int* ExtraStatus
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 93295 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 87699 ];
 
 	ADunDefPlayerAbility_SlamDash_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -18913,7 +18952,7 @@ bool ADunDefPlayerAbility_SlamDash::ConsumesInputWhenActive ( )
 	static UFunction* pFnConsumesInputWhenActive = NULL;
 
 	if ( ! pFnConsumesInputWhenActive )
-		pFnConsumesInputWhenActive = (UFunction*) UObject::GObjObjects()->Data[ 93293 ];
+		pFnConsumesInputWhenActive = (UFunction*) UObject::GObjObjects()->Data[ 87697 ];
 
 	ADunDefPlayerAbility_SlamDash_execConsumesInputWhenActive_Parms ConsumesInputWhenActive_Parms;
 
@@ -18932,7 +18971,7 @@ bool ADunDefPlayerAbility_SlamDash::AllowUsageDuringCastingStates ( )
 	static UFunction* pFnAllowUsageDuringCastingStates = NULL;
 
 	if ( ! pFnAllowUsageDuringCastingStates )
-		pFnAllowUsageDuringCastingStates = (UFunction*) UObject::GObjObjects()->Data[ 93291 ];
+		pFnAllowUsageDuringCastingStates = (UFunction*) UObject::GObjObjects()->Data[ 87695 ];
 
 	ADunDefPlayerAbility_SlamDash_execAllowUsageDuringCastingStates_Parms AllowUsageDuringCastingStates_Parms;
 
@@ -18950,7 +18989,7 @@ void ADunDefPlayerAbility_SlamDash::CheckStuck ( )
 	static UFunction* pFnCheckStuck = NULL;
 
 	if ( ! pFnCheckStuck )
-		pFnCheckStuck = (UFunction*) UObject::GObjObjects()->Data[ 93258 ];
+		pFnCheckStuck = (UFunction*) UObject::GObjObjects()->Data[ 87664 ];
 
 	ADunDefPlayerAbility_SlamDash_execCheckStuck_Parms CheckStuck_Parms;
 
@@ -18966,7 +19005,7 @@ void ADunDefPlayerAbility_SlamDash::PlayStopAnim ( )
 	static UFunction* pFnPlayStopAnim = NULL;
 
 	if ( ! pFnPlayStopAnim )
-		pFnPlayStopAnim = (UFunction*) UObject::GObjObjects()->Data[ 93257 ];
+		pFnPlayStopAnim = (UFunction*) UObject::GObjObjects()->Data[ 87663 ];
 
 	ADunDefPlayerAbility_SlamDash_execPlayStopAnim_Parms PlayStopAnim_Parms;
 
@@ -18982,7 +19021,7 @@ void ADunDefPlayerAbility_SlamDash::ShutOffVFX ( )
 	static UFunction* pFnShutOffVFX = NULL;
 
 	if ( ! pFnShutOffVFX )
-		pFnShutOffVFX = (UFunction*) UObject::GObjObjects()->Data[ 93256 ];
+		pFnShutOffVFX = (UFunction*) UObject::GObjObjects()->Data[ 87662 ];
 
 	ADunDefPlayerAbility_SlamDash_execShutOffVFX_Parms ShutOffVFX_Parms;
 
@@ -18998,7 +19037,7 @@ void ADunDefPlayerAbility_SlamDash::ActivateHandVFX ( )
 	static UFunction* pFnActivateHandVFX = NULL;
 
 	if ( ! pFnActivateHandVFX )
-		pFnActivateHandVFX = (UFunction*) UObject::GObjObjects()->Data[ 93255 ];
+		pFnActivateHandVFX = (UFunction*) UObject::GObjObjects()->Data[ 87661 ];
 
 	ADunDefPlayerAbility_SlamDash_execActivateHandVFX_Parms ActivateHandVFX_Parms;
 
@@ -19014,7 +19053,7 @@ void ADunDefPlayerAbility_SlamDash::PushCheck ( )
 	static UFunction* pFnPushCheck = NULL;
 
 	if ( ! pFnPushCheck )
-		pFnPushCheck = (UFunction*) UObject::GObjObjects()->Data[ 93254 ];
+		pFnPushCheck = (UFunction*) UObject::GObjObjects()->Data[ 87660 ];
 
 	ADunDefPlayerAbility_SlamDash_execPushCheck_Parms PushCheck_Parms;
 
@@ -19046,7 +19085,7 @@ void ADunDefPlayerAbility_SlamDash::ExecReplicatedFunction ( struct FName Functi
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 93237 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 87643 ];
 
 	ADunDefPlayerAbility_SlamDash_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -19079,7 +19118,7 @@ void ADunDefPlayerAbility_SlamDash::eventReplicatedEvent ( struct FName VarName 
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 93235 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 87641 ];
 
 	ADunDefPlayerAbility_SlamDash_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -19098,7 +19137,7 @@ unsigned char ADunDefPlayerAbility_StanceOnDmgEffect::GetAbilityStatus ( int* Ex
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 93445 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 87847 ];
 
 	ADunDefPlayerAbility_StanceOnDmgEffect_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -19119,7 +19158,7 @@ void ADunDefPlayerAbility_StanceOnDmgEffect::SetMaxHealAmountPerAttack ( )
 	static UFunction* pFnSetMaxHealAmountPerAttack = NULL;
 
 	if ( ! pFnSetMaxHealAmountPerAttack )
-		pFnSetMaxHealAmountPerAttack = (UFunction*) UObject::GObjObjects()->Data[ 93444 ];
+		pFnSetMaxHealAmountPerAttack = (UFunction*) UObject::GObjObjects()->Data[ 87846 ];
 
 	ADunDefPlayerAbility_StanceOnDmgEffect_execSetMaxHealAmountPerAttack_Parms SetMaxHealAmountPerAttack_Parms;
 
@@ -19135,7 +19174,7 @@ void ADunDefPlayerAbility_StanceOnDmgEffect::ResetWeaponDamage ( )
 	static UFunction* pFnResetWeaponDamage = NULL;
 
 	if ( ! pFnResetWeaponDamage )
-		pFnResetWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93443 ];
+		pFnResetWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 87845 ];
 
 	ADunDefPlayerAbility_StanceOnDmgEffect_execResetWeaponDamage_Parms ResetWeaponDamage_Parms;
 
@@ -19152,7 +19191,7 @@ bool ADunDefPlayerAbility_StanceOnDmgEffect::StopOffHandWeaponDamage ( )
 	static UFunction* pFnStopOffHandWeaponDamage = NULL;
 
 	if ( ! pFnStopOffHandWeaponDamage )
-		pFnStopOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93441 ];
+		pFnStopOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 87843 ];
 
 	ADunDefPlayerAbility_StanceOnDmgEffect_execStopOffHandWeaponDamage_Parms StopOffHandWeaponDamage_Parms;
 
@@ -19171,7 +19210,7 @@ bool ADunDefPlayerAbility_StanceOnDmgEffect::StopWeaponDamage ( )
 	static UFunction* pFnStopWeaponDamage = NULL;
 
 	if ( ! pFnStopWeaponDamage )
-		pFnStopWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93439 ];
+		pFnStopWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 87841 ];
 
 	ADunDefPlayerAbility_StanceOnDmgEffect_execStopWeaponDamage_Parms StopWeaponDamage_Parms;
 
@@ -19190,7 +19229,7 @@ bool ADunDefPlayerAbility_StanceOnDmgEffect::StartOffHandWeaponDamage ( )
 	static UFunction* pFnStartOffHandWeaponDamage = NULL;
 
 	if ( ! pFnStartOffHandWeaponDamage )
-		pFnStartOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93437 ];
+		pFnStartOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 87839 ];
 
 	ADunDefPlayerAbility_StanceOnDmgEffect_execStartOffHandWeaponDamage_Parms StartOffHandWeaponDamage_Parms;
 
@@ -19209,7 +19248,7 @@ bool ADunDefPlayerAbility_StanceOnDmgEffect::StartWeaponDamage ( )
 	static UFunction* pFnStartWeaponDamage = NULL;
 
 	if ( ! pFnStartWeaponDamage )
-		pFnStartWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93435 ];
+		pFnStartWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 87837 ];
 
 	ADunDefPlayerAbility_StanceOnDmgEffect_execStartWeaponDamage_Parms StartWeaponDamage_Parms;
 
@@ -19228,90 +19267,12 @@ void ADunDefPlayerAbility_StanceOnDmgEffect::DoAddHealth ( int dmgAmount )
 	static UFunction* pFnDoAddHealth = NULL;
 
 	if ( ! pFnDoAddHealth )
-		pFnDoAddHealth = (UFunction*) UObject::GObjObjects()->Data[ 93429 ];
+		pFnDoAddHealth = (UFunction*) UObject::GObjObjects()->Data[ 87831 ];
 
 	ADunDefPlayerAbility_StanceOnDmgEffect_execDoAddHealth_Parms DoAddHealth_Parms;
 	DoAddHealth_Parms.dmgAmount = dmgAmount;
 
 	this->ProcessEvent ( pFnDoAddHealth, &DoAddHealth_Parms, NULL );
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.GetWeaponDamage
-// [0x00020102] 
-// Parameters infos:
-// float                          ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-// class ADunDefWeapon_MeleeSword* dmgWeapon                      ( CPF_Parm )
-
-float ADunDefPlayerAbility_StanceLightning::GetWeaponDamage ( class ADunDefWeapon_MeleeSword* dmgWeapon )
-{
-	static UFunction* pFnGetWeaponDamage = NULL;
-
-	if ( ! pFnGetWeaponDamage )
-		pFnGetWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93553 ];
-
-	ADunDefPlayerAbility_StanceLightning_execGetWeaponDamage_Parms GetWeaponDamage_Parms;
-	GetWeaponDamage_Parms.dmgWeapon = dmgWeapon;
-
-	this->ProcessEvent ( pFnGetWeaponDamage, &GetWeaponDamage_Parms, NULL );
-
-	return GetWeaponDamage_Parms.ReturnValue;
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.DoActorSpawn
-// [0x00820002] 
-// Parameters infos:
-// unsigned long                  MainWeapon                     ( CPF_Parm )
-
-void ADunDefPlayerAbility_StanceLightning::DoActorSpawn ( unsigned long MainWeapon )
-{
-	static UFunction* pFnDoActorSpawn = NULL;
-
-	if ( ! pFnDoActorSpawn )
-		pFnDoActorSpawn = (UFunction*) UObject::GObjObjects()->Data[ 93547 ];
-
-	ADunDefPlayerAbility_StanceLightning_execDoActorSpawn_Parms DoActorSpawn_Parms;
-	DoActorSpawn_Parms.MainWeapon = MainWeapon;
-
-	this->ProcessEvent ( pFnDoActorSpawn, &DoActorSpawn_Parms, NULL );
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.GetDamage
-// [0x00020102] 
-// Parameters infos:
-// float                          ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-float ADunDefPlayerAbility_StanceLightning::GetDamage ( )
-{
-	static UFunction* pFnGetDamage = NULL;
-
-	if ( ! pFnGetDamage )
-		pFnGetDamage = (UFunction*) UObject::GObjObjects()->Data[ 93542 ];
-
-	ADunDefPlayerAbility_StanceLightning_execGetDamage_Parms GetDamage_Parms;
-
-	this->ProcessEvent ( pFnGetDamage, &GetDamage_Parms, NULL );
-
-	return GetDamage_Parms.ReturnValue;
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.DoAddDamage
-// [0x00020102] 
-// Parameters infos:
-// int                            dmg                            ( CPF_Parm )
-// class AActor*                  HitActor                       ( CPF_Parm )
-
-void ADunDefPlayerAbility_StanceLightning::DoAddDamage ( int dmg, class AActor* HitActor )
-{
-	static UFunction* pFnDoAddDamage = NULL;
-
-	if ( ! pFnDoAddDamage )
-		pFnDoAddDamage = (UFunction*) UObject::GObjObjects()->Data[ 93538 ];
-
-	ADunDefPlayerAbility_StanceLightning_execDoAddDamage_Parms DoAddDamage_Parms;
-	DoAddDamage_Parms.dmg = dmg;
-	DoAddDamage_Parms.HitActor = HitActor;
-
-	this->ProcessEvent ( pFnDoAddDamage, &DoAddDamage_Parms, NULL );
 };
 
 // Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.GetAbilityStatus
@@ -19325,7 +19286,7 @@ unsigned char ADunDefPlayerAbility_StanceLightning::GetAbilityStatus ( int* Extr
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 93535 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 87918 ];
 
 	ADunDefPlayerAbility_StanceLightning_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -19347,7 +19308,7 @@ float ADunDefPlayerAbility_StanceLightning::GetStunTime ( )
 	static UFunction* pFnGetStunTime = NULL;
 
 	if ( ! pFnGetStunTime )
-		pFnGetStunTime = (UFunction*) UObject::GObjObjects()->Data[ 93531 ];
+		pFnGetStunTime = (UFunction*) UObject::GObjObjects()->Data[ 87914 ];
 
 	ADunDefPlayerAbility_StanceLightning_execGetStunTime_Parms GetStunTime_Parms;
 
@@ -19365,7 +19326,7 @@ void ADunDefPlayerAbility_StanceLightning::ClearStunnedList ( )
 	static UFunction* pFnClearStunnedList = NULL;
 
 	if ( ! pFnClearStunnedList )
-		pFnClearStunnedList = (UFunction*) UObject::GObjObjects()->Data[ 93529 ];
+		pFnClearStunnedList = (UFunction*) UObject::GObjObjects()->Data[ 87912 ];
 
 	ADunDefPlayerAbility_StanceLightning_execClearStunnedList_Parms ClearStunnedList_Parms;
 
@@ -19383,7 +19344,7 @@ void ADunDefPlayerAbility_StanceLightning::RemoveStunnedActor ( class ADunDefEne
 	static UFunction* pFnRemoveStunnedActor = NULL;
 
 	if ( ! pFnRemoveStunnedActor )
-		pFnRemoveStunnedActor = (UFunction*) UObject::GObjObjects()->Data[ 93525 ];
+		pFnRemoveStunnedActor = (UFunction*) UObject::GObjObjects()->Data[ 87908 ];
 
 	ADunDefPlayerAbility_StanceLightning_execRemoveStunnedActor_Parms RemoveStunnedActor_Parms;
 	RemoveStunnedActor_Parms.stunRemoval = stunRemoval;
@@ -19402,50 +19363,12 @@ void ADunDefPlayerAbility_StanceLightning::AddStunnedActor ( class ADunDefEnemy*
 	static UFunction* pFnAddStunnedActor = NULL;
 
 	if ( ! pFnAddStunnedActor )
-		pFnAddStunnedActor = (UFunction*) UObject::GObjObjects()->Data[ 93519 ];
+		pFnAddStunnedActor = (UFunction*) UObject::GObjObjects()->Data[ 87902 ];
 
 	ADunDefPlayerAbility_StanceLightning_execAddStunnedActor_Parms AddStunnedActor_Parms;
 	AddStunnedActor_Parms.newStun = newStun;
 
 	this->ProcessEvent ( pFnAddStunnedActor, &AddStunnedActor_Parms, NULL );
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.StartOffHandWeaponDamage
-// [0x00020102] 
-// Parameters infos:
-// bool                           ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-bool ADunDefPlayerAbility_StanceLightning::StartOffHandWeaponDamage ( )
-{
-	static UFunction* pFnStartOffHandWeaponDamage = NULL;
-
-	if ( ! pFnStartOffHandWeaponDamage )
-		pFnStartOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93517 ];
-
-	ADunDefPlayerAbility_StanceLightning_execStartOffHandWeaponDamage_Parms StartOffHandWeaponDamage_Parms;
-
-	this->ProcessEvent ( pFnStartOffHandWeaponDamage, &StartOffHandWeaponDamage_Parms, NULL );
-
-	return StartOffHandWeaponDamage_Parms.ReturnValue;
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.StartWeaponDamage
-// [0x00020102] 
-// Parameters infos:
-// bool                           ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-bool ADunDefPlayerAbility_StanceLightning::StartWeaponDamage ( )
-{
-	static UFunction* pFnStartWeaponDamage = NULL;
-
-	if ( ! pFnStartWeaponDamage )
-		pFnStartWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93515 ];
-
-	ADunDefPlayerAbility_StanceLightning_execStartWeaponDamage_Parms StartWeaponDamage_Parms;
-
-	this->ProcessEvent ( pFnStartWeaponDamage, &StartWeaponDamage_Parms, NULL );
-
-	return StartWeaponDamage_Parms.ReturnValue;
 };
 
 // Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.CanStun
@@ -19459,7 +19382,7 @@ bool ADunDefPlayerAbility_StanceLightning::CanStun ( class ADunDefEnemy* stunTes
 	static UFunction* pFnCanStun = NULL;
 
 	if ( ! pFnCanStun )
-		pFnCanStun = (UFunction*) UObject::GObjObjects()->Data[ 93512 ];
+		pFnCanStun = (UFunction*) UObject::GObjObjects()->Data[ 87899 ];
 
 	ADunDefPlayerAbility_StanceLightning_execCanStun_Parms CanStun_Parms;
 	CanStun_Parms.stunTest = stunTest;
@@ -19494,7 +19417,7 @@ void ADunDefPlayerAbility_StanceLightning::ExecReplicatedFunction ( struct FName
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 93482 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 87869 ];
 
 	ADunDefPlayerAbility_StanceLightning_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -19528,7 +19451,7 @@ unsigned char ADunDefPlayerAbility_StanceSpecialAttack::GetAbilityStatus ( int* 
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 93630 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 87995 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -19550,7 +19473,7 @@ bool ADunDefPlayerAbility_StanceSpecialAttack::StopOffHandWeaponDamage ( )
 	static UFunction* pFnStopOffHandWeaponDamage = NULL;
 
 	if ( ! pFnStopOffHandWeaponDamage )
-		pFnStopOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93628 ];
+		pFnStopOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 87993 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execStopOffHandWeaponDamage_Parms StopOffHandWeaponDamage_Parms;
 
@@ -19569,7 +19492,7 @@ bool ADunDefPlayerAbility_StanceSpecialAttack::StopWeaponDamage ( )
 	static UFunction* pFnStopWeaponDamage = NULL;
 
 	if ( ! pFnStopWeaponDamage )
-		pFnStopWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93626 ];
+		pFnStopWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 87991 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execStopWeaponDamage_Parms StopWeaponDamage_Parms;
 
@@ -19588,7 +19511,7 @@ bool ADunDefPlayerAbility_StanceSpecialAttack::StartOffHandWeaponDamage ( )
 	static UFunction* pFnStartOffHandWeaponDamage = NULL;
 
 	if ( ! pFnStartOffHandWeaponDamage )
-		pFnStartOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93624 ];
+		pFnStartOffHandWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 87989 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execStartOffHandWeaponDamage_Parms StartOffHandWeaponDamage_Parms;
 
@@ -19607,7 +19530,7 @@ bool ADunDefPlayerAbility_StanceSpecialAttack::StartWeaponDamage ( )
 	static UFunction* pFnStartWeaponDamage = NULL;
 
 	if ( ! pFnStartWeaponDamage )
-		pFnStartWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 93622 ];
+		pFnStartWeaponDamage = (UFunction*) UObject::GObjObjects()->Data[ 87987 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execStartWeaponDamage_Parms StartWeaponDamage_Parms;
 
@@ -19626,7 +19549,7 @@ float ADunDefPlayerAbility_StanceSpecialAttack::GetMomentum ( )
 	static UFunction* pFnGetMomentum = NULL;
 
 	if ( ! pFnGetMomentum )
-		pFnGetMomentum = (UFunction*) UObject::GObjObjects()->Data[ 93620 ];
+		pFnGetMomentum = (UFunction*) UObject::GObjObjects()->Data[ 87985 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execGetMomentum_Parms GetMomentum_Parms;
 
@@ -19646,7 +19569,7 @@ float ADunDefPlayerAbility_StanceSpecialAttack::GetDamage ( class ADunDefWeapon_
 	static UFunction* pFnGetDamage = NULL;
 
 	if ( ! pFnGetDamage )
-		pFnGetDamage = (UFunction*) UObject::GObjObjects()->Data[ 93617 ];
+		pFnGetDamage = (UFunction*) UObject::GObjObjects()->Data[ 87982 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execGetDamage_Parms GetDamage_Parms;
 	GetDamage_Parms.dmgWeapon = dmgWeapon;
@@ -19665,7 +19588,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::ClearStanceStun ( )
 	static UFunction* pFnClearStanceStun = NULL;
 
 	if ( ! pFnClearStanceStun )
-		pFnClearStanceStun = (UFunction*) UObject::GObjObjects()->Data[ 93616 ];
+		pFnClearStanceStun = (UFunction*) UObject::GObjObjects()->Data[ 87981 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execClearStanceStun_Parms ClearStanceStun_Parms;
 
@@ -19681,7 +19604,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::CancelAbility ( )
 	static UFunction* pFnCancelAbility = NULL;
 
 	if ( ! pFnCancelAbility )
-		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 93615 ];
+		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 87980 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execCancelAbility_Parms CancelAbility_Parms;
 
@@ -19697,7 +19620,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::CompletedSpecial ( )
 	static UFunction* pFnCompletedSpecial = NULL;
 
 	if ( ! pFnCompletedSpecial )
-		pFnCompletedSpecial = (UFunction*) UObject::GObjObjects()->Data[ 93614 ];
+		pFnCompletedSpecial = (UFunction*) UObject::GObjObjects()->Data[ 87979 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execCompletedSpecial_Parms CompletedSpecial_Parms;
 
@@ -19713,7 +19636,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::ClientCompletedSpecial ( )
 	static UFunction* pFnClientCompletedSpecial = NULL;
 
 	if ( ! pFnClientCompletedSpecial )
-		pFnClientCompletedSpecial = (UFunction*) UObject::GObjObjects()->Data[ 93613 ];
+		pFnClientCompletedSpecial = (UFunction*) UObject::GObjObjects()->Data[ 87978 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execClientCompletedSpecial_Parms ClientCompletedSpecial_Parms;
 
@@ -19729,7 +19652,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::SpawnFinishEmitter ( )
 	static UFunction* pFnSpawnFinishEmitter = NULL;
 
 	if ( ! pFnSpawnFinishEmitter )
-		pFnSpawnFinishEmitter = (UFunction*) UObject::GObjObjects()->Data[ 93606 ];
+		pFnSpawnFinishEmitter = (UFunction*) UObject::GObjObjects()->Data[ 87971 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execSpawnFinishEmitter_Parms SpawnFinishEmitter_Parms;
 
@@ -19745,7 +19668,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::AnimNotify_CurrentAbility_Off ( )
 	static UFunction* pFnAnimNotify_CurrentAbility_Off = NULL;
 
 	if ( ! pFnAnimNotify_CurrentAbility_Off )
-		pFnAnimNotify_CurrentAbility_Off = (UFunction*) UObject::GObjObjects()->Data[ 93605 ];
+		pFnAnimNotify_CurrentAbility_Off = (UFunction*) UObject::GObjObjects()->Data[ 87970 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execAnimNotify_CurrentAbility_Off_Parms AnimNotify_CurrentAbility_Off_Parms;
 
@@ -19761,7 +19684,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::AnimNotify_CurrentAbility_On ( )
 	static UFunction* pFnAnimNotify_CurrentAbility_On = NULL;
 
 	if ( ! pFnAnimNotify_CurrentAbility_On )
-		pFnAnimNotify_CurrentAbility_On = (UFunction*) UObject::GObjObjects()->Data[ 93604 ];
+		pFnAnimNotify_CurrentAbility_On = (UFunction*) UObject::GObjObjects()->Data[ 87969 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execAnimNotify_CurrentAbility_On_Parms AnimNotify_CurrentAbility_On_Parms;
 
@@ -19777,7 +19700,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::DoSpecialAttack ( )
 	static UFunction* pFnDoSpecialAttack = NULL;
 
 	if ( ! pFnDoSpecialAttack )
-		pFnDoSpecialAttack = (UFunction*) UObject::GObjObjects()->Data[ 93603 ];
+		pFnDoSpecialAttack = (UFunction*) UObject::GObjObjects()->Data[ 87968 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execDoSpecialAttack_Parms DoSpecialAttack_Parms;
 
@@ -19793,7 +19716,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::ClearHitList ( )
 	static UFunction* pFnClearHitList = NULL;
 
 	if ( ! pFnClearHitList )
-		pFnClearHitList = (UFunction*) UObject::GObjObjects()->Data[ 93602 ];
+		pFnClearHitList = (UFunction*) UObject::GObjObjects()->Data[ 87967 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execClearHitList_Parms ClearHitList_Parms;
 
@@ -19809,7 +19732,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::DoSwinging ( )
 	static UFunction* pFnDoSwinging = NULL;
 
 	if ( ! pFnDoSwinging )
-		pFnDoSwinging = (UFunction*) UObject::GObjObjects()->Data[ 93601 ];
+		pFnDoSwinging = (UFunction*) UObject::GObjObjects()->Data[ 87966 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_execDoSwinging_Parms DoSwinging_Parms;
 
@@ -19826,7 +19749,7 @@ void ADunDefPlayerAbility_StanceSpecialAttack::eventReplicatedEvent ( struct FNa
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 93585 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 87950 ];
 
 	ADunDefPlayerAbility_StanceSpecialAttack_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -19845,7 +19768,7 @@ unsigned char ADunDefPlayerAbility_WheeloFortuna::GetAbilityStatus ( int* ExtraS
 	static UFunction* pFnGetAbilityStatus = NULL;
 
 	if ( ! pFnGetAbilityStatus )
-		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 93927 ];
+		pFnGetAbilityStatus = (UFunction*) UObject::GObjObjects()->Data[ 88291 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execGetAbilityStatus_Parms GetAbilityStatus_Parms;
 
@@ -19868,7 +19791,7 @@ int ADunDefPlayerAbility_WheeloFortuna::GetCostToActivate ( unsigned long return
 	static UFunction* pFnGetCostToActivate = NULL;
 
 	if ( ! pFnGetCostToActivate )
-		pFnGetCostToActivate = (UFunction*) UObject::GObjObjects()->Data[ 93924 ];
+		pFnGetCostToActivate = (UFunction*) UObject::GObjObjects()->Data[ 88288 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execGetCostToActivate_Parms GetCostToActivate_Parms;
 	GetCostToActivate_Parms.returnTrueValue = returnTrueValue;
@@ -19887,7 +19810,7 @@ void ADunDefPlayerAbility_WheeloFortuna::StopLoopingAnims ( )
 	static UFunction* pFnStopLoopingAnims = NULL;
 
 	if ( ! pFnStopLoopingAnims )
-		pFnStopLoopingAnims = (UFunction*) UObject::GObjObjects()->Data[ 93923 ];
+		pFnStopLoopingAnims = (UFunction*) UObject::GObjObjects()->Data[ 88287 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execStopLoopingAnims_Parms StopLoopingAnims_Parms;
 
@@ -19904,7 +19827,7 @@ struct FName ADunDefPlayerAbility_WheeloFortuna::GetCastingCharacterAnimation ( 
 	static UFunction* pFnGetCastingCharacterAnimation = NULL;
 
 	if ( ! pFnGetCastingCharacterAnimation )
-		pFnGetCastingCharacterAnimation = (UFunction*) UObject::GObjObjects()->Data[ 93921 ];
+		pFnGetCastingCharacterAnimation = (UFunction*) UObject::GObjObjects()->Data[ 88285 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execGetCastingCharacterAnimation_Parms GetCastingCharacterAnimation_Parms;
 
@@ -19922,7 +19845,7 @@ void ADunDefPlayerAbility_WheeloFortuna::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 93920 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 88284 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_eventDestroyed_Parms Destroyed_Parms;
 
@@ -19938,7 +19861,7 @@ void ADunDefPlayerAbility_WheeloFortuna::ResetTimeDilation ( )
 	static UFunction* pFnResetTimeDilation = NULL;
 
 	if ( ! pFnResetTimeDilation )
-		pFnResetTimeDilation = (UFunction*) UObject::GObjObjects()->Data[ 93917 ];
+		pFnResetTimeDilation = (UFunction*) UObject::GObjObjects()->Data[ 88281 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execResetTimeDilation_Parms ResetTimeDilation_Parms;
 
@@ -19955,7 +19878,7 @@ void ADunDefPlayerAbility_WheeloFortuna::DoTimeDilation ( struct FGlyphPattern t
 	static UFunction* pFnDoTimeDilation = NULL;
 
 	if ( ! pFnDoTimeDilation )
-		pFnDoTimeDilation = (UFunction*) UObject::GObjObjects()->Data[ 93915 ];
+		pFnDoTimeDilation = (UFunction*) UObject::GObjObjects()->Data[ 88279 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execDoTimeDilation_Parms DoTimeDilation_Parms;
 	memcpy ( &DoTimeDilation_Parms.thePattern, &thePattern, 0x80 );
@@ -19972,7 +19895,7 @@ void ADunDefPlayerAbility_WheeloFortuna::SpawnManaTokens ( )
 	static UFunction* pFnSpawnManaTokens = NULL;
 
 	if ( ! pFnSpawnManaTokens )
-		pFnSpawnManaTokens = (UFunction*) UObject::GObjObjects()->Data[ 93906 ];
+		pFnSpawnManaTokens = (UFunction*) UObject::GObjObjects()->Data[ 88270 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execSpawnManaTokens_Parms SpawnManaTokens_Parms;
 
@@ -19989,7 +19912,7 @@ void ADunDefPlayerAbility_WheeloFortuna::GoldEnemy ( class ADunDefEnemy* Enemy )
 	static UFunction* pFnGoldEnemy = NULL;
 
 	if ( ! pFnGoldEnemy )
-		pFnGoldEnemy = (UFunction*) UObject::GObjObjects()->Data[ 93903 ];
+		pFnGoldEnemy = (UFunction*) UObject::GObjObjects()->Data[ 88267 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execGoldEnemy_Parms GoldEnemy_Parms;
 	GoldEnemy_Parms.Enemy = Enemy;
@@ -20008,7 +19931,7 @@ bool ADunDefPlayerAbility_WheeloFortuna::DoGolding ( struct FGlyphPattern thePat
 	static UFunction* pFnDoGolding = NULL;
 
 	if ( ! pFnDoGolding )
-		pFnDoGolding = (UFunction*) UObject::GObjObjects()->Data[ 93892 ];
+		pFnDoGolding = (UFunction*) UObject::GObjObjects()->Data[ 88256 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execDoGolding_Parms DoGolding_Parms;
 	memcpy ( &DoGolding_Parms.thePattern, &thePattern, 0x80 );
@@ -20027,7 +19950,7 @@ void ADunDefPlayerAbility_WheeloFortuna::EndEffect ( )
 	static UFunction* pFnEndEffect = NULL;
 
 	if ( ! pFnEndEffect )
-		pFnEndEffect = (UFunction*) UObject::GObjObjects()->Data[ 93891 ];
+		pFnEndEffect = (UFunction*) UObject::GObjObjects()->Data[ 88255 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execEndEffect_Parms EndEffect_Parms;
 
@@ -20043,7 +19966,7 @@ void ADunDefPlayerAbility_WheeloFortuna::ClearOutBoosters ( )
 	static UFunction* pFnClearOutBoosters = NULL;
 
 	if ( ! pFnClearOutBoosters )
-		pFnClearOutBoosters = (UFunction*) UObject::GObjObjects()->Data[ 93885 ];
+		pFnClearOutBoosters = (UFunction*) UObject::GObjObjects()->Data[ 88249 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execClearOutBoosters_Parms ClearOutBoosters_Parms;
 
@@ -20060,7 +19983,7 @@ void ADunDefPlayerAbility_WheeloFortuna::HandleEnemyAffects ( struct FGlyphPatte
 	static UFunction* pFnHandleEnemyAffects = NULL;
 
 	if ( ! pFnHandleEnemyAffects )
-		pFnHandleEnemyAffects = (UFunction*) UObject::GObjObjects()->Data[ 93872 ];
+		pFnHandleEnemyAffects = (UFunction*) UObject::GObjObjects()->Data[ 88236 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execHandleEnemyAffects_Parms HandleEnemyAffects_Parms;
 	memcpy ( &HandleEnemyAffects_Parms.thePattern, &thePattern, 0x80 );
@@ -20078,7 +20001,7 @@ void ADunDefPlayerAbility_WheeloFortuna::HandleTowerAffects ( struct FGlyphPatte
 	static UFunction* pFnHandleTowerAffects = NULL;
 
 	if ( ! pFnHandleTowerAffects )
-		pFnHandleTowerAffects = (UFunction*) UObject::GObjObjects()->Data[ 93862 ];
+		pFnHandleTowerAffects = (UFunction*) UObject::GObjObjects()->Data[ 88226 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execHandleTowerAffects_Parms HandleTowerAffects_Parms;
 	memcpy ( &HandleTowerAffects_Parms.thePattern, &thePattern, 0x80 );
@@ -20096,7 +20019,7 @@ void ADunDefPlayerAbility_WheeloFortuna::HandlePlayerAffects ( struct FGlyphPatt
 	static UFunction* pFnHandlePlayerAffects = NULL;
 
 	if ( ! pFnHandlePlayerAffects )
-		pFnHandlePlayerAffects = (UFunction*) UObject::GObjObjects()->Data[ 93845 ];
+		pFnHandlePlayerAffects = (UFunction*) UObject::GObjObjects()->Data[ 88209 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execHandlePlayerAffects_Parms HandlePlayerAffects_Parms;
 	memcpy ( &HandlePlayerAffects_Parms.thePattern, &thePattern, 0x80 );
@@ -20114,7 +20037,7 @@ void ADunDefPlayerAbility_WheeloFortuna::DoTowerUpgrades ( struct FGlyphPattern 
 	static UFunction* pFnDoTowerUpgrades = NULL;
 
 	if ( ! pFnDoTowerUpgrades )
-		pFnDoTowerUpgrades = (UFunction*) UObject::GObjObjects()->Data[ 93831 ];
+		pFnDoTowerUpgrades = (UFunction*) UObject::GObjObjects()->Data[ 88195 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execDoTowerUpgrades_Parms DoTowerUpgrades_Parms;
 	memcpy ( &DoTowerUpgrades_Parms.thePattern, &thePattern, 0x80 );
@@ -20132,7 +20055,7 @@ void ADunDefPlayerAbility_WheeloFortuna::ServerHandleSuccess ( int patternIdx )
 	static UFunction* pFnServerHandleSuccess = NULL;
 
 	if ( ! pFnServerHandleSuccess )
-		pFnServerHandleSuccess = (UFunction*) UObject::GObjObjects()->Data[ 93828 ];
+		pFnServerHandleSuccess = (UFunction*) UObject::GObjObjects()->Data[ 88192 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execServerHandleSuccess_Parms ServerHandleSuccess_Parms;
 	ServerHandleSuccess_Parms.patternIdx = patternIdx;
@@ -20149,7 +20072,7 @@ void ADunDefPlayerAbility_WheeloFortuna::ServerHandleDefault ( )
 	static UFunction* pFnServerHandleDefault = NULL;
 
 	if ( ! pFnServerHandleDefault )
-		pFnServerHandleDefault = (UFunction*) UObject::GObjObjects()->Data[ 93827 ];
+		pFnServerHandleDefault = (UFunction*) UObject::GObjObjects()->Data[ 88191 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execServerHandleDefault_Parms ServerHandleDefault_Parms;
 
@@ -20165,7 +20088,7 @@ void ADunDefPlayerAbility_WheeloFortuna::CancelAbility ( )
 	static UFunction* pFnCancelAbility = NULL;
 
 	if ( ! pFnCancelAbility )
-		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 93826 ];
+		pFnCancelAbility = (UFunction*) UObject::GObjObjects()->Data[ 88190 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execCancelAbility_Parms CancelAbility_Parms;
 
@@ -20181,7 +20104,7 @@ void ADunDefPlayerAbility_WheeloFortuna::SetDoFadeOut ( )
 	static UFunction* pFnSetDoFadeOut = NULL;
 
 	if ( ! pFnSetDoFadeOut )
-		pFnSetDoFadeOut = (UFunction*) UObject::GObjObjects()->Data[ 93825 ];
+		pFnSetDoFadeOut = (UFunction*) UObject::GObjObjects()->Data[ 88189 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execSetDoFadeOut_Parms SetDoFadeOut_Parms;
 
@@ -20197,7 +20120,7 @@ void ADunDefPlayerAbility_WheeloFortuna::FinishSelection ( )
 	static UFunction* pFnFinishSelection = NULL;
 
 	if ( ! pFnFinishSelection )
-		pFnFinishSelection = (UFunction*) UObject::GObjObjects()->Data[ 93822 ];
+		pFnFinishSelection = (UFunction*) UObject::GObjObjects()->Data[ 88186 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execFinishSelection_Parms FinishSelection_Parms;
 
@@ -20215,7 +20138,7 @@ bool ADunDefPlayerAbility_WheeloFortuna::CheckPattern ( struct FGlyphPattern Che
 	static UFunction* pFnCheckPattern = NULL;
 
 	if ( ! pFnCheckPattern )
-		pFnCheckPattern = (UFunction*) UObject::GObjObjects()->Data[ 93810 ];
+		pFnCheckPattern = (UFunction*) UObject::GObjObjects()->Data[ 88174 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execCheckPattern_Parms CheckPattern_Parms;
 	memcpy ( &CheckPattern_Parms.CheckPattern, &CheckPattern, 0x80 );
@@ -20235,7 +20158,7 @@ void ADunDefPlayerAbility_WheeloFortuna::GetBoostedTargets ( TArray< class APawn
 	static UFunction* pFnGetBoostedTargets = NULL;
 
 	if ( ! pFnGetBoostedTargets )
-		pFnGetBoostedTargets = (UFunction*) UObject::GObjObjects()->Data[ 93807 ];
+		pFnGetBoostedTargets = (UFunction*) UObject::GObjObjects()->Data[ 88171 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execGetBoostedTargets_Parms GetBoostedTargets_Parms;
 
@@ -20255,7 +20178,7 @@ void ADunDefPlayerAbility_WheeloFortuna::NotifyOfBoostedRemoval ( class APawn* r
 	static UFunction* pFnNotifyOfBoostedRemoval = NULL;
 
 	if ( ! pFnNotifyOfBoostedRemoval )
-		pFnNotifyOfBoostedRemoval = (UFunction*) UObject::GObjObjects()->Data[ 93805 ];
+		pFnNotifyOfBoostedRemoval = (UFunction*) UObject::GObjObjects()->Data[ 88169 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execNotifyOfBoostedRemoval_Parms NotifyOfBoostedRemoval_Parms;
 	NotifyOfBoostedRemoval_Parms.removedBoostee = removedBoostee;
@@ -20274,7 +20197,7 @@ float ADunDefPlayerAbility_WheeloFortuna::GetPawnBoostAmount ( unsigned char boo
 	static UFunction* pFnGetPawnBoostAmount = NULL;
 
 	if ( ! pFnGetPawnBoostAmount )
-		pFnGetPawnBoostAmount = (UFunction*) UObject::GObjObjects()->Data[ 93799 ];
+		pFnGetPawnBoostAmount = (UFunction*) UObject::GObjObjects()->Data[ 88163 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execGetPawnBoostAmount_Parms GetPawnBoostAmount_Parms;
 	GetPawnBoostAmount_Parms.boostType = boostType;
@@ -20295,7 +20218,7 @@ bool ADunDefPlayerAbility_WheeloFortuna::HasPawnBoostingType ( unsigned char boo
 	static UFunction* pFnHasPawnBoostingType = NULL;
 
 	if ( ! pFnHasPawnBoostingType )
-		pFnHasPawnBoostingType = (UFunction*) UObject::GObjObjects()->Data[ 93795 ];
+		pFnHasPawnBoostingType = (UFunction*) UObject::GObjObjects()->Data[ 88159 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execHasPawnBoostingType_Parms HasPawnBoostingType_Parms;
 	HasPawnBoostingType_Parms.boostType = boostType;
@@ -20314,7 +20237,7 @@ void ADunDefPlayerAbility_WheeloFortuna::UpdateStuns ( )
 	static UFunction* pFnUpdateStuns = NULL;
 
 	if ( ! pFnUpdateStuns )
-		pFnUpdateStuns = (UFunction*) UObject::GObjObjects()->Data[ 93792 ];
+		pFnUpdateStuns = (UFunction*) UObject::GObjObjects()->Data[ 88156 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execUpdateStuns_Parms UpdateStuns_Parms;
 
@@ -20331,7 +20254,7 @@ void ADunDefPlayerAbility_WheeloFortuna::eventAbilityTick ( float DeltaTime )
 	static UFunction* pFnAbilityTick = NULL;
 
 	if ( ! pFnAbilityTick )
-		pFnAbilityTick = (UFunction*) UObject::GObjObjects()->Data[ 93790 ];
+		pFnAbilityTick = (UFunction*) UObject::GObjObjects()->Data[ 88154 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_eventAbilityTick_Parms AbilityTick_Parms;
 	AbilityTick_Parms.DeltaTime = DeltaTime;
@@ -20348,7 +20271,7 @@ void ADunDefPlayerAbility_WheeloFortuna::ForceSelections ( )
 	static UFunction* pFnForceSelections = NULL;
 
 	if ( ! pFnForceSelections )
-		pFnForceSelections = (UFunction*) UObject::GObjObjects()->Data[ 93788 ];
+		pFnForceSelections = (UFunction*) UObject::GObjObjects()->Data[ 88152 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execForceSelections_Parms ForceSelections_Parms;
 
@@ -20364,7 +20287,7 @@ void ADunDefPlayerAbility_WheeloFortuna::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 93764 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 88128 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -20396,7 +20319,7 @@ void ADunDefPlayerAbility_WheeloFortuna::ExecReplicatedFunction ( struct FName F
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 93747 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 88111 ];
 
 	ADunDefPlayerAbility_WheeloFortuna_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -20437,7 +20360,7 @@ bool ADunDefPurifyingBomb::HurtRadius ( float BaseDamage, float DamageRadius, cl
 	static UFunction* pFnHurtRadius = NULL;
 
 	if ( ! pFnHurtRadius )
-		pFnHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 93955 ];
+		pFnHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 88319 ];
 
 	ADunDefPurifyingBomb_execHurtRadius_Parms HurtRadius_Parms;
 	HurtRadius_Parms.BaseDamage = BaseDamage;
@@ -20463,7 +20386,7 @@ void ADunDefTower_Present::UpdateTowerRatingMaterial ( )
 	static UFunction* pFnUpdateTowerRatingMaterial = NULL;
 
 	if ( ! pFnUpdateTowerRatingMaterial )
-		pFnUpdateTowerRatingMaterial = (UFunction*) UObject::GObjObjects()->Data[ 94144 ];
+		pFnUpdateTowerRatingMaterial = (UFunction*) UObject::GObjObjects()->Data[ 88508 ];
 
 	ADunDefTower_Present_execUpdateTowerRatingMaterial_Parms UpdateTowerRatingMaterial_Parms;
 
@@ -20479,7 +20402,7 @@ void ADunDefTower_Present::SpawnDroppedEquipment ( )
 	static UFunction* pFnSpawnDroppedEquipment = NULL;
 
 	if ( ! pFnSpawnDroppedEquipment )
-		pFnSpawnDroppedEquipment = (UFunction*) UObject::GObjObjects()->Data[ 94139 ];
+		pFnSpawnDroppedEquipment = (UFunction*) UObject::GObjObjects()->Data[ 88503 ];
 
 	ADunDefTower_Present_execSpawnDroppedEquipment_Parms SpawnDroppedEquipment_Parms;
 
@@ -20495,7 +20418,7 @@ void ADunDefTower_Present::SpawnManaTokens ( )
 	static UFunction* pFnSpawnManaTokens = NULL;
 
 	if ( ! pFnSpawnManaTokens )
-		pFnSpawnManaTokens = (UFunction*) UObject::GObjObjects()->Data[ 94131 ];
+		pFnSpawnManaTokens = (UFunction*) UObject::GObjObjects()->Data[ 88495 ];
 
 	ADunDefTower_Present_execSpawnManaTokens_Parms SpawnManaTokens_Parms;
 
@@ -20517,7 +20440,7 @@ void ADunDefTower_Present::DrawTowerToolTipStats ( class UCanvas* C, float Opaci
 	static UFunction* pFnDrawTowerToolTipStats = NULL;
 
 	if ( ! pFnDrawTowerToolTipStats )
-		pFnDrawTowerToolTipStats = (UFunction*) UObject::GObjObjects()->Data[ 94122 ];
+		pFnDrawTowerToolTipStats = (UFunction*) UObject::GObjObjects()->Data[ 88486 ];
 
 	ADunDefTower_Present_execDrawTowerToolTipStats_Parms DrawTowerToolTipStats_Parms;
 	DrawTowerToolTipStats_Parms.C = C;
@@ -20547,7 +20470,7 @@ bool ADunDefTower_Present::AllowTowerSpawnAtLoc ( class ADunDefTower* TowerArche
 	static UFunction* pFnAllowTowerSpawnAtLoc = NULL;
 
 	if ( ! pFnAllowTowerSpawnAtLoc )
-		pFnAllowTowerSpawnAtLoc = (UFunction*) UObject::GObjObjects()->Data[ 94110 ];
+		pFnAllowTowerSpawnAtLoc = (UFunction*) UObject::GObjObjects()->Data[ 88474 ];
 
 	ADunDefTower_Present_execAllowTowerSpawnAtLoc_Parms AllowTowerSpawnAtLoc_Parms;
 	AllowTowerSpawnAtLoc_Parms.TowerArchetype = TowerArchetype;
@@ -20569,7 +20492,7 @@ void ADunDefTower_Present::DoActorSpawn ( struct FspawnChances spawnChance )
 	static UFunction* pFnDoActorSpawn = NULL;
 
 	if ( ! pFnDoActorSpawn )
-		pFnDoActorSpawn = (UFunction*) UObject::GObjObjects()->Data[ 94107 ];
+		pFnDoActorSpawn = (UFunction*) UObject::GObjObjects()->Data[ 88471 ];
 
 	ADunDefTower_Present_execDoActorSpawn_Parms DoActorSpawn_Parms;
 	memcpy ( &DoActorSpawn_Parms.spawnChance, &spawnChance, 0x14 );
@@ -20587,7 +20510,7 @@ void ADunDefTower_Present::DoEnemySpawn ( struct FspawnChances spawnChance )
 	static UFunction* pFnDoEnemySpawn = NULL;
 
 	if ( ! pFnDoEnemySpawn )
-		pFnDoEnemySpawn = (UFunction*) UObject::GObjObjects()->Data[ 94100 ];
+		pFnDoEnemySpawn = (UFunction*) UObject::GObjObjects()->Data[ 88464 ];
 
 	ADunDefTower_Present_execDoEnemySpawn_Parms DoEnemySpawn_Parms;
 	memcpy ( &DoEnemySpawn_Parms.spawnChance, &spawnChance, 0x14 );
@@ -20607,7 +20530,7 @@ bool ADunDefTower_Present::DoTowerSpawn ( struct FspawnChances spawnChance, stru
 	static UFunction* pFnDoTowerSpawn = NULL;
 
 	if ( ! pFnDoTowerSpawn )
-		pFnDoTowerSpawn = (UFunction*) UObject::GObjObjects()->Data[ 94094 ];
+		pFnDoTowerSpawn = (UFunction*) UObject::GObjObjects()->Data[ 88458 ];
 
 	ADunDefTower_Present_execDoTowerSpawn_Parms DoTowerSpawn_Parms;
 	memcpy ( &DoTowerSpawn_Parms.spawnChance, &spawnChance, 0x14 );
@@ -20629,7 +20552,7 @@ void ADunDefTower_Present::DoPresentSpawn ( struct FVector HitLocation, unsigned
 	static UFunction* pFnDoPresentSpawn = NULL;
 
 	if ( ! pFnDoPresentSpawn )
-		pFnDoPresentSpawn = (UFunction*) UObject::GObjObjects()->Data[ 94090 ];
+		pFnDoPresentSpawn = (UFunction*) UObject::GObjObjects()->Data[ 88454 ];
 
 	ADunDefTower_Present_execDoPresentSpawn_Parms DoPresentSpawn_Parms;
 	memcpy ( &DoPresentSpawn_Parms.HitLocation, &HitLocation, 0xC );
@@ -20650,7 +20573,7 @@ bool ADunDefTower_Present::PickActor ( int Idx, struct FspawnChances* spawnChanc
 	static UFunction* pFnPickActor = NULL;
 
 	if ( ! pFnPickActor )
-		pFnPickActor = (UFunction*) UObject::GObjObjects()->Data[ 94081 ];
+		pFnPickActor = (UFunction*) UObject::GObjObjects()->Data[ 88445 ];
 
 	ADunDefTower_Present_execPickActor_Parms PickActor_Parms;
 	PickActor_Parms.Idx = Idx;
@@ -20672,7 +20595,7 @@ void ADunDefTower_Present::PickSpawnGroup ( )
 	static UFunction* pFnPickSpawnGroup = NULL;
 
 	if ( ! pFnPickSpawnGroup )
-		pFnPickSpawnGroup = (UFunction*) UObject::GObjObjects()->Data[ 94076 ];
+		pFnPickSpawnGroup = (UFunction*) UObject::GObjObjects()->Data[ 88440 ];
 
 	ADunDefTower_Present_execPickSpawnGroup_Parms PickSpawnGroup_Parms;
 
@@ -20692,7 +20615,7 @@ void ADunDefTower_Present::Died ( class AController* EventInstigator, struct FVe
 	static UFunction* pFnDied = NULL;
 
 	if ( ! pFnDied )
-		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 94070 ];
+		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 88434 ];
 
 	ADunDefTower_Present_execDied_Parms Died_Parms;
 	Died_Parms.EventInstigator = EventInstigator;
@@ -20713,7 +20636,7 @@ void ADunDefTower_Present::ChangedGamePhases ( unsigned long IsCombatPhase )
 	static UFunction* pFnChangedGamePhases = NULL;
 
 	if ( ! pFnChangedGamePhases )
-		pFnChangedGamePhases = (UFunction*) UObject::GObjObjects()->Data[ 94068 ];
+		pFnChangedGamePhases = (UFunction*) UObject::GObjObjects()->Data[ 88432 ];
 
 	ADunDefTower_Present_execChangedGamePhases_Parms ChangedGamePhases_Parms;
 	ChangedGamePhases_Parms.IsCombatPhase = IsCombatPhase;
@@ -20731,7 +20654,7 @@ bool ADunDefTower_ProjectileReflect::IsPhysicalTower ( )
 	static UFunction* pFnIsPhysicalTower = NULL;
 
 	if ( ! pFnIsPhysicalTower )
-		pFnIsPhysicalTower = (UFunction*) UObject::GObjObjects()->Data[ 94846 ];
+		pFnIsPhysicalTower = (UFunction*) UObject::GObjObjects()->Data[ 89187 ];
 
 	ADunDefTower_ProjectileReflect_execIsPhysicalTower_Parms IsPhysicalTower_Parms;
 
@@ -20750,7 +20673,7 @@ int ADunDefTower_ProjectileReflect::GetCostPerReflect ( )
 	static UFunction* pFnGetCostPerReflect = NULL;
 
 	if ( ! pFnGetCostPerReflect )
-		pFnGetCostPerReflect = (UFunction*) UObject::GObjObjects()->Data[ 94844 ];
+		pFnGetCostPerReflect = (UFunction*) UObject::GObjObjects()->Data[ 89185 ];
 
 	ADunDefTower_ProjectileReflect_execGetCostPerReflect_Parms GetCostPerReflect_Parms;
 
@@ -20775,7 +20698,7 @@ void ADunDefTower_ProjectileReflect::eventTakeDamage ( int DamageAmount, class A
 	static UFunction* pFnTakeDamage = NULL;
 
 	if ( ! pFnTakeDamage )
-		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 94836 ];
+		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 89177 ];
 
 	ADunDefTower_ProjectileReflect_eventTakeDamage_Parms TakeDamage_Parms;
 	TakeDamage_Parms.DamageAmount = DamageAmount;
@@ -20799,7 +20722,7 @@ float ADunDefTower_ProjectileReflect::GetAttackDamage ( )
 	static UFunction* pFnGetAttackDamage = NULL;
 
 	if ( ! pFnGetAttackDamage )
-		pFnGetAttackDamage = (UFunction*) UObject::GObjObjects()->Data[ 94834 ];
+		pFnGetAttackDamage = (UFunction*) UObject::GObjObjects()->Data[ 89175 ];
 
 	ADunDefTower_ProjectileReflect_execGetAttackDamage_Parms GetAttackDamage_Parms;
 
@@ -20819,7 +20742,7 @@ void ADunDefTower_ProjectileReflect::DoReflection ( class ADunDefProjectile* ref
 	static UFunction* pFnDoReflection = NULL;
 
 	if ( ! pFnDoReflection )
-		pFnDoReflection = (UFunction*) UObject::GObjObjects()->Data[ 94831 ];
+		pFnDoReflection = (UFunction*) UObject::GObjObjects()->Data[ 89172 ];
 
 	ADunDefTower_ProjectileReflect_execDoReflection_Parms DoReflection_Parms;
 	DoReflection_Parms.reflectedProj = reflectedProj;
@@ -20838,7 +20761,7 @@ void ADunDefTower_ProjectileReflect::KilledTarget ( class UDunDefTargetableInter
 	static UFunction* pFnKilledTarget = NULL;
 
 	if ( ! pFnKilledTarget )
-		pFnKilledTarget = (UFunction*) UObject::GObjObjects()->Data[ 94829 ];
+		pFnKilledTarget = (UFunction*) UObject::GObjObjects()->Data[ 89170 ];
 
 	ADunDefTower_ProjectileReflect_execKilledTarget_Parms KilledTarget_Parms;
 	KilledTarget_Parms.aTarget = aTarget;
@@ -20859,7 +20782,7 @@ void ADunDefTower_ProjectileReflect::eventTouch ( class AActor* Other, class UPr
 	static UFunction* pFnTouch = NULL;
 
 	if ( ! pFnTouch )
-		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 94819 ];
+		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 89160 ];
 
 	ADunDefTower_ProjectileReflect_eventTouch_Parms Touch_Parms;
 	Touch_Parms.Other = Other;
@@ -20880,7 +20803,7 @@ void ADunDefTower_TripTowerBuff::SetBoostMultiplier ( int Idx )
 	static UFunction* pFnSetBoostMultiplier = NULL;
 
 	if ( ! pFnSetBoostMultiplier )
-		pFnSetBoostMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 95202 ];
+		pFnSetBoostMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 89535 ];
 
 	ADunDefTower_TripTowerBuff_execSetBoostMultiplier_Parms SetBoostMultiplier_Parms;
 	SetBoostMultiplier_Parms.Idx = Idx;
@@ -20897,7 +20820,7 @@ void ADunDefTower_TripTowerBuff::RefreshBoosts ( )
 	static UFunction* pFnRefreshBoosts = NULL;
 
 	if ( ! pFnRefreshBoosts )
-		pFnRefreshBoosts = (UFunction*) UObject::GObjObjects()->Data[ 95200 ];
+		pFnRefreshBoosts = (UFunction*) UObject::GObjObjects()->Data[ 89533 ];
 
 	ADunDefTower_TripTowerBuff_execRefreshBoosts_Parms RefreshBoosts_Parms;
 
@@ -20914,7 +20837,7 @@ void ADunDefTower_TripTowerBuff::ScaleForHeroModifiers ( unsigned long IsFirstTi
 	static UFunction* pFnScaleForHeroModifiers = NULL;
 
 	if ( ! pFnScaleForHeroModifiers )
-		pFnScaleForHeroModifiers = (UFunction*) UObject::GObjObjects()->Data[ 95197 ];
+		pFnScaleForHeroModifiers = (UFunction*) UObject::GObjObjects()->Data[ 89530 ];
 
 	ADunDefTower_TripTowerBuff_execScaleForHeroModifiers_Parms ScaleForHeroModifiers_Parms;
 	ScaleForHeroModifiers_Parms.IsFirstTime = IsFirstTime;
@@ -20937,7 +20860,7 @@ void ADunDefTower_TripTowerBuff::DrawTowerToolTipStats ( class UCanvas* C, float
 	static UFunction* pFnDrawTowerToolTipStats = NULL;
 
 	if ( ! pFnDrawTowerToolTipStats )
-		pFnDrawTowerToolTipStats = (UFunction*) UObject::GObjObjects()->Data[ 95189 ];
+		pFnDrawTowerToolTipStats = (UFunction*) UObject::GObjObjects()->Data[ 89522 ];
 
 	ADunDefTower_TripTowerBuff_execDrawTowerToolTipStats_Parms DrawTowerToolTipStats_Parms;
 	DrawTowerToolTipStats_Parms.C = C;
@@ -20963,7 +20886,7 @@ void ADunDefTower_TripTowerBuff::SetUseHealthBarMat ( )
 	static UFunction* pFnSetUseHealthBarMat = NULL;
 
 	if ( ! pFnSetUseHealthBarMat )
-		pFnSetUseHealthBarMat = (UFunction*) UObject::GObjObjects()->Data[ 95188 ];
+		pFnSetUseHealthBarMat = (UFunction*) UObject::GObjObjects()->Data[ 89521 ];
 
 	ADunDefTower_TripTowerBuff_execSetUseHealthBarMat_Parms SetUseHealthBarMat_Parms;
 
@@ -20980,7 +20903,7 @@ struct FString ADunDefTower_TripTowerBuff::GetToolTipText ( )
 	static UFunction* pFnGetToolTipText = NULL;
 
 	if ( ! pFnGetToolTipText )
-		pFnGetToolTipText = (UFunction*) UObject::GObjObjects()->Data[ 95186 ];
+		pFnGetToolTipText = (UFunction*) UObject::GObjObjects()->Data[ 89519 ];
 
 	ADunDefTower_TripTowerBuff_execGetToolTipText_Parms GetToolTipText_Parms;
 
@@ -21000,7 +20923,7 @@ bool ADunDefTower_TripTowerBuff::NeedsRepair ( unsigned long requireFullHealth )
 	static UFunction* pFnNeedsRepair = NULL;
 
 	if ( ! pFnNeedsRepair )
-		pFnNeedsRepair = (UFunction*) UObject::GObjObjects()->Data[ 95183 ];
+		pFnNeedsRepair = (UFunction*) UObject::GObjObjects()->Data[ 89516 ];
 
 	ADunDefTower_TripTowerBuff_execNeedsRepair_Parms NeedsRepair_Parms;
 	NeedsRepair_Parms.requireFullHealth = requireFullHealth;
@@ -21020,7 +20943,7 @@ void ADunDefTower_TripTowerBuff::RemoveTowerEffectIndex ( int Idx )
 	static UFunction* pFnRemoveTowerEffectIndex = NULL;
 
 	if ( ! pFnRemoveTowerEffectIndex )
-		pFnRemoveTowerEffectIndex = (UFunction*) UObject::GObjObjects()->Data[ 95181 ];
+		pFnRemoveTowerEffectIndex = (UFunction*) UObject::GObjObjects()->Data[ 89514 ];
 
 	ADunDefTower_TripTowerBuff_execRemoveTowerEffectIndex_Parms RemoveTowerEffectIndex_Parms;
 	RemoveTowerEffectIndex_Parms.Idx = Idx;
@@ -21038,7 +20961,7 @@ void ADunDefTower_TripTowerBuff::RemoveTowerEffect ( class ADunDefTower* theTowe
 	static UFunction* pFnRemoveTowerEffect = NULL;
 
 	if ( ! pFnRemoveTowerEffect )
-		pFnRemoveTowerEffect = (UFunction*) UObject::GObjObjects()->Data[ 95178 ];
+		pFnRemoveTowerEffect = (UFunction*) UObject::GObjObjects()->Data[ 89511 ];
 
 	ADunDefTower_TripTowerBuff_execRemoveTowerEffect_Parms RemoveTowerEffect_Parms;
 	RemoveTowerEffect_Parms.theTower = theTower;
@@ -21056,7 +20979,7 @@ void ADunDefTower_TripTowerBuff::AddTowerEffect ( class ADunDefTower* theTower )
 	static UFunction* pFnAddTowerEffect = NULL;
 
 	if ( ! pFnAddTowerEffect )
-		pFnAddTowerEffect = (UFunction*) UObject::GObjObjects()->Data[ 95174 ];
+		pFnAddTowerEffect = (UFunction*) UObject::GObjObjects()->Data[ 89507 ];
 
 	ADunDefTower_TripTowerBuff_execAddTowerEffect_Parms AddTowerEffect_Parms;
 	AddTowerEffect_Parms.theTower = theTower;
@@ -21074,7 +20997,7 @@ int ADunDefTower_TripTowerBuff::GetMaxDetonations ( )
 	static UFunction* pFnGetMaxDetonations = NULL;
 
 	if ( ! pFnGetMaxDetonations )
-		pFnGetMaxDetonations = (UFunction*) UObject::GObjObjects()->Data[ 95172 ];
+		pFnGetMaxDetonations = (UFunction*) UObject::GObjObjects()->Data[ 89505 ];
 
 	ADunDefTower_TripTowerBuff_execGetMaxDetonations_Parms GetMaxDetonations_Parms;
 
@@ -21092,7 +21015,7 @@ void ADunDefTower_TripTowerBuff::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 95171 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 89504 ];
 
 	ADunDefTower_TripTowerBuff_eventDestroyed_Parms Destroyed_Parms;
 
@@ -21108,7 +21031,7 @@ void ADunDefTower_TripTowerBuff::RemoveAllBoosts ( )
 	static UFunction* pFnRemoveAllBoosts = NULL;
 
 	if ( ! pFnRemoveAllBoosts )
-		pFnRemoveAllBoosts = (UFunction*) UObject::GObjObjects()->Data[ 95168 ];
+		pFnRemoveAllBoosts = (UFunction*) UObject::GObjObjects()->Data[ 89501 ];
 
 	ADunDefTower_TripTowerBuff_execRemoveAllBoosts_Parms RemoveAllBoosts_Parms;
 
@@ -21124,7 +21047,7 @@ void ADunDefTower_TripTowerBuff::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 95167 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 89500 ];
 
 	ADunDefTower_TripTowerBuff_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -21140,7 +21063,7 @@ void ADunDefTower_TripTowerBuff::ClearDeletedTowers ( )
 	static UFunction* pFnClearDeletedTowers = NULL;
 
 	if ( ! pFnClearDeletedTowers )
-		pFnClearDeletedTowers = (UFunction*) UObject::GObjObjects()->Data[ 95164 ];
+		pFnClearDeletedTowers = (UFunction*) UObject::GObjObjects()->Data[ 89497 ];
 
 	ADunDefTower_TripTowerBuff_execClearDeletedTowers_Parms ClearDeletedTowers_Parms;
 
@@ -21156,7 +21079,7 @@ void ADunDefTower_TripTowerBuff::CheckTowers ( )
 	static UFunction* pFnCheckTowers = NULL;
 
 	if ( ! pFnCheckTowers )
-		pFnCheckTowers = (UFunction*) UObject::GObjObjects()->Data[ 95161 ];
+		pFnCheckTowers = (UFunction*) UObject::GObjObjects()->Data[ 89494 ];
 
 	ADunDefTower_TripTowerBuff_execCheckTowers_Parms CheckTowers_Parms;
 
@@ -21174,7 +21097,7 @@ bool ADunDefTower_TripTowerBuff::CanAffectTower ( class ADunDefTower* towerCheck
 	static UFunction* pFnCanAffectTower = NULL;
 
 	if ( ! pFnCanAffectTower )
-		pFnCanAffectTower = (UFunction*) UObject::GObjObjects()->Data[ 95158 ];
+		pFnCanAffectTower = (UFunction*) UObject::GObjObjects()->Data[ 89491 ];
 
 	ADunDefTower_TripTowerBuff_execCanAffectTower_Parms CanAffectTower_Parms;
 	CanAffectTower_Parms.towerCheck = towerCheck;
@@ -21195,7 +21118,7 @@ void ADunDefTower_TripTowerBuff::DoTracing ( float dt, unsigned long bForceDamag
 	static UFunction* pFnDoTracing = NULL;
 
 	if ( ! pFnDoTracing )
-		pFnDoTracing = (UFunction*) UObject::GObjObjects()->Data[ 95149 ];
+		pFnDoTracing = (UFunction*) UObject::GObjObjects()->Data[ 89482 ];
 
 	ADunDefTower_TripTowerBuff_execDoTracing_Parms DoTracing_Parms;
 	DoTracing_Parms.dt = dt;
@@ -21215,7 +21138,7 @@ float ADunDefTower_TripTowerBuff::GetTowerBoostAmount ( unsigned char boostType 
 	static UFunction* pFnGetTowerBoostAmount = NULL;
 
 	if ( ! pFnGetTowerBoostAmount )
-		pFnGetTowerBoostAmount = (UFunction*) UObject::GObjObjects()->Data[ 95145 ];
+		pFnGetTowerBoostAmount = (UFunction*) UObject::GObjObjects()->Data[ 89478 ];
 
 	ADunDefTower_TripTowerBuff_execGetTowerBoostAmount_Parms GetTowerBoostAmount_Parms;
 	GetTowerBoostAmount_Parms.boostType = boostType;
@@ -21236,7 +21159,7 @@ bool ADunDefTower_TripTowerBuff::HasTowerBoostingType ( unsigned char boostType 
 	static UFunction* pFnHasTowerBoostingType = NULL;
 
 	if ( ! pFnHasTowerBoostingType )
-		pFnHasTowerBoostingType = (UFunction*) UObject::GObjObjects()->Data[ 95142 ];
+		pFnHasTowerBoostingType = (UFunction*) UObject::GObjObjects()->Data[ 89475 ];
 
 	ADunDefTower_TripTowerBuff_execHasTowerBoostingType_Parms HasTowerBoostingType_Parms;
 	HasTowerBoostingType_Parms.boostType = boostType;
@@ -21256,7 +21179,7 @@ class UDunDefTargetableInterface* ADunDefTower_TripTowerBuff::GetTowerBoostingTa
 	static UFunction* pFnGetTowerBoostingTarget = NULL;
 
 	if ( ! pFnGetTowerBoostingTarget )
-		pFnGetTowerBoostingTarget = (UFunction*) UObject::GObjObjects()->Data[ 95140 ];
+		pFnGetTowerBoostingTarget = (UFunction*) UObject::GObjObjects()->Data[ 89473 ];
 
 	ADunDefTower_TripTowerBuff_execGetTowerBoostingTarget_Parms GetTowerBoostingTarget_Parms;
 
@@ -21290,7 +21213,7 @@ void ADunDefTower_TripTowerBuff::ExecReplicatedFunction ( struct FName FunctionN
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 95123 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 89456 ];
 
 	ADunDefTower_TripTowerBuff_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -21324,7 +21247,7 @@ void ADunDefTurkey::UpdateDifficultyValues ( unsigned long UpdateMaterial, unsig
 	static UFunction* pFnUpdateDifficultyValues = NULL;
 
 	if ( ! pFnUpdateDifficultyValues )
-		pFnUpdateDifficultyValues = (UFunction*) UObject::GObjObjects()->Data[ 95245 ];
+		pFnUpdateDifficultyValues = (UFunction*) UObject::GObjObjects()->Data[ 89578 ];
 
 	ADunDefTurkey_execUpdateDifficultyValues_Parms UpdateDifficultyValues_Parms;
 	UpdateDifficultyValues_Parms.UpdateMaterial = UpdateMaterial;
@@ -21345,7 +21268,7 @@ void ADunDefTurkey::eventBump ( class AActor* Other, class UPrimitiveComponent* 
 	static UFunction* pFnBump = NULL;
 
 	if ( ! pFnBump )
-		pFnBump = (UFunction*) UObject::GObjObjects()->Data[ 95237 ];
+		pFnBump = (UFunction*) UObject::GObjObjects()->Data[ 89570 ];
 
 	ADunDefTurkey_eventBump_Parms Bump_Parms;
 	Bump_Parms.Other = Other;
@@ -21364,7 +21287,7 @@ void ADunDefTurkey::StopFlee ( )
 	static UFunction* pFnStopFlee = NULL;
 
 	if ( ! pFnStopFlee )
-		pFnStopFlee = (UFunction*) UObject::GObjObjects()->Data[ 95236 ];
+		pFnStopFlee = (UFunction*) UObject::GObjObjects()->Data[ 89569 ];
 
 	ADunDefTurkey_execStopFlee_Parms StopFlee_Parms;
 
@@ -21380,7 +21303,7 @@ void ADunDefTurkey::PlayFleeSound ( )
 	static UFunction* pFnPlayFleeSound = NULL;
 
 	if ( ! pFnPlayFleeSound )
-		pFnPlayFleeSound = (UFunction*) UObject::GObjObjects()->Data[ 95235 ];
+		pFnPlayFleeSound = (UFunction*) UObject::GObjObjects()->Data[ 89568 ];
 
 	ADunDefTurkey_execPlayFleeSound_Parms PlayFleeSound_Parms;
 
@@ -21396,7 +21319,7 @@ void ADunDefTurkey::StartFlee ( )
 	static UFunction* pFnStartFlee = NULL;
 
 	if ( ! pFnStartFlee )
-		pFnStartFlee = (UFunction*) UObject::GObjObjects()->Data[ 95234 ];
+		pFnStartFlee = (UFunction*) UObject::GObjObjects()->Data[ 89567 ];
 
 	ADunDefTurkey_execStartFlee_Parms StartFlee_Parms;
 
@@ -21414,7 +21337,7 @@ void ADunDefTurkey::SetGroundSpeed ( float NewSpeed, unsigned long bUseDifficult
 	static UFunction* pFnSetGroundSpeed = NULL;
 
 	if ( ! pFnSetGroundSpeed )
-		pFnSetGroundSpeed = (UFunction*) UObject::GObjObjects()->Data[ 95231 ];
+		pFnSetGroundSpeed = (UFunction*) UObject::GObjObjects()->Data[ 89564 ];
 
 	ADunDefTurkey_execSetGroundSpeed_Parms SetGroundSpeed_Parms;
 	SetGroundSpeed_Parms.NewSpeed = NewSpeed;
@@ -21436,7 +21359,7 @@ bool ADunDefTurkey::Died ( class AController* Killer, class UClass* DamageType, 
 	static UFunction* pFnDied = NULL;
 
 	if ( ! pFnDied )
-		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 95226 ];
+		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 89559 ];
 
 	ADunDefTurkey_execDied_Parms Died_Parms;
 	Died_Parms.Killer = Killer;
@@ -21457,7 +21380,7 @@ void ADunDefTurkey::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 95225 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 89558 ];
 
 	ADunDefTurkey_eventDestroyed_Parms Destroyed_Parms;
 
@@ -21474,7 +21397,7 @@ void ADunDefTurkey::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 95223 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 89556 ];
 
 	ADunDefTurkey_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -21492,7 +21415,7 @@ bool ADunDefTurkeyController::WantsHurtAnimation ( )
 	static UFunction* pFnWantsHurtAnimation = NULL;
 
 	if ( ! pFnWantsHurtAnimation )
-		pFnWantsHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 95288 ];
+		pFnWantsHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 89621 ];
 
 	ADunDefTurkeyController_execWantsHurtAnimation_Parms WantsHurtAnimation_Parms;
 
@@ -21516,7 +21439,7 @@ void ADunDefTurkeyController::NotifyTakeHitEX ( class AController* InstigatedBy,
 	static UFunction* pFnNotifyTakeHitEX = NULL;
 
 	if ( ! pFnNotifyTakeHitEX )
-		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 95281 ];
+		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 89614 ];
 
 	ADunDefTurkeyController_execNotifyTakeHitEX_Parms NotifyTakeHitEX_Parms;
 	NotifyTakeHitEX_Parms.InstigatedBy = InstigatedBy;
@@ -21539,7 +21462,7 @@ struct FVector ADunDefTurkeyController::GetWanderPoint ( )
 	static UFunction* pFnGetWanderPoint = NULL;
 
 	if ( ! pFnGetWanderPoint )
-		pFnGetWanderPoint = (UFunction*) UObject::GObjObjects()->Data[ 95277 ];
+		pFnGetWanderPoint = (UFunction*) UObject::GObjObjects()->Data[ 89610 ];
 
 	ADunDefTurkeyController_execGetWanderPoint_Parms GetWanderPoint_Parms;
 
@@ -21559,7 +21482,7 @@ bool ADunDefTurkeyController::DoFlee ( class ADunDefPlayer* fleeFrom )
 	static UFunction* pFnDoFlee = NULL;
 
 	if ( ! pFnDoFlee )
-		pFnDoFlee = (UFunction*) UObject::GObjObjects()->Data[ 95242 ];
+		pFnDoFlee = (UFunction*) UObject::GObjObjects()->Data[ 89575 ];
 
 	ADunDefTurkeyController_execDoFlee_Parms DoFlee_Parms;
 	DoFlee_Parms.fleeFrom = fleeFrom;
@@ -21579,7 +21502,7 @@ bool ADunDefTurkeyController::CheckPlayers ( )
 	static UFunction* pFnCheckPlayers = NULL;
 
 	if ( ! pFnCheckPlayers )
-		pFnCheckPlayers = (UFunction*) UObject::GObjObjects()->Data[ 95269 ];
+		pFnCheckPlayers = (UFunction*) UObject::GObjObjects()->Data[ 89602 ];
 
 	ADunDefTurkeyController_execCheckPlayers_Parms CheckPlayers_Parms;
 
@@ -21597,7 +21520,7 @@ void ADunDefTurkeyController::TimeOutFlee ( )
 	static UFunction* pFnTimeOutFlee = NULL;
 
 	if ( ! pFnTimeOutFlee )
-		pFnTimeOutFlee = (UFunction*) UObject::GObjObjects()->Data[ 95268 ];
+		pFnTimeOutFlee = (UFunction*) UObject::GObjObjects()->Data[ 89601 ];
 
 	ADunDefTurkeyController_execTimeOutFlee_Parms TimeOutFlee_Parms;
 
@@ -21613,7 +21536,7 @@ void AGameInfo_AroundTheWorld::InitGameReplicationInfo ( )
 	static UFunction* pFnInitGameReplicationInfo = NULL;
 
 	if ( ! pFnInitGameReplicationInfo )
-		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 95294 ];
+		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 89627 ];
 
 	AGameInfo_AroundTheWorld_execInitGameReplicationInfo_Parms InitGameReplicationInfo_Parms;
 
@@ -21630,7 +21553,7 @@ void AGameInfo_AroundTheWorld::DoWaveSkipping ( unsigned long bAllowArbritraryWa
 	static UFunction* pFnDoWaveSkipping = NULL;
 
 	if ( ! pFnDoWaveSkipping )
-		pFnDoWaveSkipping = (UFunction*) UObject::GObjObjects()->Data[ 95292 ];
+		pFnDoWaveSkipping = (UFunction*) UObject::GObjObjects()->Data[ 89625 ];
 
 	AGameInfo_AroundTheWorld_execDoWaveSkipping_Parms DoWaveSkipping_Parms;
 	DoWaveSkipping_Parms.bAllowArbritraryWaveSkipping = bAllowArbritraryWaveSkipping;
@@ -21647,7 +21570,7 @@ void AGameInfo_Assault::InitGameReplicationInfo ( )
 	static UFunction* pFnInitGameReplicationInfo = NULL;
 
 	if ( ! pFnInitGameReplicationInfo )
-		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 95302 ];
+		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 89635 ];
 
 	AGameInfo_Assault_execInitGameReplicationInfo_Parms InitGameReplicationInfo_Parms;
 
@@ -21664,7 +21587,7 @@ void AGameInfo_Assault::DoWaveSkipping ( unsigned long bAllowArbritraryWaveSkipp
 	static UFunction* pFnDoWaveSkipping = NULL;
 
 	if ( ! pFnDoWaveSkipping )
-		pFnDoWaveSkipping = (UFunction*) UObject::GObjObjects()->Data[ 95300 ];
+		pFnDoWaveSkipping = (UFunction*) UObject::GObjObjects()->Data[ 89633 ];
 
 	AGameInfo_Assault_execDoWaveSkipping_Parms DoWaveSkipping_Parms;
 	DoWaveSkipping_Parms.bAllowArbritraryWaveSkipping = bAllowArbritraryWaveSkipping;
@@ -21681,7 +21604,7 @@ void AGameInfo_Assault::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 95299 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 89632 ];
 
 	AGameInfo_Assault_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -21698,7 +21621,7 @@ void AGameInfo_Assault::RestartPlayer ( class AController* NewPlayer )
 	static UFunction* pFnRestartPlayer = NULL;
 
 	if ( ! pFnRestartPlayer )
-		pFnRestartPlayer = (UFunction*) UObject::GObjObjects()->Data[ 95297 ];
+		pFnRestartPlayer = (UFunction*) UObject::GObjObjects()->Data[ 89630 ];
 
 	AGameInfo_Assault_execRestartPlayer_Parms RestartPlayer_Parms;
 	RestartPlayer_Parms.NewPlayer = NewPlayer;
@@ -21716,7 +21639,7 @@ void AGameInfo_Chicken::RestartPlayer ( class AController* NewPlayer )
 	static UFunction* pFnRestartPlayer = NULL;
 
 	if ( ! pFnRestartPlayer )
-		pFnRestartPlayer = (UFunction*) UObject::GObjObjects()->Data[ 95305 ];
+		pFnRestartPlayer = (UFunction*) UObject::GObjObjects()->Data[ 89638 ];
 
 	AGameInfo_Chicken_execRestartPlayer_Parms RestartPlayer_Parms;
 	RestartPlayer_Parms.NewPlayer = NewPlayer;
@@ -21737,7 +21660,7 @@ void AGameInfo_GoldenTokens::Killed ( class AController* Killer, class AControll
 	static UFunction* pFnKilled = NULL;
 
 	if ( ! pFnKilled )
-		pFnKilled = (UFunction*) UObject::GObjObjects()->Data[ 95313 ];
+		pFnKilled = (UFunction*) UObject::GObjObjects()->Data[ 89646 ];
 
 	AGameInfo_GoldenTokens_execKilled_Parms Killed_Parms;
 	Killed_Parms.Killer = Killer;
@@ -21758,7 +21681,7 @@ void AGameInfo_KillEnemiesTimeLimit::RestartPlayer ( class AController* NewPlaye
 	static UFunction* pFnRestartPlayer = NULL;
 
 	if ( ! pFnRestartPlayer )
-		pFnRestartPlayer = (UFunction*) UObject::GObjObjects()->Data[ 95322 ];
+		pFnRestartPlayer = (UFunction*) UObject::GObjObjects()->Data[ 89655 ];
 
 	AGameInfo_KillEnemiesTimeLimit_execRestartPlayer_Parms RestartPlayer_Parms;
 	RestartPlayer_Parms.NewPlayer = NewPlayer;
@@ -21776,7 +21699,7 @@ void AGameInfo_KillEnemiesTimeLimit::DoWaveSkipping ( unsigned long bAllowArbrit
 	static UFunction* pFnDoWaveSkipping = NULL;
 
 	if ( ! pFnDoWaveSkipping )
-		pFnDoWaveSkipping = (UFunction*) UObject::GObjObjects()->Data[ 95320 ];
+		pFnDoWaveSkipping = (UFunction*) UObject::GObjObjects()->Data[ 89653 ];
 
 	AGameInfo_KillEnemiesTimeLimit_execDoWaveSkipping_Parms DoWaveSkipping_Parms;
 	DoWaveSkipping_Parms.bAllowArbritraryWaveSkipping = bAllowArbritraryWaveSkipping;
@@ -21795,7 +21718,7 @@ void AGameInfo_KillEnemiesTimeLimit_Uber::AddObjectiveScore ( class APlayerRepli
 	static UFunction* pFnAddObjectiveScore = NULL;
 
 	if ( ! pFnAddObjectiveScore )
-		pFnAddObjectiveScore = (UFunction*) UObject::GObjObjects()->Data[ 95337 ];
+		pFnAddObjectiveScore = (UFunction*) UObject::GObjObjects()->Data[ 89668 ];
 
 	AGameInfo_KillEnemiesTimeLimit_Uber_execAddObjectiveScore_Parms AddObjectiveScore_Parms;
 	AddObjectiveScore_Parms.Scorer = Scorer;
@@ -21815,7 +21738,7 @@ void AGameInfo_KillEnemiesTimeLimit_Uber::ScoreKill ( class AController* Killer,
 	static UFunction* pFnScoreKill = NULL;
 
 	if ( ! pFnScoreKill )
-		pFnScoreKill = (UFunction*) UObject::GObjObjects()->Data[ 95333 ];
+		pFnScoreKill = (UFunction*) UObject::GObjObjects()->Data[ 89664 ];
 
 	AGameInfo_KillEnemiesTimeLimit_Uber_execScoreKill_Parms ScoreKill_Parms;
 	ScoreKill_Parms.Killer = Killer;
@@ -21837,7 +21760,7 @@ void AGameInfo_KillEnemiesTimeLimit_Uber::Killed ( class AController* Killer, cl
 	static UFunction* pFnKilled = NULL;
 
 	if ( ! pFnKilled )
-		pFnKilled = (UFunction*) UObject::GObjObjects()->Data[ 95328 ];
+		pFnKilled = (UFunction*) UObject::GObjObjects()->Data[ 89659 ];
 
 	AGameInfo_KillEnemiesTimeLimit_Uber_execKilled_Parms Killed_Parms;
 	Killed_Parms.Killer = Killer;
@@ -21846,25 +21769,6 @@ void AGameInfo_KillEnemiesTimeLimit_Uber::Killed ( class AController* Killer, cl
 	Killed_Parms.DamageType = DamageType;
 
 	this->ProcessEvent ( pFnKilled, &Killed_Parms, NULL );
-};
-
-// Function DunDefSpecial.GameInfo_KillEnemiesTimeLimit_Uber.CalculatedNetSpeed
-// [0x00020002] 
-// Parameters infos:
-// int                            ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-int AGameInfo_KillEnemiesTimeLimit_Uber::CalculatedNetSpeed ( )
-{
-	static UFunction* pFnCalculatedNetSpeed = NULL;
-
-	if ( ! pFnCalculatedNetSpeed )
-		pFnCalculatedNetSpeed = (UFunction*) UObject::GObjObjects()->Data[ 95326 ];
-
-	AGameInfo_KillEnemiesTimeLimit_Uber_execCalculatedNetSpeed_Parms CalculatedNetSpeed_Parms;
-
-	this->ProcessEvent ( pFnCalculatedNetSpeed, &CalculatedNetSpeed_Parms, NULL );
-
-	return CalculatedNetSpeed_Parms.ReturnValue;
 };
 
 // Function DunDefSpecial.GameInfo_NoTowers.InitGameReplicationInfo
@@ -21876,7 +21780,7 @@ void AGameInfo_NoTowers::InitGameReplicationInfo ( )
 	static UFunction* pFnInitGameReplicationInfo = NULL;
 
 	if ( ! pFnInitGameReplicationInfo )
-		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 95344 ];
+		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 89675 ];
 
 	AGameInfo_NoTowers_execInitGameReplicationInfo_Parms InitGameReplicationInfo_Parms;
 
@@ -21892,7 +21796,7 @@ void AGameInfo_OgreAlly::InitGameReplicationInfo ( )
 	static UFunction* pFnInitGameReplicationInfo = NULL;
 
 	if ( ! pFnInitGameReplicationInfo )
-		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 95348 ];
+		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 89679 ];
 
 	AGameInfo_OgreAlly_execInitGameReplicationInfo_Parms InitGameReplicationInfo_Parms;
 
@@ -21908,68 +21812,11 @@ void AGameInfo_RainingGoblins::InitGameReplicationInfo ( )
 	static UFunction* pFnInitGameReplicationInfo = NULL;
 
 	if ( ! pFnInitGameReplicationInfo )
-		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 95351 ];
+		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 89682 ];
 
 	AGameInfo_RainingGoblins_execInitGameReplicationInfo_Parms InitGameReplicationInfo_Parms;
 
 	this->ProcessEvent ( pFnInitGameReplicationInfo, &InitGameReplicationInfo_Parms, NULL );
-};
-
-// Function DunDefSpecial.GameInfo_UberAssault.CalculatedNetSpeed
-// [0x00020002] 
-// Parameters infos:
-// int                            ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-int AGameInfo_UberAssault::CalculatedNetSpeed ( )
-{
-	static UFunction* pFnCalculatedNetSpeed = NULL;
-
-	if ( ! pFnCalculatedNetSpeed )
-		pFnCalculatedNetSpeed = (UFunction*) UObject::GObjObjects()->Data[ 95354 ];
-
-	AGameInfo_UberAssault_execCalculatedNetSpeed_Parms CalculatedNetSpeed_Parms;
-
-	this->ProcessEvent ( pFnCalculatedNetSpeed, &CalculatedNetSpeed_Parms, NULL );
-
-	return CalculatedNetSpeed_Parms.ReturnValue;
-};
-
-// Function DunDefSpecial.GameInfo_UberDefense.CalculatedNetSpeed
-// [0x00020002] 
-// Parameters infos:
-// int                            ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-int AGameInfo_UberDefense::CalculatedNetSpeed ( )
-{
-	static UFunction* pFnCalculatedNetSpeed = NULL;
-
-	if ( ! pFnCalculatedNetSpeed )
-		pFnCalculatedNetSpeed = (UFunction*) UObject::GObjObjects()->Data[ 95358 ];
-
-	AGameInfo_UberDefense_execCalculatedNetSpeed_Parms CalculatedNetSpeed_Parms;
-
-	this->ProcessEvent ( pFnCalculatedNetSpeed, &CalculatedNetSpeed_Parms, NULL );
-
-	return CalculatedNetSpeed_Parms.ReturnValue;
-};
-
-// Function DunDefSpecial.GameInfo_VDay2.CalculatedNetSpeed
-// [0x00020002] 
-// Parameters infos:
-// int                            ReturnValue                    ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-
-int AGameInfo_VDay2::CalculatedNetSpeed ( )
-{
-	static UFunction* pFnCalculatedNetSpeed = NULL;
-
-	if ( ! pFnCalculatedNetSpeed )
-		pFnCalculatedNetSpeed = (UFunction*) UObject::GObjObjects()->Data[ 95385 ];
-
-	AGameInfo_VDay2_execCalculatedNetSpeed_Parms CalculatedNetSpeed_Parms;
-
-	this->ProcessEvent ( pFnCalculatedNetSpeed, &CalculatedNetSpeed_Parms, NULL );
-
-	return CalculatedNetSpeed_Parms.ReturnValue;
 };
 
 // Function DunDefSpecial.GameInfo_VDay2.PairMatched
@@ -21983,7 +21830,7 @@ void AGameInfo_VDay2::PairMatched ( class ADunDefEnemy* Boy, class ADunDefEnemy*
 	static UFunction* pFnPairMatched = NULL;
 
 	if ( ! pFnPairMatched )
-		pFnPairMatched = (UFunction*) UObject::GObjObjects()->Data[ 95382 ];
+		pFnPairMatched = (UFunction*) UObject::GObjObjects()->Data[ 89709 ];
 
 	AGameInfo_VDay2_execPairMatched_Parms PairMatched_Parms;
 	PairMatched_Parms.Boy = Boy;
@@ -22002,7 +21849,7 @@ void AGameInfo_VDay2::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 95376 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 89703 ];
 
 	AGameInfo_VDay2_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -22020,7 +21867,7 @@ void AGameInfo_VDay2::EnemyDied ( class ADunDefEnemy* anEnemy )
 	static UFunction* pFnEnemyDied = NULL;
 
 	if ( ! pFnEnemyDied )
-		pFnEnemyDied = (UFunction*) UObject::GObjObjects()->Data[ 95374 ];
+		pFnEnemyDied = (UFunction*) UObject::GObjObjects()->Data[ 89701 ];
 
 	AGameInfo_VDay2_execEnemyDied_Parms EnemyDied_Parms;
 	EnemyDied_Parms.anEnemy = anEnemy;
@@ -22042,7 +21889,7 @@ class ADunDefEnemy* AGameInfo_VDay2::WaveSpawnerCreateEnemy ( class UDunDef_SeqA
 	static UFunction* pFnWaveSpawnerCreateEnemy = NULL;
 
 	if ( ! pFnWaveSpawnerCreateEnemy )
-		pFnWaveSpawnerCreateEnemy = (UFunction*) UObject::GObjObjects()->Data[ 95366 ];
+		pFnWaveSpawnerCreateEnemy = (UFunction*) UObject::GObjObjects()->Data[ 89693 ];
 
 	AGameInfo_VDay2_execWaveSpawnerCreateEnemy_Parms WaveSpawnerCreateEnemy_Parms;
 	WaveSpawnerCreateEnemy_Parms.aSpawner = aSpawner;
@@ -22064,7 +21911,7 @@ void AGameInfo_Wizardry::MageCheck ( )
 	static UFunction* pFnMageCheck = NULL;
 
 	if ( ! pFnMageCheck )
-		pFnMageCheck = (UFunction*) UObject::GObjObjects()->Data[ 95394 ];
+		pFnMageCheck = (UFunction*) UObject::GObjObjects()->Data[ 89718 ];
 
 	AGameInfo_Wizardry_execMageCheck_Parms MageCheck_Parms;
 
@@ -22080,7 +21927,7 @@ void AGameInfo_Wizardry::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 95392 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 89716 ];
 
 	AGameInfo_Wizardry_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -22096,7 +21943,7 @@ void AGameInfo_ZippyTerror::InitGameReplicationInfo ( )
 	static UFunction* pFnInitGameReplicationInfo = NULL;
 
 	if ( ! pFnInitGameReplicationInfo )
-		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 95402 ];
+		pFnInitGameReplicationInfo = (UFunction*) UObject::GObjObjects()->Data[ 89724 ];
 
 	AGameInfo_ZippyTerror_execInitGameReplicationInfo_Parms InitGameReplicationInfo_Parms;
 
@@ -22112,7 +21959,7 @@ void ASnowManBoss::StartMovement ( )
 	static UFunction* pFnStartMovement = NULL;
 
 	if ( ! pFnStartMovement )
-		pFnStartMovement = (UFunction*) UObject::GObjObjects()->Data[ 95456 ];
+		pFnStartMovement = (UFunction*) UObject::GObjObjects()->Data[ 89778 ];
 
 	ASnowManBoss_execStartMovement_Parms StartMovement_Parms;
 
@@ -22128,7 +21975,7 @@ void ASnowManBoss::StopMovement ( )
 	static UFunction* pFnStopMovement = NULL;
 
 	if ( ! pFnStopMovement )
-		pFnStopMovement = (UFunction*) UObject::GObjObjects()->Data[ 95455 ];
+		pFnStopMovement = (UFunction*) UObject::GObjObjects()->Data[ 89777 ];
 
 	ASnowManBoss_execStopMovement_Parms StopMovement_Parms;
 
@@ -22148,7 +21995,7 @@ bool ASnowManBoss::Died ( class AController* Killer, class UClass* DamageType, s
 	static UFunction* pFnDied = NULL;
 
 	if ( ! pFnDied )
-		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 95450 ];
+		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 89772 ];
 
 	ASnowManBoss_execDied_Parms Died_Parms;
 	Died_Parms.Killer = Killer;
@@ -22169,7 +22016,7 @@ void ASnowManBoss::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 95449 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 89771 ];
 
 	ASnowManBoss_eventDestroyed_Parms Destroyed_Parms;
 
@@ -22185,7 +22032,7 @@ void ASnowManBoss::eventDoStompDamage ( )
 	static UFunction* pFnDoStompDamage = NULL;
 
 	if ( ! pFnDoStompDamage )
-		pFnDoStompDamage = (UFunction*) UObject::GObjObjects()->Data[ 95448 ];
+		pFnDoStompDamage = (UFunction*) UObject::GObjObjects()->Data[ 89770 ];
 
 	ASnowManBoss_eventDoStompDamage_Parms DoStompDamage_Parms;
 
@@ -22201,7 +22048,7 @@ void ASnowManBoss::eventDoStomp ( )
 	static UFunction* pFnDoStomp = NULL;
 
 	if ( ! pFnDoStomp )
-		pFnDoStomp = (UFunction*) UObject::GObjObjects()->Data[ 95443 ];
+		pFnDoStomp = (UFunction*) UObject::GObjObjects()->Data[ 89765 ];
 
 	ASnowManBoss_eventDoStomp_Parms DoStomp_Parms;
 
@@ -22217,7 +22064,7 @@ void ASnowManBoss::eventDoPeck ( )
 	static UFunction* pFnDoPeck = NULL;
 
 	if ( ! pFnDoPeck )
-		pFnDoPeck = (UFunction*) UObject::GObjObjects()->Data[ 95438 ];
+		pFnDoPeck = (UFunction*) UObject::GObjObjects()->Data[ 89760 ];
 
 	ASnowManBoss_eventDoPeck_Parms DoPeck_Parms;
 
@@ -22234,7 +22081,7 @@ void ASnowManBoss::GetPeckLoc ( struct FVector* Loc )
 	static UFunction* pFnGetPeckLoc = NULL;
 
 	if ( ! pFnGetPeckLoc )
-		pFnGetPeckLoc = (UFunction*) UObject::GObjObjects()->Data[ 95435 ];
+		pFnGetPeckLoc = (UFunction*) UObject::GObjObjects()->Data[ 89757 ];
 
 	ASnowManBoss_execGetPeckLoc_Parms GetPeckLoc_Parms;
 
@@ -22253,7 +22100,7 @@ void ASnowManBoss::eventSnowBallRight ( )
 	static UFunction* pFnSnowBallRight = NULL;
 
 	if ( ! pFnSnowBallRight )
-		pFnSnowBallRight = (UFunction*) UObject::GObjObjects()->Data[ 95434 ];
+		pFnSnowBallRight = (UFunction*) UObject::GObjObjects()->Data[ 89756 ];
 
 	ASnowManBoss_eventSnowBallRight_Parms SnowBallRight_Parms;
 
@@ -22269,7 +22116,7 @@ void ASnowManBoss::eventSnowBallLeft ( )
 	static UFunction* pFnSnowBallLeft = NULL;
 
 	if ( ! pFnSnowBallLeft )
-		pFnSnowBallLeft = (UFunction*) UObject::GObjObjects()->Data[ 95432 ];
+		pFnSnowBallLeft = (UFunction*) UObject::GObjObjects()->Data[ 89754 ];
 
 	ASnowManBoss_eventSnowBallLeft_Parms SnowBallLeft_Parms;
 
@@ -22287,7 +22134,7 @@ void ASnowManBoss::SpawnSnowShootEffect ( struct FVector SpawnLoc, struct FRotat
 	static UFunction* pFnSpawnSnowShootEffect = NULL;
 
 	if ( ! pFnSpawnSnowShootEffect )
-		pFnSpawnSnowShootEffect = (UFunction*) UObject::GObjObjects()->Data[ 95429 ];
+		pFnSpawnSnowShootEffect = (UFunction*) UObject::GObjObjects()->Data[ 89751 ];
 
 	ASnowManBoss_execSpawnSnowShootEffect_Parms SpawnSnowShootEffect_Parms;
 	memcpy ( &SpawnSnowShootEffect_Parms.SpawnLoc, &SpawnLoc, 0xC );
@@ -22308,7 +22155,7 @@ void ASnowManBoss::GetProjectileSpawnLoc ( unsigned long bIsLeftSocket, struct F
 	static UFunction* pFnGetProjectileSpawnLoc = NULL;
 
 	if ( ! pFnGetProjectileSpawnLoc )
-		pFnGetProjectileSpawnLoc = (UFunction*) UObject::GObjObjects()->Data[ 95425 ];
+		pFnGetProjectileSpawnLoc = (UFunction*) UObject::GObjObjects()->Data[ 89747 ];
 
 	ASnowManBoss_execGetProjectileSpawnLoc_Parms GetProjectileSpawnLoc_Parms;
 	GetProjectileSpawnLoc_Parms.bIsLeftSocket = bIsLeftSocket;
@@ -22332,7 +22179,7 @@ float ASnowManBoss::PlayStomp ( )
 	static UFunction* pFnPlayStomp = NULL;
 
 	if ( ! pFnPlayStomp )
-		pFnPlayStomp = (UFunction*) UObject::GObjObjects()->Data[ 95423 ];
+		pFnPlayStomp = (UFunction*) UObject::GObjObjects()->Data[ 89745 ];
 
 	ASnowManBoss_execPlayStomp_Parms PlayStomp_Parms;
 
@@ -22351,7 +22198,7 @@ float ASnowManBoss::PlaySnowShoot ( )
 	static UFunction* pFnPlaySnowShoot = NULL;
 
 	if ( ! pFnPlaySnowShoot )
-		pFnPlaySnowShoot = (UFunction*) UObject::GObjObjects()->Data[ 95421 ];
+		pFnPlaySnowShoot = (UFunction*) UObject::GObjObjects()->Data[ 89743 ];
 
 	ASnowManBoss_execPlaySnowShoot_Parms PlaySnowShoot_Parms;
 
@@ -22370,7 +22217,7 @@ float ASnowManBoss::PlayPeckAttack ( )
 	static UFunction* pFnPlayPeckAttack = NULL;
 
 	if ( ! pFnPlayPeckAttack )
-		pFnPlayPeckAttack = (UFunction*) UObject::GObjObjects()->Data[ 95419 ];
+		pFnPlayPeckAttack = (UFunction*) UObject::GObjObjects()->Data[ 89741 ];
 
 	ASnowManBoss_execPlayPeckAttack_Parms PlayPeckAttack_Parms;
 
@@ -22388,7 +22235,7 @@ void ASnowManBoss::PlaySpawnIn ( )
 	static UFunction* pFnPlaySpawnIn = NULL;
 
 	if ( ! pFnPlaySpawnIn )
-		pFnPlaySpawnIn = (UFunction*) UObject::GObjObjects()->Data[ 95418 ];
+		pFnPlaySpawnIn = (UFunction*) UObject::GObjObjects()->Data[ 89740 ];
 
 	ASnowManBoss_execPlaySpawnIn_Parms PlaySpawnIn_Parms;
 
@@ -22404,7 +22251,7 @@ void ASnowManBoss::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 95417 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 89739 ];
 
 	ASnowManBoss_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -22420,7 +22267,7 @@ void ASnowManBossController::CheckForCustomAttacks ( )
 	static UFunction* pFnCheckForCustomAttacks = NULL;
 
 	if ( ! pFnCheckForCustomAttacks )
-		pFnCheckForCustomAttacks = (UFunction*) UObject::GObjObjects()->Data[ 95535 ];
+		pFnCheckForCustomAttacks = (UFunction*) UObject::GObjObjects()->Data[ 89857 ];
 
 	ASnowManBossController_execCheckForCustomAttacks_Parms CheckForCustomAttacks_Parms;
 
@@ -22437,7 +22284,7 @@ bool ASnowManBossController::WantsHurtAnimation ( )
 	static UFunction* pFnWantsHurtAnimation = NULL;
 
 	if ( ! pFnWantsHurtAnimation )
-		pFnWantsHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 95533 ];
+		pFnWantsHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 89855 ];
 
 	ASnowManBossController_execWantsHurtAnimation_Parms WantsHurtAnimation_Parms;
 
@@ -22461,7 +22308,7 @@ void ASnowManBossController::NotifyTakeHitEX ( class AController* InstigatedBy, 
 	static UFunction* pFnNotifyTakeHitEX = NULL;
 
 	if ( ! pFnNotifyTakeHitEX )
-		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 95526 ];
+		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 89848 ];
 
 	ASnowManBossController_execNotifyTakeHitEX_Parms NotifyTakeHitEX_Parms;
 	NotifyTakeHitEX_Parms.InstigatedBy = InstigatedBy;
@@ -22484,7 +22331,7 @@ bool ASnowManBossController::CheckStomp ( )
 	static UFunction* pFnCheckStomp = NULL;
 
 	if ( ! pFnCheckStomp )
-		pFnCheckStomp = (UFunction*) UObject::GObjObjects()->Data[ 95521 ];
+		pFnCheckStomp = (UFunction*) UObject::GObjObjects()->Data[ 89843 ];
 
 	ASnowManBossController_execCheckStomp_Parms CheckStomp_Parms;
 
@@ -22502,7 +22349,7 @@ void ASnowManBossController::ChooseAttack ( )
 	static UFunction* pFnChooseAttack = NULL;
 
 	if ( ! pFnChooseAttack )
-		pFnChooseAttack = (UFunction*) UObject::GObjObjects()->Data[ 95519 ];
+		pFnChooseAttack = (UFunction*) UObject::GObjObjects()->Data[ 89841 ];
 
 	ASnowManBossController_execChooseAttack_Parms ChooseAttack_Parms;
 
@@ -22518,7 +22365,7 @@ void ASnowManBossController::DoPeck ( )
 	static UFunction* pFnDoPeck = NULL;
 
 	if ( ! pFnDoPeck )
-		pFnDoPeck = (UFunction*) UObject::GObjObjects()->Data[ 95514 ];
+		pFnDoPeck = (UFunction*) UObject::GObjObjects()->Data[ 89836 ];
 
 	ASnowManBossController_execDoPeck_Parms DoPeck_Parms;
 
@@ -22534,7 +22381,7 @@ void ASnowManBossController::DoStomp ( )
 	static UFunction* pFnDoStomp = NULL;
 
 	if ( ! pFnDoStomp )
-		pFnDoStomp = (UFunction*) UObject::GObjObjects()->Data[ 95509 ];
+		pFnDoStomp = (UFunction*) UObject::GObjObjects()->Data[ 89831 ];
 
 	ASnowManBossController_execDoStomp_Parms DoStomp_Parms;
 
@@ -22551,7 +22398,7 @@ void ASnowManBossController::SpawnSnowProjectile ( unsigned long bIsLeftSocket )
 	static UFunction* pFnSpawnSnowProjectile = NULL;
 
 	if ( ! pFnSpawnSnowProjectile )
-		pFnSpawnSnowProjectile = (UFunction*) UObject::GObjObjects()->Data[ 95503 ];
+		pFnSpawnSnowProjectile = (UFunction*) UObject::GObjObjects()->Data[ 89825 ];
 
 	ASnowManBossController_execSpawnSnowProjectile_Parms SpawnSnowProjectile_Parms;
 	SpawnSnowProjectile_Parms.bIsLeftSocket = bIsLeftSocket;
@@ -22572,7 +22419,7 @@ bool ATurkeyBoss::Died ( class AController* Killer, class UClass* DamageType, st
 	static UFunction* pFnDied = NULL;
 
 	if ( ! pFnDied )
-		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 95577 ];
+		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 89899 ];
 
 	ATurkeyBoss_execDied_Parms Died_Parms;
 	Died_Parms.Killer = Killer;
@@ -22593,7 +22440,7 @@ void ATurkeyBoss::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 95576 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 89898 ];
 
 	ATurkeyBoss_eventDestroyed_Parms Destroyed_Parms;
 
@@ -22609,7 +22456,7 @@ void ATurkeyBoss::eventDoStompDamage ( )
 	static UFunction* pFnDoStompDamage = NULL;
 
 	if ( ! pFnDoStompDamage )
-		pFnDoStompDamage = (UFunction*) UObject::GObjObjects()->Data[ 95575 ];
+		pFnDoStompDamage = (UFunction*) UObject::GObjObjects()->Data[ 89897 ];
 
 	ATurkeyBoss_eventDoStompDamage_Parms DoStompDamage_Parms;
 
@@ -22625,7 +22472,7 @@ void ATurkeyBoss::eventDoStomp ( )
 	static UFunction* pFnDoStomp = NULL;
 
 	if ( ! pFnDoStomp )
-		pFnDoStomp = (UFunction*) UObject::GObjObjects()->Data[ 95570 ];
+		pFnDoStomp = (UFunction*) UObject::GObjObjects()->Data[ 89892 ];
 
 	ATurkeyBoss_eventDoStomp_Parms DoStomp_Parms;
 
@@ -22641,7 +22488,7 @@ void ATurkeyBoss::eventDoPeck ( )
 	static UFunction* pFnDoPeck = NULL;
 
 	if ( ! pFnDoPeck )
-		pFnDoPeck = (UFunction*) UObject::GObjObjects()->Data[ 95565 ];
+		pFnDoPeck = (UFunction*) UObject::GObjObjects()->Data[ 89887 ];
 
 	ATurkeyBoss_eventDoPeck_Parms DoPeck_Parms;
 
@@ -22658,7 +22505,7 @@ void ATurkeyBoss::GetPeckLoc ( struct FVector* Loc )
 	static UFunction* pFnGetPeckLoc = NULL;
 
 	if ( ! pFnGetPeckLoc )
-		pFnGetPeckLoc = (UFunction*) UObject::GObjObjects()->Data[ 95562 ];
+		pFnGetPeckLoc = (UFunction*) UObject::GObjObjects()->Data[ 89884 ];
 
 	ATurkeyBoss_execGetPeckLoc_Parms GetPeckLoc_Parms;
 
@@ -22677,7 +22524,7 @@ void ATurkeyBoss::eventShootEgg ( )
 	static UFunction* pFnShootEgg = NULL;
 
 	if ( ! pFnShootEgg )
-		pFnShootEgg = (UFunction*) UObject::GObjObjects()->Data[ 95560 ];
+		pFnShootEgg = (UFunction*) UObject::GObjObjects()->Data[ 89882 ];
 
 	ATurkeyBoss_eventShootEgg_Parms ShootEgg_Parms;
 
@@ -22695,7 +22542,7 @@ void ATurkeyBoss::SpawnEggShootEffect ( struct FVector SpawnLoc, struct FRotator
 	static UFunction* pFnSpawnEggShootEffect = NULL;
 
 	if ( ! pFnSpawnEggShootEffect )
-		pFnSpawnEggShootEffect = (UFunction*) UObject::GObjObjects()->Data[ 95557 ];
+		pFnSpawnEggShootEffect = (UFunction*) UObject::GObjObjects()->Data[ 89879 ];
 
 	ATurkeyBoss_execSpawnEggShootEffect_Parms SpawnEggShootEffect_Parms;
 	memcpy ( &SpawnEggShootEffect_Parms.SpawnLoc, &SpawnLoc, 0xC );
@@ -22715,7 +22562,7 @@ void ATurkeyBoss::GetProjectileSpawnLoc ( struct FVector* Loc, struct FRotator* 
 	static UFunction* pFnGetProjectileSpawnLoc = NULL;
 
 	if ( ! pFnGetProjectileSpawnLoc )
-		pFnGetProjectileSpawnLoc = (UFunction*) UObject::GObjObjects()->Data[ 95554 ];
+		pFnGetProjectileSpawnLoc = (UFunction*) UObject::GObjObjects()->Data[ 89876 ];
 
 	ATurkeyBoss_execGetProjectileSpawnLoc_Parms GetProjectileSpawnLoc_Parms;
 
@@ -22738,7 +22585,7 @@ float ATurkeyBoss::PlayStomp ( )
 	static UFunction* pFnPlayStomp = NULL;
 
 	if ( ! pFnPlayStomp )
-		pFnPlayStomp = (UFunction*) UObject::GObjObjects()->Data[ 95552 ];
+		pFnPlayStomp = (UFunction*) UObject::GObjObjects()->Data[ 89874 ];
 
 	ATurkeyBoss_execPlayStomp_Parms PlayStomp_Parms;
 
@@ -22757,7 +22604,7 @@ float ATurkeyBoss::PlayEggShoot ( )
 	static UFunction* pFnPlayEggShoot = NULL;
 
 	if ( ! pFnPlayEggShoot )
-		pFnPlayEggShoot = (UFunction*) UObject::GObjObjects()->Data[ 95550 ];
+		pFnPlayEggShoot = (UFunction*) UObject::GObjObjects()->Data[ 89872 ];
 
 	ATurkeyBoss_execPlayEggShoot_Parms PlayEggShoot_Parms;
 
@@ -22776,7 +22623,7 @@ float ATurkeyBoss::PlayPeckAttack ( )
 	static UFunction* pFnPlayPeckAttack = NULL;
 
 	if ( ! pFnPlayPeckAttack )
-		pFnPlayPeckAttack = (UFunction*) UObject::GObjObjects()->Data[ 95548 ];
+		pFnPlayPeckAttack = (UFunction*) UObject::GObjObjects()->Data[ 89870 ];
 
 	ATurkeyBoss_execPlayPeckAttack_Parms PlayPeckAttack_Parms;
 
@@ -22795,7 +22642,7 @@ bool ATurkeyBossController::WantsHurtAnimation ( )
 	static UFunction* pFnWantsHurtAnimation = NULL;
 
 	if ( ! pFnWantsHurtAnimation )
-		pFnWantsHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 95660 ];
+		pFnWantsHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 89982 ];
 
 	ATurkeyBossController_execWantsHurtAnimation_Parms WantsHurtAnimation_Parms;
 
@@ -22819,7 +22666,7 @@ void ATurkeyBossController::NotifyTakeHitEX ( class AController* InstigatedBy, s
 	static UFunction* pFnNotifyTakeHitEX = NULL;
 
 	if ( ! pFnNotifyTakeHitEX )
-		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 95653 ];
+		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 89975 ];
 
 	ATurkeyBossController_execNotifyTakeHitEX_Parms NotifyTakeHitEX_Parms;
 	NotifyTakeHitEX_Parms.InstigatedBy = InstigatedBy;
@@ -22842,7 +22689,7 @@ bool ATurkeyBossController::CheckStomp ( )
 	static UFunction* pFnCheckStomp = NULL;
 
 	if ( ! pFnCheckStomp )
-		pFnCheckStomp = (UFunction*) UObject::GObjObjects()->Data[ 95648 ];
+		pFnCheckStomp = (UFunction*) UObject::GObjObjects()->Data[ 89970 ];
 
 	ATurkeyBossController_execCheckStomp_Parms CheckStomp_Parms;
 
@@ -22860,7 +22707,7 @@ void ATurkeyBossController::ChooseAttack ( )
 	static UFunction* pFnChooseAttack = NULL;
 
 	if ( ! pFnChooseAttack )
-		pFnChooseAttack = (UFunction*) UObject::GObjObjects()->Data[ 95646 ];
+		pFnChooseAttack = (UFunction*) UObject::GObjObjects()->Data[ 89968 ];
 
 	ATurkeyBossController_execChooseAttack_Parms ChooseAttack_Parms;
 
@@ -22876,7 +22723,7 @@ void ATurkeyBossController::DoPeck ( )
 	static UFunction* pFnDoPeck = NULL;
 
 	if ( ! pFnDoPeck )
-		pFnDoPeck = (UFunction*) UObject::GObjObjects()->Data[ 95643 ];
+		pFnDoPeck = (UFunction*) UObject::GObjObjects()->Data[ 89965 ];
 
 	ATurkeyBossController_execDoPeck_Parms DoPeck_Parms;
 
@@ -22892,7 +22739,7 @@ void ATurkeyBossController::DoStomp ( )
 	static UFunction* pFnDoStomp = NULL;
 
 	if ( ! pFnDoStomp )
-		pFnDoStomp = (UFunction*) UObject::GObjObjects()->Data[ 95640 ];
+		pFnDoStomp = (UFunction*) UObject::GObjObjects()->Data[ 89962 ];
 
 	ATurkeyBossController_execDoStomp_Parms DoStomp_Parms;
 
@@ -22908,7 +22755,7 @@ void ATurkeyBossController::SpawnEggProjectile ( )
 	static UFunction* pFnSpawnEggProjectile = NULL;
 
 	if ( ! pFnSpawnEggProjectile )
-		pFnSpawnEggProjectile = (UFunction*) UObject::GObjObjects()->Data[ 95635 ];
+		pFnSpawnEggProjectile = (UFunction*) UObject::GObjObjects()->Data[ 89957 ];
 
 	ATurkeyBossController_execSpawnEggProjectile_Parms SpawnEggProjectile_Parms;
 
@@ -22926,7 +22773,7 @@ void UUI_GameStatsUberMF::GetPlayerList ( struct FString* pList, struct FString*
 	static UFunction* pFnGetPlayerList = NULL;
 
 	if ( ! pFnGetPlayerList )
-		pFnGetPlayerList = (UFunction*) UObject::GObjObjects()->Data[ 95676 ];
+		pFnGetPlayerList = (UFunction*) UObject::GObjObjects()->Data[ 89998 ];
 
 	UUI_GameStatsUberMF_execGetPlayerList_Parms GetPlayerList_Parms;
 
@@ -22950,7 +22797,7 @@ struct FString UUI_GameStatsUberMF::GetColorString ( struct FColor aColor )
 	static UFunction* pFnGetColorString = NULL;
 
 	if ( ! pFnGetColorString )
-		pFnGetColorString = (UFunction*) UObject::GObjObjects()->Data[ 95673 ];
+		pFnGetColorString = (UFunction*) UObject::GObjObjects()->Data[ 89995 ];
 
 	UUI_GameStatsUberMF_execGetColorString_Parms GetColorString_Parms;
 	memcpy ( &GetColorString_Parms.aColor, &aColor, 0x4 );
@@ -22969,7 +22816,7 @@ void UUI_GameStatsUberMF::UpdateTeamPanels ( )
 	static UFunction* pFnUpdateTeamPanels = NULL;
 
 	if ( ! pFnUpdateTeamPanels )
-		pFnUpdateTeamPanels = (UFunction*) UObject::GObjObjects()->Data[ 95670 ];
+		pFnUpdateTeamPanels = (UFunction*) UObject::GObjObjects()->Data[ 89992 ];
 
 	UUI_GameStatsUberMF_execUpdateTeamPanels_Parms UpdateTeamPanels_Parms;
 
@@ -22986,7 +22833,7 @@ void UUI_GameStatsUberMF::CustomInit ( int CustomInitIndex )
 	static UFunction* pFnCustomInit = NULL;
 
 	if ( ! pFnCustomInit )
-		pFnCustomInit = (UFunction*) UObject::GObjObjects()->Data[ 95668 ];
+		pFnCustomInit = (UFunction*) UObject::GObjObjects()->Data[ 89990 ];
 
 	UUI_GameStatsUberMF_execCustomInit_Parms CustomInit_Parms;
 	CustomInit_Parms.CustomInitIndex = CustomInitIndex;

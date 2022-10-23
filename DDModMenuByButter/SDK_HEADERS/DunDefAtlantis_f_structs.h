@@ -71,7 +71,7 @@ struct ADunDefGRI_RisingWater_execPuzzleComplete_Parms
 struct ADunDefGRI_RisingWater_execGetRandomPlayer_Parms
 {
 	class ADunDefPlayer*                               ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class ADunDefPlayer*                            PlayerCheck;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class ADunDefPlayer*                            playerCheck;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             I;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 

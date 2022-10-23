@@ -30,7 +30,7 @@ void ADunDef_TimedEffect_Harbinger::EndEffects ( )
 	static UFunction* pFnEndEffects = NULL;
 
 	if ( ! pFnEndEffects )
-		pFnEndEffects = (UFunction*) UObject::GObjObjects()->Data[ 83509 ];
+		pFnEndEffects = (UFunction*) UObject::GObjObjects()->Data[ 78534 ];
 
 	ADunDef_TimedEffect_Harbinger_execEndEffects_Parms EndEffects_Parms;
 
@@ -46,7 +46,7 @@ void ADunDef_TimedEffect_Harbinger::TimedEffect ( )
 	static UFunction* pFnTimedEffect = NULL;
 
 	if ( ! pFnTimedEffect )
-		pFnTimedEffect = (UFunction*) UObject::GObjObjects()->Data[ 83505 ];
+		pFnTimedEffect = (UFunction*) UObject::GObjObjects()->Data[ 78530 ];
 
 	ADunDef_TimedEffect_Harbinger_execTimedEffect_Parms TimedEffect_Parms;
 
@@ -63,7 +63,7 @@ void ADunDef_TimedEffect_Harbinger::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 83503 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 78528 ];
 
 	ADunDef_TimedEffect_Harbinger_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -81,7 +81,7 @@ void ADunDef_TimedEffect_Harbinger::Initialize ( class UDunDefTimedEffectInterfa
 	static UFunction* pFnInitialize = NULL;
 
 	if ( ! pFnInitialize )
-		pFnInitialize = (UFunction*) UObject::GObjObjects()->Data[ 83500 ];
+		pFnInitialize = (UFunction*) UObject::GObjObjects()->Data[ 78525 ];
 
 	ADunDef_TimedEffect_Harbinger_execInitialize_Parms Initialize_Parms;
 	Initialize_Parms.Target = Target;
@@ -98,7 +98,7 @@ void ADunDefHarbinger::eventFireAttackShootRight ( )
 	static UFunction* pFnFireAttackShootRight = NULL;
 
 	if ( ! pFnFireAttackShootRight )
-		pFnFireAttackShootRight = (UFunction*) UObject::GObjObjects()->Data[ 83556 ];
+		pFnFireAttackShootRight = (UFunction*) UObject::GObjObjects()->Data[ 78581 ];
 
 	ADunDefHarbinger_eventFireAttackShootRight_Parms FireAttackShootRight_Parms;
 
@@ -114,7 +114,7 @@ void ADunDefHarbinger::eventFireAttackShootLeft ( )
 	static UFunction* pFnFireAttackShootLeft = NULL;
 
 	if ( ! pFnFireAttackShootLeft )
-		pFnFireAttackShootLeft = (UFunction*) UObject::GObjObjects()->Data[ 83554 ];
+		pFnFireAttackShootLeft = (UFunction*) UObject::GObjObjects()->Data[ 78579 ];
 
 	ADunDefHarbinger_eventFireAttackShootLeft_Parms FireAttackShootLeft_Parms;
 
@@ -130,7 +130,7 @@ void ADunDefHarbinger::eventFireAttackBegin ( )
 	static UFunction* pFnFireAttackBegin = NULL;
 
 	if ( ! pFnFireAttackBegin )
-		pFnFireAttackBegin = (UFunction*) UObject::GObjObjects()->Data[ 83553 ];
+		pFnFireAttackBegin = (UFunction*) UObject::GObjObjects()->Data[ 78578 ];
 
 	ADunDefHarbinger_eventFireAttackBegin_Parms FireAttackBegin_Parms;
 
@@ -146,7 +146,7 @@ void ADunDefHarbinger::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 83552 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 78577 ];
 
 	ADunDefHarbinger_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -165,7 +165,7 @@ void ADunDefHarbinger::GetProjectileSpawnTransformation ( struct FName socketToU
 	static UFunction* pFnGetProjectileSpawnTransformation = NULL;
 
 	if ( ! pFnGetProjectileSpawnTransformation )
-		pFnGetProjectileSpawnTransformation = (UFunction*) UObject::GObjObjects()->Data[ 83548 ];
+		pFnGetProjectileSpawnTransformation = (UFunction*) UObject::GObjObjects()->Data[ 78573 ];
 
 	ADunDefHarbinger_execGetProjectileSpawnTransformation_Parms GetProjectileSpawnTransformation_Parms;
 	memcpy ( &GetProjectileSpawnTransformation_Parms.socketToUse, &socketToUse, 0x8 );
@@ -189,7 +189,7 @@ bool ADunDefHarbinger::IsCurrentlyPlayingAttackAnimation ( )
 	static UFunction* pFnIsCurrentlyPlayingAttackAnimation = NULL;
 
 	if ( ! pFnIsCurrentlyPlayingAttackAnimation )
-		pFnIsCurrentlyPlayingAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 83546 ];
+		pFnIsCurrentlyPlayingAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 78571 ];
 
 	ADunDefHarbinger_execIsCurrentlyPlayingAttackAnimation_Parms IsCurrentlyPlayingAttackAnimation_Parms;
 
@@ -208,7 +208,7 @@ float ADunDefHarbinger::PlayShootFireAnimation ( )
 	static UFunction* pFnPlayShootFireAnimation = NULL;
 
 	if ( ! pFnPlayShootFireAnimation )
-		pFnPlayShootFireAnimation = (UFunction*) UObject::GObjObjects()->Data[ 83544 ];
+		pFnPlayShootFireAnimation = (UFunction*) UObject::GObjObjects()->Data[ 78569 ];
 
 	ADunDefHarbinger_execPlayShootFireAnimation_Parms PlayShootFireAnimation_Parms;
 
@@ -227,7 +227,7 @@ bool ADunDefHarbinger::IsCurrentlyPlayingChargeAnimation ( )
 	static UFunction* pFnIsCurrentlyPlayingChargeAnimation = NULL;
 
 	if ( ! pFnIsCurrentlyPlayingChargeAnimation )
-		pFnIsCurrentlyPlayingChargeAnimation = (UFunction*) UObject::GObjObjects()->Data[ 83542 ];
+		pFnIsCurrentlyPlayingChargeAnimation = (UFunction*) UObject::GObjObjects()->Data[ 78567 ];
 
 	ADunDefHarbinger_execIsCurrentlyPlayingChargeAnimation_Parms IsCurrentlyPlayingChargeAnimation_Parms;
 
@@ -246,7 +246,7 @@ float ADunDefHarbinger::PlayChargeFireAnimation ( )
 	static UFunction* pFnPlayChargeFireAnimation = NULL;
 
 	if ( ! pFnPlayChargeFireAnimation )
-		pFnPlayChargeFireAnimation = (UFunction*) UObject::GObjObjects()->Data[ 83540 ];
+		pFnPlayChargeFireAnimation = (UFunction*) UObject::GObjObjects()->Data[ 78565 ];
 
 	ADunDefHarbinger_execPlayChargeFireAnimation_Parms PlayChargeFireAnimation_Parms;
 
@@ -266,7 +266,7 @@ void ADunDefHarbinger::PlayHurtAnimation ( class UClass* DamageType, struct FVec
 	static UFunction* pFnPlayHurtAnimation = NULL;
 
 	if ( ! pFnPlayHurtAnimation )
-		pFnPlayHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 83537 ];
+		pFnPlayHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 78562 ];
 
 	ADunDefHarbinger_execPlayHurtAnimation_Parms PlayHurtAnimation_Parms;
 	PlayHurtAnimation_Parms.DamageType = DamageType;
@@ -284,7 +284,7 @@ void ADunDefHarbinger::PlayJumpAnimation ( )
 	static UFunction* pFnPlayJumpAnimation = NULL;
 
 	if ( ! pFnPlayJumpAnimation )
-		pFnPlayJumpAnimation = (UFunction*) UObject::GObjObjects()->Data[ 83536 ];
+		pFnPlayJumpAnimation = (UFunction*) UObject::GObjObjects()->Data[ 78561 ];
 
 	ADunDefHarbinger_execPlayJumpAnimation_Parms PlayJumpAnimation_Parms;
 
@@ -316,7 +316,7 @@ void ADunDefHarbinger::ExecReplicatedFunction ( struct FName FunctionName, struc
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 83519 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 78544 ];
 
 	ADunDefHarbinger_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -349,7 +349,7 @@ void ADunDefHarbingerController::PawnDied ( class APawn* inPawn )
 	static UFunction* pFnPawnDied = NULL;
 
 	if ( ! pFnPawnDied )
-		pFnPawnDied = (UFunction*) UObject::GObjObjects()->Data[ 83595 ];
+		pFnPawnDied = (UFunction*) UObject::GObjObjects()->Data[ 78620 ];
 
 	ADunDefHarbingerController_execPawnDied_Parms PawnDied_Parms;
 	PawnDied_Parms.inPawn = inPawn;
@@ -367,7 +367,7 @@ void ADunDefHarbingerController::CheckPlayer ( class ADunDefPlayer* aPlayer )
 	static UFunction* pFnCheckPlayer = NULL;
 
 	if ( ! pFnCheckPlayer )
-		pFnCheckPlayer = (UFunction*) UObject::GObjObjects()->Data[ 83591 ];
+		pFnCheckPlayer = (UFunction*) UObject::GObjObjects()->Data[ 78616 ];
 
 	ADunDefHarbingerController_execCheckPlayer_Parms CheckPlayer_Parms;
 	CheckPlayer_Parms.aPlayer = aPlayer;
@@ -384,7 +384,7 @@ void ADunDefHarbingerController::CheckForNearbyPlayers ( )
 	static UFunction* pFnCheckForNearbyPlayers = NULL;
 
 	if ( ! pFnCheckForNearbyPlayers )
-		pFnCheckForNearbyPlayers = (UFunction*) UObject::GObjObjects()->Data[ 83589 ];
+		pFnCheckForNearbyPlayers = (UFunction*) UObject::GObjObjects()->Data[ 78614 ];
 
 	ADunDefHarbingerController_execCheckForNearbyPlayers_Parms CheckForNearbyPlayers_Parms;
 
@@ -402,7 +402,7 @@ void ADunDefHarbingerController::ObstructionJump ( struct FVector jumpForwardDir
 	static UFunction* pFnObstructionJump = NULL;
 
 	if ( ! pFnObstructionJump )
-		pFnObstructionJump = (UFunction*) UObject::GObjObjects()->Data[ 83586 ];
+		pFnObstructionJump = (UFunction*) UObject::GObjObjects()->Data[ 78611 ];
 
 	ADunDefHarbingerController_execObstructionJump_Parms ObstructionJump_Parms;
 	memcpy ( &ObstructionJump_Parms.jumpForwardDir, &jumpForwardDir, 0xC );
@@ -426,7 +426,7 @@ void ADunDefHarbingerController::NotifyTakeHitEX ( class AController* Instigated
 	static UFunction* pFnNotifyTakeHitEX = NULL;
 
 	if ( ! pFnNotifyTakeHitEX )
-		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 83572 ];
+		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 78597 ];
 
 	ADunDefHarbingerController_execNotifyTakeHitEX_Parms NotifyTakeHitEX_Parms;
 	NotifyTakeHitEX_Parms.InstigatedBy = InstigatedBy;
@@ -448,7 +448,7 @@ void ADunDefHarbingerController::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 83571 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 78596 ];
 
 	ADunDefHarbingerController_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -465,7 +465,7 @@ void ADunDefHarbingerController::FireProjectiles ( struct FName socketToUse )
 	static UFunction* pFnFireProjectiles = NULL;
 
 	if ( ! pFnFireProjectiles )
-		pFnFireProjectiles = (UFunction*) UObject::GObjObjects()->Data[ 83569 ];
+		pFnFireProjectiles = (UFunction*) UObject::GObjObjects()->Data[ 78594 ];
 
 	ADunDefHarbingerController_execFireProjectiles_Parms FireProjectiles_Parms;
 	memcpy ( &FireProjectiles_Parms.socketToUse, &socketToUse, 0x8 );
