@@ -473,9 +473,7 @@
 	AL_MINIMAPICONS_EQUIPMENTQUALITY05                 = 21,
 	AL_MINIMAPICONS_EQUIPMENTQUALITY06                 = 22,
 	AL_MINIMAPICONS_EQUIPMENTQUALITY07                 = 23,
-	AL_MINIMAPICONS_EQUIPMENTQUALITY08                 = 24,
-	AL_MINIMAPICONS_EQUIPMENTQUALITY09                 = 25,
-	AL_MAX                                             = 26
+	AL_MAX                                             = 24
 };*/
 
 // Enum Engine.Camera.EViewTargetBlendFunction
@@ -5261,7 +5259,6 @@ public:
 	void ForceGarbageCollection ( unsigned long bFullPurge );
 	bool IsPlayInEditor ( );
 	bool IsSteamBuild ( );
-	bool IsDiscordBuild ( );
 	bool IsConsoleBuild ( unsigned char ConsoleType );
 	bool IsDemoBuild ( );
 	struct FString GetLocalURL ( );
@@ -8693,6 +8690,7 @@ public:
 		return pClassPointer;
 	};
 
+	float GetWidescreenScale ( );
 	void SetTextCharacterClipping ( unsigned long bEnableTextCharacterClipping );
 	void SetForceDropShadows ( unsigned long bForceDropShadows );
 	void DrawTileBase ( class USurface* surf, float XL, float YL );
@@ -11927,7 +11925,6 @@ public:
 	void DumpSessionState ( );
 	struct FName GetPrimarySessionName ( );
 	void DumpGameSettings ( class UOnlineGameSettings* GameSettings );
-	void UpdateDiscordRichPresence ( );
 	int GetNumSupportedLogins ( );
 	int GetBuildUniqueId ( );
 	bool AreUniqueNetIdsEqual ( struct FUniqueNetId* NetIdA, struct FUniqueNetId* NetIdB );
@@ -32855,6 +32852,7 @@ public:
 	void OutputTextLine ( struct FString Text );
 	void ClearOutput ( );
 	void ConsoleCommand ( struct FString Command );
+	TArray< struct FString > chunkMessage ( struct FString Message );
 	void PurgeCommandFromHistory ( struct FString Command );
 	void SetCursorPos ( int Position );
 	void SetInputText ( struct FString Text );
@@ -40755,7 +40753,7 @@ public:
 UClass* USkeletalMeshComponent::pClassPointer = NULL;
 
 // Class Engine.SkeletalMesh
-// 0x0348 (0x0384 - 0x003C)
+// 0x0360 (0x039C - 0x003C)
 class USkeletalMesh : public UObject
 {
 public:
@@ -40798,83 +40796,85 @@ public:
 	unsigned char                                      ClothMovementScaleGenMode;                        		// 0x01A4 (0x0001) [0x0000000000000001]              ( CPF_Edit )
 	float                                              ClothToAnimMeshMaxDist;                           		// 0x01A8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	unsigned long                                      bLimitClothToAnimMesh : 1;                        		// 0x01AC (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	TArray< int >                                      ClothWeldingMap;                                  		// 0x01B0 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
-	int                                                ClothWeldingDomain;                               		// 0x01BC (0x0004) [0x0000000000000002]              ( CPF_Const )
-	TArray< int >                                      ClothWeldedIndices;                               		// 0x01C0 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
-	unsigned long                                      bForceNoWelding : 1;                              		// 0x01CC (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
-	int                                                NumFreeClothVerts;                                		// 0x01D0 (0x0004) [0x0000000000000002]              ( CPF_Const )
-	TArray< int >                                      ClothIndexBuffer;                                 		// 0x01D4 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
-	TArray< struct FName >                             ClothBones;                                       		// 0x01E0 (0x000C) [0x0000000000400003]              ( CPF_Edit | CPF_Const | CPF_NeedCtorLink )
-	int                                                ClothHierarchyLevels;                             		// 0x01EC (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableClothBendConstraints : 1;                  		// 0x01F0 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableClothDamping : 1;                          		// 0x01F0 (0x0004) [0x0000000000000003] [0x00000002] ( CPF_Edit | CPF_Const )
-	unsigned long                                      bUseClothCOMDamping : 1;                          		// 0x01F0 (0x0004) [0x0000000000000003] [0x00000004] ( CPF_Edit | CPF_Const )
-	float                                              ClothStretchStiffness;                            		// 0x01F4 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothBendStiffness;                               		// 0x01F8 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothDensity;                                     		// 0x01FC (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothThickness;                                   		// 0x0200 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothDamping;                                     		// 0x0204 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	int                                                ClothIterations;                                  		// 0x0208 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	int                                                ClothHierarchicalIterations;                      		// 0x020C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothFriction;                                    		// 0x0210 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothRelativeGridSpacing;                         		// 0x0214 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothPressure;                                    		// 0x0218 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothCollisionResponseCoefficient;                		// 0x021C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothAttachmentResponseCoefficient;               		// 0x0220 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothAttachmentTearFactor;                        		// 0x0224 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothSleepLinearVelocity;                         		// 0x0228 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              HardStretchLimitFactor;                           		// 0x022C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	unsigned long                                      bHardStretchLimit : 1;                            		// 0x0230 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableClothOrthoBendConstraints : 1;             		// 0x0230 (0x0004) [0x0000000000000003] [0x00000002] ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableClothSelfCollision : 1;                    		// 0x0230 (0x0004) [0x0000000000000003] [0x00000004] ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableClothPressure : 1;                         		// 0x0230 (0x0004) [0x0000000000000003] [0x00000008] ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableClothTwoWayCollision : 1;                  		// 0x0230 (0x0004) [0x0000000000000003] [0x00000010] ( CPF_Edit | CPF_Const )
-	TArray< struct FClothSpecialBoneInfo >             ClothSpecialBones;                                		// 0x0234 (0x000C) [0x0000000000400003]              ( CPF_Edit | CPF_Const | CPF_NeedCtorLink )
-	unsigned long                                      bEnableClothLineChecks : 1;                       		// 0x0240 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
-	unsigned long                                      bClothMetal : 1;                                  		// 0x0240 (0x0004) [0x0000000000000003] [0x00000002] ( CPF_Edit | CPF_Const )
-	float                                              ClothMetalImpulseThreshold;                       		// 0x0244 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothMetalPenetrationDepth;                       		// 0x0248 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              ClothMetalMaxDeformationDistance;                 		// 0x024C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableClothTearing : 1;                          		// 0x0250 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
-	float                                              ClothTearFactor;                                  		// 0x0254 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	int                                                ClothTearReserve;                                 		// 0x0258 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableValidBounds : 1;                           		// 0x025C (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	struct FVector                                     ValidBoundsMin;                                   		// 0x0260 (0x000C) [0x0000000000000001]              ( CPF_Edit )
-	struct FVector                                     ValidBoundsMax;                                   		// 0x026C (0x000C) [0x0000000000000001]              ( CPF_Edit )
-	struct FMap_Mirror                                 ClothTornTriMap;                                  		// 0x0278 (0x003C) [0x0000000000001002]              ( CPF_Const | CPF_Native )
-	TArray< int >                                      SoftBodySurfaceToGraphicsVertMap;                 		// 0x02B4 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
-	TArray< int >                                      SoftBodySurfaceIndices;                           		// 0x02C0 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
-	TArray< struct FVector >                           SoftBodyTetraVertsUnscaled;                       		// 0x02CC (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
-	TArray< int >                                      SoftBodyTetraIndices;                             		// 0x02D8 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
-	TArray< struct FSoftBodyTetraLink >                SoftBodyTetraLinks;                               		// 0x02E4 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
-	TArray< struct FPointer >                          CachedSoftBodyMeshes;                             		// 0x02F0 (0x000C) [0x0000000000003002]              ( CPF_Const | CPF_Native | CPF_Transient )
-	TArray< float >                                    CachedSoftBodyMeshScales;                         		// 0x02FC (0x000C) [0x0000000000003002]              ( CPF_Const | CPF_Native | CPF_Transient )
-	TArray< struct FName >                             SoftBodyBones;                                    		// 0x0308 (0x000C) [0x0000000000400003]              ( CPF_Edit | CPF_Const | CPF_NeedCtorLink )
-	TArray< struct FSoftBodySpecialBoneInfo >          SoftBodySpecialBones;                             		// 0x0314 (0x000C) [0x0000000000400003]              ( CPF_Edit | CPF_Const | CPF_NeedCtorLink )
-	float                                              SoftBodyVolumeStiffness;                          		// 0x0320 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyStretchingStiffness;                      		// 0x0324 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyDensity;                                  		// 0x0328 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyParticleRadius;                           		// 0x032C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyDamping;                                  		// 0x0330 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	int                                                SoftBodySolverIterations;                         		// 0x0334 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyFriction;                                 		// 0x0338 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyRelativeGridSpacing;                      		// 0x033C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              SoftBodySleepLinearVelocity;                      		// 0x0340 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableSoftBodySelfCollision : 1;                 		// 0x0344 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyAttachmentResponse;                       		// 0x0348 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyCollisionResponse;                        		// 0x034C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyDetailLevel;                              		// 0x0350 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	int                                                SoftBodySubdivisionLevel;                         		// 0x0354 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	unsigned long                                      bSoftBodyIsoSurface : 1;                          		// 0x0358 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableSoftBodyDamping : 1;                       		// 0x0358 (0x0004) [0x0000000000000003] [0x00000002] ( CPF_Edit | CPF_Const )
-	unsigned long                                      bUseSoftBodyCOMDamping : 1;                       		// 0x0358 (0x0004) [0x0000000000000003] [0x00000004] ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyAttachmentThreshold;                      		// 0x035C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableSoftBodyTwoWayCollision : 1;               		// 0x0360 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
-	float                                              SoftBodyAttachmentTearFactor;                     		// 0x0364 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
-	unsigned long                                      bEnableSoftBodyLineChecks : 1;                    		// 0x0368 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
-	TArray< unsigned long >                            GraphicsIndexIsCloth;                             		// 0x036C (0x000C) [0x0000000000001002]              ( CPF_Const | CPF_Native )
-	int                                                ReleaseResourcesFence;                            		// 0x0378 (0x0004) [0x0000000000003002]              ( CPF_Const | CPF_Native | CPF_Transient )
-	struct FQWord                                      SkelMeshRUID;                                     		// 0x037C (0x0008) [0x0000000000002002]              ( CPF_Const | CPF_Transient )
+	struct FString                                     SourceFilePath;                                   		// 0x01B0 (0x000C) [0x0000000000420003]              ( CPF_Edit | CPF_Const | CPF_EditConst | CPF_NeedCtorLink )
+	struct FString                                     SourceFileTimestamp;                              		// 0x01BC (0x000C) [0x0000000000420003]              ( CPF_Edit | CPF_Const | CPF_EditConst | CPF_NeedCtorLink )
+	TArray< int >                                      ClothWeldingMap;                                  		// 0x01C8 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
+	int                                                ClothWeldingDomain;                               		// 0x01D4 (0x0004) [0x0000000000000002]              ( CPF_Const )
+	TArray< int >                                      ClothWeldedIndices;                               		// 0x01D8 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
+	unsigned long                                      bForceNoWelding : 1;                              		// 0x01E4 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
+	int                                                NumFreeClothVerts;                                		// 0x01E8 (0x0004) [0x0000000000000002]              ( CPF_Const )
+	TArray< int >                                      ClothIndexBuffer;                                 		// 0x01EC (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
+	TArray< struct FName >                             ClothBones;                                       		// 0x01F8 (0x000C) [0x0000000000400003]              ( CPF_Edit | CPF_Const | CPF_NeedCtorLink )
+	int                                                ClothHierarchyLevels;                             		// 0x0204 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableClothBendConstraints : 1;                  		// 0x0208 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableClothDamping : 1;                          		// 0x0208 (0x0004) [0x0000000000000003] [0x00000002] ( CPF_Edit | CPF_Const )
+	unsigned long                                      bUseClothCOMDamping : 1;                          		// 0x0208 (0x0004) [0x0000000000000003] [0x00000004] ( CPF_Edit | CPF_Const )
+	float                                              ClothStretchStiffness;                            		// 0x020C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothBendStiffness;                               		// 0x0210 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothDensity;                                     		// 0x0214 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothThickness;                                   		// 0x0218 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothDamping;                                     		// 0x021C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	int                                                ClothIterations;                                  		// 0x0220 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	int                                                ClothHierarchicalIterations;                      		// 0x0224 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothFriction;                                    		// 0x0228 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothRelativeGridSpacing;                         		// 0x022C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothPressure;                                    		// 0x0230 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothCollisionResponseCoefficient;                		// 0x0234 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothAttachmentResponseCoefficient;               		// 0x0238 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothAttachmentTearFactor;                        		// 0x023C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothSleepLinearVelocity;                         		// 0x0240 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              HardStretchLimitFactor;                           		// 0x0244 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	unsigned long                                      bHardStretchLimit : 1;                            		// 0x0248 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableClothOrthoBendConstraints : 1;             		// 0x0248 (0x0004) [0x0000000000000003] [0x00000002] ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableClothSelfCollision : 1;                    		// 0x0248 (0x0004) [0x0000000000000003] [0x00000004] ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableClothPressure : 1;                         		// 0x0248 (0x0004) [0x0000000000000003] [0x00000008] ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableClothTwoWayCollision : 1;                  		// 0x0248 (0x0004) [0x0000000000000003] [0x00000010] ( CPF_Edit | CPF_Const )
+	TArray< struct FClothSpecialBoneInfo >             ClothSpecialBones;                                		// 0x024C (0x000C) [0x0000000000400003]              ( CPF_Edit | CPF_Const | CPF_NeedCtorLink )
+	unsigned long                                      bEnableClothLineChecks : 1;                       		// 0x0258 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
+	unsigned long                                      bClothMetal : 1;                                  		// 0x0258 (0x0004) [0x0000000000000003] [0x00000002] ( CPF_Edit | CPF_Const )
+	float                                              ClothMetalImpulseThreshold;                       		// 0x025C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothMetalPenetrationDepth;                       		// 0x0260 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              ClothMetalMaxDeformationDistance;                 		// 0x0264 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableClothTearing : 1;                          		// 0x0268 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
+	float                                              ClothTearFactor;                                  		// 0x026C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	int                                                ClothTearReserve;                                 		// 0x0270 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableValidBounds : 1;                           		// 0x0274 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	struct FVector                                     ValidBoundsMin;                                   		// 0x0278 (0x000C) [0x0000000000000001]              ( CPF_Edit )
+	struct FVector                                     ValidBoundsMax;                                   		// 0x0284 (0x000C) [0x0000000000000001]              ( CPF_Edit )
+	struct FMap_Mirror                                 ClothTornTriMap;                                  		// 0x0290 (0x003C) [0x0000000000001002]              ( CPF_Const | CPF_Native )
+	TArray< int >                                      SoftBodySurfaceToGraphicsVertMap;                 		// 0x02CC (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
+	TArray< int >                                      SoftBodySurfaceIndices;                           		// 0x02D8 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
+	TArray< struct FVector >                           SoftBodyTetraVertsUnscaled;                       		// 0x02E4 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
+	TArray< int >                                      SoftBodyTetraIndices;                             		// 0x02F0 (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
+	TArray< struct FSoftBodyTetraLink >                SoftBodyTetraLinks;                               		// 0x02FC (0x000C) [0x0000000000400002]              ( CPF_Const | CPF_NeedCtorLink )
+	TArray< struct FPointer >                          CachedSoftBodyMeshes;                             		// 0x0308 (0x000C) [0x0000000000003002]              ( CPF_Const | CPF_Native | CPF_Transient )
+	TArray< float >                                    CachedSoftBodyMeshScales;                         		// 0x0314 (0x000C) [0x0000000000003002]              ( CPF_Const | CPF_Native | CPF_Transient )
+	TArray< struct FName >                             SoftBodyBones;                                    		// 0x0320 (0x000C) [0x0000000000400003]              ( CPF_Edit | CPF_Const | CPF_NeedCtorLink )
+	TArray< struct FSoftBodySpecialBoneInfo >          SoftBodySpecialBones;                             		// 0x032C (0x000C) [0x0000000000400003]              ( CPF_Edit | CPF_Const | CPF_NeedCtorLink )
+	float                                              SoftBodyVolumeStiffness;                          		// 0x0338 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyStretchingStiffness;                      		// 0x033C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyDensity;                                  		// 0x0340 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyParticleRadius;                           		// 0x0344 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyDamping;                                  		// 0x0348 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	int                                                SoftBodySolverIterations;                         		// 0x034C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyFriction;                                 		// 0x0350 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyRelativeGridSpacing;                      		// 0x0354 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              SoftBodySleepLinearVelocity;                      		// 0x0358 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableSoftBodySelfCollision : 1;                 		// 0x035C (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyAttachmentResponse;                       		// 0x0360 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyCollisionResponse;                        		// 0x0364 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyDetailLevel;                              		// 0x0368 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	int                                                SoftBodySubdivisionLevel;                         		// 0x036C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	unsigned long                                      bSoftBodyIsoSurface : 1;                          		// 0x0370 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableSoftBodyDamping : 1;                       		// 0x0370 (0x0004) [0x0000000000000003] [0x00000002] ( CPF_Edit | CPF_Const )
+	unsigned long                                      bUseSoftBodyCOMDamping : 1;                       		// 0x0370 (0x0004) [0x0000000000000003] [0x00000004] ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyAttachmentThreshold;                      		// 0x0374 (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableSoftBodyTwoWayCollision : 1;               		// 0x0378 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
+	float                                              SoftBodyAttachmentTearFactor;                     		// 0x037C (0x0004) [0x0000000000000003]              ( CPF_Edit | CPF_Const )
+	unsigned long                                      bEnableSoftBodyLineChecks : 1;                    		// 0x0380 (0x0004) [0x0000000000000003] [0x00000001] ( CPF_Edit | CPF_Const )
+	TArray< unsigned long >                            GraphicsIndexIsCloth;                             		// 0x0384 (0x000C) [0x0000000000001002]              ( CPF_Const | CPF_Native )
+	int                                                ReleaseResourcesFence;                            		// 0x0390 (0x0004) [0x0000000000003002]              ( CPF_Const | CPF_Native | CPF_Transient )
+	struct FQWord                                      SkelMeshRUID;                                     		// 0x0394 (0x0008) [0x0000000000002002]              ( CPF_Const | CPF_Transient )
 
 private:
 	static UClass* pClassPointer;
@@ -42186,7 +42186,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 3498 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 3513 ];
 
 		return pClassPointer;
 	};
@@ -42218,7 +42218,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 3825 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 3840 ];
 
 		return pClassPointer;
 	};
@@ -42252,7 +42252,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 4146 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 4161 ];
 
 		return pClassPointer;
 	};
@@ -42276,7 +42276,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 4177 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 4192 ];
 
 		return pClassPointer;
 	};
@@ -42301,7 +42301,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 4187 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 4202 ];
 
 		return pClassPointer;
 	};
@@ -42326,7 +42326,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 4216 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 4231 ];
 
 		return pClassPointer;
 	};
@@ -42356,7 +42356,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 4226 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 4241 ];
 
 		return pClassPointer;
 	};
@@ -42380,7 +42380,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5017 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5031 ];
 
 		return pClassPointer;
 	};
@@ -42413,7 +42413,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5022 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5036 ];
 
 		return pClassPointer;
 	};
@@ -42443,7 +42443,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5027 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5041 ];
 
 		return pClassPointer;
 	};
@@ -42491,7 +42491,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5032 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5046 ];
 
 		return pClassPointer;
 	};
@@ -42509,7 +42509,7 @@ public:
 	void ClearRecognitionCompleteDelegate ( unsigned char LocalUserNum, struct FScriptDelegate RecognitionDelegate );
 	void AddRecognitionCompleteDelegate ( unsigned char LocalUserNum, struct FScriptDelegate RecognitionDelegate );
 	void OnRecognitionComplete ( );
-	bool GetRecognitionResults ( unsigned char LocalUserNum, TArray< struct FSpeechRecognizedWord >* Words );
+	bool GetRecognitionResults ( unsigned char LocalUserNum, TArray< struct FSpeechRecognizedWord >* words );
 	bool StopSpeechRecognition ( unsigned char LocalUserNum );
 	bool StartSpeechRecognition ( unsigned char LocalUserNum );
 	void StopNetworkedVoice ( unsigned char LocalUserNum );
@@ -42552,7 +42552,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5037 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5051 ];
 
 		return pClassPointer;
 	};
@@ -42604,7 +42604,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5042 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5056 ];
 
 		return pClassPointer;
 	};
@@ -42694,7 +42694,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5047 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5061 ];
 
 		return pClassPointer;
 	};
@@ -42751,7 +42751,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5052 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5066 ];
 
 		return pClassPointer;
 	};
@@ -42813,7 +42813,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5057 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5071 ];
 
 		return pClassPointer;
 	};
@@ -42953,7 +42953,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5062 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5076 ];
 
 		return pClassPointer;
 	};
@@ -42998,7 +42998,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5219 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5233 ];
 
 		return pClassPointer;
 	};
@@ -43039,7 +43039,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5230 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5244 ];
 
 		return pClassPointer;
 	};
@@ -43074,7 +43074,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5377 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5391 ];
 
 		return pClassPointer;
 	};
@@ -43098,7 +43098,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5394 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5408 ];
 
 		return pClassPointer;
 	};
@@ -43120,7 +43120,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5695 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5709 ];
 
 		return pClassPointer;
 	};
@@ -43142,7 +43142,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5698 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5712 ];
 
 		return pClassPointer;
 	};
@@ -43164,7 +43164,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5865 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 5879 ];
 
 		return pClassPointer;
 	};
@@ -43186,7 +43186,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 6140 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 6154 ];
 
 		return pClassPointer;
 	};
@@ -43209,7 +43209,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 6143 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 6157 ];
 
 		return pClassPointer;
 	};
@@ -43233,7 +43233,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 6648 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 6662 ];
 
 		return pClassPointer;
 	};
@@ -43257,7 +43257,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 7402 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 7416 ];
 
 		return pClassPointer;
 	};
@@ -43322,7 +43322,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 7430 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 7444 ];
 
 		return pClassPointer;
 	};
@@ -43346,7 +43346,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 7562 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 7576 ];
 
 		return pClassPointer;
 	};
@@ -43372,7 +43372,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 7675 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 7689 ];
 
 		return pClassPointer;
 	};
@@ -43396,7 +43396,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 8577 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 8591 ];
 
 		return pClassPointer;
 	};
@@ -43419,7 +43419,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 8681 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 8695 ];
 
 		return pClassPointer;
 	};
@@ -43445,7 +43445,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 8713 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 8727 ];
 
 		return pClassPointer;
 	};
@@ -43474,7 +43474,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 8731 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 8745 ];
 
 		return pClassPointer;
 	};
@@ -43500,7 +43500,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 8765 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 8779 ];
 
 		return pClassPointer;
 	};
@@ -43524,7 +43524,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 9087 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 9101 ];
 
 		return pClassPointer;
 	};
@@ -43547,7 +43547,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 9136 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 9150 ];
 
 		return pClassPointer;
 	};
@@ -43577,7 +43577,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 10456 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 10470 ];
 
 		return pClassPointer;
 	};
@@ -43602,7 +43602,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 10956 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 10970 ];
 
 		return pClassPointer;
 	};
@@ -43634,7 +43634,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 11867 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 11883 ];
 
 		return pClassPointer;
 	};
@@ -43659,7 +43659,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 13476 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 13504 ];
 
 		return pClassPointer;
 	};
@@ -43681,7 +43681,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 13896 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 13924 ];
 
 		return pClassPointer;
 	};
@@ -43703,7 +43703,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 15192 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 15220 ];
 
 		return pClassPointer;
 	};
@@ -43728,7 +43728,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 15226 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 15254 ];
 
 		return pClassPointer;
 	};
@@ -43752,7 +43752,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 15959 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 15987 ];
 
 		return pClassPointer;
 	};
@@ -43777,7 +43777,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 15991 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16019 ];
 
 		return pClassPointer;
 	};
@@ -43799,7 +43799,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16113 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16141 ];
 
 		return pClassPointer;
 	};
@@ -43821,7 +43821,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16117 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16145 ];
 
 		return pClassPointer;
 	};
@@ -43843,7 +43843,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16126 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16154 ];
 
 		return pClassPointer;
 	};
@@ -43865,7 +43865,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16355 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16383 ];
 
 		return pClassPointer;
 	};
@@ -43887,7 +43887,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16408 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16436 ];
 
 		return pClassPointer;
 	};
@@ -43909,7 +43909,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16416 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16444 ];
 
 		return pClassPointer;
 	};
@@ -43934,7 +43934,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16672 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 16700 ];
 
 		return pClassPointer;
 	};
@@ -43957,7 +43957,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 17177 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 17205 ];
 
 		return pClassPointer;
 	};
@@ -43981,7 +43981,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 17733 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 17761 ];
 
 		return pClassPointer;
 	};
@@ -44004,7 +44004,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 18112 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 18140 ];
 
 		return pClassPointer;
 	};
@@ -44040,7 +44040,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 18982 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 19010 ];
 
 		return pClassPointer;
 	};
@@ -44079,7 +44079,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 19272 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 19300 ];
 
 		return pClassPointer;
 	};
@@ -44104,7 +44104,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 19605 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 19633 ];
 
 		return pClassPointer;
 	};
@@ -44129,7 +44129,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 19798 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 19826 ];
 
 		return pClassPointer;
 	};
@@ -44152,7 +44152,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 21647 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 21675 ];
 
 		return pClassPointer;
 	};
@@ -44177,7 +44177,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 21653 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 21681 ];
 
 		return pClassPointer;
 	};
@@ -44199,7 +44199,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 22230 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 22258 ];
 
 		return pClassPointer;
 	};
@@ -44226,7 +44226,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 22591 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 22619 ];
 
 		return pClassPointer;
 	};
@@ -44273,7 +44273,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 22731 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 22759 ];
 
 		return pClassPointer;
 	};
@@ -44302,7 +44302,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 23601 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 23629 ];
 
 		return pClassPointer;
 	};
@@ -44329,7 +44329,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 23668 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 23696 ];
 
 		return pClassPointer;
 	};
@@ -44359,7 +44359,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 23717 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 23745 ];
 
 		return pClassPointer;
 	};
@@ -44396,7 +44396,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 25043 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 25071 ];
 
 		return pClassPointer;
 	};
@@ -44419,7 +44419,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 25049 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 25077 ];
 
 		return pClassPointer;
 	};
@@ -44441,7 +44441,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 25762 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 25790 ];
 
 		return pClassPointer;
 	};
@@ -44464,7 +44464,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26251 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26279 ];
 
 		return pClassPointer;
 	};
@@ -44490,7 +44490,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26458 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26486 ];
 
 		return pClassPointer;
 	};
@@ -44512,7 +44512,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26501 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26529 ];
 
 		return pClassPointer;
 	};
@@ -44534,7 +44534,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26506 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26534 ];
 
 		return pClassPointer;
 	};
@@ -44556,7 +44556,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26566 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26594 ];
 
 		return pClassPointer;
 	};
@@ -44578,7 +44578,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26583 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26611 ];
 
 		return pClassPointer;
 	};
@@ -44600,7 +44600,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26588 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26616 ];
 
 		return pClassPointer;
 	};
@@ -44625,7 +44625,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26916 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 26944 ];
 
 		return pClassPointer;
 	};
@@ -44651,7 +44651,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27001 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27029 ];
 
 		return pClassPointer;
 	};
@@ -44673,7 +44673,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27005 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27033 ];
 
 		return pClassPointer;
 	};
@@ -44697,7 +44697,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27349 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27377 ];
 
 		return pClassPointer;
 	};
@@ -44720,7 +44720,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27363 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27391 ];
 
 		return pClassPointer;
 	};
@@ -44743,7 +44743,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27450 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27478 ];
 
 		return pClassPointer;
 	};
@@ -44769,7 +44769,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27523 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27551 ];
 
 		return pClassPointer;
 	};
@@ -44792,7 +44792,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27636 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27664 ];
 
 		return pClassPointer;
 	};
@@ -44814,7 +44814,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27652 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27680 ];
 
 		return pClassPointer;
 	};
@@ -44836,7 +44836,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27682 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27710 ];
 
 		return pClassPointer;
 	};
@@ -44858,7 +44858,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27684 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27712 ];
 
 		return pClassPointer;
 	};
@@ -44880,7 +44880,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27686 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27714 ];
 
 		return pClassPointer;
 	};
@@ -44902,7 +44902,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27704 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27732 ];
 
 		return pClassPointer;
 	};
@@ -44924,7 +44924,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27719 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 27747 ];
 
 		return pClassPointer;
 	};
@@ -44946,7 +44946,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 28234 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 28264 ];
 
 		return pClassPointer;
 	};
@@ -44968,7 +44968,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 29489 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 29519 ];
 
 		return pClassPointer;
 	};
@@ -44991,7 +44991,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 29493 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 29523 ];
 
 		return pClassPointer;
 	};
@@ -45016,7 +45016,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 29511 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 29541 ];
 
 		return pClassPointer;
 	};
@@ -45042,7 +45042,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 29525 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 29555 ];
 
 		return pClassPointer;
 	};
@@ -45069,7 +45069,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 29844 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 29874 ];
 
 		return pClassPointer;
 	};
@@ -45092,7 +45092,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 30155 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 30185 ];
 
 		return pClassPointer;
 	};
@@ -45116,7 +45116,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 31516 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 31546 ];
 
 		return pClassPointer;
 	};
@@ -45140,7 +45140,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 31526 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 31556 ];
 
 		return pClassPointer;
 	};
@@ -45162,7 +45162,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 31541 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 31571 ];
 
 		return pClassPointer;
 	};
@@ -45193,7 +45193,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 31572 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 31602 ];
 
 		return pClassPointer;
 	};
@@ -45219,7 +45219,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 32479 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 32509 ];
 
 		return pClassPointer;
 	};
@@ -45247,7 +45247,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 33062 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 33092 ];
 
 		return pClassPointer;
 	};
@@ -45275,7 +45275,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 33082 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 33112 ];
 
 		return pClassPointer;
 	};
@@ -45302,7 +45302,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 33425 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 33455 ];
 
 		return pClassPointer;
 	};

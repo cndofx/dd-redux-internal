@@ -6045,13 +6045,6 @@ struct AWorldInfo_execIsSteamBuild_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function Engine.WorldInfo.IsDiscordBuild
-// [0x00022501] ( FUNC_Final )
-struct AWorldInfo_execIsDiscordBuild_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
 // Function Engine.WorldInfo.IsConsoleBuild
 // [0x00026501] ( FUNC_Final )
 struct AWorldInfo_execIsConsoleBuild_Parms
@@ -9291,6 +9284,13 @@ struct USceneCapturePortalComponent_execSetCaptureParameters_Parms
 struct UActorFactory_eventPostCreateActor_Parms
 {
 	class AActor*                                      NewActor;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function Engine.Canvas.GetWidescreenScale
+// [0x00020002] 
+struct UCanvas_execGetWidescreenScale_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function Engine.Canvas.SetTextCharacterClipping
@@ -15932,12 +15932,6 @@ struct UOnlineSubsystem_execGetPrimarySessionName_Parms
 struct UOnlineSubsystem_execDumpGameSettings_Parms
 {
 	class UOnlineGameSettings*                         GameSettings;                                     		// 0x0000 (0x0004) [0x0000000000000082]              ( CPF_Const | CPF_Parm )
-};
-
-// Function Engine.OnlineSubsystem.UpdateDiscordRichPresence
-// [0x00020400] 
-struct UOnlineSubsystem_execUpdateDiscordRichPresence_Parms
-{
 };
 
 // Function Engine.OnlineSubsystem.GetNumSupportedLogins
@@ -26783,6 +26777,19 @@ struct UConsole_execClearOutput_Parms
 struct UConsole_execConsoleCommand_Parms
 {
 	struct FString                                     Command;                                          		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	// TArray< struct FString >                        chunkedMessages;                                  		// 0x000C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+};
+
+// Function Engine.Console.chunkMessage
+// [0x00020002] 
+struct UConsole_execchunkMessage_Parms
+{
+	struct FString                                     Message;                                          		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	TArray< struct FString >                           ReturnValue;                                      		// 0x000C (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// TArray< struct FString >                        res;                                              		// 0x0018 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< struct FString >                        words;                                            		// 0x0024 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FString                                  stringBuilder;                                    		// 0x0030 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FString                                  word;                                             		// 0x003C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function Engine.Console.PurgeCommandFromHistory
@@ -38954,7 +38961,7 @@ struct UOnlineVoiceInterface_execOnRecognitionComplete_Parms
 struct UOnlineVoiceInterface_execGetRecognitionResults_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-	TArray< struct FSpeechRecognizedWord >             Words;                                            		// 0x0004 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	TArray< struct FSpeechRecognizedWord >             words;                                            		// 0x0004 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0010 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 

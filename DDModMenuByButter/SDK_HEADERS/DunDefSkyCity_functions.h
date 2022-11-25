@@ -30,7 +30,7 @@ void ADunDefProjectile_Meteor::Destroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 83642 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 78667 ];
 
 	ADunDefProjectile_Meteor_execDestroyed_Parms Destroyed_Parms;
 
@@ -48,7 +48,7 @@ void ADunDefProjectile_Meteor::SpawnFires ( struct FVector HitLocation, struct F
 	static UFunction* pFnSpawnFires = NULL;
 
 	if ( ! pFnSpawnFires )
-		pFnSpawnFires = (UFunction*) UObject::GObjObjects()->Data[ 83633 ];
+		pFnSpawnFires = (UFunction*) UObject::GObjObjects()->Data[ 78658 ];
 
 	ADunDefProjectile_Meteor_execSpawnFires_Parms SpawnFires_Parms;
 	memcpy ( &SpawnFires_Parms.HitLocation, &HitLocation, 0xC );
@@ -68,7 +68,7 @@ void ADunDefProjectile_Meteor::Explode ( struct FVector HitLocation, struct FVec
 	static UFunction* pFnExplode = NULL;
 
 	if ( ! pFnExplode )
-		pFnExplode = (UFunction*) UObject::GObjObjects()->Data[ 83630 ];
+		pFnExplode = (UFunction*) UObject::GObjObjects()->Data[ 78655 ];
 
 	ADunDefProjectile_Meteor_execExplode_Parms Explode_Parms;
 	memcpy ( &Explode_Parms.HitLocation, &HitLocation, 0xC );
@@ -87,7 +87,7 @@ void ADunDefProjectile_Meteor::UpdateDecal ( float DeltaTime )
 	static UFunction* pFnUpdateDecal = NULL;
 
 	if ( ! pFnUpdateDecal )
-		pFnUpdateDecal = (UFunction*) UObject::GObjObjects()->Data[ 83624 ];
+		pFnUpdateDecal = (UFunction*) UObject::GObjObjects()->Data[ 78649 ];
 
 	ADunDefProjectile_Meteor_execUpdateDecal_Parms UpdateDecal_Parms;
 	UpdateDecal_Parms.DeltaTime = DeltaTime;
@@ -105,7 +105,7 @@ void ADunDefProjectile_Meteor::UpdateShadow ( float DeltaTime )
 	static UFunction* pFnUpdateShadow = NULL;
 
 	if ( ! pFnUpdateShadow )
-		pFnUpdateShadow = (UFunction*) UObject::GObjObjects()->Data[ 83618 ];
+		pFnUpdateShadow = (UFunction*) UObject::GObjObjects()->Data[ 78643 ];
 
 	ADunDefProjectile_Meteor_execUpdateShadow_Parms UpdateShadow_Parms;
 	UpdateShadow_Parms.DeltaTime = DeltaTime;
@@ -123,7 +123,7 @@ void ADunDefProjectile_Meteor::DoHoming ( float DeltaTime )
 	static UFunction* pFnDoHoming = NULL;
 
 	if ( ! pFnDoHoming )
-		pFnDoHoming = (UFunction*) UObject::GObjObjects()->Data[ 83616 ];
+		pFnDoHoming = (UFunction*) UObject::GObjObjects()->Data[ 78641 ];
 
 	ADunDefProjectile_Meteor_execDoHoming_Parms DoHoming_Parms;
 	DoHoming_Parms.DeltaTime = DeltaTime;
@@ -141,7 +141,7 @@ void ADunDefProjectile_Meteor::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 83614 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 78639 ];
 
 	ADunDefProjectile_Meteor_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -158,7 +158,7 @@ void ADunDefProjectile_Meteor::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 83613 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 78638 ];
 
 	ADunDefProjectile_Meteor_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -175,7 +175,7 @@ bool ADropOffPoint::GetIsBeingUsed ( )
 	static UFunction* pFnGetIsBeingUsed = NULL;
 
 	if ( ! pFnGetIsBeingUsed )
-		pFnGetIsBeingUsed = (UFunction*) UObject::GObjObjects()->Data[ 87637 ];
+		pFnGetIsBeingUsed = (UFunction*) UObject::GObjObjects()->Data[ 82018 ];
 
 	ADropOffPoint_execGetIsBeingUsed_Parms GetIsBeingUsed_Parms;
 
@@ -194,7 +194,7 @@ void ADropOffPoint::SetBeingUsed ( unsigned long bNowBeingUsed )
 	static UFunction* pFnSetBeingUsed = NULL;
 
 	if ( ! pFnSetBeingUsed )
-		pFnSetBeingUsed = (UFunction*) UObject::GObjObjects()->Data[ 87635 ];
+		pFnSetBeingUsed = (UFunction*) UObject::GObjObjects()->Data[ 82016 ];
 
 	ADropOffPoint_execSetBeingUsed_Parms SetBeingUsed_Parms;
 	SetBeingUsed_Parms.bNowBeingUsed = bNowBeingUsed;
@@ -213,7 +213,7 @@ bool ADunDef_DamagingInterpActor::StopsProjectile ( class AProjectile* P )
 	static UFunction* pFnStopsProjectile = NULL;
 
 	if ( ! pFnStopsProjectile )
-		pFnStopsProjectile = (UFunction*) UObject::GObjObjects()->Data[ 87668 ];
+		pFnStopsProjectile = (UFunction*) UObject::GObjObjects()->Data[ 82049 ];
 
 	ADunDef_DamagingInterpActor_execStopsProjectile_Parms StopsProjectile_Parms;
 	StopsProjectile_Parms.P = P;
@@ -233,7 +233,7 @@ int ADunDef_DamagingInterpActor::GetDamageAmount ( )
 	static UFunction* pFnGetDamageAmount = NULL;
 
 	if ( ! pFnGetDamageAmount )
-		pFnGetDamageAmount = (UFunction*) UObject::GObjObjects()->Data[ 87666 ];
+		pFnGetDamageAmount = (UFunction*) UObject::GObjObjects()->Data[ 82047 ];
 
 	ADunDef_DamagingInterpActor_execGetDamageAmount_Parms GetDamageAmount_Parms;
 
@@ -252,7 +252,7 @@ void ADunDef_DamagingInterpActor::eventRanInto ( class AActor* Other )
 	static UFunction* pFnRanInto = NULL;
 
 	if ( ! pFnRanInto )
-		pFnRanInto = (UFunction*) UObject::GObjObjects()->Data[ 87662 ];
+		pFnRanInto = (UFunction*) UObject::GObjObjects()->Data[ 82043 ];
 
 	ADunDef_DamagingInterpActor_eventRanInto_Parms RanInto_Parms;
 	RanInto_Parms.Other = Other;
@@ -271,7 +271,7 @@ bool ADunDef_DamagingInterpActor::eventEncroachingOn ( class AActor* Other )
 	static UFunction* pFnEncroachingOn = NULL;
 
 	if ( ! pFnEncroachingOn )
-		pFnEncroachingOn = (UFunction*) UObject::GObjObjects()->Data[ 87659 ];
+		pFnEncroachingOn = (UFunction*) UObject::GObjObjects()->Data[ 82040 ];
 
 	ADunDef_DamagingInterpActor_eventEncroachingOn_Parms EncroachingOn_Parms;
 	EncroachingOn_Parms.Other = Other;
@@ -290,7 +290,7 @@ void ADunDef_DamagingInterpActor::ClearDamageList ( )
 	static UFunction* pFnClearDamageList = NULL;
 
 	if ( ! pFnClearDamageList )
-		pFnClearDamageList = (UFunction*) UObject::GObjObjects()->Data[ 87658 ];
+		pFnClearDamageList = (UFunction*) UObject::GObjObjects()->Data[ 82039 ];
 
 	ADunDef_DamagingInterpActor_execClearDamageList_Parms ClearDamageList_Parms;
 
@@ -308,7 +308,7 @@ void ADunDef_DamagingInterpActor::SetDoDamage ( unsigned long bSetDamage, unsign
 	static UFunction* pFnSetDoDamage = NULL;
 
 	if ( ! pFnSetDoDamage )
-		pFnSetDoDamage = (UFunction*) UObject::GObjObjects()->Data[ 87655 ];
+		pFnSetDoDamage = (UFunction*) UObject::GObjObjects()->Data[ 82036 ];
 
 	ADunDef_DamagingInterpActor_execSetDoDamage_Parms SetDoDamage_Parms;
 	SetDoDamage_Parms.bSetDamage = bSetDamage;
@@ -327,7 +327,7 @@ float ADunDef_OldOne::GetLightningTowerDamagePercent ( )
 	static UFunction* pFnGetLightningTowerDamagePercent = NULL;
 
 	if ( ! pFnGetLightningTowerDamagePercent )
-		pFnGetLightningTowerDamagePercent = (UFunction*) UObject::GObjObjects()->Data[ 88617 ];
+		pFnGetLightningTowerDamagePercent = (UFunction*) UObject::GObjObjects()->Data[ 82999 ];
 
 	ADunDef_OldOne_execGetLightningTowerDamagePercent_Parms GetLightningTowerDamagePercent_Parms;
 
@@ -346,7 +346,7 @@ void ADunDef_OldOne::setIsWebbed ( unsigned long isWebbed )
 	static UFunction* pFnsetIsWebbed = NULL;
 
 	if ( ! pFnsetIsWebbed )
-		pFnsetIsWebbed = (UFunction*) UObject::GObjObjects()->Data[ 88615 ];
+		pFnsetIsWebbed = (UFunction*) UObject::GObjObjects()->Data[ 82997 ];
 
 	ADunDef_OldOne_execsetIsWebbed_Parms setIsWebbed_Parms;
 	setIsWebbed_Parms.isWebbed = isWebbed;
@@ -364,7 +364,7 @@ bool ADunDef_OldOne::isWebbed ( )
 	static UFunction* pFnisWebbed = NULL;
 
 	if ( ! pFnisWebbed )
-		pFnisWebbed = (UFunction*) UObject::GObjObjects()->Data[ 88613 ];
+		pFnisWebbed = (UFunction*) UObject::GObjObjects()->Data[ 82995 ];
 
 	ADunDef_OldOne_execisWebbed_Parms isWebbed_Parms;
 
@@ -383,7 +383,7 @@ bool ADunDef_OldOne::GetChainIgnore ( )
 	static UFunction* pFnGetChainIgnore = NULL;
 
 	if ( ! pFnGetChainIgnore )
-		pFnGetChainIgnore = (UFunction*) UObject::GObjObjects()->Data[ 88611 ];
+		pFnGetChainIgnore = (UFunction*) UObject::GObjObjects()->Data[ 82993 ];
 
 	ADunDef_OldOne_execGetChainIgnore_Parms GetChainIgnore_Parms;
 
@@ -402,7 +402,7 @@ void ADunDef_OldOne::SetChainIgnore ( unsigned long ignore )
 	static UFunction* pFnSetChainIgnore = NULL;
 
 	if ( ! pFnSetChainIgnore )
-		pFnSetChainIgnore = (UFunction*) UObject::GObjObjects()->Data[ 88609 ];
+		pFnSetChainIgnore = (UFunction*) UObject::GObjObjects()->Data[ 82991 ];
 
 	ADunDef_OldOne_execSetChainIgnore_Parms SetChainIgnore_Parms;
 	SetChainIgnore_Parms.ignore = ignore;
@@ -421,7 +421,7 @@ bool ADunDef_OldOne::IsBeingChainedBy ( class ADunDefTower_ChainLightning* tower
 	static UFunction* pFnIsBeingChainedBy = NULL;
 
 	if ( ! pFnIsBeingChainedBy )
-		pFnIsBeingChainedBy = (UFunction*) UObject::GObjObjects()->Data[ 88606 ];
+		pFnIsBeingChainedBy = (UFunction*) UObject::GObjObjects()->Data[ 82988 ];
 
 	ADunDef_OldOne_execIsBeingChainedBy_Parms IsBeingChainedBy_Parms;
 	IsBeingChainedBy_Parms.tower = tower;
@@ -441,7 +441,7 @@ void ADunDef_OldOne::RemoveFromChainingTowers ( class ADunDefTower_ChainLightnin
 	static UFunction* pFnRemoveFromChainingTowers = NULL;
 
 	if ( ! pFnRemoveFromChainingTowers )
-		pFnRemoveFromChainingTowers = (UFunction*) UObject::GObjObjects()->Data[ 88604 ];
+		pFnRemoveFromChainingTowers = (UFunction*) UObject::GObjObjects()->Data[ 82986 ];
 
 	ADunDef_OldOne_execRemoveFromChainingTowers_Parms RemoveFromChainingTowers_Parms;
 	RemoveFromChainingTowers_Parms.tower = tower;
@@ -459,7 +459,7 @@ void ADunDef_OldOne::AddToChainingTowers ( class ADunDefTower_ChainLightning* to
 	static UFunction* pFnAddToChainingTowers = NULL;
 
 	if ( ! pFnAddToChainingTowers )
-		pFnAddToChainingTowers = (UFunction*) UObject::GObjObjects()->Data[ 88602 ];
+		pFnAddToChainingTowers = (UFunction*) UObject::GObjObjects()->Data[ 82984 ];
 
 	ADunDef_OldOne_execAddToChainingTowers_Parms AddToChainingTowers_Parms;
 	AddToChainingTowers_Parms.tower = tower;
@@ -477,7 +477,7 @@ bool ADunDef_OldOne::AllowSuction ( )
 	static UFunction* pFnAllowSuction = NULL;
 
 	if ( ! pFnAllowSuction )
-		pFnAllowSuction = (UFunction*) UObject::GObjObjects()->Data[ 88600 ];
+		pFnAllowSuction = (UFunction*) UObject::GObjObjects()->Data[ 82982 ];
 
 	ADunDef_OldOne_execAllowSuction_Parms AllowSuction_Parms;
 
@@ -498,7 +498,7 @@ bool ADunDef_OldOne::IsPlayingCustomAnim ( struct FName inAnim, float TimeFromEn
 	static UFunction* pFnIsPlayingCustomAnim = NULL;
 
 	if ( ! pFnIsPlayingCustomAnim )
-		pFnIsPlayingCustomAnim = (UFunction*) UObject::GObjObjects()->Data[ 88594 ];
+		pFnIsPlayingCustomAnim = (UFunction*) UObject::GObjObjects()->Data[ 82976 ];
 
 	ADunDef_OldOne_execIsPlayingCustomAnim_Parms IsPlayingCustomAnim_Parms;
 	memcpy ( &IsPlayingCustomAnim_Parms.inAnim, &inAnim, 0x8 );
@@ -518,7 +518,7 @@ void ADunDef_OldOne::SetupDamageFlashing ( )
 	static UFunction* pFnSetupDamageFlashing = NULL;
 
 	if ( ! pFnSetupDamageFlashing )
-		pFnSetupDamageFlashing = (UFunction*) UObject::GObjObjects()->Data[ 88591 ];
+		pFnSetupDamageFlashing = (UFunction*) UObject::GObjObjects()->Data[ 82973 ];
 
 	ADunDef_OldOne_execSetupDamageFlashing_Parms SetupDamageFlashing_Parms;
 
@@ -534,7 +534,7 @@ void ADunDef_OldOne::UpdateDamageFlashing ( )
 	static UFunction* pFnUpdateDamageFlashing = NULL;
 
 	if ( ! pFnUpdateDamageFlashing )
-		pFnUpdateDamageFlashing = (UFunction*) UObject::GObjObjects()->Data[ 88588 ];
+		pFnUpdateDamageFlashing = (UFunction*) UObject::GObjObjects()->Data[ 82970 ];
 
 	ADunDef_OldOne_execUpdateDamageFlashing_Parms UpdateDamageFlashing_Parms;
 
@@ -553,7 +553,7 @@ void ADunDef_OldOne::LocalTookDamage ( int DamageAmount, struct FVector atPositi
 	static UFunction* pFnLocalTookDamage = NULL;
 
 	if ( ! pFnLocalTookDamage )
-		pFnLocalTookDamage = (UFunction*) UObject::GObjObjects()->Data[ 88584 ];
+		pFnLocalTookDamage = (UFunction*) UObject::GObjObjects()->Data[ 82966 ];
 
 	ADunDef_OldOne_execLocalTookDamage_Parms LocalTookDamage_Parms;
 	LocalTookDamage_Parms.DamageAmount = DamageAmount;
@@ -573,7 +573,7 @@ void ADunDef_OldOne::NotifyHealthLevel ( class ADunDef_OldOneCrystals* healthCry
 	static UFunction* pFnNotifyHealthLevel = NULL;
 
 	if ( ! pFnNotifyHealthLevel )
-		pFnNotifyHealthLevel = (UFunction*) UObject::GObjObjects()->Data[ 88582 ];
+		pFnNotifyHealthLevel = (UFunction*) UObject::GObjObjects()->Data[ 82964 ];
 
 	ADunDef_OldOne_execNotifyHealthLevel_Parms NotifyHealthLevel_Parms;
 	NotifyHealthLevel_Parms.healthCrystal = healthCrystal;
@@ -594,7 +594,7 @@ void ADunDef_OldOne::HealPctOfMaxHealth ( float HealPct, class AController* Heal
 	static UFunction* pFnHealPctOfMaxHealth = NULL;
 
 	if ( ! pFnHealPctOfMaxHealth )
-		pFnHealPctOfMaxHealth = (UFunction*) UObject::GObjObjects()->Data[ 88577 ];
+		pFnHealPctOfMaxHealth = (UFunction*) UObject::GObjObjects()->Data[ 82959 ];
 
 	ADunDef_OldOne_execHealPctOfMaxHealth_Parms HealPctOfMaxHealth_Parms;
 	HealPctOfMaxHealth_Parms.HealPct = HealPct;
@@ -615,7 +615,7 @@ float ADunDef_OldOne::GetHealthPercent ( )
 	static UFunction* pFnGetHealthPercent = NULL;
 
 	if ( ! pFnGetHealthPercent )
-		pFnGetHealthPercent = (UFunction*) UObject::GObjObjects()->Data[ 88575 ];
+		pFnGetHealthPercent = (UFunction*) UObject::GObjObjects()->Data[ 82957 ];
 
 	ADunDef_OldOne_execGetHealthPercent_Parms GetHealthPercent_Parms;
 
@@ -635,7 +635,7 @@ int ADunDef_OldOne::GetHealth ( unsigned long bGetMax )
 	static UFunction* pFnGetHealth = NULL;
 
 	if ( ! pFnGetHealth )
-		pFnGetHealth = (UFunction*) UObject::GObjObjects()->Data[ 88572 ];
+		pFnGetHealth = (UFunction*) UObject::GObjObjects()->Data[ 82954 ];
 
 	ADunDef_OldOne_execGetHealth_Parms GetHealth_Parms;
 	GetHealth_Parms.bGetMax = bGetMax;
@@ -657,7 +657,7 @@ bool ADunDef_OldOne::ForceMoveActor ( class AActor* Mover, struct FVector NewLoc
 	static UFunction* pFnForceMoveActor = NULL;
 
 	if ( ! pFnForceMoveActor )
-		pFnForceMoveActor = (UFunction*) UObject::GObjObjects()->Data[ 88568 ];
+		pFnForceMoveActor = (UFunction*) UObject::GObjObjects()->Data[ 82950 ];
 
 	ADunDef_OldOne_execForceMoveActor_Parms ForceMoveActor_Parms;
 	ForceMoveActor_Parms.Mover = Mover;
@@ -678,7 +678,7 @@ class UPrimitiveComponent* ADunDef_OldOne::GetOverrideTargetComponent ( )
 	static UFunction* pFnGetOverrideTargetComponent = NULL;
 
 	if ( ! pFnGetOverrideTargetComponent )
-		pFnGetOverrideTargetComponent = (UFunction*) UObject::GObjObjects()->Data[ 88566 ];
+		pFnGetOverrideTargetComponent = (UFunction*) UObject::GObjObjects()->Data[ 82948 ];
 
 	ADunDef_OldOne_execGetOverrideTargetComponent_Parms GetOverrideTargetComponent_Parms;
 
@@ -697,7 +697,7 @@ float ADunDef_OldOne::GetMass ( )
 	static UFunction* pFnGetMass = NULL;
 
 	if ( ! pFnGetMass )
-		pFnGetMass = (UFunction*) UObject::GObjObjects()->Data[ 88564 ];
+		pFnGetMass = (UFunction*) UObject::GObjObjects()->Data[ 82946 ];
 
 	ADunDef_OldOne_execGetMass_Parms GetMass_Parms;
 
@@ -716,7 +716,7 @@ bool ADunDef_OldOne::AllowDarknessIgnorance ( )
 	static UFunction* pFnAllowDarknessIgnorance = NULL;
 
 	if ( ! pFnAllowDarknessIgnorance )
-		pFnAllowDarknessIgnorance = (UFunction*) UObject::GObjObjects()->Data[ 88562 ];
+		pFnAllowDarknessIgnorance = (UFunction*) UObject::GObjObjects()->Data[ 82944 ];
 
 	ADunDef_OldOne_execAllowDarknessIgnorance_Parms AllowDarknessIgnorance_Parms;
 
@@ -736,7 +736,7 @@ bool ADunDef_OldOne::ForceFriendlyFire ( class AActor* Target )
 	static UFunction* pFnForceFriendlyFire = NULL;
 
 	if ( ! pFnForceFriendlyFire )
-		pFnForceFriendlyFire = (UFunction*) UObject::GObjObjects()->Data[ 88559 ];
+		pFnForceFriendlyFire = (UFunction*) UObject::GObjObjects()->Data[ 82941 ];
 
 	ADunDef_OldOne_execForceFriendlyFire_Parms ForceFriendlyFire_Parms;
 	ForceFriendlyFire_Parms.Target = Target;
@@ -757,7 +757,7 @@ struct FVector ADunDef_OldOne::GetInterpolatedTargetingLocation ( class AActor* 
 	static UFunction* pFnGetInterpolatedTargetingLocation = NULL;
 
 	if ( ! pFnGetInterpolatedTargetingLocation )
-		pFnGetInterpolatedTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 88556 ];
+		pFnGetInterpolatedTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 82938 ];
 
 	ADunDef_OldOne_execGetInterpolatedTargetingLocation_Parms GetInterpolatedTargetingLocation_Parms;
 	GetInterpolatedTargetingLocation_Parms.RequestedBy = RequestedBy;
@@ -778,7 +778,7 @@ struct FVector ADunDef_OldOne::GetTargetingLocation ( class AActor* RequestedBy 
 	static UFunction* pFnGetTargetingLocation = NULL;
 
 	if ( ! pFnGetTargetingLocation )
-		pFnGetTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 88553 ];
+		pFnGetTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 82935 ];
 
 	ADunDef_OldOne_execGetTargetingLocation_Parms GetTargetingLocation_Parms;
 	GetTargetingLocation_Parms.RequestedBy = RequestedBy;
@@ -797,7 +797,7 @@ void ADunDef_OldOne::OnDestroy_RemoveFromTargetableList ( )
 	static UFunction* pFnOnDestroy_RemoveFromTargetableList = NULL;
 
 	if ( ! pFnOnDestroy_RemoveFromTargetableList )
-		pFnOnDestroy_RemoveFromTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 88552 ];
+		pFnOnDestroy_RemoveFromTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 82934 ];
 
 	ADunDef_OldOne_execOnDestroy_RemoveFromTargetableList_Parms OnDestroy_RemoveFromTargetableList_Parms;
 
@@ -813,7 +813,7 @@ void ADunDef_OldOne::OnPostBeginPlay_AddToTargetableList ( )
 	static UFunction* pFnOnPostBeginPlay_AddToTargetableList = NULL;
 
 	if ( ! pFnOnPostBeginPlay_AddToTargetableList )
-		pFnOnPostBeginPlay_AddToTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 88551 ];
+		pFnOnPostBeginPlay_AddToTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 82933 ];
 
 	ADunDef_OldOne_execOnPostBeginPlay_AddToTargetableList_Parms OnPostBeginPlay_AddToTargetableList_Parms;
 
@@ -830,7 +830,7 @@ void ADunDef_OldOne::UnregisterAttacker ( class ADunDefEnemyController* forContr
 	static UFunction* pFnUnregisterAttacker = NULL;
 
 	if ( ! pFnUnregisterAttacker )
-		pFnUnregisterAttacker = (UFunction*) UObject::GObjObjects()->Data[ 88549 ];
+		pFnUnregisterAttacker = (UFunction*) UObject::GObjObjects()->Data[ 82931 ];
 
 	ADunDef_OldOne_execUnregisterAttacker_Parms UnregisterAttacker_Parms;
 	UnregisterAttacker_Parms.forController = forController;
@@ -848,7 +848,7 @@ void ADunDef_OldOne::RegisterAttacker ( class ADunDefEnemyController* forControl
 	static UFunction* pFnRegisterAttacker = NULL;
 
 	if ( ! pFnRegisterAttacker )
-		pFnRegisterAttacker = (UFunction*) UObject::GObjObjects()->Data[ 88547 ];
+		pFnRegisterAttacker = (UFunction*) UObject::GObjObjects()->Data[ 82929 ];
 
 	ADunDef_OldOne_execRegisterAttacker_Parms RegisterAttacker_Parms;
 	RegisterAttacker_Parms.forController = forController;
@@ -866,7 +866,7 @@ float ADunDef_OldOne::GetAttackRangeOffset ( )
 	static UFunction* pFnGetAttackRangeOffset = NULL;
 
 	if ( ! pFnGetAttackRangeOffset )
-		pFnGetAttackRangeOffset = (UFunction*) UObject::GObjObjects()->Data[ 88545 ];
+		pFnGetAttackRangeOffset = (UFunction*) UObject::GObjObjects()->Data[ 82927 ];
 
 	ADunDef_OldOne_execGetAttackRangeOffset_Parms GetAttackRangeOffset_Parms;
 
@@ -887,7 +887,7 @@ bool ADunDef_OldOne::IgnoreFriendlyFireDamage ( class UDunDefTargetableInterface
 	static UFunction* pFnIgnoreFriendlyFireDamage = NULL;
 
 	if ( ! pFnIgnoreFriendlyFireDamage )
-		pFnIgnoreFriendlyFireDamage = (UFunction*) UObject::GObjObjects()->Data[ 88541 ];
+		pFnIgnoreFriendlyFireDamage = (UFunction*) UObject::GObjObjects()->Data[ 82923 ];
 
 	ADunDef_OldOne_execIgnoreFriendlyFireDamage_Parms IgnoreFriendlyFireDamage_Parms;
 	IgnoreFriendlyFireDamage_Parms.instigatorActor = instigatorActor;
@@ -908,7 +908,7 @@ int ADunDef_OldOne::GetTargetingTeam ( )
 	static UFunction* pFnGetTargetingTeam = NULL;
 
 	if ( ! pFnGetTargetingTeam )
-		pFnGetTargetingTeam = (UFunction*) UObject::GObjObjects()->Data[ 88539 ];
+		pFnGetTargetingTeam = (UFunction*) UObject::GObjObjects()->Data[ 82921 ];
 
 	ADunDef_OldOne_execGetTargetingTeam_Parms GetTargetingTeam_Parms;
 
@@ -928,7 +928,7 @@ float ADunDef_OldOne::GetTowerTargetingDesirability ( class ADunDefTower* forTow
 	static UFunction* pFnGetTowerTargetingDesirability = NULL;
 
 	if ( ! pFnGetTowerTargetingDesirability )
-		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 88536 ];
+		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 82918 ];
 
 	ADunDef_OldOne_execGetTowerTargetingDesirability_Parms GetTowerTargetingDesirability_Parms;
 	GetTowerTargetingDesirability_Parms.forTower = forTower;
@@ -950,7 +950,7 @@ float ADunDef_OldOne::GetPlayerTargetingDesirability ( class ADunDefPlayerContro
 	static UFunction* pFnGetPlayerTargetingDesirability = NULL;
 
 	if ( ! pFnGetPlayerTargetingDesirability )
-		pFnGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 88532 ];
+		pFnGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 82914 ];
 
 	ADunDef_OldOne_execGetPlayerTargetingDesirability_Parms GetPlayerTargetingDesirability_Parms;
 	GetPlayerTargetingDesirability_Parms.forController = forController;
@@ -973,7 +973,7 @@ void ADunDef_OldOne::TraceEyeMultiBeamDmg ( int beamIdx, struct FVector beamStar
 	static UFunction* pFnTraceEyeMultiBeamDmg = NULL;
 
 	if ( ! pFnTraceEyeMultiBeamDmg )
-		pFnTraceEyeMultiBeamDmg = (UFunction*) UObject::GObjObjects()->Data[ 88521 ];
+		pFnTraceEyeMultiBeamDmg = (UFunction*) UObject::GObjObjects()->Data[ 82903 ];
 
 	ADunDef_OldOne_execTraceEyeMultiBeamDmg_Parms TraceEyeMultiBeamDmg_Parms;
 	TraceEyeMultiBeamDmg_Parms.beamIdx = beamIdx;
@@ -996,7 +996,7 @@ void ADunDef_OldOne::SetMultiEyeBeamLocation ( int beamIdx, struct FVector beamS
 	static UFunction* pFnSetMultiEyeBeamLocation = NULL;
 
 	if ( ! pFnSetMultiEyeBeamLocation )
-		pFnSetMultiEyeBeamLocation = (UFunction*) UObject::GObjObjects()->Data[ 88516 ];
+		pFnSetMultiEyeBeamLocation = (UFunction*) UObject::GObjObjects()->Data[ 82898 ];
 
 	ADunDef_OldOne_execSetMultiEyeBeamLocation_Parms SetMultiEyeBeamLocation_Parms;
 	SetMultiEyeBeamLocation_Parms.beamIdx = beamIdx;
@@ -1017,7 +1017,7 @@ void ADunDef_OldOne::TraceMultiEyeBeam ( float DeltaTime )
 	static UFunction* pFnTraceMultiEyeBeam = NULL;
 
 	if ( ! pFnTraceMultiEyeBeam )
-		pFnTraceMultiEyeBeam = (UFunction*) UObject::GObjObjects()->Data[ 88506 ];
+		pFnTraceMultiEyeBeam = (UFunction*) UObject::GObjObjects()->Data[ 82888 ];
 
 	ADunDef_OldOne_execTraceMultiEyeBeam_Parms TraceMultiEyeBeam_Parms;
 	TraceMultiEyeBeam_Parms.DeltaTime = DeltaTime;
@@ -1036,7 +1036,7 @@ void ADunDef_OldOne::SpawnFire ( class ADunDefGasCloud* fireTemplate, struct FVe
 	static UFunction* pFnSpawnFire = NULL;
 
 	if ( ! pFnSpawnFire )
-		pFnSpawnFire = (UFunction*) UObject::GObjObjects()->Data[ 88502 ];
+		pFnSpawnFire = (UFunction*) UObject::GObjObjects()->Data[ 82884 ];
 
 	ADunDef_OldOne_execSpawnFire_Parms SpawnFire_Parms;
 	SpawnFire_Parms.fireTemplate = fireTemplate;
@@ -1056,7 +1056,7 @@ void ADunDef_OldOne::TraceRightEyeDmg ( struct FVector beamStartLoc, struct FVec
 	static UFunction* pFnTraceRightEyeDmg = NULL;
 
 	if ( ! pFnTraceRightEyeDmg )
-		pFnTraceRightEyeDmg = (UFunction*) UObject::GObjObjects()->Data[ 88492 ];
+		pFnTraceRightEyeDmg = (UFunction*) UObject::GObjObjects()->Data[ 82874 ];
 
 	ADunDef_OldOne_execTraceRightEyeDmg_Parms TraceRightEyeDmg_Parms;
 	memcpy ( &TraceRightEyeDmg_Parms.beamStartLoc, &beamStartLoc, 0xC );
@@ -1077,7 +1077,7 @@ void ADunDef_OldOne::SetRightEyeBeamLocation ( struct FVector beamStartLoc, stru
 	static UFunction* pFnSetRightEyeBeamLocation = NULL;
 
 	if ( ! pFnSetRightEyeBeamLocation )
-		pFnSetRightEyeBeamLocation = (UFunction*) UObject::GObjObjects()->Data[ 88488 ];
+		pFnSetRightEyeBeamLocation = (UFunction*) UObject::GObjObjects()->Data[ 82870 ];
 
 	ADunDef_OldOne_execSetRightEyeBeamLocation_Parms SetRightEyeBeamLocation_Parms;
 	memcpy ( &SetRightEyeBeamLocation_Parms.beamStartLoc, &beamStartLoc, 0xC );
@@ -1098,7 +1098,7 @@ void ADunDef_OldOne::TraceLeftEyeDmg ( struct FVector beamStartLoc, struct FVect
 	static UFunction* pFnTraceLeftEyeDmg = NULL;
 
 	if ( ! pFnTraceLeftEyeDmg )
-		pFnTraceLeftEyeDmg = (UFunction*) UObject::GObjObjects()->Data[ 88478 ];
+		pFnTraceLeftEyeDmg = (UFunction*) UObject::GObjObjects()->Data[ 82860 ];
 
 	ADunDef_OldOne_execTraceLeftEyeDmg_Parms TraceLeftEyeDmg_Parms;
 	memcpy ( &TraceLeftEyeDmg_Parms.beamStartLoc, &beamStartLoc, 0xC );
@@ -1119,7 +1119,7 @@ void ADunDef_OldOne::SetLeftEyeBeamLocation ( struct FVector beamStartLoc, struc
 	static UFunction* pFnSetLeftEyeBeamLocation = NULL;
 
 	if ( ! pFnSetLeftEyeBeamLocation )
-		pFnSetLeftEyeBeamLocation = (UFunction*) UObject::GObjObjects()->Data[ 88474 ];
+		pFnSetLeftEyeBeamLocation = (UFunction*) UObject::GObjObjects()->Data[ 82856 ];
 
 	ADunDef_OldOne_execSetLeftEyeBeamLocation_Parms SetLeftEyeBeamLocation_Parms;
 	memcpy ( &SetLeftEyeBeamLocation_Parms.beamStartLoc, &beamStartLoc, 0xC );
@@ -1139,7 +1139,7 @@ void ADunDef_OldOne::TraceRightEye ( float DeltaTime )
 	static UFunction* pFnTraceRightEye = NULL;
 
 	if ( ! pFnTraceRightEye )
-		pFnTraceRightEye = (UFunction*) UObject::GObjObjects()->Data[ 88465 ];
+		pFnTraceRightEye = (UFunction*) UObject::GObjObjects()->Data[ 82847 ];
 
 	ADunDef_OldOne_execTraceRightEye_Parms TraceRightEye_Parms;
 	TraceRightEye_Parms.DeltaTime = DeltaTime;
@@ -1157,7 +1157,7 @@ void ADunDef_OldOne::TraceLeftEye ( float DeltaTime )
 	static UFunction* pFnTraceLeftEye = NULL;
 
 	if ( ! pFnTraceLeftEye )
-		pFnTraceLeftEye = (UFunction*) UObject::GObjObjects()->Data[ 88456 ];
+		pFnTraceLeftEye = (UFunction*) UObject::GObjObjects()->Data[ 82838 ];
 
 	ADunDef_OldOne_execTraceLeftEye_Parms TraceLeftEye_Parms;
 	TraceLeftEye_Parms.DeltaTime = DeltaTime;
@@ -1177,7 +1177,7 @@ void ADunDef_OldOne::TraceBellyMultiBeamDmg ( int beamIdx, struct FVector beamSt
 	static UFunction* pFnTraceBellyMultiBeamDmg = NULL;
 
 	if ( ! pFnTraceBellyMultiBeamDmg )
-		pFnTraceBellyMultiBeamDmg = (UFunction*) UObject::GObjObjects()->Data[ 88445 ];
+		pFnTraceBellyMultiBeamDmg = (UFunction*) UObject::GObjObjects()->Data[ 82827 ];
 
 	ADunDef_OldOne_execTraceBellyMultiBeamDmg_Parms TraceBellyMultiBeamDmg_Parms;
 	TraceBellyMultiBeamDmg_Parms.beamIdx = beamIdx;
@@ -1199,7 +1199,7 @@ void ADunDef_OldOne::TraceBellyBeamDmg ( int Idx, struct FVector beamStartLoc, s
 	static UFunction* pFnTraceBellyBeamDmg = NULL;
 
 	if ( ! pFnTraceBellyBeamDmg )
-		pFnTraceBellyBeamDmg = (UFunction*) UObject::GObjObjects()->Data[ 88434 ];
+		pFnTraceBellyBeamDmg = (UFunction*) UObject::GObjObjects()->Data[ 82816 ];
 
 	ADunDef_OldOne_execTraceBellyBeamDmg_Parms TraceBellyBeamDmg_Parms;
 	TraceBellyBeamDmg_Parms.Idx = Idx;
@@ -1222,7 +1222,7 @@ void ADunDef_OldOne::SetBellyBeamLocation ( int Idx, struct FVector beamStartLoc
 	static UFunction* pFnSetBellyBeamLocation = NULL;
 
 	if ( ! pFnSetBellyBeamLocation )
-		pFnSetBellyBeamLocation = (UFunction*) UObject::GObjObjects()->Data[ 88429 ];
+		pFnSetBellyBeamLocation = (UFunction*) UObject::GObjObjects()->Data[ 82811 ];
 
 	ADunDef_OldOne_execSetBellyBeamLocation_Parms SetBellyBeamLocation_Parms;
 	SetBellyBeamLocation_Parms.Idx = Idx;
@@ -1246,7 +1246,7 @@ void ADunDef_OldOne::SetMultiBellyBeamLocation ( int beamIdx, struct FVector bea
 	static UFunction* pFnSetMultiBellyBeamLocation = NULL;
 
 	if ( ! pFnSetMultiBellyBeamLocation )
-		pFnSetMultiBellyBeamLocation = (UFunction*) UObject::GObjObjects()->Data[ 88424 ];
+		pFnSetMultiBellyBeamLocation = (UFunction*) UObject::GObjObjects()->Data[ 82806 ];
 
 	ADunDef_OldOne_execSetMultiBellyBeamLocation_Parms SetMultiBellyBeamLocation_Parms;
 	SetMultiBellyBeamLocation_Parms.beamIdx = beamIdx;
@@ -1267,7 +1267,7 @@ void ADunDef_OldOne::TraceMultiBellyBeam ( float DeltaTime )
 	static UFunction* pFnTraceMultiBellyBeam = NULL;
 
 	if ( ! pFnTraceMultiBellyBeam )
-		pFnTraceMultiBellyBeam = (UFunction*) UObject::GObjObjects()->Data[ 88414 ];
+		pFnTraceMultiBellyBeam = (UFunction*) UObject::GObjObjects()->Data[ 82796 ];
 
 	ADunDef_OldOne_execTraceMultiBellyBeam_Parms TraceMultiBellyBeam_Parms;
 	TraceMultiBellyBeam_Parms.DeltaTime = DeltaTime;
@@ -1286,7 +1286,7 @@ void ADunDef_OldOne::SetRandomLazerPoint ( int lazerIdx, struct FVector lazerPoi
 	static UFunction* pFnSetRandomLazerPoint = NULL;
 
 	if ( ! pFnSetRandomLazerPoint )
-		pFnSetRandomLazerPoint = (UFunction*) UObject::GObjObjects()->Data[ 88411 ];
+		pFnSetRandomLazerPoint = (UFunction*) UObject::GObjObjects()->Data[ 82793 ];
 
 	ADunDef_OldOne_execSetRandomLazerPoint_Parms SetRandomLazerPoint_Parms;
 	SetRandomLazerPoint_Parms.lazerIdx = lazerIdx;
@@ -1305,7 +1305,7 @@ void ADunDef_OldOne::TraceBellyBeam ( float DeltaTime )
 	static UFunction* pFnTraceBellyBeam = NULL;
 
 	if ( ! pFnTraceBellyBeam )
-		pFnTraceBellyBeam = (UFunction*) UObject::GObjObjects()->Data[ 88401 ];
+		pFnTraceBellyBeam = (UFunction*) UObject::GObjObjects()->Data[ 82783 ];
 
 	ADunDef_OldOne_execTraceBellyBeam_Parms TraceBellyBeam_Parms;
 	TraceBellyBeam_Parms.DeltaTime = DeltaTime;
@@ -1323,7 +1323,7 @@ void ADunDef_OldOne::SetNormalBellyTarget ( int Idx )
 	static UFunction* pFnSetNormalBellyTarget = NULL;
 
 	if ( ! pFnSetNormalBellyTarget )
-		pFnSetNormalBellyTarget = (UFunction*) UObject::GObjObjects()->Data[ 88398 ];
+		pFnSetNormalBellyTarget = (UFunction*) UObject::GObjObjects()->Data[ 82780 ];
 
 	ADunDef_OldOne_execSetNormalBellyTarget_Parms SetNormalBellyTarget_Parms;
 	SetNormalBellyTarget_Parms.Idx = Idx;
@@ -1340,7 +1340,7 @@ void ADunDef_OldOne::InitNormalBeams ( )
 	static UFunction* pFnInitNormalBeams = NULL;
 
 	if ( ! pFnInitNormalBeams )
-		pFnInitNormalBeams = (UFunction*) UObject::GObjObjects()->Data[ 88395 ];
+		pFnInitNormalBeams = (UFunction*) UObject::GObjObjects()->Data[ 82777 ];
 
 	ADunDef_OldOne_execInitNormalBeams_Parms InitNormalBeams_Parms;
 
@@ -1357,7 +1357,7 @@ class AActor* ADunDef_OldOne::ChooseTarget ( )
 	static UFunction* pFnChooseTarget = NULL;
 
 	if ( ! pFnChooseTarget )
-		pFnChooseTarget = (UFunction*) UObject::GObjObjects()->Data[ 88390 ];
+		pFnChooseTarget = (UFunction*) UObject::GObjObjects()->Data[ 82772 ];
 
 	ADunDef_OldOne_execChooseTarget_Parms ChooseTarget_Parms;
 
@@ -1375,7 +1375,7 @@ void ADunDef_OldOne::eventStartLazers ( )
 	static UFunction* pFnStartLazers = NULL;
 
 	if ( ! pFnStartLazers )
-		pFnStartLazers = (UFunction*) UObject::GObjObjects()->Data[ 88389 ];
+		pFnStartLazers = (UFunction*) UObject::GObjObjects()->Data[ 82771 ];
 
 	ADunDef_OldOne_eventStartLazers_Parms StartLazers_Parms;
 
@@ -1391,7 +1391,7 @@ void ADunDef_OldOne::eventStopFlameBreath ( )
 	static UFunction* pFnStopFlameBreath = NULL;
 
 	if ( ! pFnStopFlameBreath )
-		pFnStopFlameBreath = (UFunction*) UObject::GObjObjects()->Data[ 88388 ];
+		pFnStopFlameBreath = (UFunction*) UObject::GObjObjects()->Data[ 82770 ];
 
 	ADunDef_OldOne_eventStopFlameBreath_Parms StopFlameBreath_Parms;
 
@@ -1407,7 +1407,7 @@ void ADunDef_OldOne::eventStartFlameSweep ( )
 	static UFunction* pFnStartFlameSweep = NULL;
 
 	if ( ! pFnStartFlameSweep )
-		pFnStartFlameSweep = (UFunction*) UObject::GObjObjects()->Data[ 88385 ];
+		pFnStartFlameSweep = (UFunction*) UObject::GObjObjects()->Data[ 82767 ];
 
 	ADunDef_OldOne_eventStartFlameSweep_Parms StartFlameSweep_Parms;
 
@@ -1423,7 +1423,7 @@ void ADunDef_OldOne::eventStartFlameburst ( )
 	static UFunction* pFnStartFlameburst = NULL;
 
 	if ( ! pFnStartFlameburst )
-		pFnStartFlameburst = (UFunction*) UObject::GObjObjects()->Data[ 88382 ];
+		pFnStartFlameburst = (UFunction*) UObject::GObjObjects()->Data[ 82764 ];
 
 	ADunDef_OldOne_eventStartFlameburst_Parms StartFlameburst_Parms;
 
@@ -1439,7 +1439,7 @@ void ADunDef_OldOne::eventActivateChestCrystal ( )
 	static UFunction* pFnActivateChestCrystal = NULL;
 
 	if ( ! pFnActivateChestCrystal )
-		pFnActivateChestCrystal = (UFunction*) UObject::GObjObjects()->Data[ 88380 ];
+		pFnActivateChestCrystal = (UFunction*) UObject::GObjObjects()->Data[ 82762 ];
 
 	ADunDef_OldOne_eventActivateChestCrystal_Parms ActivateChestCrystal_Parms;
 
@@ -1455,7 +1455,7 @@ void ADunDef_OldOne::eventActivateRightHandCrystal ( )
 	static UFunction* pFnActivateRightHandCrystal = NULL;
 
 	if ( ! pFnActivateRightHandCrystal )
-		pFnActivateRightHandCrystal = (UFunction*) UObject::GObjObjects()->Data[ 88378 ];
+		pFnActivateRightHandCrystal = (UFunction*) UObject::GObjObjects()->Data[ 82760 ];
 
 	ADunDef_OldOne_eventActivateRightHandCrystal_Parms ActivateRightHandCrystal_Parms;
 
@@ -1471,7 +1471,7 @@ void ADunDef_OldOne::eventActivateLeftHandCrystal ( )
 	static UFunction* pFnActivateLeftHandCrystal = NULL;
 
 	if ( ! pFnActivateLeftHandCrystal )
-		pFnActivateLeftHandCrystal = (UFunction*) UObject::GObjObjects()->Data[ 88376 ];
+		pFnActivateLeftHandCrystal = (UFunction*) UObject::GObjObjects()->Data[ 82758 ];
 
 	ADunDef_OldOne_eventActivateLeftHandCrystal_Parms ActivateLeftHandCrystal_Parms;
 
@@ -1487,7 +1487,7 @@ void ADunDef_OldOne::eventDeactivateChestCrystal ( )
 	static UFunction* pFnDeactivateChestCrystal = NULL;
 
 	if ( ! pFnDeactivateChestCrystal )
-		pFnDeactivateChestCrystal = (UFunction*) UObject::GObjObjects()->Data[ 88374 ];
+		pFnDeactivateChestCrystal = (UFunction*) UObject::GObjObjects()->Data[ 82756 ];
 
 	ADunDef_OldOne_eventDeactivateChestCrystal_Parms DeactivateChestCrystal_Parms;
 
@@ -1503,7 +1503,7 @@ void ADunDef_OldOne::eventDeactivateRightHandCrystal ( )
 	static UFunction* pFnDeactivateRightHandCrystal = NULL;
 
 	if ( ! pFnDeactivateRightHandCrystal )
-		pFnDeactivateRightHandCrystal = (UFunction*) UObject::GObjObjects()->Data[ 88372 ];
+		pFnDeactivateRightHandCrystal = (UFunction*) UObject::GObjObjects()->Data[ 82754 ];
 
 	ADunDef_OldOne_eventDeactivateRightHandCrystal_Parms DeactivateRightHandCrystal_Parms;
 
@@ -1519,7 +1519,7 @@ void ADunDef_OldOne::eventDeactivateLeftHandCrystal ( )
 	static UFunction* pFnDeactivateLeftHandCrystal = NULL;
 
 	if ( ! pFnDeactivateLeftHandCrystal )
-		pFnDeactivateLeftHandCrystal = (UFunction*) UObject::GObjObjects()->Data[ 88370 ];
+		pFnDeactivateLeftHandCrystal = (UFunction*) UObject::GObjObjects()->Data[ 82752 ];
 
 	ADunDef_OldOne_eventDeactivateLeftHandCrystal_Parms DeactivateLeftHandCrystal_Parms;
 
@@ -1537,7 +1537,7 @@ void ADunDef_OldOne::SpawnDoubleSlamEmitter ( struct FVector SpawnLoc, class ADu
 	static UFunction* pFnSpawnDoubleSlamEmitter = NULL;
 
 	if ( ! pFnSpawnDoubleSlamEmitter )
-		pFnSpawnDoubleSlamEmitter = (UFunction*) UObject::GObjObjects()->Data[ 88366 ];
+		pFnSpawnDoubleSlamEmitter = (UFunction*) UObject::GObjObjects()->Data[ 82748 ];
 
 	ADunDef_OldOne_execSpawnDoubleSlamEmitter_Parms SpawnDoubleSlamEmitter_Parms;
 	memcpy ( &SpawnDoubleSlamEmitter_Parms.SpawnLoc, &SpawnLoc, 0xC );
@@ -1556,7 +1556,7 @@ void ADunDef_OldOne::SpawnSingleSlamEmitter ( struct FVector SpawnLoc )
 	static UFunction* pFnSpawnSingleSlamEmitter = NULL;
 
 	if ( ! pFnSpawnSingleSlamEmitter )
-		pFnSpawnSingleSlamEmitter = (UFunction*) UObject::GObjObjects()->Data[ 88362 ];
+		pFnSpawnSingleSlamEmitter = (UFunction*) UObject::GObjObjects()->Data[ 82744 ];
 
 	ADunDef_OldOne_execSpawnSingleSlamEmitter_Parms SpawnSingleSlamEmitter_Parms;
 	memcpy ( &SpawnSingleSlamEmitter_Parms.SpawnLoc, &SpawnLoc, 0xC );
@@ -1573,7 +1573,7 @@ void ADunDef_OldOne::eventDoubleStomp ( )
 	static UFunction* pFnDoubleStomp = NULL;
 
 	if ( ! pFnDoubleStomp )
-		pFnDoubleStomp = (UFunction*) UObject::GObjObjects()->Data[ 88357 ];
+		pFnDoubleStomp = (UFunction*) UObject::GObjObjects()->Data[ 82739 ];
 
 	ADunDef_OldOne_eventDoubleStomp_Parms DoubleStomp_Parms;
 
@@ -1589,7 +1589,7 @@ void ADunDef_OldOne::eventRightFootStomp ( )
 	static UFunction* pFnRightFootStomp = NULL;
 
 	if ( ! pFnRightFootStomp )
-		pFnRightFootStomp = (UFunction*) UObject::GObjObjects()->Data[ 88352 ];
+		pFnRightFootStomp = (UFunction*) UObject::GObjObjects()->Data[ 82734 ];
 
 	ADunDef_OldOne_eventRightFootStomp_Parms RightFootStomp_Parms;
 
@@ -1605,7 +1605,7 @@ void ADunDef_OldOne::eventLeftFootStomp ( )
 	static UFunction* pFnLeftFootStomp = NULL;
 
 	if ( ! pFnLeftFootStomp )
-		pFnLeftFootStomp = (UFunction*) UObject::GObjObjects()->Data[ 88347 ];
+		pFnLeftFootStomp = (UFunction*) UObject::GObjObjects()->Data[ 82729 ];
 
 	ADunDef_OldOne_eventLeftFootStomp_Parms LeftFootStomp_Parms;
 
@@ -1621,7 +1621,7 @@ void ADunDef_OldOne::UpdateDifficultyValues ( )
 	static UFunction* pFnUpdateDifficultyValues = NULL;
 
 	if ( ! pFnUpdateDifficultyValues )
-		pFnUpdateDifficultyValues = (UFunction*) UObject::GObjObjects()->Data[ 88346 ];
+		pFnUpdateDifficultyValues = (UFunction*) UObject::GObjObjects()->Data[ 82728 ];
 
 	ADunDef_OldOne_execUpdateDifficultyValues_Parms UpdateDifficultyValues_Parms;
 
@@ -1637,7 +1637,7 @@ void ADunDef_OldOne::eventDeActivateCollisionDamage ( )
 	static UFunction* pFnDeActivateCollisionDamage = NULL;
 
 	if ( ! pFnDeActivateCollisionDamage )
-		pFnDeActivateCollisionDamage = (UFunction*) UObject::GObjObjects()->Data[ 88344 ];
+		pFnDeActivateCollisionDamage = (UFunction*) UObject::GObjObjects()->Data[ 82726 ];
 
 	ADunDef_OldOne_eventDeActivateCollisionDamage_Parms DeActivateCollisionDamage_Parms;
 
@@ -1653,7 +1653,7 @@ void ADunDef_OldOne::eventActivateCollisionDamage ( )
 	static UFunction* pFnActivateCollisionDamage = NULL;
 
 	if ( ! pFnActivateCollisionDamage )
-		pFnActivateCollisionDamage = (UFunction*) UObject::GObjObjects()->Data[ 88342 ];
+		pFnActivateCollisionDamage = (UFunction*) UObject::GObjObjects()->Data[ 82724 ];
 
 	ADunDef_OldOne_eventActivateCollisionDamage_Parms ActivateCollisionDamage_Parms;
 
@@ -1670,7 +1670,7 @@ int ADunDef_OldOne::GetNumCrystalsThisPhase ( )
 	static UFunction* pFnGetNumCrystalsThisPhase = NULL;
 
 	if ( ! pFnGetNumCrystalsThisPhase )
-		pFnGetNumCrystalsThisPhase = (UFunction*) UObject::GObjObjects()->Data[ 88340 ];
+		pFnGetNumCrystalsThisPhase = (UFunction*) UObject::GObjObjects()->Data[ 82722 ];
 
 	ADunDef_OldOne_execGetNumCrystalsThisPhase_Parms GetNumCrystalsThisPhase_Parms;
 
@@ -1688,7 +1688,7 @@ void ADunDef_OldOne::DoPhaseShift ( )
 	static UFunction* pFnDoPhaseShift = NULL;
 
 	if ( ! pFnDoPhaseShift )
-		pFnDoPhaseShift = (UFunction*) UObject::GObjObjects()->Data[ 88339 ];
+		pFnDoPhaseShift = (UFunction*) UObject::GObjObjects()->Data[ 82721 ];
 
 	ADunDef_OldOne_execDoPhaseShift_Parms DoPhaseShift_Parms;
 
@@ -1707,7 +1707,7 @@ bool ADunDef_OldOne::ArePlayersWithinRange ( struct FVector LocCheck, float dist
 	static UFunction* pFnArePlayersWithinRange = NULL;
 
 	if ( ! pFnArePlayersWithinRange )
-		pFnArePlayersWithinRange = (UFunction*) UObject::GObjObjects()->Data[ 88334 ];
+		pFnArePlayersWithinRange = (UFunction*) UObject::GObjObjects()->Data[ 82716 ];
 
 	ADunDef_OldOne_execArePlayersWithinRange_Parms ArePlayersWithinRange_Parms;
 	memcpy ( &ArePlayersWithinRange_Parms.LocCheck, &LocCheck, 0xC );
@@ -1727,7 +1727,7 @@ void ADunDef_OldOne::DoDeath ( )
 	static UFunction* pFnDoDeath = NULL;
 
 	if ( ! pFnDoDeath )
-		pFnDoDeath = (UFunction*) UObject::GObjObjects()->Data[ 88330 ];
+		pFnDoDeath = (UFunction*) UObject::GObjObjects()->Data[ 82712 ];
 
 	ADunDef_OldOne_execDoDeath_Parms DoDeath_Parms;
 
@@ -1744,7 +1744,7 @@ bool ADunDef_OldOne::CheckCrystalDeaths ( )
 	static UFunction* pFnCheckCrystalDeaths = NULL;
 
 	if ( ! pFnCheckCrystalDeaths )
-		pFnCheckCrystalDeaths = (UFunction*) UObject::GObjObjects()->Data[ 88328 ];
+		pFnCheckCrystalDeaths = (UFunction*) UObject::GObjObjects()->Data[ 82710 ];
 
 	ADunDef_OldOne_execCheckCrystalDeaths_Parms CheckCrystalDeaths_Parms;
 
@@ -1763,7 +1763,7 @@ void ADunDef_OldOne::NotifyCrystalDeath ( class ADunDef_OldOneCrystals* diedCrys
 	static UFunction* pFnNotifyCrystalDeath = NULL;
 
 	if ( ! pFnNotifyCrystalDeath )
-		pFnNotifyCrystalDeath = (UFunction*) UObject::GObjObjects()->Data[ 88324 ];
+		pFnNotifyCrystalDeath = (UFunction*) UObject::GObjObjects()->Data[ 82706 ];
 
 	ADunDef_OldOne_execNotifyCrystalDeath_Parms NotifyCrystalDeath_Parms;
 	NotifyCrystalDeath_Parms.diedCrystal = diedCrystal;
@@ -1780,7 +1780,7 @@ void ADunDef_OldOne::eventDoubleFootStomp ( )
 	static UFunction* pFnDoubleFootStomp = NULL;
 
 	if ( ! pFnDoubleFootStomp )
-		pFnDoubleFootStomp = (UFunction*) UObject::GObjObjects()->Data[ 88321 ];
+		pFnDoubleFootStomp = (UFunction*) UObject::GObjObjects()->Data[ 82703 ];
 
 	ADunDef_OldOne_eventDoubleFootStomp_Parms DoubleFootStomp_Parms;
 
@@ -1796,7 +1796,7 @@ void ADunDef_OldOne::eventLeftHandProjectile ( )
 	static UFunction* pFnLeftHandProjectile = NULL;
 
 	if ( ! pFnLeftHandProjectile )
-		pFnLeftHandProjectile = (UFunction*) UObject::GObjObjects()->Data[ 88320 ];
+		pFnLeftHandProjectile = (UFunction*) UObject::GObjObjects()->Data[ 82702 ];
 
 	ADunDef_OldOne_eventLeftHandProjectile_Parms LeftHandProjectile_Parms;
 
@@ -1812,7 +1812,7 @@ void ADunDef_OldOne::eventRightHandProjectile ( )
 	static UFunction* pFnRightHandProjectile = NULL;
 
 	if ( ! pFnRightHandProjectile )
-		pFnRightHandProjectile = (UFunction*) UObject::GObjObjects()->Data[ 88319 ];
+		pFnRightHandProjectile = (UFunction*) UObject::GObjObjects()->Data[ 82701 ];
 
 	ADunDef_OldOne_eventRightHandProjectile_Parms RightHandProjectile_Parms;
 
@@ -1829,7 +1829,7 @@ bool ADunDef_OldOne::PickSmashAttack ( )
 	static UFunction* pFnPickSmashAttack = NULL;
 
 	if ( ! pFnPickSmashAttack )
-		pFnPickSmashAttack = (UFunction*) UObject::GObjObjects()->Data[ 88317 ];
+		pFnPickSmashAttack = (UFunction*) UObject::GObjObjects()->Data[ 82699 ];
 
 	ADunDef_OldOne_execPickSmashAttack_Parms PickSmashAttack_Parms;
 
@@ -1847,7 +1847,7 @@ void ADunDef_OldOne::DoProjectileAttack ( )
 	static UFunction* pFnDoProjectileAttack = NULL;
 
 	if ( ! pFnDoProjectileAttack )
-		pFnDoProjectileAttack = (UFunction*) UObject::GObjObjects()->Data[ 88316 ];
+		pFnDoProjectileAttack = (UFunction*) UObject::GObjObjects()->Data[ 82698 ];
 
 	ADunDef_OldOne_execDoProjectileAttack_Parms DoProjectileAttack_Parms;
 
@@ -1864,7 +1864,7 @@ bool ADunDef_OldOne::CheckProjectileAttack ( )
 	static UFunction* pFnCheckProjectileAttack = NULL;
 
 	if ( ! pFnCheckProjectileAttack )
-		pFnCheckProjectileAttack = (UFunction*) UObject::GObjObjects()->Data[ 88314 ];
+		pFnCheckProjectileAttack = (UFunction*) UObject::GObjObjects()->Data[ 82696 ];
 
 	ADunDef_OldOne_execCheckProjectileAttack_Parms CheckProjectileAttack_Parms;
 
@@ -1883,7 +1883,7 @@ bool ADunDef_OldOne::CheckForTaunt ( )
 	static UFunction* pFnCheckForTaunt = NULL;
 
 	if ( ! pFnCheckForTaunt )
-		pFnCheckForTaunt = (UFunction*) UObject::GObjObjects()->Data[ 88312 ];
+		pFnCheckForTaunt = (UFunction*) UObject::GObjObjects()->Data[ 82694 ];
 
 	ADunDef_OldOne_execCheckForTaunt_Parms CheckForTaunt_Parms;
 
@@ -1902,7 +1902,7 @@ bool ADunDef_OldOne::CheckForBeamAttack ( )
 	static UFunction* pFnCheckForBeamAttack = NULL;
 
 	if ( ! pFnCheckForBeamAttack )
-		pFnCheckForBeamAttack = (UFunction*) UObject::GObjObjects()->Data[ 88310 ];
+		pFnCheckForBeamAttack = (UFunction*) UObject::GObjObjects()->Data[ 82692 ];
 
 	ADunDef_OldOne_execCheckForBeamAttack_Parms CheckForBeamAttack_Parms;
 
@@ -1920,7 +1920,7 @@ void ADunDef_OldOne::DoTaunt ( )
 	static UFunction* pFnDoTaunt = NULL;
 
 	if ( ! pFnDoTaunt )
-		pFnDoTaunt = (UFunction*) UObject::GObjObjects()->Data[ 88309 ];
+		pFnDoTaunt = (UFunction*) UObject::GObjObjects()->Data[ 82691 ];
 
 	ADunDef_OldOne_execDoTaunt_Parms DoTaunt_Parms;
 
@@ -1937,7 +1937,7 @@ struct FName ADunDef_OldOne::GetTauntAnim ( )
 	static UFunction* pFnGetTauntAnim = NULL;
 
 	if ( ! pFnGetTauntAnim )
-		pFnGetTauntAnim = (UFunction*) UObject::GObjObjects()->Data[ 88307 ];
+		pFnGetTauntAnim = (UFunction*) UObject::GObjObjects()->Data[ 82689 ];
 
 	ADunDef_OldOne_execGetTauntAnim_Parms GetTauntAnim_Parms;
 
@@ -1956,7 +1956,7 @@ void ADunDef_OldOne::PlayHurtAnim ( struct FName theHurtAnim )
 	static UFunction* pFnPlayHurtAnim = NULL;
 
 	if ( ! pFnPlayHurtAnim )
-		pFnPlayHurtAnim = (UFunction*) UObject::GObjObjects()->Data[ 88232 ];
+		pFnPlayHurtAnim = (UFunction*) UObject::GObjObjects()->Data[ 82614 ];
 
 	ADunDef_OldOne_execPlayHurtAnim_Parms PlayHurtAnim_Parms;
 	memcpy ( &PlayHurtAnim_Parms.theHurtAnim, &theHurtAnim, 0x8 );
@@ -1973,7 +1973,7 @@ void ADunDef_OldOne::FinishTaunt ( )
 	static UFunction* pFnFinishTaunt = NULL;
 
 	if ( ! pFnFinishTaunt )
-		pFnFinishTaunt = (UFunction*) UObject::GObjObjects()->Data[ 88295 ];
+		pFnFinishTaunt = (UFunction*) UObject::GObjObjects()->Data[ 82677 ];
 
 	ADunDef_OldOne_execFinishTaunt_Parms FinishTaunt_Parms;
 
@@ -1990,7 +1990,7 @@ void ADunDef_OldOne::SpawnMeteor ( class ADunDefCustomNode* theNode )
 	static UFunction* pFnSpawnMeteor = NULL;
 
 	if ( ! pFnSpawnMeteor )
-		pFnSpawnMeteor = (UFunction*) UObject::GObjObjects()->Data[ 88291 ];
+		pFnSpawnMeteor = (UFunction*) UObject::GObjObjects()->Data[ 82673 ];
 
 	ADunDef_OldOne_execSpawnMeteor_Parms SpawnMeteor_Parms;
 	SpawnMeteor_Parms.theNode = theNode;
@@ -2007,7 +2007,7 @@ void ADunDef_OldOne::eventStartMeteorAttack ( )
 	static UFunction* pFnStartMeteorAttack = NULL;
 
 	if ( ! pFnStartMeteorAttack )
-		pFnStartMeteorAttack = (UFunction*) UObject::GObjObjects()->Data[ 88285 ];
+		pFnStartMeteorAttack = (UFunction*) UObject::GObjObjects()->Data[ 82667 ];
 
 	ADunDef_OldOne_eventStartMeteorAttack_Parms StartMeteorAttack_Parms;
 
@@ -2024,7 +2024,7 @@ bool ADunDef_OldOne::CheckForMeteorAttack ( )
 	static UFunction* pFnCheckForMeteorAttack = NULL;
 
 	if ( ! pFnCheckForMeteorAttack )
-		pFnCheckForMeteorAttack = (UFunction*) UObject::GObjObjects()->Data[ 88283 ];
+		pFnCheckForMeteorAttack = (UFunction*) UObject::GObjObjects()->Data[ 82665 ];
 
 	ADunDef_OldOne_execCheckForMeteorAttack_Parms CheckForMeteorAttack_Parms;
 
@@ -2043,7 +2043,7 @@ bool ADunDef_OldOne::CheckForFlame ( )
 	static UFunction* pFnCheckForFlame = NULL;
 
 	if ( ! pFnCheckForFlame )
-		pFnCheckForFlame = (UFunction*) UObject::GObjObjects()->Data[ 88281 ];
+		pFnCheckForFlame = (UFunction*) UObject::GObjObjects()->Data[ 82663 ];
 
 	ADunDef_OldOne_execCheckForFlame_Parms CheckForFlame_Parms;
 
@@ -2062,7 +2062,7 @@ bool ADunDef_OldOne::CheckForLazer ( )
 	static UFunction* pFnCheckForLazer = NULL;
 
 	if ( ! pFnCheckForLazer )
-		pFnCheckForLazer = (UFunction*) UObject::GObjObjects()->Data[ 88279 ];
+		pFnCheckForLazer = (UFunction*) UObject::GObjObjects()->Data[ 82661 ];
 
 	ADunDef_OldOne_execCheckForLazer_Parms CheckForLazer_Parms;
 
@@ -2081,7 +2081,7 @@ bool ADunDef_OldOne::CheckForSweep ( )
 	static UFunction* pFnCheckForSweep = NULL;
 
 	if ( ! pFnCheckForSweep )
-		pFnCheckForSweep = (UFunction*) UObject::GObjObjects()->Data[ 88277 ];
+		pFnCheckForSweep = (UFunction*) UObject::GObjObjects()->Data[ 82659 ];
 
 	ADunDef_OldOne_execCheckForSweep_Parms CheckForSweep_Parms;
 
@@ -2100,7 +2100,7 @@ void ADunDef_OldOne::EndAttack ( unsigned long bDontEndState )
 	static UFunction* pFnEndAttack = NULL;
 
 	if ( ! pFnEndAttack )
-		pFnEndAttack = (UFunction*) UObject::GObjObjects()->Data[ 88275 ];
+		pFnEndAttack = (UFunction*) UObject::GObjObjects()->Data[ 82657 ];
 
 	ADunDef_OldOne_execEndAttack_Parms EndAttack_Parms;
 	EndAttack_Parms.bDontEndState = bDontEndState;
@@ -2117,7 +2117,7 @@ void ADunDef_OldOne::ShutDownLazers ( )
 	static UFunction* pFnShutDownLazers = NULL;
 
 	if ( ! pFnShutDownLazers )
-		pFnShutDownLazers = (UFunction*) UObject::GObjObjects()->Data[ 88273 ];
+		pFnShutDownLazers = (UFunction*) UObject::GObjObjects()->Data[ 82655 ];
 
 	ADunDef_OldOne_execShutDownLazers_Parms ShutDownLazers_Parms;
 
@@ -2134,7 +2134,7 @@ void ADunDef_OldOne::SetInitalEyeLazerTarget ( class AActor* newLazerTarget )
 	static UFunction* pFnSetInitalEyeLazerTarget = NULL;
 
 	if ( ! pFnSetInitalEyeLazerTarget )
-		pFnSetInitalEyeLazerTarget = (UFunction*) UObject::GObjObjects()->Data[ 88260 ];
+		pFnSetInitalEyeLazerTarget = (UFunction*) UObject::GObjObjects()->Data[ 82642 ];
 
 	ADunDef_OldOne_execSetInitalEyeLazerTarget_Parms SetInitalEyeLazerTarget_Parms;
 	SetInitalEyeLazerTarget_Parms.newLazerTarget = newLazerTarget;
@@ -2151,7 +2151,7 @@ void ADunDef_OldOne::StartBellyLazer ( )
 	static UFunction* pFnStartBellyLazer = NULL;
 
 	if ( ! pFnStartBellyLazer )
-		pFnStartBellyLazer = (UFunction*) UObject::GObjObjects()->Data[ 88258 ];
+		pFnStartBellyLazer = (UFunction*) UObject::GObjObjects()->Data[ 82640 ];
 
 	ADunDef_OldOne_execStartBellyLazer_Parms StartBellyLazer_Parms;
 
@@ -2167,7 +2167,7 @@ void ADunDef_OldOne::StartEyeLazer ( )
 	static UFunction* pFnStartEyeLazer = NULL;
 
 	if ( ! pFnStartEyeLazer )
-		pFnStartEyeLazer = (UFunction*) UObject::GObjObjects()->Data[ 88255 ];
+		pFnStartEyeLazer = (UFunction*) UObject::GObjObjects()->Data[ 82637 ];
 
 	ADunDef_OldOne_execStartEyeLazer_Parms StartEyeLazer_Parms;
 
@@ -2183,7 +2183,7 @@ void ADunDef_OldOne::eventBeginFlameSweepAnim ( )
 	static UFunction* pFnBeginFlameSweepAnim = NULL;
 
 	if ( ! pFnBeginFlameSweepAnim )
-		pFnBeginFlameSweepAnim = (UFunction*) UObject::GObjObjects()->Data[ 88254 ];
+		pFnBeginFlameSweepAnim = (UFunction*) UObject::GObjObjects()->Data[ 82636 ];
 
 	ADunDef_OldOne_eventBeginFlameSweepAnim_Parms BeginFlameSweepAnim_Parms;
 
@@ -2199,7 +2199,7 @@ void ADunDef_OldOne::DoFlameSweep ( )
 	static UFunction* pFnDoFlameSweep = NULL;
 
 	if ( ! pFnDoFlameSweep )
-		pFnDoFlameSweep = (UFunction*) UObject::GObjObjects()->Data[ 88253 ];
+		pFnDoFlameSweep = (UFunction*) UObject::GObjObjects()->Data[ 82635 ];
 
 	ADunDef_OldOne_execDoFlameSweep_Parms DoFlameSweep_Parms;
 
@@ -2215,7 +2215,7 @@ void ADunDef_OldOne::eventDoubleHandStomp ( )
 	static UFunction* pFnDoubleHandStomp = NULL;
 
 	if ( ! pFnDoubleHandStomp )
-		pFnDoubleHandStomp = (UFunction*) UObject::GObjObjects()->Data[ 88107 ];
+		pFnDoubleHandStomp = (UFunction*) UObject::GObjObjects()->Data[ 82489 ];
 
 	ADunDef_OldOne_eventDoubleHandStomp_Parms DoubleHandStomp_Parms;
 
@@ -2231,7 +2231,7 @@ void ADunDef_OldOne::eventLeftHandStomp ( )
 	static UFunction* pFnLeftHandStomp = NULL;
 
 	if ( ! pFnLeftHandStomp )
-		pFnLeftHandStomp = (UFunction*) UObject::GObjObjects()->Data[ 88102 ];
+		pFnLeftHandStomp = (UFunction*) UObject::GObjObjects()->Data[ 82484 ];
 
 	ADunDef_OldOne_eventLeftHandStomp_Parms LeftHandStomp_Parms;
 
@@ -2247,7 +2247,7 @@ void ADunDef_OldOne::eventRightHandStomp ( )
 	static UFunction* pFnRightHandStomp = NULL;
 
 	if ( ! pFnRightHandStomp )
-		pFnRightHandStomp = (UFunction*) UObject::GObjObjects()->Data[ 88097 ];
+		pFnRightHandStomp = (UFunction*) UObject::GObjObjects()->Data[ 82479 ];
 
 	ADunDef_OldOne_eventRightHandStomp_Parms RightHandStomp_Parms;
 
@@ -2264,7 +2264,7 @@ float ADunDef_OldOne::GetAttackDelay ( )
 	static UFunction* pFnGetAttackDelay = NULL;
 
 	if ( ! pFnGetAttackDelay )
-		pFnGetAttackDelay = (UFunction*) UObject::GObjObjects()->Data[ 88048 ];
+		pFnGetAttackDelay = (UFunction*) UObject::GObjObjects()->Data[ 82430 ];
 
 	ADunDef_OldOne_execGetAttackDelay_Parms GetAttackDelay_Parms;
 
@@ -2283,7 +2283,7 @@ void ADunDef_OldOne::SetPhase ( unsigned char newPhase )
 	static UFunction* pFnSetPhase = NULL;
 
 	if ( ! pFnSetPhase )
-		pFnSetPhase = (UFunction*) UObject::GObjObjects()->Data[ 88039 ];
+		pFnSetPhase = (UFunction*) UObject::GObjObjects()->Data[ 82421 ];
 
 	ADunDef_OldOne_execSetPhase_Parms SetPhase_Parms;
 	SetPhase_Parms.newPhase = newPhase;
@@ -2301,7 +2301,7 @@ void ADunDef_OldOne::OnToggle ( class USeqAct_Toggle* Action )
 	static UFunction* pFnOnToggle = NULL;
 
 	if ( ! pFnOnToggle )
-		pFnOnToggle = (UFunction*) UObject::GObjObjects()->Data[ 88037 ];
+		pFnOnToggle = (UFunction*) UObject::GObjObjects()->Data[ 82419 ];
 
 	ADunDef_OldOne_execOnToggle_Parms OnToggle_Parms;
 	OnToggle_Parms.Action = Action;
@@ -2318,7 +2318,7 @@ void ADunDef_OldOne::StartAttack ( )
 	static UFunction* pFnStartAttack = NULL;
 
 	if ( ! pFnStartAttack )
-		pFnStartAttack = (UFunction*) UObject::GObjObjects()->Data[ 88036 ];
+		pFnStartAttack = (UFunction*) UObject::GObjObjects()->Data[ 82418 ];
 
 	ADunDef_OldOne_execStartAttack_Parms StartAttack_Parms;
 
@@ -2334,7 +2334,7 @@ void ADunDef_OldOne::PickAttack ( )
 	static UFunction* pFnPickAttack = NULL;
 
 	if ( ! pFnPickAttack )
-		pFnPickAttack = (UFunction*) UObject::GObjObjects()->Data[ 88035 ];
+		pFnPickAttack = (UFunction*) UObject::GObjObjects()->Data[ 82417 ];
 
 	ADunDef_OldOne_execPickAttack_Parms PickAttack_Parms;
 
@@ -2355,7 +2355,7 @@ bool ADunDef_OldOne::StopCustomAnim ( float blendTimeOut, struct FName CustomAni
 	static UFunction* pFnStopCustomAnim = NULL;
 
 	if ( ! pFnStopCustomAnim )
-		pFnStopCustomAnim = (UFunction*) UObject::GObjObjects()->Data[ 88026 ];
+		pFnStopCustomAnim = (UFunction*) UObject::GObjObjects()->Data[ 82408 ];
 
 	ADunDef_OldOne_execStopCustomAnim_Parms StopCustomAnim_Parms;
 	StopCustomAnim_Parms.blendTimeOut = blendTimeOut;
@@ -2387,7 +2387,7 @@ float ADunDef_OldOne::PlayCustomAnim ( struct FName inAnim, float blendTimeIn, u
 	static UFunction* pFnPlayCustomAnim = NULL;
 
 	if ( ! pFnPlayCustomAnim )
-		pFnPlayCustomAnim = (UFunction*) UObject::GObjObjects()->Data[ 88014 ];
+		pFnPlayCustomAnim = (UFunction*) UObject::GObjObjects()->Data[ 82396 ];
 
 	ADunDef_OldOne_execPlayCustomAnim_Parms PlayCustomAnim_Parms;
 	memcpy ( &PlayCustomAnim_Parms.inAnim, &inAnim, 0x8 );
@@ -2414,7 +2414,7 @@ void ADunDef_OldOne::InitCrystals ( )
 	static UFunction* pFnInitCrystals = NULL;
 
 	if ( ! pFnInitCrystals )
-		pFnInitCrystals = (UFunction*) UObject::GObjObjects()->Data[ 88012 ];
+		pFnInitCrystals = (UFunction*) UObject::GObjObjects()->Data[ 82394 ];
 
 	ADunDef_OldOne_execInitCrystals_Parms InitCrystals_Parms;
 
@@ -2430,7 +2430,7 @@ void ADunDef_OldOne::ClearCrystalsRefs ( )
 	static UFunction* pFnClearCrystalsRefs = NULL;
 
 	if ( ! pFnClearCrystalsRefs )
-		pFnClearCrystalsRefs = (UFunction*) UObject::GObjObjects()->Data[ 88010 ];
+		pFnClearCrystalsRefs = (UFunction*) UObject::GObjObjects()->Data[ 82392 ];
 
 	ADunDef_OldOne_execClearCrystalsRefs_Parms ClearCrystalsRefs_Parms;
 
@@ -2446,7 +2446,7 @@ void ADunDef_OldOne::PopulateCustomNode ( )
 	static UFunction* pFnPopulateCustomNode = NULL;
 
 	if ( ! pFnPopulateCustomNode )
-		pFnPopulateCustomNode = (UFunction*) UObject::GObjObjects()->Data[ 88006 ];
+		pFnPopulateCustomNode = (UFunction*) UObject::GObjObjects()->Data[ 82388 ];
 
 	ADunDef_OldOne_execPopulateCustomNode_Parms PopulateCustomNode_Parms;
 
@@ -2462,7 +2462,7 @@ void ADunDef_OldOne::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 87999 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 82381 ];
 
 	ADunDef_OldOne_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -2494,7 +2494,7 @@ void ADunDef_OldOne::ExecReplicatedFunction ( struct FName FunctionName, struct 
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 87982 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 82364 ];
 
 	ADunDef_OldOne_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -2529,7 +2529,7 @@ float ADunDef_OldOneCrystals::DTGetPlayerTargetingDesirability ( class ADunDefPl
 	static UFunction* pFnDTGetPlayerTargetingDesirability = NULL;
 
 	if ( ! pFnDTGetPlayerTargetingDesirability )
-		pFnDTGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 88722 ];
+		pFnDTGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 83104 ];
 
 	ADunDef_OldOneCrystals_execDTGetPlayerTargetingDesirability_Parms DTGetPlayerTargetingDesirability_Parms;
 	DTGetPlayerTargetingDesirability_Parms.forController = forController;
@@ -2551,7 +2551,7 @@ float ADunDef_OldOneCrystals::DTGetTowerTargetingDesirability ( class ADunDefTow
 	static UFunction* pFnDTGetTowerTargetingDesirability = NULL;
 
 	if ( ! pFnDTGetTowerTargetingDesirability )
-		pFnDTGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 88719 ];
+		pFnDTGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 83101 ];
 
 	ADunDef_OldOneCrystals_execDTGetTowerTargetingDesirability_Parms DTGetTowerTargetingDesirability_Parms;
 	DTGetTowerTargetingDesirability_Parms.forTower = forTower;
@@ -2573,7 +2573,7 @@ bool ADunDef_OldOneCrystals::IgnoreFriendlyFireDamage ( class UDunDefTargetableI
 	static UFunction* pFnIgnoreFriendlyFireDamage = NULL;
 
 	if ( ! pFnIgnoreFriendlyFireDamage )
-		pFnIgnoreFriendlyFireDamage = (UFunction*) UObject::GObjObjects()->Data[ 88715 ];
+		pFnIgnoreFriendlyFireDamage = (UFunction*) UObject::GObjObjects()->Data[ 83097 ];
 
 	ADunDef_OldOneCrystals_execIgnoreFriendlyFireDamage_Parms IgnoreFriendlyFireDamage_Parms;
 	IgnoreFriendlyFireDamage_Parms.instigatorActor = instigatorActor;
@@ -2595,7 +2595,7 @@ bool ADunDef_OldOneCrystals::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 88705 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 83087 ];
 
 	ADunDef_OldOneCrystals_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -2616,7 +2616,7 @@ void ADunDef_OldOneCrystals::PlayHitEffect ( class UClass* DamageType, struct FV
 	static UFunction* pFnPlayHitEffect = NULL;
 
 	if ( ! pFnPlayHitEffect )
-		pFnPlayHitEffect = (UFunction*) UObject::GObjObjects()->Data[ 88702 ];
+		pFnPlayHitEffect = (UFunction*) UObject::GObjObjects()->Data[ 83084 ];
 
 	ADunDef_OldOneCrystals_execPlayHitEffect_Parms PlayHitEffect_Parms;
 	PlayHitEffect_Parms.DamageType = DamageType;
@@ -2634,7 +2634,7 @@ void ADunDef_OldOneCrystals::UpdateDamageFlashing ( )
 	static UFunction* pFnUpdateDamageFlashing = NULL;
 
 	if ( ! pFnUpdateDamageFlashing )
-		pFnUpdateDamageFlashing = (UFunction*) UObject::GObjObjects()->Data[ 88700 ];
+		pFnUpdateDamageFlashing = (UFunction*) UObject::GObjObjects()->Data[ 83082 ];
 
 	ADunDef_OldOneCrystals_execUpdateDamageFlashing_Parms UpdateDamageFlashing_Parms;
 
@@ -2653,7 +2653,7 @@ void ADunDef_OldOneCrystals::LocalTookDamage ( int DamageAmount, struct FVector 
 	static UFunction* pFnLocalTookDamage = NULL;
 
 	if ( ! pFnLocalTookDamage )
-		pFnLocalTookDamage = (UFunction*) UObject::GObjObjects()->Data[ 88696 ];
+		pFnLocalTookDamage = (UFunction*) UObject::GObjObjects()->Data[ 83078 ];
 
 	ADunDef_OldOneCrystals_execLocalTookDamage_Parms LocalTookDamage_Parms;
 	LocalTookDamage_Parms.DamageAmount = DamageAmount;
@@ -2673,7 +2673,7 @@ void ADunDef_OldOneCrystals::SubtractHealth ( int DamageAmount )
 	static UFunction* pFnSubtractHealth = NULL;
 
 	if ( ! pFnSubtractHealth )
-		pFnSubtractHealth = (UFunction*) UObject::GObjObjects()->Data[ 88693 ];
+		pFnSubtractHealth = (UFunction*) UObject::GObjObjects()->Data[ 83075 ];
 
 	ADunDef_OldOneCrystals_execSubtractHealth_Parms SubtractHealth_Parms;
 	SubtractHealth_Parms.DamageAmount = DamageAmount;
@@ -2690,7 +2690,7 @@ void ADunDef_OldOneCrystals::SetInPlay ( )
 	static UFunction* pFnSetInPlay = NULL;
 
 	if ( ! pFnSetInPlay )
-		pFnSetInPlay = (UFunction*) UObject::GObjObjects()->Data[ 88692 ];
+		pFnSetInPlay = (UFunction*) UObject::GObjObjects()->Data[ 83074 ];
 
 	ADunDef_OldOneCrystals_execSetInPlay_Parms SetInPlay_Parms;
 
@@ -2706,7 +2706,7 @@ void ADunDef_OldOneCrystals::RepairCrystal ( )
 	static UFunction* pFnRepairCrystal = NULL;
 
 	if ( ! pFnRepairCrystal )
-		pFnRepairCrystal = (UFunction*) UObject::GObjObjects()->Data[ 88691 ];
+		pFnRepairCrystal = (UFunction*) UObject::GObjObjects()->Data[ 83073 ];
 
 	ADunDef_OldOneCrystals_execRepairCrystal_Parms RepairCrystal_Parms;
 
@@ -2724,7 +2724,7 @@ bool ADunDef_OldOneCrystals::StopsProjectile ( class AProjectile* P )
 	static UFunction* pFnStopsProjectile = NULL;
 
 	if ( ! pFnStopsProjectile )
-		pFnStopsProjectile = (UFunction*) UObject::GObjObjects()->Data[ 88688 ];
+		pFnStopsProjectile = (UFunction*) UObject::GObjObjects()->Data[ 83070 ];
 
 	ADunDef_OldOneCrystals_execStopsProjectile_Parms StopsProjectile_Parms;
 	StopsProjectile_Parms.P = P;
@@ -2743,7 +2743,7 @@ void ADunDef_OldOneCrystals::UpdateHealthColor ( )
 	static UFunction* pFnUpdateHealthColor = NULL;
 
 	if ( ! pFnUpdateHealthColor )
-		pFnUpdateHealthColor = (UFunction*) UObject::GObjObjects()->Data[ 88687 ];
+		pFnUpdateHealthColor = (UFunction*) UObject::GObjObjects()->Data[ 83069 ];
 
 	ADunDef_OldOneCrystals_execUpdateHealthColor_Parms UpdateHealthColor_Parms;
 
@@ -2759,7 +2759,7 @@ void ADunDef_OldOneCrystals::NotifyHealthChange ( )
 	static UFunction* pFnNotifyHealthChange = NULL;
 
 	if ( ! pFnNotifyHealthChange )
-		pFnNotifyHealthChange = (UFunction*) UObject::GObjObjects()->Data[ 88686 ];
+		pFnNotifyHealthChange = (UFunction*) UObject::GObjObjects()->Data[ 83068 ];
 
 	ADunDef_OldOneCrystals_execNotifyHealthChange_Parms NotifyHealthChange_Parms;
 
@@ -2775,7 +2775,7 @@ void ADunDef_OldOneCrystals::UpdateActivate ( )
 	static UFunction* pFnUpdateActivate = NULL;
 
 	if ( ! pFnUpdateActivate )
-		pFnUpdateActivate = (UFunction*) UObject::GObjObjects()->Data[ 88684 ];
+		pFnUpdateActivate = (UFunction*) UObject::GObjObjects()->Data[ 83066 ];
 
 	ADunDef_OldOneCrystals_execUpdateActivate_Parms UpdateActivate_Parms;
 
@@ -2791,7 +2791,7 @@ void ADunDef_OldOneCrystals::Deactivate ( )
 	static UFunction* pFnDeactivate = NULL;
 
 	if ( ! pFnDeactivate )
-		pFnDeactivate = (UFunction*) UObject::GObjObjects()->Data[ 88683 ];
+		pFnDeactivate = (UFunction*) UObject::GObjObjects()->Data[ 83065 ];
 
 	ADunDef_OldOneCrystals_execDeactivate_Parms Deactivate_Parms;
 
@@ -2807,7 +2807,7 @@ void ADunDef_OldOneCrystals::Activate ( )
 	static UFunction* pFnActivate = NULL;
 
 	if ( ! pFnActivate )
-		pFnActivate = (UFunction*) UObject::GObjObjects()->Data[ 88682 ];
+		pFnActivate = (UFunction*) UObject::GObjObjects()->Data[ 83064 ];
 
 	ADunDef_OldOneCrystals_execActivate_Parms Activate_Parms;
 
@@ -2823,7 +2823,7 @@ void ADunDef_OldOneCrystals::eventBaseChange ( )
 	static UFunction* pFnBaseChange = NULL;
 
 	if ( ! pFnBaseChange )
-		pFnBaseChange = (UFunction*) UObject::GObjObjects()->Data[ 88681 ];
+		pFnBaseChange = (UFunction*) UObject::GObjObjects()->Data[ 83063 ];
 
 	ADunDef_OldOneCrystals_eventBaseChange_Parms BaseChange_Parms;
 
@@ -2839,7 +2839,7 @@ void ADunDef_OldOneCrystals::ShutDownCrystal ( )
 	static UFunction* pFnShutDownCrystal = NULL;
 
 	if ( ! pFnShutDownCrystal )
-		pFnShutDownCrystal = (UFunction*) UObject::GObjObjects()->Data[ 88680 ];
+		pFnShutDownCrystal = (UFunction*) UObject::GObjObjects()->Data[ 83062 ];
 
 	ADunDef_OldOneCrystals_execShutDownCrystal_Parms ShutDownCrystal_Parms;
 
@@ -2855,7 +2855,7 @@ void ADunDef_OldOneCrystals::UpdateDissolve ( )
 	static UFunction* pFnUpdateDissolve = NULL;
 
 	if ( ! pFnUpdateDissolve )
-		pFnUpdateDissolve = (UFunction*) UObject::GObjObjects()->Data[ 88678 ];
+		pFnUpdateDissolve = (UFunction*) UObject::GObjObjects()->Data[ 83060 ];
 
 	ADunDef_OldOneCrystals_execUpdateDissolve_Parms UpdateDissolve_Parms;
 
@@ -2871,7 +2871,7 @@ void ADunDef_OldOneCrystals::DissolveCrystal ( )
 	static UFunction* pFnDissolveCrystal = NULL;
 
 	if ( ! pFnDissolveCrystal )
-		pFnDissolveCrystal = (UFunction*) UObject::GObjObjects()->Data[ 88677 ];
+		pFnDissolveCrystal = (UFunction*) UObject::GObjObjects()->Data[ 83059 ];
 
 	ADunDef_OldOneCrystals_execDissolveCrystal_Parms DissolveCrystal_Parms;
 
@@ -2887,7 +2887,7 @@ void ADunDef_OldOneCrystals::PlayDeath ( )
 	static UFunction* pFnPlayDeath = NULL;
 
 	if ( ! pFnPlayDeath )
-		pFnPlayDeath = (UFunction*) UObject::GObjObjects()->Data[ 88676 ];
+		pFnPlayDeath = (UFunction*) UObject::GObjObjects()->Data[ 83058 ];
 
 	ADunDef_OldOneCrystals_execPlayDeath_Parms PlayDeath_Parms;
 
@@ -2907,7 +2907,7 @@ void ADunDef_OldOneCrystals::Died ( class AController* EventInstigator, struct F
 	static UFunction* pFnDied = NULL;
 
 	if ( ! pFnDied )
-		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 88671 ];
+		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 83053 ];
 
 	ADunDef_OldOneCrystals_execDied_Parms Died_Parms;
 	Died_Parms.EventInstigator = EventInstigator;
@@ -2928,7 +2928,7 @@ void ADunDef_OldOneCrystals::InitCrystal ( class ADunDef_OldOne* owningOldOne )
 	static UFunction* pFnInitCrystal = NULL;
 
 	if ( ! pFnInitCrystal )
-		pFnInitCrystal = (UFunction*) UObject::GObjObjects()->Data[ 88667 ];
+		pFnInitCrystal = (UFunction*) UObject::GObjObjects()->Data[ 83049 ];
 
 	ADunDef_OldOneCrystals_execInitCrystal_Parms InitCrystal_Parms;
 	InitCrystal_Parms.owningOldOne = owningOldOne;
@@ -2946,7 +2946,7 @@ void ADunDef_OldOneCrystals::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 88665 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 83047 ];
 
 	ADunDef_OldOneCrystals_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -2972,7 +2972,7 @@ bool ADunDefOldOneBreath::HurtRadius ( float BaseDamage, float DamageRadius, cla
 	static UFunction* pFnHurtRadius = NULL;
 
 	if ( ! pFnHurtRadius )
-		pFnHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 89101 ];
+		pFnHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 83483 ];
 
 	ADunDefOldOneBreath_execHurtRadius_Parms HurtRadius_Parms;
 	HurtRadius_Parms.BaseDamage = BaseDamage;
@@ -3007,7 +3007,7 @@ bool ADunDefEmitterShockwave::RingHurtRadius ( float BaseDamage, float DamageRad
 	static UFunction* pFnRingHurtRadius = NULL;
 
 	if ( ! pFnRingHurtRadius )
-		pFnRingHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 88776 ];
+		pFnRingHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 83158 ];
 
 	ADunDefEmitterShockwave_execRingHurtRadius_Parms RingHurtRadius_Parms;
 	RingHurtRadius_Parms.BaseDamage = BaseDamage;
@@ -3034,7 +3034,7 @@ void ADunDefEmitterShockwave::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 88773 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 83155 ];
 
 	ADunDefEmitterShockwave_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -3055,7 +3055,7 @@ bool ADunDefEmitterShockwave::eventAllowSpawn ( class AActor* theArchetype, stru
 	static UFunction* pFnAllowSpawn = NULL;
 
 	if ( ! pFnAllowSpawn )
-		pFnAllowSpawn = (UFunction*) UObject::GObjObjects()->Data[ 88768 ];
+		pFnAllowSpawn = (UFunction*) UObject::GObjObjects()->Data[ 83150 ];
 
 	ADunDefEmitterShockwave_eventAllowSpawn_Parms AllowSpawn_Parms;
 	AllowSpawn_Parms.theArchetype = theArchetype;
@@ -3085,7 +3085,7 @@ bool ADunDefEmitterShockwave::HurtRadius ( float BaseDamage, float DamageRadius,
 	static UFunction* pFnHurtRadius = NULL;
 
 	if ( ! pFnHurtRadius )
-		pFnHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 88755 ];
+		pFnHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 83137 ];
 
 	ADunDefEmitterShockwave_execHurtRadius_Parms HurtRadius_Parms;
 	HurtRadius_Parms.BaseDamage = BaseDamage;
@@ -3111,7 +3111,7 @@ void ADunDefEmitterShockwave::DoDamage ( )
 	static UFunction* pFnDoDamage = NULL;
 
 	if ( ! pFnDoDamage )
-		pFnDoDamage = (UFunction*) UObject::GObjObjects()->Data[ 88754 ];
+		pFnDoDamage = (UFunction*) UObject::GObjObjects()->Data[ 83136 ];
 
 	ADunDefEmitterShockwave_execDoDamage_Parms DoDamage_Parms;
 
@@ -3127,7 +3127,7 @@ void ADunDefEmitterShockwave::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 88753 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 83135 ];
 
 	ADunDefEmitterShockwave_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -3150,7 +3150,7 @@ void ADunDefGoblinCopter::eventTakeDamage ( int DamageAmount, class AController*
 	static UFunction* pFnTakeDamage = NULL;
 
 	if ( ! pFnTakeDamage )
-		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 88952 ];
+		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 83334 ];
 
 	ADunDefGoblinCopter_eventTakeDamage_Parms TakeDamage_Parms;
 	TakeDamage_Parms.DamageAmount = DamageAmount;
@@ -3175,7 +3175,7 @@ struct FVector ADunDefGoblinCopter::GetTargetingLocation ( class AActor* Request
 	static UFunction* pFnGetTargetingLocation = NULL;
 
 	if ( ! pFnGetTargetingLocation )
-		pFnGetTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 88949 ];
+		pFnGetTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 83331 ];
 
 	ADunDefGoblinCopter_execGetTargetingLocation_Parms GetTargetingLocation_Parms;
 	GetTargetingLocation_Parms.RequestedBy = RequestedBy;
@@ -3196,7 +3196,7 @@ void ADunDefGoblinCopter::SpawnFlare ( struct FVector flareLoc, struct FRotator 
 	static UFunction* pFnSpawnFlare = NULL;
 
 	if ( ! pFnSpawnFlare )
-		pFnSpawnFlare = (UFunction*) UObject::GObjObjects()->Data[ 88946 ];
+		pFnSpawnFlare = (UFunction*) UObject::GObjObjects()->Data[ 83328 ];
 
 	ADunDefGoblinCopter_execSpawnFlare_Parms SpawnFlare_Parms;
 	memcpy ( &SpawnFlare_Parms.flareLoc, &flareLoc, 0xC );
@@ -3216,7 +3216,7 @@ void ADunDefGoblinCopter::GetFlareSpawnLocAndRot ( struct FVector* flareLoc, str
 	static UFunction* pFnGetFlareSpawnLocAndRot = NULL;
 
 	if ( ! pFnGetFlareSpawnLocAndRot )
-		pFnGetFlareSpawnLocAndRot = (UFunction*) UObject::GObjObjects()->Data[ 88941 ];
+		pFnGetFlareSpawnLocAndRot = (UFunction*) UObject::GObjObjects()->Data[ 83323 ];
 
 	ADunDefGoblinCopter_execGetFlareSpawnLocAndRot_Parms GetFlareSpawnLocAndRot_Parms;
 
@@ -3238,7 +3238,7 @@ void ADunDefGoblinCopter::CheckGCopterProximity ( )
 	static UFunction* pFnCheckGCopterProximity = NULL;
 
 	if ( ! pFnCheckGCopterProximity )
-		pFnCheckGCopterProximity = (UFunction*) UObject::GObjObjects()->Data[ 88938 ];
+		pFnCheckGCopterProximity = (UFunction*) UObject::GObjObjects()->Data[ 83320 ];
 
 	ADunDefGoblinCopter_execCheckGCopterProximity_Parms CheckGCopterProximity_Parms;
 
@@ -3256,7 +3256,7 @@ void ADunDefGoblinCopter::UpdateDifficultyValues ( unsigned long UpdateMaterial,
 	static UFunction* pFnUpdateDifficultyValues = NULL;
 
 	if ( ! pFnUpdateDifficultyValues )
-		pFnUpdateDifficultyValues = (UFunction*) UObject::GObjObjects()->Data[ 88935 ];
+		pFnUpdateDifficultyValues = (UFunction*) UObject::GObjObjects()->Data[ 83317 ];
 
 	ADunDefGoblinCopter_execUpdateDifficultyValues_Parms UpdateDifficultyValues_Parms;
 	UpdateDifficultyValues_Parms.UpdateMaterial = UpdateMaterial;
@@ -3276,7 +3276,7 @@ void ADunDefGoblinCopter::DrawMiniMapIcon ( class UCanvas* Canvas, class ADunDef
 	static UFunction* pFnDrawMiniMapIcon = NULL;
 
 	if ( ! pFnDrawMiniMapIcon )
-		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 88929 ];
+		pFnDrawMiniMapIcon = (UFunction*) UObject::GObjObjects()->Data[ 83311 ];
 
 	ADunDefGoblinCopter_execDrawMiniMapIcon_Parms DrawMiniMapIcon_Parms;
 	DrawMiniMapIcon_Parms.Canvas = Canvas;
@@ -3294,7 +3294,7 @@ void ADunDefGoblinCopter::eventPauseAnimationAfterDeath ( )
 	static UFunction* pFnPauseAnimationAfterDeath = NULL;
 
 	if ( ! pFnPauseAnimationAfterDeath )
-		pFnPauseAnimationAfterDeath = (UFunction*) UObject::GObjObjects()->Data[ 88928 ];
+		pFnPauseAnimationAfterDeath = (UFunction*) UObject::GObjObjects()->Data[ 83310 ];
 
 	ADunDefGoblinCopter_eventPauseAnimationAfterDeath_Parms PauseAnimationAfterDeath_Parms;
 
@@ -3312,7 +3312,7 @@ void ADunDefGoblinCopter::PlayDying ( class UClass* DamageType, struct FVector H
 	static UFunction* pFnPlayDying = NULL;
 
 	if ( ! pFnPlayDying )
-		pFnPlayDying = (UFunction*) UObject::GObjObjects()->Data[ 88925 ];
+		pFnPlayDying = (UFunction*) UObject::GObjObjects()->Data[ 83307 ];
 
 	ADunDefGoblinCopter_execPlayDying_Parms PlayDying_Parms;
 	PlayDying_Parms.DamageType = DamageType;
@@ -3334,7 +3334,7 @@ bool ADunDefGoblinCopter::Died ( class AController* Killer, class UClass* Damage
 	static UFunction* pFnDied = NULL;
 
 	if ( ! pFnDied )
-		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 88912 ];
+		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 83294 ];
 
 	ADunDefGoblinCopter_execDied_Parms Died_Parms;
 	Died_Parms.Killer = Killer;
@@ -3355,7 +3355,7 @@ void ADunDefGoblinCopter::eventDoDoubleShoot ( )
 	static UFunction* pFnDoDoubleShoot = NULL;
 
 	if ( ! pFnDoDoubleShoot )
-		pFnDoDoubleShoot = (UFunction*) UObject::GObjObjects()->Data[ 88911 ];
+		pFnDoDoubleShoot = (UFunction*) UObject::GObjObjects()->Data[ 83293 ];
 
 	ADunDefGoblinCopter_eventDoDoubleShoot_Parms DoDoubleShoot_Parms;
 
@@ -3371,7 +3371,7 @@ void ADunDefGoblinCopter::eventDoRightShoot ( )
 	static UFunction* pFnDoRightShoot = NULL;
 
 	if ( ! pFnDoRightShoot )
-		pFnDoRightShoot = (UFunction*) UObject::GObjObjects()->Data[ 88908 ];
+		pFnDoRightShoot = (UFunction*) UObject::GObjObjects()->Data[ 83290 ];
 
 	ADunDefGoblinCopter_eventDoRightShoot_Parms DoRightShoot_Parms;
 
@@ -3387,7 +3387,7 @@ void ADunDefGoblinCopter::eventDoLeftShoot ( )
 	static UFunction* pFnDoLeftShoot = NULL;
 
 	if ( ! pFnDoLeftShoot )
-		pFnDoLeftShoot = (UFunction*) UObject::GObjObjects()->Data[ 88904 ];
+		pFnDoLeftShoot = (UFunction*) UObject::GObjObjects()->Data[ 83286 ];
 
 	ADunDefGoblinCopter_eventDoLeftShoot_Parms DoLeftShoot_Parms;
 
@@ -3404,7 +3404,7 @@ float ADunDefGoblinCopter::PlayDoubleShootAnim ( )
 	static UFunction* pFnPlayDoubleShootAnim = NULL;
 
 	if ( ! pFnPlayDoubleShootAnim )
-		pFnPlayDoubleShootAnim = (UFunction*) UObject::GObjObjects()->Data[ 88902 ];
+		pFnPlayDoubleShootAnim = (UFunction*) UObject::GObjObjects()->Data[ 83284 ];
 
 	ADunDefGoblinCopter_execPlayDoubleShootAnim_Parms PlayDoubleShootAnim_Parms;
 
@@ -3424,7 +3424,7 @@ float ADunDefGoblinCopter::PlayRightShootAnim ( float shootPlayRate )
 	static UFunction* pFnPlayRightShootAnim = NULL;
 
 	if ( ! pFnPlayRightShootAnim )
-		pFnPlayRightShootAnim = (UFunction*) UObject::GObjObjects()->Data[ 88899 ];
+		pFnPlayRightShootAnim = (UFunction*) UObject::GObjObjects()->Data[ 83281 ];
 
 	ADunDefGoblinCopter_execPlayRightShootAnim_Parms PlayRightShootAnim_Parms;
 	PlayRightShootAnim_Parms.shootPlayRate = shootPlayRate;
@@ -3445,7 +3445,7 @@ float ADunDefGoblinCopter::PlayLeftShootAnim ( float shootPlayRate )
 	static UFunction* pFnPlayLeftShootAnim = NULL;
 
 	if ( ! pFnPlayLeftShootAnim )
-		pFnPlayLeftShootAnim = (UFunction*) UObject::GObjObjects()->Data[ 88896 ];
+		pFnPlayLeftShootAnim = (UFunction*) UObject::GObjObjects()->Data[ 83278 ];
 
 	ADunDefGoblinCopter_execPlayLeftShootAnim_Parms PlayLeftShootAnim_Parms;
 	PlayLeftShootAnim_Parms.shootPlayRate = shootPlayRate;
@@ -3465,7 +3465,7 @@ void ADunDefGoblinCopter::ResetHeldPawnValues ( class ADunDefEnemy* thePawn )
 	static UFunction* pFnResetHeldPawnValues = NULL;
 
 	if ( ! pFnResetHeldPawnValues )
-		pFnResetHeldPawnValues = (UFunction*) UObject::GObjObjects()->Data[ 88894 ];
+		pFnResetHeldPawnValues = (UFunction*) UObject::GObjObjects()->Data[ 83276 ];
 
 	ADunDefGoblinCopter_execResetHeldPawnValues_Parms ResetHeldPawnValues_Parms;
 	ResetHeldPawnValues_Parms.thePawn = thePawn;
@@ -3482,7 +3482,7 @@ void ADunDefGoblinCopter::eventDropPawn ( )
 	static UFunction* pFnDropPawn = NULL;
 
 	if ( ! pFnDropPawn )
-		pFnDropPawn = (UFunction*) UObject::GObjObjects()->Data[ 88893 ];
+		pFnDropPawn = (UFunction*) UObject::GObjObjects()->Data[ 83275 ];
 
 	ADunDefGoblinCopter_eventDropPawn_Parms DropPawn_Parms;
 
@@ -3499,7 +3499,7 @@ float ADunDefGoblinCopter::PlayDropOffAnim ( )
 	static UFunction* pFnPlayDropOffAnim = NULL;
 
 	if ( ! pFnPlayDropOffAnim )
-		pFnPlayDropOffAnim = (UFunction*) UObject::GObjObjects()->Data[ 88891 ];
+		pFnPlayDropOffAnim = (UFunction*) UObject::GObjObjects()->Data[ 83273 ];
 
 	ADunDefGoblinCopter_execPlayDropOffAnim_Parms PlayDropOffAnim_Parms;
 
@@ -3517,7 +3517,7 @@ void ADunDefGoblinCopter::SetMovementPhysics ( )
 	static UFunction* pFnSetMovementPhysics = NULL;
 
 	if ( ! pFnSetMovementPhysics )
-		pFnSetMovementPhysics = (UFunction*) UObject::GObjObjects()->Data[ 88890 ];
+		pFnSetMovementPhysics = (UFunction*) UObject::GObjObjects()->Data[ 83272 ];
 
 	ADunDefGoblinCopter_execSetMovementPhysics_Parms SetMovementPhysics_Parms;
 
@@ -3535,7 +3535,7 @@ bool ADunDefGoblinCopter::CanBeBaseForPawn ( class APawn* aPawn )
 	static UFunction* pFnCanBeBaseForPawn = NULL;
 
 	if ( ! pFnCanBeBaseForPawn )
-		pFnCanBeBaseForPawn = (UFunction*) UObject::GObjObjects()->Data[ 88887 ];
+		pFnCanBeBaseForPawn = (UFunction*) UObject::GObjObjects()->Data[ 83269 ];
 
 	ADunDefGoblinCopter_execCanBeBaseForPawn_Parms CanBeBaseForPawn_Parms;
 	CanBeBaseForPawn_Parms.aPawn = aPawn;
@@ -3554,7 +3554,7 @@ void ADunDefGoblinCopter::InitNewHeldPawn ( )
 	static UFunction* pFnInitNewHeldPawn = NULL;
 
 	if ( ! pFnInitNewHeldPawn )
-		pFnInitNewHeldPawn = (UFunction*) UObject::GObjObjects()->Data[ 88886 ];
+		pFnInitNewHeldPawn = (UFunction*) UObject::GObjObjects()->Data[ 83268 ];
 
 	ADunDefGoblinCopter_execInitNewHeldPawn_Parms InitNewHeldPawn_Parms;
 
@@ -3571,7 +3571,7 @@ void ADunDefGoblinCopter::SetUpHoldingPawn ( class ADunDefEnemy* newHeldPawn )
 	static UFunction* pFnSetUpHoldingPawn = NULL;
 
 	if ( ! pFnSetUpHoldingPawn )
-		pFnSetUpHoldingPawn = (UFunction*) UObject::GObjObjects()->Data[ 88882 ];
+		pFnSetUpHoldingPawn = (UFunction*) UObject::GObjObjects()->Data[ 83264 ];
 
 	ADunDefGoblinCopter_execSetUpHoldingPawn_Parms SetUpHoldingPawn_Parms;
 	SetUpHoldingPawn_Parms.newHeldPawn = newHeldPawn;
@@ -3588,7 +3588,7 @@ void ADunDefGoblinCopter::SpawnHoldingPawn ( )
 	static UFunction* pFnSpawnHoldingPawn = NULL;
 
 	if ( ! pFnSpawnHoldingPawn )
-		pFnSpawnHoldingPawn = (UFunction*) UObject::GObjObjects()->Data[ 88875 ];
+		pFnSpawnHoldingPawn = (UFunction*) UObject::GObjObjects()->Data[ 83257 ];
 
 	ADunDefGoblinCopter_execSpawnHoldingPawn_Parms SpawnHoldingPawn_Parms;
 
@@ -3605,7 +3605,7 @@ float ADunDefGoblinCopter::GetHeldPawnExtraDifficultyOffset ( )
 	static UFunction* pFnGetHeldPawnExtraDifficultyOffset = NULL;
 
 	if ( ! pFnGetHeldPawnExtraDifficultyOffset )
-		pFnGetHeldPawnExtraDifficultyOffset = (UFunction*) UObject::GObjObjects()->Data[ 88872 ];
+		pFnGetHeldPawnExtraDifficultyOffset = (UFunction*) UObject::GObjObjects()->Data[ 83254 ];
 
 	ADunDefGoblinCopter_execGetHeldPawnExtraDifficultyOffset_Parms GetHeldPawnExtraDifficultyOffset_Parms;
 
@@ -3624,7 +3624,7 @@ void ADunDefGoblinCopter::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 88870 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 83252 ];
 
 	ADunDefGoblinCopter_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -3641,7 +3641,7 @@ void ADunDefGoblinCopter::TurnOnVFX ( )
 	static UFunction* pFnTurnOnVFX = NULL;
 
 	if ( ! pFnTurnOnVFX )
-		pFnTurnOnVFX = (UFunction*) UObject::GObjObjects()->Data[ 88866 ];
+		pFnTurnOnVFX = (UFunction*) UObject::GObjObjects()->Data[ 83248 ];
 
 	ADunDefGoblinCopter_execTurnOnVFX_Parms TurnOnVFX_Parms;
 
@@ -3658,7 +3658,7 @@ int ADunDefGoblinCopter::UpdateDifficultyMaterial ( )
 	static UFunction* pFnUpdateDifficultyMaterial = NULL;
 
 	if ( ! pFnUpdateDifficultyMaterial )
-		pFnUpdateDifficultyMaterial = (UFunction*) UObject::GObjObjects()->Data[ 88864 ];
+		pFnUpdateDifficultyMaterial = (UFunction*) UObject::GObjObjects()->Data[ 83246 ];
 
 	ADunDefGoblinCopter_execUpdateDifficultyMaterial_Parms UpdateDifficultyMaterial_Parms;
 
@@ -3676,7 +3676,7 @@ void ADunDefGoblinCopter::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 88863 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 83245 ];
 
 	ADunDefGoblinCopter_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -3708,7 +3708,7 @@ void ADunDefGoblinCopter::ExecReplicatedFunction ( struct FName FunctionName, st
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 88846 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 83228 ];
 
 	ADunDefGoblinCopter_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -3741,7 +3741,7 @@ void ADunDefGoblinCopter::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 88844 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 83226 ];
 
 	ADunDefGoblinCopter_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -3759,7 +3759,7 @@ void ADunDefGoblinCopterController::SpawnRocket ( struct FVector SpawnLoc )
 	static UFunction* pFnSpawnRocket = NULL;
 
 	if ( ! pFnSpawnRocket )
-		pFnSpawnRocket = (UFunction*) UObject::GObjObjects()->Data[ 89089 ];
+		pFnSpawnRocket = (UFunction*) UObject::GObjObjects()->Data[ 83471 ];
 
 	ADunDefGoblinCopterController_execSpawnRocket_Parms SpawnRocket_Parms;
 	memcpy ( &SpawnRocket_Parms.SpawnLoc, &SpawnLoc, 0xC );
@@ -3777,7 +3777,7 @@ float ADunDefGoblinCopterController::PlayMissileShootAnim ( )
 	static UFunction* pFnPlayMissileShootAnim = NULL;
 
 	if ( ! pFnPlayMissileShootAnim )
-		pFnPlayMissileShootAnim = (UFunction*) UObject::GObjObjects()->Data[ 89087 ];
+		pFnPlayMissileShootAnim = (UFunction*) UObject::GObjObjects()->Data[ 83469 ];
 
 	ADunDefGoblinCopterController_execPlayMissileShootAnim_Parms PlayMissileShootAnim_Parms;
 
@@ -3796,7 +3796,7 @@ bool ADunDefGoblinCopterController::IsWithinDropRange ( )
 	static UFunction* pFnIsWithinDropRange = NULL;
 
 	if ( ! pFnIsWithinDropRange )
-		pFnIsWithinDropRange = (UFunction*) UObject::GObjObjects()->Data[ 89059 ];
+		pFnIsWithinDropRange = (UFunction*) UObject::GObjObjects()->Data[ 83441 ];
 
 	ADunDefGoblinCopterController_execIsWithinDropRange_Parms IsWithinDropRange_Parms;
 
@@ -3816,7 +3816,7 @@ bool ADunDefGoblinCopterController::CheckDropOffLoS ( class AActor* Other )
 	static UFunction* pFnCheckDropOffLoS = NULL;
 
 	if ( ! pFnCheckDropOffLoS )
-		pFnCheckDropOffLoS = (UFunction*) UObject::GObjObjects()->Data[ 89048 ];
+		pFnCheckDropOffLoS = (UFunction*) UObject::GObjObjects()->Data[ 83430 ];
 
 	ADunDefGoblinCopterController_execCheckDropOffLoS_Parms CheckDropOffLoS_Parms;
 	CheckDropOffLoS_Parms.Other = Other;
@@ -3835,7 +3835,7 @@ void ADunDefGoblinCopterController::ShootFlare ( )
 	static UFunction* pFnShootFlare = NULL;
 
 	if ( ! pFnShootFlare )
-		pFnShootFlare = (UFunction*) UObject::GObjObjects()->Data[ 89044 ];
+		pFnShootFlare = (UFunction*) UObject::GObjObjects()->Data[ 83426 ];
 
 	ADunDefGoblinCopterController_execShootFlare_Parms ShootFlare_Parms;
 
@@ -3851,7 +3851,7 @@ void ADunDefGoblinCopterController::CheckForDropOffRange ( )
 	static UFunction* pFnCheckForDropOffRange = NULL;
 
 	if ( ! pFnCheckForDropOffRange )
-		pFnCheckForDropOffRange = (UFunction*) UObject::GObjObjects()->Data[ 89043 ];
+		pFnCheckForDropOffRange = (UFunction*) UObject::GObjObjects()->Data[ 83425 ];
 
 	ADunDefGoblinCopterController_execCheckForDropOffRange_Parms CheckForDropOffRange_Parms;
 
@@ -3867,7 +3867,7 @@ void ADunDefGoblinCopterController::CheckAttackSight ( )
 	static UFunction* pFnCheckAttackSight = NULL;
 
 	if ( ! pFnCheckAttackSight )
-		pFnCheckAttackSight = (UFunction*) UObject::GObjObjects()->Data[ 89038 ];
+		pFnCheckAttackSight = (UFunction*) UObject::GObjObjects()->Data[ 83420 ];
 
 	ADunDefGoblinCopterController_execCheckAttackSight_Parms CheckAttackSight_Parms;
 
@@ -3887,7 +3887,7 @@ bool ADunDefGoblinCopterController::IsWithinAttackRange ( class AActor* Other, f
 	static UFunction* pFnIsWithinAttackRange = NULL;
 
 	if ( ! pFnIsWithinAttackRange )
-		pFnIsWithinAttackRange = (UFunction*) UObject::GObjObjects()->Data[ 89027 ];
+		pFnIsWithinAttackRange = (UFunction*) UObject::GObjObjects()->Data[ 83409 ];
 
 	ADunDefGoblinCopterController_execIsWithinAttackRange_Parms IsWithinAttackRange_Parms;
 	IsWithinAttackRange_Parms.Other = Other;
@@ -3908,7 +3908,7 @@ void ADunDefGoblinCopterController::DoAttack ( )
 	static UFunction* pFnDoAttack = NULL;
 
 	if ( ! pFnDoAttack )
-		pFnDoAttack = (UFunction*) UObject::GObjObjects()->Data[ 89026 ];
+		pFnDoAttack = (UFunction*) UObject::GObjObjects()->Data[ 83408 ];
 
 	ADunDefGoblinCopterController_execDoAttack_Parms DoAttack_Parms;
 
@@ -3924,7 +3924,7 @@ void ADunDefGoblinCopterController::FindDropOffPoint ( )
 	static UFunction* pFnFindDropOffPoint = NULL;
 
 	if ( ! pFnFindDropOffPoint )
-		pFnFindDropOffPoint = (UFunction*) UObject::GObjObjects()->Data[ 89021 ];
+		pFnFindDropOffPoint = (UFunction*) UObject::GObjObjects()->Data[ 83403 ];
 
 	ADunDefGoblinCopterController_execFindDropOffPoint_Parms FindDropOffPoint_Parms;
 
@@ -3941,7 +3941,7 @@ void ADunDefGoblinCopterController::GetTargetMoveToPoint ( class AActor* moveToA
 	static UFunction* pFnGetTargetMoveToPoint = NULL;
 
 	if ( ! pFnGetTargetMoveToPoint )
-		pFnGetTargetMoveToPoint = (UFunction*) UObject::GObjObjects()->Data[ 89018 ];
+		pFnGetTargetMoveToPoint = (UFunction*) UObject::GObjObjects()->Data[ 83400 ];
 
 	ADunDefGoblinCopterController_execGetTargetMoveToPoint_Parms GetTargetMoveToPoint_Parms;
 	GetTargetMoveToPoint_Parms.moveToActor = moveToActor;
@@ -3960,7 +3960,7 @@ float ADunDefGoblinCopterController::GetZDifference ( class AActor* zActor )
 	static UFunction* pFnGetZDifference = NULL;
 
 	if ( ! pFnGetZDifference )
-		pFnGetZDifference = (UFunction*) UObject::GObjObjects()->Data[ 89015 ];
+		pFnGetZDifference = (UFunction*) UObject::GObjObjects()->Data[ 83397 ];
 
 	ADunDefGoblinCopterController_execGetZDifference_Parms GetZDifference_Parms;
 	GetZDifference_Parms.zActor = zActor;
@@ -3979,7 +3979,7 @@ void ADunDefGoblinCopterController::CheckDirectReachability ( )
 	static UFunction* pFnCheckDirectReachability = NULL;
 
 	if ( ! pFnCheckDirectReachability )
-		pFnCheckDirectReachability = (UFunction*) UObject::GObjObjects()->Data[ 89013 ];
+		pFnCheckDirectReachability = (UFunction*) UObject::GObjObjects()->Data[ 83395 ];
 
 	ADunDefGoblinCopterController_execCheckDirectReachability_Parms CheckDirectReachability_Parms;
 
@@ -3995,7 +3995,7 @@ void ADunDefGoblinCopterController::CheckIndirectReachability ( )
 	static UFunction* pFnCheckIndirectReachability = NULL;
 
 	if ( ! pFnCheckIndirectReachability )
-		pFnCheckIndirectReachability = (UFunction*) UObject::GObjObjects()->Data[ 89011 ];
+		pFnCheckIndirectReachability = (UFunction*) UObject::GObjObjects()->Data[ 83393 ];
 
 	ADunDefGoblinCopterController_execCheckIndirectReachability_Parms CheckIndirectReachability_Parms;
 
@@ -4015,7 +4015,7 @@ struct FVector ADunDefGoblinCopterController::eventGeneratePathToActor ( class A
 	static UFunction* pFnGeneratePathToActor = NULL;
 
 	if ( ! pFnGeneratePathToActor )
-		pFnGeneratePathToActor = (UFunction*) UObject::GObjObjects()->Data[ 89005 ];
+		pFnGeneratePathToActor = (UFunction*) UObject::GObjObjects()->Data[ 83387 ];
 
 	ADunDefGoblinCopterController_eventGeneratePathToActor_Parms GeneratePathToActor_Parms;
 	GeneratePathToActor_Parms.Goal = Goal;
@@ -4038,7 +4038,7 @@ bool ADunDefGoblinCopterController::NavActorReachable ( class AActor* A )
 	static UFunction* pFnNavActorReachable = NULL;
 
 	if ( ! pFnNavActorReachable )
-		pFnNavActorReachable = (UFunction*) UObject::GObjObjects()->Data[ 89002 ];
+		pFnNavActorReachable = (UFunction*) UObject::GObjObjects()->Data[ 83384 ];
 
 	ADunDefGoblinCopterController_execNavActorReachable_Parms NavActorReachable_Parms;
 	NavActorReachable_Parms.A = A;
@@ -4060,7 +4060,7 @@ class ANavigationPoint* ADunDefGoblinCopterController::FindNearestNavPointTo ( c
 	static UFunction* pFnFindNearestNavPointTo = NULL;
 
 	if ( ! pFnFindNearestNavPointTo )
-		pFnFindNearestNavPointTo = (UFunction*) UObject::GObjObjects()->Data[ 88998 ];
+		pFnFindNearestNavPointTo = (UFunction*) UObject::GObjObjects()->Data[ 83380 ];
 
 	ADunDefGoblinCopterController_execFindNearestNavPointTo_Parms FindNearestNavPointTo_Parms;
 	FindNearestNavPointTo_Parms.A = A;
@@ -4080,7 +4080,7 @@ void ADunDefGoblinCopterController::SetMyPawn ( )
 	static UFunction* pFnSetMyPawn = NULL;
 
 	if ( ! pFnSetMyPawn )
-		pFnSetMyPawn = (UFunction*) UObject::GObjObjects()->Data[ 88997 ];
+		pFnSetMyPawn = (UFunction*) UObject::GObjObjects()->Data[ 83379 ];
 
 	ADunDefGoblinCopterController_execSetMyPawn_Parms SetMyPawn_Parms;
 
@@ -4098,7 +4098,7 @@ void ADunDefGoblinCopterController::eventPossess ( class APawn* inPawn, unsigned
 	static UFunction* pFnPossess = NULL;
 
 	if ( ! pFnPossess )
-		pFnPossess = (UFunction*) UObject::GObjObjects()->Data[ 88994 ];
+		pFnPossess = (UFunction*) UObject::GObjObjects()->Data[ 83376 ];
 
 	ADunDefGoblinCopterController_eventPossess_Parms Possess_Parms;
 	Possess_Parms.inPawn = inPawn;
@@ -4116,7 +4116,7 @@ void ADunDefGoblinCopterController::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 88993 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 83375 ];
 
 	ADunDefGoblinCopterController_eventDestroyed_Parms Destroyed_Parms;
 
@@ -4132,7 +4132,7 @@ void ADunDefGoblinCopterController::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 88991 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 83373 ];
 
 	ADunDefGoblinCopterController_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 

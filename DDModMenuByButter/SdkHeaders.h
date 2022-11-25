@@ -10,18 +10,42 @@
 # Forums: www.uc-forum.com, www.gamedeception.net
 #############################################################################################
 */
-#include <Windows.h>
+
 /*
 # ========================================================================================= #
 # Defines
 # ========================================================================================= #
 */
 
-DWORD base = (DWORD)GetModuleHandleA(NULL);
-DWORD go = base + 0x0E4437C;
-DWORD gn = base + 0x0E32064;
-#define GObjects			go
-#define GNames				gn
+#include <Psapi.h>
+#include "HelperFunctions.h"
+
+MODULEINFO miGame = GetModuleInfo(NULL);
+// UE3 Tables Sigs
+#define GObjects_Pattern		"\x8b\x00\x00\x00\x00\x00\x8b\x04\x00\x8b\x40\x00\x25\x00\x02\x00\x00"
+#define GObjects_Mask			"x?????xx?xx?xxxxx"
+#define GObjects_Offset			0x2
+
+#define GNames_Pattern			"\x8b\x0d\x00\x00\x00\x00\x83\x3c\x81\x00\x74"
+#define GNames_Mask				"xx????xxxxx"
+#define GNames_Offset			0x2
+
+
+//#define GObjects			0x0
+//#define GNames			0x0
+
+//
+DWORD GObjects = *(unsigned long*)(FindPattern((unsigned long)miGame.lpBaseOfDll, miGame.SizeOfImage, (unsigned char*)GObjects_Pattern, (char*)GObjects_Mask) + GObjects_Offset);
+//
+//
+//
+DWORD GNames = *(unsigned long*)(FindPattern((unsigned long)miGame.lpBaseOfDll, miGame.SizeOfImage, (unsigned char*)GNames_Pattern, (char*)GNames_Mask) + GNames_Offset);
+//
+
+
+
+
+
 
 /*
 # ========================================================================================= #
@@ -29,141 +53,141 @@ DWORD gn = base + 0x0E32064;
 # ========================================================================================= #
 */
 
-template< class T > struct TArray
-{
-public:
-	T* Data;
-	int Count;
-	int Max;
+template< class T > struct TArray 
+{ 
+public: 
+	T* Data; 
+	int Count; 
+	int Max; 
 
-public:
-	TArray()
-	{
-		Data = NULL;
-		Count = Max = 0;
-	};
+public: 
+	TArray() 
+	{ 
+		Data = NULL; 
+		Count = Max = 0; 
+	}; 
 
-public:
-	int Num()
-	{
-		return this->Count;
-	};
+public: 
+	int Num() 
+	{ 
+		return this->Count; 
+	}; 
 
-	T& operator() (int i)
-	{
-		return this->Data[i];
-	};
+	T& operator() ( int i ) 
+	{ 
+		return this->Data[ i ]; 
+	}; 
 
-	const T& operator() (int i) const
-	{
-		return this->Data[i];
-	};
+	const T& operator() ( int i ) const 
+	{ 
+		return this->Data[ i ]; 
+	}; 
 
-	void Add(T InputData)
-	{
-		Data = (T*)realloc(Data, sizeof(T) * (Count + 1));
-		Data[Count++] = InputData;
-		Max = Count;
-	};
+	void Add ( T InputData ) 
+	{ 
+		Data = (T*) realloc ( Data, sizeof ( T ) * ( Count + 1 ) ); 
+		Data[ Count++ ] = InputData; 
+		Max = Count; 
+	}; 
 
-	void Clear()
-	{
-		free(Data);
-		Count = Max = 0;
-	};
-};
+	void Clear() 
+	{ 
+		free ( Data ); 
+		Count = Max = 0; 
+	}; 
+}; 
 
-struct FNameEntry
-{
-	unsigned char	UnknownData00[0x10];
-	char			Name[0x10];
-};
+struct FNameEntry 
+{ 
+	unsigned char	UnknownData00[ 0x10 ]; 
+	char			Name[ 0x10 ]; 
+}; 
 
-struct FName
-{
-	int				Index;
-	unsigned char	unknownData00[0x4];
+struct FName 
+{ 
+	int				Index; 
+	unsigned char	unknownData00[ 0x4 ]; 
 
-	FName() : Index(0) {};
+	FName() : Index ( 0 ) {}; 
 
-	FName(int i) : Index(i) {};
+	FName ( int i ) : Index ( i ) {}; 
 
-	~FName() {};
+	~FName() {}; 
 
-	FName(char* FindName)
-	{
-		static TArray< int > NameCache;
+	FName ( char* FindName ) 
+	{ 
+		static TArray< int > NameCache; 
 
-		for (int i = 0; i < NameCache.Count; ++i)
-		{
-			if (!strcmp(this->Names()->Data[NameCache(i)]->Name, FindName))
-			{
-				Index = NameCache(i);
-				return;
-			}
-		}
+		for ( int i = 0; i < NameCache.Count; ++i ) 
+		{ 
+		if ( ! strcmp ( this->Names()->Data[ NameCache ( i ) ]->Name, FindName ) ) 
+			{ 
+				Index = NameCache ( i ); 
+				return; 
+			} 
+		} 
 
-		for (int i = 0; i < this->Names()->Count; ++i)
-		{
-			if (this->Names()->Data[i])
-			{
-				if (!strcmp(this->Names()->Data[i]->Name, FindName))
-				{
-					NameCache.Add(i);
-					Index = i;
-				}
-			}
-		}
-	};
+		for ( int i = 0; i < this->Names()->Count; ++i ) 
+		{ 
+			if ( this->Names()->Data[ i ] ) 
+			{ 
+				if ( ! strcmp ( this->Names()->Data[ i ]->Name, FindName ) ) 
+				{ 
+					NameCache.Add ( i ); 
+					Index = i; 
+				} 
+			} 
+		} 
+	}; 
 
-	static TArray< FNameEntry* >* Names()
-	{
-		return (TArray< FNameEntry* >*) GNames;
-	};
+	static TArray< FNameEntry* >* Names() 
+	{ 
+		return (TArray< FNameEntry* >*) GNames; 
+	}; 
 
-	char* GetName()
-	{
-		return this->Names()->Data[Index]->Name;
-	};
+	char* GetName() 
+	{ 
+		return this->Names()->Data[ Index ]->Name; 
+	}; 
 
-	bool operator == (const FName& A) const
-	{
-		return (Index == A.Index);
-	};
-};
+	bool operator == ( const FName& A ) const 
+	{ 
+		return ( Index == A.Index ); 
+	}; 
+}; 
 
-struct FString : public TArray< wchar_t >
-{
-	FString() {};
+struct FString : public TArray< wchar_t > 
+{ 
+	FString() {}; 
 
-	FString(wchar_t* Other)
-	{
-		this->Max = this->Count = *Other ? (wcslen(Other) + 1) : 0;
+	FString ( wchar_t* Other ) 
+	{ 
+		this->Max = this->Count = *Other ? ( wcslen ( Other ) + 1 ) : 0; 
 
-		if (this->Count)
-			this->Data = Other;
-	};
+		if ( this->Count ) 
+			this->Data = Other; 
+	}; 
 
-	~FString() {};
+	~FString() {}; 
 
-	FString operator = (wchar_t* Other)
-	{
-		if (this->Data != Other)
-		{
-			this->Max = this->Count = *Other ? (wcslen(Other) + 1) : 0;
+	FString operator = ( wchar_t* Other ) 
+	{ 
+		if ( this->Data != Other ) 
+		{ 
+			this->Max = this->Count = *Other ? ( wcslen ( Other ) + 1 ) : 0; 
 
-			if (this->Count)
-				this->Data = Other;
-		}
+			if ( this->Count ) 
+				this->Data = Other; 
+		} 
 
-		return *this;
-	};
-};
+		return *this; 
+	}; 
+}; 
 
-struct FScriptDelegate
-{
-	unsigned char UnknownData00[0xC];
-};
+struct FScriptDelegate 
+{ 
+	unsigned char UnknownData00[ 0xC ]; 
+}; 
 
 /*
 # ========================================================================================= #

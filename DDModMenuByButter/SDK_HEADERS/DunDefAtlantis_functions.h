@@ -30,7 +30,7 @@ void UDunDef_SeqAct_PickNewPuzzleSolver::eventActivated ( )
 	static UFunction* pFnActivated = NULL;
 
 	if ( ! pFnActivated )
-		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 86115 ];
+		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 80494 ];
 
 	UDunDef_SeqAct_PickNewPuzzleSolver_eventActivated_Parms Activated_Parms;
 
@@ -47,7 +47,7 @@ void ADunDefGRI_RisingWater::AddPlayerToWaterList ( class ADunDefPlayer* waterPl
 	static UFunction* pFnAddPlayerToWaterList = NULL;
 
 	if ( ! pFnAddPlayerToWaterList )
-		pFnAddPlayerToWaterList = (UFunction*) UObject::GObjObjects()->Data[ 86201 ];
+		pFnAddPlayerToWaterList = (UFunction*) UObject::GObjObjects()->Data[ 80580 ];
 
 	ADunDefGRI_RisingWater_execAddPlayerToWaterList_Parms AddPlayerToWaterList_Parms;
 	AddPlayerToWaterList_Parms.waterPlayer = waterPlayer;
@@ -65,7 +65,7 @@ void ADunDefGRI_RisingWater::RemovePlayerToWaterList ( class ADunDefPlayer* wate
 	static UFunction* pFnRemovePlayerToWaterList = NULL;
 
 	if ( ! pFnRemovePlayerToWaterList )
-		pFnRemovePlayerToWaterList = (UFunction*) UObject::GObjObjects()->Data[ 86199 ];
+		pFnRemovePlayerToWaterList = (UFunction*) UObject::GObjObjects()->Data[ 80578 ];
 
 	ADunDefGRI_RisingWater_execRemovePlayerToWaterList_Parms RemovePlayerToWaterList_Parms;
 	RemovePlayerToWaterList_Parms.waterPlayer = waterPlayer;
@@ -83,7 +83,7 @@ void ADunDefGRI_RisingWater::SetWaterCastingMultiplier ( float newCastingMultipl
 	static UFunction* pFnSetWaterCastingMultiplier = NULL;
 
 	if ( ! pFnSetWaterCastingMultiplier )
-		pFnSetWaterCastingMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 86197 ];
+		pFnSetWaterCastingMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 80576 ];
 
 	ADunDefGRI_RisingWater_execSetWaterCastingMultiplier_Parms SetWaterCastingMultiplier_Parms;
 	SetWaterCastingMultiplier_Parms.newCastingMultiplier = newCastingMultiplier;
@@ -102,7 +102,7 @@ float ADunDefGRI_RisingWater::GetCastRateMultiplier ( class ADunDefPlayerAbility
 	static UFunction* pFnGetCastRateMultiplier = NULL;
 
 	if ( ! pFnGetCastRateMultiplier )
-		pFnGetCastRateMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 86193 ];
+		pFnGetCastRateMultiplier = (UFunction*) UObject::GObjObjects()->Data[ 80572 ];
 
 	ADunDefGRI_RisingWater_execGetCastRateMultiplier_Parms GetCastRateMultiplier_Parms;
 	GetCastRateMultiplier_Parms.ability = ability;
@@ -121,7 +121,7 @@ void ADunDefGRI_RisingWater::PuzzleComplete ( )
 	static UFunction* pFnPuzzleComplete = NULL;
 
 	if ( ! pFnPuzzleComplete )
-		pFnPuzzleComplete = (UFunction*) UObject::GObjObjects()->Data[ 86191 ];
+		pFnPuzzleComplete = (UFunction*) UObject::GObjObjects()->Data[ 80570 ];
 
 	ADunDefGRI_RisingWater_execPuzzleComplete_Parms PuzzleComplete_Parms;
 
@@ -138,7 +138,7 @@ class ADunDefPlayer* ADunDefGRI_RisingWater::GetRandomPlayer ( )
 	static UFunction* pFnGetRandomPlayer = NULL;
 
 	if ( ! pFnGetRandomPlayer )
-		pFnGetRandomPlayer = (UFunction*) UObject::GObjObjects()->Data[ 86187 ];
+		pFnGetRandomPlayer = (UFunction*) UObject::GObjObjects()->Data[ 80566 ];
 
 	ADunDefGRI_RisingWater_execGetRandomPlayer_Parms GetRandomPlayer_Parms;
 
@@ -157,7 +157,7 @@ void ADunDefGRI_RisingWater::DrawMyHUD ( class ADunDefHUD* H )
 	static UFunction* pFnDrawMyHUD = NULL;
 
 	if ( ! pFnDrawMyHUD )
-		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 86179 ];
+		pFnDrawMyHUD = (UFunction*) UObject::GObjObjects()->Data[ 80558 ];
 
 	ADunDefGRI_RisingWater_execDrawMyHUD_Parms DrawMyHUD_Parms;
 	DrawMyHUD_Parms.H = H;
@@ -176,7 +176,7 @@ void ADunDefGRI_RisingWater::SetNewSolver ( class ADunDefPlayer* newSolver, unsi
 	static UFunction* pFnSetNewSolver = NULL;
 
 	if ( ! pFnSetNewSolver )
-		pFnSetNewSolver = (UFunction*) UObject::GObjObjects()->Data[ 86174 ];
+		pFnSetNewSolver = (UFunction*) UObject::GObjObjects()->Data[ 80553 ];
 
 	ADunDefGRI_RisingWater_execSetNewSolver_Parms SetNewSolver_Parms;
 	SetNewSolver_Parms.newSolver = newSolver;
@@ -194,7 +194,7 @@ void ADunDefGRI_RisingWater::NotifyPuzzleSolverDeath ( )
 	static UFunction* pFnNotifyPuzzleSolverDeath = NULL;
 
 	if ( ! pFnNotifyPuzzleSolverDeath )
-		pFnNotifyPuzzleSolverDeath = (UFunction*) UObject::GObjObjects()->Data[ 86173 ];
+		pFnNotifyPuzzleSolverDeath = (UFunction*) UObject::GObjObjects()->Data[ 80552 ];
 
 	ADunDefGRI_RisingWater_execNotifyPuzzleSolverDeath_Parms NotifyPuzzleSolverDeath_Parms;
 
@@ -210,7 +210,7 @@ void ADunDefGRI_RisingWater::ClearPuzzleSolver ( )
 	static UFunction* pFnClearPuzzleSolver = NULL;
 
 	if ( ! pFnClearPuzzleSolver )
-		pFnClearPuzzleSolver = (UFunction*) UObject::GObjObjects()->Data[ 86172 ];
+		pFnClearPuzzleSolver = (UFunction*) UObject::GObjObjects()->Data[ 80551 ];
 
 	ADunDefGRI_RisingWater_execClearPuzzleSolver_Parms ClearPuzzleSolver_Parms;
 
@@ -227,7 +227,7 @@ class ADunDefPlayer* ADunDefGRI_RisingWater::PickNewSolver ( )
 	static UFunction* pFnPickNewSolver = NULL;
 
 	if ( ! pFnPickNewSolver )
-		pFnPickNewSolver = (UFunction*) UObject::GObjObjects()->Data[ 86119 ];
+		pFnPickNewSolver = (UFunction*) UObject::GObjObjects()->Data[ 80498 ];
 
 	ADunDefGRI_RisingWater_execPickNewSolver_Parms PickNewSolver_Parms;
 
@@ -261,7 +261,7 @@ void ADunDefGRI_RisingWater::ExecReplicatedFunction ( struct FName FunctionName,
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 86154 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 80533 ];
 
 	ADunDefGRI_RisingWater_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -293,7 +293,7 @@ void UDunDef_SeqAct_SetUpPuzzle::eventActivated ( )
 	static UFunction* pFnActivated = NULL;
 
 	if ( ! pFnActivated )
-		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 86127 ];
+		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 80506 ];
 
 	UDunDef_SeqAct_SetUpPuzzle_eventActivated_Parms Activated_Parms;
 
@@ -309,7 +309,7 @@ void APuzzleRoomActor::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 87386 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 81765 ];
 
 	APuzzleRoomActor_eventDestroyed_Parms Destroyed_Parms;
 
@@ -326,7 +326,7 @@ void APuzzleRoomActor::FlashPuzzlePiece ( int pieceIndex )
 	static UFunction* pFnFlashPuzzlePiece = NULL;
 
 	if ( ! pFnFlashPuzzlePiece )
-		pFnFlashPuzzlePiece = (UFunction*) UObject::GObjObjects()->Data[ 87384 ];
+		pFnFlashPuzzlePiece = (UFunction*) UObject::GObjObjects()->Data[ 81763 ];
 
 	APuzzleRoomActor_execFlashPuzzlePiece_Parms FlashPuzzlePiece_Parms;
 	FlashPuzzlePiece_Parms.pieceIndex = pieceIndex;
@@ -343,7 +343,7 @@ void APuzzleRoomActor::ShowPuzzlePath ( )
 	static UFunction* pFnShowPuzzlePath = NULL;
 
 	if ( ! pFnShowPuzzlePath )
-		pFnShowPuzzlePath = (UFunction*) UObject::GObjObjects()->Data[ 87383 ];
+		pFnShowPuzzlePath = (UFunction*) UObject::GObjObjects()->Data[ 81762 ];
 
 	APuzzleRoomActor_execShowPuzzlePath_Parms ShowPuzzlePath_Parms;
 
@@ -360,7 +360,7 @@ void APuzzleRoomActor::PlayFailedPathVFX ( struct FVector actorLoc )
 	static UFunction* pFnPlayFailedPathVFX = NULL;
 
 	if ( ! pFnPlayFailedPathVFX )
-		pFnPlayFailedPathVFX = (UFunction*) UObject::GObjObjects()->Data[ 87380 ];
+		pFnPlayFailedPathVFX = (UFunction*) UObject::GObjObjects()->Data[ 81759 ];
 
 	APuzzleRoomActor_execPlayFailedPathVFX_Parms PlayFailedPathVFX_Parms;
 	memcpy ( &PlayFailedPathVFX_Parms.actorLoc, &actorLoc, 0xC );
@@ -378,7 +378,7 @@ void APuzzleRoomActor::PlayInitalFailVFX ( int failedIndex )
 	static UFunction* pFnPlayInitalFailVFX = NULL;
 
 	if ( ! pFnPlayInitalFailVFX )
-		pFnPlayInitalFailVFX = (UFunction*) UObject::GObjObjects()->Data[ 87378 ];
+		pFnPlayInitalFailVFX = (UFunction*) UObject::GObjObjects()->Data[ 81757 ];
 
 	APuzzleRoomActor_execPlayInitalFailVFX_Parms PlayInitalFailVFX_Parms;
 	PlayInitalFailVFX_Parms.failedIndex = failedIndex;
@@ -395,7 +395,7 @@ void APuzzleRoomActor::FailedPath ( )
 	static UFunction* pFnFailedPath = NULL;
 
 	if ( ! pFnFailedPath )
-		pFnFailedPath = (UFunction*) UObject::GObjObjects()->Data[ 87377 ];
+		pFnFailedPath = (UFunction*) UObject::GObjObjects()->Data[ 81756 ];
 
 	APuzzleRoomActor_execFailedPath_Parms FailedPath_Parms;
 
@@ -412,7 +412,7 @@ void APuzzleRoomActor::SuccessfulMove ( int moveIndex )
 	static UFunction* pFnSuccessfulMove = NULL;
 
 	if ( ! pFnSuccessfulMove )
-		pFnSuccessfulMove = (UFunction*) UObject::GObjObjects()->Data[ 87375 ];
+		pFnSuccessfulMove = (UFunction*) UObject::GObjObjects()->Data[ 81754 ];
 
 	APuzzleRoomActor_execSuccessfulMove_Parms SuccessfulMove_Parms;
 	SuccessfulMove_Parms.moveIndex = moveIndex;
@@ -430,7 +430,7 @@ void APuzzleRoomActor::SuccessfulFinish ( int finalIndex )
 	static UFunction* pFnSuccessfulFinish = NULL;
 
 	if ( ! pFnSuccessfulFinish )
-		pFnSuccessfulFinish = (UFunction*) UObject::GObjObjects()->Data[ 87373 ];
+		pFnSuccessfulFinish = (UFunction*) UObject::GObjObjects()->Data[ 81752 ];
 
 	APuzzleRoomActor_execSuccessfulFinish_Parms SuccessfulFinish_Parms;
 	SuccessfulFinish_Parms.finalIndex = finalIndex;
@@ -448,7 +448,7 @@ void APuzzleRoomActor::FinishedPuzzle ( int finalIndex )
 	static UFunction* pFnFinishedPuzzle = NULL;
 
 	if ( ! pFnFinishedPuzzle )
-		pFnFinishedPuzzle = (UFunction*) UObject::GObjObjects()->Data[ 87371 ];
+		pFnFinishedPuzzle = (UFunction*) UObject::GObjObjects()->Data[ 81750 ];
 
 	APuzzleRoomActor_execFinishedPuzzle_Parms FinishedPuzzle_Parms;
 	FinishedPuzzle_Parms.finalIndex = finalIndex;
@@ -467,7 +467,7 @@ void APuzzleRoomActor::NotifyPieceTouched ( class APuzzlePieceActor* touchedPiec
 	static UFunction* pFnNotifyPieceTouched = NULL;
 
 	if ( ! pFnNotifyPieceTouched )
-		pFnNotifyPieceTouched = (UFunction*) UObject::GObjObjects()->Data[ 87366 ];
+		pFnNotifyPieceTouched = (UFunction*) UObject::GObjObjects()->Data[ 81745 ];
 
 	APuzzleRoomActor_execNotifyPieceTouched_Parms NotifyPieceTouched_Parms;
 	NotifyPieceTouched_Parms.touchedPiece = touchedPiece;
@@ -485,7 +485,7 @@ void APuzzleRoomActor::ResetPuzzle ( )
 	static UFunction* pFnResetPuzzle = NULL;
 
 	if ( ! pFnResetPuzzle )
-		pFnResetPuzzle = (UFunction*) UObject::GObjObjects()->Data[ 87364 ];
+		pFnResetPuzzle = (UFunction*) UObject::GObjObjects()->Data[ 81743 ];
 
 	APuzzleRoomActor_execResetPuzzle_Parms ResetPuzzle_Parms;
 
@@ -501,7 +501,7 @@ void APuzzleRoomActor::DrawDebugPathLines ( )
 	static UFunction* pFnDrawDebugPathLines = NULL;
 
 	if ( ! pFnDrawDebugPathLines )
-		pFnDrawDebugPathLines = (UFunction*) UObject::GObjObjects()->Data[ 87359 ];
+		pFnDrawDebugPathLines = (UFunction*) UObject::GObjObjects()->Data[ 81738 ];
 
 	APuzzleRoomActor_execDrawDebugPathLines_Parms DrawDebugPathLines_Parms;
 
@@ -518,7 +518,7 @@ void APuzzleRoomActor::StartEffect ( int pieceIndex )
 	static UFunction* pFnStartEffect = NULL;
 
 	if ( ! pFnStartEffect )
-		pFnStartEffect = (UFunction*) UObject::GObjObjects()->Data[ 87357 ];
+		pFnStartEffect = (UFunction*) UObject::GObjObjects()->Data[ 81736 ];
 
 	APuzzleRoomActor_execStartEffect_Parms StartEffect_Parms;
 	StartEffect_Parms.pieceIndex = pieceIndex;
@@ -537,7 +537,7 @@ void APuzzleRoomActor::AddValidPathPiece ( int newPieceIndex, int newValidIndex 
 	static UFunction* pFnAddValidPathPiece = NULL;
 
 	if ( ! pFnAddValidPathPiece )
-		pFnAddValidPathPiece = (UFunction*) UObject::GObjObjects()->Data[ 87353 ];
+		pFnAddValidPathPiece = (UFunction*) UObject::GObjObjects()->Data[ 81732 ];
 
 	APuzzleRoomActor_execAddValidPathPiece_Parms AddValidPathPiece_Parms;
 	AddValidPathPiece_Parms.newPieceIndex = newPieceIndex;
@@ -555,7 +555,7 @@ void APuzzleRoomActor::MakePuzzle ( )
 	static UFunction* pFnMakePuzzle = NULL;
 
 	if ( ! pFnMakePuzzle )
-		pFnMakePuzzle = (UFunction*) UObject::GObjObjects()->Data[ 87335 ];
+		pFnMakePuzzle = (UFunction*) UObject::GObjObjects()->Data[ 81714 ];
 
 	APuzzleRoomActor_execMakePuzzle_Parms MakePuzzle_Parms;
 
@@ -574,7 +574,7 @@ int APuzzleRoomActor::CalculatePieceIndex ( int X_loc, int Y_loc )
 	static UFunction* pFnCalculatePieceIndex = NULL;
 
 	if ( ! pFnCalculatePieceIndex )
-		pFnCalculatePieceIndex = (UFunction*) UObject::GObjObjects()->Data[ 87331 ];
+		pFnCalculatePieceIndex = (UFunction*) UObject::GObjObjects()->Data[ 81710 ];
 
 	APuzzleRoomActor_execCalculatePieceIndex_Parms CalculatePieceIndex_Parms;
 	CalculatePieceIndex_Parms.X_loc = X_loc;
@@ -594,7 +594,7 @@ void APuzzleRoomActor::InitGrid ( )
 	static UFunction* pFnInitGrid = NULL;
 
 	if ( ! pFnInitGrid )
-		pFnInitGrid = (UFunction*) UObject::GObjObjects()->Data[ 87323 ];
+		pFnInitGrid = (UFunction*) UObject::GObjObjects()->Data[ 81702 ];
 
 	APuzzleRoomActor_execInitGrid_Parms InitGrid_Parms;
 
@@ -610,7 +610,7 @@ void APuzzleRoomActor::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 87322 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 81701 ];
 
 	APuzzleRoomActor_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -642,7 +642,7 @@ void APuzzleRoomActor::ExecReplicatedFunction ( struct FName FunctionName, struc
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 87305 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 81684 ];
 
 	APuzzleRoomActor_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -674,7 +674,7 @@ void UDunDef_SeqEvent_PuzzleSolverLeft::eventActivated ( )
 	static UFunction* pFnActivated = NULL;
 
 	if ( ! pFnActivated )
-		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 86135 ];
+		pFnActivated = (UFunction*) UObject::GObjObjects()->Data[ 80514 ];
 
 	UDunDef_SeqEvent_PuzzleSolverLeft_eventActivated_Parms Activated_Parms;
 
@@ -691,7 +691,7 @@ void AGameInfo_RisingWater::Logout ( class AController* Exiting )
 	static UFunction* pFnLogout = NULL;
 
 	if ( ! pFnLogout )
-		pFnLogout = (UFunction*) UObject::GObjObjects()->Data[ 87016 ];
+		pFnLogout = (UFunction*) UObject::GObjObjects()->Data[ 81395 ];
 
 	AGameInfo_RisingWater_execLogout_Parms Logout_Parms;
 	Logout_Parms.Exiting = Exiting;
@@ -709,7 +709,7 @@ void AGameInfo_RisingWater::SetCurrentPuzzleSolver ( class ADunDefPlayer* newPuz
 	static UFunction* pFnSetCurrentPuzzleSolver = NULL;
 
 	if ( ! pFnSetCurrentPuzzleSolver )
-		pFnSetCurrentPuzzleSolver = (UFunction*) UObject::GObjObjects()->Data[ 87014 ];
+		pFnSetCurrentPuzzleSolver = (UFunction*) UObject::GObjObjects()->Data[ 81393 ];
 
 	AGameInfo_RisingWater_execSetCurrentPuzzleSolver_Parms SetCurrentPuzzleSolver_Parms;
 	SetCurrentPuzzleSolver_Parms.newPuzzleSolver = newPuzzleSolver;
@@ -726,7 +726,7 @@ void AGameInfo_RisingWater::SetGRIPuzzleSolver ( )
 	static UFunction* pFnSetGRIPuzzleSolver = NULL;
 
 	if ( ! pFnSetGRIPuzzleSolver )
-		pFnSetGRIPuzzleSolver = (UFunction*) UObject::GObjObjects()->Data[ 87013 ];
+		pFnSetGRIPuzzleSolver = (UFunction*) UObject::GObjObjects()->Data[ 81392 ];
 
 	AGameInfo_RisingWater_execSetGRIPuzzleSolver_Parms SetGRIPuzzleSolver_Parms;
 
@@ -743,7 +743,7 @@ void AGameInfo_RisingWater::RestartPlayer ( class AController* NewPlayer )
 	static UFunction* pFnRestartPlayer = NULL;
 
 	if ( ! pFnRestartPlayer )
-		pFnRestartPlayer = (UFunction*) UObject::GObjObjects()->Data[ 87011 ];
+		pFnRestartPlayer = (UFunction*) UObject::GObjObjects()->Data[ 81390 ];
 
 	AGameInfo_RisingWater_execRestartPlayer_Parms RestartPlayer_Parms;
 	RestartPlayer_Parms.NewPlayer = NewPlayer;
@@ -764,7 +764,7 @@ void AGameInfo_RisingWater::Killed ( class AController* Killer, class AControlle
 	static UFunction* pFnKilled = NULL;
 
 	if ( ! pFnKilled )
-		pFnKilled = (UFunction*) UObject::GObjObjects()->Data[ 87006 ];
+		pFnKilled = (UFunction*) UObject::GObjObjects()->Data[ 81385 ];
 
 	AGameInfo_RisingWater_execKilled_Parms Killed_Parms;
 	Killed_Parms.Killer = Killer;
@@ -784,7 +784,7 @@ void ADunDefInkCloud::ResetCurrentMoveActors ( )
 	static UFunction* pFnResetCurrentMoveActors = NULL;
 
 	if ( ! pFnResetCurrentMoveActors )
-		pFnResetCurrentMoveActors = (UFunction*) UObject::GObjObjects()->Data[ 86230 ];
+		pFnResetCurrentMoveActors = (UFunction*) UObject::GObjObjects()->Data[ 80609 ];
 
 	ADunDefInkCloud_execResetCurrentMoveActors_Parms ResetCurrentMoveActors_Parms;
 
@@ -809,7 +809,7 @@ bool ADunDefInkCloud::HurtRadius ( float BaseDamage, float DamageRadius, class U
 	static UFunction* pFnHurtRadius = NULL;
 
 	if ( ! pFnHurtRadius )
-		pFnHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 86218 ];
+		pFnHurtRadius = (UFunction*) UObject::GObjObjects()->Data[ 80597 ];
 
 	ADunDefInkCloud_execHurtRadius_Parms HurtRadius_Parms;
 	HurtRadius_Parms.BaseDamage = BaseDamage;
@@ -836,7 +836,7 @@ void ADunDefInkCloud::FadeOut ( float theLightFadeOutTime )
 	static UFunction* pFnFadeOut = NULL;
 
 	if ( ! pFnFadeOut )
-		pFnFadeOut = (UFunction*) UObject::GObjObjects()->Data[ 86216 ];
+		pFnFadeOut = (UFunction*) UObject::GObjObjects()->Data[ 80595 ];
 
 	ADunDefInkCloud_execFadeOut_Parms FadeOut_Parms;
 	FadeOut_Parms.theLightFadeOutTime = theLightFadeOutTime;
@@ -854,7 +854,7 @@ void ADunDefInkCloud::Init ( struct FVector Direction )
 	static UFunction* pFnInit = NULL;
 
 	if ( ! pFnInit )
-		pFnInit = (UFunction*) UObject::GObjObjects()->Data[ 86214 ];
+		pFnInit = (UFunction*) UObject::GObjObjects()->Data[ 80593 ];
 
 	ADunDefInkCloud_execInit_Parms Init_Parms;
 	memcpy ( &Init_Parms.Direction, &Direction, 0xC );
@@ -871,7 +871,7 @@ void ADunDefKraken::CheckKrakenProximity ( )
 	static UFunction* pFnCheckKrakenProximity = NULL;
 
 	if ( ! pFnCheckKrakenProximity )
-		pFnCheckKrakenProximity = (UFunction*) UObject::GObjObjects()->Data[ 86440 ];
+		pFnCheckKrakenProximity = (UFunction*) UObject::GObjObjects()->Data[ 80819 ];
 
 	ADunDefKraken_execCheckKrakenProximity_Parms CheckKrakenProximity_Parms;
 
@@ -891,7 +891,7 @@ bool ADunDefKraken::Died ( class AController* Killer, class UClass* DamageType, 
 	static UFunction* pFnDied = NULL;
 
 	if ( ! pFnDied )
-		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 86435 ];
+		pFnDied = (UFunction*) UObject::GObjObjects()->Data[ 80814 ];
 
 	ADunDefKraken_execDied_Parms Died_Parms;
 	Died_Parms.Killer = Killer;
@@ -912,7 +912,7 @@ void ADunDefKraken::DestroyTentacles ( )
 	static UFunction* pFnDestroyTentacles = NULL;
 
 	if ( ! pFnDestroyTentacles )
-		pFnDestroyTentacles = (UFunction*) UObject::GObjObjects()->Data[ 86433 ];
+		pFnDestroyTentacles = (UFunction*) UObject::GObjObjects()->Data[ 80812 ];
 
 	ADunDefKraken_execDestroyTentacles_Parms DestroyTentacles_Parms;
 
@@ -931,7 +931,7 @@ float ADunDefKraken::GetPlayerTargetingDesirability ( class ADunDefPlayerControl
 	static UFunction* pFnGetPlayerTargetingDesirability = NULL;
 
 	if ( ! pFnGetPlayerTargetingDesirability )
-		pFnGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 86429 ];
+		pFnGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 80808 ];
 
 	ADunDefKraken_execGetPlayerTargetingDesirability_Parms GetPlayerTargetingDesirability_Parms;
 	GetPlayerTargetingDesirability_Parms.forController = forController;
@@ -951,7 +951,7 @@ void ADunDefKraken::eventBiteStop ( )
 	static UFunction* pFnBiteStop = NULL;
 
 	if ( ! pFnBiteStop )
-		pFnBiteStop = (UFunction*) UObject::GObjObjects()->Data[ 86428 ];
+		pFnBiteStop = (UFunction*) UObject::GObjObjects()->Data[ 80807 ];
 
 	ADunDefKraken_eventBiteStop_Parms BiteStop_Parms;
 
@@ -967,7 +967,7 @@ void ADunDefKraken::eventBiteStart ( )
 	static UFunction* pFnBiteStart = NULL;
 
 	if ( ! pFnBiteStart )
-		pFnBiteStart = (UFunction*) UObject::GObjObjects()->Data[ 86427 ];
+		pFnBiteStart = (UFunction*) UObject::GObjObjects()->Data[ 80806 ];
 
 	ADunDefKraken_eventBiteStart_Parms BiteStart_Parms;
 
@@ -984,7 +984,7 @@ float ADunDefKraken::PlayTentacleAttackAnimation ( )
 	static UFunction* pFnPlayTentacleAttackAnimation = NULL;
 
 	if ( ! pFnPlayTentacleAttackAnimation )
-		pFnPlayTentacleAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86425 ];
+		pFnPlayTentacleAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 80804 ];
 
 	ADunDefKraken_execPlayTentacleAttackAnimation_Parms PlayTentacleAttackAnimation_Parms;
 
@@ -1003,7 +1003,7 @@ float ADunDefKraken::PlayBiteAttackAnimation ( )
 	static UFunction* pFnPlayBiteAttackAnimation = NULL;
 
 	if ( ! pFnPlayBiteAttackAnimation )
-		pFnPlayBiteAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86423 ];
+		pFnPlayBiteAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 80802 ];
 
 	ADunDefKraken_execPlayBiteAttackAnimation_Parms PlayBiteAttackAnimation_Parms;
 
@@ -1021,7 +1021,7 @@ void ADunDefKraken::eventStopSpit ( )
 	static UFunction* pFnStopSpit = NULL;
 
 	if ( ! pFnStopSpit )
-		pFnStopSpit = (UFunction*) UObject::GObjObjects()->Data[ 86422 ];
+		pFnStopSpit = (UFunction*) UObject::GObjObjects()->Data[ 80801 ];
 
 	ADunDefKraken_eventStopSpit_Parms StopSpit_Parms;
 
@@ -1037,7 +1037,7 @@ void ADunDefKraken::eventStartSpit ( )
 	static UFunction* pFnStartSpit = NULL;
 
 	if ( ! pFnStartSpit )
-		pFnStartSpit = (UFunction*) UObject::GObjObjects()->Data[ 86421 ];
+		pFnStartSpit = (UFunction*) UObject::GObjObjects()->Data[ 80800 ];
 
 	ADunDefKraken_eventStartSpit_Parms StartSpit_Parms;
 
@@ -1056,7 +1056,7 @@ void ADunDefKraken::GetSocketLocAndRot ( struct FName SocketName, struct FVector
 	static UFunction* pFnGetSocketLocAndRot = NULL;
 
 	if ( ! pFnGetSocketLocAndRot )
-		pFnGetSocketLocAndRot = (UFunction*) UObject::GObjObjects()->Data[ 86417 ];
+		pFnGetSocketLocAndRot = (UFunction*) UObject::GObjObjects()->Data[ 80796 ];
 
 	ADunDefKraken_execGetSocketLocAndRot_Parms GetSocketLocAndRot_Parms;
 	memcpy ( &GetSocketLocAndRot_Parms.SocketName, &SocketName, 0x8 );
@@ -1079,7 +1079,7 @@ void ADunDefKraken::eventShootGiantProjectile ( )
 	static UFunction* pFnShootGiantProjectile = NULL;
 
 	if ( ! pFnShootGiantProjectile )
-		pFnShootGiantProjectile = (UFunction*) UObject::GObjObjects()->Data[ 86416 ];
+		pFnShootGiantProjectile = (UFunction*) UObject::GObjObjects()->Data[ 80795 ];
 
 	ADunDefKraken_eventShootGiantProjectile_Parms ShootGiantProjectile_Parms;
 
@@ -1095,7 +1095,7 @@ void ADunDefKraken::eventShootRight ( )
 	static UFunction* pFnShootRight = NULL;
 
 	if ( ! pFnShootRight )
-		pFnShootRight = (UFunction*) UObject::GObjObjects()->Data[ 86415 ];
+		pFnShootRight = (UFunction*) UObject::GObjObjects()->Data[ 80794 ];
 
 	ADunDefKraken_eventShootRight_Parms ShootRight_Parms;
 
@@ -1111,7 +1111,7 @@ void ADunDefKraken::eventShootLeft ( )
 	static UFunction* pFnShootLeft = NULL;
 
 	if ( ! pFnShootLeft )
-		pFnShootLeft = (UFunction*) UObject::GObjObjects()->Data[ 86414 ];
+		pFnShootLeft = (UFunction*) UObject::GObjObjects()->Data[ 80793 ];
 
 	ADunDefKraken_eventShootLeft_Parms ShootLeft_Parms;
 
@@ -1127,7 +1127,7 @@ void ADunDefKraken::ResetMovementSettings ( )
 	static UFunction* pFnResetMovementSettings = NULL;
 
 	if ( ! pFnResetMovementSettings )
-		pFnResetMovementSettings = (UFunction*) UObject::GObjObjects()->Data[ 86413 ];
+		pFnResetMovementSettings = (UFunction*) UObject::GObjObjects()->Data[ 80792 ];
 
 	ADunDefKraken_execResetMovementSettings_Parms ResetMovementSettings_Parms;
 
@@ -1145,7 +1145,7 @@ void ADunDefKraken::SetDashMovementSettings ( float DashAirSpeedScalar, float Da
 	static UFunction* pFnSetDashMovementSettings = NULL;
 
 	if ( ! pFnSetDashMovementSettings )
-		pFnSetDashMovementSettings = (UFunction*) UObject::GObjObjects()->Data[ 86410 ];
+		pFnSetDashMovementSettings = (UFunction*) UObject::GObjObjects()->Data[ 80789 ];
 
 	ADunDefKraken_execSetDashMovementSettings_Parms SetDashMovementSettings_Parms;
 	SetDashMovementSettings_Parms.DashAirSpeedScalar = DashAirSpeedScalar;
@@ -1164,7 +1164,7 @@ float ADunDefKraken::PlayDashWindUp ( )
 	static UFunction* pFnPlayDashWindUp = NULL;
 
 	if ( ! pFnPlayDashWindUp )
-		pFnPlayDashWindUp = (UFunction*) UObject::GObjObjects()->Data[ 86408 ];
+		pFnPlayDashWindUp = (UFunction*) UObject::GObjObjects()->Data[ 80787 ];
 
 	ADunDefKraken_execPlayDashWindUp_Parms PlayDashWindUp_Parms;
 
@@ -1183,7 +1183,7 @@ float ADunDefKraken::PlayInkCloudAttack ( )
 	static UFunction* pFnPlayInkCloudAttack = NULL;
 
 	if ( ! pFnPlayInkCloudAttack )
-		pFnPlayInkCloudAttack = (UFunction*) UObject::GObjObjects()->Data[ 86406 ];
+		pFnPlayInkCloudAttack = (UFunction*) UObject::GObjObjects()->Data[ 80785 ];
 
 	ADunDefKraken_execPlayInkCloudAttack_Parms PlayInkCloudAttack_Parms;
 
@@ -1202,7 +1202,7 @@ float ADunDefKraken::PlayGiantProjectileAttack ( )
 	static UFunction* pFnPlayGiantProjectileAttack = NULL;
 
 	if ( ! pFnPlayGiantProjectileAttack )
-		pFnPlayGiantProjectileAttack = (UFunction*) UObject::GObjObjects()->Data[ 86404 ];
+		pFnPlayGiantProjectileAttack = (UFunction*) UObject::GObjObjects()->Data[ 80783 ];
 
 	ADunDefKraken_execPlayGiantProjectileAttack_Parms PlayGiantProjectileAttack_Parms;
 
@@ -1221,7 +1221,7 @@ float ADunDefKraken::PlayRightTentacleAttack ( )
 	static UFunction* pFnPlayRightTentacleAttack = NULL;
 
 	if ( ! pFnPlayRightTentacleAttack )
-		pFnPlayRightTentacleAttack = (UFunction*) UObject::GObjObjects()->Data[ 86400 ];
+		pFnPlayRightTentacleAttack = (UFunction*) UObject::GObjObjects()->Data[ 80779 ];
 
 	ADunDefKraken_execPlayRightTentacleAttack_Parms PlayRightTentacleAttack_Parms;
 
@@ -1241,7 +1241,7 @@ float ADunDefKraken::GetTowerTargetingDesirability ( class ADunDefTower* forTowe
 	static UFunction* pFnGetTowerTargetingDesirability = NULL;
 
 	if ( ! pFnGetTowerTargetingDesirability )
-		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 86397 ];
+		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 80776 ];
 
 	ADunDefKraken_execGetTowerTargetingDesirability_Parms GetTowerTargetingDesirability_Parms;
 	GetTowerTargetingDesirability_Parms.forTower = forTower;
@@ -1261,7 +1261,7 @@ float ADunDefKraken::PlayLeftTentacleAttack ( )
 	static UFunction* pFnPlayLeftTentacleAttack = NULL;
 
 	if ( ! pFnPlayLeftTentacleAttack )
-		pFnPlayLeftTentacleAttack = (UFunction*) UObject::GObjObjects()->Data[ 86393 ];
+		pFnPlayLeftTentacleAttack = (UFunction*) UObject::GObjObjects()->Data[ 80772 ];
 
 	ADunDefKraken_execPlayLeftTentacleAttack_Parms PlayLeftTentacleAttack_Parms;
 
@@ -1281,7 +1281,7 @@ bool ADunDefKraken::IsValidRightSwingTarget ( class AActor* checkTarg )
 	static UFunction* pFnIsValidRightSwingTarget = NULL;
 
 	if ( ! pFnIsValidRightSwingTarget )
-		pFnIsValidRightSwingTarget = (UFunction*) UObject::GObjObjects()->Data[ 86390 ];
+		pFnIsValidRightSwingTarget = (UFunction*) UObject::GObjObjects()->Data[ 80769 ];
 
 	ADunDefKraken_execIsValidRightSwingTarget_Parms IsValidRightSwingTarget_Parms;
 	IsValidRightSwingTarget_Parms.checkTarg = checkTarg;
@@ -1302,7 +1302,7 @@ bool ADunDefKraken::IsValidLeftSwingTarget ( class AActor* checkTarg )
 	static UFunction* pFnIsValidLeftSwingTarget = NULL;
 
 	if ( ! pFnIsValidLeftSwingTarget )
-		pFnIsValidLeftSwingTarget = (UFunction*) UObject::GObjObjects()->Data[ 86387 ];
+		pFnIsValidLeftSwingTarget = (UFunction*) UObject::GObjObjects()->Data[ 80766 ];
 
 	ADunDefKraken_execIsValidLeftSwingTarget_Parms IsValidLeftSwingTarget_Parms;
 	IsValidLeftSwingTarget_Parms.checkTarg = checkTarg;
@@ -1324,7 +1324,7 @@ void ADunDefKraken::AddToRightSwingHurtList ( class AActor* newHitTarg, struct F
 	static UFunction* pFnAddToRightSwingHurtList = NULL;
 
 	if ( ! pFnAddToRightSwingHurtList )
-		pFnAddToRightSwingHurtList = (UFunction*) UObject::GObjObjects()->Data[ 86383 ];
+		pFnAddToRightSwingHurtList = (UFunction*) UObject::GObjObjects()->Data[ 80762 ];
 
 	ADunDefKraken_execAddToRightSwingHurtList_Parms AddToRightSwingHurtList_Parms;
 	AddToRightSwingHurtList_Parms.newHitTarg = newHitTarg;
@@ -1346,7 +1346,7 @@ void ADunDefKraken::AddToLeftSwingHurtList ( class AActor* newHitTarg, struct FV
 	static UFunction* pFnAddToLeftSwingHurtList = NULL;
 
 	if ( ! pFnAddToLeftSwingHurtList )
-		pFnAddToLeftSwingHurtList = (UFunction*) UObject::GObjObjects()->Data[ 86379 ];
+		pFnAddToLeftSwingHurtList = (UFunction*) UObject::GObjObjects()->Data[ 80758 ];
 
 	ADunDefKraken_execAddToLeftSwingHurtList_Parms AddToLeftSwingHurtList_Parms;
 	AddToLeftSwingHurtList_Parms.newHitTarg = newHitTarg;
@@ -1365,7 +1365,7 @@ void ADunDefKraken::StopMelee ( )
 	static UFunction* pFnStopMelee = NULL;
 
 	if ( ! pFnStopMelee )
-		pFnStopMelee = (UFunction*) UObject::GObjObjects()->Data[ 86377 ];
+		pFnStopMelee = (UFunction*) UObject::GObjObjects()->Data[ 80756 ];
 
 	ADunDefKraken_execStopMelee_Parms StopMelee_Parms;
 
@@ -1381,7 +1381,7 @@ void ADunDefKraken::eventStartMelee ( )
 	static UFunction* pFnStartMelee = NULL;
 
 	if ( ! pFnStartMelee )
-		pFnStartMelee = (UFunction*) UObject::GObjObjects()->Data[ 86375 ];
+		pFnStartMelee = (UFunction*) UObject::GObjObjects()->Data[ 80754 ];
 
 	ADunDefKraken_eventStartMelee_Parms StartMelee_Parms;
 
@@ -1398,7 +1398,7 @@ float ADunDefKraken::CloseMouth ( )
 	static UFunction* pFnCloseMouth = NULL;
 
 	if ( ! pFnCloseMouth )
-		pFnCloseMouth = (UFunction*) UObject::GObjObjects()->Data[ 86373 ];
+		pFnCloseMouth = (UFunction*) UObject::GObjObjects()->Data[ 80752 ];
 
 	ADunDefKraken_execCloseMouth_Parms CloseMouth_Parms;
 
@@ -1416,7 +1416,7 @@ void ADunDefKraken::OpenMouth ( )
 	static UFunction* pFnOpenMouth = NULL;
 
 	if ( ! pFnOpenMouth )
-		pFnOpenMouth = (UFunction*) UObject::GObjObjects()->Data[ 86372 ];
+		pFnOpenMouth = (UFunction*) UObject::GObjObjects()->Data[ 80751 ];
 
 	ADunDefKraken_execOpenMouth_Parms OpenMouth_Parms;
 
@@ -1432,7 +1432,7 @@ void ADunDefKraken::PlayMouthOpen ( )
 	static UFunction* pFnPlayMouthOpen = NULL;
 
 	if ( ! pFnPlayMouthOpen )
-		pFnPlayMouthOpen = (UFunction*) UObject::GObjObjects()->Data[ 86371 ];
+		pFnPlayMouthOpen = (UFunction*) UObject::GObjObjects()->Data[ 80750 ];
 
 	ADunDefKraken_execPlayMouthOpen_Parms PlayMouthOpen_Parms;
 
@@ -1449,7 +1449,7 @@ void ADunDefKraken::DoSingleWithdraw ( int tentacleIndex )
 	static UFunction* pFnDoSingleWithdraw = NULL;
 
 	if ( ! pFnDoSingleWithdraw )
-		pFnDoSingleWithdraw = (UFunction*) UObject::GObjObjects()->Data[ 86369 ];
+		pFnDoSingleWithdraw = (UFunction*) UObject::GObjObjects()->Data[ 80748 ];
 
 	ADunDefKraken_execDoSingleWithdraw_Parms DoSingleWithdraw_Parms;
 	DoSingleWithdraw_Parms.tentacleIndex = tentacleIndex;
@@ -1467,7 +1467,7 @@ void ADunDefKraken::ForceWithDraw ( class AKrakenTentacle* withdrawTentacle )
 	static UFunction* pFnForceWithDraw = NULL;
 
 	if ( ! pFnForceWithDraw )
-		pFnForceWithDraw = (UFunction*) UObject::GObjObjects()->Data[ 86366 ];
+		pFnForceWithDraw = (UFunction*) UObject::GObjObjects()->Data[ 80745 ];
 
 	ADunDefKraken_execForceWithDraw_Parms ForceWithDraw_Parms;
 	ForceWithDraw_Parms.withdrawTentacle = withdrawTentacle;
@@ -1485,7 +1485,7 @@ float ADunDefKraken::BringOutAllTentacles ( )
 	static UFunction* pFnBringOutAllTentacles = NULL;
 
 	if ( ! pFnBringOutAllTentacles )
-		pFnBringOutAllTentacles = (UFunction*) UObject::GObjObjects()->Data[ 86362 ];
+		pFnBringOutAllTentacles = (UFunction*) UObject::GObjObjects()->Data[ 80741 ];
 
 	ADunDefKraken_execBringOutAllTentacles_Parms BringOutAllTentacles_Parms;
 
@@ -1504,7 +1504,7 @@ void ADunDefKraken::PlayWithDrawTentacle ( int tentacleIndex )
 	static UFunction* pFnPlayWithDrawTentacle = NULL;
 
 	if ( ! pFnPlayWithDrawTentacle )
-		pFnPlayWithDrawTentacle = (UFunction*) UObject::GObjObjects()->Data[ 86354 ];
+		pFnPlayWithDrawTentacle = (UFunction*) UObject::GObjObjects()->Data[ 80733 ];
 
 	ADunDefKraken_execPlayWithDrawTentacle_Parms PlayWithDrawTentacle_Parms;
 	PlayWithDrawTentacle_Parms.tentacleIndex = tentacleIndex;
@@ -1523,7 +1523,7 @@ bool ADunDefKraken::NotifyTentacleWithdraw ( class AKrakenTentacle* damagedTenta
 	static UFunction* pFnNotifyTentacleWithdraw = NULL;
 
 	if ( ! pFnNotifyTentacleWithdraw )
-		pFnNotifyTentacleWithdraw = (UFunction*) UObject::GObjObjects()->Data[ 86349 ];
+		pFnNotifyTentacleWithdraw = (UFunction*) UObject::GObjObjects()->Data[ 80728 ];
 
 	ADunDefKraken_execNotifyTentacleWithdraw_Parms NotifyTentacleWithdraw_Parms;
 	NotifyTentacleWithdraw_Parms.damagedTentacle = damagedTentacle;
@@ -1544,7 +1544,7 @@ bool ADunDefKraken::CheckSpecialCoreDmg ( struct FVector HitLocation )
 	static UFunction* pFnCheckSpecialCoreDmg = NULL;
 
 	if ( ! pFnCheckSpecialCoreDmg )
-		pFnCheckSpecialCoreDmg = (UFunction*) UObject::GObjObjects()->Data[ 86344 ];
+		pFnCheckSpecialCoreDmg = (UFunction*) UObject::GObjObjects()->Data[ 80723 ];
 
 	ADunDefKraken_execCheckSpecialCoreDmg_Parms CheckSpecialCoreDmg_Parms;
 	memcpy ( &CheckSpecialCoreDmg_Parms.HitLocation, &HitLocation, 0xC );
@@ -1569,7 +1569,7 @@ void ADunDefKraken::AdjustDamage ( class AController* InstigatedBy, struct FVect
 	static UFunction* pFnAdjustDamage = NULL;
 
 	if ( ! pFnAdjustDamage )
-		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 86337 ];
+		pFnAdjustDamage = (UFunction*) UObject::GObjObjects()->Data[ 80716 ];
 
 	ADunDefKraken_execAdjustDamage_Parms AdjustDamage_Parms;
 	AdjustDamage_Parms.InstigatedBy = InstigatedBy;
@@ -1597,7 +1597,7 @@ void ADunDefKraken::PlayRealHurtEffect ( class UClass* DamageType, struct FVecto
 	static UFunction* pFnPlayRealHurtEffect = NULL;
 
 	if ( ! pFnPlayRealHurtEffect )
-		pFnPlayRealHurtEffect = (UFunction*) UObject::GObjObjects()->Data[ 86333 ];
+		pFnPlayRealHurtEffect = (UFunction*) UObject::GObjObjects()->Data[ 80712 ];
 
 	ADunDefKraken_execPlayRealHurtEffect_Parms PlayRealHurtEffect_Parms;
 	PlayRealHurtEffect_Parms.DamageType = DamageType;
@@ -1620,7 +1620,7 @@ void ADunDefKraken::NotifyTakeHit ( class AController* InstigatedBy, struct FVec
 	static UFunction* pFnNotifyTakeHit = NULL;
 
 	if ( ! pFnNotifyTakeHit )
-		pFnNotifyTakeHit = (UFunction*) UObject::GObjObjects()->Data[ 86327 ];
+		pFnNotifyTakeHit = (UFunction*) UObject::GObjObjects()->Data[ 80706 ];
 
 	ADunDefKraken_execNotifyTakeHit_Parms NotifyTakeHit_Parms;
 	NotifyTakeHit_Parms.InstigatedBy = InstigatedBy;
@@ -1648,7 +1648,7 @@ void ADunDefKraken::eventTakeDamage ( int DamageAmount, class AController* Event
 	static UFunction* pFnTakeDamage = NULL;
 
 	if ( ! pFnTakeDamage )
-		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 86319 ];
+		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 80698 ];
 
 	ADunDefKraken_eventTakeDamage_Parms TakeDamage_Parms;
 	TakeDamage_Parms.DamageAmount = DamageAmount;
@@ -1673,7 +1673,7 @@ void ADunDefKraken::UpdateDifficultyValues ( unsigned long UpdateMaterial, unsig
 	static UFunction* pFnUpdateDifficultyValues = NULL;
 
 	if ( ! pFnUpdateDifficultyValues )
-		pFnUpdateDifficultyValues = (UFunction*) UObject::GObjObjects()->Data[ 86316 ];
+		pFnUpdateDifficultyValues = (UFunction*) UObject::GObjObjects()->Data[ 80695 ];
 
 	ADunDefKraken_execUpdateDifficultyValues_Parms UpdateDifficultyValues_Parms;
 	UpdateDifficultyValues_Parms.UpdateMaterial = UpdateMaterial;
@@ -1691,7 +1691,7 @@ void ADunDefKraken::SetMovementPhysics ( )
 	static UFunction* pFnSetMovementPhysics = NULL;
 
 	if ( ! pFnSetMovementPhysics )
-		pFnSetMovementPhysics = (UFunction*) UObject::GObjObjects()->Data[ 86315 ];
+		pFnSetMovementPhysics = (UFunction*) UObject::GObjObjects()->Data[ 80694 ];
 
 	ADunDefKraken_execSetMovementPhysics_Parms SetMovementPhysics_Parms;
 
@@ -1708,7 +1708,7 @@ float ADunDefKraken::GetAttackPauseRate ( )
 	static UFunction* pFnGetAttackPauseRate = NULL;
 
 	if ( ! pFnGetAttackPauseRate )
-		pFnGetAttackPauseRate = (UFunction*) UObject::GObjObjects()->Data[ 86313 ];
+		pFnGetAttackPauseRate = (UFunction*) UObject::GObjObjects()->Data[ 80692 ];
 
 	ADunDefKraken_execGetAttackPauseRate_Parms GetAttackPauseRate_Parms;
 
@@ -1726,7 +1726,7 @@ void ADunDefKraken::InitTentacles ( )
 	static UFunction* pFnInitTentacles = NULL;
 
 	if ( ! pFnInitTentacles )
-		pFnInitTentacles = (UFunction*) UObject::GObjObjects()->Data[ 86310 ];
+		pFnInitTentacles = (UFunction*) UObject::GObjObjects()->Data[ 80689 ];
 
 	ADunDefKraken_execInitTentacles_Parms InitTentacles_Parms;
 
@@ -1742,7 +1742,7 @@ void ADunDefKraken::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 86309 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 80688 ];
 
 	ADunDefKraken_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -1774,7 +1774,7 @@ void ADunDefKraken::ExecReplicatedFunction ( struct FName FunctionName, struct F
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 86292 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 80671 ];
 
 	ADunDefKraken_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -1807,7 +1807,7 @@ void ADunDefKraken::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 86290 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 80669 ];
 
 	ADunDefKraken_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -1825,7 +1825,7 @@ float AKrakenTentacle::GetLightningTowerDamagePercent ( )
 	static UFunction* pFnGetLightningTowerDamagePercent = NULL;
 
 	if ( ! pFnGetLightningTowerDamagePercent )
-		pFnGetLightningTowerDamagePercent = (UFunction*) UObject::GObjObjects()->Data[ 87200 ];
+		pFnGetLightningTowerDamagePercent = (UFunction*) UObject::GObjObjects()->Data[ 81579 ];
 
 	AKrakenTentacle_execGetLightningTowerDamagePercent_Parms GetLightningTowerDamagePercent_Parms;
 
@@ -1844,7 +1844,7 @@ void AKrakenTentacle::setIsWebbed ( unsigned long isWebbed )
 	static UFunction* pFnsetIsWebbed = NULL;
 
 	if ( ! pFnsetIsWebbed )
-		pFnsetIsWebbed = (UFunction*) UObject::GObjObjects()->Data[ 87198 ];
+		pFnsetIsWebbed = (UFunction*) UObject::GObjObjects()->Data[ 81577 ];
 
 	AKrakenTentacle_execsetIsWebbed_Parms setIsWebbed_Parms;
 	setIsWebbed_Parms.isWebbed = isWebbed;
@@ -1862,7 +1862,7 @@ bool AKrakenTentacle::isWebbed ( )
 	static UFunction* pFnisWebbed = NULL;
 
 	if ( ! pFnisWebbed )
-		pFnisWebbed = (UFunction*) UObject::GObjObjects()->Data[ 87196 ];
+		pFnisWebbed = (UFunction*) UObject::GObjObjects()->Data[ 81575 ];
 
 	AKrakenTentacle_execisWebbed_Parms isWebbed_Parms;
 
@@ -1881,7 +1881,7 @@ bool AKrakenTentacle::GetChainIgnore ( )
 	static UFunction* pFnGetChainIgnore = NULL;
 
 	if ( ! pFnGetChainIgnore )
-		pFnGetChainIgnore = (UFunction*) UObject::GObjObjects()->Data[ 87194 ];
+		pFnGetChainIgnore = (UFunction*) UObject::GObjObjects()->Data[ 81573 ];
 
 	AKrakenTentacle_execGetChainIgnore_Parms GetChainIgnore_Parms;
 
@@ -1900,7 +1900,7 @@ void AKrakenTentacle::SetChainIgnore ( unsigned long ignore )
 	static UFunction* pFnSetChainIgnore = NULL;
 
 	if ( ! pFnSetChainIgnore )
-		pFnSetChainIgnore = (UFunction*) UObject::GObjObjects()->Data[ 87192 ];
+		pFnSetChainIgnore = (UFunction*) UObject::GObjObjects()->Data[ 81571 ];
 
 	AKrakenTentacle_execSetChainIgnore_Parms SetChainIgnore_Parms;
 	SetChainIgnore_Parms.ignore = ignore;
@@ -1919,7 +1919,7 @@ bool AKrakenTentacle::IsBeingChainedBy ( class ADunDefTower_ChainLightning* towe
 	static UFunction* pFnIsBeingChainedBy = NULL;
 
 	if ( ! pFnIsBeingChainedBy )
-		pFnIsBeingChainedBy = (UFunction*) UObject::GObjObjects()->Data[ 87189 ];
+		pFnIsBeingChainedBy = (UFunction*) UObject::GObjObjects()->Data[ 81568 ];
 
 	AKrakenTentacle_execIsBeingChainedBy_Parms IsBeingChainedBy_Parms;
 	IsBeingChainedBy_Parms.tower = tower;
@@ -1939,7 +1939,7 @@ void AKrakenTentacle::RemoveFromChainingTowers ( class ADunDefTower_ChainLightni
 	static UFunction* pFnRemoveFromChainingTowers = NULL;
 
 	if ( ! pFnRemoveFromChainingTowers )
-		pFnRemoveFromChainingTowers = (UFunction*) UObject::GObjObjects()->Data[ 87187 ];
+		pFnRemoveFromChainingTowers = (UFunction*) UObject::GObjObjects()->Data[ 81566 ];
 
 	AKrakenTentacle_execRemoveFromChainingTowers_Parms RemoveFromChainingTowers_Parms;
 	RemoveFromChainingTowers_Parms.tower = tower;
@@ -1957,7 +1957,7 @@ void AKrakenTentacle::AddToChainingTowers ( class ADunDefTower_ChainLightning* t
 	static UFunction* pFnAddToChainingTowers = NULL;
 
 	if ( ! pFnAddToChainingTowers )
-		pFnAddToChainingTowers = (UFunction*) UObject::GObjObjects()->Data[ 87185 ];
+		pFnAddToChainingTowers = (UFunction*) UObject::GObjObjects()->Data[ 81564 ];
 
 	AKrakenTentacle_execAddToChainingTowers_Parms AddToChainingTowers_Parms;
 	AddToChainingTowers_Parms.tower = tower;
@@ -1975,7 +1975,7 @@ bool AKrakenTentacle::AllowSuction ( )
 	static UFunction* pFnAllowSuction = NULL;
 
 	if ( ! pFnAllowSuction )
-		pFnAllowSuction = (UFunction*) UObject::GObjObjects()->Data[ 87183 ];
+		pFnAllowSuction = (UFunction*) UObject::GObjObjects()->Data[ 81562 ];
 
 	AKrakenTentacle_execAllowSuction_Parms AllowSuction_Parms;
 
@@ -2002,7 +2002,7 @@ void AKrakenTentacle::ClientTakeRadiusDamage ( class APawn* InstigatorPawn, floa
 	static UFunction* pFnClientTakeRadiusDamage = NULL;
 
 	if ( ! pFnClientTakeRadiusDamage )
-		pFnClientTakeRadiusDamage = (UFunction*) UObject::GObjObjects()->Data[ 87173 ];
+		pFnClientTakeRadiusDamage = (UFunction*) UObject::GObjObjects()->Data[ 81552 ];
 
 	AKrakenTentacle_execClientTakeRadiusDamage_Parms ClientTakeRadiusDamage_Parms;
 	ClientTakeRadiusDamage_Parms.InstigatorPawn = InstigatorPawn;
@@ -2034,7 +2034,7 @@ void AKrakenTentacle::ClientTakeDamage ( int DamageAmount, class APawn* Instigat
 	static UFunction* pFnClientTakeDamage = NULL;
 
 	if ( ! pFnClientTakeDamage )
-		pFnClientTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 87165 ];
+		pFnClientTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 81544 ];
 
 	AKrakenTentacle_execClientTakeDamage_Parms ClientTakeDamage_Parms;
 	ClientTakeDamage_Parms.DamageAmount = DamageAmount;
@@ -2058,7 +2058,7 @@ float AKrakenTentacle::GetHealthPercent ( )
 	static UFunction* pFnGetHealthPercent = NULL;
 
 	if ( ! pFnGetHealthPercent )
-		pFnGetHealthPercent = (UFunction*) UObject::GObjObjects()->Data[ 87163 ];
+		pFnGetHealthPercent = (UFunction*) UObject::GObjObjects()->Data[ 81542 ];
 
 	AKrakenTentacle_execGetHealthPercent_Parms GetHealthPercent_Parms;
 
@@ -2076,7 +2076,7 @@ void AKrakenTentacle::UpdateDamageFlashing ( )
 	static UFunction* pFnUpdateDamageFlashing = NULL;
 
 	if ( ! pFnUpdateDamageFlashing )
-		pFnUpdateDamageFlashing = (UFunction*) UObject::GObjObjects()->Data[ 87161 ];
+		pFnUpdateDamageFlashing = (UFunction*) UObject::GObjObjects()->Data[ 81540 ];
 
 	AKrakenTentacle_execUpdateDamageFlashing_Parms UpdateDamageFlashing_Parms;
 
@@ -2095,7 +2095,7 @@ void AKrakenTentacle::LocalTookDamage ( int DamageAmount, struct FVector atPosit
 	static UFunction* pFnLocalTookDamage = NULL;
 
 	if ( ! pFnLocalTookDamage )
-		pFnLocalTookDamage = (UFunction*) UObject::GObjObjects()->Data[ 87157 ];
+		pFnLocalTookDamage = (UFunction*) UObject::GObjObjects()->Data[ 81536 ];
 
 	AKrakenTentacle_execLocalTookDamage_Parms LocalTookDamage_Parms;
 	LocalTookDamage_Parms.DamageAmount = DamageAmount;
@@ -2118,7 +2118,7 @@ void AKrakenTentacle::HealPctOfMaxHealth ( float HealPct, class AController* Hea
 	static UFunction* pFnHealPctOfMaxHealth = NULL;
 
 	if ( ! pFnHealPctOfMaxHealth )
-		pFnHealPctOfMaxHealth = (UFunction*) UObject::GObjObjects()->Data[ 87151 ];
+		pFnHealPctOfMaxHealth = (UFunction*) UObject::GObjObjects()->Data[ 81530 ];
 
 	AKrakenTentacle_execHealPctOfMaxHealth_Parms HealPctOfMaxHealth_Parms;
 	HealPctOfMaxHealth_Parms.HealPct = HealPct;
@@ -2141,7 +2141,7 @@ bool AKrakenTentacle::ForceMoveActor ( class AActor* Mover, struct FVector NewLo
 	static UFunction* pFnForceMoveActor = NULL;
 
 	if ( ! pFnForceMoveActor )
-		pFnForceMoveActor = (UFunction*) UObject::GObjObjects()->Data[ 87147 ];
+		pFnForceMoveActor = (UFunction*) UObject::GObjObjects()->Data[ 81526 ];
 
 	AKrakenTentacle_execForceMoveActor_Parms ForceMoveActor_Parms;
 	ForceMoveActor_Parms.Mover = Mover;
@@ -2162,7 +2162,7 @@ class UPrimitiveComponent* AKrakenTentacle::GetOverrideTargetComponent ( )
 	static UFunction* pFnGetOverrideTargetComponent = NULL;
 
 	if ( ! pFnGetOverrideTargetComponent )
-		pFnGetOverrideTargetComponent = (UFunction*) UObject::GObjObjects()->Data[ 87145 ];
+		pFnGetOverrideTargetComponent = (UFunction*) UObject::GObjObjects()->Data[ 81524 ];
 
 	AKrakenTentacle_execGetOverrideTargetComponent_Parms GetOverrideTargetComponent_Parms;
 
@@ -2182,7 +2182,7 @@ bool AKrakenTentacle::eventEncroachingOn ( class AActor* Other )
 	static UFunction* pFnEncroachingOn = NULL;
 
 	if ( ! pFnEncroachingOn )
-		pFnEncroachingOn = (UFunction*) UObject::GObjObjects()->Data[ 87142 ];
+		pFnEncroachingOn = (UFunction*) UObject::GObjObjects()->Data[ 81521 ];
 
 	AKrakenTentacle_eventEncroachingOn_Parms EncroachingOn_Parms;
 	EncroachingOn_Parms.Other = Other;
@@ -2204,7 +2204,7 @@ void AKrakenTentacle::eventBump ( class AActor* Other, class UPrimitiveComponent
 	static UFunction* pFnBump = NULL;
 
 	if ( ! pFnBump )
-		pFnBump = (UFunction*) UObject::GObjObjects()->Data[ 87138 ];
+		pFnBump = (UFunction*) UObject::GObjObjects()->Data[ 81517 ];
 
 	AKrakenTentacle_eventBump_Parms Bump_Parms;
 	Bump_Parms.Other = Other;
@@ -2227,7 +2227,7 @@ void AKrakenTentacle::eventTouch ( class AActor* Other, class UPrimitiveComponen
 	static UFunction* pFnTouch = NULL;
 
 	if ( ! pFnTouch )
-		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 87133 ];
+		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 81512 ];
 
 	AKrakenTentacle_eventTouch_Parms Touch_Parms;
 	Touch_Parms.Other = Other;
@@ -2248,7 +2248,7 @@ void AKrakenTentacle::SetDoDamageChecks ( unsigned long bAllowDamage )
 	static UFunction* pFnSetDoDamageChecks = NULL;
 
 	if ( ! pFnSetDoDamageChecks )
-		pFnSetDoDamageChecks = (UFunction*) UObject::GObjObjects()->Data[ 87131 ];
+		pFnSetDoDamageChecks = (UFunction*) UObject::GObjObjects()->Data[ 81510 ];
 
 	AKrakenTentacle_execSetDoDamageChecks_Parms SetDoDamageChecks_Parms;
 	SetDoDamageChecks_Parms.bAllowDamage = bAllowDamage;
@@ -2267,7 +2267,7 @@ int AKrakenTentacle::GetHealth ( unsigned long bGetMax )
 	static UFunction* pFnGetHealth = NULL;
 
 	if ( ! pFnGetHealth )
-		pFnGetHealth = (UFunction*) UObject::GObjObjects()->Data[ 87128 ];
+		pFnGetHealth = (UFunction*) UObject::GObjObjects()->Data[ 81507 ];
 
 	AKrakenTentacle_execGetHealth_Parms GetHealth_Parms;
 	GetHealth_Parms.bGetMax = bGetMax;
@@ -2287,7 +2287,7 @@ float AKrakenTentacle::GetMass ( )
 	static UFunction* pFnGetMass = NULL;
 
 	if ( ! pFnGetMass )
-		pFnGetMass = (UFunction*) UObject::GObjObjects()->Data[ 87126 ];
+		pFnGetMass = (UFunction*) UObject::GObjObjects()->Data[ 81505 ];
 
 	AKrakenTentacle_execGetMass_Parms GetMass_Parms;
 
@@ -2306,7 +2306,7 @@ bool AKrakenTentacle::AllowDarknessIgnorance ( )
 	static UFunction* pFnAllowDarknessIgnorance = NULL;
 
 	if ( ! pFnAllowDarknessIgnorance )
-		pFnAllowDarknessIgnorance = (UFunction*) UObject::GObjObjects()->Data[ 87124 ];
+		pFnAllowDarknessIgnorance = (UFunction*) UObject::GObjObjects()->Data[ 81503 ];
 
 	AKrakenTentacle_execAllowDarknessIgnorance_Parms AllowDarknessIgnorance_Parms;
 
@@ -2326,7 +2326,7 @@ bool AKrakenTentacle::ForceFriendlyFire ( class AActor* Target )
 	static UFunction* pFnForceFriendlyFire = NULL;
 
 	if ( ! pFnForceFriendlyFire )
-		pFnForceFriendlyFire = (UFunction*) UObject::GObjObjects()->Data[ 87121 ];
+		pFnForceFriendlyFire = (UFunction*) UObject::GObjObjects()->Data[ 81500 ];
 
 	AKrakenTentacle_execForceFriendlyFire_Parms ForceFriendlyFire_Parms;
 	ForceFriendlyFire_Parms.Target = Target;
@@ -2347,7 +2347,7 @@ struct FVector AKrakenTentacle::GetInterpolatedTargetingLocation ( class AActor*
 	static UFunction* pFnGetInterpolatedTargetingLocation = NULL;
 
 	if ( ! pFnGetInterpolatedTargetingLocation )
-		pFnGetInterpolatedTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 87116 ];
+		pFnGetInterpolatedTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 81495 ];
 
 	AKrakenTentacle_execGetInterpolatedTargetingLocation_Parms GetInterpolatedTargetingLocation_Parms;
 	GetInterpolatedTargetingLocation_Parms.RequestedBy = RequestedBy;
@@ -2368,7 +2368,7 @@ struct FVector AKrakenTentacle::GetTargetingLocation ( class AActor* RequestedBy
 	static UFunction* pFnGetTargetingLocation = NULL;
 
 	if ( ! pFnGetTargetingLocation )
-		pFnGetTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 87111 ];
+		pFnGetTargetingLocation = (UFunction*) UObject::GObjObjects()->Data[ 81490 ];
 
 	AKrakenTentacle_execGetTargetingLocation_Parms GetTargetingLocation_Parms;
 	GetTargetingLocation_Parms.RequestedBy = RequestedBy;
@@ -2387,7 +2387,7 @@ void AKrakenTentacle::OnDestroy_RemoveFromTargetableList ( )
 	static UFunction* pFnOnDestroy_RemoveFromTargetableList = NULL;
 
 	if ( ! pFnOnDestroy_RemoveFromTargetableList )
-		pFnOnDestroy_RemoveFromTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 87110 ];
+		pFnOnDestroy_RemoveFromTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 81489 ];
 
 	AKrakenTentacle_execOnDestroy_RemoveFromTargetableList_Parms OnDestroy_RemoveFromTargetableList_Parms;
 
@@ -2403,7 +2403,7 @@ void AKrakenTentacle::OnPostBeginPlay_AddToTargetableList ( )
 	static UFunction* pFnOnPostBeginPlay_AddToTargetableList = NULL;
 
 	if ( ! pFnOnPostBeginPlay_AddToTargetableList )
-		pFnOnPostBeginPlay_AddToTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 87109 ];
+		pFnOnPostBeginPlay_AddToTargetableList = (UFunction*) UObject::GObjObjects()->Data[ 81488 ];
 
 	AKrakenTentacle_execOnPostBeginPlay_AddToTargetableList_Parms OnPostBeginPlay_AddToTargetableList_Parms;
 
@@ -2420,7 +2420,7 @@ void AKrakenTentacle::UnregisterAttacker ( class ADunDefEnemyController* forCont
 	static UFunction* pFnUnregisterAttacker = NULL;
 
 	if ( ! pFnUnregisterAttacker )
-		pFnUnregisterAttacker = (UFunction*) UObject::GObjObjects()->Data[ 87107 ];
+		pFnUnregisterAttacker = (UFunction*) UObject::GObjObjects()->Data[ 81486 ];
 
 	AKrakenTentacle_execUnregisterAttacker_Parms UnregisterAttacker_Parms;
 	UnregisterAttacker_Parms.forController = forController;
@@ -2438,7 +2438,7 @@ void AKrakenTentacle::RegisterAttacker ( class ADunDefEnemyController* forContro
 	static UFunction* pFnRegisterAttacker = NULL;
 
 	if ( ! pFnRegisterAttacker )
-		pFnRegisterAttacker = (UFunction*) UObject::GObjObjects()->Data[ 87105 ];
+		pFnRegisterAttacker = (UFunction*) UObject::GObjObjects()->Data[ 81484 ];
 
 	AKrakenTentacle_execRegisterAttacker_Parms RegisterAttacker_Parms;
 	RegisterAttacker_Parms.forController = forController;
@@ -2456,7 +2456,7 @@ float AKrakenTentacle::GetAttackRangeOffset ( )
 	static UFunction* pFnGetAttackRangeOffset = NULL;
 
 	if ( ! pFnGetAttackRangeOffset )
-		pFnGetAttackRangeOffset = (UFunction*) UObject::GObjObjects()->Data[ 87103 ];
+		pFnGetAttackRangeOffset = (UFunction*) UObject::GObjObjects()->Data[ 81482 ];
 
 	AKrakenTentacle_execGetAttackRangeOffset_Parms GetAttackRangeOffset_Parms;
 
@@ -2477,7 +2477,7 @@ bool AKrakenTentacle::IgnoreFriendlyFireDamage ( class UDunDefTargetableInterfac
 	static UFunction* pFnIgnoreFriendlyFireDamage = NULL;
 
 	if ( ! pFnIgnoreFriendlyFireDamage )
-		pFnIgnoreFriendlyFireDamage = (UFunction*) UObject::GObjObjects()->Data[ 87099 ];
+		pFnIgnoreFriendlyFireDamage = (UFunction*) UObject::GObjObjects()->Data[ 81478 ];
 
 	AKrakenTentacle_execIgnoreFriendlyFireDamage_Parms IgnoreFriendlyFireDamage_Parms;
 	IgnoreFriendlyFireDamage_Parms.instigatorActor = instigatorActor;
@@ -2498,7 +2498,7 @@ int AKrakenTentacle::GetTargetingTeam ( )
 	static UFunction* pFnGetTargetingTeam = NULL;
 
 	if ( ! pFnGetTargetingTeam )
-		pFnGetTargetingTeam = (UFunction*) UObject::GObjObjects()->Data[ 87097 ];
+		pFnGetTargetingTeam = (UFunction*) UObject::GObjObjects()->Data[ 81476 ];
 
 	AKrakenTentacle_execGetTargetingTeam_Parms GetTargetingTeam_Parms;
 
@@ -2518,7 +2518,7 @@ float AKrakenTentacle::GetTowerTargetingDesirability ( class ADunDefTower* forTo
 	static UFunction* pFnGetTowerTargetingDesirability = NULL;
 
 	if ( ! pFnGetTowerTargetingDesirability )
-		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 87094 ];
+		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 81473 ];
 
 	AKrakenTentacle_execGetTowerTargetingDesirability_Parms GetTowerTargetingDesirability_Parms;
 	GetTowerTargetingDesirability_Parms.forTower = forTower;
@@ -2540,7 +2540,7 @@ float AKrakenTentacle::GetPlayerTargetingDesirability ( class ADunDefPlayerContr
 	static UFunction* pFnGetPlayerTargetingDesirability = NULL;
 
 	if ( ! pFnGetPlayerTargetingDesirability )
-		pFnGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 87090 ];
+		pFnGetPlayerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 81469 ];
 
 	AKrakenTentacle_execGetPlayerTargetingDesirability_Parms GetPlayerTargetingDesirability_Parms;
 	GetPlayerTargetingDesirability_Parms.forController = forController;
@@ -2561,7 +2561,7 @@ void AKrakenTentacle::DecreaseHealth ( int Amount )
 	static UFunction* pFnDecreaseHealth = NULL;
 
 	if ( ! pFnDecreaseHealth )
-		pFnDecreaseHealth = (UFunction*) UObject::GObjObjects()->Data[ 87088 ];
+		pFnDecreaseHealth = (UFunction*) UObject::GObjObjects()->Data[ 81467 ];
 
 	AKrakenTentacle_execDecreaseHealth_Parms DecreaseHealth_Parms;
 	DecreaseHealth_Parms.Amount = Amount;
@@ -2578,7 +2578,7 @@ void AKrakenTentacle::ForceWithDraw ( )
 	static UFunction* pFnForceWithDraw = NULL;
 
 	if ( ! pFnForceWithDraw )
-		pFnForceWithDraw = (UFunction*) UObject::GObjObjects()->Data[ 87087 ];
+		pFnForceWithDraw = (UFunction*) UObject::GObjObjects()->Data[ 81466 ];
 
 	AKrakenTentacle_execForceWithDraw_Parms ForceWithDraw_Parms;
 
@@ -2594,7 +2594,7 @@ void AKrakenTentacle::LeaveShell ( )
 	static UFunction* pFnLeaveShell = NULL;
 
 	if ( ! pFnLeaveShell )
-		pFnLeaveShell = (UFunction*) UObject::GObjObjects()->Data[ 87086 ];
+		pFnLeaveShell = (UFunction*) UObject::GObjObjects()->Data[ 81465 ];
 
 	AKrakenTentacle_execLeaveShell_Parms LeaveShell_Parms;
 
@@ -2610,7 +2610,7 @@ void AKrakenTentacle::WithdrawIntoShell ( )
 	static UFunction* pFnWithdrawIntoShell = NULL;
 
 	if ( ! pFnWithdrawIntoShell )
-		pFnWithdrawIntoShell = (UFunction*) UObject::GObjObjects()->Data[ 87085 ];
+		pFnWithdrawIntoShell = (UFunction*) UObject::GObjObjects()->Data[ 81464 ];
 
 	AKrakenTentacle_execWithdrawIntoShell_Parms WithdrawIntoShell_Parms;
 
@@ -2633,7 +2633,7 @@ void AKrakenTentacle::eventTakeDamage ( int DamageAmount, class AController* Eve
 	static UFunction* pFnTakeDamage = NULL;
 
 	if ( ! pFnTakeDamage )
-		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 87077 ];
+		pFnTakeDamage = (UFunction*) UObject::GObjObjects()->Data[ 81456 ];
 
 	AKrakenTentacle_eventTakeDamage_Parms TakeDamage_Parms;
 	TakeDamage_Parms.DamageAmount = DamageAmount;
@@ -2657,7 +2657,7 @@ void AKrakenTentacle::SetWithDrawTime ( float ForceWithDraw )
 	static UFunction* pFnSetWithDrawTime = NULL;
 
 	if ( ! pFnSetWithDrawTime )
-		pFnSetWithDrawTime = (UFunction*) UObject::GObjObjects()->Data[ 87075 ];
+		pFnSetWithDrawTime = (UFunction*) UObject::GObjObjects()->Data[ 81454 ];
 
 	AKrakenTentacle_execSetWithDrawTime_Parms SetWithDrawTime_Parms;
 	SetWithDrawTime_Parms.ForceWithDraw = ForceWithDraw;
@@ -2674,7 +2674,7 @@ void AKrakenTentacle::SetUpMesh ( )
 	static UFunction* pFnSetUpMesh = NULL;
 
 	if ( ! pFnSetUpMesh )
-		pFnSetUpMesh = (UFunction*) UObject::GObjObjects()->Data[ 87072 ];
+		pFnSetUpMesh = (UFunction*) UObject::GObjObjects()->Data[ 81451 ];
 
 	AKrakenTentacle_execSetUpMesh_Parms SetUpMesh_Parms;
 
@@ -2693,7 +2693,7 @@ void AKrakenTentacle::InitTentacle ( class ADunDefKraken* theKraken, struct FNam
 	static UFunction* pFnInitTentacle = NULL;
 
 	if ( ! pFnInitTentacle )
-		pFnInitTentacle = (UFunction*) UObject::GObjObjects()->Data[ 87068 ];
+		pFnInitTentacle = (UFunction*) UObject::GObjObjects()->Data[ 81447 ];
 
 	AKrakenTentacle_execInitTentacle_Parms InitTentacle_Parms;
 	InitTentacle_Parms.theKraken = theKraken;
@@ -2712,7 +2712,7 @@ void AKrakenTentacle::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 87067 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 81446 ];
 
 	AKrakenTentacle_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -2744,7 +2744,7 @@ void AKrakenTentacle::ExecReplicatedFunction ( struct FName FunctionName, struct
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 87050 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 81429 ];
 
 	AKrakenTentacle_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -2777,7 +2777,7 @@ void AKrakenTentacle::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 87048 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 81427 ];
 
 	AKrakenTentacle_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -2794,7 +2794,7 @@ void ADunDefKrakenController::StopInkCloud ( )
 	static UFunction* pFnStopInkCloud = NULL;
 
 	if ( ! pFnStopInkCloud )
-		pFnStopInkCloud = (UFunction*) UObject::GObjObjects()->Data[ 86680 ];
+		pFnStopInkCloud = (UFunction*) UObject::GObjObjects()->Data[ 81059 ];
 
 	ADunDefKrakenController_execStopInkCloud_Parms StopInkCloud_Parms;
 
@@ -2810,7 +2810,7 @@ void ADunDefKrakenController::SpawnInkCloud ( )
 	static UFunction* pFnSpawnInkCloud = NULL;
 
 	if ( ! pFnSpawnInkCloud )
-		pFnSpawnInkCloud = (UFunction*) UObject::GObjObjects()->Data[ 86675 ];
+		pFnSpawnInkCloud = (UFunction*) UObject::GObjObjects()->Data[ 81054 ];
 
 	ADunDefKrakenController_execSpawnInkCloud_Parms SpawnInkCloud_Parms;
 
@@ -2826,7 +2826,7 @@ void ADunDefKrakenController::SpawnGiantProjectile ( )
 	static UFunction* pFnSpawnGiantProjectile = NULL;
 
 	if ( ! pFnSpawnGiantProjectile )
-		pFnSpawnGiantProjectile = (UFunction*) UObject::GObjObjects()->Data[ 86670 ];
+		pFnSpawnGiantProjectile = (UFunction*) UObject::GObjObjects()->Data[ 81049 ];
 
 	ADunDefKrakenController_execSpawnGiantProjectile_Parms SpawnGiantProjectile_Parms;
 
@@ -2842,7 +2842,7 @@ void ADunDefKrakenController::SpawnRightTentacleProjectiles ( )
 	static UFunction* pFnSpawnRightTentacleProjectiles = NULL;
 
 	if ( ! pFnSpawnRightTentacleProjectiles )
-		pFnSpawnRightTentacleProjectiles = (UFunction*) UObject::GObjObjects()->Data[ 86661 ];
+		pFnSpawnRightTentacleProjectiles = (UFunction*) UObject::GObjObjects()->Data[ 81040 ];
 
 	ADunDefKrakenController_execSpawnRightTentacleProjectiles_Parms SpawnRightTentacleProjectiles_Parms;
 
@@ -2858,7 +2858,7 @@ void ADunDefKrakenController::SpawnLeftTentacleProjectiles ( )
 	static UFunction* pFnSpawnLeftTentacleProjectiles = NULL;
 
 	if ( ! pFnSpawnLeftTentacleProjectiles )
-		pFnSpawnLeftTentacleProjectiles = (UFunction*) UObject::GObjObjects()->Data[ 86652 ];
+		pFnSpawnLeftTentacleProjectiles = (UFunction*) UObject::GObjObjects()->Data[ 81031 ];
 
 	ADunDefKrakenController_execSpawnLeftTentacleProjectiles_Parms SpawnLeftTentacleProjectiles_Parms;
 
@@ -2878,7 +2878,7 @@ void ADunDefKrakenController::GetValidShootTargets ( float MinRange, float MaxRa
 	static UFunction* pFnGetValidShootTargets = NULL;
 
 	if ( ! pFnGetValidShootTargets )
-		pFnGetValidShootTargets = (UFunction*) UObject::GObjObjects()->Data[ 86642 ];
+		pFnGetValidShootTargets = (UFunction*) UObject::GObjObjects()->Data[ 81021 ];
 
 	ADunDefKrakenController_execGetValidShootTargets_Parms GetValidShootTargets_Parms;
 	GetValidShootTargets_Parms.MinRange = MinRange;
@@ -2900,7 +2900,7 @@ void ADunDefKrakenController::CheckCustomOpenMouthAttacks ( )
 	static UFunction* pFnCheckCustomOpenMouthAttacks = NULL;
 
 	if ( ! pFnCheckCustomOpenMouthAttacks )
-		pFnCheckCustomOpenMouthAttacks = (UFunction*) UObject::GObjObjects()->Data[ 86638 ];
+		pFnCheckCustomOpenMouthAttacks = (UFunction*) UObject::GObjObjects()->Data[ 81017 ];
 
 	ADunDefKrakenController_execCheckCustomOpenMouthAttacks_Parms CheckCustomOpenMouthAttacks_Parms;
 
@@ -2916,7 +2916,7 @@ void ADunDefKrakenController::CheckForCustomClosedMouthAttacks ( )
 	static UFunction* pFnCheckForCustomClosedMouthAttacks = NULL;
 
 	if ( ! pFnCheckForCustomClosedMouthAttacks )
-		pFnCheckForCustomClosedMouthAttacks = (UFunction*) UObject::GObjObjects()->Data[ 86635 ];
+		pFnCheckForCustomClosedMouthAttacks = (UFunction*) UObject::GObjObjects()->Data[ 81014 ];
 
 	ADunDefKrakenController_execCheckForCustomClosedMouthAttacks_Parms CheckForCustomClosedMouthAttacks_Parms;
 
@@ -2932,7 +2932,7 @@ void ADunDefKrakenController::CheckForCustomAttacks ( )
 	static UFunction* pFnCheckForCustomAttacks = NULL;
 
 	if ( ! pFnCheckForCustomAttacks )
-		pFnCheckForCustomAttacks = (UFunction*) UObject::GObjObjects()->Data[ 86634 ];
+		pFnCheckForCustomAttacks = (UFunction*) UObject::GObjObjects()->Data[ 81013 ];
 
 	ADunDefKrakenController_execCheckForCustomAttacks_Parms CheckForCustomAttacks_Parms;
 
@@ -2948,7 +2948,7 @@ void ADunDefKrakenController::CloseMouth ( )
 	static UFunction* pFnCloseMouth = NULL;
 
 	if ( ! pFnCloseMouth )
-		pFnCloseMouth = (UFunction*) UObject::GObjObjects()->Data[ 86633 ];
+		pFnCloseMouth = (UFunction*) UObject::GObjObjects()->Data[ 81012 ];
 
 	ADunDefKrakenController_execCloseMouth_Parms CloseMouth_Parms;
 
@@ -2964,7 +2964,7 @@ void ADunDefKrakenController::NotifyTentacleBroughtOut ( )
 	static UFunction* pFnNotifyTentacleBroughtOut = NULL;
 
 	if ( ! pFnNotifyTentacleBroughtOut )
-		pFnNotifyTentacleBroughtOut = (UFunction*) UObject::GObjObjects()->Data[ 86631 ];
+		pFnNotifyTentacleBroughtOut = (UFunction*) UObject::GObjObjects()->Data[ 81010 ];
 
 	ADunDefKrakenController_execNotifyTentacleBroughtOut_Parms NotifyTentacleBroughtOut_Parms;
 
@@ -2980,7 +2980,7 @@ void ADunDefKrakenController::NotifyTentecaleWithDrawn ( )
 	static UFunction* pFnNotifyTentecaleWithDrawn = NULL;
 
 	if ( ! pFnNotifyTentecaleWithDrawn )
-		pFnNotifyTentecaleWithDrawn = (UFunction*) UObject::GObjObjects()->Data[ 86630 ];
+		pFnNotifyTentecaleWithDrawn = (UFunction*) UObject::GObjObjects()->Data[ 81009 ];
 
 	ADunDefKrakenController_execNotifyTentecaleWithDrawn_Parms NotifyTentecaleWithDrawn_Parms;
 
@@ -2999,7 +2999,7 @@ void ADunDefKrakenController::HandleTentacleDamage ( class AActor* newHitTarg, s
 	static UFunction* pFnHandleTentacleDamage = NULL;
 
 	if ( ! pFnHandleTentacleDamage )
-		pFnHandleTentacleDamage = (UFunction*) UObject::GObjObjects()->Data[ 86625 ];
+		pFnHandleTentacleDamage = (UFunction*) UObject::GObjObjects()->Data[ 81004 ];
 
 	ADunDefKrakenController_execHandleTentacleDamage_Parms HandleTentacleDamage_Parms;
 	HandleTentacleDamage_Parms.newHitTarg = newHitTarg;
@@ -3018,7 +3018,7 @@ void ADunDefKrakenController::EndDash ( )
 	static UFunction* pFnEndDash = NULL;
 
 	if ( ! pFnEndDash )
-		pFnEndDash = (UFunction*) UObject::GObjObjects()->Data[ 86612 ];
+		pFnEndDash = (UFunction*) UObject::GObjObjects()->Data[ 80991 ];
 
 	ADunDefKrakenController_execEndDash_Parms EndDash_Parms;
 
@@ -3034,7 +3034,7 @@ void ADunDefKrakenController::UpdateDashPoint ( )
 	static UFunction* pFnUpdateDashPoint = NULL;
 
 	if ( ! pFnUpdateDashPoint )
-		pFnUpdateDashPoint = (UFunction*) UObject::GObjObjects()->Data[ 86605 ];
+		pFnUpdateDashPoint = (UFunction*) UObject::GObjObjects()->Data[ 80984 ];
 
 	ADunDefKrakenController_execUpdateDashPoint_Parms UpdateDashPoint_Parms;
 
@@ -3052,7 +3052,7 @@ bool ADunDefKrakenController::AddToDashHurtList ( class AActor* DashedActor )
 	static UFunction* pFnAddToDashHurtList = NULL;
 
 	if ( ! pFnAddToDashHurtList )
-		pFnAddToDashHurtList = (UFunction*) UObject::GObjObjects()->Data[ 86589 ];
+		pFnAddToDashHurtList = (UFunction*) UObject::GObjObjects()->Data[ 80968 ];
 
 	ADunDefKrakenController_execAddToDashHurtList_Parms AddToDashHurtList_Parms;
 	AddToDashHurtList_Parms.DashedActor = DashedActor;
@@ -3071,7 +3071,7 @@ void ADunDefKrakenController::EndMeleeSwing ( )
 	static UFunction* pFnEndMeleeSwing = NULL;
 
 	if ( ! pFnEndMeleeSwing )
-		pFnEndMeleeSwing = (UFunction*) UObject::GObjObjects()->Data[ 86588 ];
+		pFnEndMeleeSwing = (UFunction*) UObject::GObjObjects()->Data[ 80967 ];
 
 	ADunDefKrakenController_execEndMeleeSwing_Parms EndMeleeSwing_Parms;
 
@@ -3087,7 +3087,7 @@ void ADunDefKrakenController::BiteStart ( )
 	static UFunction* pFnBiteStart = NULL;
 
 	if ( ! pFnBiteStart )
-		pFnBiteStart = (UFunction*) UObject::GObjObjects()->Data[ 86576 ];
+		pFnBiteStart = (UFunction*) UObject::GObjObjects()->Data[ 80955 ];
 
 	ADunDefKrakenController_execBiteStart_Parms BiteStart_Parms;
 
@@ -3103,7 +3103,7 @@ void ADunDefKrakenController::EndBite ( )
 	static UFunction* pFnEndBite = NULL;
 
 	if ( ! pFnEndBite )
-		pFnEndBite = (UFunction*) UObject::GObjObjects()->Data[ 86575 ];
+		pFnEndBite = (UFunction*) UObject::GObjObjects()->Data[ 80954 ];
 
 	ADunDefKrakenController_execEndBite_Parms EndBite_Parms;
 
@@ -3119,7 +3119,7 @@ void ADunDefKrakenController::DoBiting ( )
 	static UFunction* pFnDoBiting = NULL;
 
 	if ( ! pFnDoBiting )
-		pFnDoBiting = (UFunction*) UObject::GObjObjects()->Data[ 86570 ];
+		pFnDoBiting = (UFunction*) UObject::GObjObjects()->Data[ 80949 ];
 
 	ADunDefKrakenController_execDoBiting_Parms DoBiting_Parms;
 
@@ -3137,7 +3137,7 @@ bool ADunDefKrakenController::AddToSwingHurtList ( class AActor* newEntry )
 	static UFunction* pFnAddToSwingHurtList = NULL;
 
 	if ( ! pFnAddToSwingHurtList )
-		pFnAddToSwingHurtList = (UFunction*) UObject::GObjObjects()->Data[ 86567 ];
+		pFnAddToSwingHurtList = (UFunction*) UObject::GObjObjects()->Data[ 80946 ];
 
 	ADunDefKrakenController_execAddToSwingHurtList_Parms AddToSwingHurtList_Parms;
 	AddToSwingHurtList_Parms.newEntry = newEntry;
@@ -3158,7 +3158,7 @@ bool ADunDefKrakenController::ShouldDamage ( class AActor* act )
 	static UFunction* pFnShouldDamage = NULL;
 
 	if ( ! pFnShouldDamage )
-		pFnShouldDamage = (UFunction*) UObject::GObjObjects()->Data[ 86564 ];
+		pFnShouldDamage = (UFunction*) UObject::GObjObjects()->Data[ 80943 ];
 
 	ADunDefKrakenController_execShouldDamage_Parms ShouldDamage_Parms;
 	ShouldDamage_Parms.act = act;
@@ -3177,7 +3177,7 @@ void ADunDefKrakenController::DoAttack ( )
 	static UFunction* pFnDoAttack = NULL;
 
 	if ( ! pFnDoAttack )
-		pFnDoAttack = (UFunction*) UObject::GObjObjects()->Data[ 86563 ];
+		pFnDoAttack = (UFunction*) UObject::GObjObjects()->Data[ 80942 ];
 
 	ADunDefKrakenController_execDoAttack_Parms DoAttack_Parms;
 
@@ -3197,7 +3197,7 @@ struct FVector ADunDefKrakenController::eventGeneratePathToActor ( class AActor*
 	static UFunction* pFnGeneratePathToActor = NULL;
 
 	if ( ! pFnGeneratePathToActor )
-		pFnGeneratePathToActor = (UFunction*) UObject::GObjObjects()->Data[ 86557 ];
+		pFnGeneratePathToActor = (UFunction*) UObject::GObjObjects()->Data[ 80936 ];
 
 	ADunDefKrakenController_eventGeneratePathToActor_Parms GeneratePathToActor_Parms;
 	GeneratePathToActor_Parms.Goal = Goal;
@@ -3223,7 +3223,7 @@ bool ADunDefKrakenController::MoveAroundBlockade ( class AActor* blockadeActor, 
 	static UFunction* pFnMoveAroundBlockade = NULL;
 
 	if ( ! pFnMoveAroundBlockade )
-		pFnMoveAroundBlockade = (UFunction*) UObject::GObjObjects()->Data[ 86551 ];
+		pFnMoveAroundBlockade = (UFunction*) UObject::GObjObjects()->Data[ 80930 ];
 
 	ADunDefKrakenController_execMoveAroundBlockade_Parms MoveAroundBlockade_Parms;
 	MoveAroundBlockade_Parms.blockadeActor = blockadeActor;
@@ -3247,7 +3247,7 @@ bool ADunDefKrakenController::NavActorReachable ( class AActor* A )
 	static UFunction* pFnNavActorReachable = NULL;
 
 	if ( ! pFnNavActorReachable )
-		pFnNavActorReachable = (UFunction*) UObject::GObjObjects()->Data[ 86548 ];
+		pFnNavActorReachable = (UFunction*) UObject::GObjObjects()->Data[ 80927 ];
 
 	ADunDefKrakenController_execNavActorReachable_Parms NavActorReachable_Parms;
 	NavActorReachable_Parms.A = A;
@@ -3269,7 +3269,7 @@ class ANavigationPoint* ADunDefKrakenController::FindNearestNavPointTo ( class A
 	static UFunction* pFnFindNearestNavPointTo = NULL;
 
 	if ( ! pFnFindNearestNavPointTo )
-		pFnFindNearestNavPointTo = (UFunction*) UObject::GObjObjects()->Data[ 86544 ];
+		pFnFindNearestNavPointTo = (UFunction*) UObject::GObjObjects()->Data[ 80923 ];
 
 	ADunDefKrakenController_execFindNearestNavPointTo_Parms FindNearestNavPointTo_Parms;
 	FindNearestNavPointTo_Parms.A = A;
@@ -3290,7 +3290,7 @@ float ADunDefKrakenController::GetAttackRange ( )
 	static UFunction* pFnGetAttackRange = NULL;
 
 	if ( ! pFnGetAttackRange )
-		pFnGetAttackRange = (UFunction*) UObject::GObjObjects()->Data[ 86536 ];
+		pFnGetAttackRange = (UFunction*) UObject::GObjObjects()->Data[ 80915 ];
 
 	ADunDefKrakenController_execGetAttackRange_Parms GetAttackRange_Parms;
 
@@ -3309,7 +3309,7 @@ bool ADunDefKrakenController::ForceTentacleAttack ( )
 	static UFunction* pFnForceTentacleAttack = NULL;
 
 	if ( ! pFnForceTentacleAttack )
-		pFnForceTentacleAttack = (UFunction*) UObject::GObjObjects()->Data[ 86534 ];
+		pFnForceTentacleAttack = (UFunction*) UObject::GObjObjects()->Data[ 80913 ];
 
 	ADunDefKrakenController_execForceTentacleAttack_Parms ForceTentacleAttack_Parms;
 
@@ -3328,7 +3328,7 @@ bool ADunDefKrakenController::WantsHurtAnimation ( )
 	static UFunction* pFnWantsHurtAnimation = NULL;
 
 	if ( ! pFnWantsHurtAnimation )
-		pFnWantsHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86532 ];
+		pFnWantsHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 80911 ];
 
 	ADunDefKrakenController_execWantsHurtAnimation_Parms WantsHurtAnimation_Parms;
 
@@ -3352,7 +3352,7 @@ void ADunDefKrakenController::NotifyTakeHitEX ( class AController* InstigatedBy,
 	static UFunction* pFnNotifyTakeHitEX = NULL;
 
 	if ( ! pFnNotifyTakeHitEX )
-		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 86525 ];
+		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 80904 ];
 
 	ADunDefKrakenController_execNotifyTakeHitEX_Parms NotifyTakeHitEX_Parms;
 	NotifyTakeHitEX_Parms.InstigatedBy = InstigatedBy;
@@ -3376,7 +3376,7 @@ void ADunDefKrakenController::eventPossess ( class APawn* inPawn, unsigned long 
 	static UFunction* pFnPossess = NULL;
 
 	if ( ! pFnPossess )
-		pFnPossess = (UFunction*) UObject::GObjObjects()->Data[ 86522 ];
+		pFnPossess = (UFunction*) UObject::GObjObjects()->Data[ 80901 ];
 
 	ADunDefKrakenController_eventPossess_Parms Possess_Parms;
 	Possess_Parms.inPawn = inPawn;
@@ -3395,7 +3395,7 @@ bool ADunDefSharkMan::IsCurrentlyPlayingAttackAnimation ( )
 	static UFunction* pFnIsCurrentlyPlayingAttackAnimation = NULL;
 
 	if ( ! pFnIsCurrentlyPlayingAttackAnimation )
-		pFnIsCurrentlyPlayingAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86838 ];
+		pFnIsCurrentlyPlayingAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81217 ];
 
 	ADunDefSharkMan_execIsCurrentlyPlayingAttackAnimation_Parms IsCurrentlyPlayingAttackAnimation_Parms;
 
@@ -3419,7 +3419,7 @@ void ADunDefSharkMan::NotifyTakeHitEX ( class AController* InstigatedBy, struct 
 	static UFunction* pFnNotifyTakeHitEX = NULL;
 
 	if ( ! pFnNotifyTakeHitEX )
-		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 86831 ];
+		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 81210 ];
 
 	ADunDefSharkMan_execNotifyTakeHitEX_Parms NotifyTakeHitEX_Parms;
 	NotifyTakeHitEX_Parms.InstigatedBy = InstigatedBy;
@@ -3446,7 +3446,7 @@ void ADunDefSharkMan::NotifyTakeHit ( class AController* InstigatedBy, struct FV
 	static UFunction* pFnNotifyTakeHit = NULL;
 
 	if ( ! pFnNotifyTakeHit )
-		pFnNotifyTakeHit = (UFunction*) UObject::GObjObjects()->Data[ 86825 ];
+		pFnNotifyTakeHit = (UFunction*) UObject::GObjObjects()->Data[ 81204 ];
 
 	ADunDefSharkMan_execNotifyTakeHit_Parms NotifyTakeHit_Parms;
 	NotifyTakeHit_Parms.InstigatedBy = InstigatedBy;
@@ -3467,7 +3467,7 @@ void ADunDefSharkMan::ClearChargeHurtList ( )
 	static UFunction* pFnClearChargeHurtList = NULL;
 
 	if ( ! pFnClearChargeHurtList )
-		pFnClearChargeHurtList = (UFunction*) UObject::GObjObjects()->Data[ 86824 ];
+		pFnClearChargeHurtList = (UFunction*) UObject::GObjObjects()->Data[ 81203 ];
 
 	ADunDefSharkMan_execClearChargeHurtList_Parms ClearChargeHurtList_Parms;
 
@@ -3485,7 +3485,7 @@ bool ADunDefSharkMan::AddToChargeHurtList ( class ADunDefPlayer* Player )
 	static UFunction* pFnAddToChargeHurtList = NULL;
 
 	if ( ! pFnAddToChargeHurtList )
-		pFnAddToChargeHurtList = (UFunction*) UObject::GObjObjects()->Data[ 86821 ];
+		pFnAddToChargeHurtList = (UFunction*) UObject::GObjObjects()->Data[ 81200 ];
 
 	ADunDefSharkMan_execAddToChargeHurtList_Parms AddToChargeHurtList_Parms;
 	AddToChargeHurtList_Parms.Player = Player;
@@ -3504,7 +3504,7 @@ void ADunDefSharkMan::EndCharging ( )
 	static UFunction* pFnEndCharging = NULL;
 
 	if ( ! pFnEndCharging )
-		pFnEndCharging = (UFunction*) UObject::GObjObjects()->Data[ 86820 ];
+		pFnEndCharging = (UFunction*) UObject::GObjObjects()->Data[ 81199 ];
 
 	ADunDefSharkMan_execEndCharging_Parms EndCharging_Parms;
 
@@ -3520,7 +3520,7 @@ void ADunDefSharkMan::SetChargingSpeed ( )
 	static UFunction* pFnSetChargingSpeed = NULL;
 
 	if ( ! pFnSetChargingSpeed )
-		pFnSetChargingSpeed = (UFunction*) UObject::GObjObjects()->Data[ 86819 ];
+		pFnSetChargingSpeed = (UFunction*) UObject::GObjObjects()->Data[ 81198 ];
 
 	ADunDefSharkMan_execSetChargingSpeed_Parms SetChargingSpeed_Parms;
 
@@ -3537,7 +3537,7 @@ void ADunDefSharkMan::CheckForEncroachers ( float DeltaTime )
 	static UFunction* pFnCheckForEncroachers = NULL;
 
 	if ( ! pFnCheckForEncroachers )
-		pFnCheckForEncroachers = (UFunction*) UObject::GObjObjects()->Data[ 86811 ];
+		pFnCheckForEncroachers = (UFunction*) UObject::GObjObjects()->Data[ 81190 ];
 
 	ADunDefSharkMan_execCheckForEncroachers_Parms CheckForEncroachers_Parms;
 	CheckForEncroachers_Parms.DeltaTime = DeltaTime;
@@ -3555,7 +3555,7 @@ float ADunDefSharkMan::PlaySharkManChargeAbortAnimation ( )
 	static UFunction* pFnPlaySharkManChargeAbortAnimation = NULL;
 
 	if ( ! pFnPlaySharkManChargeAbortAnimation )
-		pFnPlaySharkManChargeAbortAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86809 ];
+		pFnPlaySharkManChargeAbortAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81188 ];
 
 	ADunDefSharkMan_execPlaySharkManChargeAbortAnimation_Parms PlaySharkManChargeAbortAnimation_Parms;
 
@@ -3574,7 +3574,7 @@ float ADunDefSharkMan::PlaySharkManHitWallAnimation ( )
 	static UFunction* pFnPlaySharkManHitWallAnimation = NULL;
 
 	if ( ! pFnPlaySharkManHitWallAnimation )
-		pFnPlaySharkManHitWallAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86807 ];
+		pFnPlaySharkManHitWallAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81186 ];
 
 	ADunDefSharkMan_execPlaySharkManHitWallAnimation_Parms PlaySharkManHitWallAnimation_Parms;
 
@@ -3593,7 +3593,7 @@ float ADunDefSharkMan::PlaySharkManChargeFailAnimation ( )
 	static UFunction* pFnPlaySharkManChargeFailAnimation = NULL;
 
 	if ( ! pFnPlaySharkManChargeFailAnimation )
-		pFnPlaySharkManChargeFailAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86805 ];
+		pFnPlaySharkManChargeFailAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81184 ];
 
 	ADunDefSharkMan_execPlaySharkManChargeFailAnimation_Parms PlaySharkManChargeFailAnimation_Parms;
 
@@ -3612,7 +3612,7 @@ bool ADunDefSharkMan::StopSharkManDizzyAnimation ( )
 	static UFunction* pFnStopSharkManDizzyAnimation = NULL;
 
 	if ( ! pFnStopSharkManDizzyAnimation )
-		pFnStopSharkManDizzyAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86803 ];
+		pFnStopSharkManDizzyAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81182 ];
 
 	ADunDefSharkMan_execStopSharkManDizzyAnimation_Parms StopSharkManDizzyAnimation_Parms;
 
@@ -3631,7 +3631,7 @@ float ADunDefSharkMan::PlaySharkManDizzyAnimation ( )
 	static UFunction* pFnPlaySharkManDizzyAnimation = NULL;
 
 	if ( ! pFnPlaySharkManDizzyAnimation )
-		pFnPlaySharkManDizzyAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86801 ];
+		pFnPlaySharkManDizzyAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81180 ];
 
 	ADunDefSharkMan_execPlaySharkManDizzyAnimation_Parms PlaySharkManDizzyAnimation_Parms;
 
@@ -3650,7 +3650,7 @@ float ADunDefSharkMan::PlaySharkManChargeAnimation ( )
 	static UFunction* pFnPlaySharkManChargeAnimation = NULL;
 
 	if ( ! pFnPlaySharkManChargeAnimation )
-		pFnPlaySharkManChargeAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86799 ];
+		pFnPlaySharkManChargeAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81178 ];
 
 	ADunDefSharkMan_execPlaySharkManChargeAnimation_Parms PlaySharkManChargeAnimation_Parms;
 
@@ -3669,7 +3669,7 @@ float ADunDefSharkMan::PlaySharkManWindupAnimation ( )
 	static UFunction* pFnPlaySharkManWindupAnimation = NULL;
 
 	if ( ! pFnPlaySharkManWindupAnimation )
-		pFnPlaySharkManWindupAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86797 ];
+		pFnPlaySharkManWindupAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81176 ];
 
 	ADunDefSharkMan_execPlaySharkManWindupAnimation_Parms PlaySharkManWindupAnimation_Parms;
 
@@ -3688,7 +3688,7 @@ void ADunDefSharkMan::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 86795 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 81174 ];
 
 	ADunDefSharkMan_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -3709,7 +3709,7 @@ void ADunDefSharkMan::HandleMomentum ( struct FVector Momentum, struct FVector H
 	static UFunction* pFnHandleMomentum = NULL;
 
 	if ( ! pFnHandleMomentum )
-		pFnHandleMomentum = (UFunction*) UObject::GObjObjects()->Data[ 86790 ];
+		pFnHandleMomentum = (UFunction*) UObject::GObjObjects()->Data[ 81169 ];
 
 	ADunDefSharkMan_execHandleMomentum_Parms HandleMomentum_Parms;
 	memcpy ( &HandleMomentum_Parms.Momentum, &Momentum, 0xC );
@@ -3730,7 +3730,7 @@ void ADunDefSharkMan::SetSharkManArmBlend ( int animAmount )
 	static UFunction* pFnSetSharkManArmBlend = NULL;
 
 	if ( ! pFnSetSharkManArmBlend )
-		pFnSetSharkManArmBlend = (UFunction*) UObject::GObjObjects()->Data[ 86788 ];
+		pFnSetSharkManArmBlend = (UFunction*) UObject::GObjObjects()->Data[ 81167 ];
 
 	ADunDefSharkMan_execSetSharkManArmBlend_Parms SetSharkManArmBlend_Parms;
 	SetSharkManArmBlend_Parms.animAmount = animAmount;
@@ -3749,7 +3749,7 @@ float ADunDefSharkMan::PlaySharkManAttackAnimation ( int AnimationIndex )
 	static UFunction* pFnPlaySharkManAttackAnimation = NULL;
 
 	if ( ! pFnPlaySharkManAttackAnimation )
-		pFnPlaySharkManAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86785 ];
+		pFnPlaySharkManAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81164 ];
 
 	ADunDefSharkMan_execPlaySharkManAttackAnimation_Parms PlaySharkManAttackAnimation_Parms;
 	PlaySharkManAttackAnimation_Parms.AnimationIndex = AnimationIndex;
@@ -3770,7 +3770,7 @@ void ADunDefSharkMan::PlayHurtAnimation ( class UClass* DamageType, struct FVect
 	static UFunction* pFnPlayHurtAnimation = NULL;
 
 	if ( ! pFnPlayHurtAnimation )
-		pFnPlayHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86782 ];
+		pFnPlayHurtAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81161 ];
 
 	ADunDefSharkMan_execPlayHurtAnimation_Parms PlayHurtAnimation_Parms;
 	PlayHurtAnimation_Parms.DamageType = DamageType;
@@ -3789,7 +3789,7 @@ float ADunDefSharkMan::PlayAttackAnimation ( )
 	static UFunction* pFnPlayAttackAnimation = NULL;
 
 	if ( ! pFnPlayAttackAnimation )
-		pFnPlayAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 86776 ];
+		pFnPlayAttackAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81155 ];
 
 	ADunDefSharkMan_execPlayAttackAnimation_Parms PlayAttackAnimation_Parms;
 
@@ -3809,7 +3809,7 @@ float ADunDefSharkMan::eventGetEnemyTargetingDesirability ( class AEngineNativeD
 	static UFunction* pFnGetEnemyTargetingDesirability = NULL;
 
 	if ( ! pFnGetEnemyTargetingDesirability )
-		pFnGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 86772 ];
+		pFnGetEnemyTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 81151 ];
 
 	ADunDefSharkMan_eventGetEnemyTargetingDesirability_Parms GetEnemyTargetingDesirability_Parms;
 	GetEnemyTargetingDesirability_Parms.forController = forController;
@@ -3830,7 +3830,7 @@ float ADunDefSharkMan::GetTowerTargetingDesirability ( class ADunDefTower* forTo
 	static UFunction* pFnGetTowerTargetingDesirability = NULL;
 
 	if ( ! pFnGetTowerTargetingDesirability )
-		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 86768 ];
+		pFnGetTowerTargetingDesirability = (UFunction*) UObject::GObjObjects()->Data[ 81147 ];
 
 	ADunDefSharkMan_execGetTowerTargetingDesirability_Parms GetTowerTargetingDesirability_Parms;
 	GetTowerTargetingDesirability_Parms.forTower = forTower;
@@ -3850,7 +3850,7 @@ struct FVector ADunDefSharkMan::GetMeleeSwingLocation ( )
 	static UFunction* pFnGetMeleeSwingLocation = NULL;
 
 	if ( ! pFnGetMeleeSwingLocation )
-		pFnGetMeleeSwingLocation = (UFunction*) UObject::GObjObjects()->Data[ 86765 ];
+		pFnGetMeleeSwingLocation = (UFunction*) UObject::GObjObjects()->Data[ 81144 ];
 
 	ADunDefSharkMan_execGetMeleeSwingLocation_Parms GetMeleeSwingLocation_Parms;
 
@@ -3870,7 +3870,7 @@ struct FVector ADunDefSharkMan::GetMeleeElbowLocation ( unsigned char fist )
 	static UFunction* pFnGetMeleeElbowLocation = NULL;
 
 	if ( ! pFnGetMeleeElbowLocation )
-		pFnGetMeleeElbowLocation = (UFunction*) UObject::GObjObjects()->Data[ 86760 ];
+		pFnGetMeleeElbowLocation = (UFunction*) UObject::GObjObjects()->Data[ 81139 ];
 
 	ADunDefSharkMan_execGetMeleeElbowLocation_Parms GetMeleeElbowLocation_Parms;
 	GetMeleeElbowLocation_Parms.fist = fist;
@@ -3891,7 +3891,7 @@ struct FVector ADunDefSharkMan::GetMeleeFistLocation ( unsigned char fist )
 	static UFunction* pFnGetMeleeFistLocation = NULL;
 
 	if ( ! pFnGetMeleeFistLocation )
-		pFnGetMeleeFistLocation = (UFunction*) UObject::GObjObjects()->Data[ 86755 ];
+		pFnGetMeleeFistLocation = (UFunction*) UObject::GObjObjects()->Data[ 81134 ];
 
 	ADunDefSharkMan_execGetMeleeFistLocation_Parms GetMeleeFistLocation_Parms;
 	GetMeleeFistLocation_Parms.fist = fist;
@@ -3910,7 +3910,7 @@ void ADunDefSharkMan::eventGroundStrike ( )
 	static UFunction* pFnGroundStrike = NULL;
 
 	if ( ! pFnGroundStrike )
-		pFnGroundStrike = (UFunction*) UObject::GObjObjects()->Data[ 86750 ];
+		pFnGroundStrike = (UFunction*) UObject::GObjObjects()->Data[ 81129 ];
 
 	ADunDefSharkMan_eventGroundStrike_Parms GroundStrike_Parms;
 
@@ -3926,7 +3926,7 @@ void ADunDefSharkMan::eventMeleeBothEnd ( )
 	static UFunction* pFnMeleeBothEnd = NULL;
 
 	if ( ! pFnMeleeBothEnd )
-		pFnMeleeBothEnd = (UFunction*) UObject::GObjObjects()->Data[ 86749 ];
+		pFnMeleeBothEnd = (UFunction*) UObject::GObjObjects()->Data[ 81128 ];
 
 	ADunDefSharkMan_eventMeleeBothEnd_Parms MeleeBothEnd_Parms;
 
@@ -3942,7 +3942,7 @@ void ADunDefSharkMan::eventMeleeBothStart ( )
 	static UFunction* pFnMeleeBothStart = NULL;
 
 	if ( ! pFnMeleeBothStart )
-		pFnMeleeBothStart = (UFunction*) UObject::GObjObjects()->Data[ 86748 ];
+		pFnMeleeBothStart = (UFunction*) UObject::GObjObjects()->Data[ 81127 ];
 
 	ADunDefSharkMan_eventMeleeBothStart_Parms MeleeBothStart_Parms;
 
@@ -3958,7 +3958,7 @@ void ADunDefSharkMan::eventMeleeRightEnd ( )
 	static UFunction* pFnMeleeRightEnd = NULL;
 
 	if ( ! pFnMeleeRightEnd )
-		pFnMeleeRightEnd = (UFunction*) UObject::GObjObjects()->Data[ 86747 ];
+		pFnMeleeRightEnd = (UFunction*) UObject::GObjObjects()->Data[ 81126 ];
 
 	ADunDefSharkMan_eventMeleeRightEnd_Parms MeleeRightEnd_Parms;
 
@@ -3974,7 +3974,7 @@ void ADunDefSharkMan::eventMeleeRightStart ( )
 	static UFunction* pFnMeleeRightStart = NULL;
 
 	if ( ! pFnMeleeRightStart )
-		pFnMeleeRightStart = (UFunction*) UObject::GObjObjects()->Data[ 86746 ];
+		pFnMeleeRightStart = (UFunction*) UObject::GObjObjects()->Data[ 81125 ];
 
 	ADunDefSharkMan_eventMeleeRightStart_Parms MeleeRightStart_Parms;
 
@@ -3990,7 +3990,7 @@ void ADunDefSharkMan::eventMeleeLeftEnd ( )
 	static UFunction* pFnMeleeLeftEnd = NULL;
 
 	if ( ! pFnMeleeLeftEnd )
-		pFnMeleeLeftEnd = (UFunction*) UObject::GObjObjects()->Data[ 86745 ];
+		pFnMeleeLeftEnd = (UFunction*) UObject::GObjObjects()->Data[ 81124 ];
 
 	ADunDefSharkMan_eventMeleeLeftEnd_Parms MeleeLeftEnd_Parms;
 
@@ -4006,7 +4006,7 @@ void ADunDefSharkMan::eventMeleeLeftStart ( )
 	static UFunction* pFnMeleeLeftStart = NULL;
 
 	if ( ! pFnMeleeLeftStart )
-		pFnMeleeLeftStart = (UFunction*) UObject::GObjObjects()->Data[ 86743 ];
+		pFnMeleeLeftStart = (UFunction*) UObject::GObjObjects()->Data[ 81122 ];
 
 	ADunDefSharkMan_eventMeleeLeftStart_Parms MeleeLeftStart_Parms;
 
@@ -4038,7 +4038,7 @@ void ADunDefSharkMan::ExecReplicatedFunction ( struct FName FunctionName, struct
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 86726 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 81105 ];
 
 	ADunDefSharkMan_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -4070,7 +4070,7 @@ void ADunDefSharkMan::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 86725 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 81104 ];
 
 	ADunDefSharkMan_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -4092,7 +4092,7 @@ void ADunDefSharkmanController::NotifyTakeHitEX ( class AController* InstigatedB
 	static UFunction* pFnNotifyTakeHitEX = NULL;
 
 	if ( ! pFnNotifyTakeHitEX )
-		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 86997 ];
+		pFnNotifyTakeHitEX = (UFunction*) UObject::GObjObjects()->Data[ 81376 ];
 
 	ADunDefSharkmanController_execNotifyTakeHitEX_Parms NotifyTakeHitEX_Parms;
 	NotifyTakeHitEX_Parms.InstigatedBy = InstigatedBy;
@@ -4114,7 +4114,7 @@ void ADunDefSharkmanController::AbortCharge ( )
 	static UFunction* pFnAbortCharge = NULL;
 
 	if ( ! pFnAbortCharge )
-		pFnAbortCharge = (UFunction*) UObject::GObjObjects()->Data[ 86996 ];
+		pFnAbortCharge = (UFunction*) UObject::GObjObjects()->Data[ 81375 ];
 
 	ADunDefSharkmanController_execAbortCharge_Parms AbortCharge_Parms;
 
@@ -4132,7 +4132,7 @@ float ADunDefSharkmanController::CheckTowerViability ( class ADunDefTower* tower
 	static UFunction* pFnCheckTowerViability = NULL;
 
 	if ( ! pFnCheckTowerViability )
-		pFnCheckTowerViability = (UFunction*) UObject::GObjObjects()->Data[ 86992 ];
+		pFnCheckTowerViability = (UFunction*) UObject::GObjObjects()->Data[ 81371 ];
 
 	ADunDefSharkmanController_execCheckTowerViability_Parms CheckTowerViability_Parms;
 	CheckTowerViability_Parms.tower = tower;
@@ -4151,7 +4151,7 @@ void ADunDefSharkmanController::CheckForCustomAttacks ( )
 	static UFunction* pFnCheckForCustomAttacks = NULL;
 
 	if ( ! pFnCheckForCustomAttacks )
-		pFnCheckForCustomAttacks = (UFunction*) UObject::GObjObjects()->Data[ 86986 ];
+		pFnCheckForCustomAttacks = (UFunction*) UObject::GObjObjects()->Data[ 81365 ];
 
 	ADunDefSharkmanController_execCheckForCustomAttacks_Parms CheckForCustomAttacks_Parms;
 
@@ -4168,7 +4168,7 @@ float ADunDefSharkmanController::GetReachCheckDuration ( )
 	static UFunction* pFnGetReachCheckDuration = NULL;
 
 	if ( ! pFnGetReachCheckDuration )
-		pFnGetReachCheckDuration = (UFunction*) UObject::GObjObjects()->Data[ 86984 ];
+		pFnGetReachCheckDuration = (UFunction*) UObject::GObjObjects()->Data[ 81363 ];
 
 	ADunDefSharkmanController_execGetReachCheckDuration_Parms GetReachCheckDuration_Parms;
 
@@ -4186,7 +4186,7 @@ void ADunDefSharkmanController::DoPositionPoll ( )
 	static UFunction* pFnDoPositionPoll = NULL;
 
 	if ( ! pFnDoPositionPoll )
-		pFnDoPositionPoll = (UFunction*) UObject::GObjObjects()->Data[ 86983 ];
+		pFnDoPositionPoll = (UFunction*) UObject::GObjObjects()->Data[ 81362 ];
 
 	ADunDefSharkmanController_execDoPositionPoll_Parms DoPositionPoll_Parms;
 
@@ -4203,7 +4203,7 @@ bool ADunDefSharkmanController::IsWinding ( )
 	static UFunction* pFnIsWinding = NULL;
 
 	if ( ! pFnIsWinding )
-		pFnIsWinding = (UFunction*) UObject::GObjObjects()->Data[ 86981 ];
+		pFnIsWinding = (UFunction*) UObject::GObjObjects()->Data[ 81360 ];
 
 	ADunDefSharkmanController_execIsWinding_Parms IsWinding_Parms;
 
@@ -4222,7 +4222,7 @@ bool ADunDefSharkmanController::IsDistractedByCore ( )
 	static UFunction* pFnIsDistractedByCore = NULL;
 
 	if ( ! pFnIsDistractedByCore )
-		pFnIsDistractedByCore = (UFunction*) UObject::GObjObjects()->Data[ 86977 ];
+		pFnIsDistractedByCore = (UFunction*) UObject::GObjObjects()->Data[ 81356 ];
 
 	ADunDefSharkmanController_execIsDistractedByCore_Parms IsDistractedByCore_Parms;
 
@@ -4242,7 +4242,7 @@ bool ADunDefSharkmanController::IsCloseToTowers ( float Radius )
 	static UFunction* pFnIsCloseToTowers = NULL;
 
 	if ( ! pFnIsCloseToTowers )
-		pFnIsCloseToTowers = (UFunction*) UObject::GObjObjects()->Data[ 86972 ];
+		pFnIsCloseToTowers = (UFunction*) UObject::GObjObjects()->Data[ 81351 ];
 
 	ADunDefSharkmanController_execIsCloseToTowers_Parms IsCloseToTowers_Parms;
 	IsCloseToTowers_Parms.Radius = Radius;
@@ -4263,7 +4263,7 @@ bool ADunDefSharkmanController::IsCloseToPlayers ( float Radius )
 	static UFunction* pFnIsCloseToPlayers = NULL;
 
 	if ( ! pFnIsCloseToPlayers )
-		pFnIsCloseToPlayers = (UFunction*) UObject::GObjObjects()->Data[ 86967 ];
+		pFnIsCloseToPlayers = (UFunction*) UObject::GObjObjects()->Data[ 81346 ];
 
 	ADunDefSharkmanController_execIsCloseToPlayers_Parms IsCloseToPlayers_Parms;
 	IsCloseToPlayers_Parms.Radius = Radius;
@@ -4284,7 +4284,7 @@ bool ADunDefSharkmanController::AddToSwingHurtList ( class AActor* newEntry )
 	static UFunction* pFnAddToSwingHurtList = NULL;
 
 	if ( ! pFnAddToSwingHurtList )
-		pFnAddToSwingHurtList = (UFunction*) UObject::GObjObjects()->Data[ 86888 ];
+		pFnAddToSwingHurtList = (UFunction*) UObject::GObjObjects()->Data[ 81267 ];
 
 	ADunDefSharkmanController_execAddToSwingHurtList_Parms AddToSwingHurtList_Parms;
 	AddToSwingHurtList_Parms.newEntry = newEntry;
@@ -4304,7 +4304,7 @@ void ADunDefSharkmanController::EndMeleeSwing ( unsigned char fist )
 	static UFunction* pFnEndMeleeSwing = NULL;
 
 	if ( ! pFnEndMeleeSwing )
-		pFnEndMeleeSwing = (UFunction*) UObject::GObjObjects()->Data[ 86886 ];
+		pFnEndMeleeSwing = (UFunction*) UObject::GObjObjects()->Data[ 81265 ];
 
 	ADunDefSharkmanController_execEndMeleeSwing_Parms EndMeleeSwing_Parms;
 	EndMeleeSwing_Parms.fist = fist;
@@ -4322,7 +4322,7 @@ void ADunDefSharkmanController::StartMeleeSwing ( unsigned char fist )
 	static UFunction* pFnStartMeleeSwing = NULL;
 
 	if ( ! pFnStartMeleeSwing )
-		pFnStartMeleeSwing = (UFunction*) UObject::GObjObjects()->Data[ 86884 ];
+		pFnStartMeleeSwing = (UFunction*) UObject::GObjObjects()->Data[ 81263 ];
 
 	ADunDefSharkmanController_execStartMeleeSwing_Parms StartMeleeSwing_Parms;
 	StartMeleeSwing_Parms.fist = fist;
@@ -4341,7 +4341,7 @@ bool APuzzlePieceActor::ScaleColor ( float DeltaTime )
 	static UFunction* pFnScaleColor = NULL;
 
 	if ( ! pFnScaleColor )
-		pFnScaleColor = (UFunction*) UObject::GObjObjects()->Data[ 87253 ];
+		pFnScaleColor = (UFunction*) UObject::GObjObjects()->Data[ 81632 ];
 
 	APuzzlePieceActor_execScaleColor_Parms ScaleColor_Parms;
 	ScaleColor_Parms.DeltaTime = DeltaTime;
@@ -4360,7 +4360,7 @@ void APuzzlePieceActor::TurnOnStartEmitter ( )
 	static UFunction* pFnTurnOnStartEmitter = NULL;
 
 	if ( ! pFnTurnOnStartEmitter )
-		pFnTurnOnStartEmitter = (UFunction*) UObject::GObjObjects()->Data[ 87252 ];
+		pFnTurnOnStartEmitter = (UFunction*) UObject::GObjObjects()->Data[ 81631 ];
 
 	APuzzlePieceActor_execTurnOnStartEmitter_Parms TurnOnStartEmitter_Parms;
 
@@ -4376,7 +4376,7 @@ void APuzzlePieceActor::PlayDemoEmitter ( )
 	static UFunction* pFnPlayDemoEmitter = NULL;
 
 	if ( ! pFnPlayDemoEmitter )
-		pFnPlayDemoEmitter = (UFunction*) UObject::GObjObjects()->Data[ 87251 ];
+		pFnPlayDemoEmitter = (UFunction*) UObject::GObjObjects()->Data[ 81630 ];
 
 	APuzzlePieceActor_execPlayDemoEmitter_Parms PlayDemoEmitter_Parms;
 
@@ -4393,7 +4393,7 @@ void APuzzlePieceActor::ShutOffVFX ( float lerpScale )
 	static UFunction* pFnShutOffVFX = NULL;
 
 	if ( ! pFnShutOffVFX )
-		pFnShutOffVFX = (UFunction*) UObject::GObjObjects()->Data[ 87249 ];
+		pFnShutOffVFX = (UFunction*) UObject::GObjObjects()->Data[ 81628 ];
 
 	APuzzlePieceActor_execShutOffVFX_Parms ShutOffVFX_Parms;
 	ShutOffVFX_Parms.lerpScale = lerpScale;
@@ -4413,7 +4413,7 @@ void APuzzlePieceActor::SetColorLerp ( struct FLinearColor NewColor, unsigned lo
 	static UFunction* pFnSetColorLerp = NULL;
 
 	if ( ! pFnSetColorLerp )
-		pFnSetColorLerp = (UFunction*) UObject::GObjObjects()->Data[ 87245 ];
+		pFnSetColorLerp = (UFunction*) UObject::GObjObjects()->Data[ 81624 ];
 
 	APuzzlePieceActor_execSetColorLerp_Parms SetColorLerp_Parms;
 	memcpy ( &SetColorLerp_Parms.NewColor, &NewColor, 0x10 );
@@ -4432,7 +4432,7 @@ void APuzzlePieceActor::PlayPuzzleCompletedVFX ( )
 	static UFunction* pFnPlayPuzzleCompletedVFX = NULL;
 
 	if ( ! pFnPlayPuzzleCompletedVFX )
-		pFnPlayPuzzleCompletedVFX = (UFunction*) UObject::GObjObjects()->Data[ 87244 ];
+		pFnPlayPuzzleCompletedVFX = (UFunction*) UObject::GObjObjects()->Data[ 81623 ];
 
 	APuzzlePieceActor_execPlayPuzzleCompletedVFX_Parms PlayPuzzleCompletedVFX_Parms;
 
@@ -4448,7 +4448,7 @@ void APuzzlePieceActor::PlayFailedVFX ( )
 	static UFunction* pFnPlayFailedVFX = NULL;
 
 	if ( ! pFnPlayFailedVFX )
-		pFnPlayFailedVFX = (UFunction*) UObject::GObjObjects()->Data[ 87243 ];
+		pFnPlayFailedVFX = (UFunction*) UObject::GObjObjects()->Data[ 81622 ];
 
 	APuzzlePieceActor_execPlayFailedVFX_Parms PlayFailedVFX_Parms;
 
@@ -4464,7 +4464,7 @@ void APuzzlePieceActor::SetValidDeactivation ( )
 	static UFunction* pFnSetValidDeactivation = NULL;
 
 	if ( ! pFnSetValidDeactivation )
-		pFnSetValidDeactivation = (UFunction*) UObject::GObjObjects()->Data[ 87242 ];
+		pFnSetValidDeactivation = (UFunction*) UObject::GObjObjects()->Data[ 81621 ];
 
 	APuzzlePieceActor_execSetValidDeactivation_Parms SetValidDeactivation_Parms;
 
@@ -4480,7 +4480,7 @@ void APuzzlePieceActor::SetValidTouching ( )
 	static UFunction* pFnSetValidTouching = NULL;
 
 	if ( ! pFnSetValidTouching )
-		pFnSetValidTouching = (UFunction*) UObject::GObjObjects()->Data[ 87241 ];
+		pFnSetValidTouching = (UFunction*) UObject::GObjObjects()->Data[ 81620 ];
 
 	APuzzlePieceActor_execSetValidTouching_Parms SetValidTouching_Parms;
 
@@ -4499,7 +4499,7 @@ void APuzzlePieceActor::eventBump ( class AActor* Other, class UPrimitiveCompone
 	static UFunction* pFnBump = NULL;
 
 	if ( ! pFnBump )
-		pFnBump = (UFunction*) UObject::GObjObjects()->Data[ 87237 ];
+		pFnBump = (UFunction*) UObject::GObjObjects()->Data[ 81616 ];
 
 	APuzzlePieceActor_eventBump_Parms Bump_Parms;
 	Bump_Parms.Other = Other;
@@ -4522,7 +4522,7 @@ void APuzzlePieceActor::eventTouch ( class AActor* Other, class UPrimitiveCompon
 	static UFunction* pFnTouch = NULL;
 
 	if ( ! pFnTouch )
-		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 87232 ];
+		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 81611 ];
 
 	APuzzlePieceActor_eventTouch_Parms Touch_Parms;
 	Touch_Parms.Other = Other;
@@ -4543,7 +4543,7 @@ void APuzzlePieceActor::SetMyPuzzleRoom ( class APuzzleRoomActor* newPuzzleRoom 
 	static UFunction* pFnSetMyPuzzleRoom = NULL;
 
 	if ( ! pFnSetMyPuzzleRoom )
-		pFnSetMyPuzzleRoom = (UFunction*) UObject::GObjObjects()->Data[ 87230 ];
+		pFnSetMyPuzzleRoom = (UFunction*) UObject::GObjObjects()->Data[ 81609 ];
 
 	APuzzlePieceActor_execSetMyPuzzleRoom_Parms SetMyPuzzleRoom_Parms;
 	SetMyPuzzleRoom_Parms.newPuzzleRoom = newPuzzleRoom;
@@ -4560,7 +4560,7 @@ void APuzzlePieceActor::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 87229 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 81608 ];
 
 	APuzzlePieceActor_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -4577,7 +4577,7 @@ void ARaisingWaterVolume::OnModifyProperty ( class USeqAct_ModifyProperty* Actio
 	static UFunction* pFnOnModifyProperty = NULL;
 
 	if ( ! pFnOnModifyProperty )
-		pFnOnModifyProperty = (UFunction*) UObject::GObjObjects()->Data[ 87443 ];
+		pFnOnModifyProperty = (UFunction*) UObject::GObjObjects()->Data[ 81822 ];
 
 	ARaisingWaterVolume_execOnModifyProperty_Parms OnModifyProperty_Parms;
 	OnModifyProperty_Parms.Action = Action;
@@ -4595,7 +4595,7 @@ void ARaisingWaterVolume::ClearPawnFXOverrides ( class ADunDefPawn* thePawn )
 	static UFunction* pFnClearPawnFXOverrides = NULL;
 
 	if ( ! pFnClearPawnFXOverrides )
-		pFnClearPawnFXOverrides = (UFunction*) UObject::GObjObjects()->Data[ 87441 ];
+		pFnClearPawnFXOverrides = (UFunction*) UObject::GObjObjects()->Data[ 81820 ];
 
 	ARaisingWaterVolume_execClearPawnFXOverrides_Parms ClearPawnFXOverrides_Parms;
 	ClearPawnFXOverrides_Parms.thePawn = thePawn;
@@ -4613,7 +4613,7 @@ void ARaisingWaterVolume::SetPawnFXOverrides ( class ADunDefPawn* thePawn )
 	static UFunction* pFnSetPawnFXOverrides = NULL;
 
 	if ( ! pFnSetPawnFXOverrides )
-		pFnSetPawnFXOverrides = (UFunction*) UObject::GObjObjects()->Data[ 87439 ];
+		pFnSetPawnFXOverrides = (UFunction*) UObject::GObjObjects()->Data[ 81818 ];
 
 	ARaisingWaterVolume_execSetPawnFXOverrides_Parms SetPawnFXOverrides_Parms;
 	SetPawnFXOverrides_Parms.thePawn = thePawn;
@@ -4631,7 +4631,7 @@ void ARaisingWaterVolume::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 87436 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 81815 ];
 
 	ARaisingWaterVolume_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -4648,7 +4648,7 @@ void ARaisingWaterVolume::ClearAirControl ( )
 	static UFunction* pFnClearAirControl = NULL;
 
 	if ( ! pFnClearAirControl )
-		pFnClearAirControl = (UFunction*) UObject::GObjObjects()->Data[ 87434 ];
+		pFnClearAirControl = (UFunction*) UObject::GObjObjects()->Data[ 81813 ];
 
 	ARaisingWaterVolume_execClearAirControl_Parms ClearAirControl_Parms;
 
@@ -4665,7 +4665,7 @@ void ARaisingWaterVolume::eventUnTouch ( class AActor* Other )
 	static UFunction* pFnUnTouch = NULL;
 
 	if ( ! pFnUnTouch )
-		pFnUnTouch = (UFunction*) UObject::GObjObjects()->Data[ 87430 ];
+		pFnUnTouch = (UFunction*) UObject::GObjObjects()->Data[ 81809 ];
 
 	ARaisingWaterVolume_eventUnTouch_Parms UnTouch_Parms;
 	UnTouch_Parms.Other = Other;
@@ -4686,7 +4686,7 @@ void ARaisingWaterVolume::eventTouch ( class AActor* Other, class UPrimitiveComp
 	static UFunction* pFnTouch = NULL;
 
 	if ( ! pFnTouch )
-		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 87424 ];
+		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 81803 ];
 
 	ARaisingWaterVolume_eventTouch_Parms Touch_Parms;
 	Touch_Parms.Other = Other;
@@ -4722,7 +4722,7 @@ void ARaisingWaterVolume::ExecReplicatedFunction ( struct FName FunctionName, st
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 87407 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 81786 ];
 
 	ARaisingWaterVolume_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );

@@ -116,10 +116,9 @@ struct UDunDef_SeqAct_EnemyWaveSpawner_eventUpdateWave_Parms
 	// int                                             CurrentNumberOfEnemies;                           		// 0x0020 (0x0004) [0x0000000000000000]              
 	// class AMain*                                    TheMain;                                          		// 0x0024 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   bNightmareMode : 1;                               		// 0x0028 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   bInsanityMode : 1;                                		// 0x002C (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   bIsFiniteKillCount : 1;                           		// 0x0030 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   bCanForceSpawns : 1;                              		// 0x0034 (0x0004) [0x0000000000000000] [0x00000001] 
-	// int                                             KillCountRemaining;                               		// 0x0038 (0x0004) [0x0000000000000000]              
+	// unsigned long                                   bIsFiniteKillCount : 1;                           		// 0x002C (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   bCanForceSpawns : 1;                              		// 0x0030 (0x0004) [0x0000000000000000] [0x00000001] 
+	// int                                             KillCountRemaining;                               		// 0x0034 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDef_SeqAct_EnemyWaveSpawner.GetNumEnemiesRemainingToKill
@@ -139,7 +138,7 @@ struct UDunDef_SeqAct_EnemyWaveSpawner_execGetNumEnemiesRemainingToSpawn_Parms
 	// int                                             masterWaveNumber;                                 		// 0x00A8 (0x0004) [0x0000000000000000]              
 	// int                                             missionSwitch;                                    		// 0x00AC (0x0004) [0x0000000000000000]              
 	// unsigned long                                   bNightmareMode : 1;                               		// 0x00B0 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   bInsanityMode : 1;                                		// 0x00B4 (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   bPureStrat : 1;                                   		// 0x00B4 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.DunDef_SeqAct_EnemyWaveSpawner.GetMasterWaveNumber
@@ -197,13 +196,13 @@ struct UDunDefDataStore_GameSearch_execSetupGamespyFilter_Parms
 	int                                                numParticipatingLocalPlayers;                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
 	// struct UDunDefHeroManagerNative_FSearchFilterSettings searchFilters;                                    		// 0x0008 (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x002C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x002C (0x0004) [0x0000000000000000]              
 	// class ULocalPlayer*                             LocPlayer;                                        		// 0x0030 (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x0034 (0x0004) [0x0000000000000000]              
 	// int                                             MapIter;                                          		// 0x0038 (0x0004) [0x0000000000000000]              
 	// struct FString                                  versionString;                                    		// 0x003C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// TArray< struct FString >                        PremiumMaps;                                      		// 0x0048 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0054 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0054 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefDataStore_GameSearch.AppendSizeCheck
@@ -221,7 +220,7 @@ struct UDunDefDataStore_GameSearch_execAppendSizeCheck_Parms
 struct UDunDefDataStore_GameSearch_execSetupXboxFilter_Parms
 {
 	// struct UDunDefHeroManagerNative_FSearchFilterSettings searchFilters;                                    		// 0x0000 (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0024 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0024 (0x0004) [0x0000000000000000]              
 	// class ULocalPlayer*                             LocPlayer;                                        		// 0x0028 (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x002C (0x0004) [0x0000000000000000]              
 	// int                                             I;                                                		// 0x0030 (0x0004) [0x0000000000000000]              
@@ -239,14 +238,14 @@ struct UDunDefDataStore_GameSearch_execSetupSteamworksPreFilter_Parms
 	// TArray< struct FString >                        PremiumMaps;                                      		// 0x0020 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// int                                             MapIter;                                          		// 0x002C (0x0004) [0x0000000000000000]              
 	// int                                             DiffIter;                                         		// 0x0030 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0034 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0034 (0x0004) [0x0000000000000000]              
 	// class ULocalPlayer*                             LocPlayer;                                        		// 0x0038 (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x003C (0x0004) [0x0000000000000000]              
 	// struct UDunDefHeroManagerNative_FSearchFilterSettings searchFilters;                                    		// 0x0040 (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0064 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             DiffAmountSet;                                    		// 0x017C (0x0004) [0x0000000000000000]              
-	// int                                             MaxDiff;                                          		// 0x0180 (0x0004) [0x0000000000000000]              
-	// int                                             MinDiff;                                          		// 0x0184 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0064 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             DiffAmountSet;                                    		// 0x016C (0x0004) [0x0000000000000000]              
+	// int                                             MaxDiff;                                          		// 0x0170 (0x0004) [0x0000000000000000]              
+	// int                                             MinDiff;                                          		// 0x0174 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefDataStore_GameSearch.SetupFilter
@@ -325,7 +324,7 @@ struct UDunDefGameSearchQuick_Xbox_execAddProperties_Parms
 struct UDunDefGameSearchQuick_Xbox_eventGetHeroLevel_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefGameSearchQuick_Xbox.SortSearchResults
@@ -339,7 +338,7 @@ struct UDunDefGameSearchQuick_Xbox_eventSortSearchResults_Parms
 struct UDunDefGameSearchQuick_eventGetHeroLevel_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefGameSearchQuick.SortSearchResults
@@ -534,6 +533,13 @@ struct UDunDefNativeUIScene_execInitStateExecution_Parms
 	class UObject*                                     onObject;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
+// Function UDKGame.DunDefNativeViewportClient.GetAvailableResolutions
+// [0x00422400] 
+struct UDunDefNativeViewportClient_execGetAvailableResolutions_Parms
+{
+	TArray< struct FScreenResolution >                 Resolutions;                                      		// 0x0000 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+};
+
 // Function UDKGame.DunDefNativeViewportClient.HasAnyGlobalInputLockingScene
 // [0x00024400] 
 struct UDunDefNativeViewportClient_execHasAnyGlobalInputLockingScene_Parms
@@ -676,6 +682,15 @@ struct UDunDefNativeViewportClient_execPrintFloat_Parms
 	struct FString                                     ReturnValue;                                      		// 0x000C (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
 };
 
+// Function UDKGame.DunDefNativeViewportClient.TruncateNumber
+// [0x00026400] 
+struct UDunDefNativeViewportClient_execTruncateNumber_Parms
+{
+	float                                              Value;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                numDecimals;                                      		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FString                                     ReturnValue;                                      		// 0x0008 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+};
+
 // Function UDKGame.DunDefNativeViewportClient.CompareTransformedString
 // [0x00020400] 
 struct UDunDefNativeViewportClient_execCompareTransformedString_Parms
@@ -800,7 +815,7 @@ struct UDunDefOnlineGameSettingsConsole_eventMatchesGameFilter_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
 	// struct UDunDefHeroManagerNative_FSearchFilterSettings searchFilters;                                    		// 0x0008 (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x002C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x002C (0x0004) [0x0000000000000000]              
 	// class ULocalPlayer*                             LocPlayer;                                        		// 0x0030 (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x0034 (0x0004) [0x0000000000000000]              
 	// int                                             I;                                                		// 0x0038 (0x0004) [0x0000000000000000]              
@@ -813,7 +828,7 @@ struct UDunDefOnlineGameSettingsConsole_eventMatchesGameFilter_Parms
 struct UDunDefOnlineGameSettingsConsole_eventCustomize_Parms
 {
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UDunDefHero*                              HeroTemplate;                                     		// 0x0008 (0x0004) [0x0000000000000000]              
 	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x000C (0x0004) [0x0000000000000000]              
 	// int                                             phaseType;                                        		// 0x0010 (0x0004) [0x0000000000000000]              
@@ -964,7 +979,7 @@ struct UHeroEquipmentNative_execContinousInterp_Parms
 // [0x00020400] 
 struct UHeroEquipmentNative_execGetSaveInfo_Parms
 {
-	struct UDunDefHeroManagerNative_FEquipmentSaveInfo ReturnValue;                                      		// 0x0000 (0x00F4) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FEquipmentSaveInfo ReturnValue;                                      		// 0x0000 (0x0134) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
 };
 
 // Function UDKGame.HeroEquipmentNative.CovertEquipementsToSaveInfos
@@ -1529,6 +1544,13 @@ struct USaveHelper_execSetupDeviceSelectionDelegates_Parms
 	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0000 (0x0004) [0x0000000000000000]              
 };
 
+// Function UDKGame.SaveHelper.OnSubscribedMapUpdate
+// [0x00020002] 
+struct USaveHelper_execOnSubscribedMapUpdate_Parms
+{
+	unsigned long                                      bWasSuccessful : 1;                               		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+};
+
 // Function UDKGame.SaveHelper.NotifyStorageDeviceChanged
 // [0x00020002] 
 struct USaveHelper_execNotifyStorageDeviceChanged_Parms
@@ -1549,8 +1571,8 @@ struct USaveHelper_execdeviceReadProfileSettingsComplete_Parms
 {
 	unsigned char                                      LocalUserNum;                                     		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      bWasSuccessful : 1;                               		// 0x0004 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// struct UDunDefHeroManagerNative_FOptionsInfo    newOptions;                                       		// 0x0008 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class ULocalPlayer*                             thePlayer;                                        		// 0x0100 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    newOptions;                                       		// 0x0008 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class ULocalPlayer*                             thePlayer;                                        		// 0x0104 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.SaveHelper.deviceSelectedFour
@@ -2422,11 +2444,45 @@ struct UUIScriptWidget_Button_eventRenderEditor_Parms
 	float                                              Y2;                                               		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
-// Function UDKGame.HeroEquipment.GetDamageCap
-// [0x00020002] 
-struct UHeroEquipment_execGetDamageCap_Parms
+// Function UDKGame._DataTypes.InitializeHQArray
+// [0x00822002] 
+struct U_DataTypes_execInitializeHQArray_Parms
 {
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	TArray< class UHeroEquipment* >                    A;                                                		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	struct FHQArray                                    ReturnValue;                                      		// 0x000C (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// struct FHQArray                                 res;                                              		// 0x0018 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+};
+
+// Function UDKGame._DataTypes.GraphicsQualtyToString
+// [0x00022002] 
+struct U_DataTypes_execGraphicsQualtyToString_Parms
+{
+	unsigned char                                      aGraphicsQualitybyte;                             		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+	struct FString                                     ReturnValue;                                      		// 0x0004 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame._DataTypes.GraphicsQualtyToByte
+// [0x00022002] 
+struct U_DataTypes_execGraphicsQualtyToByte_Parms
+{
+	struct FString                                     aGraphicsQualityString;                           		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	unsigned char                                      ReturnValue;                                      		// 0x000C (0x0001) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame._DataTypes.SortingFilterToString
+// [0x00022002] 
+struct U_DataTypes_execSortingFilterToString_Parms
+{
+	unsigned char                                      aSortingFilterByte;                               		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+	struct FString                                     ReturnValue;                                      		// 0x0004 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame._DataTypes.SortingFilterToByte
+// [0x00022002] 
+struct U_DataTypes_execSortingFilterToByte_Parms
+{
+	struct FString                                     aSortingFilterString;                             		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	unsigned char                                      ReturnValue;                                      		// 0x000C (0x0001) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.HeroEquipment.LoadComparisonBiases
@@ -3128,7 +3184,7 @@ struct UHeroEquipment_execAddEquipmentAttachment_Parms
 	// class ADunDefPlayer*                            tPlayer;                                          		// 0x0060 (0x0004) [0x0000000000000000]              
 	// class USkeletalMeshComponent*                   SKComp;                                           		// 0x0064 (0x0004) [0x0000000004000000]              ( CPF_EditInline )
 	// struct FName                                    overridenSocketName;                              		// 0x0068 (0x0008) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    aOptions;                                         		// 0x0070 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    aOptions;                                         		// 0x0070 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.HeroEquipment.AttachedComponent
@@ -3468,40 +3524,6 @@ struct UHeroEquipment_execGetEquipmentName_Parms
 	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
 };
 
-// Function UDKGame.HeroEquipment.DivineStatBoost
-// [0x00020002] 
-struct UHeroEquipment_execDivineStatBoost_Parms
-{
-	// int                                             P;                                                		// 0x0000 (0x0004) [0x0000000000000000]              
-	// float                                           V;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.HeroEquipment.ReRoll
-// [0x00824002] 
-struct UHeroEquipment_execReRoll_Parms
-{
-	float                                              equipmentQuality;                                 		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      doResetStatsToTemplate : 1;                       		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bDontUseMissionRandomizerMultiplier : 1;          		// 0x0008 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	float                                              RandomizerMultiplierOverride;                     		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bIsForShop : 1;                                   		// 0x0010 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bAllowTranscendentGear : 1;                       		// 0x0014 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// float                                           curRandomValue;                                   		// 0x0018 (0x0004) [0x0000000000000000]              
-	// float                                           TotalRandomizerValue;                             		// 0x001C (0x0004) [0x0000000000000000]              
-	// int                                             it;                                               		// 0x0020 (0x0004) [0x0000000000000000]              
-	// TArray< struct FString >                        SelectedRandomStrings;                            		// 0x0024 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             LastHighestNameValue;                             		// 0x0030 (0x0004) [0x0000000000000000]              
-	// int                                             NumDamageReductions;                              		// 0x0034 (0x0004) [0x0000000000000000]              
-	// int                                             NumHeroStatsIncreased;                            		// 0x0038 (0x0004) [0x0000000000000000]              
-	// TArray< int >                                   StatIndices;                                      		// 0x003C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// unsigned long                                   bWasZero : 1;                                     		// 0x0048 (0x0004) [0x0000000000000000] [0x00000001] 
-	// float                                           randomizerMult;                                   		// 0x004C (0x0004) [0x0000000000000000]              
-	// int                                             tempStatModifier;                                 		// 0x0050 (0x0004) [0x0000000000000000]              
-	// int                                             P;                                                		// 0x0054 (0x0004) [0x0000000000000000]              
-	// struct UHeroEquipment_FLevelRange               difficultyRange;                                  		// 0x0058 (0x0008) [0x0000000000000000]              
-	// struct FString                                  CursedDescription;                                		// 0x0060 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
 // Function UDKGame.HeroEquipment.AddRandomizeValues
 // [0x00824002] 
 struct UHeroEquipment_execAddRandomizeValues_Parms
@@ -3526,7 +3548,7 @@ struct UHeroEquipment_execAddRandomizeValues_Parms
 	// int                                             tempStatModifier;                                 		// 0x0054 (0x0004) [0x0000000000000000]              
 	// int                                             P;                                                		// 0x0058 (0x0004) [0x0000000000000000]              
 	// float                                           ValueThresholdToUse;                              		// 0x005C (0x0004) [0x0000000000000000]              
-	// struct UHeroEquipment_FLevelRange               difficultyRange;                                  		// 0x0060 (0x0008) [0x0000000000000000]              
+	// struct FLevelRange                              difficultyRange;                                  		// 0x0060 (0x0008) [0x0000000000000000]              
 };
 
 // Function UDKGame.HeroEquipment.SanitiseRandomizers
@@ -3647,10 +3669,10 @@ struct UHeroEquipment_execCreateEquipmentFromNetInfo_Parms
 // [0x00C22002] 
 struct UHeroEquipment_execConvertSaveInfoToNetInfo_Parms
 {
-	struct UDunDefHeroManagerNative_FEquipmentSaveInfo saveInfo;                                         		// 0x0000 (0x00F4) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	struct FEquipmentNetInfo                           ReturnValue;                                      		// 0x00F4 (0x00F8) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// struct FEquipmentNetInfo                        netInfo;                                          		// 0x01EC (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             it;                                               		// 0x02E4 (0x0004) [0x0000000000000000]              
+	struct UDunDefHeroManagerNative_FEquipmentSaveInfo saveInfo;                                         		// 0x0000 (0x0134) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	struct FEquipmentNetInfo                           ReturnValue;                                      		// 0x0134 (0x00F8) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// struct FEquipmentNetInfo                        netInfo;                                          		// 0x022C (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             it;                                               		// 0x0324 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.HeroEquipment.InitFromNetInfo
@@ -3743,7 +3765,7 @@ struct UActionWheel_execSetSelectedEntry_Parms
 // [0x00020002] 
 struct UActionWheel_execDestroyed_Parms
 {
-	// class UDunDefHero*                              hero;                                             		// 0x0000 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0000 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.ActionWheel.SetHotKey
@@ -3909,7 +3931,7 @@ struct UActionWheel_execFindEntryByName_Parms
 struct UActionWheel_execInitializeHotKeys_Parms
 {
 	// int                                             it;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.ActionWheel.InitializeWheel
@@ -3920,7 +3942,7 @@ struct UActionWheel_execInitializeWheel_Parms
 	// TArray< class UActionWheelEntry* >              TempWheelEntries;                                 		// 0x0004 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// class UActionWheelEntry*                        Entry;                                            		// 0x0010 (0x0004) [0x0000000000000000]              
 	// int                                             it;                                               		// 0x0014 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x0018 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0018 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.ActionWheelEntry.ProcessSelection
@@ -4008,6 +4030,16 @@ struct UActionWheelEntry_execFindEntryByName_Parms
 	class UActionWheelEntry*                           ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// int                                             it;                                               		// 0x000C (0x0004) [0x0000000000000000]              
 	// class UActionWheelEntry*                        Entry;                                            		// 0x0010 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefPlayerController.SkipToWave
+// [0x00020202] ( FUNC_Exec )
+struct ADunDefPlayerController_execSkipToWave_Parms
+{
+	int                                                Wave;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// TArray< class USequenceObject* >                CustomEvents;                                     		// 0x0004 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class USequenceObject*                          CustomEvent;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
+	// int                                             I;                                                		// 0x0014 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerController.ToggleQualityOutline
@@ -4293,19 +4325,82 @@ struct ADunDefPlayerController_execServerActivateCrystal_Parms
 	// class ADunDefCrystalCore*                       aCrystal;                                         		// 0x0000 (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.DunDefPlayerController.ToggleCensor
-// [0x00020202] ( FUNC_Exec )
-struct ADunDefPlayerController_execToggleCensor_Parms
+// Function UDKGame.DunDefPlayerController.ResetBossTimers
+// [0x00020002] 
+struct ADunDefPlayerController_execResetBossTimers_Parms
 {
-	// unsigned long                                   CensorValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
+	// int                                             I;                                                		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefPlayerController.ValidateStringConcat
+// [0x00820002] 
+struct ADunDefPlayerController_execValidateStringConcat_Parms
+{
+	class UDunDef_SeqAct_ConcatString*                 Node;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// struct FSeqOpOutputInputLink                    innerLink;                                        		// 0x0008 (0x0008) [0x0000000000000000]              
+	// struct FSeqOpOutputLink                         Link;                                             		// 0x0010 (0x0030) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// unsigned long                                   IsConnected : 1;                                  		// 0x0040 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.DunDefPlayerController.BossTimerSkip
 // [0x00020202] ( FUNC_Exec )
 struct ADunDefPlayerController_execBossTimerSkip_Parms
 {
-	// TArray< class USequenceObject* >                SkipBossEvents;                                   		// 0x0000 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class USequenceObject*                          SkipToBossSequence;                               		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDef_SeqAct_ConcatString*              theStrConcat;                                     		// 0x0000 (0x0004) [0x0000000000000000]              
+	// class USequenceObject*                          CustomEvent;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// TArray< class UDunDef_SeqAct_ConcatString* >    validStringConcats;                               		// 0x0008 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< class USequenceObject* >                allStringConcats;                                 		// 0x0014 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< int >                                   oldValues;                                        		// 0x0020 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+};
+
+// Function UDKGame.DunDefPlayerController.KickAllSplits
+// [0x00020202] ( FUNC_Exec )
+struct ADunDefPlayerController_execKickAllSplits_Parms
+{
+};
+
+// Function UDKGame.DunDefPlayerController.QuickAddSplits
+// [0x00020202] ( FUNC_Exec )
+struct ADunDefPlayerController_execQuickAddSplits_Parms
+{
+};
+
+// Function UDKGame.DunDefPlayerController.ControlEmulatorPlayer4
+// [0x00020202] ( FUNC_Exec )
+struct ADunDefPlayerController_execControlEmulatorPlayer4_Parms
+{
+};
+
+// Function UDKGame.DunDefPlayerController.ControlEmulatorPlayer3
+// [0x00020202] ( FUNC_Exec )
+struct ADunDefPlayerController_execControlEmulatorPlayer3_Parms
+{
+};
+
+// Function UDKGame.DunDefPlayerController.ControlEmulatorPlayer2
+// [0x00020202] ( FUNC_Exec )
+struct ADunDefPlayerController_execControlEmulatorPlayer2_Parms
+{
+};
+
+// Function UDKGame.DunDefPlayerController.ControlEmulatorPlayer1
+// [0x00020202] ( FUNC_Exec )
+struct ADunDefPlayerController_execControlEmulatorPlayer1_Parms
+{
+};
+
+// Function UDKGame.DunDefPlayerController.ToggleSplitScreen
+// [0x00020202] ( FUNC_Exec )
+struct ADunDefPlayerController_execToggleSplitScreen_Parms
+{
+	// class UDunDefViewportClient*                    vc;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefPlayerController.ToggleItemCensor
+// [0x00020202] ( FUNC_Exec )
+struct ADunDefPlayerController_execToggleItemCensor_Parms
+{
 };
 
 // Function UDKGame.DunDefPlayerController.RepairAllTowers
@@ -4345,6 +4440,12 @@ struct ADunDefPlayerController_execActivateCrystal_Parms
 {
 };
 
+// Function UDKGame.DunDefPlayerController.PrivatelyDropAllMana
+// [0x00020202] ( FUNC_Exec )
+struct ADunDefPlayerController_execPrivatelyDropAllMana_Parms
+{
+};
+
 // Function UDKGame.DunDefPlayerController.DropAllMana
 // [0x00020202] ( FUNC_Exec )
 struct ADunDefPlayerController_execDropAllMana_Parms
@@ -4372,7 +4473,7 @@ struct ADunDefPlayerController_execUnlockCostume_Parms
 	class USoundCue*                                   GivenCostumeSound;                                		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bNotifyUser : 1;                                  		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bIsHeroUnlock : 1;                                		// 0x0010 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// struct UDunDefHeroManagerNative_FOptionsInfo    tOptions;                                         		// 0x0014 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    tOptions;                                         		// 0x0014 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefPlayerController.HackLoadingRankedHeroesFailed
@@ -4786,7 +4887,7 @@ struct ADunDefPlayerController_execGiveEquipmentToItemBox_Parms
 // [0x00420102] 
 struct ADunDefPlayerController_execUpdateForOptions_Parms
 {
-	struct UDunDefHeroManagerNative_FOptionsFixedStruct newOptions;                                       		// 0x0000 (0x0098) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FOptionsFixedStruct newOptions;                                       		// 0x0000 (0x009C) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefPlayerController.IsPlayerOnMuteList
@@ -4957,13 +5058,12 @@ struct ADunDefPlayerController_execNotifyBankMana_Parms
 };
 
 // Function UDKGame.DunDefPlayerController.GetBankedManaString
-// [0x00824002] 
+// [0x00820002] 
 struct ADunDefPlayerController_execGetBankedManaString_Parms
 {
-	int                                                SigFig;                                           		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FString                                     ReturnValue;                                      		// 0x0004 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// int                                             UserID;                                           		// 0x0010 (0x0004) [0x0000000000000000]              
-	// struct FHighDigitInt                            theInfo;                                          		// 0x0014 (0x0010) [0x0000000000000000]              
+	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// int                                             UserID;                                           		// 0x000C (0x0004) [0x0000000000000000]              
+	// struct FHighDigitInt                            theInfo;                                          		// 0x0010 (0x0010) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerController.GetBankedMana
@@ -5219,11 +5319,11 @@ struct ADunDefPlayerController_execClientWriteLeaderboardStats_Parms
 	// int                                             indexIter;                                        		// 0x0028 (0x0004) [0x0000000000000000]              
 	// int                                             BuildTime;                                        		// 0x002C (0x0004) [0x0000000000000000]              
 	// int                                             CombatTime;                                       		// 0x0030 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0034 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0034 (0x0004) [0x0000000000000000]              
 	// class UDunDefViewportClient*                    ViewportClient;                                   		// 0x0038 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   bail : 1;                                         		// 0x003C (0x0004) [0x0000000000000000] [0x00000001] 
 	// unsigned long                                   IsGuest : 1;                                      		// 0x0040 (0x0004) [0x0000000000000000] [0x00000001] 
-	// struct FCampaignLevelEntry                      currentLevelEntry;                                		// 0x0044 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      currentLevelEntry;                                		// 0x0044 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefPlayerController.ClientWriteMidGameLeaderboardStats
@@ -5244,7 +5344,7 @@ struct ADunDefPlayerController_execClientWriteMidGameLeaderboardStats_Parms
 	// unsigned long                                   IsGuest : 1;                                      		// 0x002C (0x0004) [0x0000000000000000] [0x00000001] 
 	// struct FUniqueNetId                             NetId;                                            		// 0x0030 (0x0008) [0x0000000000000000]              
 	// struct FUniqueNetId                             ZeroId;                                           		// 0x0038 (0x0008) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0040 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0040 (0x0004) [0x0000000000000000]              
 	// class ADunDefGameReplicationInfo*               theGRI;                                           		// 0x0044 (0x0004) [0x0000000000000000]              
 	// struct FString                                  campaignTag;                                      		// 0x0048 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
@@ -5274,7 +5374,7 @@ struct ADunDefPlayerController_execCheckBestStats_Parms
 	// int                                             currentStat;                                      		// 0x0074 (0x0004) [0x0000000000000000]              
 	// int                                             guestSponsor;                                     		// 0x0078 (0x0004) [0x0000000000000000]              
 	// int                                             waveReached;                                      		// 0x007C (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0080 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0080 (0x0004) [0x0000000000000000]              
 	// struct FUniqueNetId                             NetId;                                            		// 0x0084 (0x0008) [0x0000000000000000]              
 	// class ULocalPlayer*                             guestSponsorPlayer;                               		// 0x008C (0x0004) [0x0000000000000000]              
 };
@@ -5489,7 +5589,6 @@ struct ADunDefPlayerController_execClientEnteredBuildPhase_Parms
 	// class UDunDefHeroManager*                       myHeroManager;                                    		// 0x0000 (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   AutoAdjustCamera : 1;                             		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
-	// class ADunDefPlayerAbility*                     ability;                                          		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerController.Server_EnteredCombatPhase
@@ -5502,7 +5601,6 @@ struct ADunDefPlayerController_execServer_EnteredCombatPhase_Parms
 // [0x00020002] 
 struct ADunDefPlayerController_execServer_EnteredBuildPhase_Parms
 {
-	// class ADunDefPlayerAbility*                     ability;                                          		// 0x0000 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerController.AnimNotify_CurrentAbility_Off
@@ -5671,7 +5769,7 @@ struct ADunDefPlayerController_execAdjustDamage_Parms
 	struct FVector                                     HitLocation;                                      		// 0x0014 (0x000C) [0x0000000000000080]              ( CPF_Parm )
 	class UClass*                                      DamageType;                                       		// 0x0020 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	struct FTraceHitInfo                               HitInfo;                                          		// 0x0024 (0x001C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0040 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0040 (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerAbility*                     ability;                                          		// 0x0044 (0x0004) [0x0000000000000000]              
 };
 
@@ -5696,7 +5794,7 @@ struct ADunDefPlayerController_execServerApplyHeroModifiers_Parms
 	class APawn*                                       inPawn;                                           		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      onPawnSpawn : 1;                                  		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	// class APawn*                                    thePawn;                                          		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
 	// class ADunDefWeapon*                            theWeapon;                                        		// 0x0010 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           equipmentRef;                                     		// 0x0014 (0x0004) [0x0000000000000000]              
 	// int                                             it;                                               		// 0x0018 (0x0004) [0x0000000000000000]              
@@ -5825,7 +5923,7 @@ struct ADunDefPlayerController_execNotifyAddedHeroEquipment_Parms
 // [0x00020002] 
 struct ADunDefPlayerController_execServer_InitializeForHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class UDunDefOnlineGameSettingsConsole*         GameSettings;                                     		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
@@ -5930,6 +6028,14 @@ struct ADunDefPlayerController_eventNotifyDirectorControl_Parms
 	// unsigned long                                   bLocalOnly : 1;                                   		// 0x000C (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
+// Function UDKGame.DunDefPlayerController.ResetAllAbilityCooldowns
+// [0x00020002] 
+struct ADunDefPlayerController_execResetAllAbilityCooldowns_Parms
+{
+	// class ADunDefPlayerAbility*                     ability;                                          		// 0x0000 (0x0004) [0x0000000000000000]              
+	// class ADunDefPlayerController*                  PC;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
+};
+
 // Function UDKGame.DunDefPlayerController.Server_CancelAllAbilities
 // [0x00024002] 
 struct ADunDefPlayerController_execServer_CancelAllAbilities_Parms
@@ -5973,170 +6079,6 @@ struct ADunDefPlayerController_execSetTargetingIndicatorPosition_Parms
 {
 	struct FVector                                     Position;                                         		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
 	// float                                           cameraDistance;                                   		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPlayerController.OutPutWaveStatMultiplier
-// [0x00024202] ( FUNC_Exec )
-struct ADunDefPlayerController_execOutPutWaveStatMultiplier_Parms
-{
-	int                                                MaxWaveNumber;                                    		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct FString                                  StatString;                                       		// 0x0008 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  SpacerString;                                     		// 0x0014 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  ModeString;                                       		// 0x0020 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.DunDefPlayerController.TestWaveStatMultiplier
-// [0x00824002] 
-struct ADunDefPlayerController_execTestWaveStatMultiplier_Parms
-{
-	int                                                CurrentTestWaveNumber;                            		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FCampaignLevelEntry                      anEntry;                                          		// 0x0008 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// float                                           scalingWave;                                      		// 0x0120 (0x0004) [0x0000000000000000]              
-	// class ADunDefGameReplicationInfo*               ddGRI;                                            		// 0x0124 (0x0004) [0x0000000000000000]              
-	// float                                           waveNumber;                                       		// 0x0128 (0x0004) [0x0000000000000000]              
-	// float                                           val;                                              		// 0x012C (0x0004) [0x0000000000000000]              
-	// float                                           A1;                                               		// 0x0130 (0x0004) [0x0000000000000000]              
-	// float                                           b1;                                               		// 0x0134 (0x0004) [0x0000000000000000]              
-	// float                                           C1;                                               		// 0x0138 (0x0004) [0x0000000000000000]              
-	// class UDunDefMapInfo*                           tMapInfo;                                         		// 0x013C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPlayerController.GetAllHeroEquipmentPaths
-// [0x00020202] ( FUNC_Exec )
-struct ADunDefPlayerController_execGetAllHeroEquipmentPaths_Parms
-{
-	// class UDunDefHeroManager*                       hero;                                             		// 0x0000 (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
-	// TArray< struct FString >                        HeroEquipmentStringsArray;                        		// 0x0008 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.DunDefPlayerController.OutPutTestResults1
-// [0x00020002] 
-struct ADunDefPlayerController_execOutPutTestResults1_Parms
-{
-	class UHeroEquipment*                              testEquipment;                                    		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// int                                             Myth;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
-	// int                                             Trans;                                            		// 0x0008 (0x0004) [0x0000000000000000]              
-	// int                                             Sup;                                              		// 0x000C (0x0004) [0x0000000000000000]              
-	// int                                             Ult;                                              		// 0x0010 (0x0004) [0x0000000000000000]              
-	// int                                             Ultninetythree;                                   		// 0x0014 (0x0004) [0x0000000000000000]              
-	// int                                             Ultplus;                                          		// 0x0018 (0x0004) [0x0000000000000000]              
-	// int                                             Ultplusplus;                                      		// 0x001C (0x0004) [0x0000000000000000]              
-	// int                                             Divine;                                           		// 0x0020 (0x0004) [0x0000000000000000]              
-	// int                                             TotalNumber;                                      		// 0x0024 (0x0004) [0x0000000000000000]              
-	// int                                             Void;                                             		// 0x0028 (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x002C (0x0004) [0x0000000000000000]              
-	// struct FString                                  EquipmentName;                                    		// 0x0030 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  resultString;                                     		// 0x003C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  SpacerString;                                     		// 0x0048 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// float                                           Upgrades;                                         		// 0x0054 (0x0004) [0x0000000000000000]              
-	// TArray< struct FString >                        QualityStringArray;                               		// 0x0058 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.DunDefPlayerController.CalulateUltRate
-// [0x00020002] 
-struct ADunDefPlayerController_execCalulateUltRate_Parms
-{
-	float                                              total;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Quality;                                          		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FString                                     ReturnValue;                                      		// 0x0008 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.DunDefPlayerController.OutPutTestResults0
-// [0x00020002] 
-struct ADunDefPlayerController_execOutPutTestResults0_Parms
-{
-	class UHeroEquipment*                              testEquipment;                                    		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// int                                             Myth;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
-	// int                                             Trans;                                            		// 0x0008 (0x0004) [0x0000000000000000]              
-	// int                                             Sup;                                              		// 0x000C (0x0004) [0x0000000000000000]              
-	// int                                             Ult;                                              		// 0x0010 (0x0004) [0x0000000000000000]              
-	// int                                             Ultninetythree;                                   		// 0x0014 (0x0004) [0x0000000000000000]              
-	// int                                             Ultplus;                                          		// 0x0018 (0x0004) [0x0000000000000000]              
-	// int                                             Ultplusplus;                                      		// 0x001C (0x0004) [0x0000000000000000]              
-	// int                                             Divine;                                           		// 0x0020 (0x0004) [0x0000000000000000]              
-	// int                                             TotalNumber;                                      		// 0x0024 (0x0004) [0x0000000000000000]              
-	// int                                             Void;                                             		// 0x0028 (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x002C (0x0004) [0x0000000000000000]              
-	// float                                           Upgrades;                                         		// 0x0030 (0x0004) [0x0000000000000000]              
-	// struct FString                                  EquipmentName;                                    		// 0x0034 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  resultString;                                     		// 0x0040 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  SpacerString;                                     		// 0x004C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// TArray< struct FString >                        QualityStringArray;                               		// 0x0058 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.DunDefPlayerController.ClearUltRateTestResults
-// [0x00020202] ( FUNC_Exec )
-struct ADunDefPlayerController_execClearUltRateTestResults_Parms
-{
-};
-
-// Function UDKGame.DunDefPlayerController.ClearTestResults
-// [0x00020002] 
-struct ADunDefPlayerController_execClearTestResults_Parms
-{
-};
-
-// Function UDKGame.DunDefPlayerController.CheckSpawnCount1
-// [0x00820102] 
-struct ADunDefPlayerController_execCheckSpawnCount1_Parms
-{
-	// struct FEquipmentNetInfo                        theNetInfo;                                       		// 0x0000 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UHeroEquipment*                           Equipment;                                        		// 0x00F8 (0x0004) [0x0000000000000000]              
-	// float                                           TempGoNegative;                                   		// 0x00FC (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0100 (0x0004) [0x0000000000000000]              
-	// int                                             ii;                                               		// 0x0104 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPlayerController.CheckSpawnCount0
-// [0x00820102] 
-struct ADunDefPlayerController_execCheckSpawnCount0_Parms
-{
-	// struct FEquipmentNetInfo                        theNetInfo;                                       		// 0x0000 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UHeroEquipment*                           Equipment;                                        		// 0x00F8 (0x0004) [0x0000000000000000]              
-	// float                                           TempGoNegative;                                   		// 0x00FC (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0100 (0x0004) [0x0000000000000000]              
-	// int                                             ii;                                               		// 0x0104 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPlayerController.SetUltRateTestArchetype
-// [0x00024202] ( FUNC_Exec )
-struct ADunDefPlayerController_execSetUltRateTestArchetype_Parms
-{
-	unsigned long                                      SetSecondItem : 1;                                		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	struct FString                                     ArchetypePath;                                    		// 0x0004 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.DunDefPlayerController.SetUltRateTestValue
-// [0x00024202] ( FUNC_Exec )
-struct ADunDefPlayerController_execSetUltRateTestValue_Parms
-{
-	int                                                IDToSet;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      SetSecondItem : 1;                                		// 0x0004 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	float                                              Quality;                                          		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              Multiplier;                                       		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	int                                                ItemsPerFrame;                                    		// 0x0010 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefPlayerController.TestUltRate
-// [0x00024202] ( FUNC_Exec )
-struct ADunDefPlayerController_execTestUltRate_Parms
-{
-	int                                                itemCount;                                        		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      UseSecondItem : 1;                                		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefPlayerController.GetMetaflaglist
-// [0x00824202] ( FUNC_Exec )
-struct ADunDefPlayerController_execGetMetaflaglist_Parms
-{
-	unsigned long                                      bExportToLog : 1;                                 		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0008 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             PlayerIndex;                                      		// 0x00A0 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       hero;                                             		// 0x00A4 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerController.IsOverGround
@@ -6241,7 +6183,7 @@ struct ADunDefPlayerController_execSendInitialHeroDataToServer_Parms
 {
 	unsigned long                                      swapHero : 1;                                     		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	// class UHeroEquipment*                           Equipment;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
 	// int                                             it;                                               		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
@@ -6268,7 +6210,7 @@ struct ADunDefPlayerController_execReceivedPlayerReplicationInfo_Parms
 	// unsigned long                                   bInvited : 1;                                     		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
 	// class UDunDefHeroManager*                       myHeroManager;                                    		// 0x000C (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0014 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0014 (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefPlayerController.UpdateGamepadControl
@@ -6420,7 +6362,7 @@ struct ADunDefPlayerController_execCheckRespawn_Parms
 // [0x00020002] 
 struct ADunDefPlayerController_execPrivateSetHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function UDKGame.DunDefPlayerController.GetHero
@@ -6429,7 +6371,7 @@ struct ADunDefPlayerController_execGetHero_Parms
 {
 	unsigned long                                      CreateHeroIfNone : 1;                             		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	class UDunDefHero*                                 ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerController.Server_DestroyPlayerAbilities
@@ -6446,7 +6388,7 @@ struct ADunDefPlayerController_execServer_CreatePlayerAbilities_Parms
 	class ADunDefPlayer*                               ForPlayer;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class ADunDefPlayerAbility*                     abilityTemplate;                                  		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerAbility*                     abilityInstance;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
 	// class UDunDefHero*                              heroInstance;                                     		// 0x0010 (0x0004) [0x0000000000000000]              
 };
 
@@ -6582,7 +6524,7 @@ struct ADunDefPlayerController_execDrawHUD_Parms
 	class AHUD*                                        H;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class AActor*                                   A;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class AActor*                                   droppedEquipment;                                 		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
 	// class ADunDefGameReplicationInfo*               ddGRI;                                            		// 0x0010 (0x0004) [0x0000000000000000]              
 	// class UDunDefHUDInterface*                      hudint;                                           		// 0x0014 (0x0008) [0x0000000000000000]              
 	// float                                           nudgedScale;                                      		// 0x001C (0x0004) [0x0000000000000000]              
@@ -6897,7 +6839,7 @@ struct ADunDefPlayerController_execServerRefreshSetupScreen_Parms
 // [0x00820002] 
 struct ADunDefPlayerController_execUpdateProgressToServer_Parms
 {
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
 	// class UDunDefViewportClient*                    ViewportClient;                                   		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x000C (0x0004) [0x0000000000000000]              
@@ -6934,7 +6876,7 @@ struct ADunDefPlayerController_execServerUnregisterRemoteID_Parms
 struct ADunDefPlayerController_execClientSetUserNickname_Parms
 {
 	struct FString                                     NickName;                                         		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x0014 (0x0004) [0x0000000000000000]              
 };
@@ -7010,7 +6952,7 @@ struct ADunDefPlayerController_execServer_CheckTowerAssociations_Parms
 // [0x00420102] 
 struct ADunDefPlayerController_execAdjustControlSchemeForOptions_Parms
 {
-	struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0000 (0x0098) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0000 (0x009C) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefPlayerController.GetPawnDistance
@@ -7025,7 +6967,7 @@ struct ADunDefPlayerController_execGetPawnDistance_Parms
 // [0x00020002] 
 struct ADunDefPlayerController_execNotifyLeaving_Parms
 {
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerController.DestroyOwnedTowers
@@ -7097,7 +7039,7 @@ struct ADunDefPlayerController_execClientSetRemoteHeroInfo_Parms
 struct ADunDefPlayerController_execActivateHotKey_Parms
 {
 	int                                                hkIndex;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerController.HotKeyTen
@@ -7398,14 +7340,15 @@ struct ADunDefPlayerController_execServerDropMana_Parms
 	unsigned long                                      bNotFromPlayer : 1;                               		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bDontPlayAnimation : 1;                           		// 0x0008 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	class AActor*                                      fromOtherActor;                                   		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// int                                             SmallTokens;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
-	// int                                             MinorTokens;                                      		// 0x0014 (0x0004) [0x0000000000000000]              
-	// int                                             MediumTokens;                                     		// 0x0018 (0x0004) [0x0000000000000000]              
-	// int                                             LargeTokens;                                      		// 0x001C (0x0004) [0x0000000000000000]              
-	// int                                             DuperTokens;                                      		// 0x0020 (0x0004) [0x0000000000000000]              
-	// int                                             MassiveTokens;                                    		// 0x0024 (0x0004) [0x0000000000000000]              
-	// class ADunDefPawn*                              myPawn;                                           		// 0x0028 (0x0004) [0x0000000000000000]              
-	// float                                           Remainder;                                        		// 0x002C (0x0004) [0x0000000000000000]              
+	unsigned long                                      bIsPrivate : 1;                                   		// 0x0010 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	// int                                             SmallTokens;                                      		// 0x0014 (0x0004) [0x0000000000000000]              
+	// int                                             MinorTokens;                                      		// 0x0018 (0x0004) [0x0000000000000000]              
+	// int                                             MediumTokens;                                     		// 0x001C (0x0004) [0x0000000000000000]              
+	// int                                             LargeTokens;                                      		// 0x0020 (0x0004) [0x0000000000000000]              
+	// int                                             DuperTokens;                                      		// 0x0024 (0x0004) [0x0000000000000000]              
+	// int                                             MassiveTokens;                                    		// 0x0028 (0x0004) [0x0000000000000000]              
+	// class ADunDefPawn*                              myPawn;                                           		// 0x002C (0x0004) [0x0000000000000000]              
+	// float                                           Remainder;                                        		// 0x0030 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerController.DropMana
@@ -7450,6 +7393,23 @@ struct ADunDefPlayerController_execSaveForEveryone_Parms
 struct ADunDefPlayerController_execSaveHeroes_Parms
 {
 	// int                                             UserID;                                           		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefPlayerController.TestWaveStatMultiplier
+// [0x00824002] 
+struct ADunDefPlayerController_execTestWaveStatMultiplier_Parms
+{
+	int                                                CurrentTestWaveNumber;                            		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// struct FCampaignLevelEntry                      anEntry;                                          		// 0x0008 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// float                                           scalingWave;                                      		// 0x0110 (0x0004) [0x0000000000000000]              
+	// class ADunDefGameReplicationInfo*               ddGRI;                                            		// 0x0114 (0x0004) [0x0000000000000000]              
+	// float                                           waveNumber;                                       		// 0x0118 (0x0004) [0x0000000000000000]              
+	// float                                           val;                                              		// 0x011C (0x0004) [0x0000000000000000]              
+	// float                                           A1;                                               		// 0x0120 (0x0004) [0x0000000000000000]              
+	// float                                           b1;                                               		// 0x0124 (0x0004) [0x0000000000000000]              
+	// float                                           C1;                                               		// 0x0128 (0x0004) [0x0000000000000000]              
+	// class UDunDefMapInfo*                           tMapInfo;                                         		// 0x012C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerController.StopHovering
@@ -7583,11 +7543,11 @@ struct ADunDefBasePlayerController_execServerReceiveMyStatBlock_Parms
 	// int                                             I;                                                		// 0x0104 (0x0004) [0x0000000000000000]              
 	// int                                             J;                                                		// 0x0108 (0x0004) [0x0000000000000000]              
 	// class UDunDefPlayerStats*                       myStats;                                          		// 0x010C (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FAchievementInfo myAchievements;                                   		// 0x0110 (0x0078) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      thisEntry;                                        		// 0x0188 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             newBestCount;                                     		// 0x02A0 (0x0004) [0x0000000000000000]              
-	// int                                             levelCount;                                       		// 0x02A4 (0x0004) [0x0000000000000000]              
-	// TArray< int >                                   myNewBests;                                       		// 0x02A8 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FAchievementInfo myAchievements;                                   		// 0x0110 (0x01F4) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      thisEntry;                                        		// 0x0304 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             newBestCount;                                     		// 0x040C (0x0004) [0x0000000000000000]              
+	// int                                             levelCount;                                       		// 0x0410 (0x0004) [0x0000000000000000]              
+	// TArray< int >                                   myNewBests;                                       		// 0x0414 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefBasePlayerController.ClientSendMyStats
@@ -7619,12 +7579,12 @@ struct ADunDefBasePlayerController_execSendMyStats_Parms
 	// int                                             LevelIndex;                                       		// 0x0018 (0x0004) [0x0000000000000000]              
 	// int                                             levelCount;                                       		// 0x001C (0x0004) [0x0000000000000000]              
 	// class UDunDefPlayerStats*                       myStats;                                          		// 0x0020 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FAchievementInfo myAchievements;                                   		// 0x0024 (0x0078) [0x0000000000000000]              
-	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > myLevelProgress;                                  		// 0x009C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// unsigned long                                   haveNewBest : 1;                                  		// 0x00A8 (0x0004) [0x0000000000000000] [0x00000001] 
-	// class ADunDefGameReplicationInfo*               theGRI;                                           		// 0x00AC (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x00B0 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      thisEntry;                                        		// 0x00B4 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FAchievementInfo myAchievements;                                   		// 0x0024 (0x01F4) [0x0000000000000000]              
+	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > myLevelProgress;                                  		// 0x0218 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// unsigned long                                   haveNewBest : 1;                                  		// 0x0224 (0x0004) [0x0000000000000000] [0x00000001] 
+	// class ADunDefGameReplicationInfo*               theGRI;                                           		// 0x0228 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x022C (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      thisEntry;                                        		// 0x0230 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefBasePlayerController.ClientAddRemoteIDToIgnore
@@ -7862,21 +7822,6 @@ struct ADunDefBasePlayerController_eventPostBeginPlay_Parms
 {
 };
 
-// Function UDKGame.DunDefHero.SetHatlessMesh
-// [0x00020002] 
-struct UDunDefHero_execSetHatlessMesh_Parms
-{
-	// class ADunDefPlayer*                            thePlayer;                                        		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefHero.CheckHeroForHat
-// [0x00020102] 
-struct UDunDefHero_execCheckHeroForHat_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UHeroEquipment*                           testEq;                                           		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
 // Function UDKGame.DunDefHero.CheckHeroForCosmeticSet
 // [0x00020102] 
 struct UDunDefHero_execCheckHeroForCosmeticSet_Parms
@@ -7985,7 +7930,7 @@ struct UDunDefHero_execIsHeroUnlocked_Parms
 	class ULocalPlayer*                                ForPlayer;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                lockedByDemo;                                     		// 0x0004 (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x000C (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x000C (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHero.IsCostumeUnlocked
@@ -7995,7 +7940,7 @@ struct UDunDefHero_execIsCostumeUnlocked_Parms
 	class ULocalPlayer*                                ForPlayer;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                costumeIndex;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x000C (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x000C (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHero.GetNextUnlockedCostumeIndex
@@ -8005,8 +7950,8 @@ struct UDunDefHero_execGetNextUnlockedCostumeIndex_Parms
 	class ULocalPlayer*                                ForPlayer;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                CurrentIndex;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x000C (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             it;                                               		// 0x00A4 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x000C (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             it;                                               		// 0x00A8 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHero.GetNumberOfUnlockedCostumes
@@ -8015,9 +7960,9 @@ struct UDunDefHero_execGetNumberOfUnlockedCostumes_Parms
 {
 	class ULocalPlayer*                                ForPlayer;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x0008 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             it;                                               		// 0x00A0 (0x0004) [0x0000000000000000]              
-	// int                                             Count;                                            		// 0x00A4 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x0008 (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             it;                                               		// 0x00A4 (0x0004) [0x0000000000000000]              
+	// int                                             Count;                                            		// 0x00A8 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHero.GetRemovedHeroSelectionSound
@@ -8070,7 +8015,6 @@ struct UDunDefHero_execGetCharacterMesh_Parms
 {
 	int                                                CostumeIndexOverride;                             		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	class USkeletalMesh*                               ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefViewportClient*                    ViewportClient;                                   		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHero.AtMaxExperience
@@ -8683,33 +8627,6 @@ struct UDunDefHero_execGetPlayerGravityMultiplier_Parms
 	// class ADunDefGameReplicationInfo*               ddGRI;                                            		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.DunDefHero.GetDivineTowerHealMutliplier
-// [0x00020002] 
-struct UDunDefHero_execGetDivineTowerHealMutliplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             armorcount;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           Equipment;                                        		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefHero.GetArmorTowerHealthBonus
-// [0x00020002] 
-struct UDunDefHero_execGetArmorTowerHealthBonus_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             armorcount;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           Equipment;                                        		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefHero.GetVoidTowerRangeMutliplier
-// [0x00020002] 
-struct UDunDefHero_execGetVoidTowerRangeMutliplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             armorcount;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           Equipment;                                        		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
 // Function UDKGame.DunDefHero.GetPlayerSpeedMultiplier
 // [0x00020002] 
 struct UDunDefHero_execGetPlayerSpeedMultiplier_Parms
@@ -9117,13 +9034,6 @@ struct ADunDefGameReplicationInfo_eventGetFinalWaveNumber_Parms
 struct ADunDefGameReplicationInfo_eventGetWaveNumber_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefGameReplicationInfo.IsInIronManMode
-// [0x00020902] ( FUNC_Event )
-struct ADunDefGameReplicationInfo_eventIsInIronManMode_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.IsInHardCoreMode
@@ -9689,7 +9599,7 @@ struct ADunDefGameReplicationInfo_execGetLevelFriendlyName_Parms
 {
 	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
 	// struct FString                                  theString;                                        		// 0x000C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FCampaignLevelEntry                      aLevelEntry;                                      		// 0x0018 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      aLevelEntry;                                      		// 0x0018 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.GetLevelFriendlyNameWithoutFormatting
@@ -9697,18 +9607,18 @@ struct ADunDefGameReplicationInfo_execGetLevelFriendlyName_Parms
 struct ADunDefGameReplicationInfo_eventGetLevelFriendlyNameWithoutFormatting_Parms
 {
 	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// struct FCampaignLevelEntry                      aLevelEntry;                                      		// 0x000C (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      aLevelEntry;                                      		// 0x000C (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.CheckDLCCompatibility
 // [0x00420002] 
 struct ADunDefGameReplicationInfo_execCheckDLCCompatibility_Parms
 {
-	struct FCampaignLevelEntry                         forLevel;                                         		// 0x0000 (0x0118) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	TArray< class APlayerReplicationInfo* >            playersWithoutLevel;                              		// 0x0118 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0124 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             I;                                                		// 0x0128 (0x0004) [0x0000000000000000]              
-	// int                                             levelDLCId;                                       		// 0x012C (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         forLevel;                                         		// 0x0000 (0x0108) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	TArray< class APlayerReplicationInfo* >            playersWithoutLevel;                              		// 0x0108 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0114 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             I;                                                		// 0x0118 (0x0004) [0x0000000000000000]              
+	// int                                             levelDLCId;                                       		// 0x011C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.AreDLCMasksUpToDate
@@ -9760,13 +9670,6 @@ struct ADunDefGameReplicationInfo_execQueueStatsSending_Parms
 	int                                                statPlayerIndex;                                  		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             I;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
 	// struct FStatSendingQueueEntry                   newEntry;                                         		// 0x000C (0x0008) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefGameReplicationInfo.GetAscensionScoreMultiplier
-// [0x00022002] 
-struct ADunDefGameReplicationInfo_execGetAscensionScoreMultiplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.GetScoreMultiplier
@@ -9824,15 +9727,6 @@ struct ADunDefGameReplicationInfo_execGetScoreAwardSpeed_Parms
 	// float                                           val;                                              		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.DunDefGameReplicationInfo.IsEarlyGameMap
-// [0x00020102] 
-struct ADunDefGameReplicationInfo_execIsEarlyGameMap_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// TArray< struct FString >                        Earlygametags;                                    		// 0x0004 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  StringToTest;                                     		// 0x0010 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
 // Function UDKGame.DunDefGameReplicationInfo.AwardWaveCompletion
 // [0x00020002] 
 struct ADunDefGameReplicationInfo_execAwardWaveCompletion_Parms
@@ -9859,7 +9753,7 @@ struct ADunDefGameReplicationInfo_execAwardWaveCompletion_Parms
 struct ADunDefGameReplicationInfo_execGetTimeBonusSecondsInterval_Parms
 {
 	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// float                                           Multiplier;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
+	// float                                           multiplier;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             NumPlayers;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -9917,7 +9811,7 @@ struct ADunDefGameReplicationInfo_execViewportTick_Parms
 {
 	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class ADunDefPlayerController*                  PC;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.PlayerStoppedTalking
@@ -10177,36 +10071,6 @@ struct ADunDefGameReplicationInfo_execRequestExpensiveFunction_Parms
 	// int                                             ActorIndex;                                       		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.DunDefGameReplicationInfo.GetDivineShardDropChance
-// [0x00020002] 
-struct ADunDefGameReplicationInfo_execGetDivineShardDropChance_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             SwitchInt;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefGameReplicationInfo.GetRandomRewardItem
-// [0x00020002] 
-struct ADunDefGameReplicationInfo_execGetRandomRewardItem_Parms
-{
-	TArray< class UHeroEquipment* >                    HeroEquipmentList;                                		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	class UHeroEquipment*                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UHeroEquipment*                           EQ;                                               		// 0x0010 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefGameReplicationInfo.GiveRewardItem
-// [0x00824002] 
-struct ADunDefGameReplicationInfo_execGiveRewardItem_Parms
-{
-	class ADunDefPlayerController*                     PC;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UHeroEquipment*                              Reward;                                           		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      GetRandomReward : 1;                              		// 0x0008 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// class UHeroEquipment*                           RewardToGive;                                     		// 0x000C (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           theNewEquipment;                                  		// 0x0010 (0x0004) [0x0000000000000000]              
-	// struct FEquipmentNetInfo                        theNetInfo;                                       		// 0x0014 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
 // Function UDKGame.DunDefGameReplicationInfo.SetLastItemDropValues
 // [0x00020002] 
 struct ADunDefGameReplicationInfo_execSetLastItemDropValues_Parms
@@ -10232,16 +10096,15 @@ struct ADunDefGameReplicationInfo_execSetupVictoryShopEquipments_Parms
 struct ADunDefGameReplicationInfo_execDoLevelVictory_Parms
 {
 	// class ADunDefPlayerController*                  PC;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
-	// class ADunDefPlayerController*                  RPC;                                              		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x000C (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FCampaignLevelEntry                      theCampaignEntry;                                 		// 0x0124 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > currentProgress;                                  		// 0x023C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             currentLevelIndex;                                		// 0x0248 (0x0004) [0x0000000000000000]              
-	// int                                             PlayerIndex;                                      		// 0x024C (0x0004) [0x0000000000000000]              
-	// int                                             UserID;                                           		// 0x0250 (0x0004) [0x0000000000000000]              
-	// int                                             it;                                               		// 0x0254 (0x0004) [0x0000000000000000]              
-	// TArray< struct FName >                          buttons;                                          		// 0x0258 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0008 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      theCampaignEntry;                                 		// 0x0110 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > currentProgress;                                  		// 0x0218 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             currentLevelIndex;                                		// 0x0224 (0x0004) [0x0000000000000000]              
+	// int                                             PlayerIndex;                                      		// 0x0228 (0x0004) [0x0000000000000000]              
+	// int                                             UserID;                                           		// 0x022C (0x0004) [0x0000000000000000]              
+	// int                                             it;                                               		// 0x0230 (0x0004) [0x0000000000000000]              
+	// TArray< struct FName >                          buttons;                                          		// 0x0234 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.PlayLevelVictoryMusic
@@ -10512,8 +10375,8 @@ struct ADunDefGameReplicationInfo_eventPostBeginPlay_Parms
 	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0008 (0x0004) [0x0000000000000000]              
 	// TArray< class USequenceObject* >                OutSeqObjs;                                       		// 0x000C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// class USequenceObject*                          aSequenceObject;                                  		// 0x0018 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      levEntry;                                         		// 0x001C (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x0134 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      levEntry;                                         		// 0x001C (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x0124 (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.ShopExpire
@@ -10529,13 +10392,6 @@ struct ADunDefGameReplicationInfo_eventDestroyed_Parms
 	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0000 (0x0004) [0x0000000000000000]              
 	// class ADunDefForge*                             thisForge;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerController*                  PC;                                               		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefGameReplicationInfo.GetTotemAmount
-// [0x00020102] 
-struct ADunDefGameReplicationInfo_execGetTotemAmount_Parms
-{
-	// int                                             TotemCount;                                       		// 0x0000 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.DoTravelVisuals
@@ -10601,16 +10457,6 @@ struct ADunDefGameReplicationInfo_execLoadMission_Parms
 	class UCampaignLevelEntryObject*                   missionObject;                                    		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
-// Function UDKGame.DunDefGameReplicationInfo.CheckFileName
-// [0x00020102] 
-struct ADunDefGameReplicationInfo_execCheckFileName_Parms
-{
-	struct FString                                     Filename;                                         		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	class UDunDefViewportClient*                       Client;                                           		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0010 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FString                                  testString;                                       		// 0x0014 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
 // Function UDKGame.DunDefGameReplicationInfo.LoadLevel
 // [0x00024102] 
 struct ADunDefGameReplicationInfo_execLoadLevel_Parms
@@ -10618,8 +10464,6 @@ struct ADunDefGameReplicationInfo_execLoadLevel_Parms
 	struct FString                                     LevelName;                                        		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
 	unsigned long                                      GameplayLevel : 1;                                		// 0x000C (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 	unsigned long                                      IsMissionLoad : 1;                                		// 0x0010 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// struct FString                                  CustomTavernFileName;                             		// 0x0014 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefViewportClient*                    Vp;                                               		// 0x0020 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.UpdateRichPresence
@@ -11043,15 +10887,15 @@ struct ADunDefGameReplicationInfo_execUnpackPlayerStats_Parms
 	// int                                             levelCount;                                       		// 0x0028 (0x0004) [0x0000000000000000]              
 	// TArray< int >                                   TempArray;                                        		// 0x002C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// class UDunDefPlayerStats*                       tempStats;                                        		// 0x0038 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FAchievementInfo tempAchievements;                                 		// 0x003C (0x0078) [0x0000000000000000]              
-	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > tempProgress;                                     		// 0x00B4 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct UDunDefHeroManagerNative_FLevelProgressInfo tempProgressEntry;                                		// 0x00C0 (0x0010) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FCampaignLevelEntry                      thisEntry;                                        		// 0x00D0 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x01E8 (0x0004) [0x0000000000000000]              
-	// int                                             remoteUserID;                                     		// 0x01EC (0x0004) [0x0000000000000000]              
-	// struct FString                                  PlayerName;                                       		// 0x01F0 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             statPlayerIndex;                                  		// 0x01FC (0x0004) [0x0000000000000000]              
-	// int                                             bestOfCount;                                      		// 0x0200 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FAchievementInfo tempAchievements;                                 		// 0x003C (0x01F4) [0x0000000000000000]              
+	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > tempProgress;                                     		// 0x0230 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FLevelProgressInfo tempProgressEntry;                                		// 0x023C (0x0010) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      thisEntry;                                        		// 0x024C (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0354 (0x0004) [0x0000000000000000]              
+	// int                                             remoteUserID;                                     		// 0x0358 (0x0004) [0x0000000000000000]              
+	// struct FString                                  PlayerName;                                       		// 0x035C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             statPlayerIndex;                                  		// 0x0368 (0x0004) [0x0000000000000000]              
+	// int                                             bestOfCount;                                      		// 0x036C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.SendStatsInfo
@@ -11080,17 +10924,17 @@ struct ADunDefGameReplicationInfo_execPreparePlayerStats_Parms
 	// class ADunDefPlayerController*                  PC;                                               		// 0x003C (0x0004) [0x0000000000000000]              
 	// class UDunDefPlayerStats*                       curPlayerStats;                                   		// 0x0040 (0x0004) [0x0000000000000000]              
 	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > curLevelProgress;                                 		// 0x0044 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct UDunDefHeroManagerNative_FAchievementInfo curPlayerAchievements;                            		// 0x0050 (0x0078) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x00C8 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      thisEntry;                                        		// 0x00CC (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// TArray< struct FplayerStatsEntry >              tempStats;                                        		// 0x01E4 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FplayerStatsEntry                        curEntry;                                         		// 0x01F0 (0x0028) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             PlayerIndex;                                      		// 0x0218 (0x0004) [0x0000000000000000]              
-	// int                                             UserID;                                           		// 0x021C (0x0004) [0x0000000000000000]              
-	// int                                             statPlayerIndex;                                  		// 0x0220 (0x0004) [0x0000000000000000]              
-	// int                                             newBestCount;                                     		// 0x0224 (0x0004) [0x0000000000000000]              
-	// int                                             statSize;                                         		// 0x0228 (0x0004) [0x0000000000000000]              
-	// unsigned long                                   haveNewBest : 1;                                  		// 0x022C (0x0004) [0x0000000000000000] [0x00000001] 
+	// struct UDunDefHeroManagerNative_FAchievementInfo curPlayerAchievements;                            		// 0x0050 (0x01F4) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0244 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      thisEntry;                                        		// 0x0248 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< struct FplayerStatsEntry >              tempStats;                                        		// 0x0350 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FplayerStatsEntry                        curEntry;                                         		// 0x035C (0x0028) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             PlayerIndex;                                      		// 0x0384 (0x0004) [0x0000000000000000]              
+	// int                                             UserID;                                           		// 0x0388 (0x0004) [0x0000000000000000]              
+	// int                                             statPlayerIndex;                                  		// 0x038C (0x0004) [0x0000000000000000]              
+	// int                                             newBestCount;                                     		// 0x0390 (0x0004) [0x0000000000000000]              
+	// int                                             statSize;                                         		// 0x0394 (0x0004) [0x0000000000000000]              
+	// unsigned long                                   haveNewBest : 1;                                  		// 0x0398 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.DunDefGameReplicationInfo.RemovePlayerStats
@@ -11558,7 +11402,7 @@ struct ADunDefHUD_execInitActionWheel_Parms
 // [0x00420002] 
 struct ADunDefHUD_execUpdateForOptions_Parms
 {
-	struct UDunDefHeroManagerNative_FOptionsFixedStruct newOptions;                                       		// 0x0000 (0x0098) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FOptionsFixedStruct newOptions;                                       		// 0x0000 (0x009C) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHUD.PostBeginPlay
@@ -11697,7 +11541,7 @@ struct UUI_PlayerHUD_execAddToScore_Parms
 struct UUI_PlayerHUD_execNotifyExperienceChange_Parms
 {
 	unsigned long                                      DontPlayAnimation : 1;                            		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_PlayerHUD.CheckHeroCanLevelUp
@@ -11845,7 +11689,7 @@ struct UDunDefUIScene_execCinematicCompleted_Parms
 struct UDunDefUIScene_execUseFastMenuTransitions_Parms
 {
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x0004 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x0004 (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefUIScene.AllowOverlays
@@ -12680,7 +12524,7 @@ struct AMain_execGetPlayerEnemyKillStat_Parms
 struct AMain_execGetTreasureManaDropMultiplier_Parms
 {
 	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FCampaignLevelEntry                      cEntry;                                           		// 0x0004 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      cEntry;                                           		// 0x0004 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.Main.GetRandomEnemyTemplate
@@ -12697,34 +12541,8 @@ struct AMain_execGetRandomEnemyTemplate_Parms
 	// class UDunDefMapInfo*                           tMapInfo;                                         		// 0x0024 (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.Main.CheckForLootGoblins
-// [0x00020002] 
-struct AMain_execCheckForLootGoblins_Parms
-{
-	class UDunDef_SeqVar_EnemyWaveEntries*             entriesVar;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             it;                                               		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.Main.RemoveLootGoblin
-// [0x00820002] 
-struct AMain_execRemoveLootGoblin_Parms
-{
-	class UDunDef_SeqVar_EnemyWaveEntries*             entriesVar;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// int                                             it;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct FEnemyWaveEntry                          WaveEntry;                                        		// 0x0008 (0x00A0) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.Main.AddLootGoblin
-// [0x00820002] 
-struct AMain_execAddLootGoblin_Parms
-{
-	class UDunDef_SeqVar_EnemyWaveEntries*             entriesVar;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// struct FEnemyWaveEntry                          WaveEntry;                                        		// 0x0004 (0x00A0) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
 // Function UDKGame.Main.ModifyEnemyWaveEntries
-// [0x00820002] 
+// [0x00020002] 
 struct AMain_execModifyEnemyWaveEntries_Parms
 {
 	class UDunDef_SeqVar_EnemyWaveEntries*             entriesVar;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
@@ -12733,8 +12551,6 @@ struct AMain_execModifyEnemyWaveEntries_Parms
 	// int                                             NumEnemies;                                       		// 0x000C (0x0004) [0x0000000000000000]              
 	// int                                             aNumPlayers;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
 	// int                                             P;                                                		// 0x0014 (0x0004) [0x0000000000000000]              
-	// struct FEnemyWaveEntry                          Entry;                                            		// 0x0018 (0x00A0) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// TArray< struct FEnemyWaveEntry >                EntryArray;                                       		// 0x00B8 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.Main.GetEnemyTargetingTeam
@@ -12780,7 +12596,7 @@ struct AMain_execSetStatsWriteClass_Parms
 struct AMain_execHeartbeat_Parms
 {
 	// class UDunDefOnlineGameSettingsConsole*         GameSettings;                                     		// 0x0000 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class ADunDefGameReplicationInfo*               theGRI;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
 	// struct FCustomGameSetting                       NewCustomSetting;                                 		// 0x000C (0x0018) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// int                                             iter;                                             		// 0x0024 (0x0004) [0x0000000000000000]              
@@ -12848,8 +12664,8 @@ struct AMain_execShouldSpawnAtStartSpot_Parms
 // [0x00820002] 
 struct AMain_execProceedToNextCampaignLevel_Parms
 {
-	// struct FCampaignLevelEntry                      nextLevelEntry;                                   		// 0x0000 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UCampaignLevelEntryObject*                nextLevelObject;                                  		// 0x0118 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      nextLevelEntry;                                   		// 0x0000 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UCampaignLevelEntryObject*                nextLevelObject;                                  		// 0x0108 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.Main.GetRegisteredWaveEntriesKillCount
@@ -12862,14 +12678,7 @@ struct AMain_execGetRegisteredWaveEntriesKillCount_Parms
 	// int                                             KillCount;                                        		// 0x000C (0x0004) [0x0000000000000000]              
 	// int                                             it;                                               		// 0x0010 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   bNightmareMode : 1;                               		// 0x0014 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   bInsanityMode : 1;                                		// 0x0018 (0x0004) [0x0000000000000000] [0x00000001] 
-};
-
-// Function UDKGame.Main.CalculatedNetSpeed
-// [0x00020002] 
-struct AMain_execCalculatedNetSpeed_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// unsigned long                                   bPureStrat : 1;                                   		// 0x0018 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.Main.GetMain
@@ -12927,10 +12736,10 @@ struct AMain_eventSetGameType_Parms
 	struct FString                                     Options;                                          		// 0x000C (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
 	struct FString                                     Portal;                                           		// 0x0018 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
 	class UClass*                                      ReturnValue;                                      		// 0x0024 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FCampaignLevelEntry                      Entry;                                            		// 0x0028 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             I;                                                		// 0x0140 (0x0004) [0x0000000000000000]              
-	// class UClass*                                   gi;                                               		// 0x0144 (0x0004) [0x0000000000000000]              
-	// unsigned long                                   bPreventPureStrategy : 1;                         		// 0x0148 (0x0004) [0x0000000000000000] [0x00000001] 
+	// struct FCampaignLevelEntry                      Entry;                                            		// 0x0028 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             I;                                                		// 0x0130 (0x0004) [0x0000000000000000]              
+	// class UClass*                                   gi;                                               		// 0x0134 (0x0004) [0x0000000000000000]              
+	// unsigned long                                   bPreventPureStrategy : 1;                         		// 0x0138 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.Main.GetDefaultGameClassPath
@@ -12975,7 +12784,7 @@ struct AMain_execUpdateGlobalHeroModifiers_Parms
 {
 	class ADunDefPlayerController*                     thePC;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class AActor*                                   act;                                              		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.Main.GetPlayerIndex
@@ -13008,7 +12817,7 @@ struct AMain_eventPostLogin_Parms
 	// TArray< class USequenceObject* >                theEvents;                                        		// 0x0044 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// class USequenceObject*                          theEvent;                                         		// 0x0050 (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerController*                  PC;                                               		// 0x0054 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0058 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0058 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.Main.GetPrimaryLocalPlayerController
@@ -13112,7 +12921,7 @@ struct AMain_eventHandleSeamlessTravelPlayer_Parms
 	// class APlayerReplicationInfo*                   OldPRI;                                           		// 0x001C (0x0004) [0x0000000000000000]              
 	// int                                             remoteID;                                         		// 0x0020 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   PushToTalk : 1;                                   		// 0x0024 (0x0004) [0x0000000000000000] [0x00000001] 
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0028 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0028 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.Main.GetSeamlessTravelActorList
@@ -13136,11 +12945,11 @@ struct AMain_eventPostSeamlessTravel_Parms
 struct AMain_execUpdateMapName_Parms
 {
 	// class UDunDefOnlineGameSettingsConsole*         GameSettings;                                     		// 0x0000 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      currentLevelEntry;                                		// 0x0008 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             campaignIndex;                                    		// 0x0120 (0x0004) [0x0000000000000000]              
-	// struct FString                                  campaignTag;                                      		// 0x0124 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// unsigned long                                   bIsInLobby : 1;                                   		// 0x0130 (0x0004) [0x0000000000000000] [0x00000001] 
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      currentLevelEntry;                                		// 0x0008 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             campaignIndex;                                    		// 0x0110 (0x0004) [0x0000000000000000]              
+	// struct FString                                  campaignTag;                                      		// 0x0114 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// unsigned long                                   bIsInLobby : 1;                                   		// 0x0120 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.Main.GetOnlineSessionName
@@ -13334,17 +13143,16 @@ struct AMain_execDelayedShowSaveNotification_Parms
 	float                                              DelayTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
-// Function UDKGame.Main.KickEveryoneWithWarning
+// Function UDKGame.Main.HandleCheater
 // [0x00020002] 
-struct AMain_execKickEveryoneWithWarning_Parms
+struct AMain_execHandleCheater_Parms
 {
 };
 
-// Function UDKGame.Main.CheckMap
-// [0x00024002] 
-struct AMain_execCheckMap_Parms
+// Function UDKGame.Main.RunAntiCheat
+// [0x00020002] 
+struct AMain_execRunAntiCheat_Parms
 {
-	unsigned long                                      JustYeet : 1;                                     		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 };
 
 // Function UDKGame.Main.PostBeginPlay
@@ -13481,7 +13289,7 @@ struct ADunDefPlayerAbility_execAdjustDamage_Parms
 struct ADunDefPlayerAbility_execMeetsHeroLevelRequirement_Parms
 {
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerAbility.AnimNotify_CurrentAbility_Off
@@ -13494,13 +13302,6 @@ struct ADunDefPlayerAbility_execAnimNotify_CurrentAbility_Off_Parms
 // [0x00020100] 
 struct ADunDefPlayerAbility_execAnimNotify_CurrentAbility_On_Parms
 {
-};
-
-// Function UDKGame.DunDefPlayerAbility.GetPetAttackRateMultiplier
-// [0x00020102] 
-struct ADunDefPlayerAbility_execGetPetAttackRateMultiplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.DunDefPlayerAbility.GetPlayerDamageResistanceMultiplier
@@ -13529,7 +13330,7 @@ struct ADunDefPlayerAbility_execGetPlayerGroundSpeedMultiplier_Parms
 struct ADunDefPlayerAbility_execGetCastRateMultiplier_Parms
 {
 	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// float                                           CastSpeedMultiplier;                              		// 0x0008 (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerAbility_Apprentice_Overcharge* abilityOvercharge;                                		// 0x000C (0x0004) [0x0000000000000000]              
 };
@@ -13849,12 +13650,6 @@ struct ADunDefPlayerAbility_execRequestActivation_Parms
 	// struct FString                                  theActivationString;                              		// 0x0008 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
-// Function UDKGame.DunDefPlayerAbility.ResetCoolDown
-// [0x00020102] 
-struct ADunDefPlayerAbility_execResetCoolDown_Parms
-{
-};
-
 // Function UDKGame.DunDefPlayerAbility.GetCooldownStartTime
 // [0x00020102] 
 struct ADunDefPlayerAbility_execGetCooldownStartTime_Parms
@@ -13963,31 +13758,6 @@ struct ADunDefPlayerAbility_execDrawCastingHUD_Parms
 {
 	class ADunDefHUD*                                  H;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefPlayer.RestartEffect
-// [0x00020102] 
-struct ADunDefPlayer_execRestartEffect_Parms
-{
-	int                                                Id;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class ASpecialGamePlayEffect*                   EffectToTest;                                     		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPlayer.EffectIdCheck
-// [0x00020102] 
-struct ADunDefPlayer_execEffectIdCheck_Parms
-{
-	int                                                Id;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class ASpecialGamePlayEffect*                   EffectToTest;                                     		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPlayer.AddEffect
-// [0x00020102] 
-struct ADunDefPlayer_execAddEffect_Parms
-{
-	class ASpecialGamePlayEffect*                      EffectToAdd;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class ASpecialGamePlayEffect*                   Effect;                                           		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayer.StaticGetOverrideSocketName
@@ -14768,25 +14538,6 @@ struct ADunDefPlayer_execGetPawnDamageResistanceModifier_Parms
 	// class ADunDefPlayerAbility*                     ability;                                          		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.DunDefPlayer.GetVoidMultiplier
-// [0x00020002] 
-struct ADunDefPlayer_execGetVoidMultiplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             armorcount;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              MyHero;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           Equipment;                                        		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPlayer.GetPawnPetAttackRateMultiplier
-// [0x00020102] 
-struct ADunDefPlayer_execGetPawnPetAttackRateMultiplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// float                                           Value;                                            		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class ADunDefPlayerAbility*                     ability;                                          		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
 // Function UDKGame.DunDefPlayer.GetPawnDamageModifier
 // [0x00024102] 
 struct ADunDefPlayer_execGetPawnDamageModifier_Parms
@@ -14795,7 +14546,6 @@ struct ADunDefPlayer_execGetPawnDamageModifier_Parms
 	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// float                                           Value;                                            		// 0x0008 (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerAbility*                     ability;                                          		// 0x000C (0x0004) [0x0000000000000000]              
-	// class ASpecialGamePlayEffect*                   Effect;                                           		// 0x0010 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayer.AbilitiesOverrideGroundSpeed
@@ -15032,23 +14782,6 @@ struct ADunDefPlayer_execGetManaTokenAttractionRadius_Parms
 struct ADunDefPlayer_execHasMaxManaPower_Parms
 {
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefPlayer.GetArmorHealingMultiplier
-// [0x00020002] 
-struct ADunDefPlayer_execGetArmorHealingMultiplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             armorcount;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              MyHero;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           Equipment;                                        		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPlayer.DivineHeal
-// [0x00020102] 
-struct ADunDefPlayer_execDivineHeal_Parms
-{
-	// float                                           CurrentHealth;                                    		// 0x0000 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayer.Tick
@@ -15779,20 +15512,6 @@ struct ADunDefPawn_execDoCrushed_Parms
 	class AActor*                                      Victim;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
-// Function UDKGame.DunDefPawn.RemoveDebuff
-// [0x00020002] 
-struct ADunDefPawn_execRemoveDebuff_Parms
-{
-};
-
-// Function UDKGame.DunDefPawn.AddDebuff
-// [0x00020002] 
-struct ADunDefPawn_execAddDebuff_Parms
-{
-	float                                              Duration;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Amount;                                           		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
 // Function UDKGame.DunDefPawn.CrushedBy
 // [0x00020000] 
 struct ADunDefPawn_execCrushedBy_Parms
@@ -16181,10 +15900,11 @@ struct ADunDefPawn_execSpawnManaTokens_Parms
 	class ADunDefPawn*                                 theInstigator;                                    		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	class AActor*                                      fromActor;                                        		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	class ADunDefPlayer*                               InitialAttractor;                                 		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// class ADunDefManaToken*                         mToken;                                           		// 0x000C (0x0004) [0x0000000000000000]              
-	// float                                           numTokensToSpawn;                                 		// 0x0010 (0x0004) [0x0000000000000000]              
-	// int                                             NumTokenActors;                                   		// 0x0014 (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0018 (0x0004) [0x0000000000000000]              
+	unsigned long                                      bIsPrivate : 1;                                   		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	// class ADunDefManaToken*                         mToken;                                           		// 0x0010 (0x0004) [0x0000000000000000]              
+	// float                                           numTokensToSpawn;                                 		// 0x0014 (0x0004) [0x0000000000000000]              
+	// int                                             NumTokenActors;                                   		// 0x0018 (0x0004) [0x0000000000000000]              
+	// int                                             I;                                                		// 0x001C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPawn.TakeDamage
@@ -16872,7 +16592,7 @@ struct ADunDefWeapon_execInitializeForHeroEquipment_Parms
 struct ADunDefWeapon_execGetEquipmentBlockingBonus_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16881,7 +16601,7 @@ struct ADunDefWeapon_execGetEquipmentBlockingBonus_Parms
 struct ADunDefWeapon_execGetEquipmentShotsPerSecondBonus_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16890,7 +16610,7 @@ struct ADunDefWeapon_execGetEquipmentShotsPerSecondBonus_Parms
 struct ADunDefWeapon_execGetEquipmentReloadSpeedBonus_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16899,7 +16619,7 @@ struct ADunDefWeapon_execGetEquipmentReloadSpeedBonus_Parms
 struct ADunDefWeapon_execGetEquipmentTotalAmmoBonus_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16908,7 +16628,7 @@ struct ADunDefWeapon_execGetEquipmentTotalAmmoBonus_Parms
 struct ADunDefWeapon_execGetEquipmentAdditionalDamageAmount_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16917,7 +16637,7 @@ struct ADunDefWeapon_execGetEquipmentAdditionalDamageAmount_Parms
 struct ADunDefWeapon_execGetEquipmentAdditionalDamageType_Parms
 {
 	class UClass*                                      ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16926,7 +16646,7 @@ struct ADunDefWeapon_execGetEquipmentAdditionalDamageType_Parms
 struct ADunDefWeapon_execGetEquipmentChargeSpeedBonus_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16935,7 +16655,7 @@ struct ADunDefWeapon_execGetEquipmentChargeSpeedBonus_Parms
 struct ADunDefWeapon_execGetEquipmentKnockbackBonus_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16944,7 +16664,7 @@ struct ADunDefWeapon_execGetEquipmentKnockbackBonus_Parms
 struct ADunDefWeapon_execGetEquipmentProjectileSpeedBonus_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16953,7 +16673,7 @@ struct ADunDefWeapon_execGetEquipmentProjectileSpeedBonus_Parms
 struct ADunDefWeapon_execGetEquipmentNumProjectilesBonus_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16962,7 +16682,7 @@ struct ADunDefWeapon_execGetEquipmentNumProjectilesBonus_Parms
 struct ADunDefWeapon_execGetEquipmentAltDamageBonus_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16971,16 +16691,7 @@ struct ADunDefWeapon_execGetEquipmentAltDamageBonus_Parms
 struct ADunDefWeapon_execGetEquipmentDamageBonus_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefWeapon.GetProtonChargeBlastDamageMultiplier
-// [0x00020102] 
-struct ADunDefWeapon_execGetProtonChargeBlastDamageMultiplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16989,7 +16700,7 @@ struct ADunDefWeapon_execGetProtonChargeBlastDamageMultiplier_Parms
 struct ADunDefWeapon_execGetEquipmentDamageMultiplier_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           weaponEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -16999,7 +16710,7 @@ struct ADunDefWeapon_execGetHeroDamageModifier_Parms
 {
 	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// float                                           val;                                              		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefWeapon.GetProjectileSpeed
@@ -17402,7 +17113,7 @@ struct ADunDefPlayerAbility_Apprentice_Overcharge_execGetCastingMultiplier_Parms
 {
 	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// float                                           Mult;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerAbility_CharacterToggle.GetTimeSinceActivation
@@ -17496,7 +17207,7 @@ struct UUI_HeroInfo_execNotifyPhaseChange_Parms
 // [0x00024002] 
 struct UUI_HeroInfo_execInitializeForHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      IsRemoteHero : 1;                                 		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 };
 
@@ -17602,7 +17313,7 @@ struct ADunDefPlayerReplicationInfo_execGetOnlineName_Parms
 struct ADunDefPlayerReplicationInfo_execGetHumanReadableNameTwoLines_Parms
 {
 	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// class UDunDefHero*                              hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerReplicationInfo.GetHumanReadableName
@@ -17610,7 +17321,7 @@ struct ADunDefPlayerReplicationInfo_execGetHumanReadableNameTwoLines_Parms
 struct ADunDefPlayerReplicationInfo_execGetHumanReadableName_Parms
 {
 	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// class UDunDefHero*                              hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerReplicationInfo.GetHeroIconPath
@@ -17618,7 +17329,7 @@ struct ADunDefPlayerReplicationInfo_execGetHumanReadableName_Parms
 struct ADunDefPlayerReplicationInfo_execGetHeroIconPath_Parms
 {
 	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// class UDunDefHero*                              hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerReplicationInfo.GetHeroicName
@@ -17626,7 +17337,7 @@ struct ADunDefPlayerReplicationInfo_execGetHeroIconPath_Parms
 struct ADunDefPlayerReplicationInfo_execGetHeroicName_Parms
 {
 	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// class UDunDefHero*                              hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerReplicationInfo.UpdatePlayerLocation
@@ -17793,7 +17504,7 @@ struct ADunDefPlayerReplicationInfo_execServer_AddedHeroEquipment_Parms
 // [0x00820102] 
 struct ADunDefPlayerReplicationInfo_execSetHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// struct FHeroNetInfo                             netInfo;                                          		// 0x0004 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// class ADunDefPlayerController*                  PC;                                               		// 0x009C (0x0004) [0x0000000000000000]              
 	// unsigned long                                   bIsNewHero : 1;                                   		// 0x00A0 (0x0004) [0x0000000000000000] [0x00000001] 
@@ -17947,6 +17658,87 @@ struct UDataListEntryInterface_execGetEntryEnabled_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x000C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
+// Function UDKGame.DunDefHeroManager.LevelCompare
+// [0x00020002] 
+struct UDunDefHeroManager_execLevelCompare_Parms
+{
+	class UHeroEquipment*                              A;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UHeroEquipment*                              B;                                                		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefHeroManager.NameCompare
+// [0x00020002] 
+struct UDunDefHeroManager_execNameCompare_Parms
+{
+	class UHeroEquipment*                              A;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UHeroEquipment*                              B;                                                		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefHeroManager.ManaCompare
+// [0x00020002] 
+struct UDunDefHeroManager_execManaCompare_Parms
+{
+	class UHeroEquipment*                              A;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UHeroEquipment*                              B;                                                		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefHeroManager.RatingCompare
+// [0x00020002] 
+struct UDunDefHeroManager_execRatingCompare_Parms
+{
+	class UHeroEquipment*                              A;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UHeroEquipment*                              B;                                                		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefHeroManager.QualityCompare
+// [0x00020002] 
+struct UDunDefHeroManager_execQualityCompare_Parms
+{
+	class UHeroEquipment*                              A;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UHeroEquipment*                              B;                                                		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefHeroManager.Merge
+// [0x00420002] 
+struct UDunDefHeroManager_execMerge_Parms
+{
+	TArray< class UHeroEquipment* >                    arr;                                              		// 0x0000 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	int                                                Low;                                              		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                Mid;                                              		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                High;                                             		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FScriptDelegate                             comparer;                                         		// 0x0018 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	// TArray< class UHeroEquipment* >                 Left;                                             		// 0x0024 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< class UHeroEquipment* >                 Right;                                            		// 0x0030 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             I;                                                		// 0x003C (0x0004) [0x0000000000000000]              
+	// int                                             lI;                                               		// 0x0040 (0x0004) [0x0000000000000000]              
+	// int                                             rI;                                               		// 0x0044 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefHeroManager.MergeSortItems
+// [0x00420002] 
+struct UDunDefHeroManager_execMergeSortItems_Parms
+{
+	TArray< class UHeroEquipment* >                    arr;                                              		// 0x0000 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	int                                                Low;                                              		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                High;                                             		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FScriptDelegate                             comparer;                                         		// 0x0014 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	// int                                             Mid;                                              		// 0x0020 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefHeroManager.ItemSortComparer
+// [0x00120000] 
+struct UDunDefHeroManager_execItemSortComparer_Parms
+{
+	class UHeroEquipment*                              A;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UHeroEquipment*                              B;                                                		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
 // Function UDKGame.DunDefHeroManager.GiveManaToken
 // [0x00824002] 
 struct UDunDefHeroManager_execGiveManaToken_Parms
@@ -18019,15 +17811,15 @@ struct UDunDefHeroManager_execGetCurrentMissionEquipmentRandomizerMultiplier_Par
 {
 	unsigned long                                      bIsForShop : 1;                                   		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FCampaignLevelEntry                      anEntry;                                          		// 0x0008 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// float                                           scalingWave;                                      		// 0x0120 (0x0004) [0x0000000000000000]              
-	// class ADunDefGameReplicationInfo*               ddGRI;                                            		// 0x0124 (0x0004) [0x0000000000000000]              
-	// float                                           waveNumber;                                       		// 0x0128 (0x0004) [0x0000000000000000]              
-	// float                                           val;                                              		// 0x012C (0x0004) [0x0000000000000000]              
-	// float                                           A1;                                               		// 0x0130 (0x0004) [0x0000000000000000]              
-	// float                                           b1;                                               		// 0x0134 (0x0004) [0x0000000000000000]              
-	// float                                           C1;                                               		// 0x0138 (0x0004) [0x0000000000000000]              
-	// class UDunDefMapInfo*                           tMapInfo;                                         		// 0x013C (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      anEntry;                                          		// 0x0008 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// float                                           scalingWave;                                      		// 0x0110 (0x0004) [0x0000000000000000]              
+	// class ADunDefGameReplicationInfo*               ddGRI;                                            		// 0x0114 (0x0004) [0x0000000000000000]              
+	// float                                           waveNumber;                                       		// 0x0118 (0x0004) [0x0000000000000000]              
+	// float                                           val;                                              		// 0x011C (0x0004) [0x0000000000000000]              
+	// float                                           A1;                                               		// 0x0120 (0x0004) [0x0000000000000000]              
+	// float                                           b1;                                               		// 0x0124 (0x0004) [0x0000000000000000]              
+	// float                                           C1;                                               		// 0x0128 (0x0004) [0x0000000000000000]              
+	// class UDunDefMapInfo*                           tMapInfo;                                         		// 0x012C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.GetNextHeroIndexForSelection
@@ -18045,20 +17837,20 @@ struct UDunDefHeroManager_execGetNextHeroIndexForSelection_Parms
 // [0x00424002] 
 struct UDunDefHeroManager_execGetMetaFlags_Parms
 {
-	struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x0000 (0x0098) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	int                                                metaFlagIndex;                                    		// 0x0098 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                valueToSet;                                       		// 0x009C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	int                                                ReturnValue;                                      		// 0x00A0 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x0000 (0x009C) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	int                                                metaFlagIndex;                                    		// 0x009C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                valueToSet;                                       		// 0x00A0 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	int                                                ReturnValue;                                      		// 0x00A4 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.DunDefHeroManager.GetOrSetMetaFlags
 // [0x00424002] 
 struct UDunDefHeroManager_execGetOrSetMetaFlags_Parms
 {
-	struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x0000 (0x0098) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	int                                                metaFlagIndex;                                    		// 0x0098 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                valueToSet;                                       		// 0x009C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	int                                                ReturnValue;                                      		// 0x00A0 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	struct UDunDefHeroManagerNative_FOptionsFixedStruct tOptions;                                         		// 0x0000 (0x009C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	int                                                metaFlagIndex;                                    		// 0x009C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                valueToSet;                                       		// 0x00A0 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	int                                                ReturnValue;                                      		// 0x00A4 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.DunDefHeroManager.GetMultiplayerModeImage
@@ -18166,13 +17958,11 @@ struct UDunDefHeroManager_execSetRandomShopEquipments_Parms
 {
 	float                                              qualityLevel;                                     		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	float                                              extraRarity;                                      		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned char                                      mapdiff;                                          		// 0x0008 (0x0001) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// struct FEquipmentNetInfo                        theInfo;                                          		// 0x000C (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UHeroEquipment*                           theEquipment;                                     		// 0x0104 (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           newEquipment;                                     		// 0x0108 (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x010C (0x0004) [0x0000000000000000]              
-	// int                                             P;                                                		// 0x0110 (0x0004) [0x0000000000000000]              
-	// unsigned char                                   lastdiff;                                         		// 0x0114 (0x0001) [0x0000000000000000]              
+	// struct FEquipmentNetInfo                        theInfo;                                          		// 0x0008 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UHeroEquipment*                           theEquipment;                                     		// 0x0100 (0x0004) [0x0000000000000000]              
+	// class UHeroEquipment*                           newEquipment;                                     		// 0x0104 (0x0004) [0x0000000000000000]              
+	// int                                             I;                                                		// 0x0108 (0x0004) [0x0000000000000000]              
+	// int                                             P;                                                		// 0x010C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.RemoveShopEquipment
@@ -18208,10 +17998,10 @@ struct UDunDefHeroManager_execInstallDLCEquipments_Parms
 	int                                                UserID;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class UHeroEquipment*                           OriginalEquipmentArch;                            		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           theNewEquipment;                                  		// 0x0008 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FEquipmentSaveInfo theEquipmentInfo;                                 		// 0x000C (0x00F4) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             it;                                               		// 0x0100 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    userOptions;                                      		// 0x0104 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// unsigned long                                   bNeedAnyVerification : 1;                         		// 0x01FC (0x0004) [0x0000000000000000] [0x00000001] 
+	// struct UDunDefHeroManagerNative_FEquipmentSaveInfo theEquipmentInfo;                                 		// 0x000C (0x0134) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             it;                                               		// 0x0140 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    userOptions;                                      		// 0x0144 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// unsigned long                                   bNeedAnyVerification : 1;                         		// 0x0240 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.DunDefHeroManager.AddDLCEquipmentEntry
@@ -18225,8 +18015,8 @@ struct UDunDefHeroManager_execAddDLCEquipmentEntry_Parms
 // [0x00020002] 
 struct UDunDefHeroManager_execAddCampaignLevelEntry_Parms
 {
-	struct FCampaignLevelEntry                         withEntry;                                        		// 0x0000 (0x0118) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	// class UCampaignLevelEntryObject*                newEntryObj;                                      		// 0x0118 (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         withEntry;                                        		// 0x0000 (0x0108) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	// class UCampaignLevelEntryObject*                newEntryObj;                                      		// 0x0108 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.RemoveDLCLevelEntries
@@ -18241,9 +18031,9 @@ struct UDunDefHeroManager_execRemoveDLCLevelEntries_Parms
 // [0x00020002] 
 struct UDunDefHeroManager_execGetIndexOfEntry_Parms
 {
-	struct FCampaignLevelEntry                         Entry;                                            		// 0x0000 (0x0118) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	int                                                ReturnValue;                                      		// 0x0118 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             I;                                                		// 0x011C (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         Entry;                                            		// 0x0000 (0x0108) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	int                                                ReturnValue;                                      		// 0x0108 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             I;                                                		// 0x010C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.SetOptionCampaignTag
@@ -18272,7 +18062,7 @@ struct UDunDefHeroManager_execShowTutorial_Parms
 	int                                                TutorialSet;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      SetTutorialCompleted : 1;                         		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x000C (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x000C (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHeroManager.IsBanned
@@ -18304,7 +18094,7 @@ struct UDunDefHeroManager_execBankAllMana_Parms
 	int                                                GameplayInstanceID;                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// class UDataListEntryInterface*                  HeroInterface;                                    		// 0x0008 (0x0008) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x0010 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0010 (0x0004) [0x0000000000000000]              
 	// struct FHighDigitInt                            boxInfo;                                          		// 0x0014 (0x0010) [0x0000000000000000]              
 	// unsigned long                                   bBanked : 1;                                      		// 0x0024 (0x0004) [0x0000000000000000] [0x00000001] 
 };
@@ -18331,23 +18121,23 @@ struct UDunDefHeroManager_execGetRandomProTip_Parms
 // [0x00020002] 
 struct UDunDefHeroManager_execGetStatsStringForLevel_Parms
 {
-	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0118) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	int                                                difficulty;                                       		// 0x0118 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                Mode;                                             		// 0x011C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FString                                     ReturnValue;                                      		// 0x0120 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// int                                             TypeIndex;                                        		// 0x012C (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0108) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	int                                                difficulty;                                       		// 0x0108 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                Mode;                                             		// 0x010C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FString                                     ReturnValue;                                      		// 0x0110 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// int                                             TypeIndex;                                        		// 0x011C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.GetStatsIndexForLevel
 // [0x00020002] 
 struct UDunDefHeroManager_execGetStatsIndexForLevel_Parms
 {
-	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0118) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	int                                                difficulty;                                       		// 0x0118 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                Mode;                                             		// 0x011C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                ReturnValue;                                      		// 0x0120 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             TypeIndex;                                        		// 0x0124 (0x0004) [0x0000000000000000]              
-	// int                                             LevelIndex;                                       		// 0x0128 (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0108) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	int                                                difficulty;                                       		// 0x0108 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                Mode;                                             		// 0x010C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                ReturnValue;                                      		// 0x0110 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             TypeIndex;                                        		// 0x0114 (0x0004) [0x0000000000000000]              
+	// int                                             LevelIndex;                                       		// 0x0118 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.GetModeTypeIndex
@@ -18355,8 +18145,8 @@ struct UDunDefHeroManager_execGetStatsIndexForLevel_Parms
 struct UDunDefHeroManager_execGetModeTypeIndex_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FCampaignLevelEntry                      anEntry;                                          		// 0x0004 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class ADunDefGameReplicationInfo*               ddGRI;                                            		// 0x011C (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      anEntry;                                          		// 0x0004 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class ADunDefGameReplicationInfo*               ddGRI;                                            		// 0x010C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.GetStatsIndex
@@ -18420,10 +18210,10 @@ struct UDunDefHeroManager_execGetNumberOfMissionsUnlocked_Parms
 struct UDunDefHeroManager_execGetNextCampaignLevelEntry_Parms
 {
 	int                                                currentLevelIndex;                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FCampaignLevelEntry                         nextLevelEntry;                                   		// 0x0004 (0x0118) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	class UCampaignLevelEntryObject*                   nextLevelObject;                                  		// 0x011C (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0120 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             originalLevelIndex;                               		// 0x0124 (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         nextLevelEntry;                                   		// 0x0004 (0x0108) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	class UCampaignLevelEntryObject*                   nextLevelObject;                                  		// 0x010C (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0110 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             originalLevelIndex;                               		// 0x0114 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.GetHeroIconsForAccessoryTypes
@@ -18433,7 +18223,7 @@ struct UDunDefHeroManager_execGetHeroIconsForAccessoryTypes_Parms
 	TArray< unsigned char >                            AccessoryTypes;                                   		// 0x0000 (0x000C) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
 	TArray< class UTexture2D* >                        ReturnValue;                                      		// 0x000C (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
 	// TArray< class UTexture2D* >                     theIcons;                                         		// 0x0018 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHero*                              hero;                                             		// 0x0024 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0024 (0x0004) [0x0000000000000000]              
 	// int                                             it;                                               		// 0x0028 (0x0004) [0x0000000000000000]              
 };
 
@@ -18444,7 +18234,7 @@ struct UDunDefHeroManager_execGetHeroIconsForWeaponType_Parms
 	unsigned char                                      weaponType;                                       		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
 	TArray< class UTexture2D* >                        ReturnValue;                                      		// 0x0004 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
 	// TArray< class UTexture2D* >                     theIcons;                                         		// 0x0010 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHero*                              hero;                                             		// 0x001C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x001C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.GetHeroTemplateForWeaponType
@@ -18453,7 +18243,7 @@ struct UDunDefHeroManager_execGetHeroTemplateForWeaponType_Parms
 {
 	unsigned char                                      weaponType;                                       		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
 	class UDunDefHero*                                 ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.CountItemsInFolder
@@ -18546,7 +18336,7 @@ struct UDunDefHeroManager_execTransferEquipmentToPlayerShop_Parms
 // [0x00C24002] 
 struct UDunDefHeroManager_execTransferEquipmentFromItemBox_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class UHeroEquipment*                              Equipment;                                        		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class UHeroEquipment*                              itemBoxedEquipment;                               		// 0x0008 (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
 	// class UHeroEquipment*                           newEquipment;                                     		// 0x000C (0x0004) [0x0000000000000000]              
@@ -18602,7 +18392,7 @@ struct UDunDefHeroManager_execCanStoreInItemBox_Parms
 // [0x00424002] 
 struct UDunDefHeroManager_execAddEquipmentToItemBox_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	struct FEquipmentNetInfo                           netInfo;                                          		// 0x0004 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
 	unsigned long                                      bAutoLock : 1;                                    		// 0x00FC (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bDontRefreshItemBoxLists : 1;                     		// 0x0100 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
@@ -18614,7 +18404,7 @@ struct UDunDefHeroManager_execAddEquipmentToItemBox_Parms
 // [0x00824002] 
 struct UDunDefHeroManager_execAddEquipmentObjectToItemBox_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class UHeroEquipment*                              theEquipment;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      bAutoLock : 1;                                    		// 0x0008 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	// struct FEquipmentNetInfo                        netInfo;                                          		// 0x000C (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
@@ -18624,7 +18414,7 @@ struct UDunDefHeroManager_execAddEquipmentObjectToItemBox_Parms
 // [0x00824002] 
 struct UDunDefHeroManager_execTransferEquipmentToItemBox_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class UHeroEquipment*                              Equipment;                                        		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                insertAtIndex;                                    		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bAutoLock : 1;                                    		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
@@ -18647,8 +18437,8 @@ struct UDunDefHeroManager_execRefreshItemBoxEquipmentLists_Parms
 // [0x00820002] 
 struct UDunDefHeroManager_execResetTutorials_Parms
 {
-	// struct UDunDefHeroManagerNative_FOptionsInfo    primaryOptions;                                   		// 0x0000 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             X;                                                		// 0x00F8 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    primaryOptions;                                   		// 0x0000 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             X;                                                		// 0x00FC (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.SetCampaignEntryTag
@@ -18682,13 +18472,13 @@ struct UDunDefHeroManager_execGetCampaignLevelObjectForTag_Parms
 // [0x00424002] 
 struct UDunDefHeroManager_execGetCampaignLevelIndex_Parms
 {
-	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0118) [0x0000000000400190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	class UCampaignLevelEntryObject*                   levelEntryObject;                                 		// 0x0118 (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
-	struct FString                                     MapName;                                          		// 0x011C (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
-	int                                                ReturnValue;                                      		// 0x0128 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             it;                                               		// 0x012C (0x0004) [0x0000000000000000]              
-	// struct FString                                  LevelFileName;                                    		// 0x0130 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             foundPos;                                         		// 0x013C (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0108) [0x0000000000400190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	class UCampaignLevelEntryObject*                   levelEntryObject;                                 		// 0x0108 (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
+	struct FString                                     MapName;                                          		// 0x010C (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
+	int                                                ReturnValue;                                      		// 0x0118 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             it;                                               		// 0x011C (0x0004) [0x0000000000000000]              
+	// struct FString                                  LevelFileName;                                    		// 0x0120 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             foundPos;                                         		// 0x012C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.GetCurrentMapFileName
@@ -18706,13 +18496,13 @@ struct UDunDefHeroManager_execGetCurrentMapFileName_Parms
 // [0x00020002] 
 struct UDunDefHeroManager_execGetCampaignLevelId_Parms
 {
-	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0118) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	int                                                ReturnValue;                                      		// 0x0118 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             Id;                                               		// 0x011C (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0120 (0x0004) [0x0000000000000000]              
-	// struct FString                                  LevelFriendlyName;                                		// 0x0124 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  OnlineSubsystemInfo;                              		// 0x0130 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  ComputeIDString;                                  		// 0x013C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0108) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	int                                                ReturnValue;                                      		// 0x0108 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             Id;                                               		// 0x010C (0x0004) [0x0000000000000000]              
+	// int                                             I;                                                		// 0x0110 (0x0004) [0x0000000000000000]              
+	// struct FString                                  LevelFriendlyName;                                		// 0x0114 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FString                                  OnlineSubsystemInfo;                              		// 0x0120 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FString                                  ComputeIDString;                                  		// 0x012C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHeroManager.GetLevelEntryWithTag
@@ -18720,9 +18510,9 @@ struct UDunDefHeroManager_execGetCampaignLevelId_Parms
 struct UDunDefHeroManager_execGetLevelEntryWithTag_Parms
 {
 	struct FString                                     Tag;                                              		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	struct FCampaignLevelEntry                         ReturnValue;                                      		// 0x000C (0x0118) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// int                                             I;                                                		// 0x0124 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      emptyEntry;                                       		// 0x0128 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct FCampaignLevelEntry                         ReturnValue;                                      		// 0x000C (0x0108) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// int                                             I;                                                		// 0x0114 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      emptyEntry;                                       		// 0x0118 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHeroManager.GetLevelEntryWithId
@@ -18730,10 +18520,10 @@ struct UDunDefHeroManager_execGetLevelEntryWithTag_Parms
 struct UDunDefHeroManager_execGetLevelEntryWithId_Parms
 {
 	int                                                Id;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FCampaignLevelEntry                         ReturnValue;                                      		// 0x0004 (0x0118) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// int                                             I;                                                		// 0x011C (0x0004) [0x0000000000000000]              
-	// int                                             curId;                                            		// 0x0120 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      emptyEntry;                                       		// 0x0124 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct FCampaignLevelEntry                         ReturnValue;                                      		// 0x0004 (0x0108) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// int                                             I;                                                		// 0x010C (0x0004) [0x0000000000000000]              
+	// int                                             curId;                                            		// 0x0110 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      emptyEntry;                                       		// 0x0114 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHeroManager.GetLevelNameForId
@@ -18775,8 +18565,8 @@ struct UDunDefHeroManager_execGetCurrentCampaignLevelObject_Parms
 // [0x00820002] 
 struct UDunDefHeroManager_execGetCurrentCampaignLevelEntry_Parms
 {
-	struct FCampaignLevelEntry                         ReturnValue;                                      		// 0x0000 (0x0118) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// struct FCampaignLevelEntry                      Entry;                                            		// 0x0118 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct FCampaignLevelEntry                         ReturnValue;                                      		// 0x0000 (0x0108) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      Entry;                                            		// 0x0108 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHeroManager.GetCurrentCampaignLevelIndex
@@ -18849,12 +18639,11 @@ struct UDunDefHeroManager_execGetGlobalEquipmentDrop_Parms
 	TArray< struct FEquipmentDropEntry >               CustomAdditionalEquipmentList;                    		// 0x0018 (0x000C) [0x0000000000400190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
 	unsigned long                                      bIsShop : 1;                                      		// 0x0024 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bForceAddArmour : 1;                              		// 0x0028 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bUseSpecialItemDrops : 1;                         		// 0x002C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	class UHeroEquipment*                              ReturnValue;                                      		// 0x0030 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// TArray< class UHeroEquipment* >                 AdditionalHeroEquipments;                         		// 0x0034 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// TArray< struct FEquipmentDropEntry >            EmptyAdditionalEquipmentList;                     		// 0x0040 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             it;                                               		// 0x004C (0x0004) [0x0000000000000000]              
-	// unsigned char                                   diff;                                             		// 0x0050 (0x0001) [0x0000000000000000]              
+	class UHeroEquipment*                              ReturnValue;                                      		// 0x002C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// TArray< class UHeroEquipment* >                 AdditionalHeroEquipments;                         		// 0x0030 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< struct FEquipmentDropEntry >            EmptyAdditionalEquipmentList;                     		// 0x003C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             it;                                               		// 0x0048 (0x0004) [0x0000000000000000]              
+	// unsigned char                                   diff;                                             		// 0x004C (0x0001) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.ServerCreateDroppedEquipment
@@ -18939,7 +18728,7 @@ struct UDunDefHeroManager_execGetDamageTypeIndex_Parms
 // [0x00024002] 
 struct UDunDefHeroManager_execShowHeroInfo_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ULocalPlayer*                                PlayerOwner;                                      		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned char                                      ForceSceneStackPriority;                          		// 0x0008 (0x0001) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	class UUI_HeroInfo*                                ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
@@ -18963,11 +18752,11 @@ struct UDunDefHeroManager_execAddEquipmentFromNetInfo_Parms
 // [0x00C20002] 
 struct UDunDefHeroManager_execAddEquipmentFromSaveInfo_Parms
 {
-	struct UDunDefHeroManagerNative_FEquipmentSaveInfo saveInfo;                                         		// 0x0000 (0x00F4) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	class UDunDefHero*                                 forHero;                                          		// 0x00F4 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UHeroEquipment*                              ReturnValue;                                      		// 0x00F8 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UHeroEquipment*                           Equipment;                                        		// 0x00FC (0x0004) [0x0000000000000000]              
-	// struct FEquipmentNetInfo                        netInfo;                                          		// 0x0100 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FEquipmentSaveInfo saveInfo;                                         		// 0x0000 (0x0134) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	class UDunDefHero*                                 forHero;                                          		// 0x0134 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UHeroEquipment*                              ReturnValue;                                      		// 0x0138 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// class UHeroEquipment*                           Equipment;                                        		// 0x013C (0x0004) [0x0000000000000000]              
+	// struct FEquipmentNetInfo                        netInfo;                                          		// 0x0140 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHeroManager.GetActiveHero
@@ -19011,7 +18800,7 @@ struct UDunDefHeroManager_execGetFreeHeroIndex_Parms
 // [0x00020802] ( FUNC_Event )
 struct UDunDefHeroManager_eventNotifyHeroLeft_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             Index;                                            		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
@@ -19026,7 +18815,7 @@ struct UDunDefHeroManager_eventNotifyPlayerLeft_Parms
 // [0x00024002] 
 struct UDunDefHeroManager_execSetActiveHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class UPlayer*                                     thePlayer;                                        		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      bServerDontInitializePC : 1;                      		// 0x0008 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	// class UDunDefHero*                              oldHero;                                          		// 0x000C (0x0004) [0x0000000000000000]              
@@ -19038,7 +18827,7 @@ struct UDunDefHeroManager_execSetActiveHero_Parms
 // [0x00020002] 
 struct UDunDefHeroManager_execRemoveActiveHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             Index;                                            		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             it;                                               		// 0x0008 (0x0004) [0x0000000000000000]              
 	// class UPlayer*                                  oldPlayer;                                        		// 0x000C (0x0004) [0x0000000000000000]              
@@ -19068,7 +18857,7 @@ struct UDunDefHeroManager_execCreateNewHero_Parms
 // [0x00024002] 
 struct UDunDefHeroManager_execDeleteLoadedHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ULocalPlayer*                                byPlayer;                                         		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 };
 
@@ -19171,7 +18960,7 @@ struct UDunDefHeroManager_execSaveHeroesFancily_Parms
 	// class UDunDefGameStorage*                       GameStorage;                                      		// 0x004C (0x0004) [0x0000000000000000]              
 	// struct UDunDefHeroManagerNative_FHeroAndEquipment HeroAndGear;                                      		// 0x0050 (0x0120) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// class UDunDefPlayerStats*                       CurrentStats;                                     		// 0x0170 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManager_FPlayerShopEntrySaveInfo aPlayerShopEntrySaveInfo;                         		// 0x0174 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManager_FPlayerShopEntrySaveInfo aPlayerShopEntrySaveInfo;                         		// 0x0174 (0x0138) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHeroManager.SaveForPlayer
@@ -19213,10 +19002,10 @@ struct UDunDefHeroManager_execGetPrimaryStats_Parms
 // [0x00020002] 
 struct UDunDefHeroManager_execGetPrimaryOptions_Parms
 {
-	struct UDunDefHeroManagerNative_FOptionsInfo       ReturnValue;                                      		// 0x0000 (0x00F8) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// class UDunDefViewportClient*                    ViewportClient;                                   		// 0x00F8 (0x0004) [0x0000000000000000]              
-	// class ULocalPlayer*                             primaryPlayer;                                    		// 0x00FC (0x0004) [0x0000000000000000]              
-	// int                                             PrimaryIndex;                                     		// 0x0100 (0x0004) [0x0000000000000000]              
+	struct UDunDefHeroManagerNative_FOptionsInfo       ReturnValue;                                      		// 0x0000 (0x00FC) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// class UDunDefViewportClient*                    ViewportClient;                                   		// 0x00FC (0x0004) [0x0000000000000000]              
+	// class ULocalPlayer*                             primaryPlayer;                                    		// 0x0100 (0x0004) [0x0000000000000000]              
+	// int                                             PrimaryIndex;                                     		// 0x0104 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.IsPrimaryPlayerOrGuest
@@ -19318,13 +19107,6 @@ struct UDunDefHeroManager_execLoadHeroes_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.DunDefHeroManager.SetCdtConfig
-// [0x00020002] 
-struct UDunDefHeroManager_execSetCdtConfig_Parms
-{
-	unsigned long                                      val : 1;                                          		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-};
-
 // Function UDKGame.DunDefHeroManager.LoadHeroesFancily
 // [0x00824002] 
 struct UDunDefHeroManager_execLoadHeroesFancily_Parms
@@ -19334,18 +19116,18 @@ struct UDunDefHeroManager_execLoadHeroesFancily_Parms
 	unsigned long                                      bIsRemote : 1;                                    		// 0x0008 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bUseSteamCloud : 1;                               		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0010 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHero*                              hero;                                             		// 0x0014 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0014 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           itemBoxEquip;                                     		// 0x0018 (0x0004) [0x0000000000000000]              
 	// class UStatSystem*                              theStats;                                         		// 0x001C (0x0004) [0x0000000000000000]              
 	// int                                             I;                                                		// 0x0020 (0x0004) [0x0000000000000000]              
 	// int                                             J;                                                		// 0x0024 (0x0004) [0x0000000000000000]              
 	// int                                             P;                                                		// 0x0028 (0x0004) [0x0000000000000000]              
 	// class UDunDefGameStorage*                       GameStorage;                                      		// 0x002C (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FEquipmentSaveInfo Temp_EquipmentSaveInfo;                           		// 0x0030 (0x00F4) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FHeroSaveInfo                            Temp_HeroSaveInfo;                                		// 0x0124 (0x0114) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// unsigned long                                   bIsPrimary : 1;                                   		// 0x0238 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   bIsMobileLoad : 1;                                		// 0x023C (0x0004) [0x0000000000000000] [0x00000001] 
-	// struct FHighDigitInt                            loadedMana;                                       		// 0x0240 (0x0010) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FEquipmentSaveInfo Temp_EquipmentSaveInfo;                           		// 0x0030 (0x0134) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FHeroSaveInfo                            Temp_HeroSaveInfo;                                		// 0x0164 (0x0114) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// unsigned long                                   bIsPrimary : 1;                                   		// 0x0278 (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   bIsMobileLoad : 1;                                		// 0x027C (0x0004) [0x0000000000000000] [0x00000001] 
+	// struct FHighDigitInt                            loadedMana;                                       		// 0x0280 (0x0010) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.RemoveHeroes
@@ -19381,8 +19163,8 @@ struct UDunDefHeroManager_execRemoveSponsoredGuests_Parms
 // [0x00420002] 
 struct UDunDefHeroManager_execInitCustomCampaignLevelEntry_Parms
 {
-	struct FCampaignLevelEntry                         newEntry;                                         		// 0x0000 (0x0118) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	// int                                             anIndex;                                          		// 0x0118 (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         newEntry;                                         		// 0x0000 (0x0108) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	// int                                             anIndex;                                          		// 0x0108 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.Initialize
@@ -19390,10 +19172,9 @@ struct UDunDefHeroManager_execInitCustomCampaignLevelEntry_Parms
 struct UDunDefHeroManager_eventInitialize_Parms
 {
 	// int                                             it;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
-	// int                                             ii;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UCampaignLevelEntryObject*                campaignLev;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UShopItemEntryObject*                     ShopItem;                                         		// 0x000C (0x0004) [0x0000000000000000]              
-	// int                                             PremiumIndex;                                     		// 0x0010 (0x0004) [0x0000000000000000]              
+	// class UCampaignLevelEntryObject*                campaignLev;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// int                                             PremiumIndex;                                     		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.RefreshModMapsList
@@ -19401,11 +19182,11 @@ struct UDunDefHeroManager_eventInitialize_Parms
 struct UDunDefHeroManager_execRefreshModMapsList_Parms
 {
 	// int                                             it;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      modDefaultCampaignLevelEntry;                     		// 0x0004 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// TArray< struct FString >                        ModMaps;                                          		// 0x011C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UCampaignLevelEntryObject*                campaignLev;                                      		// 0x0128 (0x0004) [0x0000000000000000]              
-	// struct FString                                  DummyString;                                      		// 0x012C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UUI_GameSetup*                            aUI;                                              		// 0x0138 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      modDefaultCampaignLevelEntry;                     		// 0x0004 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< struct FString >                        ModMaps;                                          		// 0x010C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UCampaignLevelEntryObject*                campaignLev;                                      		// 0x0118 (0x0004) [0x0000000000000000]              
+	// struct FString                                  DummyString;                                      		// 0x011C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UUI_GameSetup*                            aUI;                                              		// 0x0128 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.ModMapToInfo
@@ -19422,12 +19203,12 @@ struct UDunDefHeroManager_execModMapToInfo_Parms
 // [0x00420002] 
 struct UDunDefHeroManager_execGetDefaultOptions_Parms
 {
-	struct UDunDefHeroManagerNative_FOptionsInfo       myOptions;                                        		// 0x0000 (0x00F8) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	int                                                UserID;                                           		// 0x00F8 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class UDunDefViewportClient*                    myViewportClient;                                 		// 0x00FC (0x0004) [0x0000000000000000]              
-	// class UOnlinePlayerStorage*                     PlayerProfile;                                    		// 0x0100 (0x0004) [0x0000000000000000]              
-	// int                                             it;                                               		// 0x0104 (0x0004) [0x0000000000000000]              
-	// int                                             ProfileInt;                                       		// 0x0108 (0x0004) [0x0000000000000000]              
+	struct UDunDefHeroManagerNative_FOptionsInfo       myOptions;                                        		// 0x0000 (0x00FC) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	int                                                UserID;                                           		// 0x00FC (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// class UDunDefViewportClient*                    myViewportClient;                                 		// 0x0100 (0x0004) [0x0000000000000000]              
+	// class UOnlinePlayerStorage*                     PlayerProfile;                                    		// 0x0104 (0x0004) [0x0000000000000000]              
+	// int                                             it;                                               		// 0x0108 (0x0004) [0x0000000000000000]              
+	// int                                             ProfileInt;                                       		// 0x010C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.FixUserIDs
@@ -19476,7 +19257,7 @@ struct UDunDefHeroManager_execInitializeUserIds_Parms
 struct UDunDefHeroManager_execRefreshOptionsForAll_Parms
 {
 	// class ADunDefPlayerController*                  PC;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct theFixedStruct;                                   		// 0x0004 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct theFixedStruct;                                   		// 0x0004 (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHeroManager.RefreshOptions
@@ -19534,15 +19315,13 @@ struct UDunDefHeroManager_execHasPlayerBeaten_Parms
 	int                                                anyDifficulty;                                    		// 0x0014 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
 	unsigned long                                      exact : 1;                                        		// 0x0018 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bIsHardcore : 1;                                  		// 0x001C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bIsIronMan : 1;                                   		// 0x0020 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0024 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             I;                                                		// 0x0028 (0x0004) [0x0000000000000000]              
-	// int                                             ExistingIndex;                                    		// 0x002C (0x0004) [0x0000000000000000]              
-	// int                                             UserID;                                           		// 0x0030 (0x0004) [0x0000000000000000]              
-	// int                                             P;                                                		// 0x0034 (0x0004) [0x0000000000000000]              
-	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > compare;                                          		// 0x0038 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// unsigned long                                   ret : 1;                                          		// 0x0044 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   Result : 1;                                       		// 0x0048 (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0020 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             I;                                                		// 0x0024 (0x0004) [0x0000000000000000]              
+	// int                                             ExistingIndex;                                    		// 0x0028 (0x0004) [0x0000000000000000]              
+	// int                                             UserID;                                           		// 0x002C (0x0004) [0x0000000000000000]              
+	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > compare;                                          		// 0x0030 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// unsigned long                                   ret : 1;                                          		// 0x003C (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   Result : 1;                                       		// 0x0040 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.DunDefHeroManager.HasAnyoneBeaten
@@ -19559,7 +19338,6 @@ struct UDunDefHeroManager_execHasAnyoneBeaten_Parms
 	// int                                             ExistingIndex;                                    		// 0x003C (0x0004) [0x0000000000000000]              
 	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > compare;                                          		// 0x0040 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// int                                             difficultyIncrement;                              		// 0x004C (0x0004) [0x0000000000000000]              
-	// unsigned long                                   IronManCheck : 1;                                 		// 0x0050 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.DunDefHeroManager.HasAnyoneUnlocked
@@ -19612,14 +19390,12 @@ struct UDunDefHeroManager_execAddBeatenLevel_Parms
 	unsigned long                                      bForce : 1;                                       		// 0x0018 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bDontRefreshEquipmentDropEntries : 1;             		// 0x001C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bIsHardcoreMode : 1;                              		// 0x0020 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bIsIronManMode : 1;                               		// 0x0024 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// int                                             I;                                                		// 0x0028 (0x0004) [0x0000000000000000]              
-	// int                                             ExistingIndex;                                    		// 0x002C (0x0004) [0x0000000000000000]              
-	// struct FProgressEntry                           newEntry;                                         		// 0x0030 (0x0020) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct UDunDefHeroManagerNative_FLevelProgressInfo newInfo;                                          		// 0x0050 (0x0010) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             curDifficultyMask;                                		// 0x0060 (0x0004) [0x0000000000000000]              
-	// int                                             newDifficultyMask;                                		// 0x0064 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0068 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             I;                                                		// 0x0024 (0x0004) [0x0000000000000000]              
+	// int                                             ExistingIndex;                                    		// 0x0028 (0x0004) [0x0000000000000000]              
+	// struct FProgressEntry                           newEntry;                                         		// 0x002C (0x0020) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FLevelProgressInfo newInfo;                                          		// 0x004C (0x0010) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             curDifficultyMask;                                		// 0x005C (0x0004) [0x0000000000000000]              
+	// int                                             newDifficultyMask;                                		// 0x0060 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.AddProgress
@@ -19637,7 +19413,6 @@ struct UDunDefHeroManager_execAddProgress_Parms
 	// struct UDunDefHeroManagerNative_FLevelProgressInfo newInfo;                                          		// 0x0044 (0x0010) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// unsigned char                                   curDifficultyMask;                                		// 0x0054 (0x0001) [0x0000000000000000]              
 	// unsigned char                                   newDifficultyMask;                                		// 0x0055 (0x0001) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0058 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHeroManager.RemoveLocalHeroOrCostumeUnlock
@@ -19730,18 +19505,18 @@ struct UDunDefHeroManager_execAddCrystalCoreSettings_Parms
 // [0x00024002] 
 struct UDunDefHeroManager_execSetOptions_Parms
 {
-	struct UDunDefHeroManagerNative_FOptionsInfo       newOptions;                                       		// 0x0000 (0x00F8) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	unsigned long                                      doSave : 1;                                       		// 0x00F8 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	class ULocalPlayer*                                ForPlayer;                                        		// 0x00FC (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bShallowSet : 1;                                  		// 0x0100 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bDoResolutionChange : 1;                          		// 0x0104 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0108 (0x0004) [0x0000000000000000]              
-	// class UDunDefViewportClient*                    ViewportClient;                                   		// 0x010C (0x0004) [0x0000000000000000]              
-	// class ULocalPlayer*                             primaryPlayer;                                    		// 0x0110 (0x0004) [0x0000000000000000]              
-	// int                                             PrimaryIndex;                                     		// 0x0114 (0x0004) [0x0000000000000000]              
-	// int                                             it;                                               		// 0x0118 (0x0004) [0x0000000000000000]              
-	// int                                             UserID;                                           		// 0x011C (0x0004) [0x0000000000000000]              
-	// unsigned long                                   isPrimary : 1;                                    		// 0x0120 (0x0004) [0x0000000000000000] [0x00000001] 
+	struct UDunDefHeroManagerNative_FOptionsInfo       newOptions;                                       		// 0x0000 (0x00FC) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	unsigned long                                      doSave : 1;                                       		// 0x00FC (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	class ULocalPlayer*                                ForPlayer;                                        		// 0x0100 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bShallowSet : 1;                                  		// 0x0104 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bDoResolutionChange : 1;                          		// 0x0108 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x010C (0x0004) [0x0000000000000000]              
+	// class UDunDefViewportClient*                    ViewportClient;                                   		// 0x0110 (0x0004) [0x0000000000000000]              
+	// class ULocalPlayer*                             primaryPlayer;                                    		// 0x0114 (0x0004) [0x0000000000000000]              
+	// int                                             PrimaryIndex;                                     		// 0x0118 (0x0004) [0x0000000000000000]              
+	// int                                             it;                                               		// 0x011C (0x0004) [0x0000000000000000]              
+	// int                                             UserID;                                           		// 0x0120 (0x0004) [0x0000000000000000]              
+	// unsigned long                                   isPrimary : 1;                                    		// 0x0124 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.DunDefHeroManager.GetOptionsInfo
@@ -19749,9 +19524,9 @@ struct UDunDefHeroManager_execSetOptions_Parms
 struct UDunDefHeroManager_execGetOptionsInfo_Parms
 {
 	int                                                UserID;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct UDunDefHeroManagerNative_FOptionsInfo       ReturnValue;                                      		// 0x0004 (0x00F8) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// int                                             I;                                                		// 0x00FC (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0100 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FOptionsInfo       ReturnValue;                                      		// 0x0004 (0x00FC) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// int                                             I;                                                		// 0x0100 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0104 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefHeroManager.HasOptionsInfo
@@ -19767,10 +19542,10 @@ struct UDunDefHeroManager_execHasOptionsInfo_Parms
 // [0x00820002] 
 struct UDunDefHeroManager_execAddOptionsInfo_Parms
 {
-	struct UDunDefHeroManagerNative_FOptionsInfo       customOptions;                                    		// 0x0000 (0x00F8) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	int                                                UserID;                                           		// 0x00F8 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// struct FOptionsEntry                            mySettings;                                       		// 0x00FC (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             I;                                                		// 0x01F8 (0x0004) [0x0000000000000000]              
+	struct UDunDefHeroManagerNative_FOptionsInfo       customOptions;                                    		// 0x0000 (0x00FC) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	int                                                UserID;                                           		// 0x00FC (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// struct FOptionsEntry                            mySettings;                                       		// 0x0100 (0x0100) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             I;                                                		// 0x0200 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.GetAchievements
@@ -19779,20 +19554,20 @@ struct UDunDefHeroManager_execGetAchievements_Parms
 {
 	int                                                UserID;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      remote : 1;                                       		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	struct UDunDefHeroManagerNative_FAchievementInfo   ReturnValue;                                      		// 0x0008 (0x0078) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct UDunDefHeroManagerNative_FAchievementInfo myAchievement;                                    		// 0x0080 (0x0078) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x00F8 (0x0004) [0x0000000000000000]              
+	struct UDunDefHeroManagerNative_FAchievementInfo   ReturnValue;                                      		// 0x0008 (0x01F4) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// struct UDunDefHeroManagerNative_FAchievementInfo myAchievement;                                    		// 0x01FC (0x01F4) [0x0000000000000000]              
+	// int                                             I;                                                		// 0x03F0 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.AddAchievements
 // [0x00824002] 
 struct UDunDefHeroManager_execAddAchievements_Parms
 {
-	struct UDunDefHeroManagerNative_FAchievementInfo   newAchievements;                                  		// 0x0000 (0x0078) [0x0000000000000080]              ( CPF_Parm )
-	int                                                UserID;                                           		// 0x0078 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      remote : 1;                                       		// 0x007C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// struct FAchievementSaveEntry                    myAchievement;                                    		// 0x0080 (0x0080) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0100 (0x0004) [0x0000000000000000]              
+	struct UDunDefHeroManagerNative_FAchievementInfo   newAchievements;                                  		// 0x0000 (0x01F4) [0x0000000000000080]              ( CPF_Parm )
+	int                                                UserID;                                           		// 0x01F4 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      remote : 1;                                       		// 0x01F8 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	// struct FAchievementSaveEntry                    myAchievement;                                    		// 0x01FC (0x01FC) [0x0000000000000000]              
+	// int                                             I;                                                		// 0x03F8 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.GetCoreUnlockInfo
@@ -19884,8 +19659,8 @@ struct UDunDefHeroManager_execAddStats_Parms
 // [0x00420002] 
 struct UDunDefHeroManager_execZeroOutAchievements_Parms
 {
-	struct UDunDefHeroManagerNative_FAchievementInfo   newAchievements;                                  		// 0x0000 (0x0078) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	// int                                             I;                                                		// 0x0078 (0x0004) [0x0000000000000000]              
+	struct UDunDefHeroManagerNative_FAchievementInfo   newAchievements;                                  		// 0x0000 (0x01F4) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	// int                                             I;                                                		// 0x01F4 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.RemoveNullEntries
@@ -20097,28 +19872,8 @@ struct UDunDefHeroManager_execGetDefaultHero_Parms
 	class UDunDefHero*                                 ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.DunDefHeroManager.SortByName
-// [0x00020002] 
-struct UDunDefHeroManager_execSortByName_Parms
-{
-	class UHeroEquipment*                              A;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UHeroEquipment*                              B;                                                		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             Result;                                           		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefHeroManager.SortItems
-// [0x00020002] 
-struct UDunDefHeroManager_execSortItems_Parms
-{
-	class UHeroEquipment*                              A;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UHeroEquipment*                              B;                                                		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             Result;                                           		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
 // Function UDKGame.DunDefHeroManager.GetSortedItemBoxDataEntries
-// [0x00424002] 
+// [0x00C24002] 
 struct UDunDefHeroManager_execGetSortedItemBoxDataEntries_Parms
 {
 	TArray< class UDataListEntryInterface* >           altSet;                                           		// 0x0000 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
@@ -20137,22 +19892,10 @@ struct UDunDefHeroManager_execGetSortedItemBoxDataEntries_Parms
 	// TArray< class UHeroEquipment* >                 WeaponSetMonk;                                    		// 0x0084 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// TArray< class UHeroEquipment* >                 MaskSet;                                          		// 0x0090 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// TArray< class UHeroEquipment* >                 AccessorySet;                                     		// 0x009C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.DunDefHeroManager.ClearShopEntries
-// [0x00020002] 
-struct UDunDefHeroManager_execClearShopEntries_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefHeroManager.GetShopInfoByID
-// [0x00820002] 
-struct UDunDefHeroManager_execGetShopInfoByID_Parms
-{
-	int                                                Id;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FsShopInfo                                  ReturnValue;                                      		// 0x0004 (0x0038) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// struct FsShopInfo                               ShopInfo;                                         		// 0x003C (0x0038) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< class UHeroEquipment* >                 AllItems;                                         		// 0x00A8 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< struct FHQArray >                       AllSets;                                          		// 0x00B4 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FHQArray                                 TempHqs;                                          		// 0x00C0 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// unsigned char                                   sortFilter;                                       		// 0x00CC (0x0001) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.GetDataListEntries
@@ -20173,7 +19916,6 @@ struct UDunDefHeroManager_execGetDataListEntries_Parms
 	// class UItemFolderStub*                          FolderStub;                                       		// 0x0054 (0x0004) [0x0000000000000000]              
 	// int                                             it;                                               		// 0x0058 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   bMissingPrereqs : 1;                              		// 0x005C (0x0004) [0x0000000000000000] [0x00000001] 
-	// class UShopItemEntryObject*                     ShopItem;                                         		// 0x0060 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefHeroManager.ItemChangedFolder
@@ -20470,32 +20212,11 @@ struct UDunDefHeroManager_execGetHeroManager_Parms
 	class UDunDefHeroManager*                          ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.DunDefViewportClient.SetDisableJoinLevel
+// Function UDKGame.DunDefViewportClient.SetSimpleDamageNumbers
 // [0x00020002] 
-struct UDunDefViewportClient_execSetDisableJoinLevel_Parms
+struct UDunDefViewportClient_execSetSimpleDamageNumbers_Parms
 {
-	unsigned long                                      Disable : 1;                                      		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefViewportClient.SetDisableSplitScreen
-// [0x00020002] 
-struct UDunDefViewportClient_execSetDisableSplitScreen_Parms
-{
-	unsigned long                                      Disable : 1;                                      		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefViewportClient.SetUseEmulator
-// [0x00020002] 
-struct UDunDefViewportClient_execSetUseEmulator_Parms
-{
-	unsigned long                                      UseEmulator : 1;                                  		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefViewportClient.SetTavernTheme
-// [0x00020002] 
-struct UDunDefViewportClient_execSetTavernTheme_Parms
-{
-	int                                                val;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      SimpleDamageNumbersEnabled : 1;                   		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 };
 
 // Function UDKGame.DunDefViewportClient.SetDamageNumberScale
@@ -20505,18 +20226,17 @@ struct UDunDefViewportClient_execSetDamageNumberScale_Parms
 	float                                              val;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
-// Function UDKGame.DunDefViewportClient.SetItemCensor
+// Function UDKGame.DunDefViewportClient.SetCensorItems
 // [0x00020002] 
-struct UDunDefViewportClient_execSetItemCensor_Parms
+struct UDunDefViewportClient_execSetCensorItems_Parms
 {
-	unsigned long                                      val : 1;                                          		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	unsigned long                                      CensorItemsEnabled : 1;                           		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 };
 
-// Function UDKGame.DunDefViewportClient.SetGFX
+// Function UDKGame.DunDefViewportClient.ToggleItemCensor
 // [0x00020002] 
-struct UDunDefViewportClient_execSetGFX_Parms
+struct UDunDefViewportClient_execToggleItemCensor_Parms
 {
-	int                                                val;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function UDKGame.DunDefViewportClient.SetQualityOutlineFilter
@@ -20545,20 +20265,6 @@ struct UDunDefViewportClient_execSetQualityOutline_Parms
 struct UDunDefViewportClient_execToggleHideMiniMapBillboards_Parms
 {
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefViewportClient.GetIronMan
-// [0x00020002] 
-struct UDunDefViewportClient_execGetIronMan_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefViewportClient.SetIronMan
-// [0x00020002] 
-struct UDunDefViewportClient_execSetIronMan_Parms
-{
-	unsigned long                                      IronMan : 1;                                      		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 };
 
 // Function UDKGame.DunDefViewportClient.GetHardcore
@@ -20680,9 +20386,9 @@ struct UDunDefViewportClient_execSetCanMoveWhileBuilding_Parms
 	unsigned long                                      val : 1;                                          		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 };
 
-// Function UDKGame.DunDefViewportClient.SetFps
+// Function UDKGame.DunDefViewportClient.SetTowersUseDynamicLighting
 // [0x00020002] 
-struct UDunDefViewportClient_execSetFps_Parms
+struct UDunDefViewportClient_execSetTowersUseDynamicLighting_Parms
 {
 	unsigned long                                      val : 1;                                          		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 };
@@ -20691,27 +20397,15 @@ struct UDunDefViewportClient_execSetFps_Parms
 // [0x00020002] 
 struct UDunDefViewportClient_execSetOutline_Parms
 {
-	unsigned long                                      val : 1;                                          		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	unsigned long                                      Enabled : 1;                                      		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	// class UDunDefHeroManager*                       aHeroManager;                                     		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.DunDefViewportClient.SetTowersUseDynamicLighting
+// Function UDKGame.DunDefViewportClient.SetGraphicsQuality
 // [0x00020002] 
-struct UDunDefViewportClient_execSetTowersUseDynamicLighting_Parms
+struct UDunDefViewportClient_execSetGraphicsQuality_Parms
 {
-	unsigned long                                      val : 1;                                          		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefViewportClient.DoUINotification
-// [0x00024002] 
-struct UDunDefViewportClient_execDoUINotification_Parms
-{
-	struct FString                                     MessageToShow;                                    		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	unsigned long                                      ReplicateMessage : 1;                             		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	float                                              TimeToShow;                                       		// 0x0010 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              YLocation;                                        		// 0x0014 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              FontSize;                                         		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FColor                                      ColorOverride;                                    		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// unsigned long                                   TimeOverride : 1;                                 		// 0x0020 (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned char                                      Graphics;                                         		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function UDKGame.DunDefViewportClient.RemoveSplitscreenPlayers
@@ -20728,6 +20422,13 @@ struct UDunDefViewportClient_execWorldPreBeginPlay_Parms
 {
 	class AWorldInfo*                                  theWorldInfo;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class UDunDefMapInfo*                           theMapInfo;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefViewportClient.IsGamepadOwned
+// [0x00020002] 
+struct UDunDefViewportClient_execIsGamepadOwned_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.DunDefViewportClient.IsAnyPlayerUsingGamepad
@@ -20836,7 +20537,7 @@ struct UDunDefViewportClient_execFlushPlayerInputs_Parms
 struct UDunDefViewportClient_execRemoveNonSignedInControllers_Parms
 {
 	// int                                             PlayerIndex;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   removeOnlyPlayer : 1;                             		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
@@ -20913,36 +20614,55 @@ struct UDunDefViewportClient_execIsPrimaryProfilePlayer_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.DunDefViewportClient.ToggleSplitScreen
-// [0x00020202] ( FUNC_Exec )
-struct UDunDefViewportClient_execToggleSplitScreen_Parms
+// Function UDKGame.DunDefViewportClient.GetFreeEmulatorSlot
+// [0x00020002] 
+struct UDunDefViewportClient_execGetFreeEmulatorSlot_Parms
 {
+	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.DunDefViewportClient.QuickDeleteAlts
+// Function UDKGame.DunDefViewportClient.EmulatorUnpause
 // [0x00020002] 
-struct UDunDefViewportClient_execQuickDeleteAlts_Parms
+struct UDunDefViewportClient_execEmulatorUnpause_Parms
 {
 	// int                                             I;                                                		// 0x0000 (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.DunDefViewportClient.QuickAddAlts
+// Function UDKGame.DunDefViewportClient.QuickAddSplits
 // [0x00020002] 
-struct UDunDefViewportClient_execQuickAddAlts_Parms
+struct UDunDefViewportClient_execQuickAddSplits_Parms
 {
-	int                                                ControllerId;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
+	// int                                             I;                                                		// 0x0000 (0x0004) [0x0000000000000000]              
+	// int                                             freeId;                                           		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class ULocalPlayer*                             LP;                                               		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class ULocalPlayer*                             PlayerCheck;                                      		// 0x000C (0x0004) [0x0000000000000000]              
-	// class ADunDefPlayerController*                  PC;                                               		// 0x0010 (0x0004) [0x0000000000000000]              
+	// class ADunDefPlayerController*                  PC;                                               		// 0x000C (0x0004) [0x0000000000000000]              
+	// struct FString                                  Error;                                            		// 0x0010 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
-// Function UDKGame.DunDefViewportClient.SetKeyboardPlayerV2
-// [0x00020202] ( FUNC_Exec )
-struct UDunDefViewportClient_execSetKeyboardPlayerV2_Parms
+// Function UDKGame.DunDefViewportClient.KickAllSplits
+// [0x00020002] 
+struct UDunDefViewportClient_execKickAllSplits_Parms
 {
-	int                                                toIndex;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// int                                             I;                                                		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefViewportClient.HandlePotentialEmulatorLeave
+// [0x00020002] 
+struct UDunDefViewportClient_execHandlePotentialEmulatorLeave_Parms
+{
+	int                                                theirId;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefViewportClient.SetEmulatorPlayer
+// [0x00020202] ( FUNC_Exec )
+struct UDunDefViewportClient_execSetEmulatorPlayer_Parms
+{
+	int                                                PlayerIndex;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class ULocalPlayer*                             LP;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
+	// int                                             unused;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
+	// struct FString                                  Error;                                            		// 0x000C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefViewportClient.SetKeyboardPlayer
@@ -20973,7 +20693,7 @@ struct UDunDefViewportClient_execUpdateAutoSplitType_Parms
 	// float                                           cWidth;                                           		// 0x0000 (0x0004) [0x0000000000000000]              
 	// float                                           cHeight;                                          		// 0x0004 (0x0004) [0x0000000000000000]              
 	// float                                           tAspectRatio;                                     		// 0x0008 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct optionStruct;                                     		// 0x000C (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct optionStruct;                                     		// 0x000C (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefViewportClient.ResetForNewMap
@@ -20984,12 +20704,6 @@ struct UDunDefViewportClient_execResetForNewMap_Parms
 	unsigned long                                      bIsLoadingLevel : 1;                              		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	// int                                             it;                                               		// 0x0008 (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerController*                  PC;                                               		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefViewportClient.HandleGameModeSwitch
-// [0x00020002] 
-struct UDunDefViewportClient_execHandleGameModeSwitch_Parms
-{
 };
 
 // Function UDKGame.DunDefViewportClient.Init
@@ -21288,31 +21002,8 @@ struct UDunDefViewportClient_execSetSFXVolume_Parms
 // [0x00820802] ( FUNC_Event )
 struct UDunDefViewportClient_eventFirstTick_Parms
 {
-	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0000 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x00F8 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefViewportClient.Outline
-// [0x00020002] 
-struct UDunDefViewportClient_execOutline_Parms
-{
-	unsigned long                                      Enabled : 1;                                      		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// class UDunDefHeroManager*                       hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UMaterialInstanceConstant*                OutlineMat;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefViewportClient.GFX
-// [0x00020002] 
-struct UDunDefViewportClient_execGFX_Parms
-{
-	int                                                Graphics;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefViewportClient.Fps
-// [0x00020002] 
-struct UDunDefViewportClient_execFps_Parms
-{
-	unsigned long                                      Enabled : 1;                                      		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0000 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x00FC (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefViewportClient.PlayerFourInvited
@@ -21558,7 +21249,7 @@ struct UDunDefViewportClient_eventTick_Parms
 // [0x00820002] 
 struct UDunDefViewportClient_execResolutionChanged_Parms
 {
-	// struct UDunDefHeroManagerNative_FOptionsInfo    tOptions;                                         		// 0x0000 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    tOptions;                                         		// 0x0000 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefViewportClient.PerformStatsSending
@@ -21668,15 +21359,6 @@ struct UDunDefViewportClient_eventCreatePlayer_Parms
 // [0x00020002] 
 struct UDunDefViewportClient_execResetKeyboardController_Parms
 {
-};
-
-// Function UDKGame.DunDefViewportClient.HandleEmulatorLeave
-// [0x00020002] 
-struct UDunDefViewportClient_execHandleEmulatorLeave_Parms
-{
-	int                                                ControllerId;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// TArray< int >                                   IdArray;                                          		// 0x0004 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             ControllerTest;                                   		// 0x0010 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefViewportClient.RemovePlayer
@@ -21870,7 +21552,7 @@ struct UDunDefAchievementManager_execIsAchievementUnlocked_Parms
 	class ULocalPlayer*                                Player;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned char                                      Achievement;                                      		// 0x0004 (0x0001) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
 	// class UDunDefViewportClient*                    ViewportClient;                                   		// 0x0010 (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x0014 (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x0018 (0x0004) [0x0000000000000000]              
@@ -21893,7 +21575,7 @@ struct UDunDefAchievementManager_execCheckToUnlockAchivement_Parms
 {
 	class ADunDefPlayerController*                     ForPlayer;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned char                                      AchievementCheckSet;                              		// 0x0004 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-	class UDunDefHero*                                 hero;                                             		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	class UHeroEquipment*                              Equipment;                                        		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	class UCampaignLevelEntryObject*                   beatLevelEntryObject;                             		// 0x0010 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	int                                                intParam1;                                        		// 0x0014 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
@@ -21912,7 +21594,7 @@ struct UDunDefAchievementManager_execCheckAllFamiliars_Parms
 	// int                                             it;                                               		// 0x001C (0x0004) [0x0000000000000000]              
 	// int                                             P;                                                		// 0x0020 (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x0024 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0028 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0028 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           backEquipToCheck;                                 		// 0x002C (0x0004) [0x0000000000000000]              
 };
 
@@ -21925,7 +21607,7 @@ struct UDunDefAchievementManager_execCheckFamiliars_Parms
 	// struct FString                                  EquipmentName;                                    		// 0x0008 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// int                                             familiarIndex;                                    		// 0x0014 (0x0004) [0x0000000000000000]              
 	// int                                             familiarMask;                                     		// 0x0018 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x001C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x001C (0x0004) [0x0000000000000000]              
 	// class UDunDefPlayerStats*                       theStats;                                         		// 0x0020 (0x0004) [0x0000000000000000]              
 	// class ADunDefGameReplicationInfo*               theGRI;                                           		// 0x0024 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   shouldBeRecording : 1;                            		// 0x0028 (0x0004) [0x0000000000000000] [0x00000001] 
@@ -21953,7 +21635,7 @@ struct UDunDefAchievementManager_execCheckAwardAchievements_Parms
 	// unsigned long                                   defense : 1;                                      		// 0x001C (0x0004) [0x0000000000000000] [0x00000001] 
 	// unsigned long                                   flawless : 1;                                     		// 0x0020 (0x0004) [0x0000000000000000] [0x00000001] 
 	// class UDunDefPlayerStats*                       statsToCheck;                                     		// 0x0024 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0028 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0028 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefAchievementManager.CheckAward
@@ -21976,7 +21658,7 @@ struct UDunDefAchievementManager_execCheckLevelCompletionAchievements_Parms
 	class ADunDefPlayerController*                     ForPlayer;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class UCampaignLevelEntryObject*                   levelEntry;                                       		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                GameDifficulty;                                   		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
 	// unsigned long                                   isChallenge : 1;                                  		// 0x0010 (0x0004) [0x0000000000000000] [0x00000001] 
 	// int                                             LevelIndex;                                       		// 0x0014 (0x0004) [0x0000000000000000]              
 	// int                                             areaIndex;                                        		// 0x0018 (0x0004) [0x0000000000000000]              
@@ -21993,7 +21675,7 @@ struct UDunDefAchievementManager_execCanIGetAHug_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// int                                             iter;                                             		// 0x000C (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x0010 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0014 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0014 (0x0004) [0x0000000000000000]              
 	// class UDunDefHero*                              heroToCheck;                                      		// 0x0018 (0x0004) [0x0000000000000000]              
 	// TArray< unsigned char >                         herosNeededToUnlock;                              		// 0x001C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
@@ -22029,7 +21711,7 @@ struct UDunDefAchievementManager_execUnlockCores_Parms
 	// int                                             PlayerIndex;                                      		// 0x000C (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x0010 (0x0004) [0x0000000000000000]              
 	// struct UDunDefHeroManagerNative_FCoreUnlockInfo currentInfo;                                      		// 0x0014 (0x0028) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x003C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x003C (0x0004) [0x0000000000000000]              
 	// unsigned long                                   metRequirements : 1;                              		// 0x0040 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
@@ -22047,11 +21729,11 @@ struct UDunDefAchievementManager_execDoUnlockAchivement_Parms
 	// int                                             achievementOffset;                                		// 0x001C (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerController*                  PC;                                               		// 0x0020 (0x0004) [0x0000000000000000]              
 	// class UDunDefViewportClient*                    ViewportClient;                                   		// 0x0024 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0028 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0028 (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x002C (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x0030 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FAchievementInfo achievementSaveInfo;                              		// 0x0034 (0x0078) [0x0000000000000000]              
-	// struct FAchievementEntry                        theEntry;                                         		// 0x00AC (0x002C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FAchievementInfo achievementSaveInfo;                              		// 0x0034 (0x01F4) [0x0000000000000000]              
+	// struct FAchievementEntry                        theEntry;                                         		// 0x0228 (0x002C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.HeroEquipment_Familiar.AddRandomizeValues
@@ -22085,14 +21767,6 @@ struct UHeroEquipment_Familiar_execRemovedFromHero_Parms
 struct UHeroEquipment_Familiar_execAddedToHero_Parms
 {
 	// int                                             EquipmentIter;                                    		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.HeroEquipment_Familiar.GetPetMaxDrawScale
-// [0x00024002] 
-struct UHeroEquipment_Familiar_execGetPetMaxDrawScale_Parms
-{
-	unsigned long                                      GetMaxLevel : 1;                                  		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.HeroEquipment_Familiar.GetEquipmentDrawScale
@@ -22395,14 +22069,6 @@ struct ADunDefTower_execCanTargetInvisibleTarget_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.DunDefTower.GetReistanceValue
-// [0x00020002] 
-struct ADunDefTower_execGetReistanceValue_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// float                                           boostAmount;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
 // Function UDKGame.DunDefTower.AdjustDamage
 // [0x00424002] 
 struct ADunDefTower_execAdjustDamage_Parms
@@ -22533,24 +22199,6 @@ struct ADunDefTower_execForceSkelUpdating_Parms
 	float                                              delayTurnOff;                                     		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 };
 
-// Function UDKGame.DunDefTower.DivineTowerHeal
-// [0x00020102] 
-struct ADunDefTower_execDivineTowerHeal_Parms
-{
-	// float                                           CurrentHealth;                                    		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefTower.HealPctOfMaxHealth
-// [0x00024002] 
-struct ADunDefTower_execHealPctOfMaxHealth_Parms
-{
-	float                                              HealPct;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class AController*                                 Healer;                                           		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      bShowFloatingNumbers : 1;                         		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// int                                             AddHealth;                                        		// 0x0010 (0x0004) [0x0000000000000000]              
-};
-
 // Function UDKGame.DunDefTower.HealDamage
 // [0x00020802] ( FUNC_Event )
 struct ADunDefTower_eventHealDamage_Parms
@@ -22613,7 +22261,7 @@ struct ADunDefTower_execGetTowerToolTipLocation_Parms
 // [0x00022002] 
 struct ADunDefTower_execStaticGetTowerScale_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefTower*                                tower;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              TowerRangeScaler;                                 		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
@@ -22635,7 +22283,7 @@ struct ADunDefTower_execUpdateTowerRatingMaterial_Parms
 // [0x00020102] 
 struct ADunDefTower_execRefreshTowerRating_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             NumStatPoints;                                    		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
@@ -22685,7 +22333,7 @@ struct ADunDefTower_execGetTowerUpgradeLevelStatModifier_Parms
 // [0x00022002] 
 struct ADunDefTower_execStaticGetAttackRange_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefTower*                                tower;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              TowerRangeScaler;                                 		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
@@ -22780,14 +22428,14 @@ struct ADunDefTower_execGetPhysicalTowerHealthMultiplier_Parms
 struct ADunDefTower_execScaleForHeroModifiers_Parms
 {
 	unsigned long                                      IsFirstTime : 1;                                  		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefTower.CheckAssociateWithHero
 // [0x00020002] 
 struct ADunDefTower_execCheckAssociateWithHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefPawn*                                 pawnInstigator;                                   		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefPlayerController*                     PC;                                               		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
@@ -22909,15 +22557,6 @@ struct ADunDefTower_execNoWorldGeometryOccluding_Parms
 // [0x00020002] 
 struct ADunDefTower_execAutoBindToPlayer_Parms
 {
-};
-
-// Function UDKGame.DunDefTower.HackerCheck
-// [0x00020102] 
-struct ADunDefTower_execHackerCheck_Parms
-{
-	// float                                           DamageMult;                                       		// 0x0000 (0x0004) [0x0000000000000000]              
-	// float                                           RangeMult;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
-	// float                                           SpeedMult;                                        		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefTower.PostBeginPlay
@@ -23165,24 +22804,6 @@ struct ADunDefTower_execRemoveTowerBooster_Parms
 struct ADunDefTower_execAddTowerBooster_Parms
 {
 	class UTowerBoosterInterface*                      aBooster;                                         		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefDamageableTarget.ClearDot
-// [0x00020102] 
-struct ADunDefDamageableTarget_execClearDot_Parms
-{
-};
-
-// Function UDKGame.DunDefDamageableTarget.DoDotDamage
-// [0x00020102] 
-struct ADunDefDamageableTarget_execDoDotDamage_Parms
-{
-};
-
-// Function UDKGame.DunDefDamageableTarget.ActivateDot
-// [0x00020102] 
-struct ADunDefDamageableTarget_execActivateDot_Parms
-{
 };
 
 // Function UDKGame.DunDefDamageableTarget.GetLightningTowerDamagePercent
@@ -23651,20 +23272,6 @@ struct ADunDefDamageableTarget_eventTakeDamage_Parms
 	class UClass*                                      DamageType;                                       		// 0x0020 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	struct FTraceHitInfo                               HitInfo;                                          		// 0x0024 (0x001C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	class AActor*                                      DamageCauser;                                     		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefDamageableTarget.RemoveDebuff
-// [0x00020002] 
-struct ADunDefDamageableTarget_execRemoveDebuff_Parms
-{
-};
-
-// Function UDKGame.DunDefDamageableTarget.AddDebuff
-// [0x00020002] 
-struct ADunDefDamageableTarget_execAddDebuff_Parms
-{
-	float                                              Duration;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Amount;                                           		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function UDKGame.DunDefDamageableTarget.AdjustDamage
@@ -24703,11 +24310,79 @@ struct UAnimNotify_ToggleLights_eventNotify_Parms
 	class UAnimNodeSequence*                           AnimSeqInstigator;                                		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
+// Function UDKGame.AntiCheat.CheckSpeedHack
+// [0x00020002] 
+struct UAntiCheat_execCheckSpeedHack_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             Year;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// int                                             Month;                                            		// 0x0008 (0x0004) [0x0000000000000000]              
+	// int                                             DayOfWeek;                                        		// 0x000C (0x0004) [0x0000000000000000]              
+	// int                                             Day;                                              		// 0x0010 (0x0004) [0x0000000000000000]              
+	// int                                             Hour;                                             		// 0x0014 (0x0004) [0x0000000000000000]              
+	// int                                             Min;                                              		// 0x0018 (0x0004) [0x0000000000000000]              
+	// int                                             Sec;                                              		// 0x001C (0x0004) [0x0000000000000000]              
+	// int                                             MSec;                                             		// 0x0020 (0x0004) [0x0000000000000000]              
+	// float                                           CurrentSystemTime;                                		// 0x0024 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.AntiCheat.CheckTowers
+// [0x00020002] 
+struct UAntiCheat_execCheckTowers_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// class AWorldInfo*                               WorldInfo;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class ADunDefTower*                             tower;                                            		// 0x0008 (0x0004) [0x0000000000000000]              
+	// float                                           DamageMult;                                       		// 0x000C (0x0004) [0x0000000000000000]              
+	// float                                           RangeMult;                                        		// 0x0010 (0x0004) [0x0000000000000000]              
+	// float                                           SpeedMult;                                        		// 0x0014 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.AntiCheat.CheckHeroStats
+// [0x00020002] 
+struct UAntiCheat_execCheckHeroStats_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// class ADunDefPlayerController*                  PC;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class AWorldInfo*                               WorldInfo;                                        		// 0x000C (0x0004) [0x0000000000000000]              
+	// int                                             statVal;                                          		// 0x0010 (0x0004) [0x0000000000000000]              
+	// int                                             I;                                                		// 0x0014 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.AntiCheat.DoAntiCheatChecks
+// [0x00020002] 
+struct UAntiCheat_execDoAntiCheatChecks_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// class UDunDefHeroManager*                       Manager;                                          		// 0x0004 (0x0004) [0x0000000000000000]              
+	// unsigned long                                   DidCheat : 1;                                     		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
+};
+
+// Function UDKGame.AntiCheat.HandleCheater
+// [0x00020002] 
+struct UAntiCheat_execHandleCheater_Parms
+{
+};
+
+// Function UDKGame.AntiCheat.KickEveryone
+// [0x00020002] 
+struct UAntiCheat_execKickEveryone_Parms
+{
+};
+
+// Function UDKGame.AntiCheat.GetAntiCheatInterval
+// [0x00022002] 
+struct UAntiCheat_execGetAntiCheatInterval_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
 // Function UDKGame.DunDefPlayerStats.FillStats
 // [0x00020002] 
 struct UDunDefPlayerStats_execFillStats_Parms
 {
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
 	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             J;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
 	// int                                             K;                                                		// 0x000C (0x0004) [0x0000000000000000]              
@@ -24719,7 +24394,7 @@ struct UDunDefPlayerStats_execFillStats_Parms
 // [0x00020002] 
 struct UDunDefPlayerStats_execInitialize_Parms
 {
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
 	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             J;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
 };
@@ -24732,49 +24407,9 @@ struct UDunDefPlayerStats_execGetDataListEntries_Parms
 	int                                                PlayerIndex;                                      		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	int                                                FolderID;                                         		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	TArray< class UDataListEntryInterface* >           ReturnValue;                                      		// 0x000C (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0018 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0018 (0x0004) [0x0000000000000000]              
 	// class UCampaignLevelEntryObject*                campaignLev;                                      		// 0x001C (0x0004) [0x0000000000000000]              
 	// TArray< class UDataListEntryInterface* >        LevelsWithStats;                                  		// 0x0020 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.ShopItemEntryObject.IsRootEntry
-// [0x00020002] 
-struct UShopItemEntryObject_execIsRootEntry_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.ShopItemEntryObject.GetFolderID
-// [0x00020002] 
-struct UShopItemEntryObject_execGetFolderID_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.ShopItemEntryObject.GetDataProps
-// [0x00424000] 
-struct UShopItemEntryObject_execGetDataProps_Parms
-{
-	struct FDataEntryProps                             dProps;                                           		// 0x0000 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	int                                                dataSetType;                                      		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.ShopItemEntryObject.GetDataString
-// [0x00024000] 
-struct UShopItemEntryObject_execGetDataString_Parms
-{
-	int                                                dataSetType;                                      		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FString                                     ReturnValue;                                      		// 0x0004 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.ShopItemEntryObject.GetEntryEnabled
-// [0x00024002] 
-struct UShopItemEntryObject_execGetEntryEnabled_Parms
-{
-	class UPlayer*                                     ForPlayer;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                dataSetType;                                      		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class UUIScreenObject*                             relatedUIObject;                                  		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x000C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.ItemFolderStub.IsRootEntry
@@ -24821,7 +24456,7 @@ struct UItemFolderStub_execGetEntryEnabled_Parms
 // [0x00020002] 
 struct UCampaignLevelEntryObject_execInitFrom_Parms
 {
-	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0118) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0108) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
 };
 
 // Function UDKGame.CampaignLevelEntryObject.IsRootEntry
@@ -25495,8 +25130,8 @@ struct ADunDefPlayerCamera_execPlayCameraShake_Parms
 struct ADunDefPlayerCamera_execInitializeFor_Parms
 {
 	class APlayerController*                           PC;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// struct UDunDefHeroManagerNative_FOptionsInfo    tOptions;                                         		// 0x0004 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             UserID;                                           		// 0x00FC (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    tOptions;                                         		// 0x0004 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             UserID;                                           		// 0x0100 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerCamera.InitializeForPlayer
@@ -25523,8 +25158,8 @@ struct ADunDefPlayerCamera_execNotifyPlayerTakeHit_Parms
 // [0x00820102] 
 struct ADunDefPlayerCamera_execUpdateOptions_Parms
 {
-	// struct UDunDefHeroManagerNative_FOptionsInfo    tOptions;                                         		// 0x0000 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             UserID;                                           		// 0x00F8 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    tOptions;                                         		// 0x0000 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             UserID;                                           		// 0x00FC (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerCamera.CycleZoom
@@ -25744,6 +25379,22 @@ struct ADunDefPlayerCamera_execInitSpectatorCamera_Parms
 	// struct FVector                                  ViewOffset;                                       		// 0x0000 (0x000C) [0x0000000000000000]              
 };
 
+// Function UDKGame.UI_GameSetup.NotifyPlayerRemoved
+// [0x00020000] 
+struct UUI_GameSetup_execNotifyPlayerRemoved_Parms
+{
+	int                                                PlayerIndex;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class ULocalPlayer*                                RemovedPlayer;                                    		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.UI_GameSetup.NotifyPlayerAdded
+// [0x00020000] 
+struct UUI_GameSetup_execNotifyPlayerAdded_Parms
+{
+	int                                                PlayerIndex;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class ULocalPlayer*                                AddedPlayer;                                      		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
 // Function UDKGame.UI_GameSetup.CloseByPauseMenu
 // [0x00020002] 
 struct UUI_GameSetup_execCloseByPauseMenu_Parms
@@ -25847,12 +25498,14 @@ struct UUI_GameSetup_execEntrySelected_Parms
 {
 	class UUIButton_DataListEntry*                     Button;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// unsigned long                                   IsSpecialMission : 1;                             		// 0x0004 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   IsRestrictedDifficultyMission : 1;                		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
-	// class UCampaignLevelEntryObject*                SelectedButton;                                   		// 0x000C (0x0004) [0x0000000000000000]              
-	// unsigned long                                   beenBeaten : 1;                                   		// 0x0010 (0x0004) [0x0000000000000000] [0x00000001] 
-	// int                                             recommendedLevel;                                 		// 0x0014 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       hManager;                                         		// 0x0018 (0x0004) [0x0000000000000000]              
-	// TArray< class UDataListEntryInterface* >        dataEntries;                                      		// 0x001C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// unsigned long                                   IsDLCCampaignMission : 1;                         		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   IsLostMission : 1;                                		// 0x000C (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   IsRestrictedDifficultyMission : 1;                		// 0x0010 (0x0004) [0x0000000000000000] [0x00000001] 
+	// class UCampaignLevelEntryObject*                SelectedButton;                                   		// 0x0014 (0x0004) [0x0000000000000000]              
+	// unsigned long                                   beenBeaten : 1;                                   		// 0x0018 (0x0004) [0x0000000000000000] [0x00000001] 
+	// int                                             recommendedLevel;                                 		// 0x001C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       hManager;                                         		// 0x0020 (0x0004) [0x0000000000000000]              
+	// TArray< class UDataListEntryInterface* >        dataEntries;                                      		// 0x0024 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_GameSetup.SetupDifficultyIcons
@@ -25870,10 +25523,10 @@ struct UUI_GameSetup_execSetupDifficultyIcons_Parms
 // [0x00820002] 
 struct UUI_GameSetup_execSetupBestOfInfo_Parms
 {
-	// struct FCampaignLevelEntry                      curEntry;                                         		// 0x0000 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefPlayerStats*                       ownerStats;                                       		// 0x0118 (0x0004) [0x0000000000000000]              
-	// struct FStatEntry                               bestOfEntry;                                      		// 0x011C (0x0018) [0x0000000000000000]              
-	// int                                             UserID;                                           		// 0x0134 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      curEntry;                                         		// 0x0000 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UDunDefPlayerStats*                       ownerStats;                                       		// 0x0108 (0x0004) [0x0000000000000000]              
+	// struct FStatEntry                               bestOfEntry;                                      		// 0x010C (0x0018) [0x0000000000000000]              
+	// int                                             UserID;                                           		// 0x0124 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_GameSetup.OnDLCCompatibilityPromptClick
@@ -25896,8 +25549,8 @@ struct UUI_GameSetup_execShowIncompatibleDLCMessage_Parms
 {
 	TArray< class APlayerReplicationInfo* >            playersWithoutLevel;                              		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
 	// struct FString                                  Message;                                          		// 0x000C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FCampaignLevelEntry                      selectedLevel;                                    		// 0x0018 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             I;                                                		// 0x0130 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      selectedLevel;                                    		// 0x0018 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             I;                                                		// 0x0120 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_GameSetup.NotifyWidgetClicked
@@ -25907,8 +25560,8 @@ struct UUI_GameSetup_eventNotifyWidgetClicked_Parms
 	class UUIObject*                                   Widget;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// class UCampaignLevelEntryObject*                entryObject;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    theOptions;                                       		// 0x000C (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// TArray< class APlayerReplicationInfo* >         playersWithoutLevel;                              		// 0x0104 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    theOptions;                                       		// 0x000C (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< class APlayerReplicationInfo* >         playersWithoutLevel;                              		// 0x0108 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_GameSetup.RefreshMapDataForMapType
@@ -25923,7 +25576,7 @@ struct UUI_GameSetup_execRefreshMapDataForMapType_Parms
 struct UUI_GameSetup_execSetCurrentMapListType_Parms
 {
 	// class UCampaignLevelEntryObject*                levelEntryObject;                                 		// 0x0000 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0004 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0004 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_GameSetup.GetBestStartingWave
@@ -25932,11 +25585,11 @@ struct UUI_GameSetup_execGetBestStartingWave_Parms
 {
 	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// class UDunDefPlayerStats*                       ownerStats;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      curEntry;                                         		// 0x0008 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FStatEntry                               bestOfEntry;                                      		// 0x0120 (0x0018) [0x0000000000000000]              
-	// int                                             UserID;                                           		// 0x0138 (0x0004) [0x0000000000000000]              
-	// int                                             bestWave;                                         		// 0x013C (0x0004) [0x0000000000000000]              
-	// int                                             it;                                               		// 0x0140 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      curEntry;                                         		// 0x0008 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FStatEntry                               bestOfEntry;                                      		// 0x0110 (0x0018) [0x0000000000000000]              
+	// int                                             UserID;                                           		// 0x0128 (0x0004) [0x0000000000000000]              
+	// int                                             bestWave;                                         		// 0x012C (0x0004) [0x0000000000000000]              
+	// int                                             it;                                               		// 0x0130 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_GameSetup.ResetMapSettings
@@ -25949,18 +25602,9 @@ struct UUI_GameSetup_execResetMapSettings_Parms
 // [0x00820002] 
 struct UUI_GameSetup_execGetSelectedLevelEntry_Parms
 {
-	struct FCampaignLevelEntry                         ReturnValue;                                      		// 0x0000 (0x0118) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// class UUIButton_DataListEntry*                  Button;                                           		// 0x0118 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      emptyLevelEntry;                                  		// 0x011C (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.UI_GameSetup.GetSelectedLevelDisableIronMan
-// [0x00020002] 
-struct UUI_GameSetup_execGetSelectedLevelDisableIronMan_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// unsigned long                                   DisableHardcore : 1;                              		// 0x0004 (0x0004) [0x0000000000000000] [0x00000001] 
-	// class UUIButton_DataListEntry*                  Button;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         ReturnValue;                                      		// 0x0000 (0x0108) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// class UUIButton_DataListEntry*                  Button;                                           		// 0x0108 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      emptyLevelEntry;                                  		// 0x010C (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_GameSetup.GetSelectedLevelDisableHardcore
@@ -26041,16 +25685,6 @@ struct UUI_GameSetup_execUpdateMinimumLevelLevel_Parms
 struct UUI_GameSetup_execSetStartAtWave_Parms
 {
 	int                                                StartAtWave;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.UI_GameSetup.SetIronMan
-// [0x00020002] 
-struct UUI_GameSetup_execSetIronMan_Parms
-{
-	unsigned long                                      bIsIronMan : 1;                                   		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// int                                             MaxRestrictedDifficulty;                          		// 0x0004 (0x0004) [0x0000000000000000]              
-	// TArray< class USequenceObject* >                theEvents;                                        		// 0x0008 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class USequenceObject*                          theEvent;                                         		// 0x0014 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_GameSetup.SetHardcore
@@ -26234,10 +25868,10 @@ struct UDunDefGameSettings_execGetDifficultyScoreMultiplier_Parms
 // [0x00020002] 
 struct UDunDefDataStore_DLC_execGetDLCIdForLevel_Parms
 {
-	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0118) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	int                                                ReturnValue;                                      		// 0x0118 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// TArray< class UDunDefDLCSummary* >              installedDLC;                                     		// 0x011C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             I;                                                		// 0x0128 (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0108) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	int                                                ReturnValue;                                      		// 0x0108 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// TArray< class UDunDefDLCSummary* >              installedDLC;                                     		// 0x010C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             I;                                                		// 0x0118 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefDataStore_DLC.GetDLCMask
@@ -26399,7 +26033,7 @@ struct ADunDefDroppedEquipment_execAllowActivation_Parms
 // [0x00424102] 
 struct ADunDefDroppedEquipment_execAllowPickupByHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              MaxPickupRange;                                   		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                activationType;                                   		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      ignoreClassRequirement : 1;                       		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
@@ -26449,6 +26083,19 @@ struct ADunDefDroppedEquipment_execInitMyEquipmentObject_Parms
 	class UHeroEquipment*                              CopyRandomizerValuesFromTemplate;                 		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 };
 
+// Function UDKGame.DunDefDroppedEquipment.FellOutOfWorld
+// [0x00820902] ( FUNC_Event )
+struct ADunDefDroppedEquipment_eventFellOutOfWorld_Parms
+{
+	class UClass*                                      dmgType;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// class ADunDefForge*                             aForge;                                           		// 0x0004 (0x0004) [0x0000000000000000]              
+	// struct FRotator                                 bestForgeRotation;                                		// 0x0008 (0x000C) [0x0000000000000000]              
+	// struct FVector                                  bestForgeLocation;                                		// 0x0014 (0x000C) [0x0000000000000000]              
+	// struct FVector                                  playerLocation;                                   		// 0x0020 (0x000C) [0x0000000000000000]              
+	// class ADunDefPlayerController*                  aController;                                      		// 0x002C (0x0004) [0x0000000000000000]              
+	// unsigned long                                   noForge : 1;                                      		// 0x0030 (0x0004) [0x0000000000000000] [0x00000001] 
+};
+
 // Function UDKGame.DunDefDroppedEquipment.InitializeDD
 // [0x00020102] 
 struct ADunDefDroppedEquipment_execInitializeDD_Parms
@@ -26468,7 +26115,7 @@ struct ADunDefDroppedEquipment_execReportEquipmentToStats_Parms
 {
 	// class ADunDefPlayerController*                  PC;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   isUseful : 1;                                     		// 0x0004 (0x0004) [0x0000000000000000] [0x00000001] 
-	// class UDunDefHero*                              hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
 	// class UHeroEquipment*                           currentEquipment;                                 		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
@@ -26482,7 +26129,7 @@ struct ADunDefDroppedEquipment_execAddToFloorStats_Parms
 // [0x00020102] 
 struct ADunDefDroppedEquipment_execReorderQualityIndex_Parms
 {
-	int                                                Quality;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                quality;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
@@ -26530,7 +26177,7 @@ struct ADunDefDroppedEquipment_eventReplicatedEvent_Parms
 struct ADunDefDroppedEquipment_execDrawEquipmentOverlay_Parms
 {
 	class ADunDefHUD*                                  H;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UDunDefHero*                                 hero;                                             		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              MaxPickupRange;                                   		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class UHeroEquipment*                           currentEquipment;                                 		// 0x000C (0x0004) [0x0000000000000000]              
 	// struct FVector                                  DrawCoords;                                       		// 0x0010 (0x000C) [0x0000000000000000]              
@@ -26557,7 +26204,7 @@ struct ADunDefDroppedEquipment_execDrawToolTip_Parms
 	// int                                             comparisonIndex;                                  		// 0x0030 (0x0004) [0x0000000000000000]              
 	// int                                             reasonForDenial;                                  		// 0x0034 (0x0004) [0x0000000000000000]              
 	// float                                           yOverlayOffset;                                   		// 0x0038 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x003C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x003C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefDroppedEquipment.ReplicatedMoveItem
@@ -26608,7 +26255,7 @@ struct ADunDefDroppedEquipment_execDrawMiniMapIcon_Parms
 	// unsigned long                                   bIsBetter : 1;                                    		// 0x0018 (0x0004) [0x0000000000000000] [0x00000001] 
 	// int                                             reasonForDenial;                                  		// 0x001C (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerController*                  PC;                                               		// 0x0020 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    aOptions;                                         		// 0x0024 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    aOptions;                                         		// 0x0024 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefDroppedEquipment.GetItemQualityFilterFromEquipment
@@ -26624,84 +26271,6 @@ struct ADunDefDroppedEquipment_execGetItemQualityFilterFromEquipment_Parms
 struct ADunDefDroppedItem_execServerPickedupBy_Parms
 {
 	class ADunDefPlayerController*                     PC;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefEnemy.ClearDot
-// [0x00020102] 
-struct ADunDefEnemy_execClearDot_Parms
-{
-};
-
-// Function UDKGame.DunDefEnemy.DoDotDamage
-// [0x00020102] 
-struct ADunDefEnemy_execDoDotDamage_Parms
-{
-};
-
-// Function UDKGame.DunDefEnemy.ActivateDot
-// [0x00020102] 
-struct ADunDefEnemy_execActivateDot_Parms
-{
-};
-
-// Function UDKGame.DunDefEnemy.ClientTakeDamage
-// [0x00024102] 
-struct ADunDefEnemy_execClientTakeDamage_Parms
-{
-	int                                                DamageAmount;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class APawn*                                       InstigatorPawn;                                   		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0008 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     Momentum;                                         		// 0x0014 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0020 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FTraceHitInfo                               HitInfo;                                          		// 0x0024 (0x001C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      DamageCauser;                                     		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefEnemy.UnSetFrozen
-// [0x00020102] 
-struct ADunDefEnemy_execUnSetFrozen_Parms
-{
-};
-
-// Function UDKGame.DunDefEnemy.PlayFrozen
-// [0x00020100] 
-struct ADunDefEnemy_execPlayFrozen_Parms
-{
-};
-
-// Function UDKGame.DunDefEnemy.SetFrozen
-// [0x00020102] 
-struct ADunDefEnemy_execSetFrozen_Parms
-{
-	float                                              Duration;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// int                                             it;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefEnemy.SetOilDebuffAmount
-// [0x00020102] 
-struct ADunDefEnemy_execSetOilDebuffAmount_Parms
-{
-	float                                              DamageMult;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefEnemy.UnSetOiled
-// [0x00020102] 
-struct ADunDefEnemy_execUnSetOiled_Parms
-{
-};
-
-// Function UDKGame.DunDefEnemy.SetOiled
-// [0x00020102] 
-struct ADunDefEnemy_execSetOiled_Parms
-{
-	float                                              Duration;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// int                                             it;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefEnemy.SetTopLayer
-// [0x00020102] 
-struct ADunDefEnemy_execSetTopLayer_Parms
-{
 };
 
 // Function UDKGame.DunDefEnemy.SetGolded
@@ -26722,20 +26291,6 @@ struct ADunDefEnemy_execTimedEffectStun_Parms
 struct ADunDefEnemy_execChangedGamePhases_Parms
 {
 	unsigned long                                      IsCombatPhase : 1;                                		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefEnemy.ClearAnotherExtraAnimSpeedMultiplier
-// [0x00020002] 
-struct ADunDefEnemy_execClearAnotherExtraAnimSpeedMultiplier_Parms
-{
-};
-
-// Function UDKGame.DunDefEnemy.CheckSetSpeedMultiplier
-// [0x00024002] 
-struct ADunDefEnemy_execCheckSetSpeedMultiplier_Parms
-{
-	float                                              SpeedMultValue;                                   		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              AnimMultValue;                                    		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 };
 
 // Function UDKGame.DunDefEnemy.UseMaxSimultaneousAllowedForPlayers
@@ -26985,7 +26540,6 @@ struct ADunDefEnemy_execSpawnDroppedEquipment_Parms
 	// float                                           extraRarityWeighting;                             		// 0x0010 (0x0004) [0x0000000000000000]              
 	// float                                           absoluteRarityWeighting;                          		// 0x0014 (0x0004) [0x0000000000000000]              
 	// int                                             waveNumber;                                       		// 0x0018 (0x0004) [0x0000000000000000]              
-	// int                                             EquipmentCountCheat;                              		// 0x001C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefEnemy.Cough
@@ -27211,27 +26765,7 @@ struct ADunDefEnemy_execSpawnManaTokens_Parms
 	class ADunDefPawn*                                 theInstigator;                                    		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	class AActor*                                      fromActor;                                        		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	class ADunDefPlayer*                               InitialAttractor;                                 		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefEnemy.UseIronManClassOverride
-// [0x00424102] 
-struct ADunDefEnemy_execUseIronManClassOverride_Parms
-{
-	int                                                Index;                                            		// 0x0000 (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefMapInfo*                           MapInfo;                                          		// 0x0008 (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefEnemy.SetIronManModifers
-// [0x00020102] 
-struct ADunDefEnemy_execSetIronManModifers_Parms
-{
-	// class UDunDefMapInfo*                           MapInfo;                                          		// 0x0000 (0x0004) [0x0000000000000000]              
-	// unsigned long                                   bUseClassOverride : 1;                            		// 0x0004 (0x0004) [0x0000000000000000] [0x00000001] 
-	// int                                             ClassIndex;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
-	// int                                             SwitchInt;                                        		// 0x000C (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0010 (0x0004) [0x0000000000000000]              
+	unsigned long                                      bIsPrivate : 1;                                   		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 };
 
 // Function UDKGame.DunDefEnemy.UpdateDifficultyValues
@@ -27379,26 +26913,6 @@ struct ADunDefEnemy_execForceFriendlyFire_Parms
 {
 	class AActor*                                      Target;                                           		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefEnemy.UpdateCharmEffect
-// [0x00020002] 
-struct ADunDefEnemy_execUpdateCharmEffect_Parms
-{
-	// float                                           leftOverOffset;                                   		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefEnemy.ClearEnrageTimer
-// [0x00220042] 
-struct ADunDefEnemy_execClearEnrageTimer_Parms
-{
-};
-
-// Function UDKGame.DunDefEnemy.SetEnragedWithTimer
-// [0x00220042] 
-struct ADunDefEnemy_execSetEnragedWithTimer_Parms
-{
-	float                                              Duration;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function UDKGame.DunDefEnemy.SetEnraged
@@ -27625,6 +27139,14 @@ struct ADunDefTreasureChest_eventReplicatedEvent_Parms
 	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
 };
 
+// Function UDKGame.UI_ItemBox.NotifySelectionChanged
+// [0x00820002] 
+struct UUI_ItemBox_execNotifySelectionChanged_Parms
+{
+	int                                                selectedElementIdx;                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    newOptions;                                       		// 0x0004 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+};
+
 // Function UDKGame.UI_ItemBox.OnInterceptedInputKey
 // [0x00420002] 
 struct UUI_ItemBox_execOnInterceptedInputKey_Parms
@@ -27720,7 +27242,7 @@ struct UUI_ItemBox_execEntryEnabledCheck_Parms
 struct UUI_ItemBox_execEquipmentEntrySelected_Parms
 {
 	class UUIButton_DataListEntry*                     Button;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   bIsUnLocked : 1;                                  		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
 	// unsigned long                                   bIsInTrade : 1;                                   		// 0x000C (0x0004) [0x0000000000000000] [0x00000001] 
 	// class ATradeManager*                            aTradeManager;                                    		// 0x0010 (0x0004) [0x0000000000000000]              
@@ -27770,12 +27292,6 @@ struct UUI_ItemBox_execLockedAll_Parms
 // Function UDKGame.UI_ItemBox.CancelDeletion
 // [0x00020002] 
 struct UUI_ItemBox_execCancelDeletion_Parms
-{
-};
-
-// Function UDKGame.UI_ItemBox.SortItems
-// [0x00020002] 
-struct UUI_ItemBox_execSortItems_Parms
 {
 };
 
@@ -27920,7 +27436,7 @@ struct APlayerShopManager_execGetNumberOfPlayerShopItems_Parms
 	// int                                             it;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             Count;                                            		// 0x0008 (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x000C (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       theHeroManager;                                   		// 0x0010 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       TheHeroManager;                                   		// 0x0010 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.PlayerShopManager.ClearPendingPurchases
@@ -27928,7 +27444,7 @@ struct APlayerShopManager_execGetNumberOfPlayerShopItems_Parms
 struct APlayerShopManager_execClearPendingPurchases_Parms
 {
 	// int                                             it;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       theHeroManager;                                   		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       TheHeroManager;                                   		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.PlayerShopManager.ClientAttemptPurchase
@@ -27958,7 +27474,7 @@ struct APlayerShopManager_execServerRequestedPurchase_Parms
 	int                                                EquipmentID1;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                EquipmentID2;                                     		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             it;                                               		// 0x000C (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       theHeroManager;                                   		// 0x0010 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       TheHeroManager;                                   		// 0x0010 (0x0004) [0x0000000000000000]              
 	// struct FHighDigitInt                            maxManaPostTrade;                                 		// 0x0014 (0x0010) [0x0000000000000000]              
 };
 
@@ -27970,7 +27486,7 @@ struct APlayerShopManager_execServerCompletedPurchase_Parms
 	int                                                EquipmentID1;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                EquipmentID2;                                     		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             it;                                               		// 0x000C (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       theHeroManager;                                   		// 0x0010 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       TheHeroManager;                                   		// 0x0010 (0x0004) [0x0000000000000000]              
 	// struct FHighDigitInt                            MaxMana;                                          		// 0x0014 (0x0010) [0x0000000000000000]              
 };
 
@@ -28089,7 +27605,7 @@ struct APlayerShopManager_execReplicateToNewPlayerController_Parms
 	class ADunDefPlayerController*                     PC;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             it;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       theHeroManager;                                   		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       TheHeroManager;                                   		// 0x000C (0x0004) [0x0000000000000000]              
 	// struct FItemFolder                              CurrentFolder;                                    		// 0x0010 (0x0018) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
@@ -28185,7 +27701,7 @@ struct APlayerShopManager_execGetDataListEntries_Parms
 	// int                                             it;                                               		// 0x0018 (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x001C (0x0004) [0x0000000000000000]              
 	// TArray< class UDataListEntryInterface* >        altSet;                                           		// 0x0020 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       theHeroManager;                                   		// 0x002C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       TheHeroManager;                                   		// 0x002C (0x0004) [0x0000000000000000]              
 	// struct FItemFolder                              CurrentItemFolder;                                		// 0x0030 (0x0018) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// class UItemFolderStub*                          FolderStub;                                       		// 0x0048 (0x0004) [0x0000000000000000]              
 };
@@ -28663,7 +28179,7 @@ struct UDunDefGameStats_execRegisterStatPlayerHero_Parms
 	int                                                Index;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefPlayerController*                     DPC;                                              		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class ADunDefPlayer*                            PlayerPawn;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefGameStats.GetStatPlayerNameWithHero
@@ -28693,7 +28209,7 @@ struct UDunDefGameStats_execSetupStatName_Parms
 struct UDunDefGameStats_execSetupHeroMetaData_Parms
 {
 	int                                                Index;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UDunDefHero*                                 hero;                                             		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function UDKGame.DunDefGameStats.RegisterPlayerController
@@ -29061,7 +28577,7 @@ struct UDunDefInput_execSetInvertMouse_Parms
 // [0x00420002] 
 struct UDunDefInput_execAdjustControlSchemeForOptions_Parms
 {
-	struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0000 (0x0098) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0000 (0x009C) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefInput.ProcessMobileCameraRotation
@@ -29290,9 +28806,9 @@ struct UUI_PauseMenu_eventNotifyWidgetClicked_Parms
 {
 	class UUIObject*                                   Widget;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0008 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UCampaignLevelEntryObject*                LevelObject;                                      		// 0x0120 (0x0004) [0x0000000000000000]              
-	// class UUIScene*                                 UISceneInstance;                                  		// 0x0124 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0008 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UCampaignLevelEntryObject*                LevelObject;                                      		// 0x0110 (0x0004) [0x0000000000000000]              
+	// class UUIScene*                                 UISceneInstance;                                  		// 0x0114 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_PauseMenu.ShowDeletionConfirmation
@@ -29313,8 +28829,8 @@ struct UUI_PauseMenu_execPostInitialSceneUpdate_Parms
 struct UUI_PauseMenu_eventSceneActivated_Parms
 {
 	unsigned long                                      bInitialActivation : 1;                           		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// struct FCampaignLevelEntry                      Entry;                                            		// 0x0004 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x011C (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      Entry;                                            		// 0x0004 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x010C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_PauseMenu.SceneDeactivated
@@ -29778,12 +29294,10 @@ struct UUI_OptionsMenu_eventNotifyWidgetClicked_Parms
 {
 	class UUIObject*                                   Widget;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UUICheckbox*                              ResolutionCheckbox;                               		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UUICheckbox*                              OtherResolutionCheckbox;                          		// 0x000C (0x0004) [0x0000000000000000]              
-	// class UUICheckBox_Scripted*                     splitCheckbox;                                    		// 0x0010 (0x0004) [0x0000000000000000]              
-	// class UUICheckBox_Scripted*                     otherSplitCheckbox;                               		// 0x0014 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0018 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct UDunDefHeroManagerNative_FOptionsInfo    anOptions;                                        		// 0x00B0 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UUICheckBox_Scripted*                     splitCheckbox;                                    		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UUICheckBox_Scripted*                     otherSplitCheckbox;                               		// 0x000C (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0010 (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    anOptions;                                        		// 0x00AC (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_OptionsMenu.NotifyWidgetClickedEvent
@@ -29793,14 +29307,6 @@ struct UUI_OptionsMenu_eventNotifyWidgetClickedEvent_Parms
 	class UUIScreenObject*                             EventObject;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                PlayerIndex;                                      		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.UI_OptionsMenu.SetGraphicsCheckboxes
-// [0x00820002] 
-struct UUI_OptionsMenu_execSetGraphicsCheckboxes_Parms
-{
-	// class UUICheckbox*                              ResolutionCheckbox;                               		// 0x0000 (0x0004) [0x0000000000000000]              
-	// struct FVector2D                                viewportSize;                                     		// 0x0004 (0x0008) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_OptionsMenu.Update
@@ -29822,7 +29328,6 @@ struct UUI_OptionsMenu_execTransitionToMainMenu_Parms
 struct UUI_OptionsMenu_execGetResolutionString_Parms
 {
 	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// class UUICheckbox*                              ResolutionCheckbox;                               		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_OptionsMenu.GetSplitConfig
@@ -29845,17 +29350,17 @@ struct UUI_OptionsMenu_execSetSplitScreenConfig_Parms
 // [0x00820002] 
 struct UUI_OptionsMenu_execApplyOptions_Parms
 {
-	// struct UDunDefHeroManagerNative_FOptionsInfo    newOptions;                                       		// 0x0000 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefViewportClient*                    vpClient;                                         		// 0x00F8 (0x0004) [0x0000000000000000]              
-	// TArray< class USequenceObject* >                theEvents;                                        		// 0x00FC (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class USequenceObject*                          theEvent;                                         		// 0x0108 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    newOptions;                                       		// 0x0000 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UDunDefViewportClient*                    vpClient;                                         		// 0x00FC (0x0004) [0x0000000000000000]              
+	// TArray< class USequenceObject* >                theEvents;                                        		// 0x0100 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class USequenceObject*                          theEvent;                                         		// 0x010C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_OptionsMenu.CloseWithAnimation
 // [0x00820002] 
 struct UUI_OptionsMenu_execCloseWithAnimation_Parms
 {
-	// struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0000 (0x0098) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsFixedStruct theOptions;                                       		// 0x0000 (0x009C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_OptionsMenu.RefreshKeyBindingLabels
@@ -29871,14 +29376,18 @@ struct UUI_OptionsMenu_execRefreshKeyBindingLabels_Parms
 struct UUI_OptionsMenu_eventSceneActivated_Parms
 {
 	unsigned long                                      bInitialActivation : 1;                           		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0004 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             I;                                                		// 0x00FC (0x0004) [0x0000000000000000]              
-	// int                                             defaultPanel;                                     		// 0x0100 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0104 (0x0004) [0x0000000000000000]              
-	// class ULocalPlayer*                             thePlayer;                                        		// 0x0108 (0x0004) [0x0000000000000000]              
-	// class ULocalPlayer*                             keyboardPlayer;                                   		// 0x010C (0x0004) [0x0000000000000000]              
-	// unsigned long                                   hasKeyboardPlayer : 1;                            		// 0x0110 (0x0004) [0x0000000000000000] [0x00000001] 
-	// class UCDTSettingsManager*                      MyCDTSettings;                                    		// 0x0114 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0004 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             I;                                                		// 0x0100 (0x0004) [0x0000000000000000]              
+	// int                                             Idx;                                              		// 0x0104 (0x0004) [0x0000000000000000]              
+	// int                                             defaultPanel;                                     		// 0x0108 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x010C (0x0004) [0x0000000000000000]              
+	// class ULocalPlayer*                             thePlayer;                                        		// 0x0110 (0x0004) [0x0000000000000000]              
+	// class ULocalPlayer*                             keyboardPlayer;                                   		// 0x0114 (0x0004) [0x0000000000000000]              
+	// unsigned long                                   hasKeyboardPlayer : 1;                            		// 0x0118 (0x0004) [0x0000000000000000] [0x00000001] 
+	// class UCDTSettingsManager*                      MyCDTSettings;                                    		// 0x011C (0x0004) [0x0000000000000000]              
+	// TArray< struct FScreenResolution >              AvailableResolutions;                             		// 0x0120 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< struct FString >                        ResolutionsStrings;                               		// 0x012C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FString                                  ResolutionString;                                 		// 0x0138 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_OptionsMenu.DisableSplitScreenOptions
@@ -29931,6 +29440,12 @@ struct UUIPanel_DataList_execHasPrevPage_Parms
 struct UUIPanel_DataList_execHasNextPage_Parms
 {
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIPanel_DataList.ShowFirstPage
+// [0x00020002] 
+struct UUIPanel_DataList_execShowFirstPage_Parms
+{
 };
 
 // Function UDKGame.UIPanel_DataList.ShowPrevPage
@@ -30865,1174 +30380,6 @@ struct ADDGRI_Competitive_execExecReplicatedFunction_Parms
 	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 };
 
-// Function UDKGame.DunDefProjectile.DoDestroy
-// [0x00020102] 
-struct ADunDefProjectile_execDoDestroy_Parms
-{
-};
-
-// Function UDKGame.DunDefProjectile.AllowReflect
-// [0x00020102] 
-struct ADunDefProjectile_execAllowReflect_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefProjectile.OnProjectileImpacted
-// [0x00120000] 
-struct ADunDefProjectile_execOnProjectileImpacted_Parms
-{
-	class ADunDefProjectile*                           theProjectile;                                    		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class AActor*                                      impactedOn;                                       		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefProjectile.HurtRadius
-// [0x00024102] 
-struct ADunDefProjectile_execHurtRadius_Parms
-{
-	float                                              DamageAmount;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              InDamageRadius;                                   		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Momentum;                                         		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HurtOrigin;                                       		// 0x0010 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class AActor*                                      IgnoredActor;                                     		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AController*                                 InstigatedByController;                           		// 0x0020 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bDoFullDamage : 1;                                		// 0x0024 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0028 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// unsigned long                                   bCausedDamage : 1;                                		// 0x002C (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   bResult : 1;                                      		// 0x0030 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   IgnoreDamageClass : 1;                            		// 0x0034 (0x0004) [0x0000000000000000] [0x00000001] 
-	// float                                           MomentumToUse;                                    		// 0x0038 (0x0004) [0x0000000000000000]              
-	// class ADunDefPlayerReplicationInfo*             InstigatorReplicationInfo;                        		// 0x003C (0x0004) [0x0000000000000000]              
-	// class UClass*                                   ignoreClass;                                      		// 0x0040 (0x0004) [0x0000000000000000]              
-	// class ADunDefEmitterSpawnable*                  aSpawnableEmitter;                                		// 0x0044 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefProjectile.AllowDamage
-// [0x00020102] 
-struct ADunDefProjectile_execAllowDamage_Parms
-{
-	class AActor*                                      aTarget;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefProjectile.GetDotDamageScalePercentage
-// [0x00020100] 
-struct ADunDefProjectile_execGetDotDamageScalePercentage_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefProjectile.DunDefProjHurtRadius
-// [0x00024102] 
-struct ADunDefProjectile_execDunDefProjHurtRadius_Parms
-{
-	float                                              BaseDamage;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              TheDamageRadius;                                  		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Momentum;                                         		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HurtOrigin;                                       		// 0x0010 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class AActor*                                      IgnoredActor;                                     		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AController*                                 InstigatedByController;                           		// 0x0020 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bDoFullDamage : 1;                                		// 0x0024 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0028 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class AActor*                                   Victim;                                           		// 0x002C (0x0004) [0x0000000000000000]              
-	// class UClass*                                   ignoreClass;                                      		// 0x0030 (0x0004) [0x0000000000000000]              
-	// unsigned long                                   bCausedDamage : 1;                                		// 0x0034 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   IgnoreDamageClass : 1;                            		// 0x0038 (0x0004) [0x0000000000000000] [0x00000001] 
-	// float                                           MomentumToUse;                                    		// 0x003C (0x0004) [0x0000000000000000]              
-	// class ADunDefPlayerReplicationInfo*             InstigatorReplicationInfo;                        		// 0x0040 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefProjectile.EndRadiusDamage
-// [0x00020100] 
-struct ADunDefProjectile_execEndRadiusDamage_Parms
-{
-};
-
-// Function UDKGame.DunDefProjectile.AffectVictim
-// [0x00020100] 
-struct ADunDefProjectile_execAffectVictim_Parms
-{
-	class AActor*                                      Victim;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefProjectile.StartRadiusDamage
-// [0x00020100] 
-struct ADunDefProjectile_execStartRadiusDamage_Parms
-{
-};
-
-// Function UDKGame.DunDefProjectile.Explode
-// [0x00820102] 
-struct ADunDefProjectile_execExplode_Parms
-{
-	struct FVector                                     HitLocation;                                      		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitNormal;                                        		// 0x000C (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	// struct FVector                                  DownHitLocation;                                  		// 0x0018 (0x000C) [0x0000000000000000]              
-	// struct FVector                                  DownHitNormal;                                    		// 0x0024 (0x000C) [0x0000000000000000]              
-	// class ADunDefEmitterSpawnable*                  spawnedResult;                                    		// 0x0030 (0x0004) [0x0000000000000000]              
-	// float                                           SizeChange;                                       		// 0x0034 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefProjectile.SpawnImpactDecal
-// [0x00024102] 
-struct ADunDefProjectile_execSpawnImpactDecal_Parms
-{
-	class UMaterialInterface*                          impactMat;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitNormal;                                        		// 0x0010 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	float                                              SizeChange;                                       		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bDontCheckImpactedActor : 1;                      		// 0x0020 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0024 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UMaterialInstanceTimeVarying*             MITV;                                             		// 0x0028 (0x0004) [0x0000000000000000]              
-	// class UMaterialInterface*                       TheDecal;                                         		// 0x002C (0x0004) [0x0000000000000000]              
-	// float                                           DecalLifeSpan;                                    		// 0x0030 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefProjectile.ApplyFluidSurfaceImpact
-// [0x00020100] 
-struct ADunDefProjectile_execApplyFluidSurfaceImpact_Parms
-{
-	class AFluidSurfaceActor*                          Fluid;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefProjectile.LifeSteal
-// [0x00020102] 
-struct ADunDefProjectile_execLifeSteal_Parms
-{
-	float                                              TotalDamage;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// float                                           T;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
-	// float                                           F;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefProjectile.ScaleForHeroModifiers
-// [0x00020102] 
-struct ADunDefProjectile_execScaleForHeroModifiers_Parms
-{
-	unsigned long                                      IsFirstTime : 1;                                  		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	class UDunDefHero*                                 MyHero;                                           		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefProjectile.AllowHeroGUID
-// [0x00020002] 
-struct ADunDefProjectile_execAllowHeroGUID_Parms
-{
-	int                                                GUID1;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                GUID2;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                GUID3;                                            		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                GUID4;                                            		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0010 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefProjectile.InitializeDD
-// [0x00020102] 
-struct ADunDefProjectile_execInitializeDD_Parms
-{
-};
-
-// Function UDKGame.DunDefProjectile.ScaleProjectileVisualEffect
-// [0x00020102] 
-struct ADunDefProjectile_execScaleProjectileVisualEffect_Parms
-{
-};
-
-// Function UDKGame.DunDefProjectile.Init
-// [0x00020002] 
-struct ADunDefProjectile_execInit_Parms
-{
-	struct FVector                                     Direction;                                        		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefProjectile.InitProjectile
-// [0x00024102] 
-struct ADunDefProjectile_execInitProjectile_Parms
-{
-	struct FVector                                     Direction;                                        		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class APawn*                                       MyInstigator;                                     		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              baseDamageForScaling;                             		// 0x0010 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      myHomingTarget;                                   		// 0x0014 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// class UDunDefHero*                              MyHero;                                           		// 0x0018 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefProjectile.GetDebuffMultiplier
-// [0x00020102] 
-struct ADunDefProjectile_execGetDebuffMultiplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefProjectile.PawnDebuff
-// [0x00020102] 
-struct ADunDefProjectile_execPawnDebuff_Parms
-{
-	class AActor*                                      Other;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefProjectile.Destroyed
-// [0x00020902] ( FUNC_Event )
-struct ADunDefProjectile_eventDestroyed_Parms
-{
-};
-
-// Function UDKGame.DunDefProjectile.ProcessTouch
-// [0x00020102] 
-struct ADunDefProjectile_execProcessTouch_Parms
-{
-	class AActor*                                      Other;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitNormal;                                        		// 0x0010 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefProjectile.HitWall
-// [0x00020902] ( FUNC_Event )
-struct ADunDefProjectile_eventHitWall_Parms
-{
-	struct FVector                                     HitNormal;                                        		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class AActor*                                      Wall;                                             		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UPrimitiveComponent*                         WallComp;                                         		// 0x0010 (0x0004) [0x0000000004000080]              ( CPF_Parm | CPF_EditInline )
-	// class ADunDefPlayerReplicationInfo*             InstigatorReplicationInfo;                        		// 0x0014 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefProjectile.IsImpactAllowed
-// [0x00020102] 
-struct ADunDefProjectile_execIsImpactAllowed_Parms
-{
-	class AActor*                                      Other;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// unsigned long                                   FoundAny : 1;                                     		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
-	// class UClass*                                   ignoreClass;                                      		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefProjectile.Expire
-// [0x00020102] 
-struct ADunDefProjectile_execExpire_Parms
-{
-};
-
-// Function UDKGame.DunDefProjectile.RefreshSpeedLifeSpan
-// [0x00020102] 
-struct ADunDefProjectile_execRefreshSpeedLifeSpan_Parms
-{
-	// float                                           expireTime;                                       		// 0x0000 (0x0004) [0x0000000000000000]              
-	// float                                           MaxDistance;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
-	// unsigned long                                   bLimitDistanceFromGRI : 1;                        		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
-};
-
-// Function UDKGame.DunDefProjectile.PostBeginPlay
-// [0x00020902] ( FUNC_Event )
-struct ADunDefProjectile_eventPostBeginPlay_Parms
-{
-};
-
-// Function UDKGame.DunDefProjectile.SetClientSideLocation
-// [0x00820102] 
-struct ADunDefProjectile_execSetClientSideLocation_Parms
-{
-	// struct FVector                                  theLoc;                                           		// 0x0000 (0x000C) [0x0000000000000000]              
-	// struct FRotator                                 theRot;                                           		// 0x000C (0x000C) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefProjectile.ReplicatedEvent
-// [0x00020902] ( FUNC_Event )
-struct ADunDefProjectile_eventReplicatedEvent_Parms
-{
-	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.GetProjectileDamage
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execGetProjectileDamage_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.ShootMeleeProjectile
-// [0x00820102] 
-struct ADunDefWeapon_MeleeSword_execShootMeleeProjectile_Parms
-{
-	class AActor*                                      projTarget;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class ADunDefProjectile*                        SpawnedProjectile;                                		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct FVector                                  SpawnLocation;                                    		// 0x0008 (0x000C) [0x0000000000000000]              
-	// struct FRotator                                 SpawnRotation;                                    		// 0x0014 (0x000C) [0x0000000000000000]              
-	// int                                             useNumProjectiles;                                		// 0x0020 (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0024 (0x0004) [0x0000000000000000]              
-	// int                                             theAdditionalDamageAmount;                        		// 0x0028 (0x0004) [0x0000000000000000]              
-	// int                                             projAdditionalDamageAmount;                       		// 0x002C (0x0004) [0x0000000000000000]              
-	// float                                           ProjDamage;                                       		// 0x0030 (0x0004) [0x0000000000000000]              
-	// float                                           projSpeed;                                        		// 0x0034 (0x0004) [0x0000000000000000]              
-	// class UClass*                                   ProjAdditionalDamageType;                         		// 0x0038 (0x0004) [0x0000000000000000]              
-	// class ADunDefEmitterSpawnable*                  aParticle;                                        		// 0x003C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.SendToFiringState
-// [0x00020100] 
-struct ADunDefWeapon_MeleeSword_execSendToFiringState_Parms
-{
-	unsigned char                                      FireModeNum;                                      		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.GetMomentumMultiplier
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execGetMomentumMultiplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.BlockedHit
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execBlockedHit_Parms
-{
-	class UClass*                                      DamageType;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	// class ADunDefEmitterSpawnable*                  sparks;                                           		// 0x0010 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.GetBlockingDamageResistancePercent
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execGetBlockingDamageResistancePercent_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.AdjustDamage
-// [0x00424002] 
-struct ADunDefWeapon_MeleeSword_execAdjustDamage_Parms
-{
-	int                                                inDamage;                                         		// 0x0000 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	struct FVector                                     Momentum;                                         		// 0x0004 (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	class AController*                                 InstigatedBy;                                     		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0014 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0020 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FTraceHitInfo                               HitInfo;                                          		// 0x0024 (0x001C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// float                                           blockingPercent;                                  		// 0x0040 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.ShouldPlayHurtAnimation
-// [0x00420002] 
-struct ADunDefWeapon_MeleeSword_execShouldPlayHurtAnimation_Parms
-{
-	class AController*                                 InstigatedBy;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	int                                                Damage;                                           		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                Result;                                           		// 0x0018 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x001C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.BlocksHit
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execBlocksHit_Parms
-{
-	class AController*                                 InstigatedBy;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0010 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefTargetableInterface*               instigatorActor;                                  		// 0x0014 (0x0008) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.DetachWeapon
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execDetachWeapon_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.CustomFire
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execCustomFire_Parms
-{
-	int                                                theFireMode;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.CheckDisableBlocking
-// [0x00020002] 
-struct ADunDefWeapon_MeleeSword_execCheckDisableBlocking_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.CheckEnableBlocking
-// [0x00020002] 
-struct ADunDefWeapon_MeleeSword_execCheckEnableBlocking_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.ServerStopBlock
-// [0x002200C2] 
-struct ADunDefWeapon_MeleeSword_execServerStopBlock_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.ServerStartBlock
-// [0x002200C2] 
-struct ADunDefWeapon_MeleeSword_execServerStartBlock_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.StopFire
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execStopFire_Parms
-{
-	unsigned char                                      FireModeNum;                                      		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.StartFire
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execStartFire_Parms
-{
-	unsigned char                                      FireModeNum;                                      		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.BeginFire
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execBeginFire_Parms
-{
-	unsigned char                                      FireModeNum;                                      		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.CanUseAbility
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execCanUseAbility_Parms
-{
-	class ADunDefPlayerAbility*                        ability;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.DisableBlocking
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execDisableBlocking_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.CheckUpdateBlocking
-// [0x00020002] 
-struct ADunDefWeapon_MeleeSword_execCheckUpdateBlocking_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.EnableBlocking
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execEnableBlocking_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.StopSwingingWeapon
-// [0x00020002] 
-struct ADunDefWeapon_MeleeSword_execStopSwingingWeapon_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.PawnTookDamage
-// [0x00020802] ( FUNC_Event )
-struct ADunDefWeapon_MeleeSword_eventPawnTookDamage_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.GetTotalDamage
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execGetTotalDamage_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.DoMeleeAttack
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execDoMeleeAttack_Parms
-{
-	// unsigned long                                   bAllowAnimOverride : 1;                           		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.GetMeleeSwingLocation
-// [0x00820102] 
-struct ADunDefWeapon_MeleeSword_execGetMeleeSwingLocation_Parms
-{
-	struct FName                                       SocketName;                                       		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     ReturnValue;                                      		// 0x0008 (0x000C) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FVector                                  pos;                                              		// 0x0014 (0x000C) [0x0000000000000000]              
-	// struct FRotator                                 Rot;                                              		// 0x0020 (0x000C) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.LifeSteal
-// [0x00020102] 
-struct ADunDefWeapon_MeleeSword_execLifeSteal_Parms
-{
-	float                                              TotalDamage;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// float                                           T;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
-	// float                                           F;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.DoSwinging
-// [0x00824002] 
-struct ADunDefWeapon_MeleeSword_execDoSwinging_Parms
-{
-	unsigned long                                      bForceSwing : 1;                                  		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bOverrideExtent : 1;                              		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	struct FVector                                     extentOverride;                                   		// 0x0008 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              damageOverride;                                   		// 0x0014 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              momentumOverride;                                 		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      scaleMomentumByMass : 1;                          		// 0x001C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	float                                              scaleMomentumByMassExponent;                      		// 0x0020 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// struct FVector                                  slapLocation;                                     		// 0x0024 (0x000C) [0x0000000000000000]              
-	// struct FTraceHitInfo                            HitInfo;                                          		// 0x0030 (0x001C) [0x0000000000000000]              
-	// struct FVector                                  HitNormal;                                        		// 0x004C (0x000C) [0x0000000000000000]              
-	// struct FVector                                  HitLocation;                                      		// 0x0058 (0x000C) [0x0000000000000000]              
-	// struct FVector                                  theExtent;                                        		// 0x0064 (0x000C) [0x0000000000000000]              
-	// struct FVector                                  applyMomentum;                                    		// 0x0070 (0x000C) [0x0000000000000000]              
-	// struct FVector                                  MuzzlePos;                                        		// 0x007C (0x000C) [0x0000000000000000]              
-	// struct FVector                                  ProjectileTargetLoc;                              		// 0x0088 (0x000C) [0x0000000000000000]              
-	// class AActor*                                   Traced;                                           		// 0x0094 (0x0004) [0x0000000000000000]              
-	// int                                             theAdditionalDamageAmount;                        		// 0x0098 (0x0004) [0x0000000000000000]              
-	// int                                             it;                                               		// 0x009C (0x0004) [0x0000000000000000]              
-	// class UClass*                                   theAdditionalDamageType;                          		// 0x00A0 (0x0004) [0x0000000000000000]              
-	// float                                           knockBackMag;                                     		// 0x00A4 (0x0004) [0x0000000000000000]              
-	// float                                           pawnSwingMomentumMult;                            		// 0x00A8 (0x0004) [0x0000000000000000]              
-	// int                                             dealtDamage;                                      		// 0x00AC (0x0004) [0x0000000000000000]              
-	// struct FRotator                                 MuzzleRot;                                        		// 0x00B0 (0x000C) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.AnimNotify_StopWeaponSwingDamage
-// [0x00020002] 
-struct ADunDefWeapon_MeleeSword_execAnimNotify_StopWeaponSwingDamage_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.ResetSwing
-// [0x00020002] 
-struct ADunDefWeapon_MeleeSword_execResetSwing_Parms
-{
-	// int                                             it;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.AnimNotify_ResetWeaponSwingDamage
-// [0x00020002] 
-struct ADunDefWeapon_MeleeSword_execAnimNotify_ResetWeaponSwingDamage_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.AnimNotify_StartWeaponSwingDamage
-// [0x00020002] 
-struct ADunDefWeapon_MeleeSword_execAnimNotify_StartWeaponSwingDamage_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.Tick
-// [0x00020802] ( FUNC_Event )
-struct ADunDefWeapon_MeleeSword_eventTick_Parms
-{
-	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.PostBeginPlay
-// [0x00020902] ( FUNC_Event )
-struct ADunDefWeapon_MeleeSword_eventPostBeginPlay_Parms
-{
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.AddToSwingHurtList
-// [0x00020002] 
-struct ADunDefWeapon_MeleeSword_execAddToSwingHurtList_Parms
-{
-	class AActor*                                      newEntry;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.ExecReplicatedFunction
-// [0x00024102] 
-struct ADunDefWeapon_MeleeSword_execExecReplicatedFunction_Parms
-{
-	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
-	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefWeapon_MeleeSword.ReplicatedEvent
-// [0x00020902] ( FUNC_Event )
-struct ADunDefWeapon_MeleeSword_eventReplicatedEvent_Parms
-{
-	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.UI_EquipmentInfo.InitForEquipment
-// [0x00024002] 
-struct UUI_EquipmentInfo_execInitForEquipment_Parms
-{
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UHeroEquipment*                              theEquipment;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      IsInForge : 1;                                    		// 0x0008 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	class UUI_HeroInfo*                                heroInfoUI;                                       		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      IsRemoteHero : 1;                                 		// 0x0010 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      IsInEquipmentBox : 1;                             		// 0x0014 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      forgeActor;                                       		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bIsInTrade : 1;                                   		// 0x001C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bIsInPlayerShop : 1;                              		// 0x0020 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.UI_EquipmentInfo.SceneDeactivated
-// [0x00020802] ( FUNC_Event )
-struct UUI_EquipmentInfo_eventSceneDeactivated_Parms
-{
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.HasEnoughBankManaForUpgrade
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execHasEnoughBankManaForUpgrade_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.IsProUpgradeMode
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execIsProUpgradeMode_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.UIPostRender
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execUIPostRender_Parms
-{
-	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// float                                           AspectRatio;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.NotifyWidgetClicked
-// [0x00020802] ( FUNC_Event )
-struct UUI_EquipmentInfo_New_eventNotifyWidgetClicked_Parms
-{
-	class UUIObject*                                   Widget;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             I;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.CloseAllHeroUI
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execCloseAllHeroUI_Parms
-{
-	// class UUI_HeroInfo*                             heroInfoUI;                                       		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.OnReceivedInputKey
-// [0x00420002] 
-struct UUI_EquipmentInfo_New_execOnReceivedInputKey_Parms
-{
-	struct FInputEventParameters                       EventParms;                                       		// 0x0000 (0x0020) [0x0000000000000182]              ( CPF_Const | CPF_Parm | CPF_OutParm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0020 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.SceneActivated
-// [0x00020802] ( FUNC_Event )
-struct UUI_EquipmentInfo_New_eventSceneActivated_Parms
-{
-	unsigned long                                      bInitialActivation : 1;                           		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.EditBoxPopUpCompleted
-// [0x00020802] ( FUNC_Event )
-struct UUI_EquipmentInfo_New_eventEditBoxPopUpCompleted_Parms
-{
-	struct FString                                     EditBoxResult;                                    		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.CloseWithAnimation
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execCloseWithAnimation_Parms
-{
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.InitReRoll
-// [0x00820002] 
-struct UUI_EquipmentInfo_New_execInitReRoll_Parms
-{
-	// int                                             QualityIndex;                                     		// 0x0000 (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           EQ;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           Equipment;                                        		// 0x0008 (0x0004) [0x0000000000000000]              
-	// struct FEquipmentNetInfo                        theNetInfo;                                       		// 0x000C (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.SceneDeactivated
-// [0x00020802] ( FUNC_Event )
-struct UUI_EquipmentInfo_New_eventSceneDeactivated_Parms
-{
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.ResetOnExits
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execResetOnExits_Parms
-{
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.GetHero
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execGetHero_Parms
-{
-	class UDunDefHero*                                 ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.InitForEquipment
-// [0x00024002] 
-struct UUI_EquipmentInfo_New_execInitForEquipment_Parms
-{
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UHeroEquipment*                              theEquipment;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      IsInForge : 1;                                    		// 0x0008 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	class UUI_HeroInfo*                                heroInfoUI;                                       		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      IsRemoteHero : 1;                                 		// 0x0010 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      IsInEquipmentBox : 1;                             		// 0x0014 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      forgeActor;                                       		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bIsInTrade : 1;                                   		// 0x001C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bIsInPlayerShop : 1;                              		// 0x0020 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// int                                             sellWorth;                                        		// 0x0024 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.ShowUpgradePanel
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execShowUpgradePanel_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.UpdateForgeValues
-// [0x00024002] 
-struct UUI_EquipmentInfo_New_execUpdateForgeValues_Parms
-{
-	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bNoInterpolation : 1;                             		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// int                                             bankedMana;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.UpdateInvestment
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execUpdateInvestment_Parms
-{
-	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.ConsumeItems
-// [0x00020102] 
-struct UUI_EquipmentInfo_New_execConsumeItems_Parms
-{
-	int                                                NumItemsToConsume;                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class UHeroEquipment*                           Item;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
-	// int                                             PrimaryUserID;                                    		// 0x000C (0x0004) [0x0000000000000000]              
-	// int                                             it;                                               		// 0x0010 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.HasAnyManaPower
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execHasAnyManaPower_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.UpdateUICount
-// [0x00020102] 
-struct UUI_EquipmentInfo_New_execUpdateUICount_Parms
-{
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.GetVoidShardAmount
-// [0x00020102] 
-struct UUI_EquipmentInfo_New_execGetVoidShardAmount_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UHeroEquipment*                           Item;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
-	// int                                             PrimaryUserID;                                    		// 0x000C (0x0004) [0x0000000000000000]              
-	// int                                             VoidShardAmount;                                  		// 0x0010 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.HandleUI
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execHandleUI_Parms
-{
-	// struct FString                                  StringA;                                          		// 0x0000 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  SpecialText;                                      		// 0x000C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  FinalString;                                      		// 0x0018 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// unsigned long                                   bHasInfo : 1;                                     		// 0x0024 (0x0004) [0x0000000000000000] [0x00000001] 
-	// TArray< struct FString >                        ItemStringArray;                                  		// 0x0028 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.HandleCensor
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execHandleCensor_Parms
-{
-	// class UUIScriptWidget_EquipmentStat*            LocalEquipmentStat;                               		// 0x0000 (0x0004) [0x0000000000000000]              
-	// struct FString                                  LocalStatString;                                  		// 0x0004 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             valueSignType;                                    		// 0x0010 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.Update
-// [0x00020802] ( FUNC_Event )
-struct UUI_EquipmentInfo_New_eventUpdate_Parms
-{
-	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// int                                             sellWorth;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
-	// unsigned char                                   IsCustomForger;                                   		// 0x0008 (0x0001) [0x0000000000000000]              
-};
-
-// Function UDKGame.UI_EquipmentInfo_New.GetCloseAnimation
-// [0x00020002] 
-struct UUI_EquipmentInfo_New_execGetCloseAnimation_Parms
-{
-	struct FName                                       ReturnValue;                                      		// 0x0000 (0x0008) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.ClampItemBoxInfo
-// [0x00020102] 
-struct ATradeManager_execClampItemBoxInfo_Parms
-{
-	struct FHighDigitInt                               Value;                                            		// 0x0000 (0x0010) [0x0000000000000080]              ( CPF_Parm )
-	struct FHighDigitInt                               Min;                                              		// 0x0010 (0x0010) [0x0000000000000080]              ( CPF_Parm )
-	struct FHighDigitInt                               Max;                                              		// 0x0020 (0x0010) [0x0000000000000080]              ( CPF_Parm )
-	struct FHighDigitInt                               ReturnValue;                                      		// 0x0030 (0x0010) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.GetFinalTradeConfirmation
-// [0x00020102] 
-struct ATradeManager_execGetFinalTradeConfirmation_Parms
-{
-	class APlayerReplicationInfo*                      aTrader;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.GetTradeConfirmation
-// [0x00020102] 
-struct ATradeManager_execGetTradeConfirmation_Parms
-{
-	class APlayerReplicationInfo*                      aTrader;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.IsPlayerInTrade
-// [0x00020102] 
-struct ATradeManager_execIsPlayerInTrade_Parms
-{
-	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.AllowAddingMoreEquipments
-// [0x00020102] 
-struct ATradeManager_execAllowAddingMoreEquipments_Parms
-{
-	class APlayerReplicationInfo*                      aTrader;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.ExecReplicatedFunction
-// [0x00024102] 
-struct ATradeManager_execExecReplicatedFunction_Parms
-{
-	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
-	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.TradeManager.CancelTrade
-// [0x00020102] 
-struct ATradeManager_execCancelTrade_Parms
-{
-	// unsigned long                                   bPlaySound : 1;                                   		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
-};
-
-// Function UDKGame.TradeManager.InitializeDD
-// [0x00020102] 
-struct ATradeManager_execInitializeDD_Parms
-{
-	// unsigned long                                   bPlayedSound : 1;                                 		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
-};
-
-// Function UDKGame.TradeManager.CloseTradeScenes
-// [0x00020102] 
-struct ATradeManager_execCloseTradeScenes_Parms
-{
-};
-
-// Function UDKGame.TradeManager.Destroyed
-// [0x00020902] ( FUNC_Event )
-struct ATradeManager_eventDestroyed_Parms
-{
-};
-
-// Function UDKGame.TradeManager.SetTradeConfirmation
-// [0x00020102] 
-struct ATradeManager_execSetTradeConfirmation_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      bConfirm : 1;                                     		// 0x0004 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-};
-
-// Function UDKGame.TradeManager.RefreshTradeUI
-// [0x00020102] 
-struct ATradeManager_execRefreshTradeUI_Parms
-{
-};
-
-// Function UDKGame.TradeManager.SetTradeMana
-// [0x00020102] 
-struct ATradeManager_execSetTradeMana_Parms
-{
-	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FHighDigitInt                               mana;                                             		// 0x0004 (0x0010) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.TradeManager.GetConfirmation
-// [0x00024102] 
-struct ATradeManager_execGetConfirmation_Parms
-{
-	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      bReturnOtherIndex : 1;                            		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.GetTradeMana
-// [0x00024102] 
-struct ATradeManager_execGetTradeMana_Parms
-{
-	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      bReturnOtherIndex : 1;                            		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	struct FHighDigitInt                               ReturnValue;                                      		// 0x0008 (0x0010) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.GetTraderIndex
-// [0x00024102] 
-struct ATradeManager_execGetTraderIndex_Parms
-{
-	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      bReturnOtherIndex : 1;                            		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	int                                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.TradeSceneClosed
-// [0x00020102] 
-struct ATradeManager_execTradeSceneClosed_Parms
-{
-	class UUI_Trade*                                   TradeScene;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.TradeManager.ShowTradeUI
-// [0x00024102] 
-struct ATradeManager_execShowTradeUI_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned char                                      ForceSceneStackPriority;                          		// 0x0004 (0x0001) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// class UUI_Trade*                                TradeScene;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.TradeManager.IsInTrade
-// [0x00420102] 
-struct ATradeManager_execIsInTrade_Parms
-{
-	struct FEquipmentNetInfo                           netInfo;                                          		// 0x0000 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x00F8 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.LocalAddHeroEquipment
-// [0x00020102] 
-struct ATradeManager_execLocalAddHeroEquipment_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FEquipmentNetInfo                           netInfo;                                          		// 0x0004 (0x00F8) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.TradeManager.LocalRemoveHeroEquipment
-// [0x00020102] 
-struct ATradeManager_execLocalRemoveHeroEquipment_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FEquipmentNetInfo                           netInfo;                                          		// 0x0004 (0x00F8) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.TradeManager.LocalUpdateHeroEquipment
-// [0x00020102] 
-struct ATradeManager_execLocalUpdateHeroEquipment_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FEquipmentNetInfo                           netInfo;                                          		// 0x0004 (0x00F8) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.TradeManager.UpdateLocalTradingInfo
-// [0x00C24102] 
-struct ATradeManager_execUpdateLocalTradingInfo_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	TArray< class UHeroEquipment* >                    HeroEquipments;                                   		// 0x0004 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	struct FHighDigitInt                               traderMana;                                       		// 0x0010 (0x0010) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	struct FHighDigitInt                               lastSentTraderMana;                               		// 0x0020 (0x0010) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	float                                              lastSentTraderManaTime;                           		// 0x0030 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	unsigned long                                      bIsFinalConfirmed : 1;                            		// 0x0034 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	unsigned long                                      bDontCheckMana : 1;                               		// 0x0038 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// int                                             Index;                                            		// 0x003C (0x0004) [0x0000000000000000]              
-	// struct FEquipmentNetInfo                        newNetInfo;                                       		// 0x0040 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UHeroEquipment*                           ItemBoxEquipment;                                 		// 0x0138 (0x0004) [0x0000000000000000]              
-	// struct FHighDigitInt                            zeroBox;                                          		// 0x013C (0x0010) [0x0000000000000000]              
-};
-
-// Function UDKGame.TradeManager.PostBeginPlay
-// [0x00020902] ( FUNC_Event )
-struct ATradeManager_eventPostBeginPlay_Parms
-{
-};
-
-// Function UDKGame.TradeManager.GetOtherTrader
-// [0x00020102] 
-struct ATradeManager_execGetOtherTrader_Parms
-{
-	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class ADunDefPlayerReplicationInfo*                ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.TradeManager.RemoveLocalTradeItems
-// [0x00020102] 
-struct ATradeManager_execRemoveLocalTradeItems_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// int                                             it;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
-	// int                                             UserID;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class ADunDefPlayerController*                  MyPC;                                             		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.TradeManager.LocalFinalConfirmTrade
-// [0x00020102] 
-struct ATradeManager_execLocalFinalConfirmTrade_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class ADunDefPlayerController*                  MyPC;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              MyHero;                                           		// 0x000C (0x0004) [0x0000000000000000]              
-	// unsigned long                                   bTradeFailed : 1;                                 		// 0x0010 (0x0004) [0x0000000000000000] [0x00000001] 
-};
-
-// Function UDKGame.TradeManager.ExecuteTrade
-// [0x00820102] 
-struct ATradeManager_execExecuteTrade_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class ADunDefPlayerController*                  MyPC;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              MyHero;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
-	// struct FEquipmentNetInfo                        netInfo;                                          		// 0x000C (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             it;                                               		// 0x0104 (0x0004) [0x0000000000000000]              
-	// struct FHighDigitInt                            tmpBox;                                           		// 0x0108 (0x0010) [0x0000000000000000]              
-};
-
-// Function UDKGame.TradeManager.AcknowledgeFinalTradeConfirmation
-// [0x00020002] 
-struct ATradeManager_execAcknowledgeFinalTradeConfirmation_Parms
-{
-	class ADunDefPlayerReplicationInfo*                forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.TradeManager.SendFinalTradeConfirmation
-// [0x00020002] 
-struct ATradeManager_execSendFinalTradeConfirmation_Parms
-{
-};
-
-// Function UDKGame.TradeManager.Tick
-// [0x00020102] 
-struct ATradeManager_execTick_Parms
-{
-	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.TradeManager.UpdateHeroEquipment
-// [0x00420102] 
-struct ATradeManager_execUpdateHeroEquipment_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FEquipmentNetInfo                           Info;                                             		// 0x0004 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	// int                                             Index;                                            		// 0x00FC (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.TradeManager.RemoveHeroEquipment
-// [0x00420102] 
-struct ATradeManager_execRemoveHeroEquipment_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FEquipmentNetInfo                           Info;                                             		// 0x0004 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	// int                                             Index;                                            		// 0x00FC (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.TradeManager.AddHeroEquipment
-// [0x00420102] 
-struct ATradeManager_execAddHeroEquipment_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FEquipmentNetInfo                           Info;                                             		// 0x0004 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.TradeManager.IsEquipmentIDInTrade
-// [0x00020102] 
-struct ATradeManager_execIsEquipmentIDInTrade_Parms
-{
-	int                                                EquipmentID1;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                EquipmentID2;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             it;                                               		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.TradeManager.GetTradeEquipmentIndex
-// [0x00420102] 
-struct ATradeManager_execGetTradeEquipmentIndex_Parms
-{
-	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FEquipmentNetInfo                           tInfo;                                            		// 0x0004 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-	int                                                ReturnValue;                                      		// 0x00FC (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             it;                                               		// 0x0100 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.TradeManager.ReplicatedEvent
-// [0x00020902] ( FUNC_Event )
-struct ATradeManager_eventReplicatedEvent_Parms
-{
-	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.TradeManager.ResetTradeConfirmations
-// [0x00020102] 
-struct ATradeManager_execResetTradeConfirmations_Parms
-{
-};
-
-// Function UDKGame.TradeManager.GetDataListEntries
-// [0x00024102] 
-struct ATradeManager_execGetDataListEntries_Parms
-{
-	int                                                dataSetType;                                      		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	int                                                PlayerIndex;                                      		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	int                                                FolderID;                                         		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	TArray< class UDataListEntryInterface* >           ReturnValue;                                      		// 0x000C (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// class UHeroEquipment*                           anEquipment;                                      		// 0x0018 (0x0004) [0x0000000000000000]              
-	// TArray< class UDataListEntryInterface* >        altSet;                                           		// 0x001C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
 // Function UDKGame.UI_GameStats.UIPostRender
 // [0x00020002] 
 struct UUI_GameStats_execUIPostRender_Parms
@@ -32201,12 +30548,12 @@ struct UUI_GameStats_execRenderHeroPopup_Parms
 	// float                                           remainingWidth;                                   		// 0x00D0 (0x0004) [0x0000000000000000]              
 	// float                                           wrapStart;                                        		// 0x00D4 (0x0004) [0x0000000000000000]              
 	// struct FVector2D                                StartPos;                                         		// 0x00D8 (0x0008) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x00E0 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// unsigned long                                   isChallenge : 1;                                  		// 0x01F8 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   isPureStrat : 1;                                  		// 0x01FC (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   isSurvival : 1;                                   		// 0x0200 (0x0004) [0x0000000000000000] [0x00000001] 
-	// struct FString                                  ModeString;                                       		// 0x0204 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// TArray< struct FString >                        lines;                                            		// 0x0210 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x00E0 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// unsigned long                                   isChallenge : 1;                                  		// 0x01E8 (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   isPureStrat : 1;                                  		// 0x01EC (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   isSurvival : 1;                                   		// 0x01F0 (0x0004) [0x0000000000000000] [0x00000001] 
+	// struct FString                                  modeString;                                       		// 0x01F4 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// TArray< struct FString >                        lines;                                            		// 0x0200 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_GameStats.CheckLongLine
@@ -32327,7 +30674,7 @@ struct UUI_GameStats_execRenderCompletionIcons_Parms
 	float                                              lineY;                                            		// 0x000C (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
 	// int                                             I;                                                		// 0x0010 (0x0004) [0x0000000000000000]              
 	// int                                             Mask;                                             		// 0x0014 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0018 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0018 (0x0004) [0x0000000000000000]              
 	// TArray< struct UDunDefHeroManagerNative_FLevelProgressInfo > curProgress;                                      		// 0x001C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
@@ -32410,9 +30757,9 @@ struct UUI_GameStats_eventNotifyWidgetClicked_Parms
 {
 	class UUIObject*                                   Widget;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0008 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UCampaignLevelEntryObject*                LevelObject;                                      		// 0x0120 (0x0004) [0x0000000000000000]              
-	// class ADunDefPlayerController*                  PC;                                               		// 0x0124 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0008 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UCampaignLevelEntryObject*                LevelObject;                                      		// 0x0110 (0x0004) [0x0000000000000000]              
+	// class ADunDefPlayerController*                  PC;                                               		// 0x0114 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_GameStats.ToggleEnemyWaveIndex
@@ -32694,7 +31041,7 @@ struct UUI_GameStats_execAddPlayerStats_Parms
 	// struct UUI_GameStats_FHeroAward                 thisAward;                                        		// 0x00C0 (0x0010) [0x0000000000000000]              
 	// class ADunDefPlayerController*                  PC;                                               		// 0x00D0 (0x0004) [0x0000000000000000]              
 	// class UDunDefPlayerStats*                       newStats;                                         		// 0x00D4 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x00D8 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x00D8 (0x0004) [0x0000000000000000]              
 	// class UDunDefHero*                              myHeroArchetype;                                  		// 0x00DC (0x0004) [0x0000000000000000]              
 	// class ADunDefGameReplicationInfo*               theGRI;                                           		// 0x00E0 (0x0004) [0x0000000000000000]              
 	// int                                             PlayerIndex;                                      		// 0x00E4 (0x0004) [0x0000000000000000]              
@@ -32747,7 +31094,7 @@ struct UUI_GameStats_execCustomInit_Parms
 	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0014 (0x0004) [0x0000000000000000]              
 	// class UDunDefOnlineGameSettingsConsole*         GameSettings;                                     		// 0x0018 (0x0004) [0x0000000000000000]              
 	// float                                           leaderboardListPos;                               		// 0x001C (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      currentLevelEntry;                                		// 0x0020 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      currentLevelEntry;                                		// 0x0020 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_GameStats.GetOpenAnimation
@@ -32762,6 +31109,278 @@ struct UUI_GameStats_execGetOpenAnimation_Parms
 struct UUI_GameStats_execShowDeletionConfirmation_Parms
 {
 	int                                                Reason;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefProjectile.DoDestroy
+// [0x00020102] 
+struct ADunDefProjectile_execDoDestroy_Parms
+{
+};
+
+// Function UDKGame.DunDefProjectile.AllowReflect
+// [0x00020102] 
+struct ADunDefProjectile_execAllowReflect_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefProjectile.OnProjectileImpacted
+// [0x00120000] 
+struct ADunDefProjectile_execOnProjectileImpacted_Parms
+{
+	class ADunDefProjectile*                           theProjectile;                                    		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class AActor*                                      impactedOn;                                       		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefProjectile.HurtRadius
+// [0x00024102] 
+struct ADunDefProjectile_execHurtRadius_Parms
+{
+	float                                              DamageAmount;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              InDamageRadius;                                   		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UClass*                                      DamageType;                                       		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Momentum;                                         		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HurtOrigin;                                       		// 0x0010 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	class AActor*                                      IgnoredActor;                                     		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AController*                                 InstigatedByController;                           		// 0x0020 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bDoFullDamage : 1;                                		// 0x0024 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0028 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// unsigned long                                   bCausedDamage : 1;                                		// 0x002C (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   bResult : 1;                                      		// 0x0030 (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   IgnoreDamageClass : 1;                            		// 0x0034 (0x0004) [0x0000000000000000] [0x00000001] 
+	// float                                           MomentumToUse;                                    		// 0x0038 (0x0004) [0x0000000000000000]              
+	// class ADunDefPlayerReplicationInfo*             InstigatorReplicationInfo;                        		// 0x003C (0x0004) [0x0000000000000000]              
+	// class UClass*                                   ignoreClass;                                      		// 0x0040 (0x0004) [0x0000000000000000]              
+	// class ADunDefEmitterSpawnable*                  aSpawnableEmitter;                                		// 0x0044 (0x0004) [0x0000000000000000]              
+	// float                                           smgg;                                             		// 0x0048 (0x0004) [0x0000000000000000]              
+	// float                                           smg;                                              		// 0x004C (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefProjectile.AllowDamage
+// [0x00020102] 
+struct ADunDefProjectile_execAllowDamage_Parms
+{
+	class AActor*                                      aTarget;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefProjectile.DunDefProjHurtRadius
+// [0x00024102] 
+struct ADunDefProjectile_execDunDefProjHurtRadius_Parms
+{
+	float                                              BaseDamage;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              TheDamageRadius;                                  		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UClass*                                      DamageType;                                       		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Momentum;                                         		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HurtOrigin;                                       		// 0x0010 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	class AActor*                                      IgnoredActor;                                     		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AController*                                 InstigatedByController;                           		// 0x0020 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bDoFullDamage : 1;                                		// 0x0024 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0028 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// class AActor*                                   Victim;                                           		// 0x002C (0x0004) [0x0000000000000000]              
+	// class UClass*                                   ignoreClass;                                      		// 0x0030 (0x0004) [0x0000000000000000]              
+	// unsigned long                                   bCausedDamage : 1;                                		// 0x0034 (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   IgnoreDamageClass : 1;                            		// 0x0038 (0x0004) [0x0000000000000000] [0x00000001] 
+	// float                                           MomentumToUse;                                    		// 0x003C (0x0004) [0x0000000000000000]              
+	// class ADunDefPlayerReplicationInfo*             InstigatorReplicationInfo;                        		// 0x0040 (0x0004) [0x0000000000000000]              
+	// float                                           smg;                                              		// 0x0044 (0x0004) [0x0000000000000000]              
+	// float                                           smgg;                                             		// 0x0048 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefProjectile.EndRadiusDamage
+// [0x00020100] 
+struct ADunDefProjectile_execEndRadiusDamage_Parms
+{
+};
+
+// Function UDKGame.DunDefProjectile.AffectVictim
+// [0x00020100] 
+struct ADunDefProjectile_execAffectVictim_Parms
+{
+	class AActor*                                      Victim;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefProjectile.StartRadiusDamage
+// [0x00020100] 
+struct ADunDefProjectile_execStartRadiusDamage_Parms
+{
+};
+
+// Function UDKGame.DunDefProjectile.Explode
+// [0x00820102] 
+struct ADunDefProjectile_execExplode_Parms
+{
+	struct FVector                                     HitLocation;                                      		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitNormal;                                        		// 0x000C (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	// struct FVector                                  DownHitLocation;                                  		// 0x0018 (0x000C) [0x0000000000000000]              
+	// struct FVector                                  DownHitNormal;                                    		// 0x0024 (0x000C) [0x0000000000000000]              
+	// class ADunDefEmitterSpawnable*                  spawnedResult;                                    		// 0x0030 (0x0004) [0x0000000000000000]              
+	// float                                           SizeChange;                                       		// 0x0034 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefProjectile.SpawnImpactDecal
+// [0x00024102] 
+struct ADunDefProjectile_execSpawnImpactDecal_Parms
+{
+	class UMaterialInterface*                          impactMat;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitNormal;                                        		// 0x0010 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	float                                              SizeChange;                                       		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bDontCheckImpactedActor : 1;                      		// 0x0020 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0024 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// class UMaterialInstanceTimeVarying*             MITV;                                             		// 0x0028 (0x0004) [0x0000000000000000]              
+	// class UMaterialInterface*                       TheDecal;                                         		// 0x002C (0x0004) [0x0000000000000000]              
+	// float                                           DecalLifeSpan;                                    		// 0x0030 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefProjectile.ApplyFluidSurfaceImpact
+// [0x00020100] 
+struct ADunDefProjectile_execApplyFluidSurfaceImpact_Parms
+{
+	class AFluidSurfaceActor*                          Fluid;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefProjectile.ScaleForHeroModifiers
+// [0x00020102] 
+struct ADunDefProjectile_execScaleForHeroModifiers_Parms
+{
+	unsigned long                                      IsFirstTime : 1;                                  		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	class UDunDefHero*                                 MyHero;                                           		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// class UDunDefHero*                              Hero;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefProjectile.AllowHeroGUID
+// [0x00020002] 
+struct ADunDefProjectile_execAllowHeroGUID_Parms
+{
+	int                                                GUID1;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                GUID2;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                GUID3;                                            		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                GUID4;                                            		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0010 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefProjectile.InitializeDD
+// [0x00020102] 
+struct ADunDefProjectile_execInitializeDD_Parms
+{
+};
+
+// Function UDKGame.DunDefProjectile.ScaleProjectileVisualEffect
+// [0x00020102] 
+struct ADunDefProjectile_execScaleProjectileVisualEffect_Parms
+{
+};
+
+// Function UDKGame.DunDefProjectile.Init
+// [0x00020002] 
+struct ADunDefProjectile_execInit_Parms
+{
+	struct FVector                                     Direction;                                        		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefProjectile.InitProjectile
+// [0x00024102] 
+struct ADunDefProjectile_execInitProjectile_Parms
+{
+	struct FVector                                     Direction;                                        		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	class APawn*                                       MyInstigator;                                     		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              baseDamageForScaling;                             		// 0x0010 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      myHomingTarget;                                   		// 0x0014 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	// class UDunDefHero*                              MyHero;                                           		// 0x0018 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefProjectile.Destroyed
+// [0x00020902] ( FUNC_Event )
+struct ADunDefProjectile_eventDestroyed_Parms
+{
+};
+
+// Function UDKGame.DunDefProjectile.ProcessTouch
+// [0x00020102] 
+struct ADunDefProjectile_execProcessTouch_Parms
+{
+	class AActor*                                      Other;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitNormal;                                        		// 0x0010 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefProjectile.HitWall
+// [0x00020902] ( FUNC_Event )
+struct ADunDefProjectile_eventHitWall_Parms
+{
+	struct FVector                                     HitNormal;                                        		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	class AActor*                                      Wall;                                             		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UPrimitiveComponent*                         WallComp;                                         		// 0x0010 (0x0004) [0x0000000004000080]              ( CPF_Parm | CPF_EditInline )
+	// class ADunDefPlayerReplicationInfo*             InstigatorReplicationInfo;                        		// 0x0014 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefProjectile.IsImpactAllowed
+// [0x00020102] 
+struct ADunDefProjectile_execIsImpactAllowed_Parms
+{
+	class AActor*                                      Other;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// unsigned long                                   FoundAny : 1;                                     		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
+	// class UClass*                                   ignoreClass;                                      		// 0x000C (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefProjectile.Expire
+// [0x00020102] 
+struct ADunDefProjectile_execExpire_Parms
+{
+};
+
+// Function UDKGame.DunDefProjectile.RefreshSpeedLifeSpan
+// [0x00020102] 
+struct ADunDefProjectile_execRefreshSpeedLifeSpan_Parms
+{
+	// float                                           expireTime;                                       		// 0x0000 (0x0004) [0x0000000000000000]              
+	// float                                           MaxDistance;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// unsigned long                                   bLimitDistanceFromGRI : 1;                        		// 0x0008 (0x0004) [0x0000000000000000] [0x00000001] 
+};
+
+// Function UDKGame.DunDefProjectile.PostBeginPlay
+// [0x00020902] ( FUNC_Event )
+struct ADunDefProjectile_eventPostBeginPlay_Parms
+{
+};
+
+// Function UDKGame.DunDefProjectile.SetClientSideLocation
+// [0x00820102] 
+struct ADunDefProjectile_execSetClientSideLocation_Parms
+{
+	// struct FVector                                  theLoc;                                           		// 0x0000 (0x000C) [0x0000000000000000]              
+	// struct FRotator                                 theRot;                                           		// 0x000C (0x000C) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefProjectile.ReplicatedEvent
+// [0x00020902] ( FUNC_Event )
+struct ADunDefProjectile_eventReplicatedEvent_Parms
+{
+	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.UI_EquipmentInfo.InitForEquipment
+// [0x00024002] 
+struct UUI_EquipmentInfo_execInitForEquipment_Parms
+{
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UHeroEquipment*                              theEquipment;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      IsInForge : 1;                                    		// 0x0008 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	class UUI_HeroInfo*                                heroInfoUI;                                       		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      IsRemoteHero : 1;                                 		// 0x0010 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      IsInEquipmentBox : 1;                             		// 0x0014 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      forgeActor;                                       		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bIsInTrade : 1;                                   		// 0x001C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bIsInPlayerShop : 1;                              		// 0x0020 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.UI_EquipmentInfo.SceneDeactivated
+// [0x00020802] ( FUNC_Event )
+struct UUI_EquipmentInfo_eventSceneDeactivated_Parms
+{
 };
 
 // Function UDKGame.UI_SwapHero.OnReceivedInputKey
@@ -32847,7 +31466,7 @@ struct UUI_SwapHero_eventNotifyWidgetClicked_Parms
 // [0x00020002] 
 struct UUI_SwapHero_execDeleteSelectedHero_Parms
 {
-	// class UDataListEntryInterface*                  hero;                                             		// 0x0000 (0x0008) [0x0000000000000000]              
+	// class UDataListEntryInterface*                  Hero;                                             		// 0x0000 (0x0008) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_SwapHero.HeroEntrySelected
@@ -33069,15 +31688,6 @@ struct UDunDefGamePhaseSubscriberInterface_execChangedGamePhases_Parms
 	unsigned long                                      IsCombatPhase : 1;                                		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 };
 
-// Function UDKGame.DunDefGasCloud.StaticGetCloudOilTime
-// [0x00022002] 
-struct ADunDefGasCloud_execStaticGetCloudOilTime_Parms
-{
-	float                                              lifeSpanStatModifier;                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class ADunDefGasCloud*                             gCloud;                                           		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
 // Function UDKGame.DunDefGasCloud.AllowSpawn
 // [0x00022802] ( FUNC_Event )
 struct ADunDefGasCloud_eventAllowSpawn_Parms
@@ -33150,7 +31760,7 @@ struct ADunDefGasCloud_execScaleRadiusEffect_Parms
 struct ADunDefGasCloud_execScaleForHeroModifiers_Parms
 {
 	unsigned long                                      IsFirstTime : 1;                                  		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// float                                           LifeSpanModifier;                                 		// 0x0008 (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerController*                  PC;                                               		// 0x000C (0x0004) [0x0000000000000000]              
 };
@@ -33201,7 +31811,6 @@ struct ADunDefGasCloud_execEffectTimer_Parms
 	// float                                           DamageMult;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
 	// float                                           Dist;                                             		// 0x000C (0x0004) [0x0000000000000000]              
 	// class AActor*                                   aActor;                                           		// 0x0010 (0x0004) [0x0000000000000000]              
-	// class ADunDefPracticeDummy*                     theDummy;                                         		// 0x0014 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefGasCloud.GetRadiusDamage
@@ -33352,7 +31961,7 @@ struct ADunDefWaveBillboard_execRefreshBillboard_Parms
 	// int                                             masterWaveNum;                                    		// 0x0018 (0x0004) [0x0000000000000000]              
 	// int                                             missionSwitch;                                    		// 0x001C (0x0004) [0x0000000000000000]              
 	// unsigned long                                   bNightmareMode : 1;                               		// 0x0020 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   bInsanityMode : 1;                                		// 0x0024 (0x0004) [0x0000000000000000] [0x00000001] 
+	// unsigned long                                   bPureStrat : 1;                                   		// 0x0024 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.DunDefWaveBillboard.DrawMiniMapIcon
@@ -33507,7 +32116,7 @@ struct ADunDefForge_execshouldShowAltActivation_Parms
 {
 	class ULocalPlayer*                                ForPlayer;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefForge.ContinueDrawingToolTip
@@ -33660,11 +32269,11 @@ struct ADunDefForge_execClearLeaderboardDelegate_Parms
 struct ADunDefForge_execGetLeaderboardSignString_Parms
 {
 	// class UDataStoreClient*                         DSClient;                                         		// 0x0000 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      currentCampaignEntry;                             		// 0x0008 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class ADunDefGameReplicationInfo*               theGRI;                                           		// 0x0120 (0x0004) [0x0000000000000000]              
-	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0124 (0x0004) [0x0000000000000000]              
-	// int                                             Mode;                                             		// 0x0128 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      currentCampaignEntry;                             		// 0x0008 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class ADunDefGameReplicationInfo*               theGRI;                                           		// 0x0110 (0x0004) [0x0000000000000000]              
+	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0114 (0x0004) [0x0000000000000000]              
+	// int                                             Mode;                                             		// 0x0118 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefForge.OnLeaderboardReadComplete
@@ -33734,7 +32343,7 @@ struct ADunDefForge_execCheckForLeaderboardHUDMessage_Parms
 struct ADunDefForge_execRefreshLeaderboardSign_Parms
 {
 	unsigned long                                      shouldHide : 1;                                   		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class ADunDefGameReplicationInfo*               theGRI;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -34404,7 +33013,7 @@ struct ADunDefTower_Aura_execGetTimeOfTotalRepair_Parms
 // [0x00022002] 
 struct ADunDefTower_Aura_execStaticGetAttackRange_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefTower*                                tower;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              TowerRangeScaler;                                 		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
@@ -34444,7 +33053,7 @@ struct ADunDefTower_Aura_execGetTimedInterval_Parms
 struct ADunDefTower_Aura_execScaleForHeroModifiers_Parms
 {
 	unsigned long                                      IsFirstTime : 1;                                  		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefTower_Aura.GetHealth
@@ -34989,7 +33598,7 @@ struct ADunDefTower_DetonationType_execGetMaxDetonations_Parms
 // [0x00022002] 
 struct ADunDefTower_DetonationType_execStaticGetTowerScale_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefTower*                                tower;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              TowerRangeScaler;                                 		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
@@ -34999,7 +33608,7 @@ struct ADunDefTower_DetonationType_execStaticGetTowerScale_Parms
 // [0x00022002] 
 struct ADunDefTower_DetonationType_execStaticGetAttackRange_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefTower*                                tower;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              TowerRangeScaler;                                 		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
@@ -36198,9 +34807,9 @@ struct UDunDef_SeqAct_GetGameSettings_eventActivated_Parms
 // [0x00820802] ( FUNC_Event )
 struct UDunDef_SeqAct_GetMissionSwitchValue_eventActivated_Parms
 {
-	// struct FCampaignLevelEntry                      Entry;                                            		// 0x0000 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             intVal;                                           		// 0x0118 (0x0004) [0x0000000000000000]              
-	// class USeqVar_Int*                              OutputInt;                                        		// 0x011C (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      Entry;                                            		// 0x0000 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             intVal;                                           		// 0x0108 (0x0004) [0x0000000000000000]              
+	// class USeqVar_Int*                              OutputInt;                                        		// 0x010C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDef_SeqAct_GetNumItemBoxItems.Activated
@@ -36248,16 +34857,15 @@ struct UDunDef_SeqAct_GiveEquipmentToPlayers_execGiveEquipment_Parms
 {
 	class ADunDefPlayerController*                     PC;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             it;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct FGiveEquipmentEntry                      theEntry;                                         		// 0x0008 (0x0044) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHero*                              PCHero;                                           		// 0x004C (0x0004) [0x0000000000000000]              
-	// struct FEquipmentNetInfo                        theNetInfo;                                       		// 0x0050 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UHeroEquipment*                           theNewEquipment;                                  		// 0x0148 (0x0004) [0x0000000000000000]              
-	// class UHeroEquipment*                           theEquipmentArchetype;                            		// 0x014C (0x0004) [0x0000000000000000]              
-	// unsigned long                                   bFoundAny : 1;                                    		// 0x0150 (0x0004) [0x0000000000000000] [0x00000001] 
-	// float                                           randomizerMult;                                   		// 0x0154 (0x0004) [0x0000000000000000]              
-	// float                                           TempGoNegative;                                   		// 0x0158 (0x0004) [0x0000000000000000]              
-	// int                                             heroTypeRandomIndex;                              		// 0x015C (0x0004) [0x0000000000000000]              
-	// int                                             P;                                                		// 0x0160 (0x0004) [0x0000000000000000]              
+	// struct FGiveEquipmentEntry                      theEntry;                                         		// 0x0008 (0x0034) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UDunDefHero*                              PCHero;                                           		// 0x003C (0x0004) [0x0000000000000000]              
+	// struct FEquipmentNetInfo                        theNetInfo;                                       		// 0x0040 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UHeroEquipment*                           theNewEquipment;                                  		// 0x0138 (0x0004) [0x0000000000000000]              
+	// class UHeroEquipment*                           theEquipmentArchetype;                            		// 0x013C (0x0004) [0x0000000000000000]              
+	// unsigned long                                   bFoundAny : 1;                                    		// 0x0140 (0x0004) [0x0000000000000000] [0x00000001] 
+	// float                                           randomizerMult;                                   		// 0x0144 (0x0004) [0x0000000000000000]              
+	// int                                             heroTypeRandomIndex;                              		// 0x0148 (0x0004) [0x0000000000000000]              
+	// int                                             P;                                                		// 0x014C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDef_SeqAct_GiveEquipmentToPlayers.Activated
@@ -36336,8 +34944,8 @@ struct UDunDef_SeqAct_LevelVictory_eventActivated_Parms
 // [0x00820802] ( FUNC_Event )
 struct UDunDef_SeqAct_LoadLevel_eventActivated_Parms
 {
-	// struct FCampaignLevelEntry                      nextLevelEntry;                                   		// 0x0000 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UCampaignLevelEntryObject*                nextLevelObject;                                  		// 0x0118 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      nextLevelEntry;                                   		// 0x0000 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UCampaignLevelEntryObject*                nextLevelObject;                                  		// 0x0108 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDef_SeqAct_LockContent.Activated
@@ -36484,9 +35092,8 @@ struct UDunDef_SeqAct_ScaleEnemyWave_eventActivated_Parms
 	// float                                           highestWaveTime;                                  		// 0x00BC (0x0004) [0x0000000000000000]              
 	// float                                           numPlayersEnemyNumScalar;                         		// 0x00C0 (0x0004) [0x0000000000000000]              
 	// float                                           numEnemiesDifficultyScalar;                       		// 0x00C4 (0x0004) [0x0000000000000000]              
-	// float                                           tempgroup;                                        		// 0x00C8 (0x0004) [0x0000000000000000]              
-	// int                                             NumberOfPlayers;                                  		// 0x00CC (0x0004) [0x0000000000000000]              
-	// int                                             difficultyInt;                                    		// 0x00D0 (0x0004) [0x0000000000000000]              
+	// int                                             NumberOfPlayers;                                  		// 0x00C8 (0x0004) [0x0000000000000000]              
+	// int                                             difficultyInt;                                    		// 0x00CC (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDef_SeqAct_ScaleEnemyWave.GetTotalWaveTime
@@ -36596,7 +35203,7 @@ struct UDunDef_SeqAct_SetKeyBinding_eventActivated_Parms
 };
 
 // Function UDKGame.DunDef_SeqAct_SetMaxFramerate.Activated
-// [0x00020802] ( FUNC_Event )
+// [0x00020800] ( FUNC_Event )
 struct UDunDef_SeqAct_SetMaxFramerate_eventActivated_Parms
 {
 };
@@ -36765,7 +35372,7 @@ struct UUI_MainMenu_execLiveSignInValidation_Parms
 {
 	int                                                ControllerId;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
 	// int                                             FinalControllerId;                                		// 0x000C (0x0004) [0x0000000000000000]              
 	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0010 (0x0004) [0x0000000000000000]              
 };
@@ -36775,12 +35382,6 @@ struct UUI_MainMenu_execLiveSignInValidation_Parms
 struct UUI_MainMenu_execOpenOptions_Parms
 {
 	class ULocalPlayer*                                forWho;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.UI_MainMenu.PlayOnlineGameDiscord
-// [0x00020002] 
-struct UUI_MainMenu_execPlayOnlineGameDiscord_Parms
-{
 };
 
 // Function UDKGame.UI_MainMenu.PlayGame
@@ -36858,6 +35459,348 @@ struct UDunDefToolTipInterface_execDrawToolTip_Parms
 	class ULocalPlayer*                                ForPlayer;                                        		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 };
 
+// Function UDKGame.TradeManager.ClampItemBoxInfo
+// [0x00020102] 
+struct ATradeManager_execClampItemBoxInfo_Parms
+{
+	struct FHighDigitInt                               Value;                                            		// 0x0000 (0x0010) [0x0000000000000080]              ( CPF_Parm )
+	struct FHighDigitInt                               Min;                                              		// 0x0010 (0x0010) [0x0000000000000080]              ( CPF_Parm )
+	struct FHighDigitInt                               Max;                                              		// 0x0020 (0x0010) [0x0000000000000080]              ( CPF_Parm )
+	struct FHighDigitInt                               ReturnValue;                                      		// 0x0030 (0x0010) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.TradeManager.GetFinalTradeConfirmation
+// [0x00020102] 
+struct ATradeManager_execGetFinalTradeConfirmation_Parms
+{
+	class APlayerReplicationInfo*                      aTrader;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.TradeManager.GetTradeConfirmation
+// [0x00020102] 
+struct ATradeManager_execGetTradeConfirmation_Parms
+{
+	class APlayerReplicationInfo*                      aTrader;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.TradeManager.IsPlayerInTrade
+// [0x00020102] 
+struct ATradeManager_execIsPlayerInTrade_Parms
+{
+	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.TradeManager.AllowAddingMoreEquipments
+// [0x00020102] 
+struct ATradeManager_execAllowAddingMoreEquipments_Parms
+{
+	class APlayerReplicationInfo*                      aTrader;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.TradeManager.ExecReplicatedFunction
+// [0x00024102] 
+struct ATradeManager_execExecReplicatedFunction_Parms
+{
+	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
+	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.TradeManager.CancelTrade
+// [0x00020102] 
+struct ATradeManager_execCancelTrade_Parms
+{
+	// unsigned long                                   bPlaySound : 1;                                   		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
+};
+
+// Function UDKGame.TradeManager.InitializeDD
+// [0x00020102] 
+struct ATradeManager_execInitializeDD_Parms
+{
+	// unsigned long                                   bPlayedSound : 1;                                 		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
+};
+
+// Function UDKGame.TradeManager.CloseTradeScenes
+// [0x00020102] 
+struct ATradeManager_execCloseTradeScenes_Parms
+{
+};
+
+// Function UDKGame.TradeManager.Destroyed
+// [0x00020902] ( FUNC_Event )
+struct ATradeManager_eventDestroyed_Parms
+{
+};
+
+// Function UDKGame.TradeManager.SetTradeConfirmation
+// [0x00020102] 
+struct ATradeManager_execSetTradeConfirmation_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      bConfirm : 1;                                     		// 0x0004 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+};
+
+// Function UDKGame.TradeManager.RefreshTradeUI
+// [0x00020102] 
+struct ATradeManager_execRefreshTradeUI_Parms
+{
+};
+
+// Function UDKGame.TradeManager.SetTradeMana
+// [0x00020102] 
+struct ATradeManager_execSetTradeMana_Parms
+{
+	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FHighDigitInt                               mana;                                             		// 0x0004 (0x0010) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.TradeManager.GetConfirmation
+// [0x00024102] 
+struct ATradeManager_execGetConfirmation_Parms
+{
+	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      bReturnOtherIndex : 1;                            		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.TradeManager.GetTradeMana
+// [0x00024102] 
+struct ATradeManager_execGetTradeMana_Parms
+{
+	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      bReturnOtherIndex : 1;                            		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	struct FHighDigitInt                               ReturnValue;                                      		// 0x0008 (0x0010) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.TradeManager.GetTraderIndex
+// [0x00024102] 
+struct ATradeManager_execGetTraderIndex_Parms
+{
+	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      bReturnOtherIndex : 1;                            		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	int                                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.TradeManager.TradeSceneClosed
+// [0x00020102] 
+struct ATradeManager_execTradeSceneClosed_Parms
+{
+	class UUI_Trade*                                   TradeScene;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.TradeManager.ShowTradeUI
+// [0x00024102] 
+struct ATradeManager_execShowTradeUI_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned char                                      ForceSceneStackPriority;                          		// 0x0004 (0x0001) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	// class UUI_Trade*                                TradeScene;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.TradeManager.IsInTrade
+// [0x00420102] 
+struct ATradeManager_execIsInTrade_Parms
+{
+	struct FEquipmentNetInfo                           netInfo;                                          		// 0x0000 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x00F8 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.TradeManager.LocalAddHeroEquipment
+// [0x00020102] 
+struct ATradeManager_execLocalAddHeroEquipment_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FEquipmentNetInfo                           netInfo;                                          		// 0x0004 (0x00F8) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame.TradeManager.LocalRemoveHeroEquipment
+// [0x00020102] 
+struct ATradeManager_execLocalRemoveHeroEquipment_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FEquipmentNetInfo                           netInfo;                                          		// 0x0004 (0x00F8) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame.TradeManager.LocalUpdateHeroEquipment
+// [0x00020102] 
+struct ATradeManager_execLocalUpdateHeroEquipment_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FEquipmentNetInfo                           netInfo;                                          		// 0x0004 (0x00F8) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame.TradeManager.UpdateLocalTradingInfo
+// [0x00C24102] 
+struct ATradeManager_execUpdateLocalTradingInfo_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	TArray< class UHeroEquipment* >                    HeroEquipments;                                   		// 0x0004 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	struct FHighDigitInt                               traderMana;                                       		// 0x0010 (0x0010) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	struct FHighDigitInt                               lastSentTraderMana;                               		// 0x0020 (0x0010) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	float                                              lastSentTraderManaTime;                           		// 0x0030 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	unsigned long                                      bIsFinalConfirmed : 1;                            		// 0x0034 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	unsigned long                                      bDontCheckMana : 1;                               		// 0x0038 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	// int                                             Index;                                            		// 0x003C (0x0004) [0x0000000000000000]              
+	// struct FEquipmentNetInfo                        newNetInfo;                                       		// 0x0040 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UHeroEquipment*                           ItemBoxEquipment;                                 		// 0x0138 (0x0004) [0x0000000000000000]              
+	// struct FHighDigitInt                            zeroBox;                                          		// 0x013C (0x0010) [0x0000000000000000]              
+};
+
+// Function UDKGame.TradeManager.PostBeginPlay
+// [0x00020902] ( FUNC_Event )
+struct ATradeManager_eventPostBeginPlay_Parms
+{
+};
+
+// Function UDKGame.TradeManager.GetOtherTrader
+// [0x00020102] 
+struct ATradeManager_execGetOtherTrader_Parms
+{
+	class APlayerReplicationInfo*                      PRI;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class ADunDefPlayerReplicationInfo*                ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.TradeManager.RemoveLocalTradeItems
+// [0x00020102] 
+struct ATradeManager_execRemoveLocalTradeItems_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// int                                             it;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
+	// int                                             UserID;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class ADunDefPlayerController*                  MyPC;                                             		// 0x000C (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.TradeManager.LocalFinalConfirmTrade
+// [0x00020102] 
+struct ATradeManager_execLocalFinalConfirmTrade_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// class ADunDefPlayerController*                  MyPC;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              MyHero;                                           		// 0x000C (0x0004) [0x0000000000000000]              
+	// unsigned long                                   bTradeFailed : 1;                                 		// 0x0010 (0x0004) [0x0000000000000000] [0x00000001] 
+};
+
+// Function UDKGame.TradeManager.ExecuteTrade
+// [0x00820102] 
+struct ATradeManager_execExecuteTrade_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// class ADunDefPlayerController*                  MyPC;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              MyHero;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
+	// struct FEquipmentNetInfo                        netInfo;                                          		// 0x000C (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// int                                             it;                                               		// 0x0104 (0x0004) [0x0000000000000000]              
+	// struct FHighDigitInt                            tmpBox;                                           		// 0x0108 (0x0010) [0x0000000000000000]              
+};
+
+// Function UDKGame.TradeManager.AcknowledgeFinalTradeConfirmation
+// [0x00020002] 
+struct ATradeManager_execAcknowledgeFinalTradeConfirmation_Parms
+{
+	class ADunDefPlayerReplicationInfo*                forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.TradeManager.SendFinalTradeConfirmation
+// [0x00020002] 
+struct ATradeManager_execSendFinalTradeConfirmation_Parms
+{
+};
+
+// Function UDKGame.TradeManager.Tick
+// [0x00020102] 
+struct ATradeManager_execTick_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.TradeManager.UpdateHeroEquipment
+// [0x00420102] 
+struct ATradeManager_execUpdateHeroEquipment_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FEquipmentNetInfo                           Info;                                             		// 0x0004 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	// int                                             Index;                                            		// 0x00FC (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.TradeManager.RemoveHeroEquipment
+// [0x00420102] 
+struct ATradeManager_execRemoveHeroEquipment_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FEquipmentNetInfo                           Info;                                             		// 0x0004 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	// int                                             Index;                                            		// 0x00FC (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.TradeManager.AddHeroEquipment
+// [0x00420102] 
+struct ATradeManager_execAddHeroEquipment_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FEquipmentNetInfo                           Info;                                             		// 0x0004 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame.TradeManager.IsEquipmentIDInTrade
+// [0x00020102] 
+struct ATradeManager_execIsEquipmentIDInTrade_Parms
+{
+	int                                                EquipmentID1;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                EquipmentID2;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             it;                                               		// 0x000C (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.TradeManager.GetTradeEquipmentIndex
+// [0x00420102] 
+struct ATradeManager_execGetTradeEquipmentIndex_Parms
+{
+	class APlayerReplicationInfo*                      forTrader;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FEquipmentNetInfo                           tInfo;                                            		// 0x0004 (0x00F8) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	int                                                ReturnValue;                                      		// 0x00FC (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             it;                                               		// 0x0100 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.TradeManager.ReplicatedEvent
+// [0x00020902] ( FUNC_Event )
+struct ATradeManager_eventReplicatedEvent_Parms
+{
+	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.TradeManager.ResetTradeConfirmations
+// [0x00020102] 
+struct ATradeManager_execResetTradeConfirmations_Parms
+{
+};
+
+// Function UDKGame.TradeManager.GetDataListEntries
+// [0x00024102] 
+struct ATradeManager_execGetDataListEntries_Parms
+{
+	int                                                dataSetType;                                      		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	int                                                PlayerIndex;                                      		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	int                                                FolderID;                                         		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	TArray< class UDataListEntryInterface* >           ReturnValue;                                      		// 0x000C (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+	// class UHeroEquipment*                           anEquipment;                                      		// 0x0018 (0x0004) [0x0000000000000000]              
+	// TArray< class UDataListEntryInterface* >        altSet;                                           		// 0x001C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+};
+
 // Function UDKGame.UI_HeroSelection.ShowCharacterSelectionCreateHero
 // [0x00020002] 
 struct UUI_HeroSelection_execShowCharacterSelectionCreateHero_Parms
@@ -36872,12 +35815,6 @@ struct UUI_HeroSelection_execUpdate_Parms
 	// unsigned long                                   topLevelScene : 1;                                		// 0x0004 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
-// Function UDKGame.UI_HeroSelection.SelectFirstPlayer
-// [0x00020002] 
-struct UUI_HeroSelection_execSelectFirstPlayer_Parms
-{
-};
-
 // Function UDKGame.UI_HeroSelection.OnReceivedInputKey
 // [0x00420002] 
 struct UUI_HeroSelection_execOnReceivedInputKey_Parms
@@ -36886,17 +35823,18 @@ struct UUI_HeroSelection_execOnReceivedInputKey_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0020 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.UI_HeroSelection.QuickSelectHeros
+// Function UDKGame.UI_HeroSelection.SelectHeroNumber
 // [0x00020002] 
-struct UUI_HeroSelection_execQuickSelectHeros_Parms
+struct UUI_HeroSelection_execSelectHeroNumber_Parms
 {
+	int                                                Num;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function UDKGame.UI_HeroSelection.DeleteSelectedHero
 // [0x00020002] 
 struct UUI_HeroSelection_execDeleteSelectedHero_Parms
 {
-	// class UDataListEntryInterface*                  hero;                                             		// 0x0000 (0x0008) [0x0000000000000000]              
+	// class UDataListEntryInterface*                  Hero;                                             		// 0x0000 (0x0008) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_HeroSelection.HandleConfirmation
@@ -36906,6 +35844,16 @@ struct UUI_HeroSelection_execHandleConfirmation_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// class UUI_CharacterSelect*                      cSelectUI;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UDunDefHero*                              aHero;                                            		// 0x0008 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UI_HeroSelection.InstantChooseHero
+// [0x00020002] 
+struct UUI_HeroSelection_execInstantChooseHero_Parms
+{
+	int                                                HeroOffset;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// class UUI_CharacterSelect*                      cSelectUI;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDataListEntryInterface*                  SelectedItem;                                     		// 0x0008 (0x0008) [0x0000000000000000]              
+	// class UDunDefHero*                              aHero;                                            		// 0x0010 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_HeroSelection.RefreshedList
@@ -36951,7 +35899,7 @@ struct UUI_HeroSelection_eventNotifyWidgetClicked_Parms
 struct UUI_HeroSelection_execHeroEntrySelected_Parms
 {
 	class UUIButton_DataListEntry*                     Button;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_HeroSelection.PostInitialSceneUpdate
@@ -37141,15 +36089,6 @@ struct ADunDefBoss_execForceSkelUpdating_Parms
 	unsigned long                                      bOnlyForceTickAnimNodes : 1;                      		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 };
 
-// Function UDKGame.DunDefBoss.SetIronManModifers
-// [0x00020102] 
-struct ADunDefBoss_execSetIronManModifers_Parms
-{
-	// class UDunDefMapInfo*                           MapInfo;                                          		// 0x0000 (0x0004) [0x0000000000000000]              
-	// unsigned long                                   bUseClassOverride : 1;                            		// 0x0004 (0x0004) [0x0000000000000000] [0x00000001] 
-	// int                                             ClassIndex;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
 // Function UDKGame.DunDefBoss.DrawMiniMapIcon
 // [0x00820102] 
 struct ADunDefBoss_execDrawMiniMapIcon_Parms
@@ -37200,10 +36139,22 @@ struct UUI_DLCSplash_execPostInitialSceneUpdate_Parms
 {
 };
 
-// Function UDKGame.DunDef_SeqEvent_SkipBossTimer.Activated
-// [0x00020802] ( FUNC_Event )
-struct UDunDef_SeqEvent_SkipBossTimer_eventActivated_Parms
+// Function UDKGame.DunDef_SeqAct_ShowNotification.GetLocalizedStringSeqVar
+// [0x00020002] 
+struct UDunDef_SeqAct_ShowNotification_execGetLocalizedStringSeqVar_Parms
 {
+	class UDunDef_SeqVar_LocalizedString*              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// class UDunDef_SeqVar_LocalizedString*           theVar;                                           		// 0x0004 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDef_SeqAct_ShowNotification.Activated
+// [0x00020802] ( FUNC_Event )
+struct UDunDef_SeqAct_ShowNotification_eventActivated_Parms
+{
+	// unsigned long                                   FoundAny : 1;                                     		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
+	// class USeqVar_Object*                           linkedInstigators;                                		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class APawn*                                    theInstigator;                                    		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class APlayerController*                        theInstigatorController;                          		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefTwoWayRPCInterface.ServerExecCommand
@@ -37241,226 +36192,22 @@ struct UDunDefTwoWayRPCInterface_execClientExecCommand_Parms
 	class UObject*                                     ObjectRef2;                                       		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 };
 
-// Function UDKGame.PawnBoosterInterface.GetBoostedTargets
-// [0x00420000] 
-struct UPawnBoosterInterface_execGetBoostedTargets_Parms
-{
-	TArray< class APawn* >                             boostedTargets;                                   		// 0x0000 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.PawnBoosterInterface.NotifyOfBoostedRemoval
-// [0x00020000] 
-struct UPawnBoosterInterface_execNotifyOfBoostedRemoval_Parms
-{
-	class APawn*                                       removedBoostee;                                   		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.PawnBoosterInterface.GetPawnBoostAmount
-// [0x00020000] 
-struct UPawnBoosterInterface_execGetPawnBoostAmount_Parms
-{
-	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.PawnBoosterInterface.HasPawnBoostingType
-// [0x00020000] 
-struct UPawnBoosterInterface_execHasPawnBoostingType_Parms
-{
-	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDef_TimedEffectBase.EndEffects
-// [0x00020102] 
-struct ADunDef_TimedEffectBase_execEndEffects_Parms
+// Function UDKGame.DunDef_SeqEvent_SkipToWave.Activated
+// [0x00020802] ( FUNC_Event )
+struct UDunDef_SeqEvent_SkipToWave_eventActivated_Parms
 {
 };
 
-// Function UDKGame.DunDef_TimedEffectBase.TimedEffect
-// [0x00020102] 
-struct ADunDef_TimedEffectBase_execTimedEffect_Parms
+// Function UDKGame.DunDef_SeqEvent_PlayerLeft.Activated
+// [0x00020802] ( FUNC_Event )
+struct UDunDef_SeqEvent_PlayerLeft_eventActivated_Parms
 {
 };
 
-// Function UDKGame.DunDef_TimedEffectBase.InitTimedEffect
-// [0x00020100] 
-struct ADunDef_TimedEffectBase_execInitTimedEffect_Parms
+// Function UDKGame.DunDef_SeqEvent_PlayerJoined.Activated
+// [0x00020802] ( FUNC_Event )
+struct UDunDef_SeqEvent_PlayerJoined_eventActivated_Parms
 {
-};
-
-// Function UDKGame.DunDef_TimedEffectBase.Initialize
-// [0x00020102] 
-struct ADunDef_TimedEffectBase_execInitialize_Parms
-{
-	class UDunDefTimedEffectInterface*                 Target;                                           		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDef_TimedEffectBase.ReplicatedEvent
-// [0x00020902] ( FUNC_Event )
-struct ADunDef_TimedEffectBase_eventReplicatedEvent_Parms
-{
-	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.UsesRange
-// [0x00020102] 
-struct ADunDefTower_ChainLightning_execUsesRange_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.GetDamageType
-// [0x00020102] 
-struct ADunDefTower_ChainLightning_execGetDamageType_Parms
-{
-	class UClass*                                      ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.DrawTowerToolTipStats
-// [0x00420102] 
-struct ADunDefTower_ChainLightning_execDrawTowerToolTipStats_Parms
-{
-	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              PosX;                                             		// 0x0004 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	float                                              PosY;                                             		// 0x0008 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	float                                              Opacity;                                          		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class ULocalPlayer*                                ForPlayer;                                        		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              canvasScale;                                      		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.GetMaxChainTargets
-// [0x00020102] 
-struct ADunDefTower_ChainLightning_execGetMaxChainTargets_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.StaticGetAttackRange
-// [0x00022002] 
-struct ADunDefTower_ChainLightning_execStaticGetAttackRange_Parms
-{
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class ADunDefTower*                                tower;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              TowerRangeScaler;                                 		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.GetRateDivisor
-// [0x00020102] 
-struct ADunDefTower_ChainLightning_execGetRateDivisor_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.GetAttackDamage
-// [0x00020102] 
-struct ADunDefTower_ChainLightning_execGetAttackDamage_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.GetMaxChainLength
-// [0x00020102] 
-struct ADunDefTower_ChainLightning_execGetMaxChainLength_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.GetAttackRange
-// [0x00020102] 
-struct ADunDefTower_ChainLightning_execGetAttackRange_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.GetAttackDuration
-// [0x00020102] 
-struct ADunDefTower_ChainLightning_execGetAttackDuration_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.GetMuzzleLocation
-// [0x00820102] 
-struct ADunDefTower_ChainLightning_execGetMuzzleLocation_Parms
-{
-	struct FVector                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FVector                                  aPos;                                             		// 0x000C (0x000C) [0x0000000000000000]              
-	// struct FRotator                                 aRot;                                             		// 0x0018 (0x000C) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.GetMuzzleTransformation
-// [0x00420102] 
-struct ADunDefTower_ChainLightning_execGetMuzzleTransformation_Parms
-{
-	struct FVector                                     Position;                                         		// 0x0000 (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	struct FRotator                                    Orientation;                                      		// 0x000C (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.SetTarget
-// [0x00020102] 
-struct ADunDefTower_ChainLightning_execSetTarget_Parms
-{
-	class AActor*                                      theTarget;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.FindBestTarget
-// [0x00820002] 
-struct ADunDefTower_ChainLightning_execFindBestTarget_Parms
-{
-	class UDunDefTargetableInterface*                  ReturnValue;                                      		// 0x0000 (0x0008) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FVector                                  muzzleLoc;                                        		// 0x0008 (0x000C) [0x0000000000000000]              
-	// class AActor*                                   BestTarget;                                       		// 0x0014 (0x0004) [0x0000000000000000]              
-	// class AActor*                                   OldBestTarget;                                    		// 0x0018 (0x0004) [0x0000000000000000]              
-	// class AActor*                                   PotentialTarget;                                  		// 0x001C (0x0004) [0x0000000000000000]              
-	// float                                           ClosestRange;                                     		// 0x0020 (0x0004) [0x0000000000000000]              
-	// float                                           TestDistance;                                     		// 0x0024 (0x0004) [0x0000000000000000]              
-	// TArray< class AActor* >                         PotentialTargets;                                 		// 0x0028 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.UpdateAI
-// [0x00020002] 
-struct ADunDefTower_ChainLightning_execUpdateAI_Parms
-{
-	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.Tick
-// [0x00020902] ( FUNC_Event )
-struct ADunDefTower_ChainLightning_eventTick_Parms
-{
-	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.Destroyed
-// [0x00020902] ( FUNC_Event )
-struct ADunDefTower_ChainLightning_eventDestroyed_Parms
-{
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.PostBeginPlay
-// [0x00020902] ( FUNC_Event )
-struct ADunDefTower_ChainLightning_eventPostBeginPlay_Parms
-{
-};
-
-// Function UDKGame.DunDefTower_ChainLightning.ReplicatedEvent
-// [0x00020902] ( FUNC_Event )
-struct ADunDefTower_ChainLightning_eventReplicatedEvent_Parms
-{
-	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefOgre.SetIronManModifers
-// [0x00020102] 
-struct ADunDefOgre_execSetIronManModifers_Parms
-{
-	// class UDunDefMapInfo*                           MapInfo;                                          		// 0x0000 (0x0004) [0x0000000000000000]              
-	// unsigned long                                   bUseClassOverride : 1;                            		// 0x0004 (0x0004) [0x0000000000000000] [0x00000001] 
-	// int                                             ClassIndex;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
-	// int                                             SwitchInt;                                        		// 0x000C (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0010 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefOgre.UseMaxSimultaneousAllowedForPlayers
@@ -37706,458 +36453,6 @@ struct ADunDefOgre_execForceFriendlyFire_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.DunDefInventoryManager.DestroyAllWeapons
-// [0x00020002] 
-struct ADunDefInventoryManager_execDestroyAllWeapons_Parms
-{
-	// class ADunDefWeapon*                            Weap;                                             		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefInventoryManager.ClientWeaponSet
-// [0x00024102] 
-struct ADunDefInventoryManager_execClientWeaponSet_Parms
-{
-	class AWeapon*                                     NewWeapon;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      bOptionalSet : 1;                                 		// 0x0004 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	unsigned long                                      bDoNotActivate : 1;                               		// 0x0008 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefInventoryManager.TearOffInventory
-// [0x00020102] 
-struct ADunDefInventoryManager_execTearOffInventory_Parms
-{
-	// class AInventory*                               Inv;                                              		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefInventoryManager.CreateInventoryFromTemplate
-// [0x00024102] 
-struct ADunDefInventoryManager_execCreateInventoryFromTemplate_Parms
-{
-	class AActor*                                      InventoryActorTemplate;                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      bDoNotActivate : 1;                               		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	class AInventory*                                  ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class AInventory*                               Inv;                                              		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefInventoryManager.OwnerDied
-// [0x00020000] 
-struct ADunDefInventoryManager_execOwnerDied_Parms
-{
-};
-
-// Function UDKGame.DunDefTimedEffectInterface.GetLocation
-// [0x00020100] 
-struct UDunDefTimedEffectInterface_execGetLocation_Parms
-{
-	struct FVector                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTimedEffectInterface.GetHealth
-// [0x00024100] 
-struct UDunDefTimedEffectInterface_execGetHealth_Parms
-{
-	unsigned long                                      bGetMax : 1;                                      		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	int                                                ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTimedEffectInterface.TimedEffectBoost
-// [0x00020100] 
-struct UDunDefTimedEffectInterface_execTimedEffectBoost_Parms
-{
-	float                                              boostMult;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class ADunDef_TimedEffectBase*                     Effect;                                           		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTimedEffectInterface.TimedEffectStun
-// [0x00020100] 
-struct UDunDefTimedEffectInterface_execTimedEffectStun_Parms
-{
-	class ADunDef_TimedEffectBase*                     Effect;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTimedEffectInterface.TimedEffectDamage
-// [0x00020100] 
-struct UDunDefTimedEffectInterface_execTimedEffectDamage_Parms
-{
-	int                                                Amount;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      Type;                                             		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class ADunDef_TimedEffectBase*                     Effect;                                           		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTimedEffectInterface.GetAllAttachedEffects
-// [0x00420100] 
-struct UDunDefTimedEffectInterface_execGetAllAttachedEffects_Parms
-{
-	TArray< class ADunDef_TimedEffectBase* >           Effects;                                          		// 0x0000 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.DunDefTimedEffectInterface.TimedEffectDetach
-// [0x00020100] 
-struct UDunDefTimedEffectInterface_execTimedEffectDetach_Parms
-{
-	class ADunDef_TimedEffectBase*                     Effect;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTimedEffectInterface.TimedEffectAttach
-// [0x00020100] 
-struct UDunDefTimedEffectInterface_execTimedEffectAttach_Parms
-{
-	class ADunDef_TimedEffectBase*                     Effect;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefManaItemInterface.GetManaPower
-// [0x00020000] 
-struct UDunDefManaItemInterface_execGetManaPower_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefManaItemInterface.Collected
-// [0x00020000] 
-struct UDunDefManaItemInterface_execCollected_Parms
-{
-	class ADunDefPlayer*                               byPlayer;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.SpecialGamePlayEffect.Destroyed
-// [0x00020902] ( FUNC_Event )
-struct ASpecialGamePlayEffect_eventDestroyed_Parms
-{
-};
-
-// Function UDKGame.SpecialGamePlayEffect.RemoveEffect
-// [0x00020102] 
-struct ASpecialGamePlayEffect_execRemoveEffect_Parms
-{
-};
-
-// Function UDKGame.SpecialGamePlayEffect.DoEffect
-// [0x00020102] 
-struct ASpecialGamePlayEffect_execDoEffect_Parms
-{
-};
-
-// Function UDKGame.SpecialGamePlayEffect.RestartTimer
-// [0x00020102] 
-struct ASpecialGamePlayEffect_execRestartTimer_Parms
-{
-};
-
-// Function UDKGame.SpecialGamePlayEffect.InitializeForPlayer
-// [0x00020102] 
-struct ASpecialGamePlayEffect_execInitializeForPlayer_Parms
-{
-	class ADunDefPlayer*                               myPlayer;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.SpecialGamePlayEffect.ReplicatedEvent
-// [0x00020902] ( FUNC_Event )
-struct ASpecialGamePlayEffect_eventReplicatedEvent_Parms
-{
-	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.SpecialGamePlayEffect.ExecReplicatedFunction
-// [0x00024102] 
-struct ASpecialGamePlayEffect_execExecReplicatedFunction_Parms
-{
-	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
-	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefMiniMapIconInterface.DrawMiniMapIcon
-// [0x00020100] 
-struct UDunDefMiniMapIconInterface_execDrawMiniMapIcon_Parms
-{
-	class UCanvas*                                     Canvas;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class ADunDefMiniMap*                              MiniMap;                                          		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefGoblin.PlayGoblinAttackAnimation
-// [0x00020102] 
-struct ADunDefGoblin_execPlayGoblinAttackAnimation_Parms
-{
-	int                                                AnimationIndex;                                   		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefGoblin.PlayAttackAnimation
-// [0x00020102] 
-struct ADunDefGoblin_execPlayAttackAnimation_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefGoblin.GetMeleeSwingLocation
-// [0x00820102] 
-struct ADunDefGoblin_execGetMeleeSwingLocation_Parms
-{
-	struct FVector                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FVector                                  SwingLocation;                                    		// 0x000C (0x000C) [0x0000000000000000]              
-	// struct FRotator                                 SwingRotation;                                    		// 0x0018 (0x000C) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefGoblin.MeleeSwingEnd
-// [0x00020802] ( FUNC_Event )
-struct ADunDefGoblin_eventMeleeSwingEnd_Parms
-{
-};
-
-// Function UDKGame.DunDefGoblin.MeleeSwingStart
-// [0x00020802] ( FUNC_Event )
-struct ADunDefGoblin_eventMeleeSwingStart_Parms
-{
-};
-
-// Function UDKGame.DunDefGoblin.ExecReplicatedFunction
-// [0x00024102] 
-struct ADunDefGoblin_execExecReplicatedFunction_Parms
-{
-	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
-	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefGoblinController.GetAttackDamage
-// [0x00020002] 
-struct ADunDefGoblinController_execGetAttackDamage_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefGoblinController.AddToSwingHurtList
-// [0x00020002] 
-struct ADunDefGoblinController_execAddToSwingHurtList_Parms
-{
-	class AActor*                                      newEntry;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefGoblinController.EndMeleeSwing
-// [0x00020002] 
-struct ADunDefGoblinController_execEndMeleeSwing_Parms
-{
-};
-
-// Function UDKGame.DunDefGoblinController.StartMeleeSwing
-// [0x00020000] 
-struct ADunDefGoblinController_execStartMeleeSwing_Parms
-{
-};
-
-// Function UDKGame.DunDefEnemyTargetingPreventionInterface.PreventTargeting
-// [0x00020100] 
-struct UDunDefEnemyTargetingPreventionInterface_execPreventTargeting_Parms
-{
-	class UDunDefTargetableInterface*                  Target;                                           		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	class ADunDefEnemy*                                forEnemy;                                         		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x000C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_Blockade.DrawTowerToolTipStats
-// [0x00420102] 
-struct ADunDefTower_Blockade_execDrawTowerToolTipStats_Parms
-{
-	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              PosX;                                             		// 0x0004 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	float                                              PosY;                                             		// 0x0008 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	float                                              Opacity;                                          		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class ULocalPlayer*                                ForPlayer;                                        		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              canvasScale;                                      		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTower_Blockade.PlayElementalStealingEffect
-// [0x00020102] 
-struct ADunDefTower_Blockade_execPlayElementalStealingEffect_Parms
-{
-	class ADunDefEnemy*                                fromEnemy;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTower_Blockade.NotifyTookDamage
-// [0x00024802] ( FUNC_Event )
-struct ADunDefTower_Blockade_eventNotifyTookDamage_Parms
-{
-	int                                                DamageAmount;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class AController*                                 EventInstigator;                                  		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0008 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     Momentum;                                         		// 0x0014 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0020 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class AActor*                                      DamageCauser;                                     		// 0x0024 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefTower_Blockade.Bump
-// [0x00020802] ( FUNC_Event )
-struct ADunDefTower_Blockade_eventBump_Parms
-{
-	class AActor*                                      Other;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UPrimitiveComponent*                         OtherComp;                                        		// 0x0004 (0x0004) [0x0000000004000080]              ( CPF_Parm | CPF_EditInline )
-	struct FVector                                     HitNormal;                                        		// 0x0008 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	// class AActor*                                   Target;                                           		// 0x0014 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefTower_Blockade.ExecReplicatedFunction
-// [0x00024102] 
-struct ADunDefTower_Blockade_execExecReplicatedFunction_Parms
-{
-	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
-	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefOgreController.GetAttackDamage
-// [0x00020002] 
-struct ADunDefOgreController_execGetAttackDamage_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefOgreController.DoProjectileAttack
-// [0x00020002] 
-struct ADunDefOgreController_execDoProjectileAttack_Parms
-{
-};
-
-// Function UDKGame.DunDefOgreController.GetProjectileShootInterval
-// [0x00020002] 
-struct ADunDefOgreController_execGetProjectileShootInterval_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefOgreController.CheckForCustomAttacks
-// [0x00020002] 
-struct ADunDefOgreController_execCheckForCustomAttacks_Parms
-{
-	// float                                           DistSq;                                           		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefOgreController.DoAttack
-// [0x00020002] 
-struct ADunDefOgreController_execDoAttack_Parms
-{
-};
-
-// Function UDKGame.DunDefOgreController.NotifyTakeHitEX
-// [0x00020002] 
-struct ADunDefOgreController_execNotifyTakeHitEX_Parms
-{
-	class AController*                                 InstigatedBy;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	int                                                Damage;                                           		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     Momentum;                                         		// 0x0018 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class AActor*                                      DamageCauser;                                     		// 0x0024 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefOgreController.PostBeginPlay
-// [0x00020902] ( FUNC_Event )
-struct ADunDefOgreController_eventPostBeginPlay_Parms
-{
-};
-
-// Function UDKGame.DunDefOgreController.FireProjectile
-// [0x00020000] 
-struct ADunDefOgreController_execFireProjectile_Parms
-{
-};
-
-// Function UDKGame.DunDefOgreController.StartShockwave
-// [0x00020000] 
-struct ADunDefOgreController_execStartShockwave_Parms
-{
-	struct FVector                                     ShockwaveCenter;                                  		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefOgreController.MoveAroundBlockade
-// [0x00024000] 
-struct ADunDefOgreController_execMoveAroundBlockade_Parms
-{
-	class AActor*                                      blockadeActor;                                    		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              BlockadeWidth;                                    		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitNormal;                                        		// 0x0008 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      SkipBlockingCheck : 1;                            		// 0x0014 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0018 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefOgreController.AddToSwingHurtList
-// [0x00020002] 
-struct ADunDefOgreController_execAddToSwingHurtList_Parms
-{
-	class AActor*                                      newEntry;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefOgreController.EndMeleeSwing
-// [0x00020002] 
-struct ADunDefOgreController_execEndMeleeSwing_Parms
-{
-};
-
-// Function UDKGame.DunDefOgreController.StartMeleeSwing
-// [0x00020000] 
-struct ADunDefOgreController_execStartMeleeSwing_Parms
-{
-};
-
-// Function UDKGame.DunDef_SeqEvent_SkipToWave.Activated
-// [0x00020802] ( FUNC_Event )
-struct UDunDef_SeqEvent_SkipToWave_eventActivated_Parms
-{
-};
-
-// Function UDKGame.DunDef_SeqEvent_PlayerLeft.Activated
-// [0x00020802] ( FUNC_Event )
-struct UDunDef_SeqEvent_PlayerLeft_eventActivated_Parms
-{
-};
-
-// Function UDKGame.DunDef_SeqEvent_PlayerJoined.Activated
-// [0x00020802] ( FUNC_Event )
-struct UDunDef_SeqEvent_PlayerJoined_eventActivated_Parms
-{
-};
-
 // Function UDKGame.DunDefHeroOverrideList.GetHeroOverride
 // [0x00020002] 
 struct UDunDefHeroOverrideList_execGetHeroOverride_Parms
@@ -38165,6 +36460,19 @@ struct UDunDefHeroOverrideList_execGetHeroOverride_Parms
 	class UDunDefHero*                                 BaseHero;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class UDunDefHero*                                 ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// int                                             I;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.GameInfo_PureStrategy.AdjustPawnDamage
+// [0x00424002] 
+struct AGameInfo_PureStrategy_execAdjustPawnDamage_Parms
+{
+	class ADunDefPawn*                                 forPawn;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                inDamage;                                         		// 0x0004 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	struct FVector                                     Momentum;                                         		// 0x0008 (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	class AController*                                 InstigatedBy;                                     		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0018 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	class UClass*                                      DamageType;                                       		// 0x0024 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FTraceHitInfo                               HitInfo;                                          		// 0x0028 (0x001C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 };
 
 // Function UDKGame.DunDef_SeqAct_SetTutorialFlag.Activated
@@ -38273,7 +36581,7 @@ struct UUI_GameSpyLogin_eventSceneActivated_Parms
 {
 	unsigned long                                      bInitialActivation : 1;                           		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 	// class UDunDefHeroManager*                       myHeroManager;                                    		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0008 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0008 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_GameSpyLogin.PostInitialize
@@ -38333,8 +36641,8 @@ struct UUI_GameSpyLogin_execOnLoginStatusChange_Parms
 struct UUI_GameSpyLogin_execSaveLogin_Parms
 {
 	// unsigned long                                   SaveLogin : 1;                                    		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
-	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0004 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       myHeroManager;                                    		// 0x00FC (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0004 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UDunDefHeroManager*                       myHeroManager;                                    		// 0x0100 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_GameSpyLogin.OnLoginChanged
@@ -38379,24 +36687,6 @@ struct UUI_GameSpyLogin_execHasChr_Parms
 	struct FString                                     Str;                                              		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
 	struct FString                                     Chr;                                              		// 0x000C (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0018 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDef_SeqAct_ShowNotification.GetLocalizedStringSeqVar
-// [0x00020002] 
-struct UDunDef_SeqAct_ShowNotification_execGetLocalizedStringSeqVar_Parms
-{
-	class UDunDef_SeqVar_LocalizedString*              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDef_SeqVar_LocalizedString*           theVar;                                           		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDef_SeqAct_ShowNotification.Activated
-// [0x00020802] ( FUNC_Event )
-struct UDunDef_SeqAct_ShowNotification_eventActivated_Parms
-{
-	// unsigned long                                   FoundAny : 1;                                     		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
-	// class USeqVar_Object*                           linkedInstigators;                                		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class APawn*                                    theInstigator;                                    		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class APlayerController*                        theInstigatorController;                          		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDef_SeqAct_ShowTitleScreen.Activated
@@ -38686,7 +36976,7 @@ struct UDunDef_SeqAct_UpgradeTowers_eventActivated_Parms
 struct UDunDef_SeqCond_CustomMetaFlag_eventActivated_Parms
 {
 	// int                                             PrimaryUserID;                                    		// 0x0000 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0004 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0004 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDef_SeqCond_DifficultySwitch.Activated
@@ -38761,9 +37051,9 @@ struct UDunDef_SeqCond_IsDLCInstalled_eventActivated_Parms
 // [0x00020002] 
 struct UDunDefDLCSummary_execHasLevelEntry_Parms
 {
-	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0118) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0118 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             I;                                                		// 0x011C (0x0004) [0x0000000000000000]              
+	struct FCampaignLevelEntry                         levelEntry;                                       		// 0x0000 (0x0108) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0108 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             I;                                                		// 0x010C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDef_SeqCond_IsGameOver.Activated
@@ -38857,7 +37147,7 @@ struct UDunDef_SeqCond_IsStereoscopic3D_eventActivated_Parms
 // [0x00820802] ( FUNC_Event )
 struct UDunDef_SeqCond_ShowTutorial_eventActivated_Parms
 {
-	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0000 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct UDunDefHeroManagerNative_FOptionsInfo    CurrentOptions;                                   		// 0x0000 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDef_SeqCond_SignedIn.Activated
@@ -38865,7 +37155,7 @@ struct UDunDef_SeqCond_ShowTutorial_eventActivated_Parms
 struct UDunDef_SeqCond_SignedIn_eventActivated_Parms
 {
 	// class UDunDefViewportClient*                    ViewportClient;                                   		// 0x0000 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class ULocalPlayer*                             primaryPlayer;                                    		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -38881,11 +37171,110 @@ struct UDunDef_SeqEvent_OptionsChanged_eventActivated_Parms
 {
 };
 
+// Function UDKGame.DunDef_SeqEvent_SkipBossTimer.Activated
+// [0x00020802] ( FUNC_Event )
+struct UDunDef_SeqEvent_SkipBossTimer_eventActivated_Parms
+{
+};
+
 // Function UDKGame.DunDef_TickableAnimNodeInterface.Tick
 // [0x00020100] 
 struct UDunDef_TickableAnimNodeInterface_execTick_Parms
 {
 	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDef_TimedEffectBase.EndEffects
+// [0x00020102] 
+struct ADunDef_TimedEffectBase_execEndEffects_Parms
+{
+};
+
+// Function UDKGame.DunDef_TimedEffectBase.TimedEffect
+// [0x00020102] 
+struct ADunDef_TimedEffectBase_execTimedEffect_Parms
+{
+};
+
+// Function UDKGame.DunDef_TimedEffectBase.InitTimedEffect
+// [0x00020100] 
+struct ADunDef_TimedEffectBase_execInitTimedEffect_Parms
+{
+};
+
+// Function UDKGame.DunDef_TimedEffectBase.Initialize
+// [0x00020102] 
+struct ADunDef_TimedEffectBase_execInitialize_Parms
+{
+	class UDunDefTimedEffectInterface*                 Target;                                           		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDef_TimedEffectBase.ReplicatedEvent
+// [0x00020902] ( FUNC_Event )
+struct ADunDef_TimedEffectBase_eventReplicatedEvent_Parms
+{
+	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTimedEffectInterface.GetLocation
+// [0x00020100] 
+struct UDunDefTimedEffectInterface_execGetLocation_Parms
+{
+	struct FVector                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTimedEffectInterface.GetHealth
+// [0x00024100] 
+struct UDunDefTimedEffectInterface_execGetHealth_Parms
+{
+	unsigned long                                      bGetMax : 1;                                      		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	int                                                ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTimedEffectInterface.TimedEffectBoost
+// [0x00020100] 
+struct UDunDefTimedEffectInterface_execTimedEffectBoost_Parms
+{
+	float                                              boostMult;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class ADunDef_TimedEffectBase*                     Effect;                                           		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTimedEffectInterface.TimedEffectStun
+// [0x00020100] 
+struct UDunDefTimedEffectInterface_execTimedEffectStun_Parms
+{
+	class ADunDef_TimedEffectBase*                     Effect;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTimedEffectInterface.TimedEffectDamage
+// [0x00020100] 
+struct UDunDefTimedEffectInterface_execTimedEffectDamage_Parms
+{
+	int                                                Amount;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UClass*                                      Type;                                             		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class ADunDef_TimedEffectBase*                     Effect;                                           		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTimedEffectInterface.GetAllAttachedEffects
+// [0x00420100] 
+struct UDunDefTimedEffectInterface_execGetAllAttachedEffects_Parms
+{
+	TArray< class ADunDef_TimedEffectBase* >           Effects;                                          		// 0x0000 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame.DunDefTimedEffectInterface.TimedEffectDetach
+// [0x00020100] 
+struct UDunDefTimedEffectInterface_execTimedEffectDetach_Parms
+{
+	class ADunDef_TimedEffectBase*                     Effect;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTimedEffectInterface.TimedEffectAttach
+// [0x00020100] 
+struct UDunDefTimedEffectInterface_execTimedEffectAttach_Parms
+{
+	class ADunDef_TimedEffectBase*                     Effect;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.DunDef_TimedEffectDamage.TimedEffect
@@ -39034,7 +37423,7 @@ struct ADunDefAchievementTrophy_execAllowActivation_Parms
 	class ADunDefPlayerController*                     PC;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	int                                                activationType;                                   		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 	int                                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefAchievementTrophy.ContinueDrawingToolTip
@@ -39094,6 +37483,246 @@ struct ADunDefAchievementTrophy_execUpdateAchievementBinding_Parms
 struct ADunDefAchievementTrophy_eventReplicatedEvent_Parms
 {
 	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.PawnBoosterInterface.GetBoostedTargets
+// [0x00420000] 
+struct UPawnBoosterInterface_execGetBoostedTargets_Parms
+{
+	TArray< class APawn* >                             boostedTargets;                                   		// 0x0000 (0x000C) [0x0000000000400180]              ( CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame.PawnBoosterInterface.NotifyOfBoostedRemoval
+// [0x00020000] 
+struct UPawnBoosterInterface_execNotifyOfBoostedRemoval_Parms
+{
+	class APawn*                                       removedBoostee;                                   		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.PawnBoosterInterface.GetPawnBoostAmount
+// [0x00020000] 
+struct UPawnBoosterInterface_execGetPawnBoostAmount_Parms
+{
+	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.PawnBoosterInterface.HasPawnBoostingType
+// [0x00020000] 
+struct UPawnBoosterInterface_execHasPawnBoostingType_Parms
+{
+	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.UsesRange
+// [0x00020102] 
+struct ADunDefTower_ChainLightning_execUsesRange_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.GetDamageType
+// [0x00020102] 
+struct ADunDefTower_ChainLightning_execGetDamageType_Parms
+{
+	class UClass*                                      ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.DrawTowerToolTipStats
+// [0x00420102] 
+struct ADunDefTower_ChainLightning_execDrawTowerToolTipStats_Parms
+{
+	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              PosX;                                             		// 0x0004 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	float                                              PosY;                                             		// 0x0008 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	float                                              Opacity;                                          		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class ULocalPlayer*                                ForPlayer;                                        		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              canvasScale;                                      		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.GetMaxChainTargets
+// [0x00020102] 
+struct ADunDefTower_ChainLightning_execGetMaxChainTargets_Parms
+{
+	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.StaticGetAttackRange
+// [0x00022002] 
+struct ADunDefTower_ChainLightning_execStaticGetAttackRange_Parms
+{
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class ADunDefTower*                                tower;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              TowerRangeScaler;                                 		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.GetRateDivisor
+// [0x00020102] 
+struct ADunDefTower_ChainLightning_execGetRateDivisor_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.GetAttackDamage
+// [0x00020102] 
+struct ADunDefTower_ChainLightning_execGetAttackDamage_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.GetMaxChainLength
+// [0x00020102] 
+struct ADunDefTower_ChainLightning_execGetMaxChainLength_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.GetAttackRange
+// [0x00020102] 
+struct ADunDefTower_ChainLightning_execGetAttackRange_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.GetAttackDuration
+// [0x00020102] 
+struct ADunDefTower_ChainLightning_execGetAttackDuration_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.GetMuzzleLocation
+// [0x00820102] 
+struct ADunDefTower_ChainLightning_execGetMuzzleLocation_Parms
+{
+	struct FVector                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// struct FVector                                  aPos;                                             		// 0x000C (0x000C) [0x0000000000000000]              
+	// struct FRotator                                 aRot;                                             		// 0x0018 (0x000C) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.GetMuzzleTransformation
+// [0x00420102] 
+struct ADunDefTower_ChainLightning_execGetMuzzleTransformation_Parms
+{
+	struct FVector                                     Position;                                         		// 0x0000 (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	struct FRotator                                    Orientation;                                      		// 0x000C (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.SetTarget
+// [0x00020102] 
+struct ADunDefTower_ChainLightning_execSetTarget_Parms
+{
+	class AActor*                                      theTarget;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.FindBestTarget
+// [0x00820002] 
+struct ADunDefTower_ChainLightning_execFindBestTarget_Parms
+{
+	class UDunDefTargetableInterface*                  ReturnValue;                                      		// 0x0000 (0x0008) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// struct FVector                                  muzzleLoc;                                        		// 0x0008 (0x000C) [0x0000000000000000]              
+	// class AActor*                                   BestTarget;                                       		// 0x0014 (0x0004) [0x0000000000000000]              
+	// class AActor*                                   OldBestTarget;                                    		// 0x0018 (0x0004) [0x0000000000000000]              
+	// class AActor*                                   PotentialTarget;                                  		// 0x001C (0x0004) [0x0000000000000000]              
+	// float                                           ClosestRange;                                     		// 0x0020 (0x0004) [0x0000000000000000]              
+	// float                                           TestDistance;                                     		// 0x0024 (0x0004) [0x0000000000000000]              
+	// TArray< class AActor* >                         PotentialTargets;                                 		// 0x0028 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.UpdateAI
+// [0x00020002] 
+struct ADunDefTower_ChainLightning_execUpdateAI_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.Tick
+// [0x00020902] ( FUNC_Event )
+struct ADunDefTower_ChainLightning_eventTick_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.Destroyed
+// [0x00020902] ( FUNC_Event )
+struct ADunDefTower_ChainLightning_eventDestroyed_Parms
+{
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.PostBeginPlay
+// [0x00020902] ( FUNC_Event )
+struct ADunDefTower_ChainLightning_eventPostBeginPlay_Parms
+{
+};
+
+// Function UDKGame.DunDefTower_ChainLightning.ReplicatedEvent
+// [0x00020902] ( FUNC_Event )
+struct ADunDefTower_ChainLightning_eventReplicatedEvent_Parms
+{
+	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefInventoryManager.DestroyAllWeapons
+// [0x00020002] 
+struct ADunDefInventoryManager_execDestroyAllWeapons_Parms
+{
+	// class ADunDefWeapon*                            Weap;                                             		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefInventoryManager.ClientWeaponSet
+// [0x00024102] 
+struct ADunDefInventoryManager_execClientWeaponSet_Parms
+{
+	class AWeapon*                                     NewWeapon;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      bOptionalSet : 1;                                 		// 0x0004 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	unsigned long                                      bDoNotActivate : 1;                               		// 0x0008 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.DunDefInventoryManager.TearOffInventory
+// [0x00020102] 
+struct ADunDefInventoryManager_execTearOffInventory_Parms
+{
+	// class AInventory*                               Inv;                                              		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefInventoryManager.CreateInventoryFromTemplate
+// [0x00024102] 
+struct ADunDefInventoryManager_execCreateInventoryFromTemplate_Parms
+{
+	class AActor*                                      InventoryActorTemplate;                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      bDoNotActivate : 1;                               		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	class AInventory*                                  ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// class AInventory*                               Inv;                                              		// 0x000C (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefInventoryManager.OwnerDied
+// [0x00020000] 
+struct ADunDefInventoryManager_execOwnerDied_Parms
+{
+};
+
+// Function UDKGame.DunDefManaItemInterface.GetManaPower
+// [0x00020000] 
+struct UDunDefManaItemInterface_execGetManaPower_Parms
+{
+	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefManaItemInterface.Collected
+// [0x00020000] 
+struct UDunDefManaItemInterface_execCollected_Parms
+{
+	class ADunDefPlayer*                               byPlayer;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefMiniMapIconInterface.DrawMiniMapIcon
+// [0x00020100] 
+struct UDunDefMiniMapIconInterface_execDrawMiniMapIcon_Parms
+{
+	class UCanvas*                                     Canvas;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class ADunDefMiniMap*                              MiniMap;                                          		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function UDKGame.DunDefCagedPet.Tick
@@ -39172,7 +37801,7 @@ struct UUI_PlayerStats_execRenderPopup_Parms
 	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class UFont*                                    PrevFont;                                         		// 0x0004 (0x0004) [0x0000000000000000]              
 	// float                                           widgetHeight;                                     		// 0x0008 (0x0004) [0x0000000000000000]              
-	// struct FString                                  ModeString;                                       		// 0x000C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FString                                  modeString;                                       		// 0x000C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// int                                             awardCount;                                       		// 0x0018 (0x0004) [0x0000000000000000]              
 };
 
@@ -39183,7 +37812,7 @@ struct UUI_PlayerStats_execRenderCompletionIcons_Parms
 	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             Mask;                                             		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
 	// float                                           completionWidth;                                  		// 0x0010 (0x0004) [0x0000000000000000]              
 	// float                                           widgetWidth;                                      		// 0x0014 (0x0004) [0x0000000000000000]              
 	// float                                           startX;                                           		// 0x0018 (0x0004) [0x0000000000000000]              
@@ -39397,7 +38026,7 @@ struct UUI_PlayerStats_execGetDifficulty_Parms
 	// int                                             PlayerIndex;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
 	// int                                             DiffIter;                                         		// 0x000C (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_PlayerStats.RefreshStats
@@ -39447,7 +38076,7 @@ struct UUI_PlayerStats_execSetHostMode_Parms
 	unsigned long                                      isHost : 1;                                       		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 	// int                                             PlayerIndex;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
 	// struct FStatsSaveEntry                          theStatsEntry;                                    		// 0x0010 (0x000C) [0x0000000000000000]              
 };
 
@@ -39496,7 +38125,7 @@ struct UUI_PlayerStats_eventSceneActivated_Parms
 	// int                                             PlayerIndex;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             UserID;                                           		// 0x0008 (0x0004) [0x0000000000000000]              
 	// int                                             I;                                                		// 0x000C (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   IsSpecialMission : 1;                             		// 0x0014 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
@@ -39647,6 +38276,65 @@ struct ADunDefDarkElfController_execGetAttackInterval_Parms
 // [0x00020000] 
 struct ADunDefDarkElfController_execFireProjectile_Parms
 {
+};
+
+// Function UDKGame.DunDefEnemyTargetingPreventionInterface.PreventTargeting
+// [0x00020100] 
+struct UDunDefEnemyTargetingPreventionInterface_execPreventTargeting_Parms
+{
+	class UDunDefTargetableInterface*                  Target;                                           		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+	class ADunDefEnemy*                                forEnemy;                                         		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x000C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefTower_Blockade.PlayElementalStealingEffect
+// [0x00020102] 
+struct ADunDefTower_Blockade_execPlayElementalStealingEffect_Parms
+{
+	class ADunDefEnemy*                                fromEnemy;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTower_Blockade.NotifyTookDamage
+// [0x00024802] ( FUNC_Event )
+struct ADunDefTower_Blockade_eventNotifyTookDamage_Parms
+{
+	int                                                DamageAmount;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class AController*                                 EventInstigator;                                  		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0008 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     Momentum;                                         		// 0x0014 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	class UClass*                                      DamageType;                                       		// 0x0020 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class AActor*                                      DamageCauser;                                     		// 0x0024 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.DunDefTower_Blockade.Bump
+// [0x00020802] ( FUNC_Event )
+struct ADunDefTower_Blockade_eventBump_Parms
+{
+	class AActor*                                      Other;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UPrimitiveComponent*                         OtherComp;                                        		// 0x0004 (0x0004) [0x0000000004000080]              ( CPF_Parm | CPF_EditInline )
+	struct FVector                                     HitNormal;                                        		// 0x0008 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefTower_Blockade.ExecReplicatedFunction
+// [0x00024102] 
+struct ADunDefTower_Blockade_execExecReplicatedFunction_Parms
+{
+	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
+	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 };
 
 // Function UDKGame.DunDefDarkElfMage.UpdateDifficultyMaterial
@@ -41371,50 +40059,6 @@ struct ADunDefDragonBossBallista_eventReplicatedEvent_Parms
 	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
 };
 
-// Function UDKGame.DunDefHomingProjectile.IsPositionWithinAngleRange
-// [0x00020002] 
-struct ADunDefHomingProjectile_execIsPositionWithinAngleRange_Parms
-{
-	struct FVector                                     Position;                                         		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x000C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefHomingProjectile.HitWall
-// [0x00020102] 
-struct ADunDefHomingProjectile_execHitWall_Parms
-{
-	struct FVector                                     HitNormal;                                        		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class AActor*                                      Wall;                                             		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UPrimitiveComponent*                         WallComp;                                         		// 0x0010 (0x0004) [0x0000000004000080]              ( CPF_Parm | CPF_EditInline )
-};
-
-// Function UDKGame.DunDefHomingProjectile.Landed
-// [0x00020102] 
-struct ADunDefHomingProjectile_execLanded_Parms
-{
-	struct FVector                                     HitNormal;                                        		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class AActor*                                      Floor;                                            		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefHomingProjectile.IsImpactAllowed
-// [0x00020102] 
-struct ADunDefHomingProjectile_execIsImpactAllowed_Parms
-{
-	class AActor*                                      Other;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefHomingProjectile.FindHomingTarget
-// [0x00024102] 
-struct ADunDefHomingProjectile_execFindHomingTarget_Parms
-{
-	unsigned long                                      bRandomTarget : 1;                                		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	class UDunDefTargetableInterface*                  ReturnValue;                                      		// 0x0004 (0x0008) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class AActor*                                   Target;                                           		// 0x000C (0x0004) [0x0000000000000000]              
-	// TArray< class AActor* >                         TargetArray;                                      		// 0x0010 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UClass*                                   ClassToTest;                                      		// 0x001C (0x0004) [0x0000000000000000]              
-};
-
 // Function UDKGame.DunDefHomingProjectile.Explode
 // [0x00820102] 
 struct ADunDefHomingProjectile_execExplode_Parms
@@ -41427,39 +40071,9 @@ struct ADunDefHomingProjectile_execExplode_Parms
 	// float                                           SizeChange;                                       		// 0x0034 (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.DunDefHomingProjectile.ProcessTouch
-// [0x00020102] 
-struct ADunDefHomingProjectile_execProcessTouch_Parms
-{
-	class AActor*                                      Other;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitNormal;                                        		// 0x0010 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	// float                                           MomentumToUse;                                    		// 0x001C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefHomingProjectile.PostBeginPlay
-// [0x00020902] ( FUNC_Event )
-struct ADunDefHomingProjectile_eventPostBeginPlay_Parms
-{
-};
-
-// Function UDKGame.DunDefHomingProjectile.HomingTargetHealthCheck
-// [0x00020102] 
-struct ADunDefHomingProjectile_execHomingTargetHealthCheck_Parms
-{
-	unsigned long                                      ZeroCheck : 1;                                    		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
 // Function UDKGame.DunDefHomingProjectile.NotifyStopHoming
 // [0x00020000] 
 struct ADunDefHomingProjectile_execNotifyStopHoming_Parms
-{
-};
-
-// Function UDKGame.DunDefHomingProjectile.ReturnHome
-// [0x00020102] 
-struct ADunDefHomingProjectile_execReturnHome_Parms
 {
 };
 
@@ -41638,283 +40252,6 @@ struct ADunDefEnemyTargetingPreventionVolume_execPreventTargeting_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x000C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.DunDefPracticeDummy.ClearSpikeDot
-// [0x00020102] 
-struct ADunDefPracticeDummy_execClearSpikeDot_Parms
-{
-};
-
-// Function UDKGame.DunDefPracticeDummy.StartSpikeDot
-// [0x00020102] 
-struct ADunDefPracticeDummy_execStartSpikeDot_Parms
-{
-	float                                              Interval;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Time;                                             		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Damage;                                           		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.SpikeDot
-// [0x00020102] 
-struct ADunDefPracticeDummy_execSpikeDot_Parms
-{
-};
-
-// Function UDKGame.DunDefPracticeDummy.ReportPercentage
-// [0x00024102] 
-struct ADunDefPracticeDummy_execReportPercentage_Parms
-{
-	float                                              fraction;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FString                                     Text;                                             		// 0x0004 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	float                                              Offset;                                           		// 0x0010 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.GetBoostAmount
-// [0x00020102] 
-struct ADunDefPracticeDummy_execGetBoostAmount_Parms
-{
-	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// float                                           boostValue;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
-	// float                                           DeBoostValue;                                     		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPracticeDummy.GetPawnDeBooster
-// [0x00424102] 
-struct ADunDefPracticeDummy_execGetPawnDeBooster_Parms
-{
-	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-	float                                              boostValue;                                       		// 0x0004 (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
-	class UPawnBoosterInterface*                       ReturnValue;                                      		// 0x0008 (0x0008) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             it;                                               		// 0x0010 (0x0004) [0x0000000000000000]              
-	// float                                           bestValue;                                        		// 0x0014 (0x0004) [0x0000000000000000]              
-	// float                                           CurrentValue;                                     		// 0x0018 (0x0004) [0x0000000000000000]              
-	// class UPawnBoosterInterface*                    bestBooster;                                      		// 0x001C (0x0008) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPracticeDummy.RemovePawnDeBooster
-// [0x00024102] 
-struct ADunDefPracticeDummy_execRemovePawnDeBooster_Parms
-{
-	class UPawnBoosterInterface*                       aBooster;                                         		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	int                                                indexOverride;                                    		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.AddPawnDeBooster
-// [0x00020102] 
-struct ADunDefPracticeDummy_execAddPawnDeBooster_Parms
-{
-	class UPawnBoosterInterface*                       aBooster;                                         		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.GetPawnBooster
-// [0x00424102] 
-struct ADunDefPracticeDummy_execGetPawnBooster_Parms
-{
-	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-	float                                              boostValue;                                       		// 0x0004 (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
-	class UPawnBoosterInterface*                       ReturnValue;                                      		// 0x0008 (0x0008) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// int                                             it;                                               		// 0x0010 (0x0004) [0x0000000000000000]              
-	// float                                           bestValue;                                        		// 0x0014 (0x0004) [0x0000000000000000]              
-	// float                                           CurrentValue;                                     		// 0x0018 (0x0004) [0x0000000000000000]              
-	// class UPawnBoosterInterface*                    bestBooster;                                      		// 0x001C (0x0008) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPracticeDummy.RemoveAllPawnBoosters
-// [0x00020102] 
-struct ADunDefPracticeDummy_execRemoveAllPawnBoosters_Parms
-{
-	// int                                             it;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPracticeDummy.RemovePawnBooster
-// [0x00024102] 
-struct ADunDefPracticeDummy_execRemovePawnBooster_Parms
-{
-	class UPawnBoosterInterface*                       aBooster;                                         		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	int                                                indexOverride;                                    		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.AddPawnBooster
-// [0x00020102] 
-struct ADunDefPracticeDummy_execAddPawnBooster_Parms
-{
-	class UPawnBoosterInterface*                       aBooster;                                         		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.GetEnemyTargetingDesirability
-// [0x00020802] ( FUNC_Event )
-struct ADunDefPracticeDummy_eventGetEnemyTargetingDesirability_Parms
-{
-	class AEngineNativeDunDefAIController*             forController;                                    		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.GetTowerTargetingDesirability
-// [0x00020102] 
-struct ADunDefPracticeDummy_execGetTowerTargetingDesirability_Parms
-{
-	class ADunDefTower*                                forTower;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.GetToolTipText
-// [0x00020102] 
-struct ADunDefPracticeDummy_execGetToolTipText_Parms
-{
-	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-};
-
-// Function UDKGame.DunDefPracticeDummy.Destroyed
-// [0x00020902] ( FUNC_Event )
-struct ADunDefPracticeDummy_eventDestroyed_Parms
-{
-};
-
-// Function UDKGame.DunDefPracticeDummy.PostBeginPlay
-// [0x00020902] ( FUNC_Event )
-struct ADunDefPracticeDummy_eventPostBeginPlay_Parms
-{
-};
-
-// Function UDKGame.DunDefPracticeDummy.PlayHitAnim
-// [0x00020102] 
-struct ADunDefPracticeDummy_execPlayHitAnim_Parms
-{
-	unsigned char                                      hitAnimIndex;                                     		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      fromBehind : 1;                                   		// 0x0004 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// struct FName                                    AnimToPlay;                                       		// 0x0008 (0x0008) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPracticeDummy.UnSetOiled
-// [0x00020102] 
-struct ADunDefPracticeDummy_execUnSetOiled_Parms
-{
-};
-
-// Function UDKGame.DunDefPracticeDummy.SetOiled
-// [0x00020102] 
-struct ADunDefPracticeDummy_execSetOiled_Parms
-{
-	float                                              Duration;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.SetOilDebuffAmount
-// [0x00020102] 
-struct ADunDefPracticeDummy_execSetOilDebuffAmount_Parms
-{
-	float                                              DamageMult;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.RemoveDebuff
-// [0x00020002] 
-struct ADunDefPracticeDummy_execRemoveDebuff_Parms
-{
-};
-
-// Function UDKGame.DunDefPracticeDummy.AddDebuff
-// [0x00020002] 
-struct ADunDefPracticeDummy_execAddDebuff_Parms
-{
-	float                                              Duration;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Amount;                                           		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.AdjustDamage
-// [0x00424002] 
-struct ADunDefPracticeDummy_execAdjustDamage_Parms
-{
-	class UClass*                                      DamageType;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                DamageAmount;                                     		// 0x0004 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	struct FVector                                     Momentum;                                         		// 0x0008 (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	class AController*                                 InstigatedBy;                                     		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0018 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	struct FTraceHitInfo                               HitInfo;                                          		// 0x0024 (0x001C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.NotifyTookDamage
-// [0x00024802] ( FUNC_Event )
-struct ADunDefPracticeDummy_eventNotifyTookDamage_Parms
-{
-	int                                                DamageAmount;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class AController*                                 EventInstigator;                                  		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0008 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     Momentum;                                         		// 0x0014 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0020 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class AActor*                                      DamageCauser;                                     		// 0x0024 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// int                                             it;                                               		// 0x0028 (0x0004) [0x0000000000000000]              
-	// int                                             BestThresholdIndex;                               		// 0x002C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefPracticeDummy.SubtractHealth
-// [0x00020000] 
-struct ADunDefPracticeDummy_execSubtractHealth_Parms
-{
-	int                                                DamageAmount;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.DPSEnd
-// [0x00020102] 
-struct ADunDefPracticeDummy_execDPSEnd_Parms
-{
-};
-
-// Function UDKGame.DunDefPracticeDummy.ExecReplicatedFunction
-// [0x00024102] 
-struct ADunDefPracticeDummy_execExecReplicatedFunction_Parms
-{
-	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
-	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.DunDefPracticeDummy.AllowActivation
-// [0x00024102] 
-struct ADunDefPracticeDummy_execAllowActivation_Parms
-{
-	class ADunDefPlayerController*                     PC;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                activationType;                                   		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	int                                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_OilTrap.GetOilDebuffAmount
-// [0x00020102] 
-struct ADunDefTower_OilTrap_execGetOilDebuffAmount_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.DunDefTower_OilTrap.ScaleForHeroModifiers
-// [0x00020002] 
-struct ADunDefTower_OilTrap_execScaleForHeroModifiers_Parms
-{
-	unsigned long                                      IsFirstTime : 1;                                  		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-};
-
-// Function UDKGame.DunDefTower_OilTrap.DrawTowerToolTipStats
-// [0x00420102] 
-struct ADunDefTower_OilTrap_execDrawTowerToolTipStats_Parms
-{
-	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              PosX;                                             		// 0x0004 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	float                                              PosY;                                             		// 0x0008 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	float                                              Opacity;                                          		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class ULocalPlayer*                                ForPlayer;                                        		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              canvasScale;                                      		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
 // Function UDKGame.DunDefTower_GasTrap.ClientSingleSetMovement
 // [0x00024102] 
 struct ADunDefTower_GasTrap_execClientSingleSetMovement_Parms
@@ -41970,6 +40307,91 @@ struct ADunDefTower_GasTrap_eventDestroyed_Parms
 // Function UDKGame.DunDefTower_GasTrap.PostBeginPlay
 // [0x00020902] ( FUNC_Event )
 struct ADunDefTower_GasTrap_eventPostBeginPlay_Parms
+{
+};
+
+// Function UDKGame.DunDefGoblin.PlayGoblinAttackAnimation
+// [0x00020102] 
+struct ADunDefGoblin_execPlayGoblinAttackAnimation_Parms
+{
+	int                                                AnimationIndex;                                   		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefGoblin.PlayAttackAnimation
+// [0x00020102] 
+struct ADunDefGoblin_execPlayAttackAnimation_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefGoblin.GetMeleeSwingLocation
+// [0x00820102] 
+struct ADunDefGoblin_execGetMeleeSwingLocation_Parms
+{
+	struct FVector                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// struct FVector                                  SwingLocation;                                    		// 0x000C (0x000C) [0x0000000000000000]              
+	// struct FRotator                                 SwingRotation;                                    		// 0x0018 (0x000C) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefGoblin.MeleeSwingEnd
+// [0x00020802] ( FUNC_Event )
+struct ADunDefGoblin_eventMeleeSwingEnd_Parms
+{
+};
+
+// Function UDKGame.DunDefGoblin.MeleeSwingStart
+// [0x00020802] ( FUNC_Event )
+struct ADunDefGoblin_eventMeleeSwingStart_Parms
+{
+};
+
+// Function UDKGame.DunDefGoblin.ExecReplicatedFunction
+// [0x00024102] 
+struct ADunDefGoblin_execExecReplicatedFunction_Parms
+{
+	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
+	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.DunDefGoblinController.GetAttackDamage
+// [0x00020002] 
+struct ADunDefGoblinController_execGetAttackDamage_Parms
+{
+	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefGoblinController.AddToSwingHurtList
+// [0x00020002] 
+struct ADunDefGoblinController_execAddToSwingHurtList_Parms
+{
+	class AActor*                                      newEntry;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefGoblinController.EndMeleeSwing
+// [0x00020002] 
+struct ADunDefGoblinController_execEndMeleeSwing_Parms
+{
+};
+
+// Function UDKGame.DunDefGoblinController.StartMeleeSwing
+// [0x00020000] 
+struct ADunDefGoblinController_execStartMeleeSwing_Parms
 {
 };
 
@@ -42738,6 +41160,101 @@ struct ADunDefNPC_BarKeep_eventReplicatedEvent_Parms
 	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
 };
 
+// Function UDKGame.DunDefOgreController.GetAttackDamage
+// [0x00020002] 
+struct ADunDefOgreController_execGetAttackDamage_Parms
+{
+	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefOgreController.DoProjectileAttack
+// [0x00020002] 
+struct ADunDefOgreController_execDoProjectileAttack_Parms
+{
+};
+
+// Function UDKGame.DunDefOgreController.GetProjectileShootInterval
+// [0x00020002] 
+struct ADunDefOgreController_execGetProjectileShootInterval_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefOgreController.CheckForCustomAttacks
+// [0x00020002] 
+struct ADunDefOgreController_execCheckForCustomAttacks_Parms
+{
+	// float                                           DistSq;                                           		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefOgreController.DoAttack
+// [0x00020002] 
+struct ADunDefOgreController_execDoAttack_Parms
+{
+};
+
+// Function UDKGame.DunDefOgreController.NotifyTakeHitEX
+// [0x00020002] 
+struct ADunDefOgreController_execNotifyTakeHitEX_Parms
+{
+	class AController*                                 InstigatedBy;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	int                                                Damage;                                           		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UClass*                                      DamageType;                                       		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     Momentum;                                         		// 0x0018 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	class AActor*                                      DamageCauser;                                     		// 0x0024 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefOgreController.PostBeginPlay
+// [0x00020902] ( FUNC_Event )
+struct ADunDefOgreController_eventPostBeginPlay_Parms
+{
+};
+
+// Function UDKGame.DunDefOgreController.FireProjectile
+// [0x00020000] 
+struct ADunDefOgreController_execFireProjectile_Parms
+{
+};
+
+// Function UDKGame.DunDefOgreController.StartShockwave
+// [0x00020000] 
+struct ADunDefOgreController_execStartShockwave_Parms
+{
+	struct FVector                                     ShockwaveCenter;                                  		// 0x0000 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefOgreController.MoveAroundBlockade
+// [0x00024000] 
+struct ADunDefOgreController_execMoveAroundBlockade_Parms
+{
+	class AActor*                                      blockadeActor;                                    		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              BlockadeWidth;                                    		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitNormal;                                        		// 0x0008 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      SkipBlockingCheck : 1;                            		// 0x0014 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0018 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefOgreController.AddToSwingHurtList
+// [0x00020002] 
+struct ADunDefOgreController_execAddToSwingHurtList_Parms
+{
+	class AActor*                                      newEntry;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefOgreController.EndMeleeSwing
+// [0x00020002] 
+struct ADunDefOgreController_execEndMeleeSwing_Parms
+{
+};
+
+// Function UDKGame.DunDefOgreController.StartMeleeSwing
+// [0x00020000] 
+struct ADunDefOgreController_execStartMeleeSwing_Parms
+{
+};
+
 // Function UDKGame.DunDefOgreNoDerpController.NotifyTakeHitEX
 // [0x00020002] 
 struct ADunDefOgreNoDerpController_execNotifyTakeHitEX_Parms
@@ -42771,8 +41288,8 @@ struct UUI_NetworkMultiplayer_execUpdate_Parms
 	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// unsigned long                                   bIsConsole : 1;                                   		// 0x0004 (0x0004) [0x0000000000000000] [0x00000001] 
 	// struct UDunDefHeroManagerNative_FSearchFilterSettings DefaultSearchFilter;                              		// 0x0008 (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x002C (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0030 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x002C (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0030 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_NetworkMultiplayer.OnReceivedInputKey
@@ -42788,7 +41305,7 @@ struct UUI_NetworkMultiplayer_execOnReceivedInputKey_Parms
 // [0x00020002] 
 struct UUI_NetworkMultiplayer_execSwitchLANSettings_Parms
 {
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
 	// class UUI_GameSpyLogin*                         gsLoginScene;                                     		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
@@ -42949,7 +41466,6 @@ struct UUI_NetworkMultiplayer_execOnGameCreated_Parms
 	unsigned long                                      bWasSuccessful : 1;                               		// 0x0008 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 	// class UOnlineGameSettings*                      GameSettings;                                     		// 0x000C (0x0004) [0x0000000000000000]              
 	// struct FString                                  TravelURL;                                        		// 0x0010 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  CustomTavernFileName;                             		// 0x001C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_NetworkMultiplayer.OnDestroyForCancelComplete
@@ -42981,14 +41497,6 @@ struct UUI_NetworkMultiplayer_execOnCreateCancelled_Parms
 struct UUI_NetworkMultiplayer_execShowCancelCreateButton_Parms
 {
 	// class UUI_MessageBox*                           createMessage;                                    		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UI_NetworkMultiplayer.CheckFileName
-// [0x00020102] 
-struct UUI_NetworkMultiplayer_execCheckFileName_Parms
-{
-	struct FString                                     Filename;                                         		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x000C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.UI_NetworkMultiplayer.HostGame
@@ -43079,8 +41587,8 @@ struct UUI_NetworkMultiplayer_eventNotifyWidgetClicked_Parms
 struct UUI_NetworkMultiplayer_execResetGameFilters_Parms
 {
 	// struct UDunDefHeroManagerNative_FSearchFilterSettings DefaultSearchFilter;                              		// 0x0000 (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0024 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0028 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0024 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0028 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.DunDefOrc.GetAMeleeSwingLocation
@@ -43434,18 +41942,6 @@ struct ADunDefWyvern_execExecReplicatedFunction_Parms
 	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
 };
 
-// Function UDKGame.DunDefWyvern.UnSetFrozen
-// [0x00020102] 
-struct ADunDefWyvern_execUnSetFrozen_Parms
-{
-};
-
-// Function UDKGame.DunDefWyvern.PlayFrozen
-// [0x00020102] 
-struct ADunDefWyvern_execPlayFrozen_Parms
-{
-};
-
 // Function UDKGame.DunDefWyvern.PlayDying
 // [0x00020102] 
 struct ADunDefWyvern_execPlayDying_Parms
@@ -43753,6 +42249,320 @@ struct ADunDefPhoenixMiniControllerV2_eventTick_Parms
 	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
+// Function UDKGame.DunDefWeapon_MeleeSword.GetProjectileDamage
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execGetProjectileDamage_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.ShootMeleeProjectile
+// [0x00820102] 
+struct ADunDefWeapon_MeleeSword_execShootMeleeProjectile_Parms
+{
+	class AActor*                                      projTarget;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// class ADunDefProjectile*                        SpawnedProjectile;                                		// 0x0004 (0x0004) [0x0000000000000000]              
+	// struct FVector                                  SpawnLocation;                                    		// 0x0008 (0x000C) [0x0000000000000000]              
+	// struct FRotator                                 SpawnRotation;                                    		// 0x0014 (0x000C) [0x0000000000000000]              
+	// int                                             useNumProjectiles;                                		// 0x0020 (0x0004) [0x0000000000000000]              
+	// int                                             I;                                                		// 0x0024 (0x0004) [0x0000000000000000]              
+	// int                                             theAdditionalDamageAmount;                        		// 0x0028 (0x0004) [0x0000000000000000]              
+	// int                                             projAdditionalDamageAmount;                       		// 0x002C (0x0004) [0x0000000000000000]              
+	// float                                           ProjDamage;                                       		// 0x0030 (0x0004) [0x0000000000000000]              
+	// float                                           projSpeed;                                        		// 0x0034 (0x0004) [0x0000000000000000]              
+	// class UClass*                                   ProjAdditionalDamageType;                         		// 0x0038 (0x0004) [0x0000000000000000]              
+	// class ADunDefEmitterSpawnable*                  aParticle;                                        		// 0x003C (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.SendToFiringState
+// [0x00020100] 
+struct ADunDefWeapon_MeleeSword_execSendToFiringState_Parms
+{
+	unsigned char                                      FireModeNum;                                      		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.GetMomentumMultiplier
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execGetMomentumMultiplier_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.BlockedHit
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execBlockedHit_Parms
+{
+	class UClass*                                      DamageType;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	// class ADunDefEmitterSpawnable*                  sparks;                                           		// 0x0010 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.GetBlockingDamageResistancePercent
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execGetBlockingDamageResistancePercent_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.AdjustDamage
+// [0x00424002] 
+struct ADunDefWeapon_MeleeSword_execAdjustDamage_Parms
+{
+	int                                                inDamage;                                         		// 0x0000 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	struct FVector                                     Momentum;                                         		// 0x0004 (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	class AController*                                 InstigatedBy;                                     		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0014 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	class UClass*                                      DamageType;                                       		// 0x0020 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FTraceHitInfo                               HitInfo;                                          		// 0x0024 (0x001C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	// float                                           blockingPercent;                                  		// 0x0040 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.ShouldPlayHurtAnimation
+// [0x00420002] 
+struct ADunDefWeapon_MeleeSword_execShouldPlayHurtAnimation_Parms
+{
+	class AController*                                 InstigatedBy;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	int                                                Damage;                                           		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UClass*                                      DamageType;                                       		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                Result;                                           		// 0x0018 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x001C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.BlocksHit
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execBlocksHit_Parms
+{
+	class AController*                                 InstigatedBy;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0004 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0010 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// class UDunDefTargetableInterface*               instigatorActor;                                  		// 0x0014 (0x0008) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.DetachWeapon
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execDetachWeapon_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.CustomFire
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execCustomFire_Parms
+{
+	int                                                theFireMode;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.CheckDisableBlocking
+// [0x00020002] 
+struct ADunDefWeapon_MeleeSword_execCheckDisableBlocking_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.CheckEnableBlocking
+// [0x00020002] 
+struct ADunDefWeapon_MeleeSword_execCheckEnableBlocking_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.ServerStopBlock
+// [0x002200C2] 
+struct ADunDefWeapon_MeleeSword_execServerStopBlock_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.ServerStartBlock
+// [0x002200C2] 
+struct ADunDefWeapon_MeleeSword_execServerStartBlock_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.StopFire
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execStopFire_Parms
+{
+	unsigned char                                      FireModeNum;                                      		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.StartFire
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execStartFire_Parms
+{
+	unsigned char                                      FireModeNum;                                      		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.BeginFire
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execBeginFire_Parms
+{
+	unsigned char                                      FireModeNum;                                      		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.CanUseAbility
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execCanUseAbility_Parms
+{
+	class ADunDefPlayerAbility*                        ability;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.DisableBlocking
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execDisableBlocking_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.CheckUpdateBlocking
+// [0x00020002] 
+struct ADunDefWeapon_MeleeSword_execCheckUpdateBlocking_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.EnableBlocking
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execEnableBlocking_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.StopSwingingWeapon
+// [0x00020002] 
+struct ADunDefWeapon_MeleeSword_execStopSwingingWeapon_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.PawnTookDamage
+// [0x00020802] ( FUNC_Event )
+struct ADunDefWeapon_MeleeSword_eventPawnTookDamage_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.GetTotalDamage
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execGetTotalDamage_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.DoMeleeAttack
+// [0x00020102] 
+struct ADunDefWeapon_MeleeSword_execDoMeleeAttack_Parms
+{
+	// unsigned long                                   bAllowAnimOverride : 1;                           		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.GetMeleeSwingLocation
+// [0x00820102] 
+struct ADunDefWeapon_MeleeSword_execGetMeleeSwingLocation_Parms
+{
+	struct FName                                       SocketName;                                       		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     ReturnValue;                                      		// 0x0008 (0x000C) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// struct FVector                                  pos;                                              		// 0x0014 (0x000C) [0x0000000000000000]              
+	// struct FRotator                                 Rot;                                              		// 0x0020 (0x000C) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.DoSwinging
+// [0x00824002] 
+struct ADunDefWeapon_MeleeSword_execDoSwinging_Parms
+{
+	unsigned long                                      bForceSwing : 1;                                  		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bOverrideExtent : 1;                              		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	struct FVector                                     extentOverride;                                   		// 0x0008 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              damageOverride;                                   		// 0x0014 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              momentumOverride;                                 		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      scaleMomentumByMass : 1;                          		// 0x001C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	float                                              scaleMomentumByMassExponent;                      		// 0x0020 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	// struct FVector                                  slapLocation;                                     		// 0x0024 (0x000C) [0x0000000000000000]              
+	// struct FTraceHitInfo                            HitInfo;                                          		// 0x0030 (0x001C) [0x0000000000000000]              
+	// struct FVector                                  HitNormal;                                        		// 0x004C (0x000C) [0x0000000000000000]              
+	// struct FVector                                  HitLocation;                                      		// 0x0058 (0x000C) [0x0000000000000000]              
+	// struct FVector                                  theExtent;                                        		// 0x0064 (0x000C) [0x0000000000000000]              
+	// struct FVector                                  applyMomentum;                                    		// 0x0070 (0x000C) [0x0000000000000000]              
+	// struct FVector                                  MuzzlePos;                                        		// 0x007C (0x000C) [0x0000000000000000]              
+	// struct FVector                                  ProjectileTargetLoc;                              		// 0x0088 (0x000C) [0x0000000000000000]              
+	// class AActor*                                   Traced;                                           		// 0x0094 (0x0004) [0x0000000000000000]              
+	// int                                             theAdditionalDamageAmount;                        		// 0x0098 (0x0004) [0x0000000000000000]              
+	// int                                             it;                                               		// 0x009C (0x0004) [0x0000000000000000]              
+	// class UClass*                                   theAdditionalDamageType;                          		// 0x00A0 (0x0004) [0x0000000000000000]              
+	// float                                           knockBackMag;                                     		// 0x00A4 (0x0004) [0x0000000000000000]              
+	// float                                           pawnSwingMomentumMult;                            		// 0x00A8 (0x0004) [0x0000000000000000]              
+	// int                                             dealtDamage;                                      		// 0x00AC (0x0004) [0x0000000000000000]              
+	// struct FRotator                                 MuzzleRot;                                        		// 0x00B0 (0x000C) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.AnimNotify_StopWeaponSwingDamage
+// [0x00020002] 
+struct ADunDefWeapon_MeleeSword_execAnimNotify_StopWeaponSwingDamage_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.ResetSwing
+// [0x00020002] 
+struct ADunDefWeapon_MeleeSword_execResetSwing_Parms
+{
+	// int                                             it;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.AnimNotify_ResetWeaponSwingDamage
+// [0x00020002] 
+struct ADunDefWeapon_MeleeSword_execAnimNotify_ResetWeaponSwingDamage_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.AnimNotify_StartWeaponSwingDamage
+// [0x00020002] 
+struct ADunDefWeapon_MeleeSword_execAnimNotify_StartWeaponSwingDamage_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.Tick
+// [0x00020802] ( FUNC_Event )
+struct ADunDefWeapon_MeleeSword_eventTick_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.PostBeginPlay
+// [0x00020902] ( FUNC_Event )
+struct ADunDefWeapon_MeleeSword_eventPostBeginPlay_Parms
+{
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.AddToSwingHurtList
+// [0x00020002] 
+struct ADunDefWeapon_MeleeSword_execAddToSwingHurtList_Parms
+{
+	class AActor*                                      newEntry;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.ExecReplicatedFunction
+// [0x00024102] 
+struct ADunDefWeapon_MeleeSword_execExecReplicatedFunction_Parms
+{
+	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
+	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.DunDefWeapon_MeleeSword.ReplicatedEvent
+// [0x00020902] ( FUNC_Event )
+struct ADunDefWeapon_MeleeSword_eventReplicatedEvent_Parms
+{
+	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+};
+
 // Function UDKGame.DunDefPlayerAbility_AreaOfEffect.IsFirstAOEAbility
 // [0x00022002] 
 struct ADunDefPlayerAbility_AreaOfEffect_execIsFirstAOEAbility_Parms
@@ -43847,7 +42657,7 @@ struct ADunDefPlayerAbility_AreaOfEffect_execPostBeginPlay_Parms
 struct ADunDefPlayerAbility_AreaOfEffect_execScaleForHeroModifiers_Parms
 {
 	unsigned long                                      IsFirstTime : 1;                                  		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefPlayerAbility_AreaOfEffect.ReplicatedEvent
@@ -44530,7 +43340,7 @@ struct ADunDefPlayerSelectUICharacter_execUnselected_Parms
 // [0x00024002] 
 struct ADunDefPlayerSelectUICharacter_execSelected_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      bForce : 1;                                       		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	unsigned long                                      bDontPlayAnimation : 1;                           		// 0x0008 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	int                                                CostumeIndexOverride;                             		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
@@ -44550,6 +43360,202 @@ struct ADunDefPlayerSelectUICharacter_execRestoreRotation_Parms
 // [0x00020902] ( FUNC_Event )
 struct ADunDefPlayerSelectUICharacter_eventPostBeginPlay_Parms
 {
+};
+
+// Function UDKGame.DunDefPracticeDummy.ReportPercentage
+// [0x00024102] 
+struct ADunDefPracticeDummy_execReportPercentage_Parms
+{
+	float                                              fraction;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FString                                     Text;                                             		// 0x0004 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	float                                              Offset;                                           		// 0x0010 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.DunDefPracticeDummy.GetBoostAmount
+// [0x00020102] 
+struct ADunDefPracticeDummy_execGetBoostAmount_Parms
+{
+	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// float                                           boostValue;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
+	// float                                           DeBoostValue;                                     		// 0x000C (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefPracticeDummy.GetPawnDeBooster
+// [0x00424102] 
+struct ADunDefPracticeDummy_execGetPawnDeBooster_Parms
+{
+	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+	float                                              boostValue;                                       		// 0x0004 (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
+	class UPawnBoosterInterface*                       ReturnValue;                                      		// 0x0008 (0x0008) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             it;                                               		// 0x0010 (0x0004) [0x0000000000000000]              
+	// float                                           bestValue;                                        		// 0x0014 (0x0004) [0x0000000000000000]              
+	// float                                           CurrentValue;                                     		// 0x0018 (0x0004) [0x0000000000000000]              
+	// class UPawnBoosterInterface*                    bestBooster;                                      		// 0x001C (0x0008) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefPracticeDummy.RemovePawnDeBooster
+// [0x00024102] 
+struct ADunDefPracticeDummy_execRemovePawnDeBooster_Parms
+{
+	class UPawnBoosterInterface*                       aBooster;                                         		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+	int                                                indexOverride;                                    		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.DunDefPracticeDummy.AddPawnDeBooster
+// [0x00020102] 
+struct ADunDefPracticeDummy_execAddPawnDeBooster_Parms
+{
+	class UPawnBoosterInterface*                       aBooster;                                         		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefPracticeDummy.GetPawnBooster
+// [0x00424102] 
+struct ADunDefPracticeDummy_execGetPawnBooster_Parms
+{
+	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+	float                                              boostValue;                                       		// 0x0004 (0x0004) [0x0000000000000190]              ( CPF_OptionalParm | CPF_Parm | CPF_OutParm )
+	class UPawnBoosterInterface*                       ReturnValue;                                      		// 0x0008 (0x0008) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             it;                                               		// 0x0010 (0x0004) [0x0000000000000000]              
+	// float                                           bestValue;                                        		// 0x0014 (0x0004) [0x0000000000000000]              
+	// float                                           CurrentValue;                                     		// 0x0018 (0x0004) [0x0000000000000000]              
+	// class UPawnBoosterInterface*                    bestBooster;                                      		// 0x001C (0x0008) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefPracticeDummy.RemoveAllPawnBoosters
+// [0x00020102] 
+struct ADunDefPracticeDummy_execRemoveAllPawnBoosters_Parms
+{
+	// int                                             it;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefPracticeDummy.RemovePawnBooster
+// [0x00024102] 
+struct ADunDefPracticeDummy_execRemovePawnBooster_Parms
+{
+	class UPawnBoosterInterface*                       aBooster;                                         		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+	int                                                indexOverride;                                    		// 0x0008 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.DunDefPracticeDummy.AddPawnBooster
+// [0x00020102] 
+struct ADunDefPracticeDummy_execAddPawnBooster_Parms
+{
+	class UPawnBoosterInterface*                       aBooster;                                         		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefPracticeDummy.GetEnemyTargetingDesirability
+// [0x00020802] ( FUNC_Event )
+struct ADunDefPracticeDummy_eventGetEnemyTargetingDesirability_Parms
+{
+	class AEngineNativeDunDefAIController*             forController;                                    		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefPracticeDummy.GetTowerTargetingDesirability
+// [0x00020102] 
+struct ADunDefPracticeDummy_execGetTowerTargetingDesirability_Parms
+{
+	class ADunDefTower*                                forTower;                                         		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.DunDefPracticeDummy.GetToolTipText
+// [0x00020102] 
+struct ADunDefPracticeDummy_execGetToolTipText_Parms
+{
+	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame.DunDefPracticeDummy.Destroyed
+// [0x00020902] ( FUNC_Event )
+struct ADunDefPracticeDummy_eventDestroyed_Parms
+{
+};
+
+// Function UDKGame.DunDefPracticeDummy.PostBeginPlay
+// [0x00020902] ( FUNC_Event )
+struct ADunDefPracticeDummy_eventPostBeginPlay_Parms
+{
+};
+
+// Function UDKGame.DunDefPracticeDummy.PlayHitAnim
+// [0x00020102] 
+struct ADunDefPracticeDummy_execPlayHitAnim_Parms
+{
+	unsigned char                                      hitAnimIndex;                                     		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      fromBehind : 1;                                   		// 0x0004 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	// struct FName                                    AnimToPlay;                                       		// 0x0008 (0x0008) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefPracticeDummy.AdjustDamage
+// [0x00424002] 
+struct ADunDefPracticeDummy_execAdjustDamage_Parms
+{
+	class UClass*                                      DamageType;                                       		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                DamageAmount;                                     		// 0x0004 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	struct FVector                                     Momentum;                                         		// 0x0008 (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	class AController*                                 InstigatedBy;                                     		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0018 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	struct FTraceHitInfo                               HitInfo;                                          		// 0x0024 (0x001C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.DunDefPracticeDummy.NotifyTookDamage
+// [0x00024802] ( FUNC_Event )
+struct ADunDefPracticeDummy_eventNotifyTookDamage_Parms
+{
+	int                                                DamageAmount;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class AController*                                 EventInstigator;                                  		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     HitLocation;                                      		// 0x0008 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	struct FVector                                     Momentum;                                         		// 0x0014 (0x000C) [0x0000000000000080]              ( CPF_Parm )
+	class UClass*                                      DamageType;                                       		// 0x0020 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class AActor*                                      DamageCauser;                                     		// 0x0024 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	// int                                             it;                                               		// 0x0028 (0x0004) [0x0000000000000000]              
+	// int                                             BestThresholdIndex;                               		// 0x002C (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.DunDefPracticeDummy.SubtractHealth
+// [0x00020000] 
+struct ADunDefPracticeDummy_execSubtractHealth_Parms
+{
+	int                                                DamageAmount;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.DunDefPracticeDummy.DPSEnd
+// [0x00020102] 
+struct ADunDefPracticeDummy_execDPSEnd_Parms
+{
+};
+
+// Function UDKGame.DunDefPracticeDummy.ExecReplicatedFunction
+// [0x00024102] 
+struct ADunDefPracticeDummy_execExecReplicatedFunction_Parms
+{
+	struct FName                                       FunctionName;                                     		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
+	struct FName                                       nameParam1;                                       		// 0x0008 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FName                                       nameParam2;                                       		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      actorParam1;                                      		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      actorParam2;                                      		// 0x001C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FVector                                     vecParam1;                                        		// 0x0020 (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	struct FRotator                                    rotParam1;                                        		// 0x002C (0x000C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam1;                                      		// 0x0038 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam2;                                      		// 0x003C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam3;                                      		// 0x0040 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	float                                              floatParam4;                                      		// 0x0044 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam1 : 1;                                   		// 0x0048 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam2 : 1;                                   		// 0x004C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      boolParam3 : 1;                                   		// 0x0050 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	struct FString                                     stringParam1;                                     		// 0x0054 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
+	class UObject*                                     objectParam1;                                     		// 0x0060 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.DunDefPracticeDummy.AllowActivation
+// [0x00024102] 
+struct ADunDefPracticeDummy_execAllowActivation_Parms
+{
+	class ADunDefPlayerController*                     PC;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                activationType;                                   		// 0x0004 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	int                                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.DunDefProjectile_Harpoon.Explode
@@ -45300,7 +44306,7 @@ struct ADunDefTower_ProjectileType_execGetTargetClassWeight_Parms
 // [0x00022002] 
 struct ADunDefTower_ProjectileType_execStaticGetAttackRange_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefTower*                                tower;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              TowerRangeScaler;                                 		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
@@ -45484,31 +44490,6 @@ struct ADunDefTower_JackInTheBox_execGetAttackRange_Parms
 	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.DunDefTower_SliceNDice.GetWindRadius
-// [0x00020102] 
-struct ADunDefTower_SliceNDice_execGetWindRadius_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// float                                           A;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
-	// float                                           B;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefTower_SliceNDice.GetWindSpeed
-// [0x00020102] 
-struct ADunDefTower_SliceNDice_execGetWindSpeed_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// float                                           A;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.DunDefTower_SliceNDice.Suction
-// [0x00820102] 
-struct ADunDefTower_SliceNDice_execSuction_Parms
-{
-	// class AActor*                                   Target;                                           		// 0x0000 (0x0004) [0x0000000000000000]              
-	// struct FVector                                  TargetMomentum;                                   		// 0x0004 (0x000C) [0x0000000000000000]              
-};
-
 // Function UDKGame.DunDefTower_SliceNDice.UsesRange
 // [0x00020102] 
 struct ADunDefTower_SliceNDice_execUsesRange_Parms
@@ -45545,7 +44526,7 @@ struct ADunDefTower_SliceNDice_execDrawTowerToolTipStats_Parms
 // [0x00022002] 
 struct ADunDefTower_SliceNDice_execStaticGetAttackRange_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefTower*                                tower;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              TowerRangeScaler;                                 		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
@@ -45787,7 +44768,7 @@ struct UDunDefViewportInput_execInputKey_Parms
 	// unsigned long                                   bIsKeyboard : 1;                                  		// 0x0020 (0x0004) [0x0000000000000000] [0x00000001] 
 	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0024 (0x0004) [0x0000000000000000]              
 	// class UDunDefOnlineGameSettingsConsole*         GameSettings;                                     		// 0x0028 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x002C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x002C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefViewportInput.PlayCantJoinSound
@@ -45984,6 +44965,7 @@ struct ADunDefWeapon_Crossbow_execStopReload_Parms
 // [0x00020102] 
 struct ADunDefWeapon_Crossbow_execReload_Parms
 {
+	// float                                           Animspeed;                                        		// 0x0000 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefWeapon_Crossbow.NeedsReload
@@ -46200,6 +45182,7 @@ struct ADunDefWeapon_MagicStaff_execEndFire_Parms
 struct ADunDefWeapon_MagicStaff_execBeginFire_Parms
 {
 	unsigned char                                      FireModeNum;                                      		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
+	// int                                             cooldownTime;                                     		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.DunDefWeapon_MagicStaff.DetachWeapon
@@ -46384,22 +45367,151 @@ struct AGameInfo_Special_execDoWaveSkipping_Parms
 	unsigned long                                      bAllowArbritraryWaveSkipping : 1;                 		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 };
 
-// Function UDKGame.HeroEquipment_BaseConsumable.Use
+// Function UDKGame.UI_EquipmentInfo_New.HasEnoughBankManaForUpgrade
 // [0x00020002] 
-struct UHeroEquipment_BaseConsumable_execUse_Parms
+struct UUI_EquipmentInfo_New_execHasEnoughBankManaForUpgrade_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.IsProUpgradeMode
+// [0x00020002] 
+struct UUI_EquipmentInfo_New_execIsProUpgradeMode_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.UIPostRender
+// [0x00020002] 
+struct UUI_EquipmentInfo_New_execUIPostRender_Parms
+{
+	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// float                                           AspectRatio;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.NotifyWidgetClicked
+// [0x00020802] ( FUNC_Event )
+struct UUI_EquipmentInfo_New_eventNotifyWidgetClicked_Parms
+{
+	class UUIObject*                                   Widget;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             I;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.CloseAllHeroUI
+// [0x00020002] 
+struct UUI_EquipmentInfo_New_execCloseAllHeroUI_Parms
+{
+	// class UUI_HeroInfo*                             heroInfoUI;                                       		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.OnReceivedInputKey
+// [0x00420002] 
+struct UUI_EquipmentInfo_New_execOnReceivedInputKey_Parms
+{
+	struct FInputEventParameters                       EventParms;                                       		// 0x0000 (0x0020) [0x0000000000000182]              ( CPF_Const | CPF_Parm | CPF_OutParm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0020 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.SceneActivated
+// [0x00020802] ( FUNC_Event )
+struct UUI_EquipmentInfo_New_eventSceneActivated_Parms
+{
+	unsigned long                                      bInitialActivation : 1;                           		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.EditBoxPopUpCompleted
+// [0x00020802] ( FUNC_Event )
+struct UUI_EquipmentInfo_New_eventEditBoxPopUpCompleted_Parms
+{
+	struct FString                                     EditBoxResult;                                    		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.CloseWithAnimation
+// [0x00020002] 
+struct UUI_EquipmentInfo_New_execCloseWithAnimation_Parms
 {
 };
 
-// Function UDKGame.HeroEquipment_BaseConsumable.Initialize
-// [0x00020002] 
-struct UHeroEquipment_BaseConsumable_execInitialize_Parms
+// Function UDKGame.UI_EquipmentInfo_New.SceneDeactivated
+// [0x00020802] ( FUNC_Event )
+struct UUI_EquipmentInfo_New_eventSceneDeactivated_Parms
 {
 };
 
-// Function UDKGame.HeroEquipment_Consumable.Use
+// Function UDKGame.UI_EquipmentInfo_New.ResetOnExits
 // [0x00020002] 
-struct UHeroEquipment_Consumable_execUse_Parms
+struct UUI_EquipmentInfo_New_execResetOnExits_Parms
 {
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.GetHero
+// [0x00020002] 
+struct UUI_EquipmentInfo_New_execGetHero_Parms
+{
+	class UDunDefHero*                                 ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.InitForEquipment
+// [0x00024002] 
+struct UUI_EquipmentInfo_New_execInitForEquipment_Parms
+{
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UHeroEquipment*                              theEquipment;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      IsInForge : 1;                                    		// 0x0008 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	class UUI_HeroInfo*                                heroInfoUI;                                       		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      IsRemoteHero : 1;                                 		// 0x0010 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      IsInEquipmentBox : 1;                             		// 0x0014 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	class AActor*                                      forgeActor;                                       		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bIsInTrade : 1;                                   		// 0x001C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bIsInPlayerShop : 1;                              		// 0x0020 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	// int                                             sellWorth;                                        		// 0x0024 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.ShowUpgradePanel
+// [0x00020002] 
+struct UUI_EquipmentInfo_New_execShowUpgradePanel_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.UpdateForgeValues
+// [0x00024002] 
+struct UUI_EquipmentInfo_New_execUpdateForgeValues_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	unsigned long                                      bNoInterpolation : 1;                             		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	// int                                             bankedMana;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.UpdateInvestment
+// [0x00020002] 
+struct UUI_EquipmentInfo_New_execUpdateInvestment_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.HasAnyManaPower
+// [0x00020002] 
+struct UUI_EquipmentInfo_New_execHasAnyManaPower_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.Update
+// [0x00020802] ( FUNC_Event )
+struct UUI_EquipmentInfo_New_eventUpdate_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// int                                             sellWorth;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
+	// unsigned char                                   IsCustomForger;                                   		// 0x0008 (0x0001) [0x0000000000000000]              
+};
+
+// Function UDKGame.UI_EquipmentInfo_New.GetCloseAnimation
+// [0x00020002] 
+struct UUI_EquipmentInfo_New_execGetCloseAnimation_Parms
+{
+	struct FName                                       ReturnValue;                                      		// 0x0000 (0x0008) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.HeroEquipment_Familiar_WithProjectileAI.GetHealAmount
@@ -47111,65 +46223,6 @@ struct UHeroEquipment_Familiar_PlayerHealer_execAttachedComponent_Parms
 	class UPrimitiveComponent*                         aComp;                                            		// 0x0000 (0x0004) [0x0000000004000080]              ( CPF_Parm | CPF_EditInline )
 };
 
-// Function UDKGame.HeroEquipment_RuneContainer.CanApplyToEquipment
-// [0x00020002] 
-struct UHeroEquipment_RuneContainer_execCanApplyToEquipment_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.HeroEquipment_RuneContainer.Use
-// [0x00020002] 
-struct UHeroEquipment_RuneContainer_execUse_Parms
-{
-};
-
-// Function UDKGame.HeroEquipment_UpgradeRange.AddRandomizeValues
-// [0x00824002] 
-struct UHeroEquipment_UpgradeRange_execAddRandomizeValues_Parms
-{
-	float                                              equipmentQuality;                                 		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      doResetStatsToTemplate : 1;                       		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bDontUseMissionRandomizerMultiplier : 1;          		// 0x0008 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	float                                              RandomizerMultiplierOverride;                     		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bIsForShop : 1;                                   		// 0x0010 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	unsigned long                                      bAllowTranscendentGear : 1;                       		// 0x0014 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// struct UHeroEquipment_UpgradeRange_FLevelRange  difficultyRange;                                  		// 0x0018 (0x0008) [0x0000000000000000]              
-};
-
-// Function UDKGame.MainEXX.CalculatedNetSpeed
-// [0x00020002] 
-struct AMainEXX_execCalculatedNetSpeed_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.MainEXX.AdjustPawnDamage
-// [0x00424002] 
-struct AMainEXX_execAdjustPawnDamage_Parms
-{
-	class ADunDefPawn*                                 forPawn;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                inDamage;                                         		// 0x0004 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	struct FVector                                     Momentum;                                         		// 0x0008 (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	class AController*                                 InstigatedBy;                                     		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0018 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0024 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FTraceHitInfo                               HitInfo;                                          		// 0x0028 (0x001C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
-// Function UDKGame.MainEXX.AdjustDTDamage
-// [0x00424002] 
-struct AMainEXX_execAdjustDTDamage_Parms
-{
-	class ADunDefDamageableTarget*                     forDT;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	int                                                inDamage;                                         		// 0x0004 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	struct FVector                                     Momentum;                                         		// 0x0008 (0x000C) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
-	class AController*                                 InstigatedBy;                                     		// 0x0014 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FVector                                     HitLocation;                                      		// 0x0018 (0x000C) [0x0000000000000080]              ( CPF_Parm )
-	class UClass*                                      DamageType;                                       		// 0x0024 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FTraceHitInfo                               HitInfo;                                          		// 0x0028 (0x001C) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
 // Function UDKGame.UI_PlayerShop.SceneActivated
 // [0x00020802] ( FUNC_Event )
 struct UUI_PlayerShop_eventSceneActivated_Parms
@@ -47550,7 +46603,7 @@ struct UUI_CharacterSelect_execCreatePlayerForController_Parms
 	unsigned long                                      isKeyboard : 1;                                   		// 0x0004 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 	class ULocalPlayer*                                ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// class ULocalPlayer*                             LP;                                               		// 0x000C (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
 	// class UOnlineSubsystem*                         OnlineSub;                                        		// 0x0014 (0x0004) [0x0000000000000000]              
 	// class ULocalPlayer*                             primaryPlayer;                                    		// 0x0018 (0x0004) [0x0000000000000000]              
 };
@@ -47595,7 +46648,7 @@ struct UUI_CharacterSelect_execUpdateCharacterForIndex_Parms
 struct UUI_CharacterSelect_execChoseHero_Parms
 {
 	class ULocalPlayer*                                LP;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UDunDefHero*                                 hero;                                             		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             PlayerIndex;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -47764,7 +46817,7 @@ struct UUIImage_PlayerSelect_execUnselected_Parms
 // [0x00020002] 
 struct UUIImage_PlayerSelect_execChoseHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function UDKGame.UIImage_PlayerSelect.Selected
@@ -47967,13 +47020,6 @@ struct UUI_HeroInfoNew_execOnReceivedInputKey_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0020 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.UI_HeroInfoNew.RemoveAllGear
-// [0x00020002] 
-struct UUI_HeroInfoNew_execRemoveAllGear_Parms
-{
-	// class UHeroEquipment*                           Equipment;                                        		// 0x0000 (0x0004) [0x0000000000000000]              
-};
-
 // Function UDKGame.UI_HeroInfoNew.CloseEquipmentScenes
 // [0x00020002] 
 struct UUI_HeroInfoNew_execCloseEquipmentScenes_Parms
@@ -48081,7 +47127,7 @@ struct UUI_HeroInfoNew_eventNotifyWidgetClicked_Parms
 // [0x00024002] 
 struct UUI_HeroInfoNew_execInitializeForHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      IsRemoteHero : 1;                                 		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 };
 
@@ -48385,6 +47431,86 @@ struct UUI_EditboxPopup_execSetOwnerAndDefaultString_Parms
 	struct FString                                     defaultLabel;                                     		// 0x0010 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
 };
 
+// Function UDKGame.UIScriptWidget_MaterialInstance.RenderGame
+// [0x00820802] ( FUNC_Event )
+struct UUIScriptWidget_MaterialInstance_eventRenderGame_Parms
+{
+	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              X1;                                               		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              X2;                                               		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Y1;                                               		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Y2;                                               		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// int                                             it;                                               		// 0x0014 (0x0004) [0x0000000000000000]              
+	// struct FLinearColor                             linCol;                                           		// 0x0018 (0x0010) [0x0000000000000000]              
+};
+
+// Function UDKGame.UIScriptWidget_MaterialInstance.RenderEditor
+// [0x00020802] ( FUNC_Event )
+struct UUIScriptWidget_MaterialInstance_eventRenderEditor_Parms
+{
+	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              X1;                                               		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              X2;                                               		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Y1;                                               		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Y2;                                               		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.UIScriptWidget_MaterialInstance.SetMICVectorParam
+// [0x00824002] 
+struct UUIScriptWidget_MaterialInstance_execSetMICVectorParam_Parms
+{
+	struct FLinearColor                                Value;                                            		// 0x0000 (0x0010) [0x0000000000000080]              ( CPF_Parm )
+	struct FName                                       ParamName;                                        		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	int                                                useParamIndex;                                    		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	// struct FMICVectorParam                          vectorParamStruct;                                		// 0x001C (0x0018) [0x0000000000000000]              
+	// int                                             it;                                               		// 0x0034 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UIScriptWidget_MaterialInstance.SetMICFloatParam
+// [0x00824002] 
+struct UUIScriptWidget_MaterialInstance_execSetMICFloatParam_Parms
+{
+	float                                              Value;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FName                                       ParamName;                                        		// 0x0004 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	int                                                useParamIndex;                                    		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	// struct FMICFloatParam                           floatParamStruct;                                 		// 0x0010 (0x000C) [0x0000000000000000]              
+	// int                                             it;                                               		// 0x001C (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UIDataContainer_Equipment.GetHero
+// [0x00020002] 
+struct UUIDataContainer_Equipment_execGetHero_Parms
+{
+	class UDunDefHero*                                 ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIDataContainer_Equipment.GetComparisonEquipment
+// [0x00024002] 
+struct UUIDataContainer_Equipment_execGetComparisonEquipment_Parms
+{
+	class UUIScriptWidget_EquipmentIconButton*         equipmentButton;                                  		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class UHeroEquipment*                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIDataContainer_Equipment.GetEquipment
+// [0x00024002] 
+struct UUIDataContainer_Equipment_execGetEquipment_Parms
+{
+	class UUIScriptWidget_EquipmentIconButton*         equipmentButton;                                  		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+	class UHeroEquipment*                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIDataContainer_Equipment.InitializeEquipmentData
+// [0x00024002] 
+struct UUIDataContainer_Equipment_execInitializeEquipmentData_Parms
+{
+	class UDunDefHero*                                 theHero;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UHeroEquipment*                              theEquipment;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      compareStats : 1;                                 		// 0x0008 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	unsigned long                                      bIsRemoteHero : 1;                                		// 0x000C (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	class UHeroEquipment*                              theOtherComparisonEquipment;                      		// 0x0010 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
+};
+
 // Function UDKGame.UIScriptWidget_EquipmentStat.ButtonClicked
 // [0x00020002] 
 struct UUIScriptWidget_EquipmentStat_execButtonClicked_Parms
@@ -48499,35 +47625,11 @@ struct UUIScriptWidget_EquipmentStat_execCheckAllowLevelup_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x000C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function UDKGame.UIScriptWidget_EquipmentStat.CensorString
+// Function UDKGame.UIScriptWidget_EquipmentStat.ShouldCensorEquipment
 // [0x00020002] 
-struct UUIScriptWidget_EquipmentStat_execCensorString_Parms
+struct UUIScriptWidget_EquipmentStat_execShouldCensorEquipment_Parms
 {
-	struct FString                                     InStr;                                            		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	struct FString                                     ReturnValue;                                      		// 0x000C (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
-	// struct FString                                  LocalString;                                      		// 0x0018 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  FinalString;                                      		// 0x0024 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             I;                                                		// 0x0030 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UIScriptWidget_EquipmentStat.ScaleString
-// [0x00020002] 
-struct UUIScriptWidget_EquipmentStat_execScaleString_Parms
-{
-	struct FString                                     StringIn;                                         		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// struct FString                                  LocalString;                                      		// 0x0010 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-};
-
-// Function UDKGame.UIScriptWidget_EquipmentStat.IsAccessory
-// [0x00020002] 
-struct UUIScriptWidget_EquipmentStat_execIsAccessory_Parms
-{
-	class UHeroEquipment*                              EquipmentToTest;                                  		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UHeroEquipment*                           HE;                                               		// 0x0008 (0x0004) [0x0000000000000000]              
-	// struct FString                                  EquipmentType;                                    		// 0x000C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  EquipmentTypeTest;                                		// 0x0018 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function UDKGame.UIScriptWidget_EquipmentStat.RenderGame
@@ -48603,86 +47705,6 @@ struct UUIScriptWidget_EquipmentStat_execGetDataContainer_Parms
 	// class UUIObject*                                tOwner;                                           		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
-// Function UDKGame.UIScriptWidget_MaterialInstance.RenderGame
-// [0x00820802] ( FUNC_Event )
-struct UUIScriptWidget_MaterialInstance_eventRenderGame_Parms
-{
-	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              X1;                                               		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              X2;                                               		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Y1;                                               		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Y2;                                               		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// int                                             it;                                               		// 0x0014 (0x0004) [0x0000000000000000]              
-	// struct FLinearColor                             linCol;                                           		// 0x0018 (0x0010) [0x0000000000000000]              
-};
-
-// Function UDKGame.UIScriptWidget_MaterialInstance.RenderEditor
-// [0x00020802] ( FUNC_Event )
-struct UUIScriptWidget_MaterialInstance_eventRenderEditor_Parms
-{
-	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              X1;                                               		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              X2;                                               		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Y1;                                               		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              Y2;                                               		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function UDKGame.UIScriptWidget_MaterialInstance.SetMICVectorParam
-// [0x00824002] 
-struct UUIScriptWidget_MaterialInstance_execSetMICVectorParam_Parms
-{
-	struct FLinearColor                                Value;                                            		// 0x0000 (0x0010) [0x0000000000000080]              ( CPF_Parm )
-	struct FName                                       ParamName;                                        		// 0x0010 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	int                                                useParamIndex;                                    		// 0x0018 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// struct FMICVectorParam                          vectorParamStruct;                                		// 0x001C (0x0018) [0x0000000000000000]              
-	// int                                             it;                                               		// 0x0034 (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UIScriptWidget_MaterialInstance.SetMICFloatParam
-// [0x00824002] 
-struct UUIScriptWidget_MaterialInstance_execSetMICFloatParam_Parms
-{
-	float                                              Value;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	struct FName                                       ParamName;                                        		// 0x0004 (0x0008) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	int                                                useParamIndex;                                    		// 0x000C (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	// struct FMICFloatParam                           floatParamStruct;                                 		// 0x0010 (0x000C) [0x0000000000000000]              
-	// int                                             it;                                               		// 0x001C (0x0004) [0x0000000000000000]              
-};
-
-// Function UDKGame.UIDataContainer_Equipment.GetHero
-// [0x00020002] 
-struct UUIDataContainer_Equipment_execGetHero_Parms
-{
-	class UDunDefHero*                                 ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.UIDataContainer_Equipment.GetComparisonEquipment
-// [0x00024002] 
-struct UUIDataContainer_Equipment_execGetComparisonEquipment_Parms
-{
-	class UUIScriptWidget_EquipmentIconButton*         equipmentButton;                                  		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class UHeroEquipment*                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.UIDataContainer_Equipment.GetEquipment
-// [0x00024002] 
-struct UUIDataContainer_Equipment_execGetEquipment_Parms
-{
-	class UUIScriptWidget_EquipmentIconButton*         equipmentButton;                                  		// 0x0000 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-	class UHeroEquipment*                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function UDKGame.UIDataContainer_Equipment.InitializeEquipmentData
-// [0x00024002] 
-struct UUIDataContainer_Equipment_execInitializeEquipmentData_Parms
-{
-	class UDunDefHero*                                 theHero;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class UHeroEquipment*                              theEquipment;                                     		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	unsigned long                                      compareStats : 1;                                 		// 0x0008 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	unsigned long                                      bIsRemoteHero : 1;                                		// 0x000C (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	class UHeroEquipment*                              theOtherComparisonEquipment;                      		// 0x0010 (0x0004) [0x0000000000000090]              ( CPF_OptionalParm | CPF_Parm )
-};
-
 // Function UDKGame.UI_MultiplayerMenu.IsGamepadOwned
 // [0x00020802] ( FUNC_Event )
 struct UUI_MultiplayerMenu_eventIsGamepadOwned_Parms
@@ -48707,14 +47729,6 @@ struct UUI_MultiplayerMenu_execOnQuickMatchJoinComplete_Parms
 	// struct FString                                  connectUrl;                                       		// 0x0018 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
-// Function UDKGame.UI_MultiplayerMenu.CheckFileName
-// [0x00020102] 
-struct UUI_MultiplayerMenu_execCheckFileName_Parms
-{
-	struct FString                                     Filename;                                         		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
-	unsigned long                                      ReturnValue : 1;                                  		// 0x000C (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
 // Function UDKGame.UI_MultiplayerMenu.OnCreateComplete
 // [0x00020002] 
 struct UUI_MultiplayerMenu_execOnCreateComplete_Parms
@@ -48723,7 +47737,6 @@ struct UUI_MultiplayerMenu_execOnCreateComplete_Parms
 	unsigned long                                      wasSuccessful : 1;                                		// 0x0008 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
 	// class UOnlineGameSettings*                      GameSettings;                                     		// 0x000C (0x0004) [0x0000000000000000]              
 	// struct FString                                  TravelURL;                                        		// 0x0010 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// struct FString                                  CustomTavernFileName;                             		// 0x001C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_MultiplayerMenu.OnDestroyForCancelComplete
@@ -48880,7 +47893,7 @@ struct UUI_MultiplayerMenu_eventSceneDeactivated_Parms
 struct UUI_MultiplayerMenu_eventSceneActivated_Parms
 {
 	unsigned long                                      initialActivation : 1;                            		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UUI_GameSpyLogin*                         gsLoginScene;                                     		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -48949,7 +47962,7 @@ struct UUIPanel_Leaderboard_execToggleMode_Parms
 	int                                                Dir;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class UDataStoreClient*                         DSClient;                                         		// 0x0004 (0x0004) [0x0000000000000000]              
 	// class UDunDefDataStore_OnlineStats*             statsStore;                                       		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UIPanel_Leaderboard.ViewLocalPlayer
@@ -48974,7 +47987,7 @@ struct UUIPanel_Leaderboard_execViewFriends_Parms
 {
 	// class UDataStoreClient*                         DSClient;                                         		// 0x0000 (0x0004) [0x0000000000000000]              
 	// class UDunDefDataStore_OnlineStats*             statsStore;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
 	// class ULocalPlayer*                             CheckPlayer;                                      		// 0x000C (0x0004) [0x0000000000000000]              
 };
 
@@ -49095,7 +48108,7 @@ struct UUIPanel_Leaderboard_execSetTitle_Parms
 	// struct FString                                  tagEnd;                                           		// 0x0028 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// struct FString                                  CurrentStatsString;                               		// 0x0034 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// class UCampaignLevelEntryObject*                theCampaignObject;                                		// 0x0040 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0044 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0044 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UIPanel_Leaderboard.GetPlayModeFromString
@@ -49206,7 +48219,7 @@ struct UUIPanel_Leaderboard_execActivate_Parms
 	// class UDataStoreClient*                         DSClient;                                         		// 0x0008 (0x0004) [0x0000000000000000]              
 	// class UDunDefDataStore_OnlineStats*             statsStore;                                       		// 0x000C (0x0004) [0x0000000000000000]              
 	// class UDunDefLocalPlayer*                       ScenePlayerOwner;                                 		// 0x0010 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0014 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0014 (0x0004) [0x0000000000000000]              
 	// class ULocalPlayer*                             guestSponsorPlayer;                               		// 0x0018 (0x0004) [0x0000000000000000]              
 };
 
@@ -49585,6 +48598,322 @@ struct UUIScriptWidget_HeroInfoExpBar_execGetHero_Parms
 	class UDunDefHero*                                 ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
+// Function UDKGame.UIScriptWidget_Combobox.Pressed
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execPressed_Parms
+{
+	class UUIScreenObject*                             Sender;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                PlayerIndex;                                      		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.SceneReleasedClick
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execSceneReleasedClick_Parms
+{
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.ToggleOptionList
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execToggleOptionList_Parms
+{
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.CollapseOptionList
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execCollapseOptionList_Parms
+{
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.ExpandOptionList
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execExpandOptionList_Parms
+{
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.ButtonClicked
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execButtonClicked_Parms
+{
+	class UUIScreenObject*                             Sender;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	int                                                PlayerIndex;                                      		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0008 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.LostFocus
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execLostFocus_Parms
+{
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.ComboBoxElementSelected
+// [0x00024002] 
+struct UUIScriptWidget_Combobox_execComboBoxElementSelected_Parms
+{
+	int                                                Idx;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      notifySelection : 1;                              		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.ClearSelection
+// [0x00024002] 
+struct UUIScriptWidget_Combobox_execClearSelection_Parms
+{
+	struct FString                                     newTitle;                                         		// 0x0000 (0x000C) [0x0000000000400090]              ( CPF_OptionalParm | CPF_Parm | CPF_NeedCtorLink )
+	unsigned long                                      notifySelection : 1;                              		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.IsToggleBtnFocused
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execIsToggleBtnFocused_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.IsTitleFocused
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execIsTitleFocused_Parms
+{
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetFocusedElement
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetFocusedElement_Parms
+{
+	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetFocusedSelection
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetFocusedSelection_Parms
+{
+	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.DeIncrementSelection
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execDeIncrementSelection_Parms
+{
+	// int                                             FocusSelection;                                   		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.IncrementSelection
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execIncrementSelection_Parms
+{
+	// int                                             FocusSelection;                                   		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.SetFocusedElement
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execSetFocusedElement_Parms
+{
+	int                                                aFocusSeletion;                                   		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetComboElementBackgroundImage
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetComboElementBackgroundImage_Parms
+{
+	int                                                Idx;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      bFocused : 1;                                     		// 0x0004 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	class USurface*                                    ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetTitleBackgroundImage
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetTitleBackgroundImage_Parms
+{
+	unsigned long                                      bFocused : 1;                                     		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	class USurface*                                    ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetToggleIconImage
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetToggleIconImage_Parms
+{
+	unsigned long                                      bFocused : 1;                                     		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	class USurface*                                    ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetToggleBackgroundImage
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetToggleBackgroundImage_Parms
+{
+	unsigned long                                      bFocused : 1;                                     		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
+	class USurface*                                    ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetElementsCount
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetElementsCount_Parms
+{
+	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetComboBoxElementSize
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetComboBoxElementSize_Parms
+{
+	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetWidgetCursorPosition
+// [0x00C20002] 
+struct UUIScriptWidget_Combobox_execGetWidgetCursorPosition_Parms
+{
+	float                                              outCursorX;                                       		// 0x0000 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	float                                              outCursorY;                                       		// 0x0004 (0x0004) [0x0000000000000180]              ( CPF_Parm | CPF_OutParm )
+	float                                              X1;                                               		// 0x0008 (0x0004) [0x0000000000000082]              ( CPF_Const | CPF_Parm )
+	float                                              Y1;                                               		// 0x000C (0x0004) [0x0000000000000082]              ( CPF_Const | CPF_Parm )
+	float                                              X2;                                               		// 0x0010 (0x0004) [0x0000000000000082]              ( CPF_Const | CPF_Parm )
+	float                                              Y2;                                               		// 0x0014 (0x0004) [0x0000000000000082]              ( CPF_Const | CPF_Parm )
+	unsigned long                                      ReturnValue : 1;                                  		// 0x0018 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// struct FVector2D                                mouseCoords;                                      		// 0x001C (0x0008) [0x0000000000000000]              
+	// struct FVector                                  MouseCoordsScreen;                                		// 0x0024 (0x000C) [0x0000000000000000]              
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.UpdateFocusSelection
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execUpdateFocusSelection_Parms
+{
+	float                                              X1;                                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Y1;                                               		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              X2;                                               		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Y2;                                               		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              TitleRatio;                                       		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// float                                           CursorX;                                          		// 0x0014 (0x0004) [0x0000000000000000]              
+	// float                                           CursorY;                                          		// 0x0018 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.DrawBox
+// [0x00020103] ( FUNC_Final )
+struct UUIScriptWidget_Combobox_execDrawBox_Parms
+{
+	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Width;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Height;                                           		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              StrawWidth;                                       		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// int                                             X;                                                		// 0x0010 (0x0004) [0x0000000000000000]              
+	// int                                             Y;                                                		// 0x0014 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.RenderGame
+// [0x00820802] ( FUNC_Event )
+struct UUIScriptWidget_Combobox_eventRenderGame_Parms
+{
+	class UCanvas*                                     C;                                                		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              X1;                                               		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              X2;                                               		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Y1;                                               		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	float                                              Y2;                                               		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// unsigned long                                   bEnabled : 1;                                     		// 0x0014 (0x0004) [0x0000000000000000] [0x00000001] 
+	// class UFont*                                    PrevFont;                                         		// 0x0018 (0x0004) [0x0000000000000000]              
+	// float                                           scaleMult;                                        		// 0x001C (0x0004) [0x0000000000000000]              
+	// float                                           scaleOffset;                                      		// 0x0020 (0x0004) [0x0000000000000000]              
+	// float                                           finalScale;                                       		// 0x0024 (0x0004) [0x0000000000000000]              
+	// float                                           TextWidth;                                        		// 0x0028 (0x0004) [0x0000000000000000]              
+	// float                                           TextHeight;                                       		// 0x002C (0x0004) [0x0000000000000000]              
+	// float                                           fx1;                                              		// 0x0030 (0x0004) [0x0000000000000000]              
+	// float                                           fx2;                                              		// 0x0034 (0x0004) [0x0000000000000000]              
+	// float                                           fy1;                                              		// 0x0038 (0x0004) [0x0000000000000000]              
+	// float                                           fy2;                                              		// 0x003C (0x0004) [0x0000000000000000]              
+	// float                                           TotalWidth;                                       		// 0x0040 (0x0004) [0x0000000000000000]              
+	// float                                           TotalHeight;                                      		// 0x0044 (0x0004) [0x0000000000000000]              
+	// float                                           NewScaleFactor;                                   		// 0x0048 (0x0004) [0x0000000000000000]              
+	// float                                           RealTimeSeconds;                                  		// 0x004C (0x0004) [0x0000000000000000]              
+	// struct FLinearColor                             FocusedBkgColor;                                  		// 0x0050 (0x0010) [0x0000000000000000]              
+	// struct FLinearColor                             BaseBkgColor;                                     		// 0x0060 (0x0010) [0x0000000000000000]              
+	// int                                             itt;                                              		// 0x0070 (0x0004) [0x0000000000000000]              
+	// int                                             maxItt;                                           		// 0x0074 (0x0004) [0x0000000000000000]              
+	// float                                           ResScale;                                         		// 0x0078 (0x0004) [0x0000000000000000]              
+	// float                                           TitleRatio;                                       		// 0x007C (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.OnInitialSceneUpdateDelegate
+// [0x00020802] ( FUNC_Event )
+struct UUIScriptWidget_Combobox_eventOnInitialSceneUpdateDelegate_Parms
+{
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.OnNotifyResolutionChanged
+// [0x00420002] 
+struct UUIScriptWidget_Combobox_execOnNotifyResolutionChanged_Parms
+{
+	struct FVector2D                                   OldViewportsize;                                  		// 0x0000 (0x0008) [0x0000000000000182]              ( CPF_Const | CPF_Parm | CPF_OutParm )
+	struct FVector2D                                   NewViewportSize;                                  		// 0x0008 (0x0008) [0x0000000000000182]              ( CPF_Const | CPF_Parm | CPF_OutParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.FindComboElement
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execFindComboElement_Parms
+{
+	struct FString                                     Option;                                           		// 0x0000 (0x000C) [0x0000000000400082]              ( CPF_Const | CPF_Parm | CPF_NeedCtorLink )
+	int                                                ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+	// int                                             I;                                                		// 0x0010 (0x0004) [0x0000000000000000]              
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.SelectValue
+// [0x00424002] 
+struct UUIScriptWidget_Combobox_execSelectValue_Parms
+{
+	struct FString                                     val;                                              		// 0x0000 (0x000C) [0x0000000000400182]              ( CPF_Const | CPF_Parm | CPF_OutParm | CPF_NeedCtorLink )
+	unsigned long                                      triggerNotifications : 1;                         		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.SetSelectedComboElement
+// [0x00024002] 
+struct UUIScriptWidget_Combobox_execSetSelectedComboElement_Parms
+{
+	int                                                Idx;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	unsigned long                                      triggerNotifications : 1;                         		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.SetComboElements
+// [0x00024002] 
+struct UUIScriptWidget_Combobox_execSetComboElements_Parms
+{
+	TArray< struct FString >                           newComboElements;                                 		// 0x0000 (0x000C) [0x0000000000400080]              ( CPF_Parm | CPF_NeedCtorLink )
+	unsigned long                                      triggerNotifications : 1;                         		// 0x000C (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
+	// int                                             I;                                                		// 0x0010 (0x0004) [0x0000000000000000]              
+	// TArray< struct FString >                        ComboElements;                                    		// 0x0014 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetElementString
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetElementString_Parms
+{
+	int                                                Idx;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	struct FString                                     ReturnValue;                                      		// 0x0004 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetSelectedString
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetSelectedString_Parms
+{
+	struct FString                                     ReturnValue;                                      		// 0x0000 (0x000C) [0x0000000000400580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm | CPF_NeedCtorLink )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.GetSelectedElementIdx
+// [0x00020002] 
+struct UUIScriptWidget_Combobox_execGetSelectedElementIdx_Parms
+{
+	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.NotifyTitleClicked
+// [0x00120000] 
+struct UUIScriptWidget_Combobox_execNotifyTitleClicked_Parms
+{
+	int                                                selectedElementIdx;                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function UDKGame.UIScriptWidget_Combobox.NotifySelectionChanged
+// [0x00120000] 
+struct UUIScriptWidget_Combobox_execNotifySelectionChanged_Parms
+{
+	int                                                selectedElementIdx;                               		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
 // Function UDKGame.UIDataContainer_Equipment_DataList.GetHero
 // [0x00020002] 
 struct UUIDataContainer_Equipment_DataList_execGetHero_Parms
@@ -49612,7 +48941,7 @@ struct UUIDataContainer_Equipment_DataList_execGetEquipment_Parms
 // [0x00020002] 
 struct UUIDataContainer_Equipment_DataList_execInitDataContainer_Equipment_DataList_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function UDKGame.UI_Leaderboard.OnReceivedInputKey
@@ -49659,7 +48988,7 @@ struct UUI_Leaderboard_execSetTitle_Parms
 	// struct FString                                  tagEnd;                                           		// 0x0028 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// struct FString                                  CurrentStatsString;                               		// 0x0034 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// class UCampaignLevelEntryObject*                theCampaignObject;                                		// 0x0040 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0044 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0044 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_Leaderboard.GetPlayModeFromString
@@ -49771,7 +49100,7 @@ struct UUI_TitleScreen_execOnReceivedInputKey_Parms
 {
 	struct FInputEventParameters                       EventParms;                                       		// 0x0000 (0x0020) [0x0000000000000182]              ( CPF_Const | CPF_Parm | CPF_OutParm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0020 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHeroManager*                       theHeroManager;                                   		// 0x0024 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       TheHeroManager;                                   		// 0x0024 (0x0004) [0x0000000000000000]              
 	// class ULocalPlayer*                             firstGamePlayer;                                  		// 0x0028 (0x0004) [0x0000000000000000]              
 	// int                                             firstGamePlayerIndex;                             		// 0x002C (0x0004) [0x0000000000000000]              
 	// class UDunDefViewportClient*                    theViewportClient;                                		// 0x0030 (0x0004) [0x0000000000000000]              
@@ -49803,7 +49132,7 @@ struct UUI_TitleScreen_execPasswordInputDone_Parms
 // [0x00020802] ( FUNC_Event )
 struct UUI_TitleScreen_eventPostInitialize_Parms
 {
-	// class UDunDefHeroManager*                       theHeroManager;                                   		// 0x0000 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       TheHeroManager;                                   		// 0x0000 (0x0004) [0x0000000000000000]              
 	// class UDunDefViewportClient*                    tVC;                                              		// 0x0004 (0x0004) [0x0000000000000000]              
 	// int                                             it;                                               		// 0x0008 (0x0004) [0x0000000000000000]              
 };
@@ -49923,10 +49252,10 @@ struct UUI_SearchFilters_execHasCampaignMissionsSelected_Parms
 {
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// struct UDunDefHeroManagerNative_FSearchFilterSettings searchFilters;                                    		// 0x0004 (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0028 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0028 (0x0004) [0x0000000000000000]              
 	// int                                             I;                                                		// 0x002C (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0030 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// unsigned long                                   HasCampaignMissionsSelected : 1;                  		// 0x0148 (0x0004) [0x0000000000000000] [0x00000001] 
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0030 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// unsigned long                                   HasCampaignMissionsSelected : 1;                  		// 0x0138 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function UDKGame.UI_SearchFilters.CheckDifficultyChange
@@ -49952,8 +49281,8 @@ struct UUI_SearchFilters_eventNotifyWidgetClicked_Parms
 {
 	class UUIObject*                                   Widget;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0004 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x000C (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x000C (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_SearchFilters.SearchFiltersSelectionChanged
@@ -49963,11 +49292,11 @@ struct UUI_SearchFilters_execSearchFiltersSelectionChanged_Parms
 	class UUIObject*                                   Widget;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	unsigned long                                      bFromMouseClick : 1;                              		// 0x0004 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
 	// int                                             I;                                                		// 0x0008 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x000C (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UUIButton_DataListEntry*                  entryButton;                                      		// 0x0124 (0x0004) [0x0000000000000000]              
-	// class UUICheckBox_Scripted*                     entryCheckBox;                                    		// 0x0128 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x012C (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0130 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x000C (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UUIButton_DataListEntry*                  entryButton;                                      		// 0x0114 (0x0004) [0x0000000000000000]              
+	// class UUICheckBox_Scripted*                     entryCheckBox;                                    		// 0x0118 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x011C (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0120 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_SearchFilters.ChangeAllDataListSelectionEntries
@@ -49988,10 +49317,10 @@ struct UUI_SearchFilters_execUncheckAll_Parms
 {
 	class UUIObject*                                   theException;                                     		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// int                                             I;                                                		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0008 (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UUIButton_DataListEntry*                  entryButton;                                      		// 0x0120 (0x0004) [0x0000000000000000]              
-	// class UUICheckBox_Scripted*                     entryCheckBox;                                    		// 0x0124 (0x0004) [0x0000000000000000]              
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0128 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x0008 (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UUIButton_DataListEntry*                  entryButton;                                      		// 0x0110 (0x0004) [0x0000000000000000]              
+	// class UUICheckBox_Scripted*                     entryCheckBox;                                    		// 0x0114 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0118 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UI_SearchFilters.ApplyFilterSettings
@@ -49999,8 +49328,8 @@ struct UUI_SearchFilters_execUncheckAll_Parms
 struct UUI_SearchFilters_execApplyFilterSettings_Parms
 {
 	unsigned long                                      doSave : 1;                                       		// 0x0000 (0x0004) [0x0000000000000090] [0x00000001] ( CPF_OptionalParm | CPF_Parm )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
-	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0008 (0x00F8) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0004 (0x0004) [0x0000000000000000]              
+	// struct UDunDefHeroManagerNative_FOptionsInfo    Options;                                          		// 0x0008 (0x00FC) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_SearchFilters.LoadFilterSettings
@@ -50008,12 +49337,12 @@ struct UUI_SearchFilters_execApplyFilterSettings_Parms
 struct UUI_SearchFilters_execLoadFilterSettings_Parms
 {
 	// struct UDunDefHeroManagerNative_FSearchFilterSettings searchFilters;                                    		// 0x0000 (0x0024) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0024 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0024 (0x0004) [0x0000000000000000]              
 	// int                                             I;                                                		// 0x0028 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x002C (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UUIButton_DataListEntry*                  entryButton;                                      		// 0x0144 (0x0004) [0x0000000000000000]              
-	// class UUICheckBox_Scripted*                     entryCheckBox;                                    		// 0x0148 (0x0004) [0x0000000000000000]              
-	// struct FCampaignLevelEntry                      xboxLevelEntry;                                   		// 0x014C (0x0118) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// struct FCampaignLevelEntry                      levelEntry;                                       		// 0x002C (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	// class UUIButton_DataListEntry*                  entryButton;                                      		// 0x0134 (0x0004) [0x0000000000000000]              
+	// class UUICheckBox_Scripted*                     entryCheckBox;                                    		// 0x0138 (0x0004) [0x0000000000000000]              
+	// struct FCampaignLevelEntry                      xboxLevelEntry;                                   		// 0x013C (0x0108) [0x0000000000400000]              ( CPF_NeedCtorLink )
 };
 
 // Function UDKGame.UI_SearchFilters.AfterDataListUpdate
@@ -50034,7 +49363,7 @@ struct UUI_SearchFilters_execBeforeDataListUpdate_Parms
 // [0x00820002] 
 struct UUI_SearchFilters_execPostInitialSceneUpdate_Parms
 {
-	// class UDunDefHeroManager*                       HeroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
+	// class UDunDefHeroManager*                       heroManager;                                      		// 0x0000 (0x0004) [0x0000000000000000]              
 	// struct UUI_SearchFilters_FHeroClassInfo         tempInfo;                                         		// 0x0004 (0x0010) [0x0000000000400000]              ( CPF_NeedCtorLink )
 	// int                                             I;                                                		// 0x0014 (0x0004) [0x0000000000000000]              
 };
@@ -50097,7 +49426,7 @@ struct UUIScript_ActionWheelHotkey_eventRenderGame_Parms
 	float                                              Y1;                                               		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              Y2;                                               		// 0x0010 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	// class ADunDefPlayerController*                  Controller;                                       		// 0x0014 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x0018 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0018 (0x0004) [0x0000000000000000]              
 };
 
 // Function UDKGame.UIScript_ActionWheelHotkey.RenderEditor

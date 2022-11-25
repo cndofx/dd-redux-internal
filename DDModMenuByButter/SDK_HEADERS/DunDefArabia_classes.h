@@ -73,7 +73,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 84784 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 79163 ];
 
 		return pClassPointer;
 	};
@@ -100,7 +100,7 @@ public:
 UClass* AGenieLamp::pClassPointer = NULL;
 
 // Class DunDefArabia.DunDefGenieBossController
-// 0x0180 (0x0780 - 0x0600)
+// 0x0178 (0x0778 - 0x0600)
 class ADunDefGenieBossController : public ADunDefEnemyController
 {
 public:
@@ -113,62 +113,62 @@ public:
 	float                                              BurpCD;                                           		// 0x0640 (0x0004) [0x0000000000000001]              ( CPF_Edit )
 	float                                              LastBurpTime;                                     		// 0x0644 (0x0004) [0x0000000000000000]              
 	TArray< float >                                    HeadActiveTime;                                   		// 0x0648 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	float                                              HeadActiveDmgPct[ 0x6 ];                          		// 0x0654 (0x0018) [0x0000000000000001]              ( CPF_Edit )
-	float                                              currentDmgAmt;                                    		// 0x066C (0x0004) [0x0000000000000000]              
-	float                                              MaxLazerDistance;                                 		// 0x0670 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              BeamDamageTime;                                   		// 0x0674 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LazerDmgAmount;                                   		// 0x0678 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FVector                                     LazerDamageMomentum;                              		// 0x067C (0x000C) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LazerCastTime;                                    		// 0x0688 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LazerCastCD;                                      		// 0x068C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LazerCastCrazyEyeChance;                          		// 0x0690 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              RandomCrazyEyesChance;                            		// 0x0694 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LastLazerCast;                                    		// 0x0698 (0x0004) [0x0000000000000000]              
-	unsigned long                                      bDoingCrazyEyes : 1;                              		// 0x069C (0x0004) [0x0000000000000000] [0x00000001] 
-	unsigned long                                      IsToungueSwing : 1;                               		// 0x069C (0x0004) [0x0000000000000000] [0x00000002] 
-	unsigned long                                      bStartEyeDamage : 1;                              		// 0x069C (0x0004) [0x0000000000000000] [0x00000004] 
-	unsigned long                                      bIsBiting : 1;                                    		// 0x069C (0x0004) [0x0000000000000000] [0x00000008] 
-	unsigned long                                      bSuperTongue : 1;                                 		// 0x069C (0x0004) [0x0000000000000000] [0x00000010] 
-	unsigned long                                      bForcedHidden : 1;                                		// 0x069C (0x0004) [0x0000000000000000] [0x00000020] 
-	unsigned long                                      bRageMode : 1;                                    		// 0x069C (0x0004) [0x0000000000000000] [0x00000040] 
-	unsigned long                                      bSetPawnAsHidden : 1;                             		// 0x069C (0x0004) [0x0000000000002000] [0x00000080] ( CPF_Transient )
-	TArray< class AGenieLamp* >                        myLamps;                                          		// 0x06A0 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< class AGenieLamp* >                        spawnStartLamps;                                  		// 0x06AC (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	class AGenieLamp*                                  currentLamp;                                      		// 0x06B8 (0x0004) [0x0000000000000000]              
-	class AActor*                                      RightEyeTarget;                                   		// 0x06BC (0x0004) [0x0000000000000000]              
-	class AActor*                                      LeftEyeTarget;                                    		// 0x06C0 (0x0004) [0x0000000000000000]              
-	int                                                BiteDamageAmount;                                 		// 0x06C4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              BiteDamageMomentum;                               		// 0x06C8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UClass*                                      BiteDamageType;                                   		// 0x06CC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              BiteHitRadius;                                    		// 0x06D0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              BiteCD;                                           		// 0x06D4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              meleeDistance;                                    		// 0x06D8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< class AActor* >                            MeleeHurtList;                                    		// 0x06DC (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	float                                              LastMeleeTime;                                    		// 0x06E8 (0x0004) [0x0000000000000000]              
-	class ADunDefDjinn*                                BabyDjinnTemplate;                                		// 0x06EC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                MaxNumDjinnsToSpawn;                              		// 0x06F0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                MaxNumDjinnsToSpawnPerSet;                        		// 0x06F4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              BabyDjinnSpawnCD;                                 		// 0x06F8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< struct FName >                             DjinSpawnSockets;                                 		// 0x06FC (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	TArray< class ADunDefDjinn* >                      MyDjinns;                                         		// 0x0708 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	int                                                currentNumActiveDjinns;                           		// 0x0714 (0x0004) [0x0000000000000000]              
-	int                                                currentDjinnsSpawnedThisSet;                      		// 0x0718 (0x0004) [0x0000000000000000]              
-	float                                              LastDjinnSpawnTime;                               		// 0x071C (0x0004) [0x0000000000000000]              
-	float                                              RotationSpeed;                                    		// 0x0720 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TongueSuperAttackCD;                              		// 0x0724 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TongueSuperAttackRange;                           		// 0x0728 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LastSuperTongueAttack;                            		// 0x072C (0x0004) [0x0000000000000000]              
-	float                                              TongueAttackCD;                                   		// 0x0730 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	int                                                TongueDamageAmount;                               		// 0x0734 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TongueDamageMomentum;                             		// 0x0738 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UClass*                                      TongueDamageType;                                 		// 0x073C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              HeadActiveTimes[ 0x6 ];                           		// 0x0740 (0x0018) [0x0000000000000001]              ( CPF_Edit )
-	float                                              GeneralActiveDelay;                               		// 0x0758 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LastActiveTime;                                   		// 0x075C (0x0004) [0x0000000000000000]              
-	struct FVector                                     BurpLocation;                                     		// 0x0760 (0x000C) [0x0000000000000000]              
-	float                                              RageHealthPct;                                    		// 0x076C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              RageModeCDScalar;                                 		// 0x0770 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< float >                                    MaxInLampTime;                                    		// 0x0774 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	float                                              HeadActiveDmgPct[ 0x5 ];                          		// 0x0654 (0x0014) [0x0000000000000001]              ( CPF_Edit )
+	float                                              currentDmgAmt;                                    		// 0x0668 (0x0004) [0x0000000000000000]              
+	float                                              MaxLazerDistance;                                 		// 0x066C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              BeamDamageTime;                                   		// 0x0670 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LazerDmgAmount;                                   		// 0x0674 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FVector                                     LazerDamageMomentum;                              		// 0x0678 (0x000C) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LazerCastTime;                                    		// 0x0684 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LazerCastCD;                                      		// 0x0688 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LazerCastCrazyEyeChance;                          		// 0x068C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              RandomCrazyEyesChance;                            		// 0x0690 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LastLazerCast;                                    		// 0x0694 (0x0004) [0x0000000000000000]              
+	unsigned long                                      bDoingCrazyEyes : 1;                              		// 0x0698 (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      IsToungueSwing : 1;                               		// 0x0698 (0x0004) [0x0000000000000000] [0x00000002] 
+	unsigned long                                      bStartEyeDamage : 1;                              		// 0x0698 (0x0004) [0x0000000000000000] [0x00000004] 
+	unsigned long                                      bIsBiting : 1;                                    		// 0x0698 (0x0004) [0x0000000000000000] [0x00000008] 
+	unsigned long                                      bSuperTongue : 1;                                 		// 0x0698 (0x0004) [0x0000000000000000] [0x00000010] 
+	unsigned long                                      bForcedHidden : 1;                                		// 0x0698 (0x0004) [0x0000000000000000] [0x00000020] 
+	unsigned long                                      bRageMode : 1;                                    		// 0x0698 (0x0004) [0x0000000000000000] [0x00000040] 
+	unsigned long                                      bSetPawnAsHidden : 1;                             		// 0x0698 (0x0004) [0x0000000000002000] [0x00000080] ( CPF_Transient )
+	TArray< class AGenieLamp* >                        myLamps;                                          		// 0x069C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< class AGenieLamp* >                        spawnStartLamps;                                  		// 0x06A8 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	class AGenieLamp*                                  currentLamp;                                      		// 0x06B4 (0x0004) [0x0000000000000000]              
+	class AActor*                                      RightEyeTarget;                                   		// 0x06B8 (0x0004) [0x0000000000000000]              
+	class AActor*                                      LeftEyeTarget;                                    		// 0x06BC (0x0004) [0x0000000000000000]              
+	int                                                BiteDamageAmount;                                 		// 0x06C0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              BiteDamageMomentum;                               		// 0x06C4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UClass*                                      BiteDamageType;                                   		// 0x06C8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              BiteHitRadius;                                    		// 0x06CC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              BiteCD;                                           		// 0x06D0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              meleeDistance;                                    		// 0x06D4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< class AActor* >                            MeleeHurtList;                                    		// 0x06D8 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	float                                              LastMeleeTime;                                    		// 0x06E4 (0x0004) [0x0000000000000000]              
+	class ADunDefDjinn*                                BabyDjinnTemplate;                                		// 0x06E8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	int                                                MaxNumDjinnsToSpawn;                              		// 0x06EC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	int                                                MaxNumDjinnsToSpawnPerSet;                        		// 0x06F0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              BabyDjinnSpawnCD;                                 		// 0x06F4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< struct FName >                             DjinSpawnSockets;                                 		// 0x06F8 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	TArray< class ADunDefDjinn* >                      MyDjinns;                                         		// 0x0704 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	int                                                currentNumActiveDjinns;                           		// 0x0710 (0x0004) [0x0000000000000000]              
+	int                                                currentDjinnsSpawnedThisSet;                      		// 0x0714 (0x0004) [0x0000000000000000]              
+	float                                              LastDjinnSpawnTime;                               		// 0x0718 (0x0004) [0x0000000000000000]              
+	float                                              RotationSpeed;                                    		// 0x071C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              TongueSuperAttackCD;                              		// 0x0720 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              TongueSuperAttackRange;                           		// 0x0724 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LastSuperTongueAttack;                            		// 0x0728 (0x0004) [0x0000000000000000]              
+	float                                              TongueAttackCD;                                   		// 0x072C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	int                                                TongueDamageAmount;                               		// 0x0730 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              TongueDamageMomentum;                             		// 0x0734 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UClass*                                      TongueDamageType;                                 		// 0x0738 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              HeadActiveTimes[ 0x5 ];                           		// 0x073C (0x0014) [0x0000000000000001]              ( CPF_Edit )
+	float                                              GeneralActiveDelay;                               		// 0x0750 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LastActiveTime;                                   		// 0x0754 (0x0004) [0x0000000000000000]              
+	struct FVector                                     BurpLocation;                                     		// 0x0758 (0x000C) [0x0000000000000000]              
+	float                                              RageHealthPct;                                    		// 0x0764 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              RageModeCDScalar;                                 		// 0x0768 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< float >                                    MaxInLampTime;                                    		// 0x076C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
 
 private:
 	static UClass* pClassPointer;
@@ -177,7 +177,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 84787 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 79166 ];
 
 		return pClassPointer;
 	};
@@ -235,7 +235,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 84876 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 79255 ];
 
 		return pClassPointer;
 	};
@@ -318,7 +318,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 84879 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 79258 ];
 
 		return pClassPointer;
 	};
@@ -394,7 +394,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 84911 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 79290 ];
 
 		return pClassPointer;
 	};
@@ -418,7 +418,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 84913 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 79292 ];
 
 		return pClassPointer;
 	};
@@ -429,74 +429,74 @@ public:
 UClass* ADunDefWaveBillBoard_ArabiaChallenge::pClassPointer = NULL;
 
 // Class DunDefArabia.DunDefDjinn
-// 0x01A8 (0x0DD4 - 0x0C2C)
+// 0x01A8 (0x0D74 - 0x0BCC)
 class ADunDefDjinn : public ADunDefEnemy
 {
 public:
-	class UParticleSystemComponent*                    FlyingParticleComponent;                          		// 0x0C2C (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	struct FName                                       FlyingParticleSocketName;                         		// 0x0C30 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       InterruptAnimName;                                		// 0x0C38 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	class UMaterialInstanceConstant*                   GoldMaterialTemplate;                             		// 0x0C40 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystem*                             GoldParticleEffect;                               		// 0x0C44 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     TowerDestroyTemplate;                             		// 0x0C48 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     TowerDestroyTemplate_Ally;                        		// 0x0C4C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class USoundCue*                                   TowerDestroySound;                                		// 0x0C50 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     GoldEnemyConvertTemplate;                         		// 0x0C54 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     GoldEnemyConvertTemplate_Ally;                    		// 0x0C58 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FSpellAnims                                 GoldEnemyAnims;                                   		// 0x0C5C (0x003C) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEnemy*                                goldTarget;                                       		// 0x0C98 (0x0004) [0x0000000000000000]              
-	class UParticleSystemComponent*                    AttachedVFXComponent;                             		// 0x0C9C (0x0004) [0x0000000004080008]              ( CPF_ExportObject | CPF_Component | CPF_EditInline )
-	struct FName                                       ProjectileSocketName;                             		// 0x0CA0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	class UAnimNodeSequence*                           SpellAnimNode;                                    		// 0x0CA8 (0x0004) [0x0000000000000000]              
-	class UAnimNodeBlend*                              SpellBlender;                                     		// 0x0CAC (0x0004) [0x0000000000000000]              
-	struct FSpellAnims                                 TowerDestructAnims;                               		// 0x0CB0 (0x003C) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefTower*                                towerTarget;                                      		// 0x0CEC (0x0004) [0x0000000000000000]              
-	float                                              DeathScaleDownTime;                               		// 0x0CF0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       GoldBeamSocketName;                               		// 0x0CF4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       TowerBeamSocketName;                              		// 0x0CFC (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystemComponent*                    BeamParticleComponent;                            		// 0x0D04 (0x0004) [0x0000000004080008]              ( CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UParticleSystem*                             GoldBeamTemplate;                                 		// 0x0D08 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystem*                             TowerBeamTemplate;                                		// 0x0D0C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystem*                             GoldBeamTemplate_Ally;                            		// 0x0D10 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystem*                             TowerBeamTemplate_Ally;                           		// 0x0D14 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystemComponent*                    CastingParticleComponent;                         		// 0x0D18 (0x0004) [0x0000000004080008]              ( CPF_ExportObject | CPF_Component | CPF_EditInline )
-	float                                              MaxGlowColor;                                     		// 0x0D1C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              startTowerScaleValue;                             		// 0x0D20 (0x0004) [0x0000000000000000]              
-	float                                              currentGlowValue;                                 		// 0x0D24 (0x0004) [0x0000000000000000]              
-	float                                              castStart;                                        		// 0x0D28 (0x0004) [0x0000000000000000]              
-	float                                              scaleDownTime;                                    		// 0x0D2C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              initialTowerScale;                                		// 0x0D30 (0x0004) [0x0000000000000000]              
-	float                                              scaleStartTime;                                   		// 0x0D34 (0x0004) [0x0000000000000000]              
-	unsigned long                                      bScaleDownTower : 1;                              		// 0x0D38 (0x0004) [0x0000000000000000] [0x00000001] 
-	unsigned long                                      bIgnoreUpdatingTower : 1;                         		// 0x0D38 (0x0004) [0x0000000000000000] [0x00000002] 
-	unsigned long                                      bReforming : 1;                                   		// 0x0D38 (0x0004) [0x0000000000000000] [0x00000004] 
-	float                                              CastTime;                                         		// 0x0D3C (0x0004) [0x0000000000000020]              ( CPF_Net )
-	struct FLinearColor                                GlowColor;                                        		// 0x0D40 (0x0010) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       GlowColorParamName_Squire;                        		// 0x0D50 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       GlowColorParamName_Apprentice;                    		// 0x0D58 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FLinearColor                                originalColor;                                    		// 0x0D60 (0x0010) [0x0000000000000000]              
-	float                                              MinTrapOpacity;                                   		// 0x0D70 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MinAuraScale;                                     		// 0x0D74 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< struct FVector >                           DifficultyIdleColor;                              		// 0x0D78 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	int                                                djinnNumber;                                      		// 0x0D84 (0x0004) [0x0000000000000000]              
-	float                                              DjinnPushForce;                                   		// 0x0D88 (0x0004) [0x0000000000000000]              
-	float                                              DjinnProxDistance;                                		// 0x0D8C (0x0004) [0x0000000000000000]              
-	struct FColor                                      MiniMapPulseColor;                                		// 0x0D90 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MiniMapPulseRate;                                 		// 0x0D94 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       EnterLampAnim;                                    		// 0x0D98 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     DirectionalLampVFX;                               		// 0x0DA0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LampScaleDownTime;                                		// 0x0DA4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UMaterialInterface*                          AlliedMaterial;                                   		// 0x0DA8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UTexture2D*                                  AlliedIcon;                                       		// 0x0DAC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              AllyDmgMultiplier;                                		// 0x0DB0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TowerDmgMultiplier;                               		// 0x0DB4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              SpawnImmuneTime;                                  		// 0x0DB8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MinUpDotForForcedMovement;                        		// 0x0DBC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TowerTargetingDesirability_Desummoning;           		// 0x0DC0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LampScaleDownStartTime;                           		// 0x0DC4 (0x0004) [0x0000000000000000]              
-	class ADjinnLamp*                                  myLamp;                                           		// 0x0DC8 (0x0004) [0x0000000000000000]              
-	class UMaterialInstanceConstant*                   DissolveMIC;                                      		// 0x0DCC (0x0004) [0x0000000000000000]              
-	class UAudioComponent*                             CastingSoundComponent;                            		// 0x0DD0 (0x0004) [0x0000000004080008]              ( CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystemComponent*                    FlyingParticleComponent;                          		// 0x0BCC (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	struct FName                                       FlyingParticleSocketName;                         		// 0x0BD0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       InterruptAnimName;                                		// 0x0BD8 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	class UMaterialInstanceConstant*                   GoldMaterialTemplate;                             		// 0x0BE0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystem*                             GoldParticleEffect;                               		// 0x0BE4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     TowerDestroyTemplate;                             		// 0x0BE8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     TowerDestroyTemplate_Ally;                        		// 0x0BEC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class USoundCue*                                   TowerDestroySound;                                		// 0x0BF0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     GoldEnemyConvertTemplate;                         		// 0x0BF4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     GoldEnemyConvertTemplate_Ally;                    		// 0x0BF8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FSpellAnims                                 GoldEnemyAnims;                                   		// 0x0BFC (0x003C) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEnemy*                                goldTarget;                                       		// 0x0C38 (0x0004) [0x0000000000000000]              
+	class UParticleSystemComponent*                    AttachedVFXComponent;                             		// 0x0C3C (0x0004) [0x0000000004080008]              ( CPF_ExportObject | CPF_Component | CPF_EditInline )
+	struct FName                                       ProjectileSocketName;                             		// 0x0C40 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	class UAnimNodeSequence*                           SpellAnimNode;                                    		// 0x0C48 (0x0004) [0x0000000000000000]              
+	class UAnimNodeBlend*                              SpellBlender;                                     		// 0x0C4C (0x0004) [0x0000000000000000]              
+	struct FSpellAnims                                 TowerDestructAnims;                               		// 0x0C50 (0x003C) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefTower*                                towerTarget;                                      		// 0x0C8C (0x0004) [0x0000000000000000]              
+	float                                              DeathScaleDownTime;                               		// 0x0C90 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       GoldBeamSocketName;                               		// 0x0C94 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       TowerBeamSocketName;                              		// 0x0C9C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystemComponent*                    BeamParticleComponent;                            		// 0x0CA4 (0x0004) [0x0000000004080008]              ( CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystem*                             GoldBeamTemplate;                                 		// 0x0CA8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystem*                             TowerBeamTemplate;                                		// 0x0CAC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystem*                             GoldBeamTemplate_Ally;                            		// 0x0CB0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystem*                             TowerBeamTemplate_Ally;                           		// 0x0CB4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystemComponent*                    CastingParticleComponent;                         		// 0x0CB8 (0x0004) [0x0000000004080008]              ( CPF_ExportObject | CPF_Component | CPF_EditInline )
+	float                                              MaxGlowColor;                                     		// 0x0CBC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              startTowerScaleValue;                             		// 0x0CC0 (0x0004) [0x0000000000000000]              
+	float                                              currentGlowValue;                                 		// 0x0CC4 (0x0004) [0x0000000000000000]              
+	float                                              castStart;                                        		// 0x0CC8 (0x0004) [0x0000000000000000]              
+	float                                              scaleDownTime;                                    		// 0x0CCC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              initialTowerScale;                                		// 0x0CD0 (0x0004) [0x0000000000000000]              
+	float                                              scaleStartTime;                                   		// 0x0CD4 (0x0004) [0x0000000000000000]              
+	unsigned long                                      bScaleDownTower : 1;                              		// 0x0CD8 (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      bIgnoreUpdatingTower : 1;                         		// 0x0CD8 (0x0004) [0x0000000000000000] [0x00000002] 
+	unsigned long                                      bReforming : 1;                                   		// 0x0CD8 (0x0004) [0x0000000000000000] [0x00000004] 
+	float                                              CastTime;                                         		// 0x0CDC (0x0004) [0x0000000000000020]              ( CPF_Net )
+	struct FLinearColor                                GlowColor;                                        		// 0x0CE0 (0x0010) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       GlowColorParamName_Squire;                        		// 0x0CF0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       GlowColorParamName_Apprentice;                    		// 0x0CF8 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FLinearColor                                originalColor;                                    		// 0x0D00 (0x0010) [0x0000000000000000]              
+	float                                              MinTrapOpacity;                                   		// 0x0D10 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MinAuraScale;                                     		// 0x0D14 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< struct FVector >                           DifficultyIdleColor;                              		// 0x0D18 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	int                                                djinnNumber;                                      		// 0x0D24 (0x0004) [0x0000000000000000]              
+	float                                              DjinnPushForce;                                   		// 0x0D28 (0x0004) [0x0000000000000000]              
+	float                                              DjinnProxDistance;                                		// 0x0D2C (0x0004) [0x0000000000000000]              
+	struct FColor                                      MiniMapPulseColor;                                		// 0x0D30 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MiniMapPulseRate;                                 		// 0x0D34 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       EnterLampAnim;                                    		// 0x0D38 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     DirectionalLampVFX;                               		// 0x0D40 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LampScaleDownTime;                                		// 0x0D44 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UMaterialInterface*                          AlliedMaterial;                                   		// 0x0D48 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UTexture2D*                                  AlliedIcon;                                       		// 0x0D4C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              AllyDmgMultiplier;                                		// 0x0D50 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              TowerDmgMultiplier;                               		// 0x0D54 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              SpawnImmuneTime;                                  		// 0x0D58 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MinUpDotForForcedMovement;                        		// 0x0D5C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              TowerTargetingDesirability_Desummoning;           		// 0x0D60 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LampScaleDownStartTime;                           		// 0x0D64 (0x0004) [0x0000000000000000]              
+	class ADjinnLamp*                                  myLamp;                                           		// 0x0D68 (0x0004) [0x0000000000000000]              
+	class UMaterialInstanceConstant*                   DissolveMIC;                                      		// 0x0D6C (0x0004) [0x0000000000000000]              
+	class UAudioComponent*                             CastingSoundComponent;                            		// 0x0D70 (0x0004) [0x0000000004080008]              ( CPF_ExportObject | CPF_Component | CPF_EditInline )
 
 private:
 	static UClass* pClassPointer;
@@ -505,7 +505,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 84923 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 79302 ];
 
 		return pClassPointer;
 	};
@@ -575,7 +575,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 85235 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 79614 ];
 
 		return pClassPointer;
 	};
@@ -594,79 +594,79 @@ public:
 UClass* ADunDefDjinnManager::pClassPointer = NULL;
 
 // Class DunDefArabia.DunDefGenieBoss
-// 0x0158 (0x0DB0 - 0x0C58)
+// 0x0158 (0x0D4C - 0x0BF4)
 class ADunDefGenieBoss : public ADunDefBoss
 {
 public:
-	TArray< struct FEyeBeam >                          EyeBeamTypes;                                     		// 0x0C58 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	int                                                currentLeftEyeBeamIndex;                          		// 0x0C64 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	int                                                currentRightEyeBeamIndex;                         		// 0x0C68 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	struct FName                                       EyeAttack_Crazy;                                  		// 0x0C6C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       EyeAttack_Start;                                  		// 0x0C74 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       EyeAttack_Loop;                                   		// 0x0C7C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	float                                              CrazyEyesTime;                                    		// 0x0C84 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              LampVFXMagnitude;                                 		// 0x0C88 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystemComponent*                    HoverEffect;                                      		// 0x0C8C (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	struct FName                                       HoverSocketName;                                  		// 0x0C90 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     ImpactTemplate;                                   		// 0x0C98 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     DirectionalLampVFX;                               		// 0x0C9C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     CrystalEmitter;                                   		// 0x0CA0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     currentLeftEyeImpactEmitter;                      		// 0x0CA4 (0x0004) [0x0000000000000000]              
-	class ADunDefEmitterSpawnable*                     currentRightEyeImpactEmitter;                     		// 0x0CA8 (0x0004) [0x0000000000000000]              
-	class UParticleSystemComponent*                    LeftEyeBeam;                                      		// 0x0CAC (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UParticleSystemComponent*                    RightEyeBeam;                                     		// 0x0CB0 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UParticleSystemComponent*                    LeftEyeBeamStart;                                 		// 0x0CB4 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UParticleSystemComponent*                    RightEyeBeamStart;                                		// 0x0CB8 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UParticleSystemComponent*                    RageEffect;                                       		// 0x0CBC (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	struct FName                                       RageEffectSocket;                                 		// 0x0CC0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       LeftEyeSocketName;                                		// 0x0CC8 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       RightEyeSocketName;                               		// 0x0CD0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       BurpSocketName;                                   		// 0x0CD8 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       BurpAnimName;                                     		// 0x0CE0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       BiteAnim;                                         		// 0x0CE8 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       BiteSocket;                                       		// 0x0CF0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       DjinSpawnAnimName;                                		// 0x0CF8 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       LickAnimName;                                     		// 0x0D00 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       LickAnimName_Super;                               		// 0x0D08 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       DeathLoopAnim;                                    		// 0x0D10 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	float                                              HeadInterpScalar;                                 		// 0x0D18 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              EyeSkelControlLoopAtInterpSpeed;                  		// 0x0D1C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MaxLazerDistance;                                 		// 0x0D20 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       DisappearAnimName;                                		// 0x0D24 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DissolveTime;                                     		// 0x0D2C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DeathDissolveTime;                                		// 0x0D30 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              HeadLookAtRotClamp;                               		// 0x0D34 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              HeadLookAtInterpRate;                             		// 0x0D38 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              HeadLookAtRotClamp_Crazy;                         		// 0x0D3C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              HeadLookAtSinScale;                               		// 0x0D40 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              HeadLookAtInterpRate_Crazy;                       		// 0x0D44 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FColor                                      MiniMapPulseColor;                                		// 0x0D48 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MiniMapPulseRate;                                 		// 0x0D4C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TowerDmgMultiplier;                               		// 0x0D50 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DissolveBegin;                                    		// 0x0D54 (0x0004) [0x0000000000000000]              
-	unsigned long                                      bAllowEyeTracking : 1;                            		// 0x0D58 (0x0004) [0x0000000000000020] [0x00000001] ( CPF_Net )
-	unsigned long                                      bStartEyeDamage : 1;                              		// 0x0D58 (0x0004) [0x0000000000000020] [0x00000002] ( CPF_Net )
-	unsigned long                                      bStartDissolve : 1;                               		// 0x0D58 (0x0004) [0x0000000000000000] [0x00000004] 
-	unsigned long                                      bReforming : 1;                                   		// 0x0D58 (0x0004) [0x0000000000000000] [0x00000008] 
-	unsigned long                                      bForceIntoLamp : 1;                               		// 0x0D58 (0x0004) [0x0000000000000020] [0x00000010] ( CPF_Net )
-	unsigned long                                      bRageMode : 1;                                    		// 0x0D58 (0x0004) [0x0000000000000020] [0x00000020] ( CPF_Net )
-	class USkelControlLookAt*                          RightEyeLookAt;                                   		// 0x0D5C (0x0004) [0x0000000000000000]              
-	class USkelControlLookAt*                          LeftEyeLookAt;                                    		// 0x0D60 (0x0004) [0x0000000000000000]              
-	class USkelControlSingleBone*                      HeadLookAt;                                       		// 0x0D64 (0x0004) [0x0000000000000000]              
-	class UMaterialInstanceConstant*                   HeadMIC;                                          		// 0x0D68 (0x0004) [0x0000000000000000]              
-	class UMaterialInstanceConstant*                   TongueMIC;                                        		// 0x0D6C (0x0004) [0x0000000000000000]              
-	class AActor*                                      LeftEyeTarget;                                    		// 0x0D70 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	class AActor*                                      RightEyeTarget;                                   		// 0x0D74 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	class AActor*                                      HeadLookAtTarget;                                 		// 0x0D78 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	struct FVector                                     PreviousRightEyeLocation;                         		// 0x0D7C (0x000C) [0x0000000000000000]              
-	struct FVector                                     PreviousLeftEyeLocation;                          		// 0x0D88 (0x000C) [0x0000000000000000]              
-	float                                              LastValidRightEye;                                		// 0x0D94 (0x0004) [0x0000000000000000]              
-	float                                              LastValidLeftEye;                                 		// 0x0D98 (0x0004) [0x0000000000000000]              
-	float                                              EyeResetTime;                                     		// 0x0D9C (0x0004) [0x0000000000000000]              
-	float                                              CrazyEyeTime;                                     		// 0x0DA0 (0x0004) [0x0000000000000000]              
-	class USoundCue*                                   GenieEnterLampSound;                              		// 0x0DA4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class USoundCue*                                   GenieExitLampSound;                               		// 0x0DA8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UAudioComponent*                             EyeCastingSoundComponent;                         		// 0x0DAC (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	TArray< struct FEyeBeam >                          EyeBeamTypes;                                     		// 0x0BF4 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	int                                                currentLeftEyeBeamIndex;                          		// 0x0C00 (0x0004) [0x0000000000000020]              ( CPF_Net )
+	int                                                currentRightEyeBeamIndex;                         		// 0x0C04 (0x0004) [0x0000000000000020]              ( CPF_Net )
+	struct FName                                       EyeAttack_Crazy;                                  		// 0x0C08 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       EyeAttack_Start;                                  		// 0x0C10 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       EyeAttack_Loop;                                   		// 0x0C18 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	float                                              CrazyEyesTime;                                    		// 0x0C20 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              LampVFXMagnitude;                                 		// 0x0C24 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystemComponent*                    HoverEffect;                                      		// 0x0C28 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	struct FName                                       HoverSocketName;                                  		// 0x0C2C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     ImpactTemplate;                                   		// 0x0C34 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     DirectionalLampVFX;                               		// 0x0C38 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     CrystalEmitter;                                   		// 0x0C3C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     currentLeftEyeImpactEmitter;                      		// 0x0C40 (0x0004) [0x0000000000000000]              
+	class ADunDefEmitterSpawnable*                     currentRightEyeImpactEmitter;                     		// 0x0C44 (0x0004) [0x0000000000000000]              
+	class UParticleSystemComponent*                    LeftEyeBeam;                                      		// 0x0C48 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystemComponent*                    RightEyeBeam;                                     		// 0x0C4C (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystemComponent*                    LeftEyeBeamStart;                                 		// 0x0C50 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystemComponent*                    RightEyeBeamStart;                                		// 0x0C54 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystemComponent*                    RageEffect;                                       		// 0x0C58 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	struct FName                                       RageEffectSocket;                                 		// 0x0C5C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       LeftEyeSocketName;                                		// 0x0C64 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       RightEyeSocketName;                               		// 0x0C6C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       BurpSocketName;                                   		// 0x0C74 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       BurpAnimName;                                     		// 0x0C7C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       BiteAnim;                                         		// 0x0C84 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       BiteSocket;                                       		// 0x0C8C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       DjinSpawnAnimName;                                		// 0x0C94 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       LickAnimName;                                     		// 0x0C9C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       LickAnimName_Super;                               		// 0x0CA4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       DeathLoopAnim;                                    		// 0x0CAC (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	float                                              HeadInterpScalar;                                 		// 0x0CB4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              EyeSkelControlLoopAtInterpSpeed;                  		// 0x0CB8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MaxLazerDistance;                                 		// 0x0CBC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       DisappearAnimName;                                		// 0x0CC0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DissolveTime;                                     		// 0x0CC8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DeathDissolveTime;                                		// 0x0CCC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              HeadLookAtRotClamp;                               		// 0x0CD0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              HeadLookAtInterpRate;                             		// 0x0CD4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              HeadLookAtRotClamp_Crazy;                         		// 0x0CD8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              HeadLookAtSinScale;                               		// 0x0CDC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              HeadLookAtInterpRate_Crazy;                       		// 0x0CE0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FColor                                      MiniMapPulseColor;                                		// 0x0CE4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MiniMapPulseRate;                                 		// 0x0CE8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              TowerDmgMultiplier;                               		// 0x0CEC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DissolveBegin;                                    		// 0x0CF0 (0x0004) [0x0000000000000000]              
+	unsigned long                                      bAllowEyeTracking : 1;                            		// 0x0CF4 (0x0004) [0x0000000000000020] [0x00000001] ( CPF_Net )
+	unsigned long                                      bStartEyeDamage : 1;                              		// 0x0CF4 (0x0004) [0x0000000000000020] [0x00000002] ( CPF_Net )
+	unsigned long                                      bStartDissolve : 1;                               		// 0x0CF4 (0x0004) [0x0000000000000000] [0x00000004] 
+	unsigned long                                      bReforming : 1;                                   		// 0x0CF4 (0x0004) [0x0000000000000000] [0x00000008] 
+	unsigned long                                      bForceIntoLamp : 1;                               		// 0x0CF4 (0x0004) [0x0000000000000020] [0x00000010] ( CPF_Net )
+	unsigned long                                      bRageMode : 1;                                    		// 0x0CF4 (0x0004) [0x0000000000000020] [0x00000020] ( CPF_Net )
+	class USkelControlLookAt*                          RightEyeLookAt;                                   		// 0x0CF8 (0x0004) [0x0000000000000000]              
+	class USkelControlLookAt*                          LeftEyeLookAt;                                    		// 0x0CFC (0x0004) [0x0000000000000000]              
+	class USkelControlSingleBone*                      HeadLookAt;                                       		// 0x0D00 (0x0004) [0x0000000000000000]              
+	class UMaterialInstanceConstant*                   HeadMIC;                                          		// 0x0D04 (0x0004) [0x0000000000000000]              
+	class UMaterialInstanceConstant*                   TongueMIC;                                        		// 0x0D08 (0x0004) [0x0000000000000000]              
+	class AActor*                                      LeftEyeTarget;                                    		// 0x0D0C (0x0004) [0x0000000000000020]              ( CPF_Net )
+	class AActor*                                      RightEyeTarget;                                   		// 0x0D10 (0x0004) [0x0000000000000020]              ( CPF_Net )
+	class AActor*                                      HeadLookAtTarget;                                 		// 0x0D14 (0x0004) [0x0000000000000020]              ( CPF_Net )
+	struct FVector                                     PreviousRightEyeLocation;                         		// 0x0D18 (0x000C) [0x0000000000000000]              
+	struct FVector                                     PreviousLeftEyeLocation;                          		// 0x0D24 (0x000C) [0x0000000000000000]              
+	float                                              LastValidRightEye;                                		// 0x0D30 (0x0004) [0x0000000000000000]              
+	float                                              LastValidLeftEye;                                 		// 0x0D34 (0x0004) [0x0000000000000000]              
+	float                                              EyeResetTime;                                     		// 0x0D38 (0x0004) [0x0000000000000000]              
+	float                                              CrazyEyeTime;                                     		// 0x0D3C (0x0004) [0x0000000000000000]              
+	class USoundCue*                                   GenieEnterLampSound;                              		// 0x0D40 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class USoundCue*                                   GenieExitLampSound;                               		// 0x0D44 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UAudioComponent*                             EyeCastingSoundComponent;                         		// 0x0D48 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
 
 private:
 	static UClass* pClassPointer;
@@ -675,7 +675,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 85546 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 79925 ];
 
 		return pClassPointer;
 	};

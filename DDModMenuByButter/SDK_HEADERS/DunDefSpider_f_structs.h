@@ -839,13 +839,6 @@ struct ADunDefSpiderController_eventNotifyBump_Parms
 	unsigned long                                      ReturnValue : 1;                                  		// 0x0010 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
-// Function DunDefSpider.DunDefSpiderQueenController.GetAttackDamage
-// [0x00020002] 
-struct ADunDefSpiderQueenController_execGetAttackDamage_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
 // Function DunDefSpider.DunDefSpiderQueenController.SetTarget
 // [0x00024802] ( FUNC_Event )
 struct ADunDefSpiderQueenController_eventSetTarget_Parms

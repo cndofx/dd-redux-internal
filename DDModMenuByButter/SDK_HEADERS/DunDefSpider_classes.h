@@ -36,42 +36,42 @@
 */
 
 // Class DunDefSpider.DunDefWebProjectile
-// 0x009C (0x045C - 0x03C0)
+// 0x009C (0x0400 - 0x0364)
 class ADunDefWebProjectile : public ADunDefHomingProjectile
 {
 public:
-	class AActor*                                      AttachedTo;                                       		// 0x03C0 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	TArray< struct FWebbedActor >                      AffectingActors;                                  		// 0x03C4 (0x000C) [0x0000000000480000]              ( CPF_Component | CPF_NeedCtorLink )
-	float                                              MovementSpeedMultiplier;                          		// 0x03D0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TowerAttackRateMultiplier;                        		// 0x03D4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              PlayerAttackRateMultiplier;                       		// 0x03D8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              pawnDamageModifier;                               		// 0x03DC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              PawnAttackSpeedMult;                              		// 0x03E0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              BaseStatusAffectTime;                             		// 0x03E4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              BasePawnStatusAffectTime;                         		// 0x03E8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystemComponent*                    AttachedVFX;                                      		// 0x03EC (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UParticleSystem*                             WebAttachTemplate;                                		// 0x03F0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              AttachedVFXScale;                                 		// 0x03F4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FVector                                     AttachedVFXTranslation;                           		// 0x03F8 (0x000C) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DefaultBoundsHeight;                              		// 0x0404 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              DefaultBoundWidth;                                		// 0x0408 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              WebbedJumpZ;                                      		// 0x040C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       PlayerAttachSocketName;                           		// 0x0410 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	TArray< class UClass* >                            IgnoreActorsForWeb;                               		// 0x0418 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	class UParticleSystem*                             WebbedEffect;                                     		// 0x0424 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              WebbedEffectScale;                                		// 0x0428 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bUseOriginalHoming : 1;                           		// 0x042C (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	unsigned long                                      bUseEnemyPawnDeboosting : 1;                      		// 0x042C (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
-	unsigned long                                      bHasAttached : 1;                                 		// 0x042C (0x0004) [0x0000000000000020] [0x00000004] ( CPF_Net )
-	unsigned long                                      bIsHoming : 1;                                    		// 0x042C (0x0004) [0x0000000000000000] [0x00000008] 
-	unsigned long                                      bTempHitPawn : 1;                                 		// 0x042C (0x0004) [0x0000000000002000] [0x00000010] ( CPF_Transient )
-	unsigned long                                      bShutDown : 1;                                    		// 0x042C (0x0004) [0x0000000000000020] [0x00000020] ( CPF_Net )
-	unsigned long                                      bScaleUp : 1;                                     		// 0x042C (0x0004) [0x0000000000000020] [0x00000040] ( CPF_Net )
-	TArray< class UTowerDeboosterObject* >             TowerDeBoosters;                                  		// 0x0430 (0x000C) [0x0000000004400001]              ( CPF_Edit | CPF_NeedCtorLink | CPF_EditInline )
-	TArray< unsigned char >                            deboostingTypes;                                  		// 0x043C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	unsigned char                                      towerBoostType;                                   		// 0x0448 (0x0001) [0x0000000000000000]              
-	struct FVector                                     InitialTargetLocation;                            		// 0x044C (0x000C) [0x0000000000000000]              
-	float                                              ScaleTime;                                        		// 0x0458 (0x0004) [0x0000000000000000]              
+	class AActor*                                      AttachedTo;                                       		// 0x0364 (0x0004) [0x0000000000000020]              ( CPF_Net )
+	TArray< struct FWebbedActor >                      AffectingActors;                                  		// 0x0368 (0x000C) [0x0000000000480000]              ( CPF_Component | CPF_NeedCtorLink )
+	float                                              MovementSpeedMultiplier;                          		// 0x0374 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              TowerAttackRateMultiplier;                        		// 0x0378 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              PlayerAttackRateMultiplier;                       		// 0x037C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              pawnDamageModifier;                               		// 0x0380 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              PawnAttackSpeedMult;                              		// 0x0384 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              BaseStatusAffectTime;                             		// 0x0388 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              BasePawnStatusAffectTime;                         		// 0x038C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystemComponent*                    AttachedVFX;                                      		// 0x0390 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystem*                             WebAttachTemplate;                                		// 0x0394 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              AttachedVFXScale;                                 		// 0x0398 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FVector                                     AttachedVFXTranslation;                           		// 0x039C (0x000C) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DefaultBoundsHeight;                              		// 0x03A8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              DefaultBoundWidth;                                		// 0x03AC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              WebbedJumpZ;                                      		// 0x03B0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       PlayerAttachSocketName;                           		// 0x03B4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	TArray< class UClass* >                            IgnoreActorsForWeb;                               		// 0x03BC (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	class UParticleSystem*                             WebbedEffect;                                     		// 0x03C8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              WebbedEffectScale;                                		// 0x03CC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      bUseOriginalHoming : 1;                           		// 0x03D0 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	unsigned long                                      bUseEnemyPawnDeboosting : 1;                      		// 0x03D0 (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
+	unsigned long                                      bHasAttached : 1;                                 		// 0x03D0 (0x0004) [0x0000000000000020] [0x00000004] ( CPF_Net )
+	unsigned long                                      bIsHoming : 1;                                    		// 0x03D0 (0x0004) [0x0000000000000000] [0x00000008] 
+	unsigned long                                      bTempHitPawn : 1;                                 		// 0x03D0 (0x0004) [0x0000000000002000] [0x00000010] ( CPF_Transient )
+	unsigned long                                      bShutDown : 1;                                    		// 0x03D0 (0x0004) [0x0000000000000020] [0x00000020] ( CPF_Net )
+	unsigned long                                      bScaleUp : 1;                                     		// 0x03D0 (0x0004) [0x0000000000000020] [0x00000040] ( CPF_Net )
+	TArray< class UTowerDeboosterObject* >             TowerDeBoosters;                                  		// 0x03D4 (0x000C) [0x0000000004400001]              ( CPF_Edit | CPF_NeedCtorLink | CPF_EditInline )
+	TArray< unsigned char >                            deboostingTypes;                                  		// 0x03E0 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	unsigned char                                      towerBoostType;                                   		// 0x03EC (0x0001) [0x0000000000000000]              
+	struct FVector                                     InitialTargetLocation;                            		// 0x03F0 (0x000C) [0x0000000000000000]              
+	float                                              ScaleTime;                                        		// 0x03FC (0x0004) [0x0000000000000000]              
 
 private:
 	static UClass* pClassPointer;
@@ -80,7 +80,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 83781 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 78806 ];
 
 		return pClassPointer;
 	};
@@ -116,28 +116,28 @@ public:
 UClass* ADunDefWebProjectile::pClassPointer = NULL;
 
 // Class DunDefSpider.DunDefMapInfo_VDay
-// 0x0070 (0x0404 - 0x0394)
+// 0x0070 (0x03A4 - 0x0334)
 class UDunDefMapInfo_VDay : public UDunDefMapInfo
 {
 public:
-	TArray< struct FWaveKillCounts >                   KillCountsPerPlayer;                              		// 0x0394 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	TArray< struct FEnemyGenderOverride >              EnemyGenderOverrides;                             		// 0x03A0 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	float                                              MinTimeBetweenGenderSpawns;                       		// 0x03AC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MaxTimeBetweenGenderSpawns;                       		// 0x03B0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MinTimeBetweenPairSpawns;                         		// 0x03B4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MaxTimeBetweenPairSpawns;                         		// 0x03B8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MiniMapGenderIconSize;                            		// 0x03BC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MiniMapGenderIconOffset;                          		// 0x03C0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              PairMatchDistance;                                		// 0x03C4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< int >                                      MaxGenderPairsAllowed;                            		// 0x03C8 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	class ADunDefEmitterSpawnable*                     PairMatchedEffect;                                		// 0x03D4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class USoundCue*                                   PairMatchedHUDSound;                              		// 0x03D8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class USoundCue*                                   GenderSpawnedHUDSound;                            		// 0x03DC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bNotifyOnGenderSpawn : 1;                         		// 0x03E0 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	class UTexture2D*                                  BoyIcon;                                          		// 0x03E4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UTexture2D*                                  GirlIcon;                                         		// 0x03E8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< class ADunDefEnemy* >                      BoyArchetypes;                                    		// 0x03EC (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	TArray< class ADunDefEnemy* >                      GirlArchetypes;                                   		// 0x03F8 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	TArray< struct FWaveKillCounts >                   KillCountsPerPlayer;                              		// 0x0334 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	TArray< struct FEnemyGenderOverride >              EnemyGenderOverrides;                             		// 0x0340 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	float                                              MinTimeBetweenGenderSpawns;                       		// 0x034C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MaxTimeBetweenGenderSpawns;                       		// 0x0350 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MinTimeBetweenPairSpawns;                         		// 0x0354 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MaxTimeBetweenPairSpawns;                         		// 0x0358 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MiniMapGenderIconSize;                            		// 0x035C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MiniMapGenderIconOffset;                          		// 0x0360 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              PairMatchDistance;                                		// 0x0364 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< int >                                      MaxGenderPairsAllowed;                            		// 0x0368 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	class ADunDefEmitterSpawnable*                     PairMatchedEffect;                                		// 0x0374 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class USoundCue*                                   PairMatchedHUDSound;                              		// 0x0378 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class USoundCue*                                   GenderSpawnedHUDSound;                            		// 0x037C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      bNotifyOnGenderSpawn : 1;                         		// 0x0380 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	class UTexture2D*                                  BoyIcon;                                          		// 0x0384 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UTexture2D*                                  GirlIcon;                                         		// 0x0388 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< class ADunDefEnemy* >                      BoyArchetypes;                                    		// 0x038C (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	TArray< class ADunDefEnemy* >                      GirlArchetypes;                                   		// 0x0398 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
 
 private:
 	static UClass* pClassPointer;
@@ -146,7 +146,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90862 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 85254 ];
 
 		return pClassPointer;
 	};
@@ -156,17 +156,17 @@ public:
 UClass* UDunDefMapInfo_VDay::pClassPointer = NULL;
 
 // Class DunDefSpider.DunDefCrystalCore_PortalDefense
-// 0x002C (0x055C - 0x0530)
+// 0x002C (0x0554 - 0x0528)
 class ADunDefCrystalCore_PortalDefense : public ADunDefCrystalCore
 {
 public:
-	TArray< class UClass* >                            AllowedToDamageClasses;                           		// 0x0530 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	class UParticleSystem*                             WarpEffect;                                       		// 0x053C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class USoundCue*                                   WarpedSound;                                      		// 0x0540 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FVector                                     WarpEffectOffset;                                 		// 0x0544 (0x000C) [0x0000000000000001]              ( CPF_Edit )
-	float                                              WarpInvincibilityTime;                            		// 0x0550 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TimeSinceLastTeleport;                            		// 0x0554 (0x0004) [0x0000000000000000]              
-	unsigned long                                      bIsInvincible : 1;                                		// 0x0558 (0x0004) [0x0000000000000020] [0x00000001] ( CPF_Net )
+	TArray< class UClass* >                            AllowedToDamageClasses;                           		// 0x0528 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	class UParticleSystem*                             WarpEffect;                                       		// 0x0534 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class USoundCue*                                   WarpedSound;                                      		// 0x0538 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FVector                                     WarpEffectOffset;                                 		// 0x053C (0x000C) [0x0000000000000001]              ( CPF_Edit )
+	float                                              WarpInvincibilityTime;                            		// 0x0548 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              TimeSinceLastTeleport;                            		// 0x054C (0x0004) [0x0000000000000000]              
+	unsigned long                                      bIsInvincible : 1;                                		// 0x0550 (0x0004) [0x0000000000000020] [0x00000001] ( CPF_Net )
 
 private:
 	static UClass* pClassPointer;
@@ -175,7 +175,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 95721 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90043 ];
 
 		return pClassPointer;
 	};
@@ -197,16 +197,16 @@ public:
 UClass* ADunDefCrystalCore_PortalDefense::pClassPointer = NULL;
 
 // Class DunDefSpider.DunDefGRI_PortalDefense
-// 0x0020 (0x0754 - 0x0734)
+// 0x0020 (0x070C - 0x06EC)
 class ADunDefGRI_PortalDefense : public ADunDefGameReplicationInfo
 {
 public:
-	int                                                PortalHitsRemaining;                              		// 0x0734 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	int                                                AllowedPortalHits;                                		// 0x0738 (0x0004) [0x0000000000000020]              ( CPF_Net )
-	struct FColor                                      TextColor;                                        		// 0x073C (0x0004) [0x0000000000000000]              
-	struct FColor                                      InvincibleTextColor;                              		// 0x0740 (0x0004) [0x0000000000000000]              
-	struct FString                                     HUDRemainingTouchesString;                        		// 0x0744 (0x000C) [0x0000000000400020]              ( CPF_Net | CPF_NeedCtorLink )
-	unsigned long                                      bIsCoreInvincible : 1;                            		// 0x0750 (0x0004) [0x0000000000000020] [0x00000001] ( CPF_Net )
+	int                                                PortalHitsRemaining;                              		// 0x06EC (0x0004) [0x0000000000000020]              ( CPF_Net )
+	int                                                AllowedPortalHits;                                		// 0x06F0 (0x0004) [0x0000000000000020]              ( CPF_Net )
+	struct FColor                                      TextColor;                                        		// 0x06F4 (0x0004) [0x0000000000000000]              
+	struct FColor                                      InvincibleTextColor;                              		// 0x06F8 (0x0004) [0x0000000000000000]              
+	struct FString                                     HUDRemainingTouchesString;                        		// 0x06FC (0x000C) [0x0000000000400020]              ( CPF_Net | CPF_NeedCtorLink )
+	unsigned long                                      bIsCoreInvincible : 1;                            		// 0x0708 (0x0004) [0x0000000000000020] [0x00000001] ( CPF_Net )
 
 private:
 	static UClass* pClassPointer;
@@ -215,7 +215,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 95749 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90071 ];
 
 		return pClassPointer;
 	};
@@ -231,26 +231,26 @@ public:
 UClass* ADunDefGRI_PortalDefense::pClassPointer = NULL;
 
 // Class DunDefSpider.DunDefSpider
-// 0x004C (0x0C78 - 0x0C2C)
+// 0x004C (0x0C18 - 0x0BCC)
 class ADunDefSpider : public ADunDefEnemy
 {
 public:
-	struct FName                                       LungeAnimation;                                   		// 0x0C2C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       WebShootAnimation;                                		// 0x0C34 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       WebChargeAnimation;                               		// 0x0C3C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       WebShootSocket;                                   		// 0x0C44 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       MeleeSwingSocketName;                             		// 0x0C4C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       SpawnParticleMeshAttachmentSocket;                		// 0x0C54 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MaxWebParticleScale;                              		// 0x0C5C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystemComponent*                    WebChargeParticleSystem;                          		// 0x0C60 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class USoundCue*                                   WebChargeSound;                                   		// 0x0C64 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystemComponent*                    SpawnParticleEffect;                              		// 0x0C68 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	unsigned long                                      bAttachSpawnParticleToMesh : 1;                   		// 0x0C6C (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	unsigned long                                      bUseSpawnEffect : 1;                              		// 0x0C6C (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
-	unsigned long                                      bPlayingWebCharge : 1;                            		// 0x0C6C (0x0004) [0x0000000000000020] [0x00000004] ( CPF_Net )
-	unsigned long                                      bPlaySpawnEffect : 1;                             		// 0x0C6C (0x0004) [0x0000000000000020] [0x00000008] ( CPF_Net )
-	float                                              WebStartTime;                                     		// 0x0C70 (0x0004) [0x0000000000000000]              
-	float                                              WebChargeTime;                                    		// 0x0C74 (0x0004) [0x0000000000000020]              ( CPF_Net )
+	struct FName                                       LungeAnimation;                                   		// 0x0BCC (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       WebShootAnimation;                                		// 0x0BD4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       WebChargeAnimation;                               		// 0x0BDC (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       WebShootSocket;                                   		// 0x0BE4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       MeleeSwingSocketName;                             		// 0x0BEC (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       SpawnParticleMeshAttachmentSocket;                		// 0x0BF4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MaxWebParticleScale;                              		// 0x0BFC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystemComponent*                    WebChargeParticleSystem;                          		// 0x0C00 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class USoundCue*                                   WebChargeSound;                                   		// 0x0C04 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystemComponent*                    SpawnParticleEffect;                              		// 0x0C08 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	unsigned long                                      bAttachSpawnParticleToMesh : 1;                   		// 0x0C0C (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
+	unsigned long                                      bUseSpawnEffect : 1;                              		// 0x0C0C (0x0004) [0x0000000000000001] [0x00000002] ( CPF_Edit )
+	unsigned long                                      bPlayingWebCharge : 1;                            		// 0x0C0C (0x0004) [0x0000000000000020] [0x00000004] ( CPF_Net )
+	unsigned long                                      bPlaySpawnEffect : 1;                             		// 0x0C0C (0x0004) [0x0000000000000020] [0x00000008] ( CPF_Net )
+	float                                              WebStartTime;                                     		// 0x0C10 (0x0004) [0x0000000000000000]              
+	float                                              WebChargeTime;                                    		// 0x0C14 (0x0004) [0x0000000000000020]              ( CPF_Net )
 
 private:
 	static UClass* pClassPointer;
@@ -259,7 +259,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 95803 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90125 ];
 
 		return pClassPointer;
 	};
@@ -291,15 +291,15 @@ public:
 UClass* ADunDefSpider::pClassPointer = NULL;
 
 // Class DunDefSpider.DunDefMapInfo_PortalDefense
-// 0x0038 (0x03CC - 0x0394)
+// 0x0038 (0x036C - 0x0334)
 class UDunDefMapInfo_PortalDefense : public UDunDefMapInfo
 {
 public:
-	struct FMinMaxValues                               MinMaxEnemyHealth;                                		// 0x0394 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FMinMaxValues                               MinMaxEnemyDamage;                                		// 0x039C (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FMinMaxValues                               MinMaxEnemyScale;                                 		// 0x03A4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MaxAllowedCoreHits[ 0x5 ];                        		// 0x03AC (0x0014) [0x0000000000000001]              ( CPF_Edit )
-	struct FString                                     RemainingTouchesString;                           		// 0x03C0 (0x000C) [0x0000000000408001]              ( CPF_Edit | CPF_Localized | CPF_NeedCtorLink )
+	struct FMinMaxValues                               MinMaxEnemyHealth;                                		// 0x0334 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FMinMaxValues                               MinMaxEnemyDamage;                                		// 0x033C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FMinMaxValues                               MinMaxEnemyScale;                                 		// 0x0344 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MaxAllowedCoreHits[ 0x5 ];                        		// 0x034C (0x0014) [0x0000000000000001]              ( CPF_Edit )
+	struct FString                                     RemainingTouchesString;                           		// 0x0360 (0x000C) [0x0000000000408001]              ( CPF_Edit | CPF_Localized | CPF_NeedCtorLink )
 
 private:
 	static UClass* pClassPointer;
@@ -308,7 +308,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 95812 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90134 ];
 
 		return pClassPointer;
 	};
@@ -319,14 +319,14 @@ public:
 UClass* UDunDefMapInfo_PortalDefense::pClassPointer = NULL;
 
 // Class DunDefSpider.GameInfo_PortalDefense
-// 0x0010 (0x055C - 0x054C)
+// 0x0010 (0x054C - 0x053C)
 class AGameInfo_PortalDefense : public AGameInfo_Special
 {
 public:
-	int                                                currentPortal;                                    		// 0x054C (0x0004) [0x0000000000000000]              
-	float                                              GameEnemyHealthMultiplier;                        		// 0x0550 (0x0004) [0x0000000000000000]              
-	float                                              GameEnemyDamageMultiplier;                        		// 0x0554 (0x0004) [0x0000000000000000]              
-	float                                              GameEnemyScaleMultiplier;                         		// 0x0558 (0x0004) [0x0000000000000000]              
+	int                                                currentPortal;                                    		// 0x053C (0x0004) [0x0000000000000000]              
+	float                                              GameEnemyHealthMultiplier;                        		// 0x0540 (0x0004) [0x0000000000000000]              
+	float                                              GameEnemyDamageMultiplier;                        		// 0x0544 (0x0004) [0x0000000000000000]              
+	float                                              GameEnemyScaleMultiplier;                         		// 0x0548 (0x0004) [0x0000000000000000]              
 
 private:
 	static UClass* pClassPointer;
@@ -335,7 +335,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 95821 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90143 ];
 
 		return pClassPointer;
 	};
@@ -352,13 +352,13 @@ public:
 UClass* AGameInfo_PortalDefense::pClassPointer = NULL;
 
 // Class DunDefSpider.DunDefGRI_VDay
-// 0x0024 (0x0758 - 0x0734)
+// 0x0024 (0x0710 - 0x06EC)
 class ADunDefGRI_VDay : public ADunDefGameReplicationInfo
 {
 public:
-	struct FString                                     PairWasMatched;                                   		// 0x0734 (0x000C) [0x0000000000408000]              ( CPF_Localized | CPF_NeedCtorLink )
-	struct FString                                     BoySpawned;                                       		// 0x0740 (0x000C) [0x0000000000408000]              ( CPF_Localized | CPF_NeedCtorLink )
-	struct FString                                     GirlSpawned;                                      		// 0x074C (0x000C) [0x0000000000408000]              ( CPF_Localized | CPF_NeedCtorLink )
+	struct FString                                     PairWasMatched;                                   		// 0x06EC (0x000C) [0x0000000000408000]              ( CPF_Localized | CPF_NeedCtorLink )
+	struct FString                                     BoySpawned;                                       		// 0x06F8 (0x000C) [0x0000000000408000]              ( CPF_Localized | CPF_NeedCtorLink )
+	struct FString                                     GirlSpawned;                                      		// 0x0704 (0x000C) [0x0000000000408000]              ( CPF_Localized | CPF_NeedCtorLink )
 
 private:
 	static UClass* pClassPointer;
@@ -367,7 +367,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 95829 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90151 ];
 
 		return pClassPointer;
 	};
@@ -427,7 +427,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 95963 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90285 ];
 
 		return pClassPointer;
 	};
@@ -504,12 +504,11 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 95995 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90317 ];
 
 		return pClassPointer;
 	};
 
-	int GetAttackDamage ( );
 	void eventSetTarget ( class AActor* NewTarget, unsigned long bDontClearIgnoreList );
 	void ShootWeb ( );
 	float GetWebChargeTime ( );
@@ -531,51 +530,49 @@ public:
 UClass* ADunDefSpiderQueenController::pClassPointer = NULL;
 
 // Class DunDefSpider.DunDefSpiderQueen
-// 0x00D4 (0x0D2C - 0x0C58)
+// 0x00D0 (0x0CC4 - 0x0BF4)
 class ADunDefSpiderQueen : public ADunDefBoss
 {
 public:
-	float                                              StunDelay;                                        		// 0x0C58 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              CoreDamageMultiplier;                             		// 0x0C5C (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MinimumAngleDotForSuperHit;                       		// 0x0C60 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	TArray< float >                                    NonStunnedDmgScalar;                              		// 0x0C64 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
-	float                                              CurrentNonStunnedDmgScalar;                       		// 0x0C70 (0x0004) [0x0000000000000000]              
-	float                                              BabySpawnPlayRate;                                		// 0x0C74 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       BabySpawnLocSocket;                               		// 0x0C78 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       BabySpawnAnimName;                                		// 0x0C80 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       StunnedAnimLoop;                                  		// 0x0C88 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       CrystalSocketName;                                		// 0x0C90 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       MeleeSwingSocketName;                             		// 0x0C98 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       WebShootSocket;                                   		// 0x0CA0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       WebShootAnimation;                                		// 0x0CA8 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       StunnedHurtAnim;                                  		// 0x0CB0 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	class ADunDefEmitterSpawnable*                     StunnedHurtEffectTemplate;                        		// 0x0CB8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	class UParticleSystemComponent*                    StunnedCoreVFX;                                   		// 0x0CBC (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	class UParticleSystemComponent*                    EnragedVFX;                                       		// 0x0CC0 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
-	struct FName                                       EnrageSocketName;                                 		// 0x0CC4 (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	struct FName                                       UpperBodyLookAtName;                              		// 0x0CCC (0x0008) [0x0000000000000001]              ( CPF_Edit )
-	float                                              CrystalScaleDownTime;                             		// 0x0CD4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              MinCrystalBrightnessScale;                        		// 0x0CD8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              EnrageHealthPct;                                  		// 0x0CDC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              EnrageDmgMult;                                    		// 0x0CE0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              EnrageBabySpawnMult;                              		// 0x0CE4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              EnrageIntervalMult;                               		// 0x0CE8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              EnrageGroundSpeedMult;                            		// 0x0CEC (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	unsigned long                                      bDisableBabySpawn : 1;                            		// 0x0CF0 (0x0004) [0x0000000000000001] [0x00000001] ( CPF_Edit )
-	unsigned long                                      bRageMode : 1;                                    		// 0x0CF0 (0x0004) [0x0000000000000000] [0x00000002] 
-	unsigned long                                      bIsStunned : 1;                                   		// 0x0CF0 (0x0004) [0x0000000000000000] [0x00000004] 
-	unsigned long                                      bLookAtTarget : 1;                                		// 0x0CF0 (0x0004) [0x0000000000000000] [0x00000008] 
-	class UMaterialInstanceConstant*                   EnemyHealthBarMaterialTemplate;                   		// 0x0CF4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	float                                              TimeOfDeath;                                      		// 0x0CF8 (0x0004) [0x0000000000000000]              
-	class UMaterialInstanceConstant*                   QueenMIC;                                         		// 0x0CFC (0x0004) [0x0000000000000000]              
-	class USkelControlLookAt*                          UpperBodyLookAt;                                  		// 0x0D00 (0x0004) [0x0000000000000000]              
-	class USkelControlLookAt*                          IKTest;                                           		// 0x0D04 (0x0004) [0x0000000000000000]              
-	class AActor*                                      TheLastDamageCauser;                              		// 0x0D08 (0x0004) [0x0000000000000000]              
-	float                                              WebChargeTime;                                    		// 0x0D0C (0x0004) [0x0000000000000000]              
-	float                                              WebStartTime;                                     		// 0x0D10 (0x0004) [0x0000000000000000]              
-	float                                              currentTakenStunnedDamage;                        		// 0x0D14 (0x0004) [0x0000000000000000]              
-	float                                              AllowedDmgStunnedPct;                             		// 0x0D18 (0x0004) [0x0000000000000001]              ( CPF_Edit )
-	struct FLinearColor                                EnrageCoreColor;                                  		// 0x0D1C (0x0010) [0x0000000000000001]              ( CPF_Edit )
+	float                                              StunDelay;                                        		// 0x0BF4 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              CoreDamageMultiplier;                             		// 0x0BF8 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MinimumAngleDotForSuperHit;                       		// 0x0BFC (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	TArray< float >                                    NonStunnedDmgScalar;                              		// 0x0C00 (0x000C) [0x0000000000400001]              ( CPF_Edit | CPF_NeedCtorLink )
+	float                                              CurrentNonStunnedDmgScalar;                       		// 0x0C0C (0x0004) [0x0000000000000000]              
+	float                                              BabySpawnPlayRate;                                		// 0x0C10 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       BabySpawnLocSocket;                               		// 0x0C14 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       BabySpawnAnimName;                                		// 0x0C1C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       StunnedAnimLoop;                                  		// 0x0C24 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       CrystalSocketName;                                		// 0x0C2C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       MeleeSwingSocketName;                             		// 0x0C34 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       WebShootSocket;                                   		// 0x0C3C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       WebShootAnimation;                                		// 0x0C44 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       StunnedHurtAnim;                                  		// 0x0C4C (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	class ADunDefEmitterSpawnable*                     StunnedHurtEffectTemplate;                        		// 0x0C54 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	class UParticleSystemComponent*                    StunnedCoreVFX;                                   		// 0x0C58 (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	class UParticleSystemComponent*                    EnragedVFX;                                       		// 0x0C5C (0x0004) [0x0000000004080009]              ( CPF_Edit | CPF_ExportObject | CPF_Component | CPF_EditInline )
+	struct FName                                       EnrageSocketName;                                 		// 0x0C60 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	struct FName                                       UpperBodyLookAtName;                              		// 0x0C68 (0x0008) [0x0000000000000001]              ( CPF_Edit )
+	float                                              CrystalScaleDownTime;                             		// 0x0C70 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              MinCrystalBrightnessScale;                        		// 0x0C74 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              EnrageHealthPct;                                  		// 0x0C78 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              EnrageDmgMult;                                    		// 0x0C7C (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              EnrageBabySpawnMult;                              		// 0x0C80 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              EnrageIntervalMult;                               		// 0x0C84 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	float                                              EnrageGroundSpeedMult;                            		// 0x0C88 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	unsigned long                                      bRageMode : 1;                                    		// 0x0C8C (0x0004) [0x0000000000000000] [0x00000001] 
+	unsigned long                                      bIsStunned : 1;                                   		// 0x0C8C (0x0004) [0x0000000000000000] [0x00000002] 
+	unsigned long                                      bLookAtTarget : 1;                                		// 0x0C8C (0x0004) [0x0000000000000000] [0x00000004] 
+	float                                              TimeOfDeath;                                      		// 0x0C90 (0x0004) [0x0000000000000000]              
+	class UMaterialInstanceConstant*                   QueenMIC;                                         		// 0x0C94 (0x0004) [0x0000000000000000]              
+	class USkelControlLookAt*                          UpperBodyLookAt;                                  		// 0x0C98 (0x0004) [0x0000000000000000]              
+	class USkelControlLookAt*                          IKTest;                                           		// 0x0C9C (0x0004) [0x0000000000000000]              
+	class AActor*                                      TheLastDamageCauser;                              		// 0x0CA0 (0x0004) [0x0000000000000000]              
+	float                                              WebChargeTime;                                    		// 0x0CA4 (0x0004) [0x0000000000000000]              
+	float                                              WebStartTime;                                     		// 0x0CA8 (0x0004) [0x0000000000000000]              
+	float                                              currentTakenStunnedDamage;                        		// 0x0CAC (0x0004) [0x0000000000000000]              
+	float                                              AllowedDmgStunnedPct;                             		// 0x0CB0 (0x0004) [0x0000000000000001]              ( CPF_Edit )
+	struct FLinearColor                                EnrageCoreColor;                                  		// 0x0CB4 (0x0010) [0x0000000000000001]              ( CPF_Edit )
 
 private:
 	static UClass* pClassPointer;
@@ -584,7 +581,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 96137 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90459 ];
 
 		return pClassPointer;
 	};
@@ -637,7 +634,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 96441 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90759 ];
 
 		return pClassPointer;
 	};
@@ -652,15 +649,15 @@ public:
 UClass* UTowerDeboosterObject::pClassPointer = NULL;
 
 // Class DunDefSpider.GameInfo_VDay
-// 0x0024 (0x0570 - 0x054C)
+// 0x0024 (0x0560 - 0x053C)
 class AGameInfo_VDay : public AMain
 {
 public:
-	TArray< class ADunDefEnemy* >                      Boys;                                             		// 0x054C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	TArray< class ADunDefEnemy* >                      Girls;                                            		// 0x0558 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	unsigned long                                      bUsingGenderSpawnTimer : 1;                       		// 0x0564 (0x0004) [0x0000000000000000] [0x00000001] 
-	float                                              GenderSpawnTimer;                                 		// 0x0568 (0x0004) [0x0000000000000000]              
-	class UUI_KillCount*                               myKillCountUI;                                    		// 0x056C (0x0004) [0x0000000000000000]              
+	TArray< class ADunDefEnemy* >                      Boys;                                             		// 0x053C (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	TArray< class ADunDefEnemy* >                      Girls;                                            		// 0x0548 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
+	unsigned long                                      bUsingGenderSpawnTimer : 1;                       		// 0x0554 (0x0004) [0x0000000000000000] [0x00000001] 
+	float                                              GenderSpawnTimer;                                 		// 0x0558 (0x0004) [0x0000000000000000]              
+	class UUI_KillCount*                               myKillCountUI;                                    		// 0x055C (0x0004) [0x0000000000000000]              
 
 private:
 	static UClass* pClassPointer;
@@ -669,7 +666,7 @@ public:
 	static UClass* StaticClass()
 	{
 		if ( ! pClassPointer )
-			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 96584 ];
+			pClassPointer = (UClass*) UObject::GObjObjects()->Data[ 90902 ];
 
 		return pClassPointer;
 	};

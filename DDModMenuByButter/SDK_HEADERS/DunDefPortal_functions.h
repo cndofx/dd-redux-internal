@@ -30,7 +30,7 @@ void ADunDefPortalNode::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 87525 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 81906 ];
 
 	ADunDefPortalNode_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -47,7 +47,7 @@ void ADunDefPortalNode::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 87520 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 81901 ];
 
 	ADunDefPortalNode_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -68,7 +68,7 @@ bool ADunDefPortalNode::eventAllowSpawn ( class AActor* theArchetype, struct FVe
 	static UFunction* pFnAllowSpawn = NULL;
 
 	if ( ! pFnAllowSpawn )
-		pFnAllowSpawn = (UFunction*) UObject::GObjObjects()->Data[ 87515 ];
+		pFnAllowSpawn = (UFunction*) UObject::GObjObjects()->Data[ 81896 ];
 
 	ADunDefPortalNode_eventAllowSpawn_Parms AllowSpawn_Parms;
 	AllowSpawn_Parms.theArchetype = theArchetype;
@@ -90,7 +90,7 @@ void ADunDefPortalNode::FadeOut ( float theLightFadeOutTime )
 	static UFunction* pFnFadeOut = NULL;
 
 	if ( ! pFnFadeOut )
-		pFnFadeOut = (UFunction*) UObject::GObjObjects()->Data[ 87512 ];
+		pFnFadeOut = (UFunction*) UObject::GObjObjects()->Data[ 81893 ];
 
 	ADunDefPortalNode_execFadeOut_Parms FadeOut_Parms;
 	FadeOut_Parms.theLightFadeOutTime = theLightFadeOutTime;
@@ -111,7 +111,7 @@ void ADunDefPortalNode::eventTouch ( class AActor* Other, class UPrimitiveCompon
 	static UFunction* pFnTouch = NULL;
 
 	if ( ! pFnTouch )
-		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 87497 ];
+		pFnTouch = (UFunction*) UObject::GObjObjects()->Data[ 81878 ];
 
 	ADunDefPortalNode_eventTouch_Parms Touch_Parms;
 	Touch_Parms.Other = Other;
@@ -147,7 +147,7 @@ void ADunDefPortalNode::ExecReplicatedFunction ( struct FName FunctionName, stru
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 87480 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 81861 ];
 
 	ADunDefPortalNode_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );
@@ -180,7 +180,7 @@ void ADunDefPortalNode::eventReplicatedEvent ( struct FName VarName )
 	static UFunction* pFnReplicatedEvent = NULL;
 
 	if ( ! pFnReplicatedEvent )
-		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 87478 ];
+		pFnReplicatedEvent = (UFunction*) UObject::GObjObjects()->Data[ 81859 ];
 
 	ADunDefPortalNode_eventReplicatedEvent_Parms ReplicatedEvent_Parms;
 	memcpy ( &ReplicatedEvent_Parms.VarName, &VarName, 0x8 );
@@ -200,7 +200,7 @@ bool ADunDefWeapon_PortalGun::HitBlockingVolume ( struct FVector Start, struct F
 	static UFunction* pFnHitBlockingVolume = NULL;
 
 	if ( ! pFnHitBlockingVolume )
-		pFnHitBlockingVolume = (UFunction*) UObject::GObjObjects()->Data[ 87622 ];
+		pFnHitBlockingVolume = (UFunction*) UObject::GObjObjects()->Data[ 82003 ];
 
 	ADunDefWeapon_PortalGun_execHitBlockingVolume_Parms HitBlockingVolume_Parms;
 	memcpy ( &HitBlockingVolume_Parms.Start, &Start, 0xC );
@@ -222,7 +222,7 @@ bool ADunDefWeapon_PortalGun::IsInAnyPortalBlockingVolume ( struct FVector aPoin
 	static UFunction* pFnIsInAnyPortalBlockingVolume = NULL;
 
 	if ( ! pFnIsInAnyPortalBlockingVolume )
-		pFnIsInAnyPortalBlockingVolume = (UFunction*) UObject::GObjObjects()->Data[ 87618 ];
+		pFnIsInAnyPortalBlockingVolume = (UFunction*) UObject::GObjObjects()->Data[ 81999 ];
 
 	ADunDefWeapon_PortalGun_execIsInAnyPortalBlockingVolume_Parms IsInAnyPortalBlockingVolume_Parms;
 	memcpy ( &IsInAnyPortalBlockingVolume_Parms.aPoint, &aPoint, 0xC );
@@ -242,7 +242,7 @@ void ADunDefWeapon_PortalGun::eventTick ( float DeltaTime )
 	static UFunction* pFnTick = NULL;
 
 	if ( ! pFnTick )
-		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 87616 ];
+		pFnTick = (UFunction*) UObject::GObjObjects()->Data[ 81997 ];
 
 	ADunDefWeapon_PortalGun_eventTick_Parms Tick_Parms;
 	Tick_Parms.DeltaTime = DeltaTime;
@@ -262,7 +262,7 @@ bool ADunDefWeapon_PortalGun::GetReloadingColors ( struct FLinearColor* BarColor
 	static UFunction* pFnGetReloadingColors = NULL;
 
 	if ( ! pFnGetReloadingColors )
-		pFnGetReloadingColors = (UFunction*) UObject::GObjObjects()->Data[ 87612 ];
+		pFnGetReloadingColors = (UFunction*) UObject::GObjObjects()->Data[ 81993 ];
 
 	ADunDefWeapon_PortalGun_execGetReloadingColors_Parms GetReloadingColors_Parms;
 
@@ -287,7 +287,7 @@ bool ADunDefWeapon_PortalGun::HasBothPortals ( )
 	static UFunction* pFnHasBothPortals = NULL;
 
 	if ( ! pFnHasBothPortals )
-		pFnHasBothPortals = (UFunction*) UObject::GObjObjects()->Data[ 87610 ];
+		pFnHasBothPortals = (UFunction*) UObject::GObjObjects()->Data[ 81991 ];
 
 	ADunDefWeapon_PortalGun_execHasBothPortals_Parms HasBothPortals_Parms;
 
@@ -306,7 +306,7 @@ void ADunDefWeapon_PortalGun::ClearPortal ( int portalIndex )
 	static UFunction* pFnClearPortal = NULL;
 
 	if ( ! pFnClearPortal )
-		pFnClearPortal = (UFunction*) UObject::GObjObjects()->Data[ 87608 ];
+		pFnClearPortal = (UFunction*) UObject::GObjObjects()->Data[ 81989 ];
 
 	ADunDefWeapon_PortalGun_execClearPortal_Parms ClearPortal_Parms;
 	ClearPortal_Parms.portalIndex = portalIndex;
@@ -323,7 +323,7 @@ void ADunDefWeapon_PortalGun::eventDestroyed ( )
 	static UFunction* pFnDestroyed = NULL;
 
 	if ( ! pFnDestroyed )
-		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 87607 ];
+		pFnDestroyed = (UFunction*) UObject::GObjObjects()->Data[ 81988 ];
 
 	ADunDefWeapon_PortalGun_eventDestroyed_Parms Destroyed_Parms;
 
@@ -339,7 +339,7 @@ void ADunDefWeapon_PortalGun::DetachWeapon ( )
 	static UFunction* pFnDetachWeapon = NULL;
 
 	if ( ! pFnDetachWeapon )
-		pFnDetachWeapon = (UFunction*) UObject::GObjObjects()->Data[ 87606 ];
+		pFnDetachWeapon = (UFunction*) UObject::GObjObjects()->Data[ 81987 ];
 
 	ADunDefWeapon_PortalGun_execDetachWeapon_Parms DetachWeapon_Parms;
 
@@ -355,7 +355,7 @@ void ADunDefWeapon_PortalGun::HolderDied ( )
 	static UFunction* pFnHolderDied = NULL;
 
 	if ( ! pFnHolderDied )
-		pFnHolderDied = (UFunction*) UObject::GObjObjects()->Data[ 87605 ];
+		pFnHolderDied = (UFunction*) UObject::GObjObjects()->Data[ 81986 ];
 
 	ADunDefWeapon_PortalGun_execHolderDied_Parms HolderDied_Parms;
 
@@ -372,7 +372,7 @@ void ADunDefWeapon_PortalGun::CustomFire ( int theFireMode )
 	static UFunction* pFnCustomFire = NULL;
 
 	if ( ! pFnCustomFire )
-		pFnCustomFire = (UFunction*) UObject::GObjObjects()->Data[ 87599 ];
+		pFnCustomFire = (UFunction*) UObject::GObjObjects()->Data[ 81980 ];
 
 	ADunDefWeapon_PortalGun_execCustomFire_Parms CustomFire_Parms;
 	CustomFire_Parms.theFireMode = theFireMode;
@@ -390,7 +390,7 @@ void ADunDefWeapon_PortalGun::ShootProjectiles ( int theFireMode )
 	static UFunction* pFnShootProjectiles = NULL;
 
 	if ( ! pFnShootProjectiles )
-		pFnShootProjectiles = (UFunction*) UObject::GObjObjects()->Data[ 87597 ];
+		pFnShootProjectiles = (UFunction*) UObject::GObjObjects()->Data[ 81978 ];
 
 	ADunDefWeapon_PortalGun_execShootProjectiles_Parms ShootProjectiles_Parms;
 	ShootProjectiles_Parms.theFireMode = theFireMode;
@@ -408,7 +408,7 @@ bool ADunDefWeapon_PortalGun::HasAnyAmmo ( )
 	static UFunction* pFnHasAnyAmmo = NULL;
 
 	if ( ! pFnHasAnyAmmo )
-		pFnHasAnyAmmo = (UFunction*) UObject::GObjObjects()->Data[ 87595 ];
+		pFnHasAnyAmmo = (UFunction*) UObject::GObjObjects()->Data[ 81976 ];
 
 	ADunDefWeapon_PortalGun_execHasAnyAmmo_Parms HasAnyAmmo_Parms;
 
@@ -427,7 +427,7 @@ void ADunDefWeapon_PortalGun::BeginFire ( unsigned char FireModeNum )
 	static UFunction* pFnBeginFire = NULL;
 
 	if ( ! pFnBeginFire )
-		pFnBeginFire = (UFunction*) UObject::GObjObjects()->Data[ 87593 ];
+		pFnBeginFire = (UFunction*) UObject::GObjObjects()->Data[ 81974 ];
 
 	ADunDefWeapon_PortalGun_execBeginFire_Parms BeginFire_Parms;
 	BeginFire_Parms.FireModeNum = FireModeNum;
@@ -448,7 +448,7 @@ class ADunDefPortalNode* ADunDefWeapon_PortalGun::GetSiblingPortal ( class ADunD
 	static UFunction* pFnGetSiblingPortal = NULL;
 
 	if ( ! pFnGetSiblingPortal )
-		pFnGetSiblingPortal = (UFunction*) UObject::GObjObjects()->Data[ 87510 ];
+		pFnGetSiblingPortal = (UFunction*) UObject::GObjObjects()->Data[ 81891 ];
 
 	ADunDefWeapon_PortalGun_execGetSiblingPortal_Parms GetSiblingPortal_Parms;
 	GetSiblingPortal_Parms.aPortal = aPortal;
@@ -473,7 +473,7 @@ void ADunDefWeapon_PortalGun::eventPostBeginPlay ( )
 	static UFunction* pFnPostBeginPlay = NULL;
 
 	if ( ! pFnPostBeginPlay )
-		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 87589 ];
+		pFnPostBeginPlay = (UFunction*) UObject::GObjObjects()->Data[ 81970 ];
 
 	ADunDefWeapon_PortalGun_eventPostBeginPlay_Parms PostBeginPlay_Parms;
 
@@ -490,7 +490,7 @@ void ADunDefWeapon_PortalGun::PlayCancelAnimation ( unsigned long bIsPrimary )
 	static UFunction* pFnPlayCancelAnimation = NULL;
 
 	if ( ! pFnPlayCancelAnimation )
-		pFnPlayCancelAnimation = (UFunction*) UObject::GObjObjects()->Data[ 87587 ];
+		pFnPlayCancelAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81968 ];
 
 	ADunDefWeapon_PortalGun_execPlayCancelAnimation_Parms PlayCancelAnimation_Parms;
 	PlayCancelAnimation_Parms.bIsPrimary = bIsPrimary;
@@ -508,7 +508,7 @@ void ADunDefWeapon_PortalGun::PlayedShootAnimation ( unsigned long isBigShot )
 	static UFunction* pFnPlayedShootAnimation = NULL;
 
 	if ( ! pFnPlayedShootAnimation )
-		pFnPlayedShootAnimation = (UFunction*) UObject::GObjObjects()->Data[ 87585 ];
+		pFnPlayedShootAnimation = (UFunction*) UObject::GObjObjects()->Data[ 81966 ];
 
 	ADunDefWeapon_PortalGun_execPlayedShootAnimation_Parms PlayedShootAnimation_Parms;
 	PlayedShootAnimation_Parms.isBigShot = isBigShot;
@@ -526,7 +526,7 @@ int ADunDefWeapon_PortalGun::GetTotalAmmo ( )
 	static UFunction* pFnGetTotalAmmo = NULL;
 
 	if ( ! pFnGetTotalAmmo )
-		pFnGetTotalAmmo = (UFunction*) UObject::GObjObjects()->Data[ 87583 ];
+		pFnGetTotalAmmo = (UFunction*) UObject::GObjObjects()->Data[ 81964 ];
 
 	ADunDefWeapon_PortalGun_execGetTotalAmmo_Parms GetTotalAmmo_Parms;
 
@@ -545,7 +545,7 @@ int ADunDefWeapon_PortalGun::GetMaxAmmo ( )
 	static UFunction* pFnGetMaxAmmo = NULL;
 
 	if ( ! pFnGetMaxAmmo )
-		pFnGetMaxAmmo = (UFunction*) UObject::GObjObjects()->Data[ 87581 ];
+		pFnGetMaxAmmo = (UFunction*) UObject::GObjObjects()->Data[ 81962 ];
 
 	ADunDefWeapon_PortalGun_execGetMaxAmmo_Parms GetMaxAmmo_Parms;
 
@@ -564,7 +564,7 @@ int ADunDefWeapon_PortalGun::GetAmmo ( )
 	static UFunction* pFnGetAmmo = NULL;
 
 	if ( ! pFnGetAmmo )
-		pFnGetAmmo = (UFunction*) UObject::GObjObjects()->Data[ 87579 ];
+		pFnGetAmmo = (UFunction*) UObject::GObjObjects()->Data[ 81960 ];
 
 	ADunDefWeapon_PortalGun_execGetAmmo_Parms GetAmmo_Parms;
 
@@ -583,7 +583,7 @@ float ADunDefWeapon_PortalGun::GetAmmoPercent ( )
 	static UFunction* pFnGetAmmoPercent = NULL;
 
 	if ( ! pFnGetAmmoPercent )
-		pFnGetAmmoPercent = (UFunction*) UObject::GObjObjects()->Data[ 87577 ];
+		pFnGetAmmoPercent = (UFunction*) UObject::GObjObjects()->Data[ 81958 ];
 
 	ADunDefWeapon_PortalGun_execGetAmmoPercent_Parms GetAmmoPercent_Parms;
 
@@ -602,7 +602,7 @@ bool ADunDefWeapon_PortalGun::UsesAmmo ( )
 	static UFunction* pFnUsesAmmo = NULL;
 
 	if ( ! pFnUsesAmmo )
-		pFnUsesAmmo = (UFunction*) UObject::GObjObjects()->Data[ 87575 ];
+		pFnUsesAmmo = (UFunction*) UObject::GObjObjects()->Data[ 81956 ];
 
 	ADunDefWeapon_PortalGun_execUsesAmmo_Parms UsesAmmo_Parms;
 
@@ -636,7 +636,7 @@ void ADunDefWeapon_PortalGun::ExecReplicatedFunction ( struct FName FunctionName
 	static UFunction* pFnExecReplicatedFunction = NULL;
 
 	if ( ! pFnExecReplicatedFunction )
-		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 87558 ];
+		pFnExecReplicatedFunction = (UFunction*) UObject::GObjObjects()->Data[ 81939 ];
 
 	ADunDefWeapon_PortalGun_execExecReplicatedFunction_Parms ExecReplicatedFunction_Parms;
 	memcpy ( &ExecReplicatedFunction_Parms.FunctionName, &FunctionName, 0x8 );

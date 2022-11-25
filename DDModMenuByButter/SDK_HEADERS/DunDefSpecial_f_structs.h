@@ -1373,6 +1373,13 @@ struct ACTD_DDGRI_execDoLevelVictory_Parms
 {
 };
 
+// Function DunDefSpecial.CTD_DDGRI.Tick
+// [0x00020902] ( FUNC_Event )
+struct ACTD_DDGRI_eventTick_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
 // Function DunDefSpecial.CTD_DDGRI.GetSkipBuildPhaseString
 // [0x00020102] 
 struct ACTD_DDGRI_execGetSkipBuildPhaseString_Parms
@@ -1524,13 +1531,6 @@ struct ACTF_GameInfo_execAddObjectiveScore_Parms
 	int                                                Score;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
-// Function DunDefSpecial.CTF_GameInfo.CalculatedNetSpeed
-// [0x00020002] 
-struct ACTF_GameInfo_execCalculatedNetSpeed_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
 // Function DunDefSpecial.CTF_GameInfo.PlayerReplicationInfoInitialized
 // [0x00020002] 
 struct ACTF_GameInfo_execPlayerReplicationInfoInitialized_Parms
@@ -1577,13 +1577,6 @@ struct ACTD_GameInfo_execRatePlayerStart_Parms
 	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// float                                           Rating;                                           		// 0x0010 (0x0004) [0x0000000000000000]              
 	// class ADunDefPlayerController*                  ddpc;                                             		// 0x0014 (0x0004) [0x0000000000000000]              
-};
-
-// Function DunDefSpecial.CTD_GameInfo.CalculatedNetSpeed
-// [0x00020002] 
-struct ACTD_GameInfo_execCalculatedNetSpeed_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function DunDefSpecial.CTD_GameInfo.PostBeginPlay
@@ -2268,19 +2261,6 @@ struct ADunDefTower_SummonEnemy_execScaleForHeroModifiers_Parms
 	// float                                           linearMult;                                       		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
-// Function DunDefSpecial.DunDefTower_SummonEnemy.IncrementRepair
-// [0x00020002] 
-struct ADunDefTower_SummonEnemy_execIncrementRepair_Parms
-{
-	float                                              CurrentMana;                                      		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              DeltaTime;                                        		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0008 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// float                                           CostOfIncrement;                                  		// 0x000C (0x0004) [0x0000000000000000]              
-	// float                                           potentialHealth;                                  		// 0x0010 (0x0004) [0x0000000000000000]              
-	// float                                           TimeOvershotReduction;                            		// 0x0014 (0x0004) [0x0000000000000000]              
-	// float                                           theTimeOfTotalRepair;                             		// 0x0018 (0x0004) [0x0000000000000000]              
-};
-
 // Function DunDefSpecial.DunDefTower_SummonEnemy.DrawMyHUD
 // [0x00820102] 
 struct ADunDefTower_SummonEnemy_execDrawMyHUD_Parms
@@ -2443,7 +2423,7 @@ struct ADunDefTower_SummonEnemy_eventReplicatedEvent_Parms
 // [0x00022002] 
 struct ADunDefTower_TripWire_execStaticGetTowerScale_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefTower*                                tower;                                            		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              TowerRangeScaler;                                 		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
@@ -2467,7 +2447,7 @@ struct ADunDefTower_TripWire_execTransferTowerOwnership_Parms
 // [0x00020002] 
 struct ADunDefTower_TripWire_execCheckAssociateWithHero_Parms
 {
-	class UDunDefHero*                                 hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	class UDunDefHero*                                 Hero;                                             		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefPawn*                                 pawnInstigator;                                   		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	class ADunDefPlayerController*                     PC;                                               		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
@@ -2566,20 +2546,6 @@ struct ADunDefTower_TripWire_execSetRadiusScale_Parms
 	float                                              theRadiusScale;                                   		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
-// Function DunDefSpecial.DunDefTower_TripWire.GetSlowTime
-// [0x00020102] 
-struct ADunDefTower_TripWire_execGetSlowTime_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function DunDefSpecial.DunDefTower_TripWire.GetBeamSpeedMultiplier
-// [0x00020102] 
-struct ADunDefTower_TripWire_execGetBeamSpeedMultiplier_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
 // Function DunDefSpecial.DunDefTower_TripWire.DrawTowerToolTipStats
 // [0x00420102] 
 struct ADunDefTower_TripWire_execDrawTowerToolTipStats_Parms
@@ -2604,7 +2570,7 @@ struct ADunDefTower_TripWire_execGetToolTipText_Parms
 struct ADunDefTower_TripWire_execScaleForHeroModifiers_Parms
 {
 	unsigned long                                      IsFirstTime : 1;                                  		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
 	// float                                           linearHealthMult;                                 		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
@@ -2948,22 +2914,6 @@ struct ADunDefTower_TripWire_execUpdateStuns_Parms
 	// class ADunDefEnemy*                             EnemyTrip;                                        		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
-// Function DunDefSpecial.DunDefTower_TripWire.KilledTarget
-// [0x00020002] 
-struct ADunDefTower_TripWire_execKilledTarget_Parms
-{
-	class UDunDefTargetableInterface*                  aTarget;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function DunDefSpecial.DunDefTower_TripWire.DoExplosion
-// [0x00020002] 
-struct ADunDefTower_TripWire_execDoExplosion_Parms
-{
-	class UDunDefTargetableInterface*                  aTarget;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-	// class ADunDefGasCloud*                          TempExplosionTemp;                                		// 0x0008 (0x0004) [0x0000000000000000]              
-	// class ADunDefEnemy*                             EnemyRef;                                         		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
 // Function DunDefSpecial.DunDefTower_TripWire.GetAttackRate
 // [0x00020102] 
 struct ADunDefTower_TripWire_execGetAttackRate_Parms
@@ -3267,15 +3217,6 @@ struct ADunDefTower_TripWire_execExecReplicatedFunction_Parms
 struct ADunDefTower_TripWire_eventReplicatedEvent_Parms
 {
 	struct FName                                       VarName;                                          		// 0x0000 (0x0008) [0x0000000000000080]              ( CPF_Parm )
-};
-
-// Function DunDefSpecial.DunDefTower_TripPhysical.ScaleForHeroModifiers
-// [0x00020002] 
-struct ADunDefTower_TripPhysical_execScaleForHeroModifiers_Parms
-{
-	unsigned long                                      IsFirstTime : 1;                                  		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// class UDunDefHero*                              hero;                                             		// 0x0004 (0x0004) [0x0000000000000000]              
-	// float                                           linearHealthMult;                                 		// 0x0008 (0x0004) [0x0000000000000000]              
 };
 
 // Function DunDefSpecial.DunDefTower_TripPhysical.DisableAbilityMove
@@ -4784,8 +4725,6 @@ struct ADunDefGRI_Assault_execGetProjectileLimitDistance_Parms
 // [0x00020102] 
 struct ADunDefGRI_Assault_execPostBeginPlay_Parms
 {
-	// unsigned long                                   bInsanity : 1;                                    		// 0x0000 (0x0004) [0x0000000000000000] [0x00000001] 
-	// unsigned long                                   bPetsEnabled : 1;                                 		// 0x0004 (0x0004) [0x0000000000000000] [0x00000001] 
 };
 
 // Function DunDefSpecial.DunDefGRI_Assault.Tick
@@ -4991,7 +4930,7 @@ struct UDunDefMapInfo_Delivery_execGetTimeLimit_Parms
 	int                                                NumPlayers;                                       		// 0x0008 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x000C (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// float                                           baseTime;                                         		// 0x0010 (0x0004) [0x0000000000000000]              
-	// float                                           Multiplier;                                       		// 0x0014 (0x0004) [0x0000000000000000]              
+	// float                                           multiplier;                                       		// 0x0014 (0x0004) [0x0000000000000000]              
 };
 
 // Function DunDefSpecial.DunDefMapInfo_Delivery.GetWaveDropOffCount
@@ -5184,6 +5123,13 @@ struct UUI_GlobalHUDUberMF_eventUpdate_Parms
 	// class ADunDefGRI_KillEnemiesTimeLimit_Uber*     ddGRI;                                            		// 0x0004 (0x0004) [0x0000000000000000]              
 };
 
+// Function DunDefSpecial.DunDefGRI_KillEnemiesTimeLimit_Uber.Tick
+// [0x00020902] ( FUNC_Event )
+struct ADunDefGRI_KillEnemiesTimeLimit_Uber_eventTick_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
 // Function DunDefSpecial.DunDefGRI_KillEnemiesTimeLimit_Uber.ReadToShowStats
 // [0x00020102] 
 struct ADunDefGRI_KillEnemiesTimeLimit_Uber_execReadToShowStats_Parms
@@ -5262,6 +5208,20 @@ struct ADunDefGRI_OgreAlly_execSetInCombatPhase_Parms
 // [0x00020902] ( FUNC_Event )
 struct ADunDefGRI_OgreAlly_eventPostBeginPlay_Parms
 {
+};
+
+// Function DunDefSpecial.DunDefGRI_UberAssault.Tick
+// [0x00020902] ( FUNC_Event )
+struct ADunDefGRI_UberAssault_eventTick_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function DunDefSpecial.DunDefGRI_UberDefense.Tick
+// [0x00020902] ( FUNC_Event )
+struct ADunDefGRI_UberDefense_eventTick_Parms
+{
+	float                                              DeltaTime;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
 // Function DunDefSpecial.DunDefGRI_VDay2.PostBeginPlay
@@ -7270,6 +7230,57 @@ struct ADunDefPlayerAbility_DefenseBoost_execGetAbilityStatus_Parms
 	unsigned char                                      ReturnValue;                                      		// 0x0004 (0x0001) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.RemoveTower
+// [0x00020102] 
+struct ADunDefPlayerAbility_DefenseBoost_execRemoveTower_Parms
+{
+	int                                                Index;                                            		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.AddTower
+// [0x00820102] 
+struct ADunDefPlayerAbility_DefenseBoost_execAddTower_Parms
+{
+	class AActor*                                      theAct;                                           		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// struct FAffectedActor                           newEffect;                                        		// 0x0004 (0x0008) [0x0000000000000000]              
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.Destroyed
+// [0x00020902] ( FUNC_Event )
+struct ADunDefPlayerAbility_DefenseBoost_eventDestroyed_Parms
+{
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.RemoveAllTowers
+// [0x00020102] 
+struct ADunDefPlayerAbility_DefenseBoost_execRemoveAllTowers_Parms
+{
+	// int                                             it;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.CheckAllTowers
+// [0x00020102] 
+struct ADunDefPlayerAbility_DefenseBoost_execCheckAllTowers_Parms
+{
+	// int                                             it;                                               		// 0x0000 (0x0004) [0x0000000000000000]              
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.RemoveAllTowersFor
+// [0x00020102] 
+struct ADunDefPlayerAbility_DefenseBoost_execRemoveAllTowersFor_Parms
+{
+	class ADunDefPlayer*                               aPlayer;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// int                                             it;                                               		// 0x0004 (0x0004) [0x0000000000000000]              
+};
+
+// Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.AddAllTowersFor
+// [0x00020102] 
+struct ADunDefPlayerAbility_DefenseBoost_execAddAllTowersFor_Parms
+{
+	class ADunDefPlayer*                               aPlayer;                                          		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
+	// class AActor*                                   aTower;                                           		// 0x0004 (0x0004) [0x0000000000000000]              
+};
+
 // Function DunDefSpecial.DunDefPlayerAbility_DefenseBoost.AddEffect
 // [0x00020102] 
 struct ADunDefPlayerAbility_DefenseBoost_execAddEffect_Parms
@@ -8146,44 +8157,6 @@ struct ADunDefPlayerAbility_StanceOnDmgEffect_execDoAddHealth_Parms
 	// class ADunDefPlayer_DualMelee*                  stanceOwner;                                      		// 0x0010 (0x0004) [0x0000000000000000]              
 };
 
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.GetWeaponDamage
-// [0x00020102] 
-struct ADunDefPlayerAbility_StanceLightning_execGetWeaponDamage_Parms
-{
-	class ADunDefWeapon_MeleeSword*                    dmgWeapon;                                        		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.DoActorSpawn
-// [0x00820002] 
-struct ADunDefPlayerAbility_StanceLightning_execDoActorSpawn_Parms
-{
-	unsigned long                                      MainWeapon : 1;                                   		// 0x0000 (0x0004) [0x0000000000000080] [0x00000001] ( CPF_Parm )
-	// struct FVector                                  SpawnLocation;                                    		// 0x0004 (0x000C) [0x0000000000000000]              
-	// struct FRotator                                 SpawnRotation;                                    		// 0x0010 (0x000C) [0x0000000000000000]              
-	// class AActor*                                   spawnedActor;                                     		// 0x001C (0x0004) [0x0000000000000000]              
-	// float                                           AdjustedDamage;                                   		// 0x0020 (0x0004) [0x0000000000000000]              
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.GetDamage
-// [0x00020102] 
-struct ADunDefPlayerAbility_StanceLightning_execGetDamage_Parms
-{
-	float                                              ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-	// class ADunDefPlayerAbility_StanceBase*          secondaryStance;                                  		// 0x0004 (0x0004) [0x0000000000000000]              
-	// class ADunDefPlayer_DualMelee*                  stanceOwner;                                      		// 0x0008 (0x0004) [0x0000000000000000]              
-	// float                                           StatMultiplier;                                   		// 0x000C (0x0004) [0x0000000000000000]              
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.DoAddDamage
-// [0x00020102] 
-struct ADunDefPlayerAbility_StanceLightning_execDoAddDamage_Parms
-{
-	int                                                dmg;                                              		// 0x0000 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	class AActor*                                      HitActor;                                         		// 0x0004 (0x0004) [0x0000000000000080]              ( CPF_Parm )
-	// float                                           AdjustedDamage;                                   		// 0x0008 (0x0004) [0x0000000000000000]              
-};
-
 // Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.GetAbilityStatus
 // [0x00424102] 
 struct ADunDefPlayerAbility_StanceLightning_execGetAbilityStatus_Parms
@@ -8226,20 +8199,6 @@ struct ADunDefPlayerAbility_StanceLightning_execAddStunnedActor_Parms
 	// struct FVector                                  SocketLoc;                                        		// 0x0010 (0x000C) [0x0000000000000000]              
 	// struct FRotator                                 SocketRot;                                        		// 0x001C (0x000C) [0x0000000000000000]              
 	// struct FName                                    SocketName;                                       		// 0x0028 (0x0008) [0x0000000000000000]              
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.StartOffHandWeaponDamage
-// [0x00020102] 
-struct ADunDefPlayerAbility_StanceLightning_execStartOffHandWeaponDamage_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.StartWeaponDamage
-// [0x00020102] 
-struct ADunDefPlayerAbility_StanceLightning_execStartWeaponDamage_Parms
-{
-	unsigned long                                      ReturnValue : 1;                                  		// 0x0000 (0x0004) [0x0000000000000580] [0x00000001] ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function DunDefSpecial.DunDefPlayerAbility_StanceLightning.CanStun
@@ -8458,7 +8417,7 @@ struct ADunDefPlayerAbility_WheeloFortuna_execSpawnManaTokens_Parms
 	// int                                             NumSmallManaTokens;                               		// 0x0010 (0x0004) [0x0000000000000000]              
 	// int                                             I;                                                		// 0x0014 (0x0004) [0x0000000000000000]              
 	// class AActor*                                   fromActor;                                        		// 0x0018 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x001C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x001C (0x0004) [0x0000000000000000]              
 };
 
 // Function DunDefSpecial.DunDefPlayerAbility_WheeloFortuna.GoldEnemy
@@ -8481,7 +8440,7 @@ struct ADunDefPlayerAbility_WheeloFortuna_execDoGolding_Parms
 	// int                                             currentTotalActive;                               		// 0x0090 (0x0004) [0x0000000000000000]              
 	// float                                           thePctToAffect;                                   		// 0x0094 (0x0004) [0x0000000000000000]              
 	// int                                             MyTargetingTeam;                                  		// 0x0098 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x009C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x009C (0x0004) [0x0000000000000000]              
 	// class ADunDefPracticeDummy*                     theDummy;                                         		// 0x00A0 (0x0004) [0x0000000000000000]              
 };
 
@@ -8514,7 +8473,7 @@ struct ADunDefPlayerAbility_WheeloFortuna_execHandleEnemyAffects_Parms
 	// int                                             currentTotalActive;                               		// 0x0090 (0x0004) [0x0000000000000000]              
 	// float                                           HealMult;                                         		// 0x0094 (0x0004) [0x0000000000000000]              
 	// float                                           thePctToAffect;                                   		// 0x0098 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x009C (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x009C (0x0004) [0x0000000000000000]              
 	// int                                             MyTargetingTeam;                                  		// 0x00A0 (0x0004) [0x0000000000000000]              
 	// float                                           PawnResistBoost;                                  		// 0x00A4 (0x0004) [0x0000000000000000]              
 	// float                                           PawnDamageBoost;                                  		// 0x00A8 (0x0004) [0x0000000000000000]              
@@ -8531,7 +8490,7 @@ struct ADunDefPlayerAbility_WheeloFortuna_execHandleTowerAffects_Parms
 	// int                                             currentTotalActive;                               		// 0x008C (0x0004) [0x0000000000000000]              
 	// float                                           HealMult;                                         		// 0x0090 (0x0004) [0x0000000000000000]              
 	// float                                           thePctToAffect;                                   		// 0x0094 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x0098 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0098 (0x0004) [0x0000000000000000]              
 	// int                                             MyTargetingTeam;                                  		// 0x009C (0x0004) [0x0000000000000000]              
 };
 
@@ -8546,7 +8505,7 @@ struct ADunDefPlayerAbility_WheeloFortuna_execHandlePlayerAffects_Parms
 	// int                                             currentTotalActive;                               		// 0x008C (0x0004) [0x0000000000000000]              
 	// float                                           HealMult;                                         		// 0x0090 (0x0004) [0x0000000000000000]              
 	// float                                           thePctToAffect;                                   		// 0x0094 (0x0004) [0x0000000000000000]              
-	// class UDunDefHero*                              hero;                                             		// 0x0098 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0098 (0x0004) [0x0000000000000000]              
 	// int                                             MyTargetingTeam;                                  		// 0x009C (0x0004) [0x0000000000000000]              
 	// class UClass*                                   disableAbility;                                   		// 0x00A0 (0x0004) [0x0000000000000000]              
 	// unsigned long                                   bAddedAsBoost : 1;                                		// 0x00A4 (0x0004) [0x0000000000000000] [0x00000001] 
@@ -8645,7 +8604,7 @@ struct ADunDefPlayerAbility_WheeloFortuna_execGetPawnBoostAmount_Parms
 	unsigned char                                      boostType;                                        		// 0x0000 (0x0001) [0x0000000000000080]              ( CPF_Parm )
 	float                                              ReturnValue;                                      		// 0x0004 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 	// struct FGlyphPattern                            currentPattern;                                   		// 0x0008 (0x0080) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// class UDunDefHero*                              hero;                                             		// 0x0088 (0x0004) [0x0000000000000000]              
+	// class UDunDefHero*                              Hero;                                             		// 0x0088 (0x0004) [0x0000000000000000]              
 	// float                                           Value;                                            		// 0x008C (0x0004) [0x0000000000000000]              
 };
 
@@ -9344,13 +9303,6 @@ struct AGameInfo_KillEnemiesTimeLimit_Uber_execKilled_Parms
 	class UClass*                                      DamageType;                                       		// 0x000C (0x0004) [0x0000000000000080]              ( CPF_Parm )
 };
 
-// Function DunDefSpecial.GameInfo_KillEnemiesTimeLimit_Uber.CalculatedNetSpeed
-// [0x00020002] 
-struct AGameInfo_KillEnemiesTimeLimit_Uber_execCalculatedNetSpeed_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
 // Function DunDefSpecial.GameInfo_NoTowers.InitGameReplicationInfo
 // [0x00020002] 
 struct AGameInfo_NoTowers_execInitGameReplicationInfo_Parms
@@ -9368,27 +9320,6 @@ struct AGameInfo_OgreAlly_execInitGameReplicationInfo_Parms
 // [0x00020002] 
 struct AGameInfo_RainingGoblins_execInitGameReplicationInfo_Parms
 {
-};
-
-// Function DunDefSpecial.GameInfo_UberAssault.CalculatedNetSpeed
-// [0x00020002] 
-struct AGameInfo_UberAssault_execCalculatedNetSpeed_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function DunDefSpecial.GameInfo_UberDefense.CalculatedNetSpeed
-// [0x00020002] 
-struct AGameInfo_UberDefense_execCalculatedNetSpeed_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
-};
-
-// Function DunDefSpecial.GameInfo_VDay2.CalculatedNetSpeed
-// [0x00020002] 
-struct AGameInfo_VDay2_execCalculatedNetSpeed_Parms
-{
-	int                                                ReturnValue;                                      		// 0x0000 (0x0004) [0x0000000000000580]              ( CPF_Parm | CPF_OutParm | CPF_ReturnParm )
 };
 
 // Function DunDefSpecial.GameInfo_VDay2.PairMatched
@@ -9435,8 +9366,6 @@ struct AGameInfo_Wizardry_execMageCheck_Parms
 {
 	// class ADunDefDarkElfMage*                       Mage;                                             		// 0x0000 (0x0004) [0x0000000000000000]              
 	// TArray< class ADunDefDarkElfMage* >             mageCandidates;                                   		// 0x0004 (0x000C) [0x0000000000400000]              ( CPF_NeedCtorLink )
-	// int                                             it;                                               		// 0x0010 (0x0004) [0x0000000000000000]              
-	// int                                             I;                                                		// 0x0014 (0x0004) [0x0000000000000000]              
 };
 
 // Function DunDefSpecial.GameInfo_Wizardry.PostBeginPlay
